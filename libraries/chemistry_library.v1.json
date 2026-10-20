@@ -1,0 +1,2077 @@
+{
+  "schema_version": "1.0.0",
+  "library_version": "v1.0.0",
+  "description": "Immutable architecture-foundation snapshot derived from validated Oligo Calculator v1.7 tables.",
+  "records": [
+    {
+      "stable_id": "OLIGO.BASE.A",
+      "version": 1,
+      "display_symbol": "base:A",
+      "name": "Adenine",
+      "entity_type": "BASE",
+      "formula": "C5H5N5",
+      "exact_mass": 135.0544951833,
+      "average_mass": 135.13,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {}
+    },
+    {
+      "stable_id": "OLIGO.BASE.C",
+      "version": 1,
+      "display_symbol": "base:C",
+      "name": "Cytosine",
+      "entity_type": "BASE",
+      "formula": "C4H5N3O",
+      "exact_mass": 111.04326179401,
+      "average_mass": 111.104,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {}
+    },
+    {
+      "stable_id": "OLIGO.BASE.G",
+      "version": 1,
+      "display_symbol": "base:G",
+      "name": "Guanine",
+      "entity_type": "BASE",
+      "formula": "C5H5N5O",
+      "exact_mass": 151.04940980287,
+      "average_mass": 151.129,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {}
+    },
+    {
+      "stable_id": "OLIGO.BASE.U",
+      "version": 1,
+      "display_symbol": "base:U",
+      "name": "Uracil",
+      "entity_type": "BASE",
+      "formula": "C4H4N2O2",
+      "exact_mass": 112.02727737692,
+      "average_mass": 112.088,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {}
+    },
+    {
+      "stable_id": "OLIGO.BASE.I",
+      "version": 1,
+      "display_symbol": "base:I",
+      "name": "Hypoxanthine",
+      "entity_type": "BASE",
+      "formula": "C5H4N4O",
+      "exact_mass": 136.03851076621,
+      "average_mass": 136.114,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {}
+    },
+    {
+      "stable_id": "OLIGO.BASE.T",
+      "version": 1,
+      "display_symbol": "base:T",
+      "name": "Thymine",
+      "entity_type": "BASE",
+      "formula": "C5H6N2O2",
+      "exact_mass": 126.04292744138,
+      "average_mass": 126.115,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {}
+    },
+    {
+      "stable_id": "OLIGO.SUGAR.r",
+      "version": 1,
+      "display_symbol": "sugar:r",
+      "name": "RNA",
+      "entity_type": "SUGAR",
+      "formula": "C5H10O5",
+      "exact_mass": 150.05282342015,
+      "average_mass": 150.13,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {}
+    },
+    {
+      "stable_id": "OLIGO.SUGAR.f",
+      "version": 1,
+      "display_symbol": "sugar:f",
+      "name": "2F",
+      "entity_type": "SUGAR",
+      "formula": "C5H9FO4",
+      "exact_mass": 152.04848693108,
+      "average_mass": 152.121403163,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {}
+    },
+    {
+      "stable_id": "OLIGO.SUGAR.m",
+      "version": 1,
+      "display_symbol": "sugar:m",
+      "name": "2OMe",
+      "entity_type": "SUGAR",
+      "formula": "C6H12O5",
+      "exact_mass": 164.06847348461,
+      "average_mass": 164.157,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {}
+    },
+    {
+      "stable_id": "OLIGO.SUGAR.e",
+      "version": 1,
+      "display_symbol": "sugar:e",
+      "name": "MOE",
+      "entity_type": "SUGAR",
+      "formula": "C8H16O6",
+      "exact_mass": 208.09468823310002,
+      "average_mass": 208.20999999999998,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {}
+    },
+    {
+      "stable_id": "OLIGO.SUGAR.d",
+      "version": 1,
+      "display_symbol": "sugar:d",
+      "name": "DNA",
+      "entity_type": "SUGAR",
+      "formula": "C5H10O4",
+      "exact_mass": 134.05790880058,
+      "average_mass": 134.131,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {}
+    },
+    {
+      "stable_id": "OLIGO.SUGAR.l",
+      "version": 1,
+      "display_symbol": "sugar:l",
+      "name": "LNA",
+      "entity_type": "SUGAR",
+      "formula": "C6H10O5",
+      "exact_mass": 162.05282342015,
+      "average_mass": 162.14100000000002,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {}
+    },
+    {
+      "stable_id": "OLIGO.SUGAR.u",
+      "version": 1,
+      "display_symbol": "sugar:u",
+      "name": "UNA",
+      "entity_type": "SUGAR",
+      "formula": "C5H12O5",
+      "exact_mass": 152.06847348461,
+      "average_mass": 152.146,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {}
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.rA",
+      "version": 1,
+      "display_symbol": "rA",
+      "name": "RNA Adenine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H13N5O4",
+      "exact_mass": 267.09675391942,
+      "average_mass": 267.245,
+      "natural_analog": "A",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.rC",
+      "version": 1,
+      "display_symbol": "rC",
+      "name": "RNA Cytosine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C9H13N3O5",
+      "exact_mass": 243.08552053013,
+      "average_mass": 243.219,
+      "natural_analog": "C",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.rG",
+      "version": 1,
+      "display_symbol": "rG",
+      "name": "RNA Guanine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H13N5O5",
+      "exact_mass": 283.09166853899,
+      "average_mass": 283.24399999999997,
+      "natural_analog": "G",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.rU",
+      "version": 1,
+      "display_symbol": "rU",
+      "name": "RNA Uracil",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C9H12N2O6",
+      "exact_mass": 244.06953611304002,
+      "average_mass": 244.20299999999997,
+      "natural_analog": "U",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.rI",
+      "version": 1,
+      "display_symbol": "rI",
+      "name": "RNA Hypoxanthine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H12N4O5",
+      "exact_mass": 268.08076950233,
+      "average_mass": 268.229,
+      "natural_analog": "I",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.rT",
+      "version": 1,
+      "display_symbol": "rT",
+      "name": "RNA Thymine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H14N2O6",
+      "exact_mass": 258.0851861775,
+      "average_mass": 258.22999999999996,
+      "natural_analog": "T",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.fA",
+      "version": 1,
+      "display_symbol": "fA",
+      "name": "2F Adenine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H12N5O3F",
+      "exact_mass": 269.09241743035,
+      "average_mass": 269.236403163,
+      "natural_analog": "A",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.fC",
+      "version": 1,
+      "display_symbol": "fC",
+      "name": "2F Cytosine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C9H12N3O4F",
+      "exact_mass": 245.08118404106,
+      "average_mass": 245.210403163,
+      "natural_analog": "C",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.fG",
+      "version": 1,
+      "display_symbol": "fG",
+      "name": "2F Guanine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H12N5O4F",
+      "exact_mass": 285.08733204992,
+      "average_mass": 285.235403163,
+      "natural_analog": "G",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.fU",
+      "version": 1,
+      "display_symbol": "fU",
+      "name": "2F Uracil",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C9H11N2O5F",
+      "exact_mass": 246.06519962397,
+      "average_mass": 246.194403163,
+      "natural_analog": "U",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.fI",
+      "version": 1,
+      "display_symbol": "fI",
+      "name": "2F Hypoxanthine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H11N4O4F",
+      "exact_mass": 270.07643301326,
+      "average_mass": 270.220403163,
+      "natural_analog": "I",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.fT",
+      "version": 1,
+      "display_symbol": "fT",
+      "name": "2F Thymine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H13N2O5F",
+      "exact_mass": 260.08084968843,
+      "average_mass": 260.221403163,
+      "natural_analog": "T",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.mA",
+      "version": 1,
+      "display_symbol": "mA",
+      "name": "2OMe Adenine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C11H15N5O4",
+      "exact_mass": 281.11240398388,
+      "average_mass": 281.272,
+      "natural_analog": "A",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.mC",
+      "version": 1,
+      "display_symbol": "mC",
+      "name": "2OMe Cytosine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H15N3O5",
+      "exact_mass": 257.10117059459,
+      "average_mass": 257.246,
+      "natural_analog": "C",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.mG",
+      "version": 1,
+      "display_symbol": "mG",
+      "name": "2OMe Guanine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C11H15N5O5",
+      "exact_mass": 297.10731860345,
+      "average_mass": 297.27099999999996,
+      "natural_analog": "G",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.mU",
+      "version": 1,
+      "display_symbol": "mU",
+      "name": "2OMe Uracil",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H14N2O6",
+      "exact_mass": 258.0851861775,
+      "average_mass": 258.22999999999996,
+      "natural_analog": "U",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.mI",
+      "version": 1,
+      "display_symbol": "mI",
+      "name": "2OMe Hypoxanthine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C11H14N4O5",
+      "exact_mass": 282.09641956679,
+      "average_mass": 282.256,
+      "natural_analog": "I",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.mT",
+      "version": 1,
+      "display_symbol": "mT",
+      "name": "2OMe Thymine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C11H16N2O6",
+      "exact_mass": 272.10083624196,
+      "average_mass": 272.257,
+      "natural_analog": "T",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.eA",
+      "version": 1,
+      "display_symbol": "eA",
+      "name": "MOE Adenine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C13H19N5O5",
+      "exact_mass": 325.13861873237,
+      "average_mass": 325.325,
+      "natural_analog": "A",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.eC",
+      "version": 1,
+      "display_symbol": "eC",
+      "name": "MOE Cytosine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C12H19N3O6",
+      "exact_mass": 301.12738534308,
+      "average_mass": 301.299,
+      "natural_analog": "C",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.eG",
+      "version": 1,
+      "display_symbol": "eG",
+      "name": "MOE Guanine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C13H19N5O6",
+      "exact_mass": 341.13353335194,
+      "average_mass": 341.324,
+      "natural_analog": "G",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.eU",
+      "version": 1,
+      "display_symbol": "eU",
+      "name": "MOE Uracil",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C12H18N2O7",
+      "exact_mass": 302.11140092599,
+      "average_mass": 302.283,
+      "natural_analog": "U",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.eI",
+      "version": 1,
+      "display_symbol": "eI",
+      "name": "MOE Hypoxanthine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C13H18N4O6",
+      "exact_mass": 326.12263431528,
+      "average_mass": 326.30899999999997,
+      "natural_analog": "I",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.eT",
+      "version": 1,
+      "display_symbol": "eT",
+      "name": "MOE Thymine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C13H20N2O7",
+      "exact_mass": 316.12705099045,
+      "average_mass": 316.31,
+      "natural_analog": "T",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.dA",
+      "version": 1,
+      "display_symbol": "A",
+      "name": "DNA Adenine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H13N5O3",
+      "exact_mass": 251.10183929984998,
+      "average_mass": 251.24599999999998,
+      "natural_analog": "A",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.dC",
+      "version": 1,
+      "display_symbol": "C",
+      "name": "DNA Cytosine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C9H13N3O4",
+      "exact_mass": 227.09060591056,
+      "average_mass": 227.22,
+      "natural_analog": "C",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.dG",
+      "version": 1,
+      "display_symbol": "G",
+      "name": "DNA Guanine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H13N5O4",
+      "exact_mass": 267.09675391942,
+      "average_mass": 267.245,
+      "natural_analog": "G",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.dU",
+      "version": 1,
+      "display_symbol": "dU",
+      "name": "DNA Uracil",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C9H12N2O5",
+      "exact_mass": 228.07462149347,
+      "average_mass": 228.204,
+      "natural_analog": "U",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.dI",
+      "version": 1,
+      "display_symbol": "dI",
+      "name": "DNA Hypoxanthine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H12N4O4",
+      "exact_mass": 252.08585488276,
+      "average_mass": 252.23,
+      "natural_analog": "I",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.dT",
+      "version": 1,
+      "display_symbol": "T",
+      "name": "DNA Thymine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H14N2O5",
+      "exact_mass": 242.09027155793,
+      "average_mass": 242.231,
+      "natural_analog": "T",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.lA",
+      "version": 1,
+      "display_symbol": "lA",
+      "name": "LNA Adenine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C11H13N5O4",
+      "exact_mass": 279.09675391942,
+      "average_mass": 279.256,
+      "natural_analog": "A",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.lC",
+      "version": 1,
+      "display_symbol": "lC",
+      "name": "LNA Cytosine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H13N3O5",
+      "exact_mass": 255.08552053013,
+      "average_mass": 255.23,
+      "natural_analog": "C",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.lG",
+      "version": 1,
+      "display_symbol": "lG",
+      "name": "LNA Guanine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C11H13N5O5",
+      "exact_mass": 295.09166853899,
+      "average_mass": 295.255,
+      "natural_analog": "G",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.lU",
+      "version": 1,
+      "display_symbol": "lU",
+      "name": "LNA Uracil",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H12N2O6",
+      "exact_mass": 256.06953611304,
+      "average_mass": 256.214,
+      "natural_analog": "U",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.lI",
+      "version": 1,
+      "display_symbol": "lI",
+      "name": "LNA Hypoxanthine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C11H12N4O5",
+      "exact_mass": 280.08076950233,
+      "average_mass": 280.24,
+      "natural_analog": "I",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.lT",
+      "version": 1,
+      "display_symbol": "lT",
+      "name": "LNA Thymine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C11H14N2O6",
+      "exact_mass": 270.0851861775,
+      "average_mass": 270.241,
+      "natural_analog": "T",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.uA",
+      "version": 1,
+      "display_symbol": "uA",
+      "name": "UNA Adenine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H15N5O4",
+      "exact_mass": 269.11240398388,
+      "average_mass": 269.26099999999997,
+      "natural_analog": "A",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.uC",
+      "version": 1,
+      "display_symbol": "uC",
+      "name": "UNA Cytosine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C9H15N3O5",
+      "exact_mass": 245.10117059459,
+      "average_mass": 245.23499999999999,
+      "natural_analog": "C",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.uG",
+      "version": 1,
+      "display_symbol": "uG",
+      "name": "UNA Guanine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H15N5O5",
+      "exact_mass": 285.10731860345,
+      "average_mass": 285.26,
+      "natural_analog": "G",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.uU",
+      "version": 1,
+      "display_symbol": "uU",
+      "name": "UNA Uracil",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C9H14N2O6",
+      "exact_mass": 246.08518617750002,
+      "average_mass": 246.219,
+      "natural_analog": "U",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.uI",
+      "version": 1,
+      "display_symbol": "uI",
+      "name": "UNA Hypoxanthine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H14N4O5",
+      "exact_mass": 270.09641956679,
+      "average_mass": 270.245,
+      "natural_analog": "I",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.uT",
+      "version": 1,
+      "display_symbol": "uT",
+      "name": "UNA Thymine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H16N2O6",
+      "exact_mass": 260.10083624196,
+      "average_mass": 260.246,
+      "natural_analog": "T",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention"
+      }
+    },
+    {
+      "stable_id": "OLIGO.LINKAGE.PO",
+      "version": 1,
+      "display_symbol": "link:PO",
+      "name": "phosphodiester",
+      "entity_type": "BACKBONE_LINKAGE",
+      "formula": null,
+      "exact_mass": null,
+      "average_mass": null,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_formula_add": "PO2",
+        "metadata_formula_remove": "H",
+        "notation_symbol": ""
+      }
+    },
+    {
+      "stable_id": "OLIGO.LINKAGE.PS",
+      "version": 1,
+      "display_symbol": "link:PS",
+      "name": "phosphorothioate",
+      "entity_type": "BACKBONE_LINKAGE",
+      "formula": null,
+      "exact_mass": null,
+      "average_mass": null,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_formula_add": "POS",
+        "metadata_formula_remove": "H",
+        "notation_symbol": "*"
+      }
+    },
+    {
+      "stable_id": "OLIGO.LINKAGE.PS2",
+      "version": 1,
+      "display_symbol": "link:PS2",
+      "name": "phosphorodithioate",
+      "entity_type": "BACKBONE_LINKAGE",
+      "formula": null,
+      "exact_mass": null,
+      "average_mass": null,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_formula_add": "PS2",
+        "metadata_formula_remove": "H",
+        "notation_symbol": "**"
+      }
+    },
+    {
+      "stable_id": "OLIGO.LINKAGE.MsPA",
+      "version": 1,
+      "display_symbol": "link:MsPA",
+      "name": "mesyl phosphoramidate",
+      "entity_type": "BACKBONE_LINKAGE",
+      "formula": null,
+      "exact_mass": null,
+      "average_mass": null,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_formula_add": "CH2NO3PS",
+        "metadata_formula_remove": "",
+        "notation_symbol": "&"
+      }
+    }
+  ]
+}

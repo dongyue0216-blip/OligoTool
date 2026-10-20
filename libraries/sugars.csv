@@ -1,0 +1,8 @@
+﻿code,name,description,formula,reference_id,notes
+r,RNA,2'-OH ribose,C5H10O5,,
+f,2F,2'-fluoro ribose,C5H9FO4,,
+m,2OMe,2'-O-methyl ribose,C6H12O5,,
+e,MOE,2'-O-methoxyethyl ribose,C8H16O6,,
+d,DNA,2'-deoxyribose,C5H10O4,,Internal sugar code for bare DNA A/T/G/C input
+l,LNA,2'-O 4'-C methylene-bridged ribose,C6H10O5,,2'-O,4'-C-methylene locked nucleic acid sugar
+u,UNA,2' 3'-seco ribose,C5H12O5,,Unlocked nucleic acid; acyclic RNA analogue lacking C2'-C3' bond

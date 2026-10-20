@@ -1,0 +1,14 @@
+sequence,formula,exact_mass,description
+rArA,C20H25N10O10P,596.149274,RNA ApA with one PO linkage
+rA*rA,C20H25N10O9PS,612.126431,RNA ApA with one PS linkage
+rA**rA,C20H25N10O8PS2,628.103587,RNA ApA with one PS2 linkage
+rArCrGrU,C38H48N15O26P3,1223.210778,Mixed-base RNA tetramer with three PO linkages
+rA*rCfG**mU,C39H49N15O22P3S3F,1287.153561,Mixed sugar and mixed backbone example
+eA*eCrG*mU,C45H62N15O26P3S2,1385.264471,MOE RNA 2OMe mixed example
+ATGC,C39H50N15O22P3,1173.246769,Standard DNA tetramer with three PO linkages
+A*T**GC,C39H50N15O19P3S3,1221.178239,DNA tetramer with PS PS2 and PO linkages
+ArC*GeU,C41H54N15O24P3S,1265.239970,Mixed DNA RNA and MOE example
+A&T,C21H29N8O11PS,632.141412,DNA dinucleotide with one MsPA linkage
+lA&uCrG*eU,C43H59N16O27P3S2,1388.238984,Mixed LNA UNA RNA MOE with MsPA PO PS
+lA&lC&lG&lU,C45H57N18O29P3S3,1502.191382,LNA tetramer with three MsPA linkages
+uAuCuGuU,C38H56N15O26P3,1231.273378,UNA tetramer with three PO linkages

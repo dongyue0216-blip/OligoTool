@@ -1,0 +1,7 @@
+﻿code,name,formula,default_protecting_group,reference_id,notes
+A,Adenine,C5H5N5,Bz,,
+C,Cytosine,C4H5N3O,Ac,,
+G,Guanine,C5H5N5O,iBu,,
+U,Uracil,C4H4N2O2,None,,
+I,Hypoxanthine,C5H4N4O,None,,Inosine base
+T,Thymine,C5H6N2O2,None,,DNA thymine

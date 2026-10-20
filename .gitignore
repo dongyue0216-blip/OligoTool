@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+user_data/
+wheelhouse/
+tests/_runtime/
+tests/reports/
+dist/
+*.log
+.env
+.env.*

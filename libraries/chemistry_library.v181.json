@@ -1,0 +1,2400 @@
+{
+  "schema_version": "1.0.0",
+  "library_version": "1.9",
+  "description": "Immutable architecture-foundation snapshot derived from validated Oligo Calculator v1.7 tables.",
+  "records": [
+    {
+      "stable_id": "OLIGO.BASE.A",
+      "version": 2,
+      "display_symbol": "base:A",
+      "name": "Adenine",
+      "entity_type": "BASE",
+      "formula": "C5H5N5",
+      "exact_mass": 135.0544951833,
+      "average_mass": 135.13,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.BASE.C",
+      "version": 2,
+      "display_symbol": "base:C",
+      "name": "Cytosine",
+      "entity_type": "BASE",
+      "formula": "C4H5N3O",
+      "exact_mass": 111.04326179401,
+      "average_mass": 111.104,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.BASE.G",
+      "version": 2,
+      "display_symbol": "base:G",
+      "name": "Guanine",
+      "entity_type": "BASE",
+      "formula": "C5H5N5O",
+      "exact_mass": 151.04940980287,
+      "average_mass": 151.129,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.BASE.U",
+      "version": 2,
+      "display_symbol": "base:U",
+      "name": "Uracil",
+      "entity_type": "BASE",
+      "formula": "C4H4N2O2",
+      "exact_mass": 112.02727737692,
+      "average_mass": 112.088,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.BASE.I",
+      "version": 2,
+      "display_symbol": "base:I",
+      "name": "Hypoxanthine",
+      "entity_type": "BASE",
+      "formula": "C5H4N4O",
+      "exact_mass": 136.03851076621,
+      "average_mass": 136.114,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.BASE.T",
+      "version": 2,
+      "display_symbol": "base:T",
+      "name": "Thymine",
+      "entity_type": "BASE",
+      "formula": "C5H6N2O2",
+      "exact_mass": 126.04292744138,
+      "average_mass": 126.115,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.SUGAR.r",
+      "version": 2,
+      "display_symbol": "sugar:r",
+      "name": "RNA",
+      "entity_type": "SUGAR",
+      "formula": "C5H10O5",
+      "exact_mass": 150.05282342015,
+      "average_mass": 150.13,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.SUGAR.f",
+      "version": 2,
+      "display_symbol": "sugar:f",
+      "name": "2F",
+      "entity_type": "SUGAR",
+      "formula": "C5H9FO4",
+      "exact_mass": 152.04848693108,
+      "average_mass": 152.121403163,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.SUGAR.m",
+      "version": 2,
+      "display_symbol": "sugar:m",
+      "name": "2OMe",
+      "entity_type": "SUGAR",
+      "formula": "C6H12O5",
+      "exact_mass": 164.06847348461,
+      "average_mass": 164.157,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.SUGAR.e",
+      "version": 2,
+      "display_symbol": "sugar:e",
+      "name": "MOE",
+      "entity_type": "SUGAR",
+      "formula": "C8H16O6",
+      "exact_mass": 208.09468823310002,
+      "average_mass": 208.20999999999998,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.SUGAR.d",
+      "version": 2,
+      "display_symbol": "sugar:d",
+      "name": "DNA",
+      "entity_type": "SUGAR",
+      "formula": "C5H10O4",
+      "exact_mass": 134.05790880058,
+      "average_mass": 134.131,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.SUGAR.l",
+      "version": 2,
+      "display_symbol": "sugar:l",
+      "name": "LNA",
+      "entity_type": "SUGAR",
+      "formula": "C6H10O5",
+      "exact_mass": 162.05282342015,
+      "average_mass": 162.14100000000002,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.SUGAR.u",
+      "version": 2,
+      "display_symbol": "sugar:u",
+      "name": "UNA",
+      "entity_type": "SUGAR",
+      "formula": "C5H12O5",
+      "exact_mass": 152.06847348461,
+      "average_mass": 152.146,
+      "natural_analog": null,
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.rA",
+      "version": 2,
+      "display_symbol": "rA",
+      "name": "RNA Adenine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H13N5O4",
+      "exact_mass": 267.09675391942,
+      "average_mass": 267.245,
+      "natural_analog": "A",
+      "smiles": "[cH:1]1[n:2][c:3]([NH2:19])[c:4]2[c:5]([n:6]1)[n:7]([C@H:10]1[C@H:11]([OH:18])[C@H:12]([OH:17])[C@@H:13]([CH2:15][OH:16])[O:14]1)[cH:8][n:9]2",
+      "molfile": "\n     RDKit          2D\n\n 19 21  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  5  0  0\n    0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n   -1.7537   -2.4138    0.0000 N   0  0  0  0  0  0  0  0  0  7  0  0\n   -3.1240   -1.8037    0.0000 C   0  0  0  0  0  0  0  0  0  8  0  0\n   -2.9672   -0.3119    0.0000 N   0  0  0  0  0  0  0  0  0  9  0  0\n   -1.4418   -3.8810    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n   -2.4455   -4.9957    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -1.6955   -6.2947    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -0.2283   -5.9829    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0\n   -0.0715   -4.4911    0.0000 O   0  0  0  0  0  0  0  0  0 14  0  0\n    0.8864   -6.9866    0.0000 C   0  0  0  0  0  0  0  0  0 15  0  0\n    2.3130   -6.5230    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0\n   -2.3056   -7.6651    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n   -3.9373   -4.8389    0.0000 O   0  0  0  0  0  0  0  0  0 18  0  0\n   -1.5000    2.5981    0.0000 N   0  0  0  0  0  0  0  0  0 19  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  5  6  2  0\n  5  7  1  0\n  7  8  1  0\n  8  9  2  0\n 10  7  1  6\n 10 11  1  0\n 11 12  1  0\n 12 13  1  0\n 13 14  1  0\n 13 15  1  6\n 15 16  1  0\n 12 17  1  1\n 11 18  1  1\n  3 19  1  0\n  6  1  1  0\n  9  4  1  0\n 14 10  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 17,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 16,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.rC",
+      "version": 2,
+      "display_symbol": "rC",
+      "name": "RNA Cytosine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C9H13N3O5",
+      "exact_mass": 243.08552053013,
+      "average_mass": 243.219,
+      "natural_analog": "C",
+      "smiles": "[cH:1]1[cH:2][n:3]([C@H:9]2[C@H:10]([OH:17])[C@H:11]([OH:16])[C@@H:12]([CH2:14][OH:15])[O:13]2)[c:4](=[O:5])[n:6][c:7]1[NH2:8]",
+      "molfile": "\n     RDKit          2D\n\n 17 18  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -3.0000    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n   -0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n    0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n    1.5000   -2.5981    0.0000 N   0  0  0  0  0  0  0  0  0  8  0  0\n   -1.5000    2.5981    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n   -0.8899    3.9684    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n   -2.0046    4.9721    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -3.3037    4.2221    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -2.9918    2.7549    0.0000 O   0  0  0  0  0  0  0  0  0 13  0  0\n   -4.6740    4.8322    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -5.8875    3.9505    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n   -1.8478    6.4639    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0\n    0.5773    4.2803    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  2  0\n  4  6  1  0\n  6  7  2  0\n  7  8  1  0\n  9  3  1  6\n  9 10  1  0\n 10 11  1  0\n 11 12  1  0\n 12 13  1  0\n 12 14  1  6\n 14 15  1  0\n 11 16  1  1\n 10 17  1  1\n  7  1  1  0\n 13  9  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 16,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 15,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.rG",
+      "version": 2,
+      "display_symbol": "rG",
+      "name": "RNA Guanine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H13N5O5",
+      "exact_mass": 283.09166853899,
+      "average_mass": 283.24399999999997,
+      "natural_analog": "G",
+      "smiles": "[cH:1]1[n:2][c:3]2[c:4](=[O:5])[nH:6][c:7]([NH2:20])[n:8][c:9]2[n:10]1[C@H:11]1[C@H:12]([OH:19])[C@H:13]([OH:18])[C@@H:14]([CH2:16][OH:17])[O:15]1",
+      "molfile": "\n     RDKit          2D\n\n 20 22  0  0  0  0  0  0  0  0999 V2000\n    1.2760    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.3943    1.2135    0.0000 N   0  0  0  0  0  0  0  0  0  2  0  0\n   -1.0323    0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -2.3313    1.5000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -2.3313    3.0000    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n   -3.6304    0.7500    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n   -3.6304   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n   -2.3313   -1.5000    0.0000 N   0  0  0  0  0  0  0  0  0  8  0  0\n   -1.0323   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n    0.3943   -1.2135    0.0000 N   0  0  0  0  0  0  0  0  0 10  0  0\n    0.8578   -2.6401    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -0.0239   -3.8536    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n    0.8578   -5.0672    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0\n    2.2844   -4.6036    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n    2.2844   -3.1036    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n    3.4979   -5.4853    0.0000 C   0  0  0  0  0  0  0  0  0 16  0  0\n    4.8683   -4.8752    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n    0.3943   -6.4937    0.0000 O   0  0  0  0  0  0  0  0  0 18  0  0\n   -1.5239   -3.8536    0.0000 O   0  0  0  0  0  0  0  0  0 19  0  0\n   -4.9294   -1.5000    0.0000 N   0  0  0  0  0  0  0  0  0 20  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  2  0\n  4  6  1  0\n  6  7  1  0\n  7  8  2  0\n  8  9  1  0\n  9 10  1  0\n 11 10  1  6\n 11 12  1  0\n 12 13  1  0\n 13 14  1  0\n 14 15  1  0\n 14 16  1  6\n 16 17  1  0\n 13 18  1  1\n 12 19  1  1\n  7 20  1  0\n 10  1  1  0\n  9  3  2  0\n 15 11  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 18,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 17,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.rU",
+      "version": 2,
+      "display_symbol": "rU",
+      "name": "RNA Uracil",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C9H12N2O6",
+      "exact_mass": 244.06953611304002,
+      "average_mass": 244.20299999999997,
+      "natural_analog": "U",
+      "smiles": "[cH:1]1[cH:2][n:3]([C@H:9]2[C@H:10]([OH:17])[C@H:11]([OH:16])[C@@H:12]([CH2:14][OH:15])[O:13]2)[c:4](=[O:5])[nH:6][c:7]1=[O:8]",
+      "molfile": "\n     RDKit          2D\n\n 17 18  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -3.0000    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n   -0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n    0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n    1.5000   -2.5981    0.0000 O   0  0  0  0  0  0  0  0  0  8  0  0\n   -1.5000    2.5981    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n   -0.8899    3.9684    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n   -2.0046    4.9721    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -3.3037    4.2221    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -2.9918    2.7549    0.0000 O   0  0  0  0  0  0  0  0  0 13  0  0\n   -4.6740    4.8322    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -5.8875    3.9505    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n   -1.8478    6.4639    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0\n    0.5773    4.2803    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  2  0\n  4  6  1  0\n  6  7  1  0\n  7  8  2  0\n  9  3  1  6\n  9 10  1  0\n 10 11  1  0\n 11 12  1  0\n 12 13  1  0\n 12 14  1  6\n 14 15  1  0\n 11 16  1  1\n 10 17  1  1\n  7  1  1  0\n 13  9  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 16,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 15,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.rI",
+      "version": 2,
+      "display_symbol": "rI",
+      "name": "RNA Hypoxanthine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H12N4O5",
+      "exact_mass": 268.08076950233,
+      "average_mass": 268.229,
+      "natural_analog": "I",
+      "smiles": "[cH:1]1[n:2][c:3]2[c:4]([c:5](=[O:6])[nH:7]1)[n:8][cH:9][n:10]2[C@H:11]1[C@H:12]([OH:19])[C@H:13]([OH:18])[C@@H:14]([CH2:16][OH:17])[O:15]1",
+      "molfile": "\n     RDKit          2D\n\n 19 21  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  5  0  0\n   -1.5000   -2.5981    0.0000 O   0  0  0  0  0  0  0  0  0  6  0  0\n    0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  7  0  0\n   -2.9672    0.3119    0.0000 N   0  0  0  0  0  0  0  0  0  8  0  0\n   -3.1240    1.8037    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n   -1.7537    2.4138    0.0000 N   0  0  0  0  0  0  0  0  0 10  0  0\n   -1.4418    3.8810    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -0.0715    4.4911    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -0.2283    5.9829    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0\n   -1.6955    6.2947    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -2.4455    4.9957    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n   -2.3056    7.6651    0.0000 C   0  0  0  0  0  0  0  0  0 16  0  0\n   -3.7974    7.8218    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n    0.8864    6.9866    0.0000 O   0  0  0  0  0  0  0  0  0 18  0  0\n    1.2275    3.7411    0.0000 O   0  0  0  0  0  0  0  0  0 19  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  5  6  2  0\n  5  7  1  0\n  4  8  1  0\n  8  9  2  0\n  9 10  1  0\n 11 10  1  6\n 11 12  1  0\n 12 13  1  0\n 13 14  1  0\n 14 15  1  0\n 14 16  1  6\n 16 17  1  0\n 13 18  1  1\n 12 19  1  1\n  7  1  1  0\n 10  3  1  0\n 15 11  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 18,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 17,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "PubChem CID 135398641 beta-D inosine; sugar derivatives preserve mapped parent centers",
+      "status": "REVIEWED",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed",
+        "reference_inchikey": "UGQMRVRMYYASKQ-KQYNXXCUSA-N"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.rT",
+      "version": 2,
+      "display_symbol": "rT",
+      "name": "RNA Thymine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H14N2O6",
+      "exact_mass": 258.0851861775,
+      "average_mass": 258.22999999999996,
+      "natural_analog": "T",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.fA",
+      "version": 2,
+      "display_symbol": "fA",
+      "name": "2F Adenine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H12N5O3F",
+      "exact_mass": 269.09241743035,
+      "average_mass": 269.236403163,
+      "natural_analog": "A",
+      "smiles": "[cH:1]1[n:2][c:3]([NH2:19])[c:4]2[c:5]([n:6]1)[n:7]([C@H:10]1[C@H:11]([F:18])[C@H:12]([OH:17])[C@@H:13]([CH2:15][OH:16])[O:14]1)[cH:8][n:9]2",
+      "molfile": "\n     RDKit          2D\n\n 19 21  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  5  0  0\n    0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n   -1.7537   -2.4138    0.0000 N   0  0  0  0  0  0  0  0  0  7  0  0\n   -3.1240   -1.8037    0.0000 C   0  0  0  0  0  0  0  0  0  8  0  0\n   -2.9672   -0.3119    0.0000 N   0  0  0  0  0  0  0  0  0  9  0  0\n   -1.4418   -3.8810    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n   -2.4455   -4.9957    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -1.6955   -6.2947    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -0.2283   -5.9829    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0\n   -0.0715   -4.4911    0.0000 O   0  0  0  0  0  0  0  0  0 14  0  0\n    0.8864   -6.9866    0.0000 C   0  0  0  0  0  0  0  0  0 15  0  0\n    2.3130   -6.5230    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0\n   -2.3056   -7.6651    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n   -3.9373   -4.8389    0.0000 F   0  0  0  0  0  0  0  0  0 18  0  0\n   -1.5000    2.5981    0.0000 N   0  0  0  0  0  0  0  0  0 19  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  5  6  2  0\n  5  7  1  0\n  7  8  1  0\n  8  9  2  0\n 10  7  1  6\n 10 11  1  0\n 11 12  1  0\n 12 13  1  0\n 13 14  1  0\n 13 15  1  6\n 15 16  1  0\n 12 17  1  1\n 11 18  1  1\n  3 19  1  0\n  6  1  1  0\n  9  4  1  0\n 14 10  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 17,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 16,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.fC",
+      "version": 2,
+      "display_symbol": "fC",
+      "name": "2F Cytosine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C9H12N3O4F",
+      "exact_mass": 245.08118404106,
+      "average_mass": 245.210403163,
+      "natural_analog": "C",
+      "smiles": "[cH:1]1[cH:2][n:3]([C@H:9]2[C@H:10]([F:17])[C@H:11]([OH:16])[C@@H:12]([CH2:14][OH:15])[O:13]2)[c:4](=[O:5])[n:6][c:7]1[NH2:8]",
+      "molfile": "\n     RDKit          2D\n\n 17 18  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -3.0000    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n   -0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n    0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n    1.5000   -2.5981    0.0000 N   0  0  0  0  0  0  0  0  0  8  0  0\n   -1.5000    2.5981    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n   -0.8899    3.9684    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n   -2.0046    4.9721    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -3.3037    4.2221    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -2.9918    2.7549    0.0000 O   0  0  0  0  0  0  0  0  0 13  0  0\n   -4.6740    4.8322    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -5.8875    3.9505    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n   -1.8478    6.4639    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0\n    0.5773    4.2803    0.0000 F   0  0  0  0  0  0  0  0  0 17  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  2  0\n  4  6  1  0\n  6  7  2  0\n  7  8  1  0\n  9  3  1  6\n  9 10  1  0\n 10 11  1  0\n 11 12  1  0\n 12 13  1  0\n 12 14  1  6\n 14 15  1  0\n 11 16  1  1\n 10 17  1  1\n  7  1  1  0\n 13  9  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 16,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 15,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.fG",
+      "version": 2,
+      "display_symbol": "fG",
+      "name": "2F Guanine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H12N5O4F",
+      "exact_mass": 285.08733204992,
+      "average_mass": 285.235403163,
+      "natural_analog": "G",
+      "smiles": "[cH:1]1[n:2][c:3]2[c:4](=[O:5])[nH:6][c:7]([NH2:20])[n:8][c:9]2[n:10]1[C@H:11]1[C@H:12]([F:19])[C@H:13]([OH:18])[C@@H:14]([CH2:16][OH:17])[O:15]1",
+      "molfile": "\n     RDKit          2D\n\n 20 22  0  0  0  0  0  0  0  0999 V2000\n    1.2760    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.3943    1.2135    0.0000 N   0  0  0  0  0  0  0  0  0  2  0  0\n   -1.0323    0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -2.3313    1.5000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -2.3313    3.0000    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n   -3.6304    0.7500    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n   -3.6304   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n   -2.3313   -1.5000    0.0000 N   0  0  0  0  0  0  0  0  0  8  0  0\n   -1.0323   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n    0.3943   -1.2135    0.0000 N   0  0  0  0  0  0  0  0  0 10  0  0\n    0.8578   -2.6401    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -0.0239   -3.8536    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n    0.8578   -5.0672    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0\n    2.2844   -4.6036    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n    2.2844   -3.1036    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n    3.4979   -5.4853    0.0000 C   0  0  0  0  0  0  0  0  0 16  0  0\n    4.8683   -4.8752    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n    0.3943   -6.4937    0.0000 O   0  0  0  0  0  0  0  0  0 18  0  0\n   -1.5239   -3.8536    0.0000 F   0  0  0  0  0  0  0  0  0 19  0  0\n   -4.9294   -1.5000    0.0000 N   0  0  0  0  0  0  0  0  0 20  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  2  0\n  4  6  1  0\n  6  7  1  0\n  7  8  2  0\n  8  9  1  0\n  9 10  1  0\n 11 10  1  6\n 11 12  1  0\n 12 13  1  0\n 13 14  1  0\n 14 15  1  0\n 14 16  1  6\n 16 17  1  0\n 13 18  1  1\n 12 19  1  1\n  7 20  1  0\n 10  1  1  0\n  9  3  2  0\n 15 11  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 18,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 17,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.fU",
+      "version": 2,
+      "display_symbol": "fU",
+      "name": "2F Uracil",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C9H11N2O5F",
+      "exact_mass": 246.06519962397,
+      "average_mass": 246.194403163,
+      "natural_analog": "U",
+      "smiles": "[cH:1]1[cH:2][n:3]([C@H:9]2[C@H:10]([F:17])[C@H:11]([OH:16])[C@@H:12]([CH2:14][OH:15])[O:13]2)[c:4](=[O:5])[nH:6][c:7]1=[O:8]",
+      "molfile": "\n     RDKit          2D\n\n 17 18  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -3.0000    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n   -0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n    0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n    1.5000   -2.5981    0.0000 O   0  0  0  0  0  0  0  0  0  8  0  0\n   -1.5000    2.5981    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n   -0.8899    3.9684    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n   -2.0046    4.9721    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -3.3037    4.2221    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -2.9918    2.7549    0.0000 O   0  0  0  0  0  0  0  0  0 13  0  0\n   -4.6740    4.8322    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -5.8875    3.9505    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n   -1.8478    6.4639    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0\n    0.5773    4.2803    0.0000 F   0  0  0  0  0  0  0  0  0 17  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  2  0\n  4  6  1  0\n  6  7  1  0\n  7  8  2  0\n  9  3  1  6\n  9 10  1  0\n 10 11  1  0\n 11 12  1  0\n 12 13  1  0\n 12 14  1  6\n 14 15  1  0\n 11 16  1  1\n 10 17  1  1\n  7  1  1  0\n 13  9  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 16,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 15,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.fI",
+      "version": 2,
+      "display_symbol": "fI",
+      "name": "2F Hypoxanthine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H11N4O4F",
+      "exact_mass": 270.07643301326,
+      "average_mass": 270.220403163,
+      "natural_analog": "I",
+      "smiles": "[cH:1]1[n:2][c:3]2[c:4]([c:5](=[O:6])[nH:7]1)[n:8][cH:9][n:10]2[C@H:11]1[C@H:12]([F:19])[C@H:13]([OH:18])[C@@H:14]([CH2:16][OH:17])[O:15]1",
+      "molfile": "\n     RDKit          2D\n\n 19 21  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  5  0  0\n   -1.5000   -2.5981    0.0000 O   0  0  0  0  0  0  0  0  0  6  0  0\n    0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  7  0  0\n   -2.9672    0.3119    0.0000 N   0  0  0  0  0  0  0  0  0  8  0  0\n   -3.1240    1.8037    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n   -1.7537    2.4138    0.0000 N   0  0  0  0  0  0  0  0  0 10  0  0\n   -1.4418    3.8810    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -0.0715    4.4911    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -0.2283    5.9829    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0\n   -1.6955    6.2947    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -2.4455    4.9957    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n   -2.3056    7.6651    0.0000 C   0  0  0  0  0  0  0  0  0 16  0  0\n   -3.7974    7.8218    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n    0.8864    6.9866    0.0000 O   0  0  0  0  0  0  0  0  0 18  0  0\n    1.2275    3.7411    0.0000 F   0  0  0  0  0  0  0  0  0 19  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  5  6  2  0\n  5  7  1  0\n  4  8  1  0\n  8  9  2  0\n  9 10  1  0\n 11 10  1  6\n 11 12  1  0\n 12 13  1  0\n 13 14  1  0\n 14 15  1  0\n 14 16  1  6\n 16 17  1  0\n 13 18  1  1\n 12 19  1  1\n  7  1  1  0\n 10  3  1  0\n 15 11  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 18,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 17,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "PubChem CID 135398641 beta-D inosine; sugar derivatives preserve mapped parent centers",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.fT",
+      "version": 2,
+      "display_symbol": "fT",
+      "name": "2F Thymine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H13N2O5F",
+      "exact_mass": 260.08084968843,
+      "average_mass": 260.221403163,
+      "natural_analog": "T",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.mA",
+      "version": 2,
+      "display_symbol": "mA",
+      "name": "2OMe Adenine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C11H15N5O4",
+      "exact_mass": 281.11240398388,
+      "average_mass": 281.272,
+      "natural_analog": "A",
+      "smiles": "[cH:1]1[n:2][c:3]([NH2:19])[c:4]2[c:5]([n:6]1)[n:7]([C@H:10]1[C@H:11]([O:18][CH3:20])[C@H:12]([OH:17])[C@@H:13]([CH2:15][OH:16])[O:14]1)[cH:8][n:9]2",
+      "molfile": "\n     RDKit          2D\n\n 20 22  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  5  0  0\n    0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n   -1.7537   -2.4138    0.0000 N   0  0  0  0  0  0  0  0  0  7  0  0\n   -3.1240   -1.8037    0.0000 C   0  0  0  0  0  0  0  0  0  8  0  0\n   -2.9672   -0.3119    0.0000 N   0  0  0  0  0  0  0  0  0  9  0  0\n   -1.4418   -3.8810    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n   -2.4455   -4.9957    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -1.6955   -6.2947    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -0.2283   -5.9829    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0\n   -0.0715   -4.4911    0.0000 O   0  0  0  0  0  0  0  0  0 14  0  0\n    0.8864   -6.9866    0.0000 C   0  0  0  0  0  0  0  0  0 15  0  0\n    2.3130   -6.5230    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0\n   -2.3056   -7.6651    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n   -3.9373   -4.8389    0.0000 O   0  0  0  0  0  0  0  0  0 18  0  0\n   -1.5000    2.5981    0.0000 N   0  0  0  0  0  0  0  0  0 19  0  0\n   -4.8190   -6.0524    0.0000 C   0  0  0  0  0  0  0  0  0 20  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  5  6  2  0\n  5  7  1  0\n  7  8  1  0\n  8  9  2  0\n 10  7  1  6\n 10 11  1  0\n 11 12  1  0\n 12 13  1  0\n 13 14  1  0\n 13 15  1  6\n 15 16  1  0\n 12 17  1  1\n 11 18  1  1\n  3 19  1  0\n  6  1  1  0\n  9  4  1  0\n 14 10  1  0\n 18 20  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 17,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 16,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.mC",
+      "version": 2,
+      "display_symbol": "mC",
+      "name": "2OMe Cytosine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H15N3O5",
+      "exact_mass": 257.10117059459,
+      "average_mass": 257.246,
+      "natural_analog": "C",
+      "smiles": "[cH:1]1[cH:2][n:3]([C@H:9]2[C@H:10]([O:17][CH3:18])[C@H:11]([OH:16])[C@@H:12]([CH2:14][OH:15])[O:13]2)[c:4](=[O:5])[n:6][c:7]1[NH2:8]",
+      "molfile": "\n     RDKit          2D\n\n 18 19  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -3.0000    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n   -0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n    0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n    1.5000   -2.5981    0.0000 N   0  0  0  0  0  0  0  0  0  8  0  0\n   -1.5000    2.5981    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n   -0.8899    3.9684    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n   -2.0046    4.9721    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -3.3037    4.2221    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -2.9918    2.7549    0.0000 O   0  0  0  0  0  0  0  0  0 13  0  0\n   -4.6740    4.8322    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -5.8875    3.9505    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n   -1.8478    6.4639    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0\n    0.5773    4.2803    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n    1.0409    5.7068    0.0000 C   0  0  0  0  0  0  0  0  0 18  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  2  0\n  4  6  1  0\n  6  7  2  0\n  7  8  1  0\n  9  3  1  6\n  9 10  1  0\n 10 11  1  0\n 11 12  1  0\n 12 13  1  0\n 12 14  1  6\n 14 15  1  0\n 11 16  1  1\n 10 17  1  1\n  7  1  1  0\n 13  9  1  0\n 17 18  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 16,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 15,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.mG",
+      "version": 2,
+      "display_symbol": "mG",
+      "name": "2OMe Guanine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C11H15N5O5",
+      "exact_mass": 297.10731860345,
+      "average_mass": 297.27099999999996,
+      "natural_analog": "G",
+      "smiles": "[cH:1]1[n:2][c:3]2[c:4](=[O:5])[nH:6][c:7]([NH2:20])[n:8][c:9]2[n:10]1[C@H:11]1[C@H:12]([O:19][CH3:21])[C@H:13]([OH:18])[C@@H:14]([CH2:16][OH:17])[O:15]1",
+      "molfile": "\n     RDKit          2D\n\n 21 23  0  0  0  0  0  0  0  0999 V2000\n    1.2760    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.3943    1.2135    0.0000 N   0  0  0  0  0  0  0  0  0  2  0  0\n   -1.0323    0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -2.3313    1.5000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -2.3313    3.0000    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n   -3.6304    0.7500    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n   -3.6304   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n   -2.3313   -1.5000    0.0000 N   0  0  0  0  0  0  0  0  0  8  0  0\n   -1.0323   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n    0.3943   -1.2135    0.0000 N   0  0  0  0  0  0  0  0  0 10  0  0\n    0.8578   -2.6401    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -0.0239   -3.8536    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n    0.8578   -5.0672    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0\n    2.2844   -4.6036    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n    2.2844   -3.1036    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n    3.4979   -5.4853    0.0000 C   0  0  0  0  0  0  0  0  0 16  0  0\n    4.8683   -4.8752    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n    0.3943   -6.4937    0.0000 O   0  0  0  0  0  0  0  0  0 18  0  0\n   -1.5239   -3.8536    0.0000 O   0  0  0  0  0  0  0  0  0 19  0  0\n   -4.9294   -1.5000    0.0000 N   0  0  0  0  0  0  0  0  0 20  0  0\n   -2.2739   -5.1527    0.0000 C   0  0  0  0  0  0  0  0  0 21  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  2  0\n  4  6  1  0\n  6  7  1  0\n  7  8  2  0\n  8  9  1  0\n  9 10  1  0\n 11 10  1  6\n 11 12  1  0\n 12 13  1  0\n 13 14  1  0\n 14 15  1  0\n 14 16  1  6\n 16 17  1  0\n 13 18  1  1\n 12 19  1  1\n  7 20  1  0\n 10  1  1  0\n  9  3  2  0\n 15 11  1  0\n 19 21  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 18,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 17,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.mU",
+      "version": 2,
+      "display_symbol": "mU",
+      "name": "2OMe Uracil",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H14N2O6",
+      "exact_mass": 258.0851861775,
+      "average_mass": 258.22999999999996,
+      "natural_analog": "U",
+      "smiles": "[cH:1]1[cH:2][n:3]([C@H:9]2[C@H:10]([O:17][CH3:18])[C@H:11]([OH:16])[C@@H:12]([CH2:14][OH:15])[O:13]2)[c:4](=[O:5])[nH:6][c:7]1=[O:8]",
+      "molfile": "\n     RDKit          2D\n\n 18 19  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -3.0000    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n   -0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n    0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n    1.5000   -2.5981    0.0000 O   0  0  0  0  0  0  0  0  0  8  0  0\n   -1.5000    2.5981    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n   -0.8899    3.9684    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n   -2.0046    4.9721    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -3.3037    4.2221    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -2.9918    2.7549    0.0000 O   0  0  0  0  0  0  0  0  0 13  0  0\n   -4.6740    4.8322    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -5.8875    3.9505    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n   -1.8478    6.4639    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0\n    0.5773    4.2803    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n    1.0409    5.7068    0.0000 C   0  0  0  0  0  0  0  0  0 18  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  2  0\n  4  6  1  0\n  6  7  1  0\n  7  8  2  0\n  9  3  1  6\n  9 10  1  0\n 10 11  1  0\n 11 12  1  0\n 12 13  1  0\n 12 14  1  6\n 14 15  1  0\n 11 16  1  1\n 10 17  1  1\n  7  1  1  0\n 13  9  1  0\n 17 18  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 16,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 15,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.mI",
+      "version": 2,
+      "display_symbol": "mI",
+      "name": "2OMe Hypoxanthine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C11H14N4O5",
+      "exact_mass": 282.09641956679,
+      "average_mass": 282.256,
+      "natural_analog": "I",
+      "smiles": "[cH:1]1[n:2][c:3]2[c:4]([c:5](=[O:6])[nH:7]1)[n:8][cH:9][n:10]2[C@H:11]1[C@H:12]([O:19][CH3:20])[C@H:13]([OH:18])[C@@H:14]([CH2:16][OH:17])[O:15]1",
+      "molfile": "\n     RDKit          2D\n\n 20 22  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  5  0  0\n   -1.5000   -2.5981    0.0000 O   0  0  0  0  0  0  0  0  0  6  0  0\n    0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  7  0  0\n   -2.9672    0.3119    0.0000 N   0  0  0  0  0  0  0  0  0  8  0  0\n   -3.1240    1.8037    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n   -1.7537    2.4138    0.0000 N   0  0  0  0  0  0  0  0  0 10  0  0\n   -1.4418    3.8810    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -0.0715    4.4911    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -0.2283    5.9829    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0\n   -1.6955    6.2947    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -2.4455    4.9957    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n   -2.3056    7.6651    0.0000 C   0  0  0  0  0  0  0  0  0 16  0  0\n   -3.7974    7.8218    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n    0.8864    6.9866    0.0000 O   0  0  0  0  0  0  0  0  0 18  0  0\n    1.2275    3.7411    0.0000 O   0  0  0  0  0  0  0  0  0 19  0  0\n    2.5266    4.4911    0.0000 C   0  0  0  0  0  0  0  0  0 20  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  5  6  2  0\n  5  7  1  0\n  4  8  1  0\n  8  9  2  0\n  9 10  1  0\n 11 10  1  6\n 11 12  1  0\n 12 13  1  0\n 13 14  1  0\n 14 15  1  0\n 14 16  1  6\n 16 17  1  0\n 13 18  1  1\n 12 19  1  1\n  7  1  1  0\n 10  3  1  0\n 15 11  1  0\n 19 20  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 18,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 17,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "PubChem CID 135398641 beta-D inosine; sugar derivatives preserve mapped parent centers",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.mT",
+      "version": 2,
+      "display_symbol": "mT",
+      "name": "2OMe Thymine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C11H16N2O6",
+      "exact_mass": 272.10083624196,
+      "average_mass": 272.257,
+      "natural_analog": "T",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.eA",
+      "version": 2,
+      "display_symbol": "eA",
+      "name": "MOE Adenine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C13H19N5O5",
+      "exact_mass": 325.13861873237,
+      "average_mass": 325.325,
+      "natural_analog": "A",
+      "smiles": "[cH:1]1[n:2][c:3]([NH2:19])[c:4]2[c:5]([n:6]1)[n:7]([C@H:10]1[C@H:11]([O:18][CH2:20][CH2:21][O:22][CH3:23])[C@H:12]([OH:17])[C@@H:13]([CH2:15][OH:16])[O:14]1)[cH:8][n:9]2",
+      "molfile": "\n     RDKit          2D\n\n 23 25  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  5  0  0\n    0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n   -1.7537   -2.4138    0.0000 N   0  0  0  0  0  0  0  0  0  7  0  0\n   -3.1240   -1.8037    0.0000 C   0  0  0  0  0  0  0  0  0  8  0  0\n   -2.9672   -0.3119    0.0000 N   0  0  0  0  0  0  0  0  0  9  0  0\n   -1.4418   -3.8810    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n   -2.4455   -4.9957    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -1.6955   -6.2947    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -0.2283   -5.9829    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0\n   -0.0715   -4.4911    0.0000 O   0  0  0  0  0  0  0  0  0 14  0  0\n    0.8864   -6.9866    0.0000 C   0  0  0  0  0  0  0  0  0 15  0  0\n    2.3130   -6.5230    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0\n   -2.3056   -7.6651    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n   -3.9373   -4.8389    0.0000 O   0  0  0  0  0  0  0  0  0 18  0  0\n   -1.5000    2.5981    0.0000 N   0  0  0  0  0  0  0  0  0 19  0  0\n   -4.8190   -6.0524    0.0000 C   0  0  0  0  0  0  0  0  0 20  0  0\n   -6.3108   -5.8956    0.0000 C   0  0  0  0  0  0  0  0  0 21  0  0\n   -7.1924   -7.1092    0.0000 O   0  0  0  0  0  0  0  0  0 22  0  0\n   -8.6842   -6.9524    0.0000 C   0  0  0  0  0  0  0  0  0 23  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  5  6  2  0\n  5  7  1  0\n  7  8  1  0\n  8  9  2  0\n 10  7  1  6\n 10 11  1  0\n 11 12  1  0\n 12 13  1  0\n 13 14  1  0\n 13 15  1  6\n 15 16  1  0\n 12 17  1  1\n 11 18  1  1\n  3 19  1  0\n  6  1  1  0\n  9  4  1  0\n 14 10  1  0\n 18 20  1  0\n 20 21  1  0\n 21 22  1  0\n 22 23  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 17,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 16,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.eC",
+      "version": 2,
+      "display_symbol": "eC",
+      "name": "MOE Cytosine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C12H19N3O6",
+      "exact_mass": 301.12738534308,
+      "average_mass": 301.299,
+      "natural_analog": "C",
+      "smiles": "[cH:1]1[cH:2][n:3]([C@H:9]2[C@H:10]([O:17][CH2:18][CH2:19][O:20][CH3:21])[C@H:11]([OH:16])[C@@H:12]([CH2:14][OH:15])[O:13]2)[c:4](=[O:5])[n:6][c:7]1[NH2:8]",
+      "molfile": "\n     RDKit          2D\n\n 21 22  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -3.0000    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n   -0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n    0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n    1.5000   -2.5981    0.0000 N   0  0  0  0  0  0  0  0  0  8  0  0\n   -1.5000    2.5981    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n   -0.8899    3.9684    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n   -2.0046    4.9721    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -3.3037    4.2221    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -2.9918    2.7549    0.0000 O   0  0  0  0  0  0  0  0  0 13  0  0\n   -4.6740    4.8322    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -5.8875    3.9505    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n   -1.8478    6.4639    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0\n    0.5773    4.2803    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n    1.0409    5.7068    0.0000 C   0  0  0  0  0  0  0  0  0 18  0  0\n    2.5081    6.0187    0.0000 C   0  0  0  0  0  0  0  0  0 19  0  0\n    2.9716    7.4453    0.0000 O   0  0  0  0  0  0  0  0  0 20  0  0\n    4.4388    7.7572    0.0000 C   0  0  0  0  0  0  0  0  0 21  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  2  0\n  4  6  1  0\n  6  7  2  0\n  7  8  1  0\n  9  3  1  6\n  9 10  1  0\n 10 11  1  0\n 11 12  1  0\n 12 13  1  0\n 12 14  1  6\n 14 15  1  0\n 11 16  1  1\n 10 17  1  1\n  7  1  1  0\n 13  9  1  0\n 17 18  1  0\n 18 19  1  0\n 19 20  1  0\n 20 21  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 16,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 15,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.eG",
+      "version": 2,
+      "display_symbol": "eG",
+      "name": "MOE Guanine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C13H19N5O6",
+      "exact_mass": 341.13353335194,
+      "average_mass": 341.324,
+      "natural_analog": "G",
+      "smiles": "[cH:1]1[n:2][c:3]2[c:4](=[O:5])[nH:6][c:7]([NH2:20])[n:8][c:9]2[n:10]1[C@H:11]1[C@H:12]([O:19][CH2:21][CH2:22][O:23][CH3:24])[C@H:13]([OH:18])[C@@H:14]([CH2:16][OH:17])[O:15]1",
+      "molfile": "\n     RDKit          2D\n\n 24 26  0  0  0  0  0  0  0  0999 V2000\n    1.2760    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.3943    1.2135    0.0000 N   0  0  0  0  0  0  0  0  0  2  0  0\n   -1.0323    0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -2.3313    1.5000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -2.3313    3.0000    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n   -3.6304    0.7500    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n   -3.6304   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n   -2.3313   -1.5000    0.0000 N   0  0  0  0  0  0  0  0  0  8  0  0\n   -1.0323   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n    0.3943   -1.2135    0.0000 N   0  0  0  0  0  0  0  0  0 10  0  0\n    0.8578   -2.6401    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -0.0239   -3.8536    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n    0.8578   -5.0672    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0\n    2.2844   -4.6036    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n    2.2844   -3.1036    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n    3.4979   -5.4853    0.0000 C   0  0  0  0  0  0  0  0  0 16  0  0\n    4.8683   -4.8752    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n    0.3943   -6.4937    0.0000 O   0  0  0  0  0  0  0  0  0 18  0  0\n   -1.5239   -3.8536    0.0000 O   0  0  0  0  0  0  0  0  0 19  0  0\n   -4.9294   -1.5000    0.0000 N   0  0  0  0  0  0  0  0  0 20  0  0\n   -2.2739   -5.1527    0.0000 C   0  0  0  0  0  0  0  0  0 21  0  0\n   -3.7739   -5.1527    0.0000 C   0  0  0  0  0  0  0  0  0 22  0  0\n   -4.5239   -6.4517    0.0000 O   0  0  0  0  0  0  0  0  0 23  0  0\n   -6.0239   -6.4517    0.0000 C   0  0  0  0  0  0  0  0  0 24  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  2  0\n  4  6  1  0\n  6  7  1  0\n  7  8  2  0\n  8  9  1  0\n  9 10  1  0\n 11 10  1  6\n 11 12  1  0\n 12 13  1  0\n 13 14  1  0\n 14 15  1  0\n 14 16  1  6\n 16 17  1  0\n 13 18  1  1\n 12 19  1  1\n  7 20  1  0\n 10  1  1  0\n  9  3  2  0\n 15 11  1  0\n 19 21  1  0\n 21 22  1  0\n 22 23  1  0\n 23 24  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 18,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 17,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.eU",
+      "version": 2,
+      "display_symbol": "eU",
+      "name": "MOE Uracil",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C12H18N2O7",
+      "exact_mass": 302.11140092599,
+      "average_mass": 302.283,
+      "natural_analog": "U",
+      "smiles": "[cH:1]1[cH:2][n:3]([C@H:9]2[C@H:10]([O:17][CH2:18][CH2:19][O:20][CH3:21])[C@H:11]([OH:16])[C@@H:12]([CH2:14][OH:15])[O:13]2)[c:4](=[O:5])[nH:6][c:7]1=[O:8]",
+      "molfile": "\n     RDKit          2D\n\n 21 22  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -3.0000    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n   -0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n    0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n    1.5000   -2.5981    0.0000 O   0  0  0  0  0  0  0  0  0  8  0  0\n   -1.5000    2.5981    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n   -0.8899    3.9684    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n   -2.0046    4.9721    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -3.3037    4.2221    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -2.9918    2.7549    0.0000 O   0  0  0  0  0  0  0  0  0 13  0  0\n   -4.6740    4.8322    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -5.8875    3.9505    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n   -1.8478    6.4639    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0\n    0.5773    4.2803    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n    1.0409    5.7068    0.0000 C   0  0  0  0  0  0  0  0  0 18  0  0\n    2.5081    6.0187    0.0000 C   0  0  0  0  0  0  0  0  0 19  0  0\n    2.9716    7.4453    0.0000 O   0  0  0  0  0  0  0  0  0 20  0  0\n    4.4388    7.7572    0.0000 C   0  0  0  0  0  0  0  0  0 21  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  2  0\n  4  6  1  0\n  6  7  1  0\n  7  8  2  0\n  9  3  1  6\n  9 10  1  0\n 10 11  1  0\n 11 12  1  0\n 12 13  1  0\n 12 14  1  6\n 14 15  1  0\n 11 16  1  1\n 10 17  1  1\n  7  1  1  0\n 13  9  1  0\n 17 18  1  0\n 18 19  1  0\n 19 20  1  0\n 20 21  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 16,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 15,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.eI",
+      "version": 2,
+      "display_symbol": "eI",
+      "name": "MOE Hypoxanthine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C13H18N4O6",
+      "exact_mass": 326.12263431528,
+      "average_mass": 326.30899999999997,
+      "natural_analog": "I",
+      "smiles": "[cH:1]1[n:2][c:3]2[c:4]([c:5](=[O:6])[nH:7]1)[n:8][cH:9][n:10]2[C@H:11]1[C@H:12]([O:19][CH2:20][CH2:21][O:22][CH3:23])[C@H:13]([OH:18])[C@@H:14]([CH2:16][OH:17])[O:15]1",
+      "molfile": "\n     RDKit          2D\n\n 23 25  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  5  0  0\n   -1.5000   -2.5981    0.0000 O   0  0  0  0  0  0  0  0  0  6  0  0\n    0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  7  0  0\n   -2.9672    0.3119    0.0000 N   0  0  0  0  0  0  0  0  0  8  0  0\n   -3.1240    1.8037    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n   -1.7537    2.4138    0.0000 N   0  0  0  0  0  0  0  0  0 10  0  0\n   -1.4418    3.8810    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -0.0715    4.4911    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -0.2283    5.9829    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0\n   -1.6955    6.2947    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -2.4455    4.9957    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n   -2.3056    7.6651    0.0000 C   0  0  0  0  0  0  0  0  0 16  0  0\n   -3.7974    7.8218    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n    0.8864    6.9866    0.0000 O   0  0  0  0  0  0  0  0  0 18  0  0\n    1.2275    3.7411    0.0000 O   0  0  0  0  0  0  0  0  0 19  0  0\n    2.5266    4.4911    0.0000 C   0  0  0  0  0  0  0  0  0 20  0  0\n    3.8256    3.7411    0.0000 C   0  0  0  0  0  0  0  0  0 21  0  0\n    5.1246    4.4911    0.0000 O   0  0  0  0  0  0  0  0  0 22  0  0\n    6.4237    3.7411    0.0000 C   0  0  0  0  0  0  0  0  0 23  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  5  6  2  0\n  5  7  1  0\n  4  8  1  0\n  8  9  2  0\n  9 10  1  0\n 11 10  1  6\n 11 12  1  0\n 12 13  1  0\n 13 14  1  0\n 14 15  1  0\n 14 16  1  6\n 16 17  1  0\n 13 18  1  1\n 12 19  1  1\n  7  1  1  0\n 10  3  1  0\n 15 11  1  0\n 19 20  1  0\n 20 21  1  0\n 21 22  1  0\n 22 23  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 18,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 17,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "PubChem CID 135398641 beta-D inosine; sugar derivatives preserve mapped parent centers",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.eT",
+      "version": 2,
+      "display_symbol": "eT",
+      "name": "MOE Thymine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C13H20N2O7",
+      "exact_mass": 316.12705099045,
+      "average_mass": 316.31,
+      "natural_analog": "T",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.dA",
+      "version": 2,
+      "display_symbol": "A",
+      "name": "DNA Adenine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H13N5O3",
+      "exact_mass": 251.10183929984998,
+      "average_mass": 251.24599999999998,
+      "natural_analog": "A",
+      "smiles": "[n:1]1[c:2]2[c:3]([NH2:18])[n:4][cH:5][n:6][c:7]2[n:8]([C@@H:10]2[O:11][C@H:12]([CH2:16][OH:17])[C@@H:13]([OH:14])[CH2:15]2)[cH:9]1",
+      "molfile": "\n     RDKit          2D\n\n 18 20  0  0  0  0  0  0  0  0999 V2000\n    2.9672   -0.3119    0.0000 N   0  0  0  0  0  0  0  0  0  1  0  0\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  2  0  0\n    0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  4  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  5  0  0\n   -0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n    0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n    1.7537   -2.4138    0.0000 N   0  0  0  0  0  0  0  0  0  8  0  0\n    3.1240   -1.8037    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n    1.4418   -3.8810    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n    0.0715   -4.4911    0.0000 O   0  0  0  0  0  0  0  0  0 11  0  0\n    0.2283   -5.9829    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n    1.6955   -6.2947    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0\n    2.3056   -7.6651    0.0000 O   0  0  0  0  0  0  0  0  0 14  0  0\n    2.4455   -4.9957    0.0000 C   0  0  0  0  0  0  0  0  0 15  0  0\n   -0.8864   -6.9866    0.0000 C   0  0  0  0  0  0  0  0  0 16  0  0\n   -2.3130   -6.5230    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n    1.5000    2.5981    0.0000 N   0  0  0  0  0  0  0  0  0 18  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  2  0\n  5  6  1  0\n  6  7  2  0\n  7  8  1  0\n  8  9  1  0\n 10  8  1  1\n 10 11  1  0\n 11 12  1  0\n 12 13  1  0\n 13 14  1  6\n 13 15  1  0\n 12 16  1  1\n 16 17  1  0\n  3 18  1  0\n  7  2  1  0\n  9  1  2  0\n 15 10  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 14,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 17,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.dC",
+      "version": 2,
+      "display_symbol": "C",
+      "name": "DNA Cytosine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C9H13N3O4",
+      "exact_mass": 227.09060591056,
+      "average_mass": 227.22,
+      "natural_analog": "C",
+      "smiles": "[cH:1]1[cH:2][n:3]([C@H:9]2[CH2:10][C@H:11]([OH:16])[C@@H:12]([CH2:14][OH:15])[O:13]2)[c:4](=[O:5])[n:6][c:7]1[NH2:8]",
+      "molfile": "\n     RDKit          2D\n\n 16 17  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -3.0000    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n   -0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n    0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n    1.5000   -2.5981    0.0000 N   0  0  0  0  0  0  0  0  0  8  0  0\n   -1.5000    2.5981    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n   -0.8899    3.9684    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n   -2.0046    4.9721    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -3.3037    4.2221    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -2.9918    2.7549    0.0000 O   0  0  0  0  0  0  0  0  0 13  0  0\n   -4.6740    4.8322    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -5.8875    3.9505    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n   -1.8478    6.4639    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  2  0\n  4  6  1  0\n  6  7  2  0\n  7  8  1  0\n  9  3  1  6\n  9 10  1  0\n 10 11  1  0\n 11 12  1  0\n 12 13  1  0\n 12 14  1  6\n 14 15  1  0\n 11 16  1  1\n  7  1  1  0\n 13  9  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 16,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 15,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.dG",
+      "version": 2,
+      "display_symbol": "G",
+      "name": "DNA Guanine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H13N5O4",
+      "exact_mass": 267.09675391942,
+      "average_mass": 267.245,
+      "natural_analog": "G",
+      "smiles": "[cH:1]1[n:2][c:3]2[c:4]([n:5]1[C@H:6]1[CH2:7][C@H:8]([OH:13])[C@@H:9]([CH2:11][OH:12])[O:10]1)[nH:14][c:15]([NH2:19])[n:16][c:17]2=[O:18]",
+      "molfile": "\n     RDKit          2D\n\n 19 21  0  0  0  0  0  0  0  0999 V2000\n    1.2760    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.3943    1.2135    0.0000 N   0  0  0  0  0  0  0  0  0  2  0  0\n   -1.0323    0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.0323   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n    0.3943   -1.2135    0.0000 N   0  0  0  0  0  0  0  0  0  5  0  0\n    0.8578   -2.6401    0.0000 C   0  0  0  0  0  0  0  0  0  6  0  0\n   -0.0239   -3.8536    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n    0.8578   -5.0672    0.0000 C   0  0  0  0  0  0  0  0  0  8  0  0\n    2.2844   -4.6036    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n    2.2844   -3.1036    0.0000 O   0  0  0  0  0  0  0  0  0 10  0  0\n    3.4979   -5.4853    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n    4.8683   -4.8752    0.0000 O   0  0  0  0  0  0  0  0  0 12  0  0\n    0.3943   -6.4937    0.0000 O   0  0  0  0  0  0  0  0  0 13  0  0\n   -2.3313   -1.5000    0.0000 N   0  0  0  0  0  0  0  0  0 14  0  0\n   -3.6304   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0 15  0  0\n   -3.6304    0.7500    0.0000 N   0  0  0  0  0  0  0  0  0 16  0  0\n   -2.3313    1.5000    0.0000 C   0  0  0  0  0  0  0  0  0 17  0  0\n   -2.3313    3.0000    0.0000 O   0  0  0  0  0  0  0  0  0 18  0  0\n   -4.9294   -1.5000    0.0000 N   0  0  0  0  0  0  0  0  0 19  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  6  5  1  6\n  6  7  1  0\n  7  8  1  0\n  8  9  1  0\n  9 10  1  0\n  9 11  1  6\n 11 12  1  0\n  8 13  1  1\n  4 14  1  0\n 14 15  1  0\n 15 16  2  0\n 16 17  1  0\n 17 18  2  0\n 15 19  1  0\n  5  1  1  0\n 17  3  1  0\n 10  6  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 13,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 12,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.dU",
+      "version": 2,
+      "display_symbol": "dU",
+      "name": "DNA Uracil",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C9H12N2O5",
+      "exact_mass": 228.07462149347,
+      "average_mass": 228.204,
+      "natural_analog": "U",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.dI",
+      "version": 2,
+      "display_symbol": "dI",
+      "name": "DNA Hypoxanthine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H12N4O4",
+      "exact_mass": 252.08585488276,
+      "average_mass": 252.23,
+      "natural_analog": "I",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.dT",
+      "version": 2,
+      "display_symbol": "T",
+      "name": "DNA Thymine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H14N2O5",
+      "exact_mass": 242.09027155793,
+      "average_mass": 242.231,
+      "natural_analog": "T",
+      "smiles": "[CH3:1][c:2]1[cH:3][n:4]([C@H:10]2[CH2:11][C@H:12]([OH:17])[C@@H:13]([CH2:15][OH:16])[O:14]2)[c:5](=[O:6])[nH:7][c:8]1=[O:9]",
+      "molfile": "\n     RDKit          2D\n\n 17 18  0  0  0  0  0  0  0  0999 V2000\n    3.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  2  0  0\n    0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  4  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  5  0  0\n   -3.0000    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  6  0  0\n   -0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  7  0  0\n    0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  8  0  0\n    1.5000   -2.5981    0.0000 O   0  0  0  0  0  0  0  0  0  9  0  0\n   -1.5000    2.5981    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n   -0.8899    3.9684    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -2.0046    4.9721    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -3.3037    4.2221    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0\n   -2.9918    2.7549    0.0000 O   0  0  0  0  0  0  0  0  0 14  0  0\n   -4.6740    4.8322    0.0000 C   0  0  0  0  0  0  0  0  0 15  0  0\n   -5.8875    3.9505    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0\n   -1.8478    6.4639    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  1  0\n  5  6  2  0\n  5  7  1  0\n  7  8  1  0\n  8  9  2  0\n 10  4  1  6\n 10 11  1  0\n 11 12  1  0\n 12 13  1  0\n 13 14  1  0\n 13 15  1  6\n 15 16  1  0\n 12 17  1  1\n  8  2  1  0\n 14 10  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 17,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 16,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.lA",
+      "version": 2,
+      "display_symbol": "lA",
+      "name": "LNA Adenine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C11H13N5O4",
+      "exact_mass": 279.09675391942,
+      "average_mass": 279.256,
+      "natural_analog": "A",
+      "smiles": "[cH:1]1[n:2][c:3]([NH2:19])[c:4]2[c:5]([n:6]1)[n:7]([C@H:10]1[C@H:11]3[C@H:12]([OH:17])[C@@:13]([CH2:15][OH:16])([O:14]1)[CH2:20][O:18]3)[cH:8][n:9]2",
+      "molfile": "\n     RDKit          2D\n\n 20 23  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  5  0  0\n    0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n   -1.7537   -2.4138    0.0000 N   0  0  0  0  0  0  0  0  0  7  0  0\n   -3.1240   -1.8037    0.0000 C   0  0  0  0  0  0  0  0  0  8  0  0\n   -2.9672   -0.3119    0.0000 N   0  0  0  0  0  0  0  0  0  9  0  0\n   -1.4418   -3.8810    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n   -2.4455   -4.9957    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -0.9783   -4.6838    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -0.2283   -5.9829    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0\n   -0.0715   -4.4911    0.0000 O   0  0  0  0  0  0  0  0  0 14  0  0\n    1.2635   -6.1397    0.0000 C   0  0  0  0  0  0  0  0  0 15  0  0\n    1.8736   -7.5100    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0\n   -0.7438   -3.2023    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n   -2.6023   -6.4875    0.0000 O   0  0  0  0  0  0  0  0  0 18  0  0\n   -1.5000    2.5981    0.0000 N   0  0  0  0  0  0  0  0  0 19  0  0\n   -1.2320   -7.0976    0.0000 C   0  0  0  0  0  0  0  0  0 20  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  5  6  2  0\n  5  7  1  0\n  7  8  1  0\n  8  9  2  0\n 10  7  1  6\n 10 11  1  0\n 11 12  1  0\n 12 13  1  0\n 13 14  1  0\n 13 15  1  6\n 15 16  1  0\n 12 17  1  6\n 11 18  1  1\n  3 19  1  0\n  6  1  1  0\n  9  4  1  0\n 14 10  1  0\n 18 20  1  0\n 20 13  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 17,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 16,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "REVIEW"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.lC",
+      "version": 2,
+      "display_symbol": "lC",
+      "name": "LNA Cytosine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H13N3O5",
+      "exact_mass": 255.08552053013,
+      "average_mass": 255.23,
+      "natural_analog": "C",
+      "smiles": "[cH:1]1[cH:2][n:3]([C@H:9]2[C@H:10]3[C@H:11]([OH:16])[C@@:12]([CH2:14][OH:15])([O:13]2)[CH2:18][O:17]3)[c:4](=[O:5])[n:6][c:7]1[NH2:8]",
+      "molfile": "\n     RDKit          2D\n\n 18 20  0  0  0  0  0  0  0  0999 V2000\n    3.5462    4.7551    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    2.3327    3.8735    0.0000 C   0  0  0  0  0  0  0  0  0  2  0  0\n    2.4895    2.3817    0.0000 N   0  0  0  0  0  0  0  0  0  3  0  0\n    3.8598    1.7716    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n    4.0166    0.2798    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n    5.0733    2.6533    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n    4.9166    4.1450    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n    6.1301    5.0267    0.0000 N   0  0  0  0  0  0  0  0  0  8  0  0\n    1.2760    1.5000    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n    1.2760    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n    0.3943    1.2135    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -1.0323    0.7500    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -0.1506    1.9635    0.0000 O   0  0  0  0  0  0  0  0  0 13  0  0\n   -2.2458    1.6317    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -3.6161    1.0216    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n    1.2114    2.4714    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0\n    0.3943   -1.2135    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n   -1.0323   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0 18  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  2  0\n  4  6  1  0\n  6  7  2  0\n  7  8  1  0\n  9  3  1  1\n  9 10  1  0\n 10 11  1  0\n 11 12  1  0\n 12 13  1  0\n 12 14  1  1\n 14 15  1  0\n 11 16  1  1\n 10 17  1  6\n  7  1  1  0\n 13  9  1  0\n 17 18  1  0\n 18 12  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 16,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 15,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "REVIEW"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.lG",
+      "version": 2,
+      "display_symbol": "lG",
+      "name": "LNA Guanine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C11H13N5O5",
+      "exact_mass": 295.09166853899,
+      "average_mass": 295.255,
+      "natural_analog": "G",
+      "smiles": "[cH:1]1[n:2][c:3]2[c:4](=[O:5])[nH:6][c:7]([NH2:20])[n:8][c:9]2[n:10]1[C@H:11]1[C@H:12]2[C@H:13]([OH:18])[C@@:14]([CH2:16][OH:17])([O:15]1)[CH2:21][O:19]2",
+      "molfile": "\n     RDKit          2D\n\n 21 24  0  0  0  0  0  0  0  0999 V2000\n    1.2760    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.3943    1.2135    0.0000 N   0  0  0  0  0  0  0  0  0  2  0  0\n   -1.0323    0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -2.3313    1.5000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -2.3313    3.0000    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n   -3.6304    0.7500    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n   -3.6304   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n   -2.3313   -1.5000    0.0000 N   0  0  0  0  0  0  0  0  0  8  0  0\n   -1.0323   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n    0.3943   -1.2135    0.0000 N   0  0  0  0  0  0  0  0  0 10  0  0\n    0.8578   -2.6401    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n    2.2844   -3.1036    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n    0.8578   -3.5672    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0\n    0.8578   -5.0672    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -0.0239   -3.8536    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n   -0.3557   -5.9488    0.0000 C   0  0  0  0  0  0  0  0  0 16  0  0\n   -0.1989   -7.4406    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n   -0.0860   -2.4013    0.0000 O   0  0  0  0  0  0  0  0  0 18  0  0\n    3.1661   -4.3172    0.0000 O   0  0  0  0  0  0  0  0  0 19  0  0\n   -4.9294   -1.5000    0.0000 N   0  0  0  0  0  0  0  0  0 20  0  0\n    2.2844   -5.5307    0.0000 C   0  0  0  0  0  0  0  0  0 21  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  2  0\n  4  6  1  0\n  6  7  1  0\n  7  8  2  0\n  8  9  1  0\n  9 10  1  0\n 11 10  1  1\n 11 12  1  0\n 12 13  1  0\n 13 14  1  0\n 14 15  1  0\n 14 16  1  1\n 16 17  1  0\n 13 18  1  1\n 12 19  1  6\n  7 20  1  0\n 10  1  1  0\n  9  3  2  0\n 15 11  1  0\n 19 21  1  0\n 21 14  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 18,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 17,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "REVIEW"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.lU",
+      "version": 2,
+      "display_symbol": "lU",
+      "name": "LNA Uracil",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H12N2O6",
+      "exact_mass": 256.06953611304,
+      "average_mass": 256.214,
+      "natural_analog": "U",
+      "smiles": "[cH:1]1[cH:2][n:3]([C@H:9]2[C@H:10]3[C@H:11]([OH:16])[C@@:12]([CH2:14][OH:15])([O:13]2)[CH2:18][O:17]3)[c:4](=[O:5])[nH:6][c:7]1=[O:8]",
+      "molfile": "\n     RDKit          2D\n\n 18 20  0  0  0  0  0  0  0  0999 V2000\n    3.5462    4.7551    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    2.3327    3.8735    0.0000 C   0  0  0  0  0  0  0  0  0  2  0  0\n    2.4895    2.3817    0.0000 N   0  0  0  0  0  0  0  0  0  3  0  0\n    3.8598    1.7716    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n    4.0166    0.2798    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n    5.0733    2.6533    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n    4.9166    4.1450    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n    6.1301    5.0267    0.0000 O   0  0  0  0  0  0  0  0  0  8  0  0\n    1.2760    1.5000    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n    1.2760    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n    0.3943    1.2135    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -1.0323    0.7500    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -0.1506    1.9635    0.0000 O   0  0  0  0  0  0  0  0  0 13  0  0\n   -2.2458    1.6317    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -3.6161    1.0216    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n    1.2114    2.4714    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0\n    0.3943   -1.2135    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n   -1.0323   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0 18  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  2  0\n  4  6  1  0\n  6  7  1  0\n  7  8  2  0\n  9  3  1  1\n  9 10  1  0\n 10 11  1  0\n 11 12  1  0\n 12 13  1  0\n 12 14  1  1\n 14 15  1  0\n 11 16  1  1\n 10 17  1  6\n  7  1  1  0\n 13  9  1  0\n 17 18  1  0\n 18 12  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 16,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 15,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "REVIEW"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.lI",
+      "version": 2,
+      "display_symbol": "lI",
+      "name": "LNA Hypoxanthine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C11H12N4O5",
+      "exact_mass": 280.08076950233,
+      "average_mass": 280.24,
+      "natural_analog": "I",
+      "smiles": "[cH:1]1[n:2][c:3]2[c:4]([c:5](=[O:6])[nH:7]1)[n:8][cH:9][n:10]2[C@H:11]1[C@H:12]2[C@H:13]([OH:18])[C@@:14]([CH2:16][OH:17])([O:15]1)[CH2:20][O:19]2",
+      "molfile": "\n     RDKit          2D\n\n 20 23  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  5  0  0\n   -1.5000   -2.5981    0.0000 O   0  0  0  0  0  0  0  0  0  6  0  0\n    0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  7  0  0\n   -2.9672    0.3119    0.0000 N   0  0  0  0  0  0  0  0  0  8  0  0\n   -3.1240    1.8037    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n   -1.7537    2.4138    0.0000 N   0  0  0  0  0  0  0  0  0 10  0  0\n   -1.4418    3.8810    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -2.4455    4.9957    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -0.9783    4.6838    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0\n   -0.2283    5.9829    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -0.0715    4.4911    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n    1.2635    6.1397    0.0000 C   0  0  0  0  0  0  0  0  0 16  0  0\n    1.8736    7.5100    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n   -0.7438    3.2023    0.0000 O   0  0  0  0  0  0  0  0  0 18  0  0\n   -2.6023    6.4875    0.0000 O   0  0  0  0  0  0  0  0  0 19  0  0\n   -1.2320    7.0976    0.0000 C   0  0  0  0  0  0  0  0  0 20  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  5  6  2  0\n  5  7  1  0\n  4  8  1  0\n  8  9  2  0\n  9 10  1  0\n 11 10  1  1\n 11 12  1  0\n 12 13  1  0\n 13 14  1  0\n 14 15  1  0\n 14 16  1  1\n 16 17  1  0\n 13 18  1  1\n 12 19  1  6\n  7  1  1  0\n 10  3  1  0\n 15 11  1  0\n 19 20  1  0\n 20 14  1  0\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 18,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 17,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "PubChem CID 135398641 beta-D inosine; sugar derivatives preserve mapped parent centers",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "REVIEW"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.lT",
+      "version": 2,
+      "display_symbol": "lT",
+      "name": "LNA Thymine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C11H14N2O6",
+      "exact_mass": 270.0851861775,
+      "average_mass": 270.241,
+      "natural_analog": "T",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.uA",
+      "version": 2,
+      "display_symbol": "uA",
+      "name": "UNA Adenine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H15N5O4",
+      "exact_mass": 269.11240398388,
+      "average_mass": 269.26099999999997,
+      "natural_analog": "A",
+      "smiles": "[cH:1]1[n:2][c:3]([NH2:19])[c:4]2[c:5]([n:6]1)[n:7]([C@@H:10]([CH2:11][OH:18])[O:14][C@@H:13]([CH2:12][OH:17])[CH2:15][OH:16])[cH:8][n:9]2",
+      "molfile": "\n     RDKit          2D\n\n 19 20  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  5  0  0\n    0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n   -1.7537   -2.4138    0.0000 N   0  0  0  0  0  0  0  0  0  7  0  0\n   -3.1240   -1.8037    0.0000 C   0  0  0  0  0  0  0  0  0  8  0  0\n   -2.9672   -0.3119    0.0000 N   0  0  0  0  0  0  0  0  0  9  0  0\n   -1.4418   -3.8810    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n   -2.5565   -4.8847    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n    1.7232   -6.2752    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n    0.2966   -5.8117    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0\n   -0.0152   -4.3445    0.0000 O   0  0  0  0  0  0  0  0  0 14  0  0\n   -0.8181   -6.8154    0.0000 C   0  0  0  0  0  0  0  0  0 15  0  0\n   -0.5062   -8.2826    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0\n    2.0351   -7.7425    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n   -2.2447   -6.3519    0.0000 O   0  0  0  0  0  0  0  0  0 18  0  0\n   -1.5000    2.5981    0.0000 N   0  0  0  0  0  0  0  0  0 19  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  5  6  2  0\n  5  7  1  0\n  7  8  1  0\n  8  9  2  0\n  7 10  1  0\n 10 11  1  0\n 12 13  1  0\n 13 14  1  0\n 13 15  1  1\n 15 16  1  0\n 12 17  1  1\n 11 18  1  1\n  3 19  1  0\n  6  1  1  0\n  9  4  1  0\n 10 14  1  6\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 17,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 16,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.uC",
+      "version": 2,
+      "display_symbol": "uC",
+      "name": "UNA Cytosine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C9H15N3O5",
+      "exact_mass": 245.10117059459,
+      "average_mass": 245.23499999999999,
+      "natural_analog": "C",
+      "smiles": "[cH:1]1[cH:2][n:3]([C@@H:9]([CH2:10][OH:17])[O:13][C@@H:12]([CH2:11][OH:16])[CH2:14][OH:15])[c:4](=[O:5])[n:6][c:7]1[NH2:8]",
+      "molfile": "\n     RDKit          2D\n\n 17 17  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -3.0000    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n   -0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n    0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n    1.5000   -2.5981    0.0000 N   0  0  0  0  0  0  0  0  0  8  0  0\n   -1.5000    2.5981    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n   -0.7500    3.8971    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n   -5.2500    3.8971    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -3.7500    3.8971    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -3.0000    2.5981    0.0000 O   0  0  0  0  0  0  0  0  0 13  0  0\n   -3.0000    5.1962    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -3.7500    6.4952    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n   -6.0000    5.1962    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0\n   -1.5000    5.1962    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  2  0\n  4  6  1  0\n  6  7  2  0\n  7  8  1  0\n  3  9  1  0\n  9 10  1  0\n 11 12  1  0\n 12 13  1  0\n 12 14  1  1\n 14 15  1  0\n 11 16  1  1\n 10 17  1  1\n  7  1  1  0\n  9 13  1  6\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 16,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 15,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.uG",
+      "version": 2,
+      "display_symbol": "uG",
+      "name": "UNA Guanine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H15N5O5",
+      "exact_mass": 285.10731860345,
+      "average_mass": 285.26,
+      "natural_analog": "G",
+      "smiles": "[cH:1]1[n:2][c:3]2[c:4](=[O:5])[nH:6][c:7]([NH2:20])[n:8][c:9]2[n:10]1[C@@H:11]([CH2:12][OH:19])[O:15][C@@H:14]([CH2:13][OH:18])[CH2:16][OH:17]",
+      "molfile": "\n     RDKit          2D\n\n 20 21  0  0  0  0  0  0  0  0999 V2000\n    1.2760    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.3943    1.2135    0.0000 N   0  0  0  0  0  0  0  0  0  2  0  0\n   -1.0323    0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -2.3313    1.5000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -2.3313    3.0000    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n   -3.6304    0.7500    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n   -3.6304   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n   -2.3313   -1.5000    0.0000 N   0  0  0  0  0  0  0  0  0  8  0  0\n   -1.0323   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n    0.3943   -1.2135    0.0000 N   0  0  0  0  0  0  0  0  0 10  0  0\n    0.8578   -2.6401    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n    2.3250   -2.9520    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -0.6860   -6.2961    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0\n    0.3177   -5.1814    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -0.1459   -3.7548    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n    1.7849   -5.4933    0.0000 C   0  0  0  0  0  0  0  0  0 16  0  0\n    2.2484   -6.9199    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n   -0.2225   -7.7227    0.0000 O   0  0  0  0  0  0  0  0  0 18  0  0\n    2.7886   -4.3786    0.0000 O   0  0  0  0  0  0  0  0  0 19  0  0\n   -4.9294   -1.5000    0.0000 N   0  0  0  0  0  0  0  0  0 20  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  2  0\n  4  6  1  0\n  6  7  1  0\n  7  8  2  0\n  8  9  1  0\n  9 10  1  0\n 10 11  1  0\n 11 12  1  0\n 13 14  1  0\n 14 15  1  0\n 14 16  1  6\n 16 17  1  0\n 13 18  1  1\n 12 19  1  1\n  7 20  1  0\n 10  1  1  0\n  9  3  2  0\n 11 15  1  1\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 18,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 17,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.uU",
+      "version": 2,
+      "display_symbol": "uU",
+      "name": "UNA Uracil",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C9H14N2O6",
+      "exact_mass": 246.08518617750002,
+      "average_mass": 246.219,
+      "natural_analog": "U",
+      "smiles": "[cH:1]1[cH:2][n:3]([C@@H:9]([CH2:10][OH:17])[O:13][C@@H:12]([CH2:11][OH:16])[CH2:14][OH:15])[c:4](=[O:5])[nH:6][c:7]1=[O:8]",
+      "molfile": "\n     RDKit          2D\n\n 17 17  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -3.0000    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n   -0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  6  0  0\n    0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0\n    1.5000   -2.5981    0.0000 O   0  0  0  0  0  0  0  0  0  8  0  0\n   -1.5000    2.5981    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n   -0.7500    3.8971    0.0000 C   0  0  0  0  0  0  0  0  0 10  0  0\n   -5.2500    3.8971    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -3.7500    3.8971    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n   -3.0000    2.5981    0.0000 O   0  0  0  0  0  0  0  0  0 13  0  0\n   -3.0000    5.1962    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -3.7500    6.4952    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n   -6.0000    5.1962    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0\n   -1.5000    5.1962    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  1  0\n  4  5  2  0\n  4  6  1  0\n  6  7  1  0\n  7  8  2  0\n  3  9  1  0\n  9 10  1  0\n 11 12  1  0\n 12 13  1  0\n 12 14  1  1\n 14 15  1  0\n 11 16  1  1\n 10 17  1  1\n  7  1  1  0\n  9 13  1  6\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 16,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 15,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "v1.8 legacy nucleoside graph, frozen v1.8.1; independent review pending",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.uI",
+      "version": 2,
+      "display_symbol": "uI",
+      "name": "UNA Hypoxanthine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H14N4O5",
+      "exact_mass": 270.09641956679,
+      "average_mass": 270.245,
+      "natural_analog": "I",
+      "smiles": "[cH:1]1[n:2][c:3]2[c:4]([c:5](=[O:6])[nH:7]1)[n:8][cH:9][n:10]2[C@@H:11]([CH2:12][OH:19])[O:15][C@@H:14]([CH2:13][OH:18])[CH2:16][OH:17]",
+      "molfile": "\n     RDKit          2D\n\n 19 20  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0\n    0.7500    1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  2  0  0\n   -0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  3  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0\n   -0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  5  0  0\n   -1.5000   -2.5981    0.0000 O   0  0  0  0  0  0  0  0  0  6  0  0\n    0.7500   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  7  0  0\n   -2.9672    0.3119    0.0000 N   0  0  0  0  0  0  0  0  0  8  0  0\n   -3.1240    1.8037    0.0000 C   0  0  0  0  0  0  0  0  0  9  0  0\n   -1.7537    2.4138    0.0000 N   0  0  0  0  0  0  0  0  0 10  0  0\n   -1.4418    3.8810    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0\n   -2.5565    4.8847    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0\n    1.7232    6.2752    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0\n    0.2966    5.8117    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0\n   -0.0152    4.3445    0.0000 O   0  0  0  0  0  0  0  0  0 15  0  0\n   -0.8181    6.8154    0.0000 C   0  0  0  0  0  0  0  0  0 16  0  0\n   -0.5062    8.2826    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0\n    2.0351    7.7425    0.0000 O   0  0  0  0  0  0  0  0  0 18  0  0\n   -2.2447    6.3519    0.0000 O   0  0  0  0  0  0  0  0  0 19  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  5  6  2  0\n  5  7  1  0\n  4  8  1  0\n  8  9  2  0\n  9 10  1  0\n 10 11  1  0\n 11 12  1  0\n 13 14  1  0\n 14 15  1  0\n 14 16  1  6\n 16 17  1  0\n 13 18  1  1\n 12 19  1  1\n  7  1  1  0\n 10  3  1  0\n 11 15  1  1\nM  END\n",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 18,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        },
+        {
+          "attachment_id": "R2",
+          "atom_reference": 17,
+          "reference_type": "atom_map",
+          "reaction": "alcohol_phosphorylation",
+          "leaving_group": "H",
+          "marker": false
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "PubChem CID 135398641 beta-D inosine; sugar derivatives preserve mapped parent centers",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": true,
+        "stereo_review": "legacy explicit configuration; not independently reviewed"
+      }
+    },
+    {
+      "stable_id": "OLIGO.MONOMER.uT",
+      "version": 2,
+      "display_symbol": "uT",
+      "name": "UNA Thymine",
+      "entity_type": "NUCLEOSIDE_MONOMER",
+      "formula": "C10H16N2O6",
+      "exact_mass": 260.10083624196,
+      "average_mass": 260.246,
+      "natural_analog": "T",
+      "smiles": null,
+      "molfile": null,
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "semantic_role": "3_prime",
+          "atom_reference": "3'"
+        },
+        {
+          "attachment_id": "R2",
+          "semantic_role": "5_prime",
+          "atom_reference": "5'"
+        },
+        {
+          "attachment_id": "R3",
+          "semantic_role": "branch",
+          "atom_reference": "branch_site"
+        }
+      ],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "NO_ATOMIC_STRUCTURE",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_source": "base + sugar - H2O; terminal 5'/3' attachment convention",
+        "structure_available": false
+      }
+    },
+    {
+      "stable_id": "OLIGO.LINKAGE.PO",
+      "version": 2,
+      "display_symbol": "link:PO",
+      "name": "phosphodiester",
+      "entity_type": "BACKBONE_LINKAGE",
+      "formula": null,
+      "exact_mass": null,
+      "average_mass": null,
+      "natural_analog": null,
+      "smiles": "[OH:1][P:2](=[O:3])([OH:4])[OH:5]",
+      "molfile": "\n     RDKit          2D\n\n  5  4  0  0  0  0  0  0  0  0999 V2000\n    0.0000    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  1  0  0\n    1.2990    0.7500    0.0000 P   0  0  0  0  0  0  0  0  0  2  0  0\n    2.5981    1.5000    0.0000 O   0  0  0  0  0  0  0  0  0  3  0  0\n    0.5490    2.0490    0.0000 O   0  0  0  0  0  0  0  0  0  4  0  0\n    2.0490   -0.5490    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n  1  2  1  0\n  2  3  2  0\n  2  4  1  0\n  2  5  1  0\nM  END\n",
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_formula_add": "PO2",
+        "metadata_formula_remove": "H",
+        "notation_symbol": "",
+        "structure_available": true,
+        "leaving_oxygen_maps": [
+          1,
+          4
+        ],
+        "reaction": "replace_two_acid_OH_with_residue_O",
+        "phosphorus_stereo": "UNSPECIFIED"
+      }
+    },
+    {
+      "stable_id": "OLIGO.LINKAGE.PS",
+      "version": 2,
+      "display_symbol": "link:PS",
+      "name": "phosphorothioate",
+      "entity_type": "BACKBONE_LINKAGE",
+      "formula": null,
+      "exact_mass": null,
+      "average_mass": null,
+      "natural_analog": null,
+      "smiles": "[OH:1][P:2](=[S:3])([OH:4])[OH:5]",
+      "molfile": "\n     RDKit          2D\n\n  5  4  0  0  0  0  0  0  0  0999 V2000\n    0.0000    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  1  0  0\n    1.2990    0.7500    0.0000 P   0  0  0  0  0  0  0  0  0  2  0  0\n    0.5490    2.0490    0.0000 S   0  0  0  0  0  0  0  0  0  3  0  0\n    2.5981    1.5000    0.0000 O   0  0  0  0  0  0  0  0  0  4  0  0\n    2.0490   -0.5490    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n  1  2  1  0\n  2  3  2  0\n  2  4  1  0\n  2  5  1  0\nM  END\n",
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_formula_add": "POS",
+        "metadata_formula_remove": "H",
+        "notation_symbol": "*",
+        "structure_available": true,
+        "leaving_oxygen_maps": [
+          1,
+          4
+        ],
+        "reaction": "replace_two_acid_OH_with_residue_O",
+        "phosphorus_stereo": "UNSPECIFIED"
+      }
+    },
+    {
+      "stable_id": "OLIGO.LINKAGE.PS2",
+      "version": 2,
+      "display_symbol": "link:PS2",
+      "name": "phosphorodithioate",
+      "entity_type": "BACKBONE_LINKAGE",
+      "formula": null,
+      "exact_mass": null,
+      "average_mass": null,
+      "natural_analog": null,
+      "smiles": "[OH:1][P:2](=[S:3])([SH:4])[OH:5]",
+      "molfile": "\n     RDKit          2D\n\n  5  4  0  0  0  0  0  0  0  0999 V2000\n    0.0000    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  1  0  0\n    1.2990    0.7500    0.0000 P   0  0  0  0  0  0  0  0  0  2  0  0\n    2.0490   -0.5490    0.0000 S   0  0  0  0  0  0  0  0  0  3  0  0\n    0.5490    2.0490    0.0000 S   0  0  0  0  0  0  0  0  0  4  0  0\n    2.5981    1.5000    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n  1  2  1  0\n  2  3  2  0\n  2  4  1  0\n  2  5  1  0\nM  END\n",
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_formula_add": "PS2",
+        "metadata_formula_remove": "H",
+        "notation_symbol": "**",
+        "structure_available": true,
+        "leaving_oxygen_maps": [
+          1,
+          5
+        ],
+        "reaction": "replace_two_acid_OH_with_residue_O",
+        "phosphorus_stereo": "UNSPECIFIED"
+      }
+    },
+    {
+      "stable_id": "OLIGO.LINKAGE.MsPA",
+      "version": 2,
+      "display_symbol": "link:MsPA",
+      "name": "mesyl phosphoramidate",
+      "entity_type": "BACKBONE_LINKAGE",
+      "formula": null,
+      "exact_mass": null,
+      "average_mass": null,
+      "natural_analog": null,
+      "smiles": "[OH:1][P:2]([OH:3])(=[N:4][S:5](=[O:6])(=[O:7])[CH3:8])[OH:9]",
+      "molfile": "\n     RDKit          2D\n\n  9  8  0  0  0  0  0  0  0  0999 V2000\n    2.5981    4.5000    0.0000 O   0  0  0  0  0  0  0  0  0  1  0  0\n    2.5981    3.0000    0.0000 P   0  0  0  0  0  0  0  0  0  2  0  0\n    4.0981    3.0000    0.0000 O   0  0  0  0  0  0  0  0  0  3  0  0\n    2.5981    1.5000    0.0000 N   0  0  0  0  0  0  0  0  0  4  0  0\n    1.2990    0.7500    0.0000 S   0  0  0  0  0  0  0  0  0  5  0  0\n    2.0490   -0.5490    0.0000 O   0  0  0  0  0  0  0  0  0  6  0  0\n    0.5490    2.0490    0.0000 O   0  0  0  0  0  0  0  0  0  7  0  0\n    0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  8  0  0\n    1.0981    3.0000    0.0000 O   0  0  0  0  0  0  0  0  0  9  0  0\n  1  2  1  0\n  2  3  1  0\n  2  4  2  0\n  4  5  1  0\n  5  6  2  0\n  5  7  2  0\n  5  8  1  0\n  2  9  1  0\nM  END\n",
+      "attachment_points": [],
+      "extinction_parameter": null,
+      "extinction_source": null,
+      "confidence": "literature_or_rule_based",
+      "source": "Validated v1.7 CSV chemistry tables",
+      "status": "REVIEW",
+      "created_at": "2026-10-18T00:00:00+00:00",
+      "updated_at": "2026-10-18T00:00:00+00:00",
+      "metadata": {
+        "metadata_formula_add": "CH2NO3PS",
+        "metadata_formula_remove": "",
+        "notation_symbol": "&",
+        "structure_available": true,
+        "leaving_oxygen_maps": [
+          1,
+          3
+        ],
+        "reaction": "replace_two_acid_OH_with_residue_O",
+        "phosphorus_stereo": "UNSPECIFIED"
+      }
+    },
+    {
+      "stable_id": "OLIGO.TERMINAL.5P",
+      "version": 1,
+      "display_symbol": "5P",
+      "name": "5P",
+      "entity_type": "TERMINAL_MODIFICATION",
+      "smiles": "[OH:1][P:2](=[O:3])([OH:4])[OH:5]",
+      "molfile": "\n     RDKit          2D\n\n  5  4  0  0  0  0  0  0  0  0999 V2000\n    0.0000    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  1  0  0\n    1.2990    0.7500    0.0000 P   0  0  0  0  0  0  0  0  0  2  0  0\n    2.5981    1.5000    0.0000 O   0  0  0  0  0  0  0  0  0  3  0  0\n    0.5490    2.0490    0.0000 O   0  0  0  0  0  0  0  0  0  4  0  0\n    2.0490   -0.5490    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n  1  2  1  0\n  2  3  2  0\n  2  4  1  0\n  2  5  1  0\nM  END\n",
+      "status": "REVIEWED",
+      "metadata": {
+        "structure_available": true,
+        "ends": [
+          "5"
+        ],
+        "reaction": "replace_first_acid_OH_with_residue_O",
+        "requires_definition": false,
+        "protonation": "neutral free acid"
+      },
+      "source": "ChEBI 16027 (5P), 16761 (5PP), 28072 (3P); complete stereochemical reference graph fixtures in tests/test_chemical_repair.py",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 2,
+          "reference_type": "atom_map",
+          "reaction_atom": "P",
+          "leaving_atom_map": 1,
+          "leaving_group": "OH",
+          "substrate_leaving_group": "H"
+        }
+      ]
+    },
+    {
+      "stable_id": "OLIGO.TERMINAL.3P",
+      "version": 1,
+      "display_symbol": "3P",
+      "name": "3P",
+      "entity_type": "TERMINAL_MODIFICATION",
+      "smiles": "[OH:1][P:2](=[O:3])([OH:4])[OH:5]",
+      "molfile": "\n     RDKit          2D\n\n  5  4  0  0  0  0  0  0  0  0999 V2000\n    0.0000    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  1  0  0\n    1.2990    0.7500    0.0000 P   0  0  0  0  0  0  0  0  0  2  0  0\n    2.5981    1.5000    0.0000 O   0  0  0  0  0  0  0  0  0  3  0  0\n    0.5490    2.0490    0.0000 O   0  0  0  0  0  0  0  0  0  4  0  0\n    2.0490   -0.5490    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n  1  2  1  0\n  2  3  2  0\n  2  4  1  0\n  2  5  1  0\nM  END\n",
+      "status": "REVIEWED",
+      "metadata": {
+        "structure_available": true,
+        "ends": [
+          "3"
+        ],
+        "reaction": "replace_first_acid_OH_with_residue_O",
+        "requires_definition": false,
+        "protonation": "neutral free acid"
+      },
+      "source": "ChEBI 16027 (5P), 16761 (5PP), 28072 (3P); complete stereochemical reference graph fixtures in tests/test_chemical_repair.py",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 2,
+          "reference_type": "atom_map",
+          "reaction_atom": "P",
+          "leaving_atom_map": 1,
+          "leaving_group": "OH",
+          "substrate_leaving_group": "H"
+        }
+      ]
+    },
+    {
+      "stable_id": "OLIGO.TERMINAL.5PP",
+      "version": 1,
+      "display_symbol": "5PP",
+      "name": "5PP",
+      "entity_type": "TERMINAL_MODIFICATION",
+      "smiles": "[OH:1][P:2](=[O:3])([OH:4])[O:5][P:6](=[O:7])([OH:8])[OH:9]",
+      "molfile": "\n     RDKit          2D\n\n  9  8  0  0  0  0  0  0  0  0999 V2000\n    0.0000    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  1  0  0\n    1.2990    0.7500    0.0000 P   0  0  0  0  0  0  0  0  0  2  0  0\n    2.5981    1.5000    0.0000 O   0  0  0  0  0  0  0  0  0  3  0  0\n    0.5490    2.0490    0.0000 O   0  0  0  0  0  0  0  0  0  4  0  0\n    2.0490   -0.5490    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n    3.5490   -0.5490    0.0000 P   0  0  0  0  0  0  0  0  0  6  0  0\n    3.5490   -2.0490    0.0000 O   0  0  0  0  0  0  0  0  0  7  0  0\n    3.5490    0.9510    0.0000 O   0  0  0  0  0  0  0  0  0  8  0  0\n    5.0490   -0.5490    0.0000 O   0  0  0  0  0  0  0  0  0  9  0  0\n  1  2  1  0\n  2  3  2  0\n  2  4  1  0\n  2  5  1  0\n  5  6  1  0\n  6  7  2  0\n  6  8  1  0\n  6  9  1  0\nM  END\n",
+      "status": "REVIEWED",
+      "metadata": {
+        "structure_available": true,
+        "ends": [
+          "5"
+        ],
+        "reaction": "replace_first_acid_OH_with_residue_O",
+        "requires_definition": false,
+        "protonation": "neutral free acid"
+      },
+      "source": "ChEBI 16027 (5P), 16761 (5PP), 28072 (3P); complete stereochemical reference graph fixtures in tests/test_chemical_repair.py",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 2,
+          "reference_type": "atom_map",
+          "reaction_atom": "P",
+          "leaving_atom_map": 1,
+          "leaving_group": "OH",
+          "substrate_leaving_group": "H"
+        }
+      ]
+    },
+    {
+      "stable_id": "OLIGO.TERMINAL.VP",
+      "version": 1,
+      "display_symbol": "VP",
+      "name": "VP",
+      "entity_type": "TERMINAL_MODIFICATION",
+      "smiles": null,
+      "molfile": null,
+      "status": "UNSUPPORTED",
+      "metadata": {
+        "structure_available": false,
+        "ends": [],
+        "reaction": "replace_first_acid_OH_with_residue_O",
+        "requires_definition": true,
+        "protonation": "neutral free acid"
+      }
+    },
+    {
+      "stable_id": "OLIGO.TERMINAL.MU",
+      "version": 1,
+      "display_symbol": "MU",
+      "name": "MU",
+      "entity_type": "TERMINAL_MODIFICATION",
+      "smiles": null,
+      "molfile": null,
+      "status": "UNSUPPORTED",
+      "metadata": {
+        "structure_available": false,
+        "ends": [],
+        "reaction": "replace_first_acid_OH_with_residue_O",
+        "requires_definition": true,
+        "protonation": "neutral free acid"
+      }
+    },
+    {
+      "stable_id": "OLIGO.TERMINAL.3PP",
+      "version": 1,
+      "display_symbol": "3PP",
+      "name": "3-prime diphosphate",
+      "entity_type": "TERMINAL_MODIFICATION",
+      "smiles": "[OH:1][P:2](=[O:3])([OH:4])[O:5][P:6](=[O:7])([OH:8])[OH:9]",
+      "molfile": "\n     RDKit          2D\n\n  9  8  0  0  0  0  0  0  0  0999 V2000\n    0.0000    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  1  0  0\n    1.2990    0.7500    0.0000 P   0  0  0  0  0  0  0  0  0  2  0  0\n    2.5981    1.5000    0.0000 O   0  0  0  0  0  0  0  0  0  3  0  0\n    0.5490    2.0490    0.0000 O   0  0  0  0  0  0  0  0  0  4  0  0\n    2.0490   -0.5490    0.0000 O   0  0  0  0  0  0  0  0  0  5  0  0\n    3.5490   -0.5490    0.0000 P   0  0  0  0  0  0  0  0  0  6  0  0\n    3.5490   -2.0490    0.0000 O   0  0  0  0  0  0  0  0  0  7  0  0\n    3.5490    0.9510    0.0000 O   0  0  0  0  0  0  0  0  0  8  0  0\n    5.0490   -0.5490    0.0000 O   0  0  0  0  0  0  0  0  0  9  0  0\n  1  2  1  0\n  2  3  2  0\n  2  4  1  0\n  2  5  1  0\n  5  6  1  0\n  6  7  2  0\n  6  8  1  0\n  6  9  1  0\nM  END\n",
+      "status": "REVIEWED",
+      "metadata": {
+        "structure_available": true,
+        "ends": [
+          "3"
+        ],
+        "reaction": "replace_first_acid_OH_with_residue_O",
+        "requires_definition": false,
+        "protonation": "neutral free acid"
+      },
+      "source": "Explicit 3-O diphosphate ester; tested independent reference graph and formula",
+      "attachment_points": [
+        {
+          "attachment_id": "R1",
+          "atom_reference": 2,
+          "reference_type": "atom_map",
+          "reaction_atom": "P",
+          "leaving_atom_map": 1,
+          "leaving_group": "OH",
+          "substrate_leaving_group": "H"
+        }
+      ]
+    }
+  ]
+}

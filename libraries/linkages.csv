@@ -1,0 +1,5 @@
+﻿code,name,symbol,formula_add,formula_remove,reference_id,notes
+PO,phosphodiester,,PO2,H,,
+PS,phosphorothioate,*,POS,H,,
+PS2,phosphorodithioate,**,PS2,H,,
+MsPA,mesyl phosphoramidate,&,CH2NO3PS,,,N-methanesulfonyl phosphoramidate; one non-bridging PO oxygen replaced by methanesulfonylamido

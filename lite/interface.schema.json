@@ -1,0 +1,376 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Oligo Lite interface 1.1",
+  "oneOf": [
+    {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "Oligo Lite interface 1.1",
+      "type": "object",
+      "required": [
+        "schema_version",
+        "sequence",
+        "notation",
+        "chemistry",
+        "optical",
+        "graph",
+        "provenance",
+        "limitations",
+        "status",
+        "errors",
+        "input_sequence",
+        "canonical_sequence"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "oligo-lite/1.1"
+        },
+        "sequence": {
+          "type": "string"
+        },
+        "notation": {
+          "type": "object",
+          "required": [
+            "residues",
+            "links"
+          ],
+          "properties": {
+            "residues": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "PO",
+                  "PS",
+                  "PS2",
+                  "MsPA"
+                ]
+              }
+            }
+          }
+        },
+        "chemistry": {
+          "type": "object",
+          "required": [
+            "formula",
+            "formula_dict",
+            "exact_mass",
+            "average_mw",
+            "charge_model",
+            "phosphorus_stereochemistry"
+          ],
+          "properties": {
+            "formula": {
+              "type": "string"
+            },
+            "formula_dict": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "exact_mass": {
+              "type": "number"
+            },
+            "average_mw": {
+              "type": "number"
+            },
+            "charge_model": {
+              "type": "string"
+            },
+            "phosphorus_stereochemistry": {
+              "const": "unspecified"
+            }
+          }
+        },
+        "optical": {
+          "type": "object",
+          "required": [
+            "supported"
+          ],
+          "properties": {
+            "supported": {
+              "type": "boolean"
+            },
+            "epsilon260": {
+              "type": "number"
+            },
+            "estimated": {
+              "type": "boolean"
+            },
+            "method": {
+              "type": "string"
+            },
+            "provenance": {
+              "type": "string"
+            },
+            "reason": {
+              "type": "string"
+            }
+          }
+        },
+        "graph": {
+          "type": "object",
+          "required": [
+            "atoms",
+            "bonds",
+            "sites"
+          ],
+          "properties": {
+            "atoms": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "e",
+                  "h",
+                  "q",
+                  "x",
+                  "y"
+                ],
+                "properties": {
+                  "e": {
+                    "enum": [
+                      "C",
+                      "H",
+                      "N",
+                      "O",
+                      "P",
+                      "S",
+                      "F"
+                    ]
+                  },
+                  "h": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "q": {
+                    "type": "integer"
+                  },
+                  "x": {
+                    "type": "number"
+                  },
+                  "y": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "bonds": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "a",
+                  "b",
+                  "o",
+                  "s"
+                ],
+                "properties": {
+                  "a": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "b": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "o": {
+                    "enum": [
+                      1,
+                      2,
+                      3
+                    ]
+                  },
+                  "s": {
+                    "enum": [
+                      0,
+                      1,
+                      6
+                    ]
+                  }
+                }
+              }
+            },
+            "sites": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "o5",
+                  "o3"
+                ],
+                "properties": {
+                  "o5": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "o3": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                }
+              }
+            },
+            "routes": {
+              "type": "array",
+              "description": "Display-only control points on a real chemical bond; no chemical atoms added",
+              "items": {
+                "type": "object",
+                "required": [
+                  "bond",
+                  "boundary",
+                  "atoms",
+                  "points"
+                ],
+                "properties": {
+                  "bond": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "boundary": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "atoms": {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "items": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "points": {
+                    "type": "array",
+                    "minItems": 2,
+                    "items": {
+                      "type": "array",
+                      "minItems": 2,
+                      "maxItems": 2,
+                      "items": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "layout": {
+              "type": "object",
+              "properties": {
+                "column_pitch": {
+                  "type": "number"
+                },
+                "residue_pitch": {
+                  "type": "number"
+                },
+                "rows": {
+                  "const": 10
+                }
+              }
+            }
+          }
+        },
+        "provenance": {
+          "type": "object"
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "status": {
+          "const": "ok"
+        },
+        "errors": {
+          "type": "array",
+          "maxItems": 0
+        },
+        "input_sequence": {
+          "type": "string"
+        },
+        "canonical_sequence": {
+          "type": "string"
+        },
+        "modifications": {
+          "type": "object",
+          "properties": {
+            "five": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            },
+            "three": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            }
+          },
+          "required": [
+            "five",
+            "three"
+          ]
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "input_sequence",
+        "canonical_sequence",
+        "status",
+        "errors",
+        "chemistry",
+        "optical",
+        "graph"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "oligo-lite/1.1"
+        },
+        "status": {
+          "const": "error"
+        },
+        "canonical_sequence": {
+          "type": "null"
+        },
+        "errors": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "code",
+              "message"
+            ],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "chemistry": {
+          "type": "null"
+        },
+        "optical": {
+          "type": "null"
+        },
+        "graph": {
+          "type": "null"
+        }
+      }
+    }
+  ]
+}

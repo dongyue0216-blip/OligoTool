@@ -1,39 +1,29 @@
-# Oligo Chemistry Toolkit Lite v0.2.1
+# Oligo Chemistry Toolkit Lite v0.5.3
 
-解压整个文件夹，双击 Start.html，在 Windows 11 的 Edge / Chrome 中打开。程序仅使用本地 HTML/CSS/JavaScript，无安装、服务器或联网依赖。旧包未覆盖。
+解压整个 ZIP，双击 **Start.html**。无需安装、服务器或网络；建议桌面 Edge / Chrome。GitHub 源码位于 `lite/`，同样打开其中的 Start.html。
 
-## 输入
+## 当前功能
 
-- RNA rA/rC/rG/rU/rI；DNA A/C/G/T 或 dA/dC/dG/dT；2′F f、2′OMe m、MOE e + A/C/G/U。
-- 默认 PO；* PS；** PS2；& MsPA。原来的模板、骨架和 bamboo 布局保留。
-- [ID] 查找本地 Custom Chemistry Library，ID 为字母开头、1–24 位字母/数字/下划线，区分大小写。并非只支持示例名字。旧 {ID} 输入兼容，输出统一 [ID]。
-- 两端均支持 (p)/(pp)/(ppp)，也接受大写；canonical 输出小写。例如 (ppp)rA*rC(pp)。六种端基均有真实中性游离酸分子图。
-- 不识别的 terminal chemistry 明确拒绝；不支持内插括号端基。最多 60 个结构单元，MOL V2000 另有 999 atom/bond 上限。
+- **Single Sequence**：使用共享的确定性化学引擎解析序列，计算 molecular formula、average MW、exact mass、epsilon260、nmol per OD260、ug per OD260。
+- **真实结构绘制**：从原子/键图生成 SVG；可导出 MOL / SDF，CDXML 为 Experimental，导入 ChemDraw 后需检查。v0.5.3 统一 terminal/internal phosphorus 的局部几何与元素标签居中。
+- **Terminal phosphate / PS notation**：`rA(p)` / `(p)rA` 为 terminal PO；`rA*(p)` / `(p)*rA` 为 terminal PS。PS2 使用 `**`；其他末端修饰和位置限制见 [支持矩阵](docs/TERMINAL_CHEMISTRY_AUDIT.md)。
+- **Batch Excel**：使用 `batch/batch input template.xlsx` 的 ID / Sequence 列，上传 XLSX 或 CSV，验证后选择 Calculate only 或 Calculate + Structures；导出 results.xlsx 和 structures.zip。单行错误隔离；支持停止并保留已处理结果。
+- **Custom Chemistry**：导入 MOL / SDF，指定 5′/3′ attachment sites，预览、注册并用于 Single / Batch；可备份和恢复 library JSON。升级前请在旧页面备份，file:// 下 localStorage 是否跨路径共享取决于浏览器。
 
-## Custom Chemistry
+## 支持和限制
 
-打开 Advanced / Custom Chemistry。上传 MOL V2000 / SDF（读取首个 molecule）。推荐 ChemDraw 在真实 alcohol O 外接单键 terminal dummy，alias 标 5 和 3；也兼容 dummy atom map / isotope 5/3、R1/R2。
+支持 DNA、RNA 及已实现的糖型、骨架和端基；详细定义见 [chemistry coverage](docs/CHEMISTRY_COVERAGE.md) 和 [sequence matrix](docs/SEQUENCE_REQUIREMENT_MATRIX.md)。FULL 表示已实现 graph/formula/SVG，并不代表每一种组合均经实验验证。PMO / TNA 有纯链及拓扑限制；未定义的结构变体保持 pending，不推测其结构或分子量。
 
-识别成功直接显示真实 O 编号与结构，输入 ID 后 Save Custom Chemistry。marker 和 marker bond 删除，真实 O 保留；保存时再次验证两个不同的中性 C–OH 位点。识别缺失/歧义时自动展开 Manual attachment selection：点预览上的 O，再 Set as 5′ / Set as 3′；编号 dropdown 放在次级折叠项。
+epsilon260 的支持、估算或缺参数状态分别显示；缺参数时保留可用 formula/MW/结构，OD 数值留空。采用 1 mL、1 cm 约定：nmol/OD260 = 1e6/epsilon260；ug/OD260 = 1000 × AverageMW/epsilon260。见 [photometry](docs/PHOTOMETRY.md)。
 
-保存后在序列输入 [ID]，可位于两端或内部，也可连续多个；本版 custom 都要求两个有效 alcohol O。组装真实连接到各 O，重新计算 formula / exact mass / average MW，支持 SVG/MOL/SDF/CDXML/JSON。Custom 无 extinction coefficient，因此明确不计算 OD。
+**Conjugation Pool 仅为未来功能的元数据基础设施**，其中试剂不参加 sequence assembly；没有实现 Conjugation reaction engine。
 
-Library 保存在浏览器 localStorage；路径、浏览器、配置文件变化可能改变存储范围。升级或换电脑前导出 library JSON，必要时恢复；不应仅依赖浏览器存储作为备份。
+Batch 输入上限 25 MB；公式或 Excel 错误单元格须先粘贴为值。页面预览最多 100 行，导出全部已处理行。结构 ZIP 在内存中打包，大批长链建议拆批；没有流式 ZIP 或内嵌缩略图。Single 与 Batch 使用同一个 parser、chemistry graph 和 exporters。
 
-SMILES 保留受限的中性非环 C/N/O/S/F/H、分支、单/双/三键子集；不支持环、芳香、[]、电荷、同位素、立体语法和分子点分隔。不支持的输入拒绝，复杂结构请用 Kekulé MOL/SDF。Scaffold 不支持带电或 isotope 原子、V3000、部分 MOL 属性及芳香键编码。
+## 目录和验证
 
-## 离线接口
+`app/` 主程序；`batch/` 模板与模块；`custom_chemistry/` 通用示例；`docs/` 方法和覆盖范围；`tests/` 回归及明确标记的历史基线；`vendor/` 离线库与许可证。
 
-加载 reference-data.js → chemistry.js 后可调用：
+运行回归的方法见 [tests/README.md](tests/README.md)。发布工具从空 staging 按白名单复制，检查资源引用、嵌套版本、临时/缓存/旧 ZIP、CRC 与逐文件哈希；工具见 `tests/release/`。测试生成的 tests/output 不进入发布包。应用运行不需要 Python / Node。
 
-- Lite.calculate(sequence)：成功返回 JSON；无效输入抛出 Error。
-- Lite.calculateSafe(sequence)：返回 status ok/error 与稳定 errors 列表，适合未来逐条循环；本轮无 batch UI、Excel library 或 batch export。
-- Lite.buildStructure(sequence)：返回相同引擎的真实分子图。
-
-JSON 包含 input_sequence、canonical_sequence、formula / exact_mass / average_mw（chemistry 内）、optical 与 provenance、residues/linkages/modifications、status/errors、graph。接口版本 oligo-lite/1.1，见 interface.schema.json。customLibrary 内部保留旧 {ID} 键以兼容旧备份。
-
-## 验证与限制
-
-Advanced 中 Run Regression Checks 可重复执行 85 项离线测试，不改写 localStorage。详见 VALIDATION_REPORT.md 和 TEST_EVIDENCE.json。
-
-本轮通过引擎与界面事件模拟验收；未完成真实 Edge/Chrome 视觉与点击验收。CDXML 保留 Experimental，未在真实 ChemDraw 打开验证。MsPA 保留原版本 P(OH)=N–SO2Me 互变异构模型与审阅提示；LNA/UNA、盐和其余端基仍不支持。所有 mass 为 neutral free acid。磷立体化学未指定。自定义布局仍需人工检查，跨列折线仅 SVG/JSON 显示层元数据，MOL/SDF/CDXML 仍为真实原子间键。
+本项目为 generic chemistry toolkit，仅含通用示例及公开化学参考。第三方许可证见 [vendor notices](vendor/THIRD_PARTY_NOTICES.md)，项目采用 [MIT License](LICENSE)。

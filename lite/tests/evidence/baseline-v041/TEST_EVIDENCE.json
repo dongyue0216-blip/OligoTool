@@ -1,0 +1,5030 @@
+{
+  "version": "0.4.1",
+  "regression": {
+    "version": "0.4.1",
+    "total": 241,
+    "passed": 241,
+    "checks": [
+      {
+        "name": "golden rArA",
+        "status": "PASS"
+      },
+      {
+        "name": "golden ACGT",
+        "status": "PASS"
+      },
+      {
+        "name": "golden rArCrGrU",
+        "status": "PASS"
+      },
+      {
+        "name": "golden fAfCfGfU",
+        "status": "PASS"
+      },
+      {
+        "name": "golden mAmCmGmU",
+        "status": "PASS"
+      },
+      {
+        "name": "golden eAeCeGeU",
+        "status": "PASS"
+      },
+      {
+        "name": "golden rA*rC**fG#mU",
+        "status": "PASS"
+      },
+      {
+        "name": "golden ACGTACGTACGT",
+        "status": "PASS"
+      },
+      {
+        "name": "golden rA#rA",
+        "status": "PASS"
+      },
+      {
+        "name": "golden rA**rA",
+        "status": "PASS"
+      },
+      {
+        "name": "golden rA*rA",
+        "status": "PASS"
+      },
+      {
+        "name": "golden rI",
+        "status": "PASS"
+      },
+      {
+        "name": "golden dA",
+        "status": "PASS"
+      },
+      {
+        "name": "golden dC",
+        "status": "PASS"
+      },
+      {
+        "name": "golden dG",
+        "status": "PASS"
+      },
+      {
+        "name": "golden dT",
+        "status": "PASS"
+      },
+      {
+        "name": "golden rA",
+        "status": "PASS"
+      },
+      {
+        "name": "golden rC",
+        "status": "PASS"
+      },
+      {
+        "name": "golden rG",
+        "status": "PASS"
+      },
+      {
+        "name": "golden rU",
+        "status": "PASS"
+      },
+      {
+        "name": "golden fA",
+        "status": "PASS"
+      },
+      {
+        "name": "golden fC",
+        "status": "PASS"
+      },
+      {
+        "name": "golden fG",
+        "status": "PASS"
+      },
+      {
+        "name": "golden fU",
+        "status": "PASS"
+      },
+      {
+        "name": "golden mA",
+        "status": "PASS"
+      },
+      {
+        "name": "golden mC",
+        "status": "PASS"
+      },
+      {
+        "name": "golden mG",
+        "status": "PASS"
+      },
+      {
+        "name": "golden mU",
+        "status": "PASS"
+      },
+      {
+        "name": "golden eA",
+        "status": "PASS"
+      },
+      {
+        "name": "golden eC",
+        "status": "PASS"
+      },
+      {
+        "name": "golden eG",
+        "status": "PASS"
+      },
+      {
+        "name": "golden eU",
+        "status": "PASS"
+      },
+      {
+        "name": "golden eU*fU#eU#eU#rImA",
+        "status": "PASS"
+      },
+      {
+        "name": "golden dAmCfU",
+        "status": "PASS"
+      },
+      {
+        "name": "golden rI*dG*mGmCmU",
+        "status": "PASS"
+      },
+      {
+        "name": "golden mC**mG",
+        "status": "PASS"
+      },
+      {
+        "name": "golden rU**mG**eC",
+        "status": "PASS"
+      },
+      {
+        "name": "golden dG#dGmU#dC#eU*fG",
+        "status": "PASS"
+      },
+      {
+        "name": "golden dArG**mC*rC**mG**fU**dA",
+        "status": "PASS"
+      },
+      {
+        "name": "golden dT*fG**eG*dC*rUdCmC",
+        "status": "PASS"
+      },
+      {
+        "name": "golden fA**dT*dG**fC#eU*mU",
+        "status": "PASS"
+      },
+      {
+        "name": "golden fU*rU**mC**eU*dT",
+        "status": "PASS"
+      },
+      {
+        "name": "golden fA**mC*rC*eC",
+        "status": "PASS"
+      },
+      {
+        "name": "golden dArU*eU*mA",
+        "status": "PASS"
+      },
+      {
+        "name": "golden rC*fC",
+        "status": "PASS"
+      },
+      {
+        "name": "golden fU#dG**mC**rI**eC**eGfUrG",
+        "status": "PASS"
+      },
+      {
+        "name": "golden eA**fG*rAeU",
+        "status": "PASS"
+      },
+      {
+        "name": "golden fUrU*dC*dG",
+        "status": "PASS"
+      },
+      {
+        "name": "golden fU#rC",
+        "status": "PASS"
+      },
+      {
+        "name": "golden mC*dCrC",
+        "status": "PASS"
+      },
+      {
+        "name": "golden mA#fA#rA",
+        "status": "PASS"
+      },
+      {
+        "name": "golden mA*eA#dG",
+        "status": "PASS"
+      },
+      {
+        "name": "golden dC#eCrA*rI",
+        "status": "PASS"
+      },
+      {
+        "name": "golden mGrI*fGeA#mA**eC**dG",
+        "status": "PASS"
+      },
+      {
+        "name": "golden eAfUrA#eC*rA**mU",
+        "status": "PASS"
+      },
+      {
+        "name": "golden eAeU",
+        "status": "PASS"
+      },
+      {
+        "name": "historical rArA",
+        "status": "PASS"
+      },
+      {
+        "name": "five phosphate 1",
+        "status": "PASS"
+      },
+      {
+        "name": "five phosphate 2",
+        "status": "PASS"
+      },
+      {
+        "name": "five phosphate 3",
+        "status": "PASS"
+      },
+      {
+        "name": "three phosphate 1",
+        "status": "PASS"
+      },
+      {
+        "name": "three phosphate 2",
+        "status": "PASS"
+      },
+      {
+        "name": "three phosphate 3",
+        "status": "PASS"
+      },
+      {
+        "name": "ChemDraw marker import",
+        "status": "PASS"
+      },
+      {
+        "name": "assemble [RegressionFixture]rA",
+        "status": "PASS"
+      },
+      {
+        "name": "assemble rA[RegressionFixture]",
+        "status": "PASS"
+      },
+      {
+        "name": "assemble rA[RegressionFixture]rC",
+        "status": "PASS"
+      },
+      {
+        "name": "assemble [RegressionFixture][RegressionFixture]",
+        "status": "PASS"
+      },
+      {
+        "name": "assemble (pp)[RegressionFixture]rA(ppp)",
+        "status": "PASS"
+      },
+      {
+        "name": "assemble rA[RegressionFixture]*eC",
+        "status": "PASS"
+      },
+      {
+        "name": "library serialization and restore",
+        "status": "PASS"
+      },
+      {
+        "name": "unknown ID",
+        "status": "PASS"
+      },
+      {
+        "name": "reject rA(p)rA",
+        "status": "PASS"
+      },
+      {
+        "name": "reject (pppp)rA",
+        "status": "PASS"
+      },
+      {
+        "name": "reject rA*",
+        "status": "PASS"
+      },
+      {
+        "name": "reject (p)",
+        "status": "PASS"
+      },
+      {
+        "name": "reject [bad-id]",
+        "status": "PASS"
+      },
+      {
+        "name": "manual fallback",
+        "status": "PASS"
+      },
+      {
+        "name": "ambiguous marker fallback",
+        "status": "PASS"
+      },
+      {
+        "name": "bamboo layout",
+        "status": "PASS"
+      },
+      {
+        "name": "SDF first molecule",
+        "status": "PASS"
+      },
+      {
+        "name": "ChemDraw numeric aliases",
+        "status": "PASS"
+      },
+      {
+        "name": "incomplete markers require manual fallback",
+        "status": "PASS"
+      },
+      {
+        "name": "SMILES unsupported syntax fails closed",
+        "status": "PASS"
+      },
+      {
+        "name": "all export graph counts and identifiers",
+        "status": "PASS"
+      },
+      {
+        "name": "obsolete linkage rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "braces rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "formal MsPA canonical",
+        "status": "PASS"
+      },
+      {
+        "name": "pending cEt-A",
+        "status": "PASS"
+      },
+      {
+        "name": "pending Ugn",
+        "status": "PASS"
+      },
+      {
+        "name": "pending [cOct]",
+        "status": "PASS"
+      },
+      {
+        "name": "pending [CY5.5]",
+        "status": "PASS"
+      },
+      {
+        "name": "pending [555]",
+        "status": "PASS"
+      },
+      {
+        "name": "pending [MC-VC-PABC]",
+        "status": "PASS"
+      },
+      {
+        "name": "pending pB",
+        "status": "PASS"
+      },
+      {
+        "name": "pending [Biotin]",
+        "status": "PASS"
+      },
+      {
+        "name": "published NN example",
+        "status": "PASS"
+      },
+      {
+        "name": "OD average mass basis",
+        "status": "PASS"
+      },
+      {
+        "name": "long chain 60",
+        "status": "PASS"
+      },
+      {
+        "name": "long chain 100",
+        "status": "PASS"
+      },
+      {
+        "name": "long chain 150",
+        "status": "PASS"
+      },
+      {
+        "name": "long chain 200",
+        "status": "PASS"
+      },
+      {
+        "name": "long chain 300",
+        "status": "PASS"
+      },
+      {
+        "name": "every coverage unit parsed; pending units fail closed",
+        "status": "PASS"
+      },
+      {
+        "name": "custom optical metadata and mixed junction guard",
+        "status": "PASS"
+      },
+      {
+        "name": "master template dA",
+        "status": "PASS"
+      },
+      {
+        "name": "master template dC",
+        "status": "PASS"
+      },
+      {
+        "name": "master template dG",
+        "status": "PASS"
+      },
+      {
+        "name": "master template dT",
+        "status": "PASS"
+      },
+      {
+        "name": "master template rA",
+        "status": "PASS"
+      },
+      {
+        "name": "master template rC",
+        "status": "PASS"
+      },
+      {
+        "name": "master template rG",
+        "status": "PASS"
+      },
+      {
+        "name": "master template rU",
+        "status": "PASS"
+      },
+      {
+        "name": "master template rI",
+        "status": "PASS"
+      },
+      {
+        "name": "master template fA",
+        "status": "PASS"
+      },
+      {
+        "name": "master template fC",
+        "status": "PASS"
+      },
+      {
+        "name": "master template fG",
+        "status": "PASS"
+      },
+      {
+        "name": "master template fU",
+        "status": "PASS"
+      },
+      {
+        "name": "master template mA",
+        "status": "PASS"
+      },
+      {
+        "name": "master template mC",
+        "status": "PASS"
+      },
+      {
+        "name": "master template mG",
+        "status": "PASS"
+      },
+      {
+        "name": "master template mU",
+        "status": "PASS"
+      },
+      {
+        "name": "master template eA",
+        "status": "PASS"
+      },
+      {
+        "name": "master template eC",
+        "status": "PASS"
+      },
+      {
+        "name": "master template eG",
+        "status": "PASS"
+      },
+      {
+        "name": "master template eU",
+        "status": "PASS"
+      },
+      {
+        "name": "master template dI",
+        "status": "PASS"
+      },
+      {
+        "name": "master template dCMe",
+        "status": "PASS"
+      },
+      {
+        "name": "master template rT",
+        "status": "PASS"
+      },
+      {
+        "name": "master template rCMe",
+        "status": "PASS"
+      },
+      {
+        "name": "master template mT",
+        "status": "PASS"
+      },
+      {
+        "name": "master template mI",
+        "status": "PASS"
+      },
+      {
+        "name": "master template mCMe",
+        "status": "PASS"
+      },
+      {
+        "name": "master template fT",
+        "status": "PASS"
+      },
+      {
+        "name": "master template fI",
+        "status": "PASS"
+      },
+      {
+        "name": "master template fCMe",
+        "status": "PASS"
+      },
+      {
+        "name": "master template eT",
+        "status": "PASS"
+      },
+      {
+        "name": "master template eI",
+        "status": "PASS"
+      },
+      {
+        "name": "master template eCMe",
+        "status": "PASS"
+      },
+      {
+        "name": "master template FANA-A",
+        "status": "PASS"
+      },
+      {
+        "name": "master template UNA-A",
+        "status": "PASS"
+      },
+      {
+        "name": "master template nA",
+        "status": "PASS"
+      },
+      {
+        "name": "master template Ahd",
+        "status": "PASS"
+      },
+      {
+        "name": "master template Ada",
+        "status": "PASS"
+      },
+      {
+        "name": "master template +A",
+        "status": "PASS"
+      },
+      {
+        "name": "master template ENA-A",
+        "status": "PASS"
+      },
+      {
+        "name": "master template FANA-C",
+        "status": "PASS"
+      },
+      {
+        "name": "master template UNA-C",
+        "status": "PASS"
+      },
+      {
+        "name": "master template nC",
+        "status": "PASS"
+      },
+      {
+        "name": "master template Chd",
+        "status": "PASS"
+      },
+      {
+        "name": "master template Cda",
+        "status": "PASS"
+      },
+      {
+        "name": "master template +C",
+        "status": "PASS"
+      },
+      {
+        "name": "master template ENA-C",
+        "status": "PASS"
+      },
+      {
+        "name": "master template FANA-G",
+        "status": "PASS"
+      },
+      {
+        "name": "master template UNA-G",
+        "status": "PASS"
+      },
+      {
+        "name": "master template nG",
+        "status": "PASS"
+      },
+      {
+        "name": "master template Ghd",
+        "status": "PASS"
+      },
+      {
+        "name": "master template Gda",
+        "status": "PASS"
+      },
+      {
+        "name": "master template +G",
+        "status": "PASS"
+      },
+      {
+        "name": "master template ENA-G",
+        "status": "PASS"
+      },
+      {
+        "name": "master template FANA-U",
+        "status": "PASS"
+      },
+      {
+        "name": "master template UNA-U",
+        "status": "PASS"
+      },
+      {
+        "name": "master template nU",
+        "status": "PASS"
+      },
+      {
+        "name": "master template Uhd",
+        "status": "PASS"
+      },
+      {
+        "name": "master template Uda",
+        "status": "PASS"
+      },
+      {
+        "name": "master template +U",
+        "status": "PASS"
+      },
+      {
+        "name": "master template ENA-U",
+        "status": "PASS"
+      },
+      {
+        "name": "master template FANA-T",
+        "status": "PASS"
+      },
+      {
+        "name": "master template UNA-T",
+        "status": "PASS"
+      },
+      {
+        "name": "master template nT",
+        "status": "PASS"
+      },
+      {
+        "name": "master template Thd",
+        "status": "PASS"
+      },
+      {
+        "name": "master template Tda",
+        "status": "PASS"
+      },
+      {
+        "name": "master template +T",
+        "status": "PASS"
+      },
+      {
+        "name": "master template ENA-T",
+        "status": "PASS"
+      },
+      {
+        "name": "master template FANA-I",
+        "status": "PASS"
+      },
+      {
+        "name": "master template UNA-I",
+        "status": "PASS"
+      },
+      {
+        "name": "master template nI",
+        "status": "PASS"
+      },
+      {
+        "name": "master template Ihd",
+        "status": "PASS"
+      },
+      {
+        "name": "master template Ida",
+        "status": "PASS"
+      },
+      {
+        "name": "master template +I",
+        "status": "PASS"
+      },
+      {
+        "name": "master template ENA-I",
+        "status": "PASS"
+      },
+      {
+        "name": "master template FANA-CMe",
+        "status": "PASS"
+      },
+      {
+        "name": "master template UNA-CMe",
+        "status": "PASS"
+      },
+      {
+        "name": "master template nCMe",
+        "status": "PASS"
+      },
+      {
+        "name": "master template CMehd",
+        "status": "PASS"
+      },
+      {
+        "name": "master template CMeda",
+        "status": "PASS"
+      },
+      {
+        "name": "master template +CMe",
+        "status": "PASS"
+      },
+      {
+        "name": "master template ENA-CMe",
+        "status": "PASS"
+      },
+      {
+        "name": "master template Agn",
+        "status": "PASS"
+      },
+      {
+        "name": "master template Cgn",
+        "status": "PASS"
+      },
+      {
+        "name": "master template Ggn",
+        "status": "PASS"
+      },
+      {
+        "name": "master template Tgn",
+        "status": "PASS"
+      },
+      {
+        "name": "master template VpmA",
+        "status": "PASS"
+      },
+      {
+        "name": "master template VpmC",
+        "status": "PASS"
+      },
+      {
+        "name": "master template VpmG",
+        "status": "PASS"
+      },
+      {
+        "name": "master template VpmU",
+        "status": "PASS"
+      },
+      {
+        "name": "master template VpeA",
+        "status": "PASS"
+      },
+      {
+        "name": "master template VpeC",
+        "status": "PASS"
+      },
+      {
+        "name": "master template VpeG",
+        "status": "PASS"
+      },
+      {
+        "name": "master template VpeU",
+        "status": "PASS"
+      },
+      {
+        "name": "master template pA",
+        "status": "PASS"
+      },
+      {
+        "name": "master template pC",
+        "status": "PASS"
+      },
+      {
+        "name": "master template pG",
+        "status": "PASS"
+      },
+      {
+        "name": "master template pT",
+        "status": "PASS"
+      },
+      {
+        "name": "master template pI",
+        "status": "PASS"
+      },
+      {
+        "name": "master template tA",
+        "status": "PASS"
+      },
+      {
+        "name": "master template tC",
+        "status": "PASS"
+      },
+      {
+        "name": "master template tG",
+        "status": "PASS"
+      },
+      {
+        "name": "master template tT",
+        "status": "PASS"
+      },
+      {
+        "name": "master template tCMe",
+        "status": "PASS"
+      },
+      {
+        "name": "master template Z",
+        "status": "PASS"
+      },
+      {
+        "name": "master template {PEG3}",
+        "status": "PASS"
+      },
+      {
+        "name": "master template {PEG4}",
+        "status": "PASS"
+      },
+      {
+        "name": "master template {PEG5}",
+        "status": "PASS"
+      },
+      {
+        "name": "master template {PEG6}",
+        "status": "PASS"
+      },
+      {
+        "name": "master template {PEG7}",
+        "status": "PASS"
+      },
+      {
+        "name": "master template {spacer3}",
+        "status": "PASS"
+      },
+      {
+        "name": "master template {C3N}",
+        "status": "PASS"
+      },
+      {
+        "name": "master template {C6N}",
+        "status": "PASS"
+      },
+      {
+        "name": "master template {FAM}",
+        "status": "PASS"
+      },
+      {
+        "name": "master template {L96}",
+        "status": "PASS"
+      },
+      {
+        "name": "master template {NAG37}",
+        "status": "PASS"
+      },
+      {
+        "name": "phosphate brackets canonical and placement",
+        "status": "PASS"
+      },
+      {
+        "name": "longest-match token collisions",
+        "status": "PASS"
+      },
+      {
+        "name": "amino position guard",
+        "status": "PASS"
+      },
+      {
+        "name": "layout detectors reject deliberately damaged geometry",
+        "status": "PASS"
+      },
+      {
+        "name": "P stereochemistry unspecified",
+        "status": "PASS"
+      },
+      {
+        "name": "built-in IDs cannot be silently replaced",
+        "status": "PASS"
+      },
+      {
+        "name": "mixed topology fails explicitly",
+        "status": "PASS"
+      },
+      {
+        "name": "real topology directions",
+        "status": "PASS"
+      },
+      {
+        "name": "conjugate deprotection formulas",
+        "status": "PASS"
+      },
+      {
+        "name": "conjugate position guards",
+        "status": "PASS"
+      },
+      {
+        "name": "QA detects crossing bonds",
+        "status": "PASS"
+      },
+      {
+        "name": "QA detects labels and long bonds",
+        "status": "PASS"
+      },
+      {
+        "name": "QA detects bad column top and connector",
+        "status": "PASS"
+      },
+      {
+        "name": "optics never inferred from modifier ID letters",
+        "status": "PASS"
+      },
+      {
+        "name": "all master optical metadata agrees with computation",
+        "status": "PASS"
+      },
+      {
+        "name": "all columns preserve canonical coordinates and handedness",
+        "status": "PASS"
+      },
+      {
+        "name": "FAM all six-membered rings are regular and equal",
+        "status": "PASS"
+      },
+      {
+        "name": "GalNAc chairs share a canonical shape in both conjugates",
+        "status": "PASS"
+      },
+      {
+        "name": "LNA cage overpasses are explicit display metadata only",
+        "status": "PASS"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "rna-9",
+      "sequence": "rArCrGrUrArCrGrUrA",
+      "n": 9,
+      "atoms": 189,
+      "bonds": 211,
+      "routes": 0,
+      "ms": 6.148899999999912,
+      "pass": true,
+      "minimum_nonbonded": 1.938489054141148,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "mixed-9",
+      "sequence": "rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA",
+      "n": 9,
+      "atoms": 211,
+      "bonds": 234,
+      "routes": 0,
+      "ms": 10.834699999999998,
+      "pass": true,
+      "minimum_nonbonded": 1.0602476125886828,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "rna-10",
+      "sequence": "rArCrGrUrArCrGrUrArC",
+      "n": 10,
+      "atoms": 209,
+      "bonds": 233,
+      "routes": 0,
+      "ms": 8.478999999999928,
+      "pass": true,
+      "minimum_nonbonded": 1.938489054141148,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "mixed-10",
+      "sequence": "rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G",
+      "n": 10,
+      "atoms": 236,
+      "bonds": 263,
+      "routes": 0,
+      "ms": 7.3151000000000295,
+      "pass": true,
+      "minimum_nonbonded": 1.0602476125886828,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "rna-11",
+      "sequence": "rArCrGrUrArCrGrUrArCrG",
+      "n": 11,
+      "atoms": 232,
+      "bonds": 259,
+      "routes": 1,
+      "ms": 7.20270000000005,
+      "pass": true,
+      "minimum_nonbonded": 1.938489054141148,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "mixed-11",
+      "sequence": "rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA",
+      "n": 11,
+      "atoms": 258,
+      "bonds": 288,
+      "routes": 1,
+      "ms": 8.355099999999993,
+      "pass": true,
+      "minimum_nonbonded": 1.0602476125886828,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "rna-19",
+      "sequence": "rArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrG",
+      "n": 19,
+      "atoms": 402,
+      "bonds": 449,
+      "routes": 1,
+      "ms": 20.62659999999994,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411468,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "mixed-19",
+      "sequence": "rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nA",
+      "n": 19,
+      "atoms": 461,
+      "bonds": 513,
+      "routes": 1,
+      "ms": 25.260200000000054,
+      "pass": true,
+      "minimum_nonbonded": 1.0602476125886828,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "rna-20",
+      "sequence": "rArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrU",
+      "n": 20,
+      "atoms": 422,
+      "bonds": 471,
+      "routes": 1,
+      "ms": 21.76240000000007,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411468,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "mixed-20",
+      "sequence": "rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G",
+      "n": 20,
+      "atoms": 486,
+      "bonds": 542,
+      "routes": 1,
+      "ms": 27.490099999999984,
+      "pass": true,
+      "minimum_nonbonded": 1.0602476125886828,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "rna-21",
+      "sequence": "rArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrA",
+      "n": 21,
+      "atoms": 444,
+      "bonds": 496,
+      "routes": 2,
+      "ms": 23.388499999999908,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411468,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "mixed-21",
+      "sequence": "rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA",
+      "n": 21,
+      "atoms": 508,
+      "bonds": 567,
+      "routes": 2,
+      "ms": 31.302700000000073,
+      "pass": true,
+      "minimum_nonbonded": 1.0602476125886828,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "rna-30",
+      "sequence": "rArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArC",
+      "n": 30,
+      "atoms": 634,
+      "bonds": 708,
+      "routes": 2,
+      "ms": 48.163799999999924,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411468,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "mixed-30",
+      "sequence": "rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G",
+      "n": 30,
+      "atoms": 732,
+      "bonds": 817,
+      "routes": 2,
+      "ms": 64.55819999999994,
+      "pass": true,
+      "minimum_nonbonded": 1.0602476125886795,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "rna-60",
+      "sequence": "rArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrU",
+      "n": 60,
+      "atoms": 1272,
+      "bonds": 1421,
+      "routes": 5,
+      "ms": 185.15869999999995,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411468,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "mixed-60",
+      "sequence": "rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G",
+      "n": 60,
+      "atoms": 1471,
+      "bonds": 1642,
+      "routes": 5,
+      "ms": 240.22820000000002,
+      "pass": true,
+      "minimum_nonbonded": 1.0602476125886795,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "rna-100",
+      "sequence": "rArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrU",
+      "n": 100,
+      "atoms": 2122,
+      "bonds": 2371,
+      "routes": 9,
+      "ms": 489.79050000000007,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411361,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "mixed-100",
+      "sequence": "rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G",
+      "n": 100,
+      "atoms": 2453,
+      "bonds": 2738,
+      "routes": 9,
+      "ms": 651.0569000000003,
+      "pass": true,
+      "minimum_nonbonded": 1.0602476125886795,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "rna-150",
+      "sequence": "rArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArC",
+      "n": 150,
+      "atoms": 3184,
+      "bonds": 3558,
+      "routes": 14,
+      "ms": 1095.2111,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411361,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "mixed-150",
+      "sequence": "rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G",
+      "n": 150,
+      "atoms": 3688,
+      "bonds": 4117,
+      "routes": 14,
+      "ms": 1518.7017999999998,
+      "pass": true,
+      "minimum_nonbonded": 1.0602476125886795,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "rna-200",
+      "sequence": "rArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrU",
+      "n": 200,
+      "atoms": 4247,
+      "bonds": 4746,
+      "routes": 19,
+      "ms": 2007.656,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541410695,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "mixed-200",
+      "sequence": "rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G",
+      "n": 200,
+      "atoms": 4920,
+      "bonds": 5492,
+      "routes": 19,
+      "ms": 2704.542300000001,
+      "pass": true,
+      "minimum_nonbonded": 1.0602476125886517,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "rna-300",
+      "sequence": "rArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrUrArCrGrU",
+      "n": 300,
+      "atoms": 6372,
+      "bonds": 7121,
+      "routes": 29,
+      "ms": 5005.078600000001,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541410695,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "mixed-300",
+      "sequence": "rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G#rAdC*mG**fU^eA!+CMe#FANA-GUNA-U*nA**ENA-G^rA!dC#mGfU*eA**+CMe^FANA-G!UNA-U#nAENA-G*rA**dC^mG!fU#eA+CMe*FANA-G**UNA-U^nA!ENA-G",
+      "n": 300,
+      "atoms": 7383,
+      "bonds": 8242,
+      "routes": 29,
+      "ms": 6103.8621,
+      "pass": true,
+      "minimum_nonbonded": 1.0602476125886517,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "bridge",
+      "sequence": "+A+CMe+G+TENA-AENA-G",
+      "n": 6,
+      "atoms": 137,
+      "bonds": 158,
+      "routes": 0,
+      "ms": 2.428200000002107,
+      "pass": true,
+      "minimum_nonbonded": 1.0602476125886817,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "sidechain",
+      "sequence": "AhdChdGhdUhdAdaCdaGdaUda",
+      "n": 8,
+      "atoms": 319,
+      "bonds": 338,
+      "routes": 0,
+      "ms": 12.917500000003201,
+      "pass": true,
+      "minimum_nonbonded": 1.3954340190563972,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "spacers",
+      "sequence": "[C6N]rA[PEG3]rC[PEG4]rG[PEG5]rU[PEG6]mA[PEG7]mC[spacer3]mG[C3N]",
+      "n": 15,
+      "atoms": 272,
+      "bonds": 289,
+      "routes": 1,
+      "ms": 10.12619999999879,
+      "pass": true,
+      "minimum_nonbonded": 1.6,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "vp",
+      "sequence": "VpmArC*mG**eU",
+      "n": 4,
+      "atoms": 92,
+      "bonds": 101,
+      "routes": 0,
+      "ms": 1.2891000000017812,
+      "pass": true,
+      "minimum_nonbonded": 0.854400374531753,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "vpmoe",
+      "sequence": "VpeGrA",
+      "n": 2,
+      "atoms": 50,
+      "bonds": 55,
+      "routes": 0,
+      "ms": 0.7743000000009488,
+      "pass": true,
+      "minimum_nonbonded": 0.854400374531753,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "gna",
+      "sequence": "AgnCgnGgnTgnAgnCgnGgnTgnAgnCgnGgnTgnAgnCgnGgnTgnAgnCgnGgnTgnAgnCgnGgnTgn",
+      "n": 24,
+      "atoms": 417,
+      "bonds": 452,
+      "routes": 2,
+      "ms": 20.777799999999843,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813918,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "tna",
+      "sequence": "tAtCMetGtTtAtCMetGtTtAtCMetGtTtAtCMetGtTtAtCMetGtTtAtCMetGtT",
+      "n": 24,
+      "atoms": 471,
+      "bonds": 530,
+      "routes": 2,
+      "ms": 27.371100000000297,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813966,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "pmo",
+      "sequence": "pApCpGpTpApCpGpTpApCpGpTpApCpGpTpApCpGpTpApCpGpT",
+      "n": 24,
+      "atoms": 535,
+      "bonds": 594,
+      "routes": 2,
+      "ms": 33.150399999998626,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813965,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "benner",
+      "sequence": "ZdAZdCZdGZdT",
+      "n": 8,
+      "atoms": 167,
+      "bonds": 184,
+      "routes": 0,
+      "ms": 4.0090000000018335,
+      "pass": true,
+      "minimum_nonbonded": 1.938489054141148,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "terminal",
+      "sequence": "[ppp]rArC[pp]",
+      "n": 2,
+      "atoms": 59,
+      "bonds": 63,
+      "routes": 0,
+      "ms": 0.9804000000003725,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411555,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-dA-34",
+      "sequence": "dA",
+      "n": 1,
+      "atoms": 18,
+      "bonds": 20,
+      "routes": 0,
+      "ms": 0.27620000000024447,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411555,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-dC-35",
+      "sequence": "dC",
+      "n": 1,
+      "atoms": 16,
+      "bonds": 17,
+      "routes": 0,
+      "ms": 0.25460000000020955,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411552,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-dG-36",
+      "sequence": "dG",
+      "n": 1,
+      "atoms": 19,
+      "bonds": 21,
+      "routes": 0,
+      "ms": 0.27520000000004075,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411557,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-dT-37",
+      "sequence": "dT",
+      "n": 1,
+      "atoms": 17,
+      "bonds": 18,
+      "routes": 0,
+      "ms": 0.254399999997986,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411557,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-rA-38",
+      "sequence": "rA",
+      "n": 1,
+      "atoms": 19,
+      "bonds": 21,
+      "routes": 0,
+      "ms": 0.28449999999793363,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411555,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-rC-39",
+      "sequence": "rC",
+      "n": 1,
+      "atoms": 17,
+      "bonds": 18,
+      "routes": 0,
+      "ms": 0.2716000000000349,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411557,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-rG-40",
+      "sequence": "rG",
+      "n": 1,
+      "atoms": 20,
+      "bonds": 22,
+      "routes": 0,
+      "ms": 0.2069999999985157,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411557,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-rU-41",
+      "sequence": "rU",
+      "n": 1,
+      "atoms": 17,
+      "bonds": 18,
+      "routes": 0,
+      "ms": 0.22669999999925494,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411557,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-rI-42",
+      "sequence": "rI",
+      "n": 1,
+      "atoms": 19,
+      "bonds": 21,
+      "routes": 0,
+      "ms": 0.2508000000016182,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411564,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-fA-43",
+      "sequence": "fA",
+      "n": 1,
+      "atoms": 19,
+      "bonds": 21,
+      "routes": 0,
+      "ms": 0.2514000000010128,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411555,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-fC-44",
+      "sequence": "fC",
+      "n": 1,
+      "atoms": 17,
+      "bonds": 18,
+      "routes": 0,
+      "ms": 0.17250000000058208,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411557,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-fG-45",
+      "sequence": "fG",
+      "n": 1,
+      "atoms": 20,
+      "bonds": 22,
+      "routes": 0,
+      "ms": 0.16779999999926076,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411557,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-fU-46",
+      "sequence": "fU",
+      "n": 1,
+      "atoms": 17,
+      "bonds": 18,
+      "routes": 0,
+      "ms": 0.22190000000045984,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411557,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-mA-47",
+      "sequence": "mA",
+      "n": 1,
+      "atoms": 20,
+      "bonds": 22,
+      "routes": 0,
+      "ms": 0.20420000000012806,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411557,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-mC-48",
+      "sequence": "mC",
+      "n": 1,
+      "atoms": 18,
+      "bonds": 19,
+      "routes": 0,
+      "ms": 0.1867000000020198,
+      "pass": true,
+      "minimum_nonbonded": 1.938489054141155,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-mG-49",
+      "sequence": "mG",
+      "n": 1,
+      "atoms": 21,
+      "bonds": 23,
+      "routes": 0,
+      "ms": 0.29509999999936554,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411564,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-mU-50",
+      "sequence": "mU",
+      "n": 1,
+      "atoms": 18,
+      "bonds": 19,
+      "routes": 0,
+      "ms": 0.2011000000020431,
+      "pass": true,
+      "minimum_nonbonded": 1.938489054141155,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-eA-51",
+      "sequence": "eA",
+      "n": 1,
+      "atoms": 23,
+      "bonds": 25,
+      "routes": 0,
+      "ms": 0.2109999999993306,
+      "pass": true,
+      "minimum_nonbonded": 1.2867597775320616,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-eC-52",
+      "sequence": "eC",
+      "n": 1,
+      "atoms": 21,
+      "bonds": 22,
+      "routes": 0,
+      "ms": 0.17700000000331784,
+      "pass": true,
+      "minimum_nonbonded": 1.2594325745382238,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-eG-53",
+      "sequence": "eG",
+      "n": 1,
+      "atoms": 24,
+      "bonds": 26,
+      "routes": 0,
+      "ms": 0.18690000000060536,
+      "pass": true,
+      "minimum_nonbonded": 1.4245993349130492,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-eU-54",
+      "sequence": "eU",
+      "n": 1,
+      "atoms": 21,
+      "bonds": 22,
+      "routes": 0,
+      "ms": 0.16309999999793945,
+      "pass": true,
+      "minimum_nonbonded": 1.2594325745382238,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-dI-55",
+      "sequence": "dI",
+      "n": 1,
+      "atoms": 18,
+      "bonds": 20,
+      "routes": 0,
+      "ms": 0.15879999999742722,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411555,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-dCMe-56",
+      "sequence": "dCMe",
+      "n": 1,
+      "atoms": 17,
+      "bonds": 18,
+      "routes": 0,
+      "ms": 0.1489000000001397,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813977,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-rT-57",
+      "sequence": "rT",
+      "n": 1,
+      "atoms": 18,
+      "bonds": 19,
+      "routes": 0,
+      "ms": 0.1569999999992433,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813985,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-rCMe-58",
+      "sequence": "rCMe",
+      "n": 1,
+      "atoms": 18,
+      "bonds": 19,
+      "routes": 0,
+      "ms": 0.16170000000056461,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813985,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-mT-59",
+      "sequence": "mT",
+      "n": 1,
+      "atoms": 19,
+      "bonds": 20,
+      "routes": 0,
+      "ms": 0.22100000000136788,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813966,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-mI-60",
+      "sequence": "mI",
+      "n": 1,
+      "atoms": 20,
+      "bonds": 22,
+      "routes": 0,
+      "ms": 0.20390000000043074,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411557,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-mCMe-61",
+      "sequence": "mCMe",
+      "n": 1,
+      "atoms": 19,
+      "bonds": 20,
+      "routes": 0,
+      "ms": 0.2415000000000873,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813966,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-fT-62",
+      "sequence": "fT",
+      "n": 1,
+      "atoms": 18,
+      "bonds": 19,
+      "routes": 0,
+      "ms": 0.22910000000047148,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813985,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-fI-63",
+      "sequence": "fI",
+      "n": 1,
+      "atoms": 19,
+      "bonds": 21,
+      "routes": 0,
+      "ms": 0.23910000000250875,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411555,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-fCMe-64",
+      "sequence": "fCMe",
+      "n": 1,
+      "atoms": 18,
+      "bonds": 19,
+      "routes": 0,
+      "ms": 0.23960000000079162,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813985,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-eT-65",
+      "sequence": "eT",
+      "n": 1,
+      "atoms": 22,
+      "bonds": 23,
+      "routes": 0,
+      "ms": 0.2761000000027707,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813985,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-eI-66",
+      "sequence": "eI",
+      "n": 1,
+      "atoms": 23,
+      "bonds": 25,
+      "routes": 0,
+      "ms": 0.28360000000247965,
+      "pass": true,
+      "minimum_nonbonded": 1.2867597775320616,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-eCMe-67",
+      "sequence": "eCMe",
+      "n": 1,
+      "atoms": 22,
+      "bonds": 23,
+      "routes": 0,
+      "ms": 0.2646999999997206,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813985,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-FANAxA-68",
+      "sequence": "FANA-A",
+      "n": 1,
+      "atoms": 19,
+      "bonds": 21,
+      "routes": 0,
+      "ms": 0.18590000000040163,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411555,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-UNAxA-69",
+      "sequence": "UNA-A",
+      "n": 1,
+      "atoms": 19,
+      "bonds": 20,
+      "routes": 0,
+      "ms": 0.22910000000047148,
+      "pass": true,
+      "minimum_nonbonded": 1.1980521222788696,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-nA-70",
+      "sequence": "nA",
+      "n": 1,
+      "atoms": 24,
+      "bonds": 26,
+      "routes": 0,
+      "ms": 0.3113000000012107,
+      "pass": true,
+      "minimum_nonbonded": 1.938489054141155,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-Ahd-71",
+      "sequence": "Ahd",
+      "n": 1,
+      "atoms": 35,
+      "bonds": 37,
+      "routes": 0,
+      "ms": 0.43020000000251457,
+      "pass": true,
+      "minimum_nonbonded": 1.5593265486485097,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-Ada-72",
+      "sequence": "Ada",
+      "n": 1,
+      "atoms": 41,
+      "bonds": 43,
+      "routes": 0,
+      "ms": 0.33889999999883,
+      "pass": true,
+      "minimum_nonbonded": 1.5593265486485097,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-xA-73",
+      "sequence": "+A",
+      "n": 1,
+      "atoms": 20,
+      "bonds": 23,
+      "routes": 0,
+      "ms": 0.25129999999990105,
+      "pass": true,
+      "minimum_nonbonded": 1.0602476125886817,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-ENAxA-74",
+      "sequence": "ENA-A",
+      "n": 1,
+      "atoms": 21,
+      "bonds": 24,
+      "routes": 0,
+      "ms": 0.1959999999999127,
+      "pass": true,
+      "minimum_nonbonded": 1.4409458699062914,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-FANAxC-75",
+      "sequence": "FANA-C",
+      "n": 1,
+      "atoms": 17,
+      "bonds": 18,
+      "routes": 0,
+      "ms": 0.21050000000104774,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411557,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-UNAxC-76",
+      "sequence": "UNA-C",
+      "n": 1,
+      "atoms": 17,
+      "bonds": 17,
+      "routes": 0,
+      "ms": 0.25760000000082073,
+      "pass": true,
+      "minimum_nonbonded": 1.1980521222788707,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-nC-77",
+      "sequence": "nC",
+      "n": 1,
+      "atoms": 22,
+      "bonds": 23,
+      "routes": 0,
+      "ms": 0.31379999999990105,
+      "pass": true,
+      "minimum_nonbonded": 1.7096803534987912,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-Chd-78",
+      "sequence": "Chd",
+      "n": 1,
+      "atoms": 33,
+      "bonds": 34,
+      "routes": 0,
+      "ms": 0.40350000000034925,
+      "pass": true,
+      "minimum_nonbonded": 1.7096803534987912,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-Cda-79",
+      "sequence": "Cda",
+      "n": 1,
+      "atoms": 39,
+      "bonds": 40,
+      "routes": 0,
+      "ms": 0.48099999999976717,
+      "pass": true,
+      "minimum_nonbonded": 1.7096803534987912,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-xC-80",
+      "sequence": "+C",
+      "n": 1,
+      "atoms": 18,
+      "bonds": 20,
+      "routes": 0,
+      "ms": 0.18400000000110595,
+      "pass": true,
+      "minimum_nonbonded": 1.0602476125886817,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-ENAxC-81",
+      "sequence": "ENA-C",
+      "n": 1,
+      "atoms": 19,
+      "bonds": 21,
+      "routes": 0,
+      "ms": 0.18879999999990105,
+      "pass": true,
+      "minimum_nonbonded": 1.4409458699062914,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-FANAxG-82",
+      "sequence": "FANA-G",
+      "n": 1,
+      "atoms": 20,
+      "bonds": 22,
+      "routes": 0,
+      "ms": 0.2272000000011758,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411557,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-UNAxG-83",
+      "sequence": "UNA-G",
+      "n": 1,
+      "atoms": 20,
+      "bonds": 21,
+      "routes": 0,
+      "ms": 0.28430000000298605,
+      "pass": true,
+      "minimum_nonbonded": 1.1980521222788698,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-nG-84",
+      "sequence": "nG",
+      "n": 1,
+      "atoms": 25,
+      "bonds": 27,
+      "routes": 0,
+      "ms": 0.3142999999981839,
+      "pass": true,
+      "minimum_nonbonded": 1.3954340190563972,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-Ghd-85",
+      "sequence": "Ghd",
+      "n": 1,
+      "atoms": 36,
+      "bonds": 38,
+      "routes": 0,
+      "ms": 0.42870000000039,
+      "pass": true,
+      "minimum_nonbonded": 1.3954340190563972,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-Gda-86",
+      "sequence": "Gda",
+      "n": 1,
+      "atoms": 42,
+      "bonds": 44,
+      "routes": 0,
+      "ms": 0.4117999999980384,
+      "pass": true,
+      "minimum_nonbonded": 1.3954340190563972,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-xG-87",
+      "sequence": "+G",
+      "n": 1,
+      "atoms": 21,
+      "bonds": 24,
+      "routes": 0,
+      "ms": 0.20609999999942374,
+      "pass": true,
+      "minimum_nonbonded": 1.0602476125886817,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-ENAxG-88",
+      "sequence": "ENA-G",
+      "n": 1,
+      "atoms": 22,
+      "bonds": 25,
+      "routes": 0,
+      "ms": 0.19250000000101863,
+      "pass": true,
+      "minimum_nonbonded": 1.4409458699062914,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-FANAxU-89",
+      "sequence": "FANA-U",
+      "n": 1,
+      "atoms": 17,
+      "bonds": 18,
+      "routes": 0,
+      "ms": 0.24250000000029104,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411557,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-UNAxU-90",
+      "sequence": "UNA-U",
+      "n": 1,
+      "atoms": 17,
+      "bonds": 17,
+      "routes": 0,
+      "ms": 0.21550000000206637,
+      "pass": true,
+      "minimum_nonbonded": 1.1980521222788707,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-nU-91",
+      "sequence": "nU",
+      "n": 1,
+      "atoms": 22,
+      "bonds": 23,
+      "routes": 0,
+      "ms": 0.19050000000061118,
+      "pass": true,
+      "minimum_nonbonded": 1.7096803534987912,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-Uhd-92",
+      "sequence": "Uhd",
+      "n": 1,
+      "atoms": 33,
+      "bonds": 34,
+      "routes": 0,
+      "ms": 0.3613000000004831,
+      "pass": true,
+      "minimum_nonbonded": 1.7096803534987912,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-Uda-93",
+      "sequence": "Uda",
+      "n": 1,
+      "atoms": 39,
+      "bonds": 40,
+      "routes": 0,
+      "ms": 0.2767000000021653,
+      "pass": true,
+      "minimum_nonbonded": 1.7096803534987912,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-xU-94",
+      "sequence": "+U",
+      "n": 1,
+      "atoms": 18,
+      "bonds": 20,
+      "routes": 0,
+      "ms": 0.15999999999985448,
+      "pass": true,
+      "minimum_nonbonded": 1.0602476125886817,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-ENAxU-95",
+      "sequence": "ENA-U",
+      "n": 1,
+      "atoms": 19,
+      "bonds": 21,
+      "routes": 0,
+      "ms": 0.15420000000085565,
+      "pass": true,
+      "minimum_nonbonded": 1.4409458699062914,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-FANAxT-96",
+      "sequence": "FANA-T",
+      "n": 1,
+      "atoms": 18,
+      "bonds": 19,
+      "routes": 0,
+      "ms": 0.2488999999986845,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813985,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-UNAxT-97",
+      "sequence": "UNA-T",
+      "n": 1,
+      "atoms": 18,
+      "bonds": 18,
+      "routes": 0,
+      "ms": 0.17799999999988358,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813985,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-nT-98",
+      "sequence": "nT",
+      "n": 1,
+      "atoms": 23,
+      "bonds": 24,
+      "routes": 0,
+      "ms": 0.27639999999883,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813985,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-Thd-99",
+      "sequence": "Thd",
+      "n": 1,
+      "atoms": 34,
+      "bonds": 35,
+      "routes": 0,
+      "ms": 0.2782999999981257,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813985,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-Tda-100",
+      "sequence": "Tda",
+      "n": 1,
+      "atoms": 40,
+      "bonds": 41,
+      "routes": 0,
+      "ms": 0.305899999999383,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813985,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-xT-101",
+      "sequence": "+T",
+      "n": 1,
+      "atoms": 19,
+      "bonds": 21,
+      "routes": 0,
+      "ms": 0.2014999999992142,
+      "pass": true,
+      "minimum_nonbonded": 1.0602476125886817,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-ENAxT-102",
+      "sequence": "ENA-T",
+      "n": 1,
+      "atoms": 20,
+      "bonds": 22,
+      "routes": 0,
+      "ms": 0.2445000000006985,
+      "pass": true,
+      "minimum_nonbonded": 1.4409458699062914,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-FANAxI-103",
+      "sequence": "FANA-I",
+      "n": 1,
+      "atoms": 19,
+      "bonds": 21,
+      "routes": 0,
+      "ms": 0.2819999999992433,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411555,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-UNAxI-104",
+      "sequence": "UNA-I",
+      "n": 1,
+      "atoms": 19,
+      "bonds": 20,
+      "routes": 0,
+      "ms": 0.9153000000005704,
+      "pass": true,
+      "minimum_nonbonded": 1.1980521222788705,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-nI-105",
+      "sequence": "nI",
+      "n": 1,
+      "atoms": 24,
+      "bonds": 26,
+      "routes": 0,
+      "ms": 0.25460000000020955,
+      "pass": true,
+      "minimum_nonbonded": 1.4841180912732592,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-Ihd-106",
+      "sequence": "Ihd",
+      "n": 1,
+      "atoms": 35,
+      "bonds": 37,
+      "routes": 0,
+      "ms": 0.27480000000286964,
+      "pass": true,
+      "minimum_nonbonded": 1.4841180912732592,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-Ida-107",
+      "sequence": "Ida",
+      "n": 1,
+      "atoms": 41,
+      "bonds": 43,
+      "routes": 0,
+      "ms": 0.30719999999928405,
+      "pass": true,
+      "minimum_nonbonded": 1.4841180912732592,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-xI-108",
+      "sequence": "+I",
+      "n": 1,
+      "atoms": 20,
+      "bonds": 23,
+      "routes": 0,
+      "ms": 0.32519999999931315,
+      "pass": true,
+      "minimum_nonbonded": 1.0602476125886817,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-ENAxI-109",
+      "sequence": "ENA-I",
+      "n": 1,
+      "atoms": 21,
+      "bonds": 24,
+      "routes": 0,
+      "ms": 0.26410000000032596,
+      "pass": true,
+      "minimum_nonbonded": 1.4409458699062914,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-FANAxCMe-110",
+      "sequence": "FANA-CMe",
+      "n": 1,
+      "atoms": 18,
+      "bonds": 19,
+      "routes": 0,
+      "ms": 0.21680000000196742,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813985,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-UNAxCMe-111",
+      "sequence": "UNA-CMe",
+      "n": 1,
+      "atoms": 18,
+      "bonds": 18,
+      "routes": 0,
+      "ms": 0.17949999999837019,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813985,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-nCMe-112",
+      "sequence": "nCMe",
+      "n": 1,
+      "atoms": 23,
+      "bonds": 24,
+      "routes": 0,
+      "ms": 0.19399999999950523,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813985,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-CMehd-113",
+      "sequence": "CMehd",
+      "n": 1,
+      "atoms": 34,
+      "bonds": 35,
+      "routes": 0,
+      "ms": 0.2646000000022468,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813985,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-CMeda-114",
+      "sequence": "CMeda",
+      "n": 1,
+      "atoms": 40,
+      "bonds": 41,
+      "routes": 0,
+      "ms": 0.471399999998539,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813985,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-xCMe-115",
+      "sequence": "+CMe",
+      "n": 1,
+      "atoms": 19,
+      "bonds": 21,
+      "routes": 0,
+      "ms": 0.18139999999766587,
+      "pass": true,
+      "minimum_nonbonded": 1.0602476125886817,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-ENAxCMe-116",
+      "sequence": "ENA-CMe",
+      "n": 1,
+      "atoms": 20,
+      "bonds": 22,
+      "routes": 0,
+      "ms": 0.1610000000000582,
+      "pass": true,
+      "minimum_nonbonded": 1.4409458699062914,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-Agn-117",
+      "sequence": "Agn",
+      "n": 1,
+      "atoms": 15,
+      "bonds": 16,
+      "routes": 0,
+      "ms": 0.24350000000049477,
+      "pass": true,
+      "minimum_nonbonded": 1.9000000000000001,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-Cgn-118",
+      "sequence": "Cgn",
+      "n": 1,
+      "atoms": 13,
+      "bonds": 13,
+      "routes": 0,
+      "ms": 0.17290000000139116,
+      "pass": true,
+      "minimum_nonbonded": 1.9000000000000001,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-Ggn-119",
+      "sequence": "Ggn",
+      "n": 1,
+      "atoms": 16,
+      "bonds": 17,
+      "routes": 0,
+      "ms": 0.2077000000026601,
+      "pass": true,
+      "minimum_nonbonded": 1.5987490619125189,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-Tgn-120",
+      "sequence": "Tgn",
+      "n": 1,
+      "atoms": 14,
+      "bonds": 14,
+      "routes": 0,
+      "ms": 0.21679999999832944,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813989,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-VpmA-121",
+      "sequence": "VpmArA",
+      "n": 2,
+      "atoms": 46,
+      "bonds": 51,
+      "routes": 0,
+      "ms": 0.6840999999985797,
+      "pass": true,
+      "minimum_nonbonded": 0.854400374531753,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-VpmC-122",
+      "sequence": "VpmCrA",
+      "n": 2,
+      "atoms": 44,
+      "bonds": 48,
+      "routes": 0,
+      "ms": 0.47259999999732827,
+      "pass": true,
+      "minimum_nonbonded": 0.854400374531753,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-VpmG-123",
+      "sequence": "VpmGrA",
+      "n": 2,
+      "atoms": 47,
+      "bonds": 52,
+      "routes": 0,
+      "ms": 0.5456999999987602,
+      "pass": true,
+      "minimum_nonbonded": 0.854400374531753,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-VpmU-124",
+      "sequence": "VpmUrA",
+      "n": 2,
+      "atoms": 44,
+      "bonds": 48,
+      "routes": 0,
+      "ms": 0.48109999999724096,
+      "pass": true,
+      "minimum_nonbonded": 0.854400374531753,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-VpeA-125",
+      "sequence": "VpeArA",
+      "n": 2,
+      "atoms": 49,
+      "bonds": 54,
+      "routes": 0,
+      "ms": 0.5106000000014319,
+      "pass": true,
+      "minimum_nonbonded": 0.854400374531753,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-VpeC-126",
+      "sequence": "VpeCrA",
+      "n": 2,
+      "atoms": 47,
+      "bonds": 51,
+      "routes": 0,
+      "ms": 0.49510000000009313,
+      "pass": true,
+      "minimum_nonbonded": 0.854400374531753,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-VpeG-127",
+      "sequence": "VpeGrA",
+      "n": 2,
+      "atoms": 50,
+      "bonds": 55,
+      "routes": 0,
+      "ms": 0.8305000000000291,
+      "pass": true,
+      "minimum_nonbonded": 0.854400374531753,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-VpeU-128",
+      "sequence": "VpeUrA",
+      "n": 2,
+      "atoms": 47,
+      "bonds": 51,
+      "routes": 0,
+      "ms": 0.7631000000001222,
+      "pass": true,
+      "minimum_nonbonded": 0.854400374531753,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-pA-129",
+      "sequence": "pA",
+      "n": 1,
+      "atoms": 18,
+      "bonds": 20,
+      "routes": 0,
+      "ms": 0.4213999999992666,
+      "pass": true,
+      "minimum_nonbonded": 1.697056274847714,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-pC-130",
+      "sequence": "pC",
+      "n": 1,
+      "atoms": 16,
+      "bonds": 17,
+      "routes": 0,
+      "ms": 0.23109999999724096,
+      "pass": true,
+      "minimum_nonbonded": 1.697056274847714,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-pG-131",
+      "sequence": "pG",
+      "n": 1,
+      "atoms": 19,
+      "bonds": 21,
+      "routes": 0,
+      "ms": 0.28440000000045984,
+      "pass": true,
+      "minimum_nonbonded": 1.697056274847714,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-pT-132",
+      "sequence": "pT",
+      "n": 1,
+      "atoms": 17,
+      "bonds": 18,
+      "routes": 0,
+      "ms": 0.16749999999956344,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813985,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-pI-133",
+      "sequence": "pI",
+      "n": 1,
+      "atoms": 18,
+      "bonds": 20,
+      "routes": 0,
+      "ms": 0.15489999999772408,
+      "pass": true,
+      "minimum_nonbonded": 1.697056274847714,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-tA-134",
+      "sequence": "tA",
+      "n": 1,
+      "atoms": 17,
+      "bonds": 19,
+      "routes": 0,
+      "ms": 0.14899999999761349,
+      "pass": true,
+      "minimum_nonbonded": 1.843908891458577,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-tC-135",
+      "sequence": "tC",
+      "n": 1,
+      "atoms": 15,
+      "bonds": 16,
+      "routes": 0,
+      "ms": 0.14230000000316068,
+      "pass": true,
+      "minimum_nonbonded": 1.3654052548807305,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-tG-136",
+      "sequence": "tG",
+      "n": 1,
+      "atoms": 18,
+      "bonds": 20,
+      "routes": 0,
+      "ms": 0.147000000000844,
+      "pass": true,
+      "minimum_nonbonded": 0.9225790036402555,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-tT-137",
+      "sequence": "tT",
+      "n": 1,
+      "atoms": 16,
+      "bonds": 17,
+      "routes": 0,
+      "ms": 0.1632000000026892,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813974,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-tCMe-138",
+      "sequence": "tCMe",
+      "n": 1,
+      "atoms": 16,
+      "bonds": 17,
+      "routes": 0,
+      "ms": 0.1451999999990221,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813974,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-Z-139",
+      "sequence": "Z",
+      "n": 1,
+      "atoms": 19,
+      "bonds": 20,
+      "routes": 0,
+      "ms": 0.19180000000051223,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411557,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-xPEG3x-140",
+      "sequence": "[PEG3]",
+      "n": 1,
+      "atoms": 10,
+      "bonds": 9,
+      "routes": 0,
+      "ms": 0.08959999999933643,
+      "pass": true,
+      "minimum_nonbonded": 1.7999999999999998,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-xPEG4x-141",
+      "sequence": "[PEG4]",
+      "n": 1,
+      "atoms": 13,
+      "bonds": 12,
+      "routes": 0,
+      "ms": 0.09289999999964493,
+      "pass": true,
+      "minimum_nonbonded": 1.6,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-xPEG5x-142",
+      "sequence": "[PEG5]",
+      "n": 1,
+      "atoms": 16,
+      "bonds": 15,
+      "routes": 0,
+      "ms": 0.15669999999954598,
+      "pass": true,
+      "minimum_nonbonded": 2.0571428571428565,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-xPEG6x-143",
+      "sequence": "[PEG6]",
+      "n": 1,
+      "atoms": 19,
+      "bonds": 18,
+      "routes": 0,
+      "ms": 0.15420000000085565,
+      "pass": true,
+      "minimum_nonbonded": 1.8666666666666663,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-xPEG7x-144",
+      "sequence": "[PEG7]",
+      "n": 1,
+      "atoms": 22,
+      "bonds": 21,
+      "routes": 0,
+      "ms": 0.16129999999975553,
+      "pass": true,
+      "minimum_nonbonded": 2.1599999999999993,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-xspacer3x-145",
+      "sequence": "[spacer3]",
+      "n": 1,
+      "atoms": 5,
+      "bonds": 4,
+      "routes": 0,
+      "ms": 0.0852999999988242,
+      "pass": true,
+      "minimum_nonbonded": 2.6925824035672523,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-xC3Nx-146",
+      "sequence": "[C3N]rA",
+      "n": 2,
+      "atoms": 27,
+      "bonds": 29,
+      "routes": 0,
+      "ms": 0.23189999999885913,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411555,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-xC6Nx-147",
+      "sequence": "[C6N]rA",
+      "n": 2,
+      "atoms": 30,
+      "bonds": 32,
+      "routes": 0,
+      "ms": 0.2422999999980675,
+      "pass": true,
+      "minimum_nonbonded": 1.9384890541411555,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-xFAMx-148",
+      "sequence": "[FAM]rA",
+      "n": 2,
+      "atoms": 57,
+      "bonds": 64,
+      "routes": 2,
+      "ms": 1.184399999998277,
+      "pass": true,
+      "minimum_nonbonded": 0.6717389356150204,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-xL96x-149",
+      "sequence": "rA[L96]",
+      "n": 2,
+      "atoms": 142,
+      "bonds": 148,
+      "routes": 2,
+      "ms": 12.25800000000163,
+      "pass": true,
+      "minimum_nonbonded": 0.9178779875342895,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "unit-xNAG37x-150",
+      "sequence": "[NAG37]rA",
+      "n": 2,
+      "atoms": 110,
+      "bonds": 116,
+      "routes": 2,
+      "ms": 3.12670000000071,
+      "pass": true,
+      "minimum_nonbonded": 0.9178779875342911,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "galnac-9",
+      "sequence": "[NAG37]rAmCfGeUrAmCfGeUrA[L96]",
+      "n": 11,
+      "atoms": 413,
+      "bonds": 443,
+      "routes": 4,
+      "ms": 205.15889999999854,
+      "pass": true,
+      "minimum_nonbonded": 0.9178779875342855,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "galnac-10",
+      "sequence": "[NAG37]rAmCfGeUrAmCfGeUrAmC[L96]",
+      "n": 12,
+      "atoms": 434,
+      "bonds": 466,
+      "routes": 5,
+      "ms": 68.0012999999999,
+      "pass": true,
+      "minimum_nonbonded": 0.917877987534283,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "galnac-11",
+      "sequence": "[NAG37]rAmCfGeUrAmCfGeUrAmCfG[L96]",
+      "n": 13,
+      "atoms": 457,
+      "bonds": 492,
+      "routes": 5,
+      "ms": 75.30739999999787,
+      "pass": true,
+      "minimum_nonbonded": 0.917877987534283,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "galnac-19",
+      "sequence": "[NAG37]rAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfG[L96]",
+      "n": 21,
+      "atoms": 637,
+      "bonds": 692,
+      "routes": 5,
+      "ms": 381.4814000000006,
+      "pass": true,
+      "minimum_nonbonded": 0.9178779875342855,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "galnac-20",
+      "sequence": "[NAG37]rAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeU[L96]",
+      "n": 22,
+      "atoms": 661,
+      "bonds": 718,
+      "routes": 6,
+      "ms": 111.0640999999996,
+      "pass": true,
+      "minimum_nonbonded": 0.9178779875342861,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "galnac-21",
+      "sequence": "[NAG37]rAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrA[L96]",
+      "n": 23,
+      "atoms": 683,
+      "bonds": 743,
+      "routes": 6,
+      "ms": 116.56880000000092,
+      "pass": true,
+      "minimum_nonbonded": 0.9178779875342861,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "galnac-60",
+      "sequence": "[NAG37]rAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeU[L96]",
+      "n": 62,
+      "atoms": 1561,
+      "bonds": 1718,
+      "routes": 10,
+      "ms": 398.16270000000077,
+      "pass": true,
+      "minimum_nonbonded": 0.9178779875342911,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "galnac-100",
+      "sequence": "[NAG37]rAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeU[L96]",
+      "n": 102,
+      "atoms": 2461,
+      "bonds": 2718,
+      "routes": 14,
+      "ms": 850.3961000000018,
+      "pass": true,
+      "minimum_nonbonded": 0.9178779875342025,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "galnac-150",
+      "sequence": "[NAG37]rAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmC[L96]",
+      "n": 152,
+      "atoms": 3584,
+      "bonds": 3966,
+      "routes": 19,
+      "ms": 1699.2661000000007,
+      "pass": true,
+      "minimum_nonbonded": 0.9178779875341992,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "galnac-200",
+      "sequence": "[NAG37]rAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeUrAmCfGeU[L96]",
+      "n": 202,
+      "atoms": 4711,
+      "bonds": 5218,
+      "routes": 24,
+      "ms": 2855.027900000001,
+      "pass": true,
+      "minimum_nonbonded": 0.9178779875342911,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "fam",
+      "sequence": "[FAM]rArCrGrUrArCrGrUrArCrGrU",
+      "n": 13,
+      "atoms": 290,
+      "bonds": 324,
+      "routes": 3,
+      "ms": 11.086300000002666,
+      "pass": true,
+      "minimum_nonbonded": 0.6717389356150204,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "galnac",
+      "sequence": "[NAG37]rArCrGrU[L96]",
+      "n": 6,
+      "atoms": 296,
+      "bonds": 313,
+      "routes": 4,
+      "ms": 44.77980000000025,
+      "pass": true,
+      "minimum_nonbonded": 0.9178779875342865,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-0",
+      "sequence": "UNA-C#mC*UNA-C*dG^Ihd*fCMe^dA#ENA-CMe*+C*mC#Ihd^+C*rCMe#eI*eU#ENA-A^ENA-A#fCMe#FANA-CMe^ENA-A#eI",
+      "n": 21,
+      "atoms": 527,
+      "bonds": 581,
+      "routes": 2,
+      "ms": 32.24489999999787,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813935,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-1",
+      "sequence": "nI!UNA-T!nI**[PEG4]FANA-C**FANA-C**fA**Ggn**rCmG**UNA-CMeeT!ENA-IfI!rCfI!+CMe[spacer3]Uda!ENA-U!rU",
+      "n": 21,
+      "atoms": 510,
+      "bonds": 562,
+      "routes": 2,
+      "ms": 29.506499999999505,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813932,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-2",
+      "sequence": "Tgn#eC#UNA-C*eC*rG#nCMe#ENA-A#FANA-G^eU#Ada*+I*fT*rCMe*FANA-G*+U#Ihd#[PEG5]#fCMe#FANA-T#nG^mI",
+      "n": 21,
+      "atoms": 549,
+      "bonds": 598,
+      "routes": 2,
+      "ms": 33.59410000000207,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813935,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-3",
+      "sequence": "fG**[spacer3]!Ggn!+CMemAFANA-U**rUmT**FANA-UUda!UNA-A+TrUfI!mCMerT**FANA-I**CdadIGhd!eA",
+      "n": 21,
+      "atoms": 530,
+      "bonds": 583,
+      "routes": 2,
+      "ms": 32.762299999998504,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813957,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-4",
+      "sequence": "dCMe^dA*Tda*eI^Gda*fC^FANA-A*+U^rI#Ada^Chd*Chd#[PEG3]*dG*Cgn#eI*CMeda*rA*dCMe*+C^Gda",
+      "n": 21,
+      "atoms": 593,
+      "bonds": 643,
+      "routes": 2,
+      "ms": 37.73530000000028,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813968,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-5",
+      "sequence": "ENA-UZIda!nI!mAdIrT[PEG6]rUENA-C!AhdeG!rU**[PEG4]**rC!eCMe**mCMe**+CMe**UNA-A**fA!eCMe",
+      "n": 21,
+      "atoms": 542,
+      "bonds": 595,
+      "routes": 2,
+      "ms": 34.0428000000029,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813932,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-6",
+      "sequence": "rI*Tgn^mI^fT*fC^CMeda*+U^mI^Tgn#ENA-CMe*fCMe#eU#+C#Chd*mU*UNA-C#ENA-A#Ihd^CMeda^Uhd#Uhd",
+      "n": 21,
+      "atoms": 575,
+      "bonds": 622,
+      "routes": 2,
+      "ms": 38.625599999999395,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813932,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-7",
+      "sequence": "ENA-U!dC!nUGgnThd**+A!eAZ**ENA-U**ENA-U**dTFANA-C**[PEG6]eG!CMehd**eT!Ida!mT!CMehd**Uda**UNA-G",
+      "n": 21,
+      "atoms": 602,
+      "bonds": 656,
+      "routes": 2,
+      "ms": 41.72990000000209,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813957,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-8",
+      "sequence": "FANA-G^Cgn*FANA-A^nG^eI*UNA-U#rG#FANA-CMe*fCMe*[PEG5]*fC^dCMe#nT^fU^UNA-I*ENA-T^Chd*ENA-A^nG*eC*[PEG3]",
+      "n": 21,
+      "atoms": 484,
+      "bonds": 528,
+      "routes": 2,
+      "ms": 27.741299999997864,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813968,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-9",
+      "sequence": "[PEG4]**mA![PEG6]**fI!+GCMehd!+CMe**Ggn**+G**mT**UNA-A[PEG6]!CdaAhdnI**Agn**nUGgn!nU!ENA-IENA-I",
+      "n": 21,
+      "atoms": 556,
+      "bonds": 610,
+      "routes": 2,
+      "ms": 37.676900000002206,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813978,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-10",
+      "sequence": "mC#nT*fC*eC#Chd*UNA-U*UNA-C*dA#ENA-T#Cgn^dA*UNA-U^Uhd*fCMe#Ihd^mC#mU*UNA-I*ENA-G#Chd^mC",
+      "n": 21,
+      "atoms": 534,
+      "bonds": 577,
+      "routes": 2,
+      "ms": 31.76090000000113,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813912,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-11",
+      "sequence": "+A+GfI!UNA-CMe!rT**rT!fA!+T**UNA-T!UNA-G!nI!eA**UNA-T**fGUNA-G![spacer3]**rUGgn![PEG6]**[PEG4]Z",
+      "n": 21,
+      "atoms": 507,
+      "bonds": 558,
+      "routes": 2,
+      "ms": 32.676400000000285,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813912,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-12",
+      "sequence": "[PEG3]#UNA-U^Gda#[PEG5]#ENA-CMe#ENA-G#+C#eI^dCMe^UNA-U^UNA-U#rA^fU^dCMe*ENA-CMe*dCMe*fT^CMeda#fCMe^FANA-A#nA",
+      "n": 21,
+      "atoms": 524,
+      "bonds": 568,
+      "routes": 2,
+      "ms": 31.382900000000518,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813957,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-13",
+      "sequence": "mGCda**rU**[PEG4]!fInU**Ggn**dIdT**Cda**Agn!dT!ENA-IZfI**eCMe!CMehdrU!nU!rU**Ida",
+      "n": 21,
+      "atoms": 567,
+      "bonds": 619,
+      "routes": 2,
+      "ms": 39.85329999999885,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813957,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-14",
+      "sequence": "[PEG5]^Tda*fU^rI*Tda#fCMe#CMeda*rI^FANA-G#ENA-T^fCMe#fT#Uhd*UNA-I^fU#ENA-T#nA#FANA-CMe*mC#+C*rA",
+      "n": 21,
+      "atoms": 567,
+      "bonds": 614,
+      "routes": 2,
+      "ms": 36.13169999999809,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813932,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-15",
+      "sequence": "UNA-G!UNA-G**ENA-IZ**[PEG6]**AhdUNA-AdI**ENA-UUNA-G!UNA-CMe!FANA-CCda![PEG6]Ghd**rU**fI**mG**dT**mCMe**ENA-C",
+      "n": 21,
+      "atoms": 539,
+      "bonds": 588,
+      "routes": 2,
+      "ms": 33.383700000002136,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813932,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-16",
+      "sequence": "+C*Tgn#[PEG5]#UNA-I#UNA-I^Chd*mC*[PEG7]#dG#[PEG3]^dG^Uhd*Tgn*UNA-C*rG^UNA-I*dCMe*fC*Chd*rCMe#fC",
+      "n": 21,
+      "atoms": 496,
+      "bonds": 532,
+      "routes": 2,
+      "ms": 26.364000000001397,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813928,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-17",
+      "sequence": "[PEG6]**ENA-U!mA!UNA-T![PEG6]!Ahd!fG**+A**Z**UNA-CMe!dC**ENA-U**UNA-GUNA-G**ENA-I**AhdnU**[PEG4]**CMehd**UNA-A!+CMe",
+      "n": 21,
+      "atoms": 554,
+      "bonds": 605,
+      "routes": 2,
+      "ms": 35.55939999999828,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813827,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-18",
+      "sequence": "UNA-I^fT*FANA-G^FANA-T*[PEG5]#fCMe*mC^FANA-T#+I*+I#nG*FANA-CMe^nCMe*UNA-I^FANA-A#FANA-T#mU*ENA-CMe*+I^+U^fCMe",
+      "n": 21,
+      "atoms": 481,
+      "bonds": 531,
+      "routes": 2,
+      "ms": 29.35190000000148,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813965,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-19",
+      "sequence": "mG!Thd+CMeCda**Agn**UNA-GFANA-U!mA!+AmTUNA-TENA-U**UNA-AFANA-ImG!dI!dCFANA-C!UNA-T!dT!eA",
+      "n": 21,
+      "atoms": 545,
+      "bonds": 602,
+      "routes": 2,
+      "ms": 33.541300000000774,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813932,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-20",
+      "sequence": "FANA-A^eU*Tda*mI#dG*+C^rCMe^Chd^nA*Ihd*Chd#fU*+C*UNA-C^mC^+I^Ihd#dG^Cgn*ENA-T#FANA-T",
+      "n": 21,
+      "atoms": 551,
+      "bonds": 602,
+      "routes": 2,
+      "ms": 33.330799999999726,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813932,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-21",
+      "sequence": "nC**rC**mG**UNA-T**ENA-I!Ida**rC!CMehd!Thd+T!dTnI!ENA-U**UNA-CMeENA-U![PEG4]eT+A!Thd!nI+A",
+      "n": 21,
+      "atoms": 590,
+      "bonds": 648,
+      "routes": 2,
+      "ms": 37.33490000000165,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813912,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-22",
+      "sequence": "ENA-CMe#rA*ENA-T#UNA-C*mI#fU^dA#ENA-G*+I*Cgn^Tgn#Ihd^[PEG5]^[PEG7]^eC#[PEG3]*Ihd^ENA-CMe^Ihd^+C#+C",
+      "n": 21,
+      "atoms": 518,
+      "bonds": 565,
+      "routes": 2,
+      "ms": 28.48910000000251,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813922,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-23",
+      "sequence": "UNA-CMe+T!fI!mG+GeA!eTCMehd**dC**[spacer3]![PEG4]**ENA-InI!+AZ**dC!Z**mT!ENA-U!Cda!mA",
+      "n": 21,
+      "atoms": 550,
+      "bonds": 608,
+      "routes": 2,
+      "ms": 33.46220000000176,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813978,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-24",
+      "sequence": "ENA-T*ENA-G^Cgn#fU*mU^Cgn^dA*fT#+C#eU*eI*Ihd^UNA-C^rCMe#FANA-CMe#FANA-T*Ada*UNA-C^rCMe#dA*Chd",
+      "n": 21,
+      "atoms": 518,
+      "bonds": 564,
+      "routes": 2,
+      "ms": 28.27690000000075,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813912,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-25",
+      "sequence": "FANA-I!fAfG!CMehd**CMehdUNA-CMe!UNA-G+G**rT**eGeT!mA!mG!mG**FANA-I!rUfIENA-CUda**[PEG6]!nU",
+      "n": 21,
+      "atoms": 581,
+      "bonds": 639,
+      "routes": 2,
+      "ms": 37.2374000000018,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813932,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-26",
+      "sequence": "FANA-A#Ihd#mC#Ihd^ENA-CMe#mU*[PEG5]^UNA-I*UNA-C#fT^rG#fT#FANA-T#Ihd#fC#nA#ENA-A^Gda#rA#UNA-U#FANA-CMe",
+      "n": 21,
+      "atoms": 580,
+      "bonds": 628,
+      "routes": 2,
+      "ms": 35.036199999998644,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813932,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-27",
+      "sequence": "+G!fA**+ACdafI**UNA-T**UNA-GGgnGgnAhd**mG!Cda**mT**nU**AgndT**rU**fI+TUNA-T**fG",
+      "n": 21,
+      "atoms": 523,
+      "bonds": 575,
+      "routes": 2,
+      "ms": 30.15990000000238,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813773,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-28",
+      "sequence": "FANA-CMe*fU*Gda^mU^+C*dCMe^+I#Uhd^UNA-U^UNA-I^nG^FANA-G#FANA-G*Chd*Ihd*eC^Uhd#UNA-I*rA#[PEG3]#fCMe",
+      "n": 21,
+      "atoms": 552,
+      "bonds": 599,
+      "routes": 2,
+      "ms": 33.435199999999895,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813932,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    },
+    {
+      "id": "random-29",
+      "sequence": "AgnmG**Ghd!nCIda**fI**ENA-UZ![spacer3]+CMe**mA**nI**Thd!eT!rU!+CMe!UNA-TUNA-T**GgneCMe**fI",
+      "n": 21,
+      "atoms": 547,
+      "bonds": 600,
+      "routes": 2,
+      "ms": 31.76640000000043,
+      "pass": true,
+      "minimum_nonbonded": 0.7038081256813773,
+      "counts": {
+        "atom_overlaps": 0,
+        "atom_bond_overlaps": 0,
+        "label_overlaps": 0,
+        "label_bond_overlaps": 0,
+        "bond_crossings": 0,
+        "long_bonds": 0,
+        "connector_collisions": 0,
+        "column_top_errors": 0
+      }
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,88 @@
+{
+  "version": "0.4.1",
+  "passed": 10,
+  "total": 10,
+  "method": "Original wedge-derived isomeric SMILES equals new coordinate/wedge-derived isomeric SMILES; no tautomer or identity change",
+  "checks": [
+    {
+      "template": "{FAM}",
+      "before_isomeric_smiles": "O=C(NCCCCCCO)c1ccc2c(c1)C1(OC2=O)c2ccc(O)cc2Oc2cc(O)ccc21",
+      "after_isomeric_smiles": "O=C(NCCCCCCO)c1ccc2c(c1)C1(OC2=O)c2ccc(O)cc2Oc2cc(O)ccc21",
+      "atoms": 35,
+      "bonds": 39,
+      "pass": true
+    },
+    {
+      "template": "{L96}",
+      "before_isomeric_smiles": "CC(=O)N[C@H]1[C@H](OCCCCC(=O)NCCCNC(=O)CCOCC(COCCC(=O)NCCCNC(=O)CCCCO[C@@H]2O[C@H](CO)[C@H](O)[C@H](O)[C@H]2NC(C)=O)(COCCC(=O)NCCCNC(=O)CCCCO[C@@H]2O[C@H](CO)[C@H](O)[C@H](O)[C@H]2NC(C)=O)NC(=O)CCCCCCCCCCC(=O)N2C[C@H](O)C[C@H]2CO)O[C@H](CO)[C@H](O)[C@@H]1O",
+      "after_isomeric_smiles": "CC(=O)N[C@H]1[C@H](OCCCCC(=O)NCCCNC(=O)CCOCC(COCCC(=O)NCCCNC(=O)CCCCO[C@@H]2O[C@H](CO)[C@H](O)[C@H](O)[C@H]2NC(C)=O)(COCCC(=O)NCCCNC(=O)CCCCO[C@@H]2O[C@H](CO)[C@H](O)[C@H](O)[C@H]2NC(C)=O)NC(=O)CCCCCCCCCCC(=O)N2C[C@H](O)C[C@H]2CO)O[C@H](CO)[C@H](O)[C@@H]1O",
+      "atoms": 120,
+      "bonds": 123,
+      "pass": true
+    },
+    {
+      "template": "{NAG37}",
+      "before_isomeric_smiles": "CC(=O)N[C@H]1[C@H](OCCOCCNC(=O)CC[C@H](NC(=O)CC[C@H](NC(=O)[C@H]2CC[C@@H](O)CC2)C(=O)NCCOCCO[C@@H]2O[C@H](CO)[C@H](O)[C@H](O)[C@H]2NC(C)=O)C(=O)NCCOCCO[C@@H]2O[C@H](CO)[C@H](O)[C@H](O)[C@H]2NC(C)=O)O[C@H](CO)[C@H](O)[C@@H]1O",
+      "after_isomeric_smiles": "CC(=O)N[C@H]1[C@H](OCCOCCNC(=O)CC[C@H](NC(=O)CC[C@H](NC(=O)[C@H]2CC[C@@H](O)CC2)C(=O)NCCOCCO[C@@H]2O[C@H](CO)[C@H](O)[C@H](O)[C@H]2NC(C)=O)C(=O)NCCOCCO[C@@H]2O[C@H](CO)[C@H](O)[C@H](O)[C@H]2NC(C)=O)O[C@H](CO)[C@H](O)[C@@H]1O",
+      "atoms": 88,
+      "bonds": 91,
+      "pass": true
+    },
+    {
+      "template": "+A",
+      "before_isomeric_smiles": "Nc1ncnc2c1ncn2[C@@H]1O[C@@]2(CO)CO[C@@H]1[C@@H]2O",
+      "after_isomeric_smiles": "Nc1ncnc2c1ncn2[C@@H]1O[C@@]2(CO)CO[C@@H]1[C@@H]2O",
+      "atoms": 20,
+      "bonds": 23,
+      "pass": true
+    },
+    {
+      "template": "+C",
+      "before_isomeric_smiles": "Nc1ccn([C@@H]2O[C@@]3(CO)CO[C@@H]2[C@@H]3O)c(=O)n1",
+      "after_isomeric_smiles": "Nc1ccn([C@@H]2O[C@@]3(CO)CO[C@@H]2[C@@H]3O)c(=O)n1",
+      "atoms": 18,
+      "bonds": 20,
+      "pass": true
+    },
+    {
+      "template": "+G",
+      "before_isomeric_smiles": "Nc1nc2c(ncn2[C@@H]2O[C@@]3(CO)CO[C@@H]2[C@@H]3O)c(=O)[nH]1",
+      "after_isomeric_smiles": "Nc1nc2c(ncn2[C@@H]2O[C@@]3(CO)CO[C@@H]2[C@@H]3O)c(=O)[nH]1",
+      "atoms": 21,
+      "bonds": 24,
+      "pass": true
+    },
+    {
+      "template": "+U",
+      "before_isomeric_smiles": "O=c1ccn([C@@H]2O[C@@]3(CO)CO[C@@H]2[C@@H]3O)c(=O)[nH]1",
+      "after_isomeric_smiles": "O=c1ccn([C@@H]2O[C@@]3(CO)CO[C@@H]2[C@@H]3O)c(=O)[nH]1",
+      "atoms": 18,
+      "bonds": 20,
+      "pass": true
+    },
+    {
+      "template": "+T",
+      "before_isomeric_smiles": "Cc1cn([C@@H]2O[C@@]3(CO)CO[C@@H]2[C@@H]3O)c(=O)[nH]c1=O",
+      "after_isomeric_smiles": "Cc1cn([C@@H]2O[C@@]3(CO)CO[C@@H]2[C@@H]3O)c(=O)[nH]c1=O",
+      "atoms": 19,
+      "bonds": 21,
+      "pass": true
+    },
+    {
+      "template": "+I",
+      "before_isomeric_smiles": "O=c1[nH]cnc2c1ncn2[C@@H]1O[C@@]2(CO)CO[C@@H]1[C@@H]2O",
+      "after_isomeric_smiles": "O=c1[nH]cnc2c1ncn2[C@@H]1O[C@@]2(CO)CO[C@@H]1[C@@H]2O",
+      "atoms": 20,
+      "bonds": 23,
+      "pass": true
+    },
+    {
+      "template": "+CMe",
+      "before_isomeric_smiles": "Cc1cn([C@@H]2O[C@@]3(CO)CO[C@@H]2[C@@H]3O)c(=O)nc1N",
+      "after_isomeric_smiles": "Cc1cn([C@@H]2O[C@@]3(CO)CO[C@@H]2[C@@H]3O)c(=O)nc1N",
+      "atoms": 19,
+      "bonds": 21,
+      "pass": true
+    }
+  ]
+}

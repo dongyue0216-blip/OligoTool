@@ -1,0 +1,94 @@
+{
+  "baseline_templates_preserved": 117,
+  "baseline_link_templates_preserved": 7,
+  "changes": [
+    {
+      "file": "app.js",
+      "change": "MODIFIED"
+    },
+    {
+      "file": "BASELINE_PROVENANCE.json",
+      "change": "ADDED"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "change": "MODIFIED"
+    },
+    {
+      "file": "chemistry-coverage.json",
+      "change": "MODIFIED"
+    },
+    {
+      "file": "chemistry.js",
+      "change": "MODIFIED"
+    },
+    {
+      "file": "CHEMISTRY_COVERAGE.md",
+      "change": "MODIFIED"
+    },
+    {
+      "file": "conjugation-pool.js",
+      "change": "ADDED"
+    },
+    {
+      "file": "conjugation-pool.json",
+      "change": "ADDED"
+    },
+    {
+      "file": "coverage-data.js",
+      "change": "MODIFIED"
+    },
+    {
+      "file": "master-library.v1.json",
+      "change": "MODIFIED"
+    },
+    {
+      "file": "phase1-tests.js",
+      "change": "ADDED"
+    },
+    {
+      "file": "PHASE1_TEST_EVIDENCE.json",
+      "change": "ADDED"
+    },
+    {
+      "file": "README.md",
+      "change": "MODIFIED"
+    },
+    {
+      "file": "reference-data.js",
+      "change": "MODIFIED"
+    },
+    {
+      "file": "regression-tests.js",
+      "change": "MODIFIED"
+    },
+    {
+      "file": "requirement-matrix.js",
+      "change": "ADDED"
+    },
+    {
+      "file": "SEQUENCE_REQUIREMENT_MATRIX.md",
+      "change": "ADDED"
+    },
+    {
+      "file": "Start.html",
+      "change": "MODIFIED"
+    },
+    {
+      "file": "UPGRADE_TEST_EVIDENCE.json",
+      "change": "ADDED"
+    },
+    {
+      "file": "VALIDATION_REPORT.md",
+      "change": "MODIFIED"
+    },
+    {
+      "file": "verify-release.cjs",
+      "change": "ADDED"
+    },
+    {
+      "file": "VISUAL_QA_v042.json",
+      "change": "ADDED"
+    }
+  ]
+}

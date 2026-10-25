@@ -1,0 +1,1149 @@
+{
+  "tool": "RDKit 2026.09.1",
+  "passed": 163,
+  "total": 163,
+  "checks": [
+    {
+      "id": "rna-9",
+      "formula": "C86H107N35O60P8",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 36
+    },
+    {
+      "id": "mixed-9",
+      "formula": "C102H136N40O54P8S5F2",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 33
+    },
+    {
+      "id": "rna-10",
+      "formula": "C95H119N38O67P9",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 40
+    },
+    {
+      "id": "mixed-10",
+      "formula": "C114H150N45O59P9S7F2",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 37
+    },
+    {
+      "id": "rna-11",
+      "formula": "C105H131N43O74P10",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 44
+    },
+    {
+      "id": "mixed-11",
+      "formula": "C125H164N50O64P10S7F2",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 41
+    },
+    {
+      "id": "rna-19",
+      "formula": "C181H225N73O130P18",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 76
+    },
+    {
+      "id": "mixed-19",
+      "formula": "C223H299N89O115P18S12F4",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 70
+    },
+    {
+      "id": "rna-20",
+      "formula": "C190H236N75O138P19",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 80
+    },
+    {
+      "id": "mixed-20",
+      "formula": "C235H313N94O122P19S12F4",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 74
+    },
+    {
+      "id": "rna-21",
+      "formula": "C200H248N80O144P20",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 84
+    },
+    {
+      "id": "mixed-21",
+      "formula": "C245H325N99O127P20S13F4",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 78
+    },
+    {
+      "id": "rna-30",
+      "formula": "C285H354N113O207P29",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 120
+    },
+    {
+      "id": "mixed-30",
+      "formula": "C355H473N142O181P29S19F6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 111
+    },
+    {
+      "id": "rna-60",
+      "formula": "C570H706N225O418P59",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 240
+    },
+    {
+      "id": "mixed-60",
+      "formula": "C711H948N285O365P59S39F12",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 222
+    },
+    {
+      "id": "rna-100",
+      "formula": "C950H1176N375O698P99",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 400
+    },
+    {
+      "id": "mixed-100",
+      "formula": "C1182H1575N474O611P99S67F20",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 370
+    },
+    {
+      "id": "rna-150",
+      "formula": "C1425H1764N563O1047P149",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 600
+    },
+    {
+      "id": "mixed-150",
+      "formula": "C1779H2373N714O917P149S99F30",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 555
+    },
+    {
+      "id": "rna-200",
+      "formula": "C1900H2351N750O1398P199",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 800
+    },
+    {
+      "id": "mixed-200",
+      "formula": "C2371H3163N952O1226P199S132F40",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 740
+    },
+    {
+      "id": "rna-300",
+      "formula": "C2850H3526N1125O2098P299",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 1200
+    },
+    {
+      "id": "mixed-300",
+      "formula": "C3559H4748N1429O1837P299S199F60",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 1110
+    },
+    {
+      "id": "bridge",
+      "formula": "C68H80N25O39P5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 24
+    },
+    {
+      "id": "sidechain",
+      "formula": "C228H399N30O54P7",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 32
+    },
+    {
+      "id": "spacers",
+      "formula": "C132H224N30O96P14",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 28
+    },
+    {
+      "id": "vp",
+      "formula": "C44H59N15O26P4S3",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 16
+    },
+    {
+      "id": "vpmoe",
+      "formula": "C24H32N10O14P2",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 8
+    },
+    {
+      "id": "gna",
+      "formula": "C186H247N90O118P23",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 24
+    },
+    {
+      "id": "tna",
+      "formula": "C216H259N90O142P23",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 72
+    },
+    {
+      "id": "pmo",
+      "formula": "C280H434N137O95P23",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 48
+    },
+    {
+      "id": "benner",
+      "formula": "C79H98N27O54P7",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 24
+    },
+    {
+      "id": "terminal",
+      "formula": "C19H30N8O26P6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 8
+    },
+    {
+      "id": "unit-dA-34",
+      "formula": "C10H13N5O3",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 3
+    },
+    {
+      "id": "unit-dC-35",
+      "formula": "C9H13N3O4",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 3
+    },
+    {
+      "id": "unit-dG-36",
+      "formula": "C10H13N5O4",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 3
+    },
+    {
+      "id": "unit-dT-37",
+      "formula": "C10H14N2O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 3
+    },
+    {
+      "id": "unit-rA-38",
+      "formula": "C10H13N5O4",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-rC-39",
+      "formula": "C9H13N3O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-rG-40",
+      "formula": "C10H13N5O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-rU-41",
+      "formula": "C9H12N2O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-rI-42",
+      "formula": "C10H12N4O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-fA-43",
+      "formula": "C10H12N5O3F",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-fC-44",
+      "formula": "C9H12N3O4F",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-fG-45",
+      "formula": "C10H12N5O4F",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-fU-46",
+      "formula": "C9H11N2O5F",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-mA-47",
+      "formula": "C11H15N5O4",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-mC-48",
+      "formula": "C10H15N3O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-mG-49",
+      "formula": "C11H15N5O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-mU-50",
+      "formula": "C10H14N2O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-eA-51",
+      "formula": "C13H19N5O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-eC-52",
+      "formula": "C12H19N3O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-eG-53",
+      "formula": "C13H19N5O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-eU-54",
+      "formula": "C12H18N2O7",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-dI-55",
+      "formula": "C10H12N4O4",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 3
+    },
+    {
+      "id": "unit-dCMe-56",
+      "formula": "C10H15N3O4",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 3
+    },
+    {
+      "id": "unit-rT-57",
+      "formula": "C10H14N2O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-rCMe-58",
+      "formula": "C10H15N3O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-mT-59",
+      "formula": "C11H16N2O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-mI-60",
+      "formula": "C11H14N4O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-mCMe-61",
+      "formula": "C11H17N3O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-fT-62",
+      "formula": "C10H13N2O5F",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-fI-63",
+      "formula": "C10H11N4O4F",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-fCMe-64",
+      "formula": "C10H14N3O4F",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-eT-65",
+      "formula": "C13H20N2O7",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-eI-66",
+      "formula": "C13H18N4O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-eCMe-67",
+      "formula": "C13H21N3O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-FANAxA-68",
+      "formula": "C10H12N5O3F",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-UNAxA-69",
+      "formula": "C10H15N5O4",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 1
+    },
+    {
+      "id": "unit-nA-70",
+      "formula": "C13H18N6O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-Ahd-71",
+      "formula": "C26H45N5O4",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-Ada-72",
+      "formula": "C32H57N5O4",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-xA-73",
+      "formula": "C11H13N5O4",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-ENAxA-74",
+      "formula": "C12H15N5O4",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-FANAxC-75",
+      "formula": "C9H12N3O4F",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-UNAxC-76",
+      "formula": "C9H15N3O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 1
+    },
+    {
+      "id": "unit-nC-77",
+      "formula": "C12H18N4O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-Chd-78",
+      "formula": "C25H45N3O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-Cda-79",
+      "formula": "C31H57N3O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-xC-80",
+      "formula": "C10H13N3O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-ENAxC-81",
+      "formula": "C11H15N3O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-FANAxG-82",
+      "formula": "C10H12N5O4F",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-UNAxG-83",
+      "formula": "C10H15N5O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 1
+    },
+    {
+      "id": "unit-nG-84",
+      "formula": "C13H18N6O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-Ghd-85",
+      "formula": "C26H45N5O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-Gda-86",
+      "formula": "C32H57N5O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-xG-87",
+      "formula": "C11H13N5O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-ENAxG-88",
+      "formula": "C12H15N5O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-FANAxU-89",
+      "formula": "C9H11N2O5F",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-UNAxU-90",
+      "formula": "C9H14N2O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 1
+    },
+    {
+      "id": "unit-nU-91",
+      "formula": "C12H17N3O7",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-Uhd-92",
+      "formula": "C25H44N2O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-Uda-93",
+      "formula": "C31H56N2O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-xU-94",
+      "formula": "C10H12N2O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-ENAxU-95",
+      "formula": "C11H14N2O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-FANAxT-96",
+      "formula": "C10H13N2O5F",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-UNAxT-97",
+      "formula": "C10H16N2O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 1
+    },
+    {
+      "id": "unit-nT-98",
+      "formula": "C13H19N3O7",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-Thd-99",
+      "formula": "C26H46N2O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-Tda-100",
+      "formula": "C32H58N2O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-xT-101",
+      "formula": "C11H14N2O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-ENAxT-102",
+      "formula": "C12H16N2O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-FANAxI-103",
+      "formula": "C10H11N4O4F",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-UNAxI-104",
+      "formula": "C10H14N4O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 1
+    },
+    {
+      "id": "unit-nI-105",
+      "formula": "C13H17N5O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-Ihd-106",
+      "formula": "C26H44N4O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-Ida-107",
+      "formula": "C32H56N4O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-xI-108",
+      "formula": "C11H12N4O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-ENAxI-109",
+      "formula": "C12H14N4O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-FANAxCMe-110",
+      "formula": "C10H14N3O4F",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-UNAxCMe-111",
+      "formula": "C10H17N3O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 1
+    },
+    {
+      "id": "unit-nCMe-112",
+      "formula": "C13H20N4O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-CMehd-113",
+      "formula": "C26H47N3O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-CMeda-114",
+      "formula": "C32H59N3O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-xCMe-115",
+      "formula": "C11H15N3O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-ENAxCMe-116",
+      "formula": "C12H17N3O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-Agn-117",
+      "formula": "C8H11N5O2",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 1
+    },
+    {
+      "id": "unit-Cgn-118",
+      "formula": "C7H11N3O3",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 1
+    },
+    {
+      "id": "unit-Ggn-119",
+      "formula": "C8H11N5O3",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 1
+    },
+    {
+      "id": "unit-Tgn-120",
+      "formula": "C8H12N2O4",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 1
+    },
+    {
+      "id": "unit-VpmA-121",
+      "formula": "C22H28N10O12P2",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 8
+    },
+    {
+      "id": "unit-VpmC-122",
+      "formula": "C21H28N8O13P2",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 8
+    },
+    {
+      "id": "unit-VpmG-123",
+      "formula": "C22H28N10O13P2",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 8
+    },
+    {
+      "id": "unit-VpmU-124",
+      "formula": "C21H27N7O14P2",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 8
+    },
+    {
+      "id": "unit-VpeA-125",
+      "formula": "C24H32N10O13P2",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 8
+    },
+    {
+      "id": "unit-VpeC-126",
+      "formula": "C23H32N8O14P2",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 8
+    },
+    {
+      "id": "unit-VpeG-127",
+      "formula": "C24H32N10O14P2",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 8
+    },
+    {
+      "id": "unit-VpeU-128",
+      "formula": "C23H31N7O15P2",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 8
+    },
+    {
+      "id": "unit-pA-129",
+      "formula": "C10H14N6O2",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 2
+    },
+    {
+      "id": "unit-pC-130",
+      "formula": "C9H14N4O3",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 2
+    },
+    {
+      "id": "unit-pG-131",
+      "formula": "C10H14N6O3",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 2
+    },
+    {
+      "id": "unit-pT-132",
+      "formula": "C10H15N3O4",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 2
+    },
+    {
+      "id": "unit-pI-133",
+      "formula": "C10H13N5O3",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 2
+    },
+    {
+      "id": "unit-tA-134",
+      "formula": "C9H11N5O3",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 3
+    },
+    {
+      "id": "unit-tC-135",
+      "formula": "C8H11N3O4",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 3
+    },
+    {
+      "id": "unit-tG-136",
+      "formula": "C9H11N5O4",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 3
+    },
+    {
+      "id": "unit-tT-137",
+      "formula": "C9H12N2O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 3
+    },
+    {
+      "id": "unit-tCMe-138",
+      "formula": "C9H13N3O4",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 3
+    },
+    {
+      "id": "unit-Z-139",
+      "formula": "C10H13N3O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 3
+    },
+    {
+      "id": "unit-xPEG3x-140",
+      "formula": "C6H14O4",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 0
+    },
+    {
+      "id": "unit-xPEG4x-141",
+      "formula": "C8H18O5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 0
+    },
+    {
+      "id": "unit-xPEG5x-142",
+      "formula": "C10H22O6",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 0
+    },
+    {
+      "id": "unit-xPEG6x-143",
+      "formula": "C12H26O7",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 0
+    },
+    {
+      "id": "unit-xPEG7x-144",
+      "formula": "C14H30O8",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 0
+    },
+    {
+      "id": "unit-xspacer3x-145",
+      "formula": "C3H8O2",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 0
+    },
+    {
+      "id": "unit-xC3Nx-146",
+      "formula": "C13H21N6O7P",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-xC6Nx-147",
+      "formula": "C16H27N6O7P",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-xFAMx-148",
+      "formula": "C37H37N6O13P",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 4
+    },
+    {
+      "id": "unit-xL96x-149",
+      "formula": "C88H151N16O37P",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 21
+    },
+    {
+      "id": "unit-xNAG37x-150",
+      "formula": "C63H104N13O33P",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 21
+    },
+    {
+      "id": "galnac-9",
+      "formula": "C225H350N54O122P10F2",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 70
+    },
+    {
+      "id": "galnac-10",
+      "formula": "C235H364N57O129P11F2",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 74
+    },
+    {
+      "id": "galnac-11",
+      "formula": "C245H375N62O135P12F3",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 78
+    },
+    {
+      "id": "galnac-19",
+      "formula": "C329H483N92O191P20F5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 110
+    },
+    {
+      "id": "galnac-20",
+      "formula": "C341H500N94O200P21F5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 114
+    },
+    {
+      "id": "galnac-21",
+      "formula": "C351H512N99O206P22F5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 118
+    },
+    {
+      "id": "galnac-60",
+      "formula": "C761H1040N244O480P61F15",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 274
+    },
+    {
+      "id": "galnac-100",
+      "formula": "C1181H1580N394O760P101F25",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 434
+    },
+    {
+      "id": "galnac-150",
+      "formula": "C1705H2254N582O1109P151F37",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 634
+    },
+    {
+      "id": "galnac-200",
+      "formula": "C2231H2930N769O1460P201F50",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 834
+    },
+    {
+      "id": "fam",
+      "formula": "C141H166N46O91P12",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 48
+    },
+    {
+      "id": "galnac",
+      "formula": "C169H277N34O88P5",
+      "pass": true,
+      "errors": [],
+      "stereocentres": 50
+    }
+  ],
+  "scope": "CDXML semantic reconstruction; actual ChemDraw interoperability remains unverified"
+}

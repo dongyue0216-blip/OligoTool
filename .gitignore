@@ -9,3 +9,7 @@ dist/
 *.log
 .env
 .env.*
+
+# Lite generated QA files
+lite/tests/output/
+lite/**/__pycache__/

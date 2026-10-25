@@ -1,5 +1,18 @@
 # Oligo Chemistry Toolkit
 
+## Latest browser edition: Lite v0.5.3
+
+Download the clean ZIP from [Lite v0.5.3](https://github.com/dongyue0216-blip/OligoTool/releases/tag/lite-v0.5.3), extract the whole folder, and double-click **Start.html**. No installation or network required. From a source checkout, open **lite/Start.html**.
+
+Single Sequence, real atom/bond structure rendering, formula/MW/epsilon260/nmol per OD/ug per OD, terminal phosphate/PS notation, Batch Excel and Custom Chemistry are supported. See [Lite README](lite/README.md) for notation, supported chemistry and limitations. Conjugation Pool is metadata infrastructure; no conjugation reaction engine is implemented.
+
+The Lite source contains only the current organized release under `lite/`. Release packaging guards and instructions are included in `lite/tests/release/` and `lite/docs/RELEASE_PACKAGING_CHECKLIST.md`.
+
+---
+
+## Original Python edition (separate v1.0.0 release)
+
+
 Version **1.0.0**. A local, general-purpose oligonucleotide chemistry toolkit.
 
 ## Download and run / 下载与启动

@@ -1,0 +1,66 @@
+{
+  "browser": "Edge file://",
+  "cases": [
+    {
+      "seq": "rA*(p)",
+      "single": "C10H14N5O6PS",
+      "batch": "C10H14N5O6PS"
+    },
+    {
+      "seq": "(p)*rA",
+      "single": "C10H14N5O6PS",
+      "batch": "C10H14N5O6PS"
+    },
+    {
+      "seq": "rA**(p)",
+      "single": "C10H14N5O5PS2",
+      "batch": "C10H14N5O5PS2"
+    },
+    {
+      "seq": "(p)**rA",
+      "single": "C10H14N5O5PS2",
+      "batch": "C10H14N5O5PS2"
+    },
+    {
+      "seq": "rA^(p)",
+      "single": "C11H16N5O6P",
+      "batch": "C11H16N5O6P"
+    },
+    {
+      "seq": "(p)^rA",
+      "single": "C11H16N5O6P",
+      "batch": "C11H16N5O6P"
+    },
+    {
+      "seq": "rA!(p)",
+      "single": "C15H23N8O6P",
+      "batch": "C15H23N8O6P"
+    },
+    {
+      "seq": "(p)!rA",
+      "single": "C15H23N8O6P",
+      "batch": "C15H23N8O6P"
+    },
+    {
+      "seq": "rA#(p)",
+      "single": "C11H17N6O8PS",
+      "batch": "C11H17N6O8PS"
+    },
+    {
+      "seq": "(p)#rA",
+      "single": "C11H17N6O8PS",
+      "batch": "C11H17N6O8PS"
+    },
+    {
+      "seq": "(pp)rArG(ppp)",
+      "single": "C20H30N10O26P6",
+      "batch": "C20H30N10O26P6"
+    },
+    {
+      "seq": "(p)*rArG*(p)",
+      "single": "C20H27N10O15P3S2",
+      "batch": "C20H27N10O15P3S2"
+    }
+  ],
+  "errors": []
+}

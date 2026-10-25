@@ -1,0 +1,56 @@
+[
+  {
+    "name": "FAM",
+    "reagent_formula": "C46H58N3O10P",
+    "final_formula": "C27H25NO7",
+    "changes": [
+      "remove phosphoramidite P, N(iPr)2, O-cyanoethyl; restore scaffold OH; assembled phosphate is generated separately",
+      "remove 2 O-pivaloyl protecting groups; retain 6-FAM carboxamidohexanol"
+    ],
+    "final_smiles": "O=C(NCCCCCCO)C1=CC2=C(C=C1)C(=O)OC21C2=C(C=C(O)C=C2)OC2=C1C=CC(O)=C2",
+    "relative_stereo": null,
+    "source_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/58114954/property/IsomericSMILES,MolecularFormula/JSON",
+    "layout_score": 0
+  },
+  {
+    "name": "L96",
+    "reagent_formula": "C121H179N11O45",
+    "final_formula": "C78H139N11O31",
+    "changes": [
+      "remove DMT; primary prolinol OH is attachment",
+      "remove support succinate half-ester; restore prolinol secondary OH",
+      "remove 9 O-acetyl groups; retain all 3 N-acetylgalactosamine amides"
+    ],
+    "final_smiles": "CC(=O)N[C@H]1[C@H](OCCCCC(=O)NCCCNC(=O)CCOCC(COCCC(=O)NCCCNC(=O)CCCCO[C@@H]2O[C@H](CO)[C@H](O)[C@H](O)[C@H]2NC(C)=O)(COCCC(=O)NCCCNC(=O)CCCCO[C@@H]2O[C@H](CO)[C@H](O)[C@H](O)[C@H]2NC(C)=O)NC(=O)CCCCCCCCCCC(=O)N2C[C@H](O)C[C@H]2CO)O[C@H](CO)[C@H](O)[C@@H]1O",
+    "relative_stereo": null,
+    "source_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/162394059/property/IsomericSMILES,MolecularFormula/JSON",
+    "layout_score": 0
+  },
+  {
+    "name": "NAG37",
+    "reagent_formula": "C80H127N10O37P",
+    "final_formula": "C53H92N8O27",
+    "changes": [
+      "remove phosphoramidite P, N(iPr)2, O-cyanoethyl; restore scaffold OH; assembled phosphate is generated separately",
+      "remove 9 O-acetyl groups; retain all 3 N-acetylgalactosamine amides"
+    ],
+    "final_smiles": "CC(=O)N[C@H]1[C@H](OCCOCCNC(=O)CC[C@H](NC(=O)CC[C@H](NC(=O)[C@H]2CC[C@@H](O)CC2)C(=O)NCCOCCO[C@@H]2O[C@H](CO)[C@H](O)[C@H](O)[C@H]2NC(C)=O)C(=O)NCCOCCO[C@@H]2O[C@H](CO)[C@H](O)[C@H](O)[C@H]2NC(C)=O)O[C@H](CO)[C@H](O)[C@@H]1O",
+    "relative_stereo": {
+      "type": "cis-1,4-cyclohexyl",
+      "bonds": [
+        [
+          1,
+          0
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "source": "https://dcchemicals.com/product_show-DC68012.html",
+      "source_record_limitation": "PubChem 172655010 leaves this ring relative configuration unspecified"
+    },
+    "source_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/172655010/property/IsomericSMILES,MolecularFormula/JSON",
+    "layout_score": 0
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "errors": [],
+  "cases": [
+    {
+      "id": "mixed",
+      "error": "",
+      "svg": 1
+    },
+    {
+      "id": "inv",
+      "error": "",
+      "svg": 1
+    },
+    {
+      "id": "biotin",
+      "error": "STRUCTURE_VARIANT_PENDING: [Biotin]; exact final scaffold / attachment / stereo not available",
+      "svg": 0
+    },
+    {
+      "id": "pool",
+      "error": "CONJUGATION_REAGENT: [SMCC] belongs to Conjugation Pool; sequence assembly is unavailable",
+      "svg": 0
+    },
+    {
+      "id": "phosphate",
+      "error": "",
+      "svg": 1
+    },
+    {
+      "id": "fam",
+      "error": "",
+      "svg": 1
+    }
+  ]
+}

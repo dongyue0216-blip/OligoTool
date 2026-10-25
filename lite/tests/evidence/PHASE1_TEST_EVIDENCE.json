@@ -1,0 +1,506 @@
+{
+  "total": 125,
+  "passed": 125,
+  "checks": [
+    {
+      "name": "requirement dA",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement dC",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement dG",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement dT",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement dCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement dI",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement rA",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement rC",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement rG",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement rU",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement rI",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement +A",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement +C",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement +CMe",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement +G",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement +T",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement mA",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement mC",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement mG",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement mU",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement mT",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement mI",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement fA",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement fC",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement fG",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement fU",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement fCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement fT",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement FANA-A",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement FANA-T",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement FANA-CMe",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement FANA-G",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement eA",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement eCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement eG",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement eT",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement eI",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement pA",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement pT",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement pC",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement pG",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement pB",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement pI",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement nA",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement nT",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement nCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement nG",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement UNA-A",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement UNA-U",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement UNA-C",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement UNA-G",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement Ahd",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement Uhd",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement Chd",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement Ghd",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement Ada",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement Uda",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement Cda",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement Gda",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement Agn",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement Tgn",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement Ugn",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement Cgn",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement Ggn",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement cEt-A",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement cEt-T",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement cEt-CMe",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement cEt-G",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement tA",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement tT",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement tCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement tG",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement Z",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement ENA-A",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement ENA-T",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement ENA-CMe",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement ENA-G",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement VpeA",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement VpeC",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement VpeG",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement VpeU",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement VpmA",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement VpmC",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement VpmG",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement VpmU",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement [C3N]",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement [C6N]",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement [spacer3]",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement [spacer9]",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement [spacer12]",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement [spacer15]",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement [spacer18]",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement [spacer21]",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement [L96]",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement [NAG37]",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement [PHO]",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement [p]",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement [pp]",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement [ppp]",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement [6-FAM]",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement [InvAb]",
+      "status": "PASS"
+    },
+    {
+      "name": "requirement [Biotin]",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl / formula / mass dCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl / formula / mass rCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl / formula / mass mCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl / formula / mass fCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl / formula / mass eCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl / formula / mass FANA-CMe",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl / formula / mass UNA-CMe",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl / formula / mass nCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl / formula / mass CMehd",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl / formula / mass CMeda",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl / formula / mass +CMe",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl / formula / mass ENA-CMe",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl / formula / mass tCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "conjugation scope SMCC",
+      "status": "PASS"
+    },
+    {
+      "name": "conjugation scope MC",
+      "status": "PASS"
+    },
+    {
+      "name": "conjugation scope BCN",
+      "status": "PASS"
+    },
+    {
+      "name": "conjugation scope DBCO",
+      "status": "PASS"
+    },
+    {
+      "name": "conjugation scope SPDP",
+      "status": "PASS"
+    },
+    {
+      "name": "conjugation scope cOct",
+      "status": "PASS"
+    },
+    {
+      "name": "conjugation scope TCO",
+      "status": "PASS"
+    },
+    {
+      "name": "conjugation scope MC-VC-PABC",
+      "status": "PASS"
+    },
+    {
+      "name": "conjugation scope endo-BCN",
+      "status": "PASS"
+    },
+    {
+      "name": "InvAb terminal direction and restriction",
+      "status": "PASS"
+    }
+  ]
+}

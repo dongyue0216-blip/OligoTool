@@ -1,0 +1,2945 @@
+{
+  "version": "0.4.2",
+  "baseline": "Three supplied photographs manually transcribed; no atom graph inferred from sketches",
+  "entries": [
+    {
+      "notation": "dA",
+      "family": "DNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "SUPPORTED",
+        "model": "sequence-specific nearest-neighbor",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "dC",
+      "family": "DNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "SUPPORTED",
+        "model": "sequence-specific nearest-neighbor",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "dG",
+      "family": "DNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "SUPPORTED",
+        "model": "sequence-specific nearest-neighbor",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "dT",
+      "family": "DNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "SUPPORTED",
+        "model": "sequence-specific nearest-neighbor",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "dCMe",
+      "family": "DNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "dI",
+      "family": "DNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "rA",
+      "family": "RNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "SUPPORTED",
+        "model": "sequence-specific nearest-neighbor",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "rC",
+      "family": "RNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "SUPPORTED",
+        "model": "sequence-specific nearest-neighbor",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "rG",
+      "family": "RNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "SUPPORTED",
+        "model": "sequence-specific nearest-neighbor",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "rU",
+      "family": "RNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "SUPPORTED",
+        "model": "sequence-specific nearest-neighbor",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "rI",
+      "family": "RNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "+A",
+      "family": "LNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.glenresearch.com/reports/gr30-23"
+      ]
+    },
+    {
+      "notation": "+CMe",
+      "family": "LNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.glenresearch.com/reports/gr30-23"
+      ]
+    },
+    {
+      "notation": "+G",
+      "family": "LNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.glenresearch.com/reports/gr30-23"
+      ]
+    },
+    {
+      "notation": "+T",
+      "family": "LNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.glenresearch.com/reports/gr30-23"
+      ]
+    },
+    {
+      "notation": "mA",
+      "family": "OMe",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "mC",
+      "family": "OMe",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "mG",
+      "family": "OMe",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "mU",
+      "family": "OMe",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "mT",
+      "family": "OMe",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "mI",
+      "family": "OMe",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "fA",
+      "family": "F",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "fC",
+      "family": "F",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "fG",
+      "family": "F",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "fU",
+      "family": "F",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "fCMe",
+      "family": "F",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "fT",
+      "family": "F",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "FANA-A",
+      "family": "FANA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.glenresearch.com/2-f-ana-phosphoramidites/2-f-ac-c-ana-ce-phosphoramidite10-3815.html"
+      ]
+    },
+    {
+      "notation": "FANA-T",
+      "family": "FANA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.glenresearch.com/2-f-ana-phosphoramidites/2-f-ac-c-ana-ce-phosphoramidite10-3815.html"
+      ]
+    },
+    {
+      "notation": "FANA-CMe",
+      "family": "FANA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.glenresearch.com/2-f-ana-phosphoramidites/2-f-ac-c-ana-ce-phosphoramidite10-3815.html"
+      ]
+    },
+    {
+      "notation": "FANA-G",
+      "family": "FANA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.glenresearch.com/2-f-ana-phosphoramidites/2-f-ac-c-ana-ce-phosphoramidite10-3815.html"
+      ]
+    },
+    {
+      "notation": "eA",
+      "family": "MOE",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "eCMe",
+      "family": "MOE",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "eG",
+      "family": "MOE",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "eT",
+      "family": "MOE",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "eI",
+      "family": "MOE",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "pA",
+      "family": "PMO",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://patents.google.com/patent/EP0506830A1/en"
+      ]
+    },
+    {
+      "notation": "pT",
+      "family": "PMO",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://patents.google.com/patent/EP0506830A1/en"
+      ]
+    },
+    {
+      "notation": "pC",
+      "family": "PMO",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://patents.google.com/patent/EP0506830A1/en"
+      ]
+    },
+    {
+      "notation": "pG",
+      "family": "PMO",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://patents.google.com/patent/EP0506830A1/en"
+      ]
+    },
+    {
+      "notation": "pB",
+      "family": "PMO",
+      "parser": "RECOGNIZED",
+      "graph": "STRUCTURE_VARIANT_PENDING",
+      "formula_mw": "PENDING",
+      "epsilon260": {
+        "status": "UNSUPPORTED",
+        "model": null,
+        "contribution": null,
+        "correction": null,
+        "source": null,
+        "confidence": "unknown"
+      },
+      "layout_export": "PENDING",
+      "overall": "STRUCTURE_VARIANT_PENDING",
+      "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified",
+      "evidence_sources": [
+        "https://patents.google.com/patent/EP0506830A1/en"
+      ]
+    },
+    {
+      "notation": "pI",
+      "family": "PMO",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://patents.google.com/patent/EP0506830A1/en"
+      ]
+    },
+    {
+      "notation": "nA",
+      "family": "NMA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "nT",
+      "family": "NMA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "nCMe",
+      "family": "NMA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "nG",
+      "family": "NMA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "UNA-A",
+      "family": "UNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "UNA-U",
+      "family": "UNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "UNA-C",
+      "family": "UNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "UNA-G",
+      "family": "UNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "Ahd",
+      "family": "C16",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "Uhd",
+      "family": "C16",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "Chd",
+      "family": "C16",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "Ghd",
+      "family": "C16",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "Ada",
+      "family": "C22",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "Uda",
+      "family": "C22",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "Cda",
+      "family": "C22",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "Gda",
+      "family": "C22",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "Agn",
+      "family": "GNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10019370/"
+      ]
+    },
+    {
+      "notation": "Tgn",
+      "family": "GNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10019370/"
+      ]
+    },
+    {
+      "notation": "Ugn",
+      "family": "GNA",
+      "parser": "RECOGNIZED",
+      "graph": "STRUCTURE_VARIANT_PENDING",
+      "formula_mw": "PENDING",
+      "epsilon260": {
+        "status": "UNSUPPORTED",
+        "model": null,
+        "contribution": null,
+        "correction": null,
+        "source": null,
+        "confidence": "unknown"
+      },
+      "layout_export": "PENDING",
+      "overall": "STRUCTURE_VARIANT_PENDING",
+      "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified",
+      "evidence_sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10019370/"
+      ]
+    },
+    {
+      "notation": "Cgn",
+      "family": "GNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10019370/"
+      ]
+    },
+    {
+      "notation": "Ggn",
+      "family": "GNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10019370/"
+      ]
+    },
+    {
+      "notation": "cEt-A",
+      "family": "cEt",
+      "parser": "RECOGNIZED",
+      "graph": "STRUCTURE_VARIANT_PENDING",
+      "formula_mw": "PENDING",
+      "epsilon260": {
+        "status": "UNSUPPORTED",
+        "model": null,
+        "contribution": null,
+        "correction": null,
+        "source": null,
+        "confidence": "unknown"
+      },
+      "layout_export": "PENDING",
+      "overall": "STRUCTURE_VARIANT_PENDING",
+      "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "cEt-T",
+      "family": "cEt",
+      "parser": "RECOGNIZED",
+      "graph": "STRUCTURE_VARIANT_PENDING",
+      "formula_mw": "PENDING",
+      "epsilon260": {
+        "status": "UNSUPPORTED",
+        "model": null,
+        "contribution": null,
+        "correction": null,
+        "source": null,
+        "confidence": "unknown"
+      },
+      "layout_export": "PENDING",
+      "overall": "STRUCTURE_VARIANT_PENDING",
+      "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "cEt-CMe",
+      "family": "cEt",
+      "parser": "RECOGNIZED",
+      "graph": "STRUCTURE_VARIANT_PENDING",
+      "formula_mw": "PENDING",
+      "epsilon260": {
+        "status": "UNSUPPORTED",
+        "model": null,
+        "contribution": null,
+        "correction": null,
+        "source": null,
+        "confidence": "unknown"
+      },
+      "layout_export": "PENDING",
+      "overall": "STRUCTURE_VARIANT_PENDING",
+      "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "cEt-G",
+      "family": "cEt",
+      "parser": "RECOGNIZED",
+      "graph": "STRUCTURE_VARIANT_PENDING",
+      "formula_mw": "PENDING",
+      "epsilon260": {
+        "status": "UNSUPPORTED",
+        "model": null,
+        "contribution": null,
+        "correction": null,
+        "source": null,
+        "confidence": "unknown"
+      },
+      "layout_export": "PENDING",
+      "overall": "STRUCTURE_VARIANT_PENDING",
+      "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "tA",
+      "family": "TNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.rcsb.org/ligand/TFT"
+      ]
+    },
+    {
+      "notation": "tT",
+      "family": "TNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.rcsb.org/ligand/TFT"
+      ]
+    },
+    {
+      "notation": "tCMe",
+      "family": "TNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.rcsb.org/ligand/TFT"
+      ]
+    },
+    {
+      "notation": "tG",
+      "family": "TNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.rcsb.org/ligand/TFT"
+      ]
+    },
+    {
+      "notation": "Z",
+      "family": "Benner",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "ENA-A",
+      "family": "ENA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "ENA-T",
+      "family": "ENA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "ENA-CMe",
+      "family": "ENA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "ENA-G",
+      "family": "ENA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "[L96]",
+      "family": "special",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Public reagent graph, explicit deprotection, independent formula/valence/export verification",
+      "identity_audit": "VALIDATED",
+      "evidence_sources": [
+        "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/162394059/property/IsomericSMILES,MolecularFormula/JSON"
+      ]
+    },
+    {
+      "notation": "[NAG37]",
+      "family": "special",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Public reagent graph, explicit deprotection, independent formula/valence/export verification",
+      "identity_audit": "VALIDATED",
+      "evidence_sources": [
+        "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/172655010/property/IsomericSMILES,MolecularFormula/JSON"
+      ]
+    },
+    {
+      "notation": "[PHO]",
+      "family": "special",
+      "parser": "RECOGNIZED",
+      "graph": "STRUCTURE_VARIANT_PENDING",
+      "formula_mw": "PENDING",
+      "epsilon260": {
+        "status": "UNSUPPORTED",
+        "model": null,
+        "contribution": null,
+        "correction": null,
+        "source": null,
+        "confidence": "unknown"
+      },
+      "layout_export": "PENDING",
+      "overall": "FULL_TERMINAL_ALIAS",
+      "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "[C6N]",
+      "family": "special",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "[C3N]",
+      "family": "special",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "[Biotin]",
+      "family": "special",
+      "parser": "RECOGNIZED",
+      "graph": "STRUCTURE_VARIANT_PENDING",
+      "formula_mw": "PENDING",
+      "epsilon260": {
+        "status": "UNSUPPORTED",
+        "model": null,
+        "contribution": null,
+        "correction": null,
+        "source": null,
+        "confidence": "unknown"
+      },
+      "layout_export": "PENDING",
+      "overall": "STRUCTURE_VARIANT_PENDING",
+      "evidence": "RECOGNIZED_PENDING: biotin attachment linker is unspecified in available baseline; Biotin-TEG is not substituted.",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "[DIG]",
+      "family": "special",
+      "parser": "RECOGNIZED",
+      "graph": "STRUCTURE_VARIANT_PENDING",
+      "formula_mw": "PENDING",
+      "epsilon260": {
+        "status": "UNSUPPORTED",
+        "model": null,
+        "contribution": null,
+        "correction": null,
+        "source": null,
+        "confidence": "unknown"
+      },
+      "layout_export": "PENDING",
+      "overall": "STRUCTURE_VARIANT_PENDING",
+      "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "[abasic]",
+      "family": "special",
+      "parser": "RECOGNIZED",
+      "graph": "STRUCTURE_VARIANT_PENDING",
+      "formula_mw": "PENDING",
+      "epsilon260": {
+        "status": "UNSUPPORTED",
+        "model": null,
+        "contribution": null,
+        "correction": null,
+        "source": null,
+        "confidence": "unknown"
+      },
+      "layout_export": "PENDING",
+      "overall": "STRUCTURE_VARIANT_PENDING",
+      "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "[InvAb]",
+      "family": "special",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "correction": null,
+        "source": null,
+        "confidence": "unknown"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Inverted tetrahydrofuran dSpacer; not a reactive aldehyde abasic residue",
+      "evidence_sources": [
+        "https://www.glenresearch.com/media/contentmanager/content/glenreport/GR35-1.pdf"
+      ]
+    },
+    {
+      "notation": "VpeA",
+      "family": "VP",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "VpeC",
+      "family": "VP",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "VpeG",
+      "family": "VP",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "VpeU",
+      "family": "VP",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "VpmA",
+      "family": "VP",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "VpmC",
+      "family": "VP",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "VpmG",
+      "family": "VP",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "VpmU",
+      "family": "VP",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "[spacer3]",
+      "family": "spacer",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.idtdna.com/site/catalog/modifications/category/6"
+      ]
+    },
+    {
+      "notation": "[spacer9]",
+      "family": "spacer",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "alias_of": "[PEG3]",
+      "evidence_sources": [
+        "https://www.idtdna.com/site/catalog/modifications/category/6"
+      ]
+    },
+    {
+      "notation": "[spacer12]",
+      "family": "spacer",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "alias_of": "[PEG4]",
+      "evidence_sources": [
+        "https://www.idtdna.com/site/catalog/modifications/category/6"
+      ]
+    },
+    {
+      "notation": "[spacer15]",
+      "family": "spacer",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "alias_of": "[PEG5]",
+      "evidence_sources": [
+        "https://www.idtdna.com/site/catalog/modifications/category/6"
+      ]
+    },
+    {
+      "notation": "[spacer18]",
+      "family": "spacer",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "alias_of": "[PEG6]",
+      "evidence_sources": [
+        "https://www.idtdna.com/site/catalog/modifications/category/6"
+      ]
+    },
+    {
+      "notation": "[spacer21]",
+      "family": "spacer",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "alias_of": "[PEG7]",
+      "evidence_sources": [
+        "https://www.idtdna.com/site/catalog/modifications/category/6"
+      ]
+    },
+    {
+      "notation": "[CY5]",
+      "family": "fluorescent",
+      "parser": "RECOGNIZED",
+      "graph": "STRUCTURE_VARIANT_PENDING",
+      "formula_mw": "PENDING",
+      "epsilon260": {
+        "status": "UNSUPPORTED",
+        "model": null,
+        "contribution": null,
+        "correction": null,
+        "source": null,
+        "confidence": "unknown"
+      },
+      "layout_export": "PENDING",
+      "overall": "STRUCTURE_VARIANT_PENDING",
+      "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "[CY3]",
+      "family": "fluorescent",
+      "parser": "RECOGNIZED",
+      "graph": "STRUCTURE_VARIANT_PENDING",
+      "formula_mw": "PENDING",
+      "epsilon260": {
+        "status": "UNSUPPORTED",
+        "model": null,
+        "contribution": null,
+        "correction": null,
+        "source": null,
+        "confidence": "unknown"
+      },
+      "layout_export": "PENDING",
+      "overall": "STRUCTURE_VARIANT_PENDING",
+      "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "[CY5.5]",
+      "family": "fluorescent",
+      "parser": "RECOGNIZED",
+      "graph": "STRUCTURE_VARIANT_PENDING",
+      "formula_mw": "PENDING",
+      "epsilon260": {
+        "status": "UNSUPPORTED",
+        "model": null,
+        "contribution": null,
+        "correction": null,
+        "source": null,
+        "confidence": "unknown"
+      },
+      "layout_export": "PENDING",
+      "overall": "STRUCTURE_VARIANT_PENDING",
+      "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "[555]",
+      "family": "fluorescent",
+      "parser": "RECOGNIZED",
+      "graph": "STRUCTURE_VARIANT_PENDING",
+      "formula_mw": "PENDING",
+      "epsilon260": {
+        "status": "UNSUPPORTED",
+        "model": null,
+        "contribution": null,
+        "correction": null,
+        "source": null,
+        "confidence": "unknown"
+      },
+      "layout_export": "PENDING",
+      "overall": "STRUCTURE_VARIANT_PENDING",
+      "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "[647]",
+      "family": "fluorescent",
+      "parser": "RECOGNIZED",
+      "graph": "STRUCTURE_VARIANT_PENDING",
+      "formula_mw": "PENDING",
+      "epsilon260": {
+        "status": "UNSUPPORTED",
+        "model": null,
+        "contribution": null,
+        "correction": null,
+        "source": null,
+        "confidence": "unknown"
+      },
+      "layout_export": "PENDING",
+      "overall": "STRUCTURE_VARIANT_PENDING",
+      "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "[594]",
+      "family": "fluorescent",
+      "parser": "RECOGNIZED",
+      "graph": "STRUCTURE_VARIANT_PENDING",
+      "formula_mw": "PENDING",
+      "epsilon260": {
+        "status": "UNSUPPORTED",
+        "model": null,
+        "contribution": null,
+        "correction": null,
+        "source": null,
+        "confidence": "unknown"
+      },
+      "layout_export": "PENDING",
+      "overall": "STRUCTURE_VARIANT_PENDING",
+      "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "[488]",
+      "family": "fluorescent",
+      "parser": "RECOGNIZED",
+      "graph": "STRUCTURE_VARIANT_PENDING",
+      "formula_mw": "PENDING",
+      "epsilon260": {
+        "status": "UNSUPPORTED",
+        "model": null,
+        "contribution": null,
+        "correction": null,
+        "source": null,
+        "confidence": "unknown"
+      },
+      "layout_export": "PENDING",
+      "overall": "STRUCTURE_VARIANT_PENDING",
+      "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "[568]",
+      "family": "fluorescent",
+      "parser": "RECOGNIZED",
+      "graph": "STRUCTURE_VARIANT_PENDING",
+      "formula_mw": "PENDING",
+      "epsilon260": {
+        "status": "UNSUPPORTED",
+        "model": null,
+        "contribution": null,
+        "correction": null,
+        "source": null,
+        "confidence": "unknown"
+      },
+      "layout_export": "PENDING",
+      "overall": "STRUCTURE_VARIANT_PENDING",
+      "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "[FAM]",
+      "family": "fluorescent",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Public reagent graph, explicit deprotection, independent formula/valence/export verification",
+      "identity_audit": "VALIDATED",
+      "evidence_sources": [
+        "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/58114954/property/IsomericSMILES,MolecularFormula/JSON"
+      ]
+    },
+    {
+      "notation": "eC",
+      "family": "MOE",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "eU",
+      "family": "MOE",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "(none)",
+      "family": "backbone",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "SUPPORTED",
+        "model": "base-preserving; backbone effect not parameterized",
+        "contribution": null,
+        "correction": null,
+        "source": "reference-data.js",
+        "confidence": "reference-model"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "VALIDATED",
+      "evidence": "Existing template; MsPA legacy P(OH)=N-SO2Me tautomer has not been independently validated",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "*",
+      "family": "backbone",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving; backbone effect not parameterized",
+        "contribution": null,
+        "correction": null,
+        "source": "reference-data.js",
+        "confidence": "low"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "MW_VALIDATED_OD_ESTIMATED",
+      "evidence": "Existing template; MsPA legacy P(OH)=N-SO2Me tautomer has not been independently validated",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "**",
+      "family": "backbone",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving; backbone effect not parameterized",
+        "contribution": null,
+        "correction": null,
+        "source": "reference-data.js",
+        "confidence": "low"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "MW_VALIDATED_OD_ESTIMATED",
+      "evidence": "Existing template; MsPA legacy P(OH)=N-SO2Me tautomer has not been independently validated",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "^",
+      "family": "backbone",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving; backbone effect not parameterized",
+        "contribution": null,
+        "correction": null,
+        "source": "reference-data.js",
+        "confidence": "low"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_ESTIMATED",
+      "evidence": "Neutral final linkage fragment; no P stereo assigned",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "!",
+      "family": "backbone",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving; backbone effect not parameterized",
+        "contribution": null,
+        "correction": null,
+        "source": "reference-data.js",
+        "confidence": "low"
+      },
+      "layout_export": "PENDING",
+      "overall": "GRAPH_VALIDATED_OPTICS_ESTIMATED",
+      "evidence": "Neutral final linkage fragment; no P stereo assigned",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "#",
+      "family": "backbone",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving; backbone effect not parameterized",
+        "contribution": null,
+        "correction": null,
+        "source": "reference-data.js",
+        "confidence": "low"
+      },
+      "layout_export": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_ESTIMATED",
+      "evidence": "Neutral final linkage fragment; no P stereo assigned",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "rT",
+      "family": "RNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "rCMe",
+      "family": "RNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "mCMe",
+      "family": "OMe",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "fI",
+      "family": "F",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "FANA-C",
+      "family": "FANA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.glenresearch.com/2-f-ana-phosphoramidites/2-f-ac-c-ana-ce-phosphoramidite10-3815.html"
+      ]
+    },
+    {
+      "notation": "nC",
+      "family": "NMA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "+C",
+      "family": "LNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.glenresearch.com/reports/gr30-23"
+      ]
+    },
+    {
+      "notation": "ENA-C",
+      "family": "ENA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "FANA-U",
+      "family": "FANA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.glenresearch.com/2-f-ana-phosphoramidites/2-f-ac-c-ana-ce-phosphoramidite10-3815.html"
+      ]
+    },
+    {
+      "notation": "nU",
+      "family": "NMA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "+U",
+      "family": "LNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.glenresearch.com/reports/gr30-23"
+      ]
+    },
+    {
+      "notation": "ENA-U",
+      "family": "ENA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "UNA-T",
+      "family": "UNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "Thd",
+      "family": "C16",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "Tda",
+      "family": "C22",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "FANA-I",
+      "family": "FANA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.glenresearch.com/2-f-ana-phosphoramidites/2-f-ac-c-ana-ce-phosphoramidite10-3815.html"
+      ]
+    },
+    {
+      "notation": "UNA-I",
+      "family": "UNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "nI",
+      "family": "NMA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "Ihd",
+      "family": "C16",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "Ida",
+      "family": "C22",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "+I",
+      "family": "LNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.glenresearch.com/reports/gr30-23"
+      ]
+    },
+    {
+      "notation": "ENA-I",
+      "family": "ENA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "UNA-CMe",
+      "family": "UNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "CMehd",
+      "family": "C16",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "CMeda",
+      "family": "C22",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "reference-data.js frozen baseline; prior Chemistry Master Audit"
+      ]
+    },
+    {
+      "notation": "[PEG3]",
+      "family": "spacer",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.idtdna.com/site/catalog/modifications/category/6"
+      ]
+    },
+    {
+      "notation": "[PEG4]",
+      "family": "spacer",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.idtdna.com/site/catalog/modifications/category/6"
+      ]
+    },
+    {
+      "notation": "[PEG5]",
+      "family": "spacer",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.idtdna.com/site/catalog/modifications/category/6"
+      ]
+    },
+    {
+      "notation": "[PEG6]",
+      "family": "spacer",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.idtdna.com/site/catalog/modifications/category/6"
+      ]
+    },
+    {
+      "notation": "[PEG7]",
+      "family": "spacer",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "NEEDS_PARAMETER",
+        "model": null,
+        "contribution": null,
+        "CF260": null,
+        "source": null
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.idtdna.com/site/catalog/modifications/category/6"
+      ]
+    },
+    {
+      "notation": "tC",
+      "family": "TNA",
+      "parser": "RECOGNIZED",
+      "graph": "REGRESSION_VALIDATED",
+      "overall": "GRAPH_VALIDATED_OPTICS_NEEDS_PARAMETER",
+      "formula_mw": "REGRESSION_VALIDATED",
+      "epsilon260": {
+        "status": "ESTIMATED",
+        "model": "base-preserving nearest-neighbor estimate",
+        "contribution": null,
+        "CF260": null,
+        "source": "PHOTOMETRY.md"
+      },
+      "evidence": "Explicit final scaffold; RDKit valence/formula verification; family transformation recorded in upgrade_lite_master.py",
+      "evidence_sources": [
+        "https://www.rcsb.org/ligand/TFT"
+      ]
+    }
+  ],
+  "aliases": {
+    "[spacer9]": "[PEG3]",
+    "[spacer12]": "[PEG4]",
+    "[spacer15]": "[PEG5]",
+    "[spacer18]": "[PEG6]",
+    "[spacer21]": "[PEG7]",
+    "[Cy3]": "[CY3]",
+    "[Cy5]": "[CY5]",
+    "[Cy5.5]": "[CY5.5]",
+    "[Alexa488]": "[488]",
+    "[Alexa555]": "[555]",
+    "[Alexa568]": "[568]",
+    "[Alexa594]": "[594]",
+    "[Alexa647]": "[647]",
+    "[6-FAM]": "[FAM]",
+    "[phosphorylation]": "[PHO]"
+  }
+}

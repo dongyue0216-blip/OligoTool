@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Oligo Lite result v1.2",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "chemistry",
+    "optical",
+    "graph"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "oligo-lite/1.2"
+    },
+    "status": {
+      "enum": [
+        "ok",
+        "error"
+      ]
+    },
+    "chemistry": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "optical": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "SUPPORTED",
+            "ESTIMATED",
+            "NEEDS_PARAMETER",
+            "UNSUPPORTED"
+          ]
+        },
+        "epsilon260": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "nmol_per_od": {
+          "type": "number"
+        },
+        "ug_per_od": {
+          "type": "number"
+        },
+        "provenance": {
+          "type": "object"
+        }
+      }
+    },
+    "graph": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  }
+}

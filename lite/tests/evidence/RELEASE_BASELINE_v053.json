@@ -1,0 +1,11 @@
+{
+  "version": "0.5.3",
+  "preserved": {
+    "chemistry.js": "9ef85fc03f5f3a0e706410faa410790f009c57c54ddeb5821bdcdae3cbe0db79",
+    "reference-data.js": "df152b2c2e16c5a887ddb4d2872f64805f10786524cddccb10ba72011b57e0a3",
+    "coverage-data.js": "2f1139e0516aebfea91e42e6733051cba6fc0b6819345fafa60a1f8042bc090f",
+    "conjugation-pool.js": "37491d659833b29cff162b9596be9c0c633b6618559344a14d4c70a4e545a79f",
+    "app.js": "55f83c7cfe474ed2eba9884bd65cf14c348b54f28c412601511979686bf53aea"
+  },
+  "note": "Current clean-release app hashes. BATCH_BASELINE.json remains historical v0.5.0 evidence."
+}

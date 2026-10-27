@@ -1,0 +1,2235 @@
+{
+  "counts": {
+    "FULL": 95,
+    "RECOGNIZED_PENDING": 7
+  },
+  "matrix": [
+    {
+      "family": "DNA",
+      "token": "dA",
+      "status": "FULL",
+      "formula": "C10H13N5O3",
+      "atoms": 18
+    },
+    {
+      "family": "DNA",
+      "token": "dC",
+      "status": "FULL",
+      "formula": "C9H13N3O4",
+      "atoms": 16
+    },
+    {
+      "family": "DNA",
+      "token": "dG",
+      "status": "FULL",
+      "formula": "C10H13N5O4",
+      "atoms": 19
+    },
+    {
+      "family": "DNA",
+      "token": "dT",
+      "status": "FULL",
+      "formula": "C10H14N2O5",
+      "atoms": 17
+    },
+    {
+      "family": "DNA",
+      "token": "dCMe",
+      "status": "FULL",
+      "formula": "C10H15N3O4",
+      "atoms": 17
+    },
+    {
+      "family": "DNA",
+      "token": "dI",
+      "status": "FULL",
+      "formula": "C10H12N4O4",
+      "atoms": 18
+    },
+    {
+      "family": "RNA",
+      "token": "rA",
+      "status": "FULL",
+      "formula": "C10H13N5O4",
+      "atoms": 19
+    },
+    {
+      "family": "RNA",
+      "token": "rC",
+      "status": "FULL",
+      "formula": "C9H13N3O5",
+      "atoms": 17
+    },
+    {
+      "family": "RNA",
+      "token": "rG",
+      "status": "FULL",
+      "formula": "C10H13N5O5",
+      "atoms": 20
+    },
+    {
+      "family": "RNA",
+      "token": "rU",
+      "status": "FULL",
+      "formula": "C9H12N2O6",
+      "atoms": 17
+    },
+    {
+      "family": "RNA",
+      "token": "rI",
+      "status": "FULL",
+      "formula": "C10H12N4O5",
+      "atoms": 19
+    },
+    {
+      "family": "LNA",
+      "token": "+A",
+      "status": "FULL",
+      "formula": "C11H13N5O4",
+      "atoms": 20
+    },
+    {
+      "family": "LNA",
+      "token": "+C",
+      "status": "FULL",
+      "formula": "C10H13N3O5",
+      "atoms": 18
+    },
+    {
+      "family": "LNA",
+      "token": "+CMe",
+      "status": "FULL",
+      "formula": "C11H15N3O5",
+      "atoms": 19
+    },
+    {
+      "family": "LNA",
+      "token": "+G",
+      "status": "FULL",
+      "formula": "C11H13N5O5",
+      "atoms": 21
+    },
+    {
+      "family": "LNA",
+      "token": "+T",
+      "status": "FULL",
+      "formula": "C11H14N2O6",
+      "atoms": 19
+    },
+    {
+      "family": "OMe",
+      "token": "mA",
+      "status": "FULL",
+      "formula": "C11H15N5O4",
+      "atoms": 20
+    },
+    {
+      "family": "OMe",
+      "token": "mC",
+      "status": "FULL",
+      "formula": "C10H15N3O5",
+      "atoms": 18
+    },
+    {
+      "family": "OMe",
+      "token": "mG",
+      "status": "FULL",
+      "formula": "C11H15N5O5",
+      "atoms": 21
+    },
+    {
+      "family": "OMe",
+      "token": "mU",
+      "status": "FULL",
+      "formula": "C10H14N2O6",
+      "atoms": 18
+    },
+    {
+      "family": "OMe",
+      "token": "mT",
+      "status": "FULL",
+      "formula": "C11H16N2O6",
+      "atoms": 19
+    },
+    {
+      "family": "OMe",
+      "token": "mI",
+      "status": "FULL",
+      "formula": "C11H14N4O5",
+      "atoms": 20
+    },
+    {
+      "family": "F",
+      "token": "fA",
+      "status": "FULL",
+      "formula": "C10H12N5O3F",
+      "atoms": 19
+    },
+    {
+      "family": "F",
+      "token": "fC",
+      "status": "FULL",
+      "formula": "C9H12N3O4F",
+      "atoms": 17
+    },
+    {
+      "family": "F",
+      "token": "fG",
+      "status": "FULL",
+      "formula": "C10H12N5O4F",
+      "atoms": 20
+    },
+    {
+      "family": "F",
+      "token": "fU",
+      "status": "FULL",
+      "formula": "C9H11N2O5F",
+      "atoms": 17
+    },
+    {
+      "family": "F",
+      "token": "fCMe",
+      "status": "FULL",
+      "formula": "C10H14N3O4F",
+      "atoms": 18
+    },
+    {
+      "family": "F",
+      "token": "fT",
+      "status": "FULL",
+      "formula": "C10H13N2O5F",
+      "atoms": 18
+    },
+    {
+      "family": "FANA",
+      "token": "FANA-A",
+      "status": "FULL",
+      "formula": "C10H12N5O3F",
+      "atoms": 19
+    },
+    {
+      "family": "FANA",
+      "token": "FANA-T",
+      "status": "FULL",
+      "formula": "C10H13N2O5F",
+      "atoms": 18
+    },
+    {
+      "family": "FANA",
+      "token": "FANA-CMe",
+      "status": "FULL",
+      "formula": "C10H14N3O4F",
+      "atoms": 18
+    },
+    {
+      "family": "FANA",
+      "token": "FANA-G",
+      "status": "FULL",
+      "formula": "C10H12N5O4F",
+      "atoms": 20
+    },
+    {
+      "family": "MOE",
+      "token": "eA",
+      "status": "FULL",
+      "formula": "C13H19N5O5",
+      "atoms": 23
+    },
+    {
+      "family": "MOE",
+      "token": "eCMe",
+      "status": "FULL",
+      "formula": "C13H21N3O6",
+      "atoms": 22
+    },
+    {
+      "family": "MOE",
+      "token": "eG",
+      "status": "FULL",
+      "formula": "C13H19N5O6",
+      "atoms": 24
+    },
+    {
+      "family": "MOE",
+      "token": "eT",
+      "status": "FULL",
+      "formula": "C13H20N2O7",
+      "atoms": 22
+    },
+    {
+      "family": "MOE",
+      "token": "eI",
+      "status": "FULL",
+      "formula": "C13H18N4O6",
+      "atoms": 23
+    },
+    {
+      "family": "PMO",
+      "token": "pA",
+      "status": "FULL",
+      "formula": "C10H14N6O2",
+      "atoms": 18
+    },
+    {
+      "family": "PMO",
+      "token": "pT",
+      "status": "FULL",
+      "formula": "C10H15N3O4",
+      "atoms": 17
+    },
+    {
+      "family": "PMO",
+      "token": "pC",
+      "status": "FULL",
+      "formula": "C9H14N4O3",
+      "atoms": 16
+    },
+    {
+      "family": "PMO",
+      "token": "pG",
+      "status": "FULL",
+      "formula": "C10H14N6O3",
+      "atoms": 19
+    },
+    {
+      "family": "PMO",
+      "token": "pB",
+      "status": "RECOGNIZED_PENDING",
+      "reason": "STRUCTURE_VARIANT_PENDING: pB; exact final scaffold / attachment / stereo not available"
+    },
+    {
+      "family": "PMO",
+      "token": "pI",
+      "status": "FULL",
+      "formula": "C10H13N5O3",
+      "atoms": 18
+    },
+    {
+      "family": "NMA",
+      "token": "nA",
+      "status": "FULL",
+      "formula": "C13H18N6O5",
+      "atoms": 24
+    },
+    {
+      "family": "NMA",
+      "token": "nT",
+      "status": "FULL",
+      "formula": "C13H19N3O7",
+      "atoms": 23
+    },
+    {
+      "family": "NMA",
+      "token": "nCMe",
+      "status": "FULL",
+      "formula": "C13H20N4O6",
+      "atoms": 23
+    },
+    {
+      "family": "NMA",
+      "token": "nG",
+      "status": "FULL",
+      "formula": "C13H18N6O6",
+      "atoms": 25
+    },
+    {
+      "family": "UNA",
+      "token": "UNA-A",
+      "status": "FULL",
+      "formula": "C10H15N5O4",
+      "atoms": 19
+    },
+    {
+      "family": "UNA",
+      "token": "UNA-U",
+      "status": "FULL",
+      "formula": "C9H14N2O6",
+      "atoms": 17
+    },
+    {
+      "family": "UNA",
+      "token": "UNA-C",
+      "status": "FULL",
+      "formula": "C9H15N3O5",
+      "atoms": 17
+    },
+    {
+      "family": "UNA",
+      "token": "UNA-G",
+      "status": "FULL",
+      "formula": "C10H15N5O5",
+      "atoms": 20
+    },
+    {
+      "family": "C16",
+      "token": "Ahd",
+      "status": "FULL",
+      "formula": "C26H45N5O4",
+      "atoms": 35
+    },
+    {
+      "family": "C16",
+      "token": "Uhd",
+      "status": "FULL",
+      "formula": "C25H44N2O6",
+      "atoms": 33
+    },
+    {
+      "family": "C16",
+      "token": "Chd",
+      "status": "FULL",
+      "formula": "C25H45N3O5",
+      "atoms": 33
+    },
+    {
+      "family": "C16",
+      "token": "Ghd",
+      "status": "FULL",
+      "formula": "C26H45N5O5",
+      "atoms": 36
+    },
+    {
+      "family": "C22",
+      "token": "Ada",
+      "status": "FULL",
+      "formula": "C32H57N5O4",
+      "atoms": 41
+    },
+    {
+      "family": "C22",
+      "token": "Uda",
+      "status": "FULL",
+      "formula": "C31H56N2O6",
+      "atoms": 39
+    },
+    {
+      "family": "C22",
+      "token": "Cda",
+      "status": "FULL",
+      "formula": "C31H57N3O5",
+      "atoms": 39
+    },
+    {
+      "family": "C22",
+      "token": "Gda",
+      "status": "FULL",
+      "formula": "C32H57N5O5",
+      "atoms": 42
+    },
+    {
+      "family": "GNA",
+      "token": "Agn",
+      "status": "FULL",
+      "formula": "C8H11N5O2",
+      "atoms": 15
+    },
+    {
+      "family": "GNA",
+      "token": "Tgn",
+      "status": "FULL",
+      "formula": "C8H12N2O4",
+      "atoms": 14
+    },
+    {
+      "family": "GNA",
+      "token": "Ugn",
+      "status": "RECOGNIZED_PENDING",
+      "reason": "STRUCTURE_VARIANT_PENDING: Ugn; exact final scaffold / attachment / stereo not available"
+    },
+    {
+      "family": "GNA",
+      "token": "Cgn",
+      "status": "FULL",
+      "formula": "C7H11N3O3",
+      "atoms": 13
+    },
+    {
+      "family": "GNA",
+      "token": "Ggn",
+      "status": "FULL",
+      "formula": "C8H11N5O3",
+      "atoms": 16
+    },
+    {
+      "family": "cEt",
+      "token": "cEt-A",
+      "status": "RECOGNIZED_PENDING",
+      "reason": "STRUCTURE_VARIANT_PENDING: cEt-A; exact final scaffold / attachment / stereo not available"
+    },
+    {
+      "family": "cEt",
+      "token": "cEt-T",
+      "status": "RECOGNIZED_PENDING",
+      "reason": "STRUCTURE_VARIANT_PENDING: cEt-T; exact final scaffold / attachment / stereo not available"
+    },
+    {
+      "family": "cEt",
+      "token": "cEt-CMe",
+      "status": "RECOGNIZED_PENDING",
+      "reason": "STRUCTURE_VARIANT_PENDING: cEt-CMe; exact final scaffold / attachment / stereo not available"
+    },
+    {
+      "family": "cEt",
+      "token": "cEt-G",
+      "status": "RECOGNIZED_PENDING",
+      "reason": "STRUCTURE_VARIANT_PENDING: cEt-G; exact final scaffold / attachment / stereo not available"
+    },
+    {
+      "family": "TNA",
+      "token": "tA",
+      "status": "FULL",
+      "formula": "C9H11N5O3",
+      "atoms": 17
+    },
+    {
+      "family": "TNA",
+      "token": "tT",
+      "status": "FULL",
+      "formula": "C9H12N2O5",
+      "atoms": 16
+    },
+    {
+      "family": "TNA",
+      "token": "tCMe",
+      "status": "FULL",
+      "formula": "C9H13N3O4",
+      "atoms": 16
+    },
+    {
+      "family": "TNA",
+      "token": "tG",
+      "status": "FULL",
+      "formula": "C9H11N5O4",
+      "atoms": 18
+    },
+    {
+      "family": "Benner",
+      "token": "Z",
+      "status": "FULL",
+      "formula": "C10H13N3O6",
+      "atoms": 19
+    },
+    {
+      "family": "ENA",
+      "token": "ENA-A",
+      "status": "FULL",
+      "formula": "C12H15N5O4",
+      "atoms": 21
+    },
+    {
+      "family": "ENA",
+      "token": "ENA-T",
+      "status": "FULL",
+      "formula": "C12H16N2O6",
+      "atoms": 20
+    },
+    {
+      "family": "ENA",
+      "token": "ENA-CMe",
+      "status": "FULL",
+      "formula": "C12H17N3O5",
+      "atoms": 20
+    },
+    {
+      "family": "ENA",
+      "token": "ENA-G",
+      "status": "FULL",
+      "formula": "C12H15N5O5",
+      "atoms": 22
+    },
+    {
+      "family": "VP",
+      "token": "VpeA",
+      "status": "FULL",
+      "formula": "C14H20N5O7P",
+      "atoms": 27
+    },
+    {
+      "family": "VP",
+      "token": "VpeC",
+      "status": "FULL",
+      "formula": "C13H20N3O8P",
+      "atoms": 25
+    },
+    {
+      "family": "VP",
+      "token": "VpeG",
+      "status": "FULL",
+      "formula": "C14H20N5O8P",
+      "atoms": 28
+    },
+    {
+      "family": "VP",
+      "token": "VpeU",
+      "status": "FULL",
+      "formula": "C13H19N2O9P",
+      "atoms": 25
+    },
+    {
+      "family": "VP",
+      "token": "VpmA",
+      "status": "FULL",
+      "formula": "C12H16N5O6P",
+      "atoms": 24
+    },
+    {
+      "family": "VP",
+      "token": "VpmC",
+      "status": "FULL",
+      "formula": "C11H16N3O7P",
+      "atoms": 22
+    },
+    {
+      "family": "VP",
+      "token": "VpmG",
+      "status": "FULL",
+      "formula": "C12H16N5O7P",
+      "atoms": 25
+    },
+    {
+      "family": "VP",
+      "token": "VpmU",
+      "status": "FULL",
+      "formula": "C11H15N2O8P",
+      "atoms": 22
+    },
+    {
+      "family": "special",
+      "token": "[C3N]",
+      "status": "FULL",
+      "formula": "C3H9NO",
+      "atoms": 5
+    },
+    {
+      "family": "special",
+      "token": "[C6N]",
+      "status": "FULL",
+      "formula": "C6H15NO",
+      "atoms": 8
+    },
+    {
+      "family": "special",
+      "token": "[spacer3]",
+      "status": "FULL",
+      "formula": "C3H8O2",
+      "atoms": 5
+    },
+    {
+      "family": "special",
+      "token": "[spacer9]",
+      "status": "FULL",
+      "formula": "C6H14O4",
+      "atoms": 10
+    },
+    {
+      "family": "special",
+      "token": "[spacer12]",
+      "status": "FULL",
+      "formula": "C8H18O5",
+      "atoms": 13
+    },
+    {
+      "family": "special",
+      "token": "[spacer15]",
+      "status": "FULL",
+      "formula": "C10H22O6",
+      "atoms": 16
+    },
+    {
+      "family": "special",
+      "token": "[spacer18]",
+      "status": "FULL",
+      "formula": "C12H26O7",
+      "atoms": 19
+    },
+    {
+      "family": "special",
+      "token": "[spacer21]",
+      "status": "FULL",
+      "formula": "C14H30O8",
+      "atoms": 22
+    },
+    {
+      "family": "special",
+      "token": "[L96]",
+      "status": "FULL",
+      "formula": "C78H139N11O31",
+      "atoms": 120
+    },
+    {
+      "family": "special",
+      "token": "[NAG37]",
+      "status": "FULL",
+      "formula": "C53H92N8O27",
+      "atoms": 88
+    },
+    {
+      "family": "special",
+      "token": "[PHO]",
+      "status": "FULL",
+      "formula": "C10H14N5O6P",
+      "atoms": 22
+    },
+    {
+      "family": "special",
+      "token": "[p]",
+      "status": "FULL",
+      "formula": "C10H14N5O6P",
+      "atoms": 22
+    },
+    {
+      "family": "special",
+      "token": "[pp]",
+      "status": "FULL",
+      "formula": "C10H15N5O9P2",
+      "atoms": 26
+    },
+    {
+      "family": "special",
+      "token": "[ppp]",
+      "status": "FULL",
+      "formula": "C10H16N5O12P3",
+      "atoms": 30
+    },
+    {
+      "family": "special",
+      "token": "[6-FAM]",
+      "status": "FULL",
+      "formula": "C27H25NO7",
+      "atoms": 35
+    },
+    {
+      "family": "special",
+      "token": "[InvAb]",
+      "status": "FULL",
+      "formula": "C5H10O3",
+      "atoms": 8
+    },
+    {
+      "family": "special",
+      "token": "[Biotin]",
+      "status": "RECOGNIZED_PENDING",
+      "reason": "STRUCTURE_VARIANT_PENDING: [Biotin]; exact final scaffold / attachment / stereo not available"
+    }
+  ],
+  "methyl": [
+    {
+      "token": "dCMe",
+      "methyl_atom": 16,
+      "C5_atom": 0,
+      "pair": true,
+      "delta": "C1H2"
+    },
+    {
+      "token": "rCMe",
+      "methyl_atom": 17,
+      "C5_atom": 0,
+      "pair": true,
+      "delta": "C1H2"
+    },
+    {
+      "token": "mCMe",
+      "methyl_atom": 18,
+      "C5_atom": 0,
+      "pair": true,
+      "delta": "C1H2"
+    },
+    {
+      "token": "fCMe",
+      "methyl_atom": 17,
+      "C5_atom": 0,
+      "pair": true,
+      "delta": "C1H2"
+    },
+    {
+      "token": "eCMe",
+      "methyl_atom": 21,
+      "C5_atom": 0,
+      "pair": true,
+      "delta": "C1H2"
+    },
+    {
+      "token": "FANA-CMe",
+      "methyl_atom": 17,
+      "C5_atom": 0,
+      "pair": true,
+      "delta": "C1H2"
+    },
+    {
+      "token": "UNA-CMe",
+      "methyl_atom": 17,
+      "C5_atom": 0,
+      "pair": true,
+      "delta": "C1H2"
+    },
+    {
+      "token": "nCMe",
+      "methyl_atom": 17,
+      "C5_atom": 0,
+      "pair": true,
+      "delta": "C1H2"
+    },
+    {
+      "token": "CMehd",
+      "methyl_atom": 17,
+      "C5_atom": 0,
+      "pair": true,
+      "delta": "C1H2"
+    },
+    {
+      "token": "CMeda",
+      "methyl_atom": 17,
+      "C5_atom": 0,
+      "pair": true,
+      "delta": "C1H2"
+    },
+    {
+      "token": "+CMe",
+      "methyl_atom": 17,
+      "C5_atom": 0,
+      "pair": true,
+      "delta": "C1H2"
+    },
+    {
+      "token": "ENA-CMe",
+      "methyl_atom": 17,
+      "C5_atom": 0,
+      "pair": true,
+      "delta": "C1H2"
+    },
+    {
+      "token": "tCMe",
+      "methyl_atom": 15,
+      "C5_atom": 0,
+      "pair": true,
+      "delta": "C1H2"
+    }
+  ],
+  "tests": [
+    {
+      "name": "golden rArA",
+      "status": "PASS"
+    },
+    {
+      "name": "golden ACGT",
+      "status": "PASS"
+    },
+    {
+      "name": "golden rArCrGrU",
+      "status": "PASS"
+    },
+    {
+      "name": "golden fAfCfGfU",
+      "status": "PASS"
+    },
+    {
+      "name": "golden mAmCmGmU",
+      "status": "PASS"
+    },
+    {
+      "name": "golden eAeCeGeU",
+      "status": "PASS"
+    },
+    {
+      "name": "golden rA*rC**fG#mU",
+      "status": "PASS"
+    },
+    {
+      "name": "golden ACGTACGTACGT",
+      "status": "PASS"
+    },
+    {
+      "name": "golden rA#rA",
+      "status": "PASS"
+    },
+    {
+      "name": "golden rA**rA",
+      "status": "PASS"
+    },
+    {
+      "name": "golden rA*rA",
+      "status": "PASS"
+    },
+    {
+      "name": "golden rI",
+      "status": "PASS"
+    },
+    {
+      "name": "golden dA",
+      "status": "PASS"
+    },
+    {
+      "name": "golden dC",
+      "status": "PASS"
+    },
+    {
+      "name": "golden dG",
+      "status": "PASS"
+    },
+    {
+      "name": "golden dT",
+      "status": "PASS"
+    },
+    {
+      "name": "golden rA",
+      "status": "PASS"
+    },
+    {
+      "name": "golden rC",
+      "status": "PASS"
+    },
+    {
+      "name": "golden rG",
+      "status": "PASS"
+    },
+    {
+      "name": "golden rU",
+      "status": "PASS"
+    },
+    {
+      "name": "golden fA",
+      "status": "PASS"
+    },
+    {
+      "name": "golden fC",
+      "status": "PASS"
+    },
+    {
+      "name": "golden fG",
+      "status": "PASS"
+    },
+    {
+      "name": "golden fU",
+      "status": "PASS"
+    },
+    {
+      "name": "golden mA",
+      "status": "PASS"
+    },
+    {
+      "name": "golden mC",
+      "status": "PASS"
+    },
+    {
+      "name": "golden mG",
+      "status": "PASS"
+    },
+    {
+      "name": "golden mU",
+      "status": "PASS"
+    },
+    {
+      "name": "golden eA",
+      "status": "PASS"
+    },
+    {
+      "name": "golden eC",
+      "status": "PASS"
+    },
+    {
+      "name": "golden eG",
+      "status": "PASS"
+    },
+    {
+      "name": "golden eU",
+      "status": "PASS"
+    },
+    {
+      "name": "golden eU*fU#eU#eU#rImA",
+      "status": "PASS"
+    },
+    {
+      "name": "golden dAmCfU",
+      "status": "PASS"
+    },
+    {
+      "name": "golden rI*dG*mGmCmU",
+      "status": "PASS"
+    },
+    {
+      "name": "golden mC**mG",
+      "status": "PASS"
+    },
+    {
+      "name": "golden rU**mG**eC",
+      "status": "PASS"
+    },
+    {
+      "name": "golden dG#dGmU#dC#eU*fG",
+      "status": "PASS"
+    },
+    {
+      "name": "golden dArG**mC*rC**mG**fU**dA",
+      "status": "PASS"
+    },
+    {
+      "name": "golden dT*fG**eG*dC*rUdCmC",
+      "status": "PASS"
+    },
+    {
+      "name": "golden fA**dT*dG**fC#eU*mU",
+      "status": "PASS"
+    },
+    {
+      "name": "golden fU*rU**mC**eU*dT",
+      "status": "PASS"
+    },
+    {
+      "name": "golden fA**mC*rC*eC",
+      "status": "PASS"
+    },
+    {
+      "name": "golden dArU*eU*mA",
+      "status": "PASS"
+    },
+    {
+      "name": "golden rC*fC",
+      "status": "PASS"
+    },
+    {
+      "name": "golden fU#dG**mC**rI**eC**eGfUrG",
+      "status": "PASS"
+    },
+    {
+      "name": "golden eA**fG*rAeU",
+      "status": "PASS"
+    },
+    {
+      "name": "golden fUrU*dC*dG",
+      "status": "PASS"
+    },
+    {
+      "name": "golden fU#rC",
+      "status": "PASS"
+    },
+    {
+      "name": "golden mC*dCrC",
+      "status": "PASS"
+    },
+    {
+      "name": "golden mA#fA#rA",
+      "status": "PASS"
+    },
+    {
+      "name": "golden mA*eA#dG",
+      "status": "PASS"
+    },
+    {
+      "name": "golden dC#eCrA*rI",
+      "status": "PASS"
+    },
+    {
+      "name": "golden mGrI*fGeA#mA**eC**dG",
+      "status": "PASS"
+    },
+    {
+      "name": "golden eAfUrA#eC*rA**mU",
+      "status": "PASS"
+    },
+    {
+      "name": "golden eAeU",
+      "status": "PASS"
+    },
+    {
+      "name": "historical rArA",
+      "status": "PASS"
+    },
+    {
+      "name": "five phosphate 1",
+      "status": "PASS"
+    },
+    {
+      "name": "five phosphate 2",
+      "status": "PASS"
+    },
+    {
+      "name": "five phosphate 3",
+      "status": "PASS"
+    },
+    {
+      "name": "three phosphate 1",
+      "status": "PASS"
+    },
+    {
+      "name": "three phosphate 2",
+      "status": "PASS"
+    },
+    {
+      "name": "three phosphate 3",
+      "status": "PASS"
+    },
+    {
+      "name": "ChemDraw marker import",
+      "status": "PASS"
+    },
+    {
+      "name": "assemble [RegressionFixture]rA",
+      "status": "PASS"
+    },
+    {
+      "name": "assemble rA[RegressionFixture]",
+      "status": "PASS"
+    },
+    {
+      "name": "assemble rA[RegressionFixture]rC",
+      "status": "PASS"
+    },
+    {
+      "name": "assemble [RegressionFixture][RegressionFixture]",
+      "status": "PASS"
+    },
+    {
+      "name": "assemble (pp)[RegressionFixture]rA(ppp)",
+      "status": "PASS"
+    },
+    {
+      "name": "assemble rA[RegressionFixture]*eC",
+      "status": "PASS"
+    },
+    {
+      "name": "library serialization and restore",
+      "status": "PASS"
+    },
+    {
+      "name": "unknown ID",
+      "status": "PASS"
+    },
+    {
+      "name": "reject rA(p)rA",
+      "status": "PASS"
+    },
+    {
+      "name": "reject (pppp)rA",
+      "status": "PASS"
+    },
+    {
+      "name": "reject rA*",
+      "status": "PASS"
+    },
+    {
+      "name": "reject (p)",
+      "status": "PASS"
+    },
+    {
+      "name": "reject [bad-id]",
+      "status": "PASS"
+    },
+    {
+      "name": "manual fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "ambiguous marker fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "bamboo layout",
+      "status": "PASS"
+    },
+    {
+      "name": "SDF first molecule",
+      "status": "PASS"
+    },
+    {
+      "name": "ChemDraw numeric aliases",
+      "status": "PASS"
+    },
+    {
+      "name": "incomplete markers require manual fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "SMILES unsupported syntax fails closed",
+      "status": "PASS"
+    },
+    {
+      "name": "all export graph counts and identifiers",
+      "status": "PASS"
+    },
+    {
+      "name": "obsolete linkage rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "braces rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "formal MsPA canonical",
+      "status": "PASS"
+    },
+    {
+      "name": "pending cEt-A",
+      "status": "PASS"
+    },
+    {
+      "name": "pending Ugn",
+      "status": "PASS"
+    },
+    {
+      "name": "pending [CY5.5]",
+      "status": "PASS"
+    },
+    {
+      "name": "pending [555]",
+      "status": "PASS"
+    },
+    {
+      "name": "pending pB",
+      "status": "PASS"
+    },
+    {
+      "name": "pending [Biotin]",
+      "status": "PASS"
+    },
+    {
+      "name": "published NN example",
+      "status": "PASS"
+    },
+    {
+      "name": "OD average mass basis",
+      "status": "PASS"
+    },
+    {
+      "name": "long chain 60",
+      "status": "PASS"
+    },
+    {
+      "name": "long chain 100",
+      "status": "PASS"
+    },
+    {
+      "name": "long chain 150",
+      "status": "PASS"
+    },
+    {
+      "name": "long chain 200",
+      "status": "PASS"
+    },
+    {
+      "name": "long chain 300",
+      "status": "PASS"
+    },
+    {
+      "name": "every coverage unit parsed; pending units fail closed",
+      "status": "PASS"
+    },
+    {
+      "name": "custom optical metadata and mixed junction guard",
+      "status": "PASS"
+    },
+    {
+      "name": "master template dA",
+      "status": "PASS"
+    },
+    {
+      "name": "master template dC",
+      "status": "PASS"
+    },
+    {
+      "name": "master template dG",
+      "status": "PASS"
+    },
+    {
+      "name": "master template dT",
+      "status": "PASS"
+    },
+    {
+      "name": "master template rA",
+      "status": "PASS"
+    },
+    {
+      "name": "master template rC",
+      "status": "PASS"
+    },
+    {
+      "name": "master template rG",
+      "status": "PASS"
+    },
+    {
+      "name": "master template rU",
+      "status": "PASS"
+    },
+    {
+      "name": "master template rI",
+      "status": "PASS"
+    },
+    {
+      "name": "master template fA",
+      "status": "PASS"
+    },
+    {
+      "name": "master template fC",
+      "status": "PASS"
+    },
+    {
+      "name": "master template fG",
+      "status": "PASS"
+    },
+    {
+      "name": "master template fU",
+      "status": "PASS"
+    },
+    {
+      "name": "master template mA",
+      "status": "PASS"
+    },
+    {
+      "name": "master template mC",
+      "status": "PASS"
+    },
+    {
+      "name": "master template mG",
+      "status": "PASS"
+    },
+    {
+      "name": "master template mU",
+      "status": "PASS"
+    },
+    {
+      "name": "master template eA",
+      "status": "PASS"
+    },
+    {
+      "name": "master template eC",
+      "status": "PASS"
+    },
+    {
+      "name": "master template eG",
+      "status": "PASS"
+    },
+    {
+      "name": "master template eU",
+      "status": "PASS"
+    },
+    {
+      "name": "master template dI",
+      "status": "PASS"
+    },
+    {
+      "name": "master template dCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "master template rT",
+      "status": "PASS"
+    },
+    {
+      "name": "master template rCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "master template mT",
+      "status": "PASS"
+    },
+    {
+      "name": "master template mI",
+      "status": "PASS"
+    },
+    {
+      "name": "master template mCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "master template fT",
+      "status": "PASS"
+    },
+    {
+      "name": "master template fI",
+      "status": "PASS"
+    },
+    {
+      "name": "master template fCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "master template eT",
+      "status": "PASS"
+    },
+    {
+      "name": "master template eI",
+      "status": "PASS"
+    },
+    {
+      "name": "master template eCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "master template FANA-A",
+      "status": "PASS"
+    },
+    {
+      "name": "master template UNA-A",
+      "status": "PASS"
+    },
+    {
+      "name": "master template nA",
+      "status": "PASS"
+    },
+    {
+      "name": "master template Ahd",
+      "status": "PASS"
+    },
+    {
+      "name": "master template Ada",
+      "status": "PASS"
+    },
+    {
+      "name": "master template +A",
+      "status": "PASS"
+    },
+    {
+      "name": "master template ENA-A",
+      "status": "PASS"
+    },
+    {
+      "name": "master template FANA-C",
+      "status": "PASS"
+    },
+    {
+      "name": "master template UNA-C",
+      "status": "PASS"
+    },
+    {
+      "name": "master template nC",
+      "status": "PASS"
+    },
+    {
+      "name": "master template Chd",
+      "status": "PASS"
+    },
+    {
+      "name": "master template Cda",
+      "status": "PASS"
+    },
+    {
+      "name": "master template +C",
+      "status": "PASS"
+    },
+    {
+      "name": "master template ENA-C",
+      "status": "PASS"
+    },
+    {
+      "name": "master template FANA-G",
+      "status": "PASS"
+    },
+    {
+      "name": "master template UNA-G",
+      "status": "PASS"
+    },
+    {
+      "name": "master template nG",
+      "status": "PASS"
+    },
+    {
+      "name": "master template Ghd",
+      "status": "PASS"
+    },
+    {
+      "name": "master template Gda",
+      "status": "PASS"
+    },
+    {
+      "name": "master template +G",
+      "status": "PASS"
+    },
+    {
+      "name": "master template ENA-G",
+      "status": "PASS"
+    },
+    {
+      "name": "master template FANA-U",
+      "status": "PASS"
+    },
+    {
+      "name": "master template UNA-U",
+      "status": "PASS"
+    },
+    {
+      "name": "master template nU",
+      "status": "PASS"
+    },
+    {
+      "name": "master template Uhd",
+      "status": "PASS"
+    },
+    {
+      "name": "master template Uda",
+      "status": "PASS"
+    },
+    {
+      "name": "master template +U",
+      "status": "PASS"
+    },
+    {
+      "name": "master template ENA-U",
+      "status": "PASS"
+    },
+    {
+      "name": "master template FANA-T",
+      "status": "PASS"
+    },
+    {
+      "name": "master template UNA-T",
+      "status": "PASS"
+    },
+    {
+      "name": "master template nT",
+      "status": "PASS"
+    },
+    {
+      "name": "master template Thd",
+      "status": "PASS"
+    },
+    {
+      "name": "master template Tda",
+      "status": "PASS"
+    },
+    {
+      "name": "master template +T",
+      "status": "PASS"
+    },
+    {
+      "name": "master template ENA-T",
+      "status": "PASS"
+    },
+    {
+      "name": "master template FANA-I",
+      "status": "PASS"
+    },
+    {
+      "name": "master template UNA-I",
+      "status": "PASS"
+    },
+    {
+      "name": "master template nI",
+      "status": "PASS"
+    },
+    {
+      "name": "master template Ihd",
+      "status": "PASS"
+    },
+    {
+      "name": "master template Ida",
+      "status": "PASS"
+    },
+    {
+      "name": "master template +I",
+      "status": "PASS"
+    },
+    {
+      "name": "master template ENA-I",
+      "status": "PASS"
+    },
+    {
+      "name": "master template FANA-CMe",
+      "status": "PASS"
+    },
+    {
+      "name": "master template UNA-CMe",
+      "status": "PASS"
+    },
+    {
+      "name": "master template nCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "master template CMehd",
+      "status": "PASS"
+    },
+    {
+      "name": "master template CMeda",
+      "status": "PASS"
+    },
+    {
+      "name": "master template +CMe",
+      "status": "PASS"
+    },
+    {
+      "name": "master template ENA-CMe",
+      "status": "PASS"
+    },
+    {
+      "name": "master template Agn",
+      "status": "PASS"
+    },
+    {
+      "name": "master template Cgn",
+      "status": "PASS"
+    },
+    {
+      "name": "master template Ggn",
+      "status": "PASS"
+    },
+    {
+      "name": "master template Tgn",
+      "status": "PASS"
+    },
+    {
+      "name": "master template VpmA",
+      "status": "PASS"
+    },
+    {
+      "name": "master template VpmC",
+      "status": "PASS"
+    },
+    {
+      "name": "master template VpmG",
+      "status": "PASS"
+    },
+    {
+      "name": "master template VpmU",
+      "status": "PASS"
+    },
+    {
+      "name": "master template VpeA",
+      "status": "PASS"
+    },
+    {
+      "name": "master template VpeC",
+      "status": "PASS"
+    },
+    {
+      "name": "master template VpeG",
+      "status": "PASS"
+    },
+    {
+      "name": "master template VpeU",
+      "status": "PASS"
+    },
+    {
+      "name": "master template pA",
+      "status": "PASS"
+    },
+    {
+      "name": "master template pC",
+      "status": "PASS"
+    },
+    {
+      "name": "master template pG",
+      "status": "PASS"
+    },
+    {
+      "name": "master template pT",
+      "status": "PASS"
+    },
+    {
+      "name": "master template pI",
+      "status": "PASS"
+    },
+    {
+      "name": "master template tA",
+      "status": "PASS"
+    },
+    {
+      "name": "master template tC",
+      "status": "PASS"
+    },
+    {
+      "name": "master template tG",
+      "status": "PASS"
+    },
+    {
+      "name": "master template tT",
+      "status": "PASS"
+    },
+    {
+      "name": "master template tCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "master template Z",
+      "status": "PASS"
+    },
+    {
+      "name": "master template {PEG3}",
+      "status": "PASS"
+    },
+    {
+      "name": "master template {PEG4}",
+      "status": "PASS"
+    },
+    {
+      "name": "master template {PEG5}",
+      "status": "PASS"
+    },
+    {
+      "name": "master template {PEG6}",
+      "status": "PASS"
+    },
+    {
+      "name": "master template {PEG7}",
+      "status": "PASS"
+    },
+    {
+      "name": "master template {spacer3}",
+      "status": "PASS"
+    },
+    {
+      "name": "master template {C3N}",
+      "status": "PASS"
+    },
+    {
+      "name": "master template {C6N}",
+      "status": "PASS"
+    },
+    {
+      "name": "master template {FAM}",
+      "status": "PASS"
+    },
+    {
+      "name": "master template {L96}",
+      "status": "PASS"
+    },
+    {
+      "name": "master template {NAG37}",
+      "status": "PASS"
+    },
+    {
+      "name": "master template {InvAb}",
+      "status": "PASS"
+    },
+    {
+      "name": "phosphate brackets canonical and placement",
+      "status": "PASS"
+    },
+    {
+      "name": "longest-match token collisions",
+      "status": "PASS"
+    },
+    {
+      "name": "amino position guard",
+      "status": "PASS"
+    },
+    {
+      "name": "layout detectors reject deliberately damaged geometry",
+      "status": "PASS"
+    },
+    {
+      "name": "P stereochemistry unspecified",
+      "status": "PASS"
+    },
+    {
+      "name": "built-in IDs cannot be silently replaced",
+      "status": "PASS"
+    },
+    {
+      "name": "mixed topology fails explicitly",
+      "status": "PASS"
+    },
+    {
+      "name": "real topology directions",
+      "status": "PASS"
+    },
+    {
+      "name": "conjugate deprotection formulas",
+      "status": "PASS"
+    },
+    {
+      "name": "conjugate position guards",
+      "status": "PASS"
+    },
+    {
+      "name": "QA detects crossing bonds",
+      "status": "PASS"
+    },
+    {
+      "name": "QA detects labels and long bonds",
+      "status": "PASS"
+    },
+    {
+      "name": "QA detects bad column top and connector",
+      "status": "PASS"
+    },
+    {
+      "name": "optics never inferred from modifier ID letters",
+      "status": "PASS"
+    },
+    {
+      "name": "all master optical metadata agrees with computation",
+      "status": "PASS"
+    },
+    {
+      "name": "all columns preserve canonical coordinates and handedness",
+      "status": "PASS"
+    },
+    {
+      "name": "FAM all six-membered rings are regular and equal",
+      "status": "PASS"
+    },
+    {
+      "name": "GalNAc chairs share a canonical shape in both conjugates",
+      "status": "PASS"
+    },
+    {
+      "name": "LNA cage overpasses are explicit display metadata only",
+      "status": "PASS"
+    },
+    {
+      "name": "inosine dI",
+      "status": "PASS"
+    },
+    {
+      "name": "inosine rI",
+      "status": "PASS"
+    },
+    {
+      "name": "inosine mI",
+      "status": "PASS"
+    },
+    {
+      "name": "inosine eI",
+      "status": "PASS"
+    },
+    {
+      "name": "inosine pI",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl graph dCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl graph rCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl graph mCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl graph fCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl graph eCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl graph FANA-CMe",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl graph UNA-CMe",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl graph nCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl graph CMehd",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl graph CMeda",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl graph +CMe",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl graph ENA-CMe",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 methyl graph tCMe",
+      "status": "PASS"
+    },
+    {
+      "name": "InvAb actual 3′ incoming and 5′ outgoing",
+      "status": "PASS"
+    },
+    {
+      "name": "pool blocked SMCC",
+      "status": "PASS"
+    },
+    {
+      "name": "pool blocked MC",
+      "status": "PASS"
+    },
+    {
+      "name": "pool blocked BCN",
+      "status": "PASS"
+    },
+    {
+      "name": "pool blocked endo-BCN",
+      "status": "PASS"
+    },
+    {
+      "name": "pool blocked DBCO",
+      "status": "PASS"
+    },
+    {
+      "name": "pool blocked SPDP",
+      "status": "PASS"
+    },
+    {
+      "name": "pool blocked cOct",
+      "status": "PASS"
+    },
+    {
+      "name": "pool blocked TCO",
+      "status": "PASS"
+    },
+    {
+      "name": "pool blocked MC-VC-PABC",
+      "status": "PASS"
+    },
+    {
+      "name": "layout 9",
+      "status": "PASS"
+    },
+    {
+      "name": "layout 10",
+      "status": "PASS"
+    },
+    {
+      "name": "layout 11",
+      "status": "PASS"
+    },
+    {
+      "name": "layout 19",
+      "status": "PASS"
+    },
+    {
+      "name": "layout 20",
+      "status": "PASS"
+    },
+    {
+      "name": "layout 21",
+      "status": "PASS"
+    },
+    {
+      "name": "layout 60",
+      "status": "PASS"
+    },
+    {
+      "name": "layout 100",
+      "status": "PASS"
+    },
+    {
+      "name": "layout 200",
+      "status": "PASS"
+    }
+  ],
+  "layout": [
+    {
+      "n": 9,
+      "intentional_bridge_crossings": [
+        [
+          119,
+          125
+        ]
+      ],
+      "atom_overlaps": [],
+      "atom_bond_overlaps": [],
+      "bond_crossings": [],
+      "connector_collisions": [],
+      "label_overlaps": [],
+      "label_bond_overlaps": [],
+      "long_bonds": [],
+      "column_top_errors": [],
+      "min_nonbonded_distance": 0.7038081256813965,
+      "pass": true
+    },
+    {
+      "n": 10,
+      "intentional_bridge_crossings": [
+        [
+          119,
+          125
+        ]
+      ],
+      "atom_overlaps": [],
+      "atom_bond_overlaps": [],
+      "bond_crossings": [],
+      "connector_collisions": [],
+      "label_overlaps": [],
+      "label_bond_overlaps": [],
+      "long_bonds": [],
+      "column_top_errors": [],
+      "min_nonbonded_distance": 0.7038081256813965,
+      "pass": true
+    },
+    {
+      "n": 11,
+      "intentional_bridge_crossings": [
+        [
+          119,
+          125
+        ]
+      ],
+      "atom_overlaps": [],
+      "atom_bond_overlaps": [],
+      "bond_crossings": [],
+      "connector_collisions": [],
+      "label_overlaps": [],
+      "label_bond_overlaps": [],
+      "long_bonds": [],
+      "column_top_errors": [],
+      "min_nonbonded_distance": 0.7038081256813965,
+      "pass": true
+    },
+    {
+      "n": 19,
+      "intentional_bridge_crossings": [
+        [
+          119,
+          125
+        ],
+        [
+          331,
+          337
+        ]
+      ],
+      "atom_overlaps": [],
+      "atom_bond_overlaps": [],
+      "bond_crossings": [],
+      "connector_collisions": [],
+      "label_overlaps": [],
+      "label_bond_overlaps": [],
+      "long_bonds": [],
+      "column_top_errors": [],
+      "min_nonbonded_distance": 0.7038081256813965,
+      "pass": true
+    },
+    {
+      "n": 20,
+      "intentional_bridge_crossings": [
+        [
+          119,
+          125
+        ],
+        [
+          331,
+          337
+        ]
+      ],
+      "atom_overlaps": [],
+      "atom_bond_overlaps": [],
+      "bond_crossings": [],
+      "connector_collisions": [],
+      "label_overlaps": [],
+      "label_bond_overlaps": [],
+      "long_bonds": [],
+      "column_top_errors": [],
+      "min_nonbonded_distance": 0.7038081256813965,
+      "pass": true
+    },
+    {
+      "n": 21,
+      "intentional_bridge_crossings": [
+        [
+          119,
+          125
+        ],
+        [
+          331,
+          337
+        ]
+      ],
+      "atom_overlaps": [],
+      "atom_bond_overlaps": [],
+      "bond_crossings": [],
+      "connector_collisions": [],
+      "label_overlaps": [],
+      "label_bond_overlaps": [],
+      "long_bonds": [],
+      "column_top_errors": [],
+      "min_nonbonded_distance": 0.7038081256813965,
+      "pass": true
+    },
+    {
+      "n": 60,
+      "intentional_bridge_crossings": [
+        [
+          119,
+          125
+        ],
+        [
+          331,
+          337
+        ],
+        [
+          543,
+          549
+        ],
+        [
+          755,
+          761
+        ],
+        [
+          967,
+          973
+        ],
+        [
+          1179,
+          1185
+        ]
+      ],
+      "atom_overlaps": [],
+      "atom_bond_overlaps": [],
+      "bond_crossings": [],
+      "connector_collisions": [],
+      "label_overlaps": [],
+      "label_bond_overlaps": [],
+      "long_bonds": [],
+      "column_top_errors": [],
+      "min_nonbonded_distance": 0.70380812568139,
+      "pass": true
+    },
+    {
+      "n": 100,
+      "intentional_bridge_crossings": [
+        [
+          119,
+          125
+        ],
+        [
+          331,
+          337
+        ],
+        [
+          543,
+          549
+        ],
+        [
+          755,
+          761
+        ],
+        [
+          967,
+          973
+        ],
+        [
+          1179,
+          1185
+        ],
+        [
+          1391,
+          1397
+        ],
+        [
+          1603,
+          1609
+        ],
+        [
+          1815,
+          1821
+        ],
+        [
+          2027,
+          2033
+        ]
+      ],
+      "atom_overlaps": [],
+      "atom_bond_overlaps": [],
+      "bond_crossings": [],
+      "connector_collisions": [],
+      "label_overlaps": [],
+      "label_bond_overlaps": [],
+      "long_bonds": [],
+      "column_top_errors": [],
+      "min_nonbonded_distance": 0.7038081256813695,
+      "pass": true
+    },
+    {
+      "n": 200,
+      "intentional_bridge_crossings": [
+        [
+          119,
+          125
+        ],
+        [
+          331,
+          337
+        ],
+        [
+          543,
+          549
+        ],
+        [
+          755,
+          761
+        ],
+        [
+          967,
+          973
+        ],
+        [
+          1179,
+          1185
+        ],
+        [
+          1391,
+          1397
+        ],
+        [
+          1603,
+          1609
+        ],
+        [
+          1815,
+          1821
+        ],
+        [
+          2027,
+          2033
+        ],
+        [
+          2239,
+          2245
+        ],
+        [
+          2451,
+          2457
+        ],
+        [
+          2663,
+          2669
+        ],
+        [
+          2875,
+          2881
+        ],
+        [
+          3087,
+          3093
+        ],
+        [
+          3299,
+          3305
+        ],
+        [
+          3511,
+          3517
+        ],
+        [
+          3723,
+          3729
+        ],
+        [
+          3935,
+          3941
+        ],
+        [
+          4147,
+          4153
+        ]
+      ],
+      "atom_overlaps": [],
+      "atom_bond_overlaps": [],
+      "bond_crossings": [],
+      "connector_collisions": [],
+      "label_overlaps": [],
+      "label_bond_overlaps": [],
+      "long_bonds": [],
+      "column_top_errors": [],
+      "min_nonbonded_distance": 0.7038081256813625,
+      "pass": true
+    }
+  ]
+}

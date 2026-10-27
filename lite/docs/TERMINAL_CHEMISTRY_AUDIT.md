@@ -1,4 +1,6 @@
-# Terminal chemistry audit — v0.5.2
+# Terminal chemistry audit — v0.6.0
+
+Current support: [attachment matrix](ATTACHMENT_SUPPORT_MATRIX.md). The v0.5.2 sections below are historical; v0.6.0 supersedes their family restrictions.
 
 基线：完整复制 v0.5.1 的 app、batch、custom_chemistry、docs、tests、vendor 和入口；没有启动 Conjugation engine。
 
@@ -36,3 +38,11 @@ canonical 为 `(p)`、`(pp)`、`(ppp)`；`[p]` / `[pp]` / `[ppp]`、`[PHO]`、`[
 - 与 C6N / C3N、spacer、dye、GalNAc、倒置或其他未验证结构直接相邻的 terminal phosphate；错误为 CHEMISTRY_UNSUPPORTED。
 - PMO、TNA、GNA 等非标准 terminal topology 本版没有扩展。
 - 悬空/连续 operator、无 residue、内部 phosphate token、空 token 均报错。没有新增反应或 Conjugation assembly。
+
+## v0.6.0 attachment-driven terminal phosphorus
+
+MOE and all 84 declared standard monomers now share the same attachment-driven engine for PO, PS (*), PS2 (**), Me-P (^), PN(DMI) (!), MsPA (#), at both termini. Examples: (p)*eA, (p)*eCMe, (p)*eG, eA*(p). [p] resolves to the same canonical notation/AST chemistry as (p). 2′ sugar modifications do not select terminal rules.
+
+The monomer declares 5_prime_attachment / 3_prime_attachment with an atom index, atom role, element, standard compatibility and supported terminal/internal chemistries. Runtime validates a real neutral alcohol OH before creating its P bond. Custom import produces the same contracts after attachment validation. Internal standard attachments validate these contracts too. Syntax errors use SYNTAX_ERROR; undefined attachments use CHEMISTRY_UNSUPPORTED; Batch isolates failed rows.
+
+See [generated support matrix](ATTACHMENT_SUPPORT_MATRIX.md), [architecture](ATTACHMENT_ARCHITECTURE.md), and tests/evidence/ATTACHMENT_MATRIX.json. Canonical phosphorus geometry is reused unchanged. CDXML retains its existing Experimental status.

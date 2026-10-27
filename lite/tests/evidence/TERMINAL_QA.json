@@ -870,8 +870,8 @@
       "seq": "*rA",
       "error": [
         {
-          "code": "INVALID_CHEMISTRY_OR_NOTATION",
-          "message": "Unsupported notation at 1: *rA; terminal chemistry supports (p), (pp), (ppp) only at sequence ends"
+          "code": "SYNTAX_ERROR",
+          "message": "SYNTAX_ERROR: Unsupported notation at 1: *rA; terminal chemistry supports (p), (pp), (ppp) only at sequence ends"
         }
       ]
     },
@@ -879,8 +879,8 @@
       "seq": "rA*",
       "error": [
         {
-          "code": "INVALID_CHEMISTRY_OR_NOTATION",
-          "message": "末尾不能是 linkage"
+          "code": "SYNTAX_ERROR",
+          "message": "SYNTAX_ERROR: 末尾不能是 linkage"
         }
       ]
     },
@@ -915,8 +915,8 @@
       "seq": "rA***(p)",
       "error": [
         {
-          "code": "INVALID_CHEMISTRY_OR_NOTATION",
-          "message": "末尾不能是 linkage"
+          "code": "SYNTAX_ERROR",
+          "message": "SYNTAX_ERROR: 末尾不能是 linkage"
         }
       ]
     },
@@ -924,8 +924,8 @@
       "seq": "rA*!rG",
       "error": [
         {
-          "code": "INVALID_CHEMISTRY_OR_NOTATION",
-          "message": "Unsupported notation at 4: !rG; terminal chemistry supports (p), (pp), (ppp) only at sequence ends"
+          "code": "SYNTAX_ERROR",
+          "message": "SYNTAX_ERROR: Unsupported notation at 4: !rG; terminal chemistry supports (p), (pp), (ppp) only at sequence ends"
         }
       ]
     },
@@ -933,8 +933,8 @@
       "seq": "rA()",
       "error": [
         {
-          "code": "INVALID_CHEMISTRY_OR_NOTATION",
-          "message": "Unsupported notation at 3: (); terminal chemistry supports (p), (pp), (ppp) only at sequence ends"
+          "code": "SYNTAX_ERROR",
+          "message": "SYNTAX_ERROR: Unsupported notation at 3: (); terminal chemistry supports (p), (pp), (ppp) only at sequence ends"
         }
       ]
     },
@@ -942,8 +942,8 @@
       "seq": "()rA",
       "error": [
         {
-          "code": "INVALID_CHEMISTRY_OR_NOTATION",
-          "message": "Unsupported notation at 1: ()rA; terminal chemistry supports (p), (pp), (ppp) only at sequence ends"
+          "code": "SYNTAX_ERROR",
+          "message": "SYNTAX_ERROR: Unsupported notation at 1: ()rA; terminal chemistry supports (p), (pp), (ppp) only at sequence ends"
         }
       ]
     },
@@ -951,8 +951,8 @@
       "seq": "rA(p)rG",
       "error": [
         {
-          "code": "INVALID_CHEMISTRY_OR_NOTATION",
-          "message": "Unsupported notation at 3: (p)rG; terminal chemistry supports (p), (pp), (ppp) only at sequence ends"
+          "code": "SYNTAX_ERROR",
+          "message": "SYNTAX_ERROR: Unsupported notation at 3: (p)rG; terminal chemistry supports (p), (pp), (ppp) only at sequence ends"
         }
       ]
     },
@@ -961,7 +961,7 @@
       "error": [
         {
           "code": "CHEMISTRY_UNSUPPORTED",
-          "message": "CHEMISTRY_UNSUPPORTED: terminal phosphate attachment not validated for {C6N}"
+          "message": "CHEMISTRY_UNSUPPORTED: {C6N} 5_prime_attachment / PS; No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
         }
       ]
     },
@@ -970,7 +970,7 @@
       "error": [
         {
           "code": "CHEMISTRY_UNSUPPORTED",
-          "message": "CHEMISTRY_UNSUPPORTED: terminal phosphate attachment not validated for {C3N}"
+          "message": "CHEMISTRY_UNSUPPORTED: {C3N} 3_prime_attachment / PS; No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
         }
       ]
     },
@@ -979,7 +979,7 @@
       "error": [
         {
           "code": "CHEMISTRY_UNSUPPORTED",
-          "message": "CHEMISTRY_UNSUPPORTED: terminal phosphate attachment not validated for {spacer3}"
+          "message": "CHEMISTRY_UNSUPPORTED: {spacer3} 5_prime_attachment / PO; No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
         }
       ]
     },
@@ -988,7 +988,7 @@
       "error": [
         {
           "code": "CHEMISTRY_UNSUPPORTED",
-          "message": "CHEMISTRY_UNSUPPORTED: terminal phosphate attachment not validated for {FAM}"
+          "message": "CHEMISTRY_UNSUPPORTED: {FAM} 3_prime_attachment / PO; No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
         }
       ]
     },
@@ -2498,10 +2498,10 @@
       "epsilon260": "",
       "nmol/OD260": "",
       "ug/OD260": "",
-      "Chemistry Status": "INVALID_TOKEN",
+      "Chemistry Status": "SYNTAX_ERROR",
       "Structure Status": "STRUCTURE_UNSUPPORTED",
       "OD Status": "UNSUPPORTED",
-      "Error/Warning": "INVALID_TOKEN: 末尾不能是 linkage",
+      "Error/Warning": "SYNTAX_ERROR: SYNTAX_ERROR: 末尾不能是 linkage",
       "Output Name": "",
       "Source Row": 5
     }

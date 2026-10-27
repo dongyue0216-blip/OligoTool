@@ -59,7 +59,7 @@
     {
       "sequence": "mA*mX*mG",
       "formula": "—",
-      "error": "Unsupported notation at 4: mX*mG; terminal chemistry supports (p), (pp), (ppp) only at sequence ends",
+      "error": "SYNTAX_ERROR: Unsupported notation at 4: mX*mG; terminal chemistry supports (p), (pp), (ppp) only at sequence ends",
       "svg": 0
     },
     {
@@ -92,7 +92,7 @@
     }
   },
   "preview": "5 rows · Valid 5 · Invalid 0 · Recognized/Pending chemistry 0 · 预览前 100 行；全部行均参与计算。",
-  "batch": "完成 · 5 / 5 · 0.02 s · ZIP 将在下载时打包",
+  "batch": "完成 · 5 / 5 · 0.01 s · ZIP 将在下载时打包",
   "downloaded": [
     "template.xlsx",
     "results.xlsx",

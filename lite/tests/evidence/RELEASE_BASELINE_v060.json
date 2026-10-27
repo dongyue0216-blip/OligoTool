@@ -1,0 +1,12 @@
+{
+  "version": "0.6.0",
+  "preserved": {
+    "chemistry.js": "6133e6b26096d71f9dc5ab095ff6c62e73b3dd8eeafc8fca86d9b9ddf8e16bd9",
+    "reference-data.js": "74ad9e47f3ebb2c1479b374afec9a820802a42187ee443108567d4ff8e530dfe",
+    "coverage-data.js": "2f1139e0516aebfea91e42e6733051cba6fc0b6819345fafa60a1f8042bc090f",
+    "conjugation-pool.js": "37491d659833b29cff162b9596be9c0c633b6618559344a14d4c70a4e545a79f",
+    "app.js": "55f83c7cfe474ed2eba9884bd65cf14c348b54f28c412601511979686bf53aea"
+  },
+  "note": "Current clean-release app hashes. BATCH_BASELINE.json remains historical v0.5.0 evidence.",
+  "reason": "Current release hashes. Historical v053 manifest preserved unchanged; intentional chemistry metadata and engine edits covered by attachment matrix."
+}

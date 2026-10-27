@@ -32,3 +32,12 @@ Direct v0.4.1 upgrade; Phase 1 coverage matrix and C5 methyl audit; terminal inv
 - Master records, evidence and reagent-to-final transformations; bracket phosphate canonical notation.
 - Structure-first UI, fit-to-view, layout inspection; automatic glyph, export-stereo and long-chain regressions.
 - Pending variants fail closed; custom marker workflow retained.
+
+
+## v0.6.0 attachment-driven terminal phosphorus
+
+MOE and all 84 declared standard monomers now share the same attachment-driven engine for PO, PS (*), PS2 (**), Me-P (^), PN(DMI) (!), MsPA (#), at both termini. Examples: (p)*eA, (p)*eCMe, (p)*eG, eA*(p). [p] resolves to the same canonical notation/AST chemistry as (p). 2′ sugar modifications do not select terminal rules.
+
+The monomer declares 5_prime_attachment / 3_prime_attachment with an atom index, atom role, element, standard compatibility and supported terminal/internal chemistries. Runtime validates a real neutral alcohol OH before creating its P bond. Custom import produces the same contracts after attachment validation. Internal standard attachments validate these contracts too. Syntax errors use SYNTAX_ERROR; undefined attachments use CHEMISTRY_UNSUPPORTED; Batch isolates failed rows.
+
+See [generated support matrix](ATTACHMENT_SUPPORT_MATRIX.md), [architecture](ATTACHMENT_ARCHITECTURE.md), and tests/evidence/ATTACHMENT_MATRIX.json. Canonical phosphorus geometry is reused unchanged. CDXML retains its existing Experimental status.

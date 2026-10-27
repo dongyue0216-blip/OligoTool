@@ -19,10 +19,10 @@ function parse(input){
  if(!seq)throw Error('SYNTAX_ERROR: terminal phosphate requires a residue');
  let pos=0,residues=[],links=[];
  while(pos<seq.length){let code;
- if(seq[pos]==='['){let close=seq[pos]==='['?']':'}',end=seq.indexOf(close,pos);if(end<0)throw Error('Missing '+close);let id=seq.slice(pos+1,end);if(typeof CONJUGATION_POOL!=='undefined'&&CONJUGATION_POOL.some(e=>e.id===id))throw Error('CONJUGATION_REAGENT: ['+id+'] belongs to Conjugation Pool; sequence assembly is unavailable');if(!/^[A-Za-z0-9][A-Za-z0-9_.-]{0,47}$/.test(id))throw Error('Invalid custom unit ID: '+id);const alias=COVERAGE.aliases?.['['+id+']'];if(alias)id=alias.slice(1,-1);code='{'+id+'}';if(!template(code)&&!COVERAGE.entries.some(e=>e.notation==='['+id+']'))throw Error('['+id+'] not found in Custom Chemistry Library');pos=end+1;}
+ if(seq[pos]==='['){let close=seq[pos]==='['?']':'}',end=seq.indexOf(close,pos);if(end<0)throw Error('SYNTAX_ERROR: Missing '+close);let id=seq.slice(pos+1,end);if(typeof CONJUGATION_POOL!=='undefined'&&CONJUGATION_POOL.some(e=>e.id===id))throw Error('CONJUGATION_REAGENT: ['+id+'] belongs to Conjugation Pool; sequence assembly is unavailable');if(!/^[A-Za-z0-9][A-Za-z0-9_.-]{0,47}$/.test(id))throw Error('Invalid custom unit ID: '+id);const alias=COVERAGE.aliases?.['['+id+']'];if(alias)id=alias.slice(1,-1);code='{'+id+'}';if(!template(code)&&!COVERAGE.entries.some(e=>e.notation==='['+id+']'))throw Error('['+id+'] not found in Custom Chemistry Library');pos=end+1;}
  else if('ACGT'.includes(seq[pos])&&!COVERAGE.entries.some(e=>e.notation.length>1&&seq.startsWith(e.notation,pos)))code='d'+seq[pos++];
- else{code=[...new Set([...Object.keys(REFERENCE.templates).filter(c=>c[0]!=='{'),...COVERAGE.entries.filter(e=>!['special','spacer','fluorescent','backbone'].includes(e.family)).map(e=>e.notation)])].sort((a,b)=>b.length-a.length).find(c=>seq.startsWith(c,pos));if(!code)throw Error('Unsupported notation at '+(pos+1)+': '+seq.slice(pos)+'; terminal chemistry supports (p), (pp), (ppp) only at sequence ends');pos+=code.length;}
- residues.push(code);if(pos<seq.length){let link='PO';if(seq.startsWith('**',pos)){link='PS2';pos+=2;}else if(seq[pos]==='*'){link='PS';pos++;}else if(seq[pos]==='#'){link='MsPA';pos++;}else if(seq[pos]==='^'){link='Me-P';pos++;}else if(seq[pos]==='!'){link='PN(dmi)';pos++;}links.push(link);if(pos===seq.length)throw Error('末尾不能是 linkage');}}
+ else{code=[...new Set([...Object.keys(REFERENCE.templates).filter(c=>c[0]!=='{'),...COVERAGE.entries.filter(e=>!['special','spacer','fluorescent','backbone'].includes(e.family)).map(e=>e.notation)])].sort((a,b)=>b.length-a.length).find(c=>seq.startsWith(c,pos));if(!code)throw Error('SYNTAX_ERROR: Unsupported notation at '+(pos+1)+': '+seq.slice(pos)+'; terminal chemistry supports (p), (pp), (ppp) only at sequence ends');pos+=code.length;}
+ residues.push(code);if(pos<seq.length){let link='PO';if(seq.startsWith('**',pos)){link='PS2';pos+=2;}else if(seq[pos]==='*'){link='PS';pos++;}else if(seq[pos]==='#'){link='MsPA';pos++;}else if(seq[pos]==='^'){link='Me-P';pos++;}else if(seq[pos]==='!'){link='PN(dmi)';pos++;}links.push(link);if(pos===seq.length)throw Error('SYNTAX_ERROR: 末尾不能是 linkage');}}
 
  const symbols={PO:'',PS:'*',PS2:'**',MsPA:'#','Me-P':'^','PN(dmi)':'!'};
  const cap=side=>'('+'p'.repeat(terminal[side])+')',symbol=side=>symbols[terminalChemistry[side]];
@@ -35,11 +35,20 @@ function formula(f){return ['C','H','N','O','P','S','F',...Object.keys(f).filter
 function masses(f){let exact=0,avg=0;for(const [e,n]of Object.entries(f)){if(!(e in REFERENCE.exact))throw Error('质量表未覆盖元素 '+e);exact+=REFERENCE.exact[e]*n;avg+=REFERENCE.average[e]*n;}return {exact_mass:exact,average_mw:avg};}
 function composition(p){let f={};for(const r of p.residues){const t=template(r);add(f,t.formula?formulaObj(t.formula):graphFormula(t));}for(const l of p.links){let r=REFERENCE.linkRules[l];add(f,formulaObj(r.formula_add));add(f,formulaObj(r.formula_remove),-1);}addTerminalFormula(f,p);return f;}
 function addTerminalFormula(f,p){for(const [side,n]of Object.entries(p.terminal)){if(!n)continue;const code=p.terminalChemistry[side];if(code==='PO')add(f,{H:n,P:n,O:3*n});else{const rule=REFERENCE.linkRules[code];add(f,formulaObj(rule.formula_add));add(f,formulaObj(rule.formula_remove),-1);add(f,{H:2,O:1});}}}
+
+// The monomer contract selects a real atom role. No family names or oxygen guessing.
+function terminalAttachment(t,side,code,res,position='terminal'){
+ const key=side==='five'?'5_prime_attachment':'3_prime_attachment',site=t?.[key];
+ if(!site?.standard||!site[position+'_phosphorus']?.includes(code))throw Error('CHEMISTRY_UNSUPPORTED: '+res+' '+key+' / '+code+'; '+(site?.reason||'attachment metadata not declared'));
+ const i=site.atom,a=t.atoms[i],bs=t.bonds.filter(b=>b.a===i||b.b===i);
+ if(!Number.isInteger(i)||a?.e!==site.element||a.e!=='O'||a.h!==1||bs.length!==1||bs[0].o!==1||a.q)throw Error('CHEMISTRY_UNSUPPORTED: invalid alcohol attachment contract for '+res+' '+key);
+ return i;
+}
 function validateChemistry(p){
  for(const [side,n]of Object.entries(p.terminal))if(n){
  const code=p.terminalChemistry[side],res=p.residues[side==='five'?0:p.residues.length-1],t=template(res);
  if(n>1&&code!=='PO')throw Error('CHEMISTRY_UNSUPPORTED: modified polyphosphate requires explicit phosphorus positions');
- if((res.startsWith('{')&&!customLibrary[res])||!t||!['DNA','RNA','OMe','F'].includes(t.family)&&!/^([drmf])[ACGTUI]/.test(res)&&!customLibrary[res])throw Error('CHEMISTRY_UNSUPPORTED: terminal phosphate attachment not validated for '+res);
+ terminalAttachment(t,side,code,res);
  }
 
  const tna=p.residues.filter(code=>template(code)?.family==='TNA');
@@ -62,7 +71,10 @@ function validateChemistry(p){
  if(t.o3===null && i!==0&&i!==p.residues.length-1)throw Error('INVALID_POSITION: '+name+' is a terminal modifier');
  if(t.o3===null && (i===0?p.terminal.five:p.terminal.three))throw Error('INVALID_POSITION: phosphate on amino modifier distal N is unsupported');
  }
- for(const code of p.links)if(!REFERENCE.links[code])throw Error('STRUCTURE_VARIANT_PENDING: '+code+' exact linkage unavailable');
+ for(const [i,code]of p.links.entries()){
+ if(!REFERENCE.links[code])throw Error('STRUCTURE_VARIANT_PENDING: '+code+' exact linkage unavailable');
+ for(const [ri,side]of [[i,'three'],[i+1,'five']]){const t=template(p.residues[ri]);if(t?.phosphorus_topology==='standard-5-to-3')terminalAttachment(t,side,code,p.residues[ri],'internal');}
+ }
 }
 function od(p,mw){
  const provenance={parameters:'reference-data.js',source:'https://www.genelink.com/Literature/PS/Oligo_Analysis_Parameters_V3.3.pdf',equation:'sum dinucleotide epsilon - sum internal mononucleotide epsilon',mass_basis:'average_mw',convention:'1 OD260 = A260 1 in 1 mL at 1 cm',limitations:'single-strand reference model; pH, salt, folding and hypochromicity may differ experimentally'};
@@ -152,7 +164,7 @@ function assemble(p){
  g.routes.push({bond:g.bonds.length-1,boundary:i+1,atoms:[offset+t.p,b],points:[[P.x,P.y],[P.x,P.y+3],[gutter,P.y+3],[gutter,top],[B.x,top],[B.x,B.y]]});}
  A.h--;B.h--;}
  for(const [side,count]of Object.entries(p.terminal||{})){
- if(!count)continue;let anchor=side==='five'?sites[0].o5:sites[sites.length-1].o3,sign=side==='five'?-1:1;
+ if(!count)continue;const ri=side==='five'?0:p.residues.length-1,tpl=template(p.residues[ri]),local=terminalAttachment(tpl,side,p.terminalChemistry[side],p.residues[ri]);let anchor=sites[ri].o5-tpl.o5+local,sign=side==='five'?-1:1;
  g.atoms[anchor].h--;let previous=anchor,origin=g.atoms[anchor];
  for(let k=0;k<count;k++){
  let x=origin.x,y=origin.y+sign*(3+6*k),pi=g.atoms.length;
@@ -192,7 +204,7 @@ function registerCustom(name,imported){
  let ax=A.x,ay=A.y;
  // One documented rigid rotation at import, never reflection/scaling. Wedges retain handedness.
  for(const a of g.atoms){let x=a.x-ax,y=a.y-ay;a.x=(x*dy-y*dx)/L;a.y=(x*dx+y*dy)/L;}
- g.o5=five;g.o3=three;if(imported.extinction){if(!validExtinction(imported.extinction))throw Error('Invalid extinction metadata: model, nonnegative contribution and source required');g.extinction=clone(imported.extinction);}customLibrary['{'+name+'}']=clone(g);return clone(g);
+ g.o5=five;g.o3=three;g.phosphorus_topology='standard-5-to-3';for(const [key,atom]of [['5_prime_attachment',five],['3_prime_attachment',three]])g[key]={atom,atom_role:key,element:'O',standard:true,terminal_phosphorus:['PO','PS','PS2','Me-P','PN(dmi)','MsPA'],internal_phosphorus:['PO','PS','PS2','Me-P','PN(dmi)','MsPA']};if(imported.extinction){if(!validExtinction(imported.extinction))throw Error('Invalid extinction metadata: model, nonnegative contribution and source required');g.extinction=clone(imported.extinction);}customLibrary['{'+name+'}']=clone(g);return clone(g);
 }
 function inferHydrogens(g){
  for(let i=0;i<g.atoms.length;i++){let a=g.atoms[i],v=g.bonds.filter(b=>b.a===i||b.b===i).reduce((s,b)=>s+b.o,0),target={C:4,N:3,O:2,F:1,S:2,H:1}[a.e];

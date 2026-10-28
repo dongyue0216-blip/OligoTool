@@ -1,3 +1,5 @@
+Current v0.7.0 direction/topology rules: [notation support](NOTATION_SUPPORT_v070.md), [architecture audit](BUILDING_BLOCK_ARCHITECTURE.md). These supersede historical attachment limitations below.
+
 # v0.4.2 Sequence requirement matrix
 
 FULL = parser + graph + formula + SVG, subject to position/topology restrictions.

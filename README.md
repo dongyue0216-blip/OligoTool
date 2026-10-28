@@ -1,8 +1,8 @@
 # Oligo Chemistry Toolkit
 
-## Latest browser edition: Lite v0.6.0
+## Latest browser edition: Lite v0.7.0
 
-Download the clean ZIP from [Lite v0.6.0](https://github.com/dongyue0216-blip/OligoTool/releases/tag/lite-v0.6.0), extract the whole folder, and double-click **Start.html**. No installation or network required. From a source checkout, open **lite/Start.html**.
+Download the clean ZIP from [Lite v0.7.0](https://github.com/dongyue0216-blip/OligoTool/releases/tag/lite-v0.7.0), extract the whole folder, and double-click **Start.html**. No installation or network required. From a source checkout, open **lite/Start.html**.
 
 Single Sequence, real atom/bond structure rendering, formula/MW/epsilon260/nmol per OD/ug per OD, terminal phosphate/PS notation, Batch Excel and Custom Chemistry are supported. See [Lite README](lite/README.md) for notation, supported chemistry and limitations. Conjugation Pool is metadata infrastructure; no conjugation reaction engine is implemented.
 

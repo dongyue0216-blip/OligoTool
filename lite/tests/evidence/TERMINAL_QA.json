@@ -961,7 +961,7 @@
       "error": [
         {
           "code": "CHEMISTRY_UNSUPPORTED",
-          "message": "CHEMISTRY_UNSUPPORTED: {C6N} 5_prime_attachment / PS; No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+          "message": "CHEMISTRY_UNSUPPORTED: {C6N} upstream / PS; Terminal chemistry has no validated contract for this topology/modifier"
         }
       ]
     },
@@ -970,7 +970,7 @@
       "error": [
         {
           "code": "CHEMISTRY_UNSUPPORTED",
-          "message": "CHEMISTRY_UNSUPPORTED: {C3N} 3_prime_attachment / PS; No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+          "message": "CHEMISTRY_UNSUPPORTED: {C3N} downstream / PS; Terminal chemistry has no validated contract for this topology/modifier"
         }
       ]
     },
@@ -979,7 +979,7 @@
       "error": [
         {
           "code": "CHEMISTRY_UNSUPPORTED",
-          "message": "CHEMISTRY_UNSUPPORTED: {spacer3} 5_prime_attachment / PO; No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+          "message": "CHEMISTRY_UNSUPPORTED: {spacer3} upstream / PO; Terminal chemistry has no validated contract for this topology/modifier"
         }
       ]
     },
@@ -988,7 +988,7 @@
       "error": [
         {
           "code": "CHEMISTRY_UNSUPPORTED",
-          "message": "CHEMISTRY_UNSUPPORTED: {FAM} 3_prime_attachment / PO; No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+          "message": "CHEMISTRY_UNSUPPORTED: {FAM} downstream / PO; Terminal chemistry has no validated contract for this topology/modifier"
         }
       ]
     },

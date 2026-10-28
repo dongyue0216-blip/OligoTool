@@ -1,0 +1,26 @@
+{
+  "browser": "Microsoft Edge",
+  "saveAndNew": true,
+  "newCustom": true,
+  "persistence": true,
+  "oneSite": true,
+  "singleBatch": {
+    "formula": "C30H47N10O17P3S",
+    "batch": "C30H47N10O17P3S",
+    "files": 4
+  },
+  "largeFileBytes": 2183379,
+  "largeFit": {
+    "container": 1080,
+    "width": 1080,
+    "height": 3.140625,
+    "viewBox": [
+      -2,
+      -2,
+      1612.6273193359375,
+      4.670820236206055
+    ],
+    "atoms": 1200
+  },
+  "errors": []
+}

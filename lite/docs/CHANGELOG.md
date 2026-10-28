@@ -1,3 +1,12 @@
+# v0.7.0
+
+- Unify standard and user blocks through directional attachment contracts; move topology and placement decisions out of family dispatch.
+- Preserve dedicated PMO phosphorodiamidate and actual TNA/GNA O3→O2 topology; reject undefined mixtures/termini explicitly.
+- Support one-site terminal-only Custom blocks, primary/secondary OH combinations, V3000, direct O/SDF marker metadata and manual fallback.
+- Remove Custom file/size/span caps; normalize coordinates, avoid spread-argument bounds limits and fit the complete viewer.
+- Add Save & New / New Custom Chemistry and complete reset while retaining saved items.
+- Add registry, large-graph, formula/export, Single/Batch and real-browser regressions. See TEST_REPORT_v070.md.
+
 # v0.5.3
 
 统一 phosphorusGeometry、末端轴向间距与 SVG 元素中心；新增 tests/visual gallery、几何及浏览器回归。详见 VISUAL_CONSISTENCY_v053.md。

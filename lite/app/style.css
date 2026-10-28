@@ -7,3 +7,5 @@
 #structure{height:650px;min-height:350px}.opticalmetrics #ug{font-size:25px;color:inherit}#results{box-shadow:none}.toolbar{align-items:center;gap:10px;flex-wrap:wrap}#layoutstatus{overflow-wrap:anywhere}
 
 #batch table{border-collapse:collapse;font-size:12px;min-width:100%}#batch th,#batch td{border:1px solid #dce5df;padding:8px;max-width:420px;overflow-wrap:anywhere;white-space:pre-wrap}#batch th{position:sticky;top:0;background:#eaf1ed;text-align:left}#batch .toolbar{flex-wrap:wrap;gap:12px}#batch select{max-width:260px;padding:6px}#batch input[type=checkbox]{width:auto}
+
+#custompreview svg{min-width:0;width:100%;height:auto;max-height:400px}

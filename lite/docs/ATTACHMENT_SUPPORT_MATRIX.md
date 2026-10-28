@@ -1,4 +1,4 @@
-# Attachment phosphorus support — v0.6.0
+# Attachment phosphorus support — v0.7.0
 
 Generated from declared monomer contracts. Each listed member is tested for PO / PS / PS2 / Me-P / PN(DMI) / MsPA at 5′ terminal, internal and 3′ terminal; formula, atom counts, both masses, export graphs and Single/Batch parity.
 
@@ -18,4 +18,4 @@ Generated from declared monomer contracts. Each listed member is tested for PO /
 |ENA|ENA-A, ENA-C, ENA-G, ENA-U, ENA-T, ENA-I, ENA-CMe|All six chemistries|
 |Benner|Z|All six chemistries|
 
-Alternative topology PMO (OH/NH), TNA and GNA (3′→2′), Vpm/Vpe, and built-in modifiers lack a standard terminal contract and reject terminal phosphorus as CHEMISTRY_UNSUPPORTED. Their existing uncapped/internal behavior is retained. cEt has no implemented graph in this registry, so no support is claimed. Modified polyphosphates require explicit phosphorus-position definitions and remain unsupported. Custom monomers obtain contracts only after two distinct real neutral alcohol attachment sites pass import validation.
+Alternative topology PMO (OH/NH), TNA and GNA (3′→2′), Vpm/Vpe, and built-in modifiers lack a standard terminal contract and reject terminal phosphorus as CHEMISTRY_UNSUPPORTED. Their existing uncapped/internal behavior is retained. cEt has no implemented graph in this registry, so no support is claimed. Modified polyphosphates require explicit phosphorus-position definitions and remain unsupported. Custom monomers obtain contracts after one or two real neutral alcohol attachment sites pass import validation. A missing side is never fabricated; see BUILDING_BLOCK_ARCHITECTURE.md.

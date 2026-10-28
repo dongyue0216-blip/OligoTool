@@ -1,3 +1,5 @@
+Current v0.7.0 direction/topology rules: [notation support](NOTATION_SUPPORT_v070.md), [architecture audit](BUILDING_BLOCK_ARCHITECTURE.md). These supersede historical attachment limitations below.
+
 # Terminal chemistry audit — v0.6.0
 
 Current support: [attachment matrix](ATTACHMENT_SUPPORT_MATRIX.md). The v0.5.2 sections below are historical; v0.6.0 supersedes their family restrictions.

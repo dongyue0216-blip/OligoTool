@@ -58,7 +58,7 @@ function runLiteRegression(){
  test('layout detectors reject deliberately damaged geometry',()=>{const g=L.buildStructure('rArC');g.atoms[1].x=g.atoms[0].x;g.atoms[1].y=g.atoms[0].y;assert(!L.quality(g).pass);assert(L.quality(g).label_bond_overlaps.length||L.quality(g).atom_bond_overlaps.length);});
  test('P stereochemistry unspecified',()=>{const g=L.buildStructure('rA*rC**rG^rU!mA#eC');for(const b of g.bonds)if(g.atoms[b.a].e==='P'||g.atoms[b.b].e==='P')eq(b.s||0,0);});
  test('built-in IDs cannot be silently replaced',()=>{let rejected=false;try{L.registerCustom('PEG4',imported);}catch(e){rejected=true;}assert(rejected);});
- test('mixed topology fails explicitly',()=>{for(const seq of ['pArA','rAtA'])eq(L.calculateSafe(seq).errors[0].code,'UNSUPPORTED_MIXED_TOPOLOGY');});
+ test('mixed topology fails explicitly',()=>{for(const seq of ['pArA','rAtA'])eq(L.calculateSafe(seq).errors[0].code,'CHEMISTRY_UNSUPPORTED');});
  test('real topology directions',()=>{eq(L.buildStructure('tAtG').direction,'3′ → 2′');eq(L.buildStructure('AgnTgn').direction,'3′ → 2′');assert(L.calculate('pApC').linkages.every(l=>l==='PMO'));});
  test('conjugate deprotection formulas',()=>{eq(L.calculate('[FAM]').chemistry.formula,'C27H25NO7');eq(L.calculate('[L96]').chemistry.formula,'C78H139N11O31');eq(L.calculate('[NAG37]').chemistry.formula,'C53H92N8O27');for(const s of ['[FAM]rA','rA[L96]','[NAG37]rA']){eq(L.calculate(s).optical.status,'NEEDS_PARAMETER');assert(L.quality(L.buildStructure(s)).pass);}});
  test('conjugate position guards',()=>{for(const seq of ['rA[FAM]','[L96]rA','rA[NAG37]'])eq(L.calculateSafe(seq).errors[0].code,'INVALID_POSITION');});

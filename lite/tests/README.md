@@ -19,3 +19,20 @@ node tests/regression/verify-batch.cjs
 Open visual/gallery.html. Run node tests/regression/visual.cjs and node tests/regression/terminal.cjs from release root. Browser screenshot script: tests/regression/visual-browser.cjs (Playwright + Edge required).
 
 当前发布的文件完整性基线为 evidence/RELEASE_BASELINE_v053.json；BATCH_BASELINE.json 为 v0.5.0 的历史证据。浏览器测试使用 PLAYWRIGHT_MODULE 或可解析的 playwright 包。
+
+## v0.7.0 current validation
+
+```
+node tests/release/sync-registry.cjs --check
+node tests/regression/building-blocks.cjs
+node tests/regression/attachment-matrix.cjs
+node tests/regression/verify-release.cjs
+node tests/regression/verify-batch.cjs
+node tests/regression/terminal.cjs
+node tests/regression/visual.cjs
+node tests/regression/custom-browser.cjs
+node tests/regression/attachment-browser.cjs
+node tests/regression/visual-browser.cjs
+```
+
+Browser scripts need Playwright and Edge. Set PLAYWRIGHT_MODULE if using a preinstalled module. Current file-integrity baseline is RELEASE_BASELINE_v070.json; older baselines remain historical evidence. Schema/registry snapshots are regenerated with sync-registry.cjs and checked with --check. TEST_REPORT_v070.md records actual results and scope.

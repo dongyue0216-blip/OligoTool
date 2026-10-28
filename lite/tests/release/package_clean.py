@@ -3,7 +3,7 @@ from pathlib import Path
 import argparse, hashlib, json, re, shutil, tempfile, zipfile
 
 DIRS = ('app', 'batch', 'custom_chemistry', 'docs', 'tests', 'vendor')
-FILES = ('Start.html', 'README.md', 'LICENSE', 'LICENSE.md', 'LICENSE.txt', 'NOTICE', 'NOTICE.md')
+FILES = ('Start.html', 'README.md', 'VERSION', 'LICENSE', 'LICENSE.md', 'LICENSE.txt', 'NOTICE', 'NOTICE.md')
 BAD = re.compile(r'(^Oligo_Chemistry_Toolkit_Lite_v|^(__pycache__|node_modules|\.git|\.cache|cache|tmp|temp|debug|staging|output)$|\.(zip|pyc|tmp|bak|log)$|debug[-_]?dump)', re.I)
 
 def forbidden(rel):
@@ -26,6 +26,27 @@ def validate(root):
         target = (root/ref.split('#')[0].split('?')[0]).resolve()
         assert target.is_relative_to(root.resolve()) and target.is_file(), f'Broken entry resource: {ref}'
     return len(refs)
+
+def scan_public_content(root):
+    patterns = {
+        'credential': re.compile(r'(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9]{24,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----)'),
+        'private local path': re.compile(r'(?:[A-Z]:\\Users\\|/home/[^/]+/|/mnt/data/)', re.I),
+        'private dataset identifier': re.compile(r'\b(?:actual_conditions|crude_purity|customer_data|client_data|manufacturing_dataset)\b'),
+        'internal domain': re.compile(r'https?://[^\s/]+\.(?:corp|internal)(?:/|\b)', re.I),
+    }
+    findings=[]; scanned=0
+    for p in root.rglob('*'):
+        if not p.is_file() or p.suffix.lower() not in ('.js','.cjs','.json','.html','.css','.md','.txt','.mol','.sdf','.csv','.svg','.py'):
+            continue
+        scanned+=1
+        text=p.read_text(encoding='utf-8-sig')
+        # This guard's own regex definitions are generic scanner code, not datasets.
+        if p.name == 'package_clean.py':
+            continue
+        for label,pattern in patterns.items():
+            if pattern.search(text): findings.append({'file':p.relative_to(root).as_posix(),'kind':label})
+    assert not findings, 'Public-content guard: '+str(findings)
+    return {'scanned_text_files':scanned,'sensitive_findings':findings}
 
 def build(source, destination):
     source, destination = source.resolve(), destination.resolve()
@@ -59,6 +80,7 @@ def build(source, destination):
                     shutil.copy2(p,target)
                     assert p.read_bytes()==target.read_bytes()
         refs=validate(stage)
+        public_scan=scan_public_content(stage)
         manifest={p.relative_to(stage).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(stage.rglob('*')) if p.is_file()}
         archive=destination/(source.name+'_clean.zip')
         with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
@@ -72,7 +94,7 @@ def build(source, destination):
             validate(extracted/source.name)
         digest=hashlib.sha256(archive.read_bytes()).hexdigest()
         Path(str(archive)+'.sha256').write_text(digest+'  '+archive.name+'\n')
-        report={'source':str(source),'zip':str(archive),'files':len(manifest),'entryReferences':refs,'excluded':excluded,'sha256':digest,'manifest':manifest}
+        report={'source':str(source),'zip':str(archive),'files':len(manifest),'entryReferences':refs,'excluded':excluded,'public_scan':public_scan,'sha256':digest,'manifest':manifest}
         (destination/'PACKAGING_AUDIT.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
         print(json.dumps({k:v for k,v in report.items() if k not in ('manifest','excluded')}))
 

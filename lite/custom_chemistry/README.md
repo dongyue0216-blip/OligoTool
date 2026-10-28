@@ -1,17 +1,15 @@
-# Custom Chemistry
+# Custom Chemistry v0.8.0
 
-此目录保存发布资源，不是浏览器用户库。
+MOL/SDF → MolecularGraph → 选择真实 OH → BuildingBlock → 与标准库共用的 AssemblyGraph 和 linkage engine。
 
-- attachment-demo.mol：attachment marker 示例。
-- custom-MOE-5-3-example.mol：MOE 核苷 5/3 示例。
-- custom-extinction.schema.json：可选 extinction metadata schema。
+导入 V2000/V3000 MOL 或单分子 SDF。5/3 marker 自动识别失败时使用 manual fallback：点击真实 OH 的 O 或下拉选 atom。upstream/downstream 是方向，不表示该 OH 必须是天然糖环的 C5′/C3′。伯醇和仲醇均允许。
 
-从根目录 Start.html → Advanced / Custom Chemistry 上传 V2000 / V3000 MOL 或单分子 SDF，确认一个或两个 OH attachment，Save 后立即使用 `[ID]`，Single 与 Batch 共用相同引擎。
+一个 OH：选择 upstream 或 downstream，保存后自然只适用于正确方向的末端。两个不同 OH：两个方向均可连接，可内部组装。不能把同一个 O 填成两个位点。Custom 不自动颠倒用户指定方向。
 
-两个 OH 分别指定 upstream / 5′ side 和 downstream / 3′ side；伯醇、仲醇均可。单端 upstream-only 只能置于序列下游末端（如 `rA[Up]`），downstream-only 只能置于上游末端（如 `[Down]rA`）；不会生成第二位点。方向标签不代表固定糖环碳编号。
+命名后 Save 立即进入 Single/Batch；Save & New 清空本次输入以连续录入；备份/恢复 JSON 保存到本地浏览器 localStorage。本包不带私人 library。
 
-标记支持：连接 OH 的 dummy marker 的 3/5 isotope/map/alias，R1→upstream、R2→downstream；真实 O 上的 3/5 map/alias；SDF 的 `UPSTREAM_ATTACHMENT` / `DOWNSTREAM_ATTACHMENT`（或 `5_PRIME_ATTACHMENT` / `3_PRIME_ATTACHMENT`，1-based O atom index）。有冲突时使用 manual fallback，再确认真实 OH。标记移除后会重新编号，预览显示实际编号。
+Custom 无 atom count、molecule size、文件字节或 coordinate bounding-box 硬上限，只受浏览器资源影响。大结构自动按 viewBox fit-to-view。Batch 自身输入仍有 25 MB 上限，与 Custom 文件导入独立。
 
-Save 保留当前编辑；Save & New 保存后清空文件、预览、位点和编辑状态，立即录入下一项；New Custom Chemistry 清空当前编辑并保留已存 library。无文件大小、原子数或坐标跨度的人为上限；浏览器内存和 localStorage 容量仍有限。完整结构自动 fit-to-view。
+支持范围：已定义的中性 CHNOPS/F 常见价态、无同位素 scaffold。带电、未定义 MOL 属性、多分子 SDF 拒绝，不猜测。现有 stereo fields 保留；未定义的 stereochemistry 不自动生成。复杂布局需检查，SVG 显示路由与 MOL/CDXML 的直键显示有差别。
 
-数据保存在 localStorage（oligo-lite-custom-v2），可备份/恢复，旧版两端库自动重建方向契约。更换文件路径或浏览器前请备份。默认支持中性连通 CHNOPS/F、常规价态、Kekulé 键、wedge/hash；带电/同位素、query、未定义的扩展 MOL 属性会明确拒绝。详见 [architecture](../docs/BUILDING_BLOCK_ARCHITECTURE.md)。
+PO/PS/PS2/Me-P/PN(DMI)/MsPA 与标准 O-linked sites 共用同一套 compatibility 和 phosphorus engine，不区分 Custom family。光学参数缺失时 chemistry 仍可用，OD 留空并注明 Needs parameter。

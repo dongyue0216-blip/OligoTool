@@ -1,0 +1,400 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Oligo Chemistry Core v0.8.0",
+  "$defs": {
+    "MolecularGraph": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "atoms",
+        "bonds"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "molecular-graph/1"
+        },
+        "atoms": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "e"
+            ],
+            "properties": {
+              "e": {
+                "type": "string"
+              },
+              "h": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "q": {
+                "type": "integer"
+              },
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "z": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "bonds": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "a",
+              "b",
+              "o"
+            ],
+            "properties": {
+              "a": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "b": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "o": {
+                "enum": [
+                  1,
+                  2,
+                  3
+                ]
+              },
+              "s": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    },
+    "BuildingBlock": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "id",
+        "graph",
+        "sites",
+        "metadata"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "building-block/3"
+        },
+        "id": {
+          "type": "string"
+        },
+        "graph": {
+          "$ref": "#/$defs/MolecularGraph"
+        },
+        "sites": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/AttachmentSite"
+          }
+        },
+        "metadata": {
+          "type": "object"
+        },
+        "layout": {
+          "type": "object"
+        }
+      }
+    },
+    "AttachmentSite": {
+      "type": "object",
+      "required": [
+        "atom",
+        "direction",
+        "element",
+        "connection_class",
+        "compatibility_domain",
+        "unconnected"
+      ],
+      "properties": {
+        "atom": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "direction": {
+          "enum": [
+            "upstream",
+            "downstream",
+            "branch",
+            "other"
+          ]
+        },
+        "role": {
+          "type": "string"
+        },
+        "element": {
+          "type": "string"
+        },
+        "connection_class": {
+          "type": "string"
+        },
+        "compatibility_domain": {
+          "type": "string"
+        },
+        "unconnected": {
+          "type": "object",
+          "required": [
+            "state"
+          ],
+          "properties": {
+            "state": {
+              "type": "string"
+            },
+            "hydrogens": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "LinkageDefinition": {
+      "type": "object",
+      "required": [
+        "id",
+        "graph",
+        "center",
+        "source_requirements",
+        "target_requirements",
+        "directionality",
+        "terminal_forms",
+        "edit_rule",
+        "layout_template"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "graph": {
+          "$ref": "#/$defs/MolecularGraph"
+        },
+        "center": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_requirements": {
+          "type": "object"
+        },
+        "target_requirements": {
+          "type": "object"
+        },
+        "directionality": {
+          "type": "string"
+        },
+        "terminal_forms": {
+          "type": "array"
+        },
+        "edit_rule": {
+          "type": "object"
+        },
+        "layout_template": {
+          "type": "string"
+        }
+      }
+    },
+    "AssemblyGraph": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "nodes",
+        "edges",
+        "terminations"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "assembly-graph/1"
+        },
+        "nodes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "position",
+              "orientation",
+              "block"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "position": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "orientation": {
+                "enum": [
+                  "forward",
+                  "reverse"
+                ]
+              },
+              "block": {
+                "$ref": "#/$defs/BuildingBlock"
+              }
+            }
+          }
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "source",
+              "target",
+              "linkage"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "source": {
+                "type": "object",
+                "required": [
+                  "node",
+                  "site"
+                ],
+                "properties": {
+                  "node": {
+                    "type": "string"
+                  },
+                  "site": {
+                    "type": "string"
+                  }
+                }
+              },
+              "target": {
+                "type": "object",
+                "required": [
+                  "node",
+                  "site"
+                ],
+                "properties": {
+                  "node": {
+                    "type": "string"
+                  },
+                  "site": {
+                    "type": "string"
+                  }
+                }
+              },
+              "linkage": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "terminations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Termination"
+          }
+        }
+      }
+    },
+    "Termination": {
+      "type": "object",
+      "required": [
+        "id",
+        "at",
+        "kind"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "at": {
+          "type": "object",
+          "required": [
+            "node",
+            "site"
+          ],
+          "properties": {
+            "node": {
+              "type": "string"
+            },
+            "site": {
+              "type": "string"
+            }
+          }
+        },
+        "kind": {
+          "enum": [
+            "site",
+            "linkage"
+          ]
+        },
+        "state": {
+          "type": "string"
+        },
+        "linkages": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "cap": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "site"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "state"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "linkage"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "linkages",
+              "cap"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/MolecularGraph"
+    },
+    {
+      "$ref": "#/$defs/BuildingBlock"
+    },
+    {
+      "$ref": "#/$defs/AssemblyGraph"
+    }
+  ]
+}

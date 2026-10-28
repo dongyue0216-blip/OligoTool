@@ -21,7 +21,7 @@ function parse(input){
  if(!seq)throw Error('SYNTAX_ERROR: terminal phosphate requires a residue');
  let pos=0,residues=[],links=[];
  while(pos<seq.length){let code;
- if(seq[pos]==='['){let close=seq[pos]==='['?']':'}',end=seq.indexOf(close,pos);if(end<0)throw Error('SYNTAX_ERROR: Missing '+close);let id=seq.slice(pos+1,end);if(typeof CONJUGATION_POOL!=='undefined'&&CONJUGATION_POOL.some(e=>e.id===id))throw Error('CONJUGATION_REAGENT: ['+id+'] belongs to Conjugation Pool; sequence assembly is unavailable');if(!/^[A-Za-z0-9][A-Za-z0-9_.-]{0,47}$/.test(id))throw Error('Invalid custom unit ID: '+id);const alias=COVERAGE.aliases?.['['+id+']'];if(alias)id=alias.slice(1,-1);code='{'+id+'}';if(!template(code)&&!COVERAGE.entries.some(e=>e.notation==='['+id+']'))throw Error('['+id+'] not found in Custom Chemistry Library');pos=end+1;}
+ if(seq[pos]==='['){let close=seq[pos]==='['?']':'}',end=seq.indexOf(close,pos);if(end<0)throw Error('SYNTAX_ERROR: Missing '+close);let id=seq.slice(pos+1,end);if(typeof CONJUGATION_POOL!=='undefined'&&CONJUGATION_POOL.some(e=>e.id===id))throw Error('CONJUGATION_REAGENT: ['+id+'] belongs to Conjugation Pool; sequence assembly is unavailable');if(!/^[A-Za-z0-9_][A-Za-z0-9_.-]{0,47}$/.test(id))throw Error('Invalid custom unit ID: '+id);const alias=COVERAGE.aliases?.['['+id+']'];if(alias)id=alias.slice(1,-1);code='{'+id+'}';if(!template(code)&&!COVERAGE.entries.some(e=>e.notation==='['+id+']'))throw Error('['+id+'] not found in Custom Chemistry Library');pos=end+1;}
  else if('ACGT'.includes(seq[pos])&&!COVERAGE.entries.some(e=>e.notation.length>1&&seq.startsWith(e.notation,pos)))code='d'+seq[pos++];
  else{code=[...new Set([...Object.keys(REFERENCE.templates).filter(c=>c[0]!=='{'),...COVERAGE.entries.filter(e=>!['special','spacer','fluorescent','backbone'].includes(e.family)).map(e=>e.notation)])].sort((a,b)=>b.length-a.length).find(c=>seq.startsWith(c,pos));if(!code)throw Error('SYNTAX_ERROR: Unsupported notation at '+(pos+1)+': '+seq.slice(pos)+'; terminal chemistry supports (p), (pp), (ppp) only at sequence ends');pos+=code.length;}
  residues.push(code);if(pos<seq.length){let link='PO';if(seq.startsWith('**',pos)){link='PS2';pos+=2;}else if(seq[pos]==='*'){link='PS';pos++;}else if(seq[pos]==='#'){link='MsPA';pos++;}else if(seq[pos]==='^'){link='Me-P';pos++;}else if(seq[pos]==='!'){link='PN(dmi)';pos++;}links.push(link);if(pos===seq.length)throw Error('SYNTAX_ERROR: 末尾不能是 linkage');}}
@@ -51,51 +51,42 @@ function attachment(t,direction,code,position='internal',res=t?.id||'block'){
  return site.atom;
 }
 function terminalAttachment(t,side,code,res,position='terminal'){return attachment(t,side==='five'?'upstream':'downstream',code,position,res);}
+const linkageDefinitions=ChemistryCore.linkageDefinitions(REFERENCE);
+function toAssemblyGraph(p){return ChemistryCore.fromNotation(p,template,linkageDefinitions);}
 function validateChemistry(p){
- for(const [side,n]of Object.entries(p.terminal))if(n){
- const code=p.terminalChemistry[side],res=p.residues[side==='five'?0:p.residues.length-1],t=template(res);
- if(n>1&&code!=='PO')throw Error('CHEMISTRY_UNSUPPORTED: modified polyphosphate requires explicit phosphorus positions');
- terminalAttachment(t,side,code,res);
- }
-
- const blocks=p.residues.map(template),classes=blocks.map(t=>t?.assembly_class);
- for(const kind of ['tna','gna','pmo'])if(classes.includes(kind)&&classes.some(x=>x!==kind))throw Error('CHEMISTRY_UNSUPPORTED: mixed '+kind+' topology has no validated linkage contract');
- if(classes.every(x=>x==='tna'))p.topology='alpha-L-threose-3-to-2';
- if(classes.every(x=>x==='gna'))p.topology='S-glycerol-3-to-2';
- if(classes.includes('pmo')){
-  if(p.links.some(l=>l!=='PO'&&l!=='PMO')||Object.values(p.terminal).some(Boolean))throw Error('CHEMISTRY_UNSUPPORTED: PMO supports uncapped OH/NH chains with dedicated phosphorodiamidate links only');
-  p.links=p.links.map(()=> 'PMO');p.topology='morpholine-phosphorodiamidate';
- }
- for(const [i,code] of p.residues.entries()){
- const t=template(code),name=code[0]==='{'?'['+code.slice(1,-1)+']':code;
- if(!t){const entry=COVERAGE.entries.find(e=>e.notation===name);throw Error((entry?.graph==='IMPLEMENTATION_PENDING'?'IMPLEMENTATION_PENDING':name==='[cOct]'?'PENDING_CHEMISTRY':'STRUCTURE_VARIANT_PENDING')+': '+name+'; exact final scaffold / attachment / stereo not available');}
- if(t.terminal_only&&i!==0&&i!==p.residues.length-1)throw Error('INVALID_POSITION: '+name+' requires a sequence terminus');
- if(t.validation_status)throw Error(t.validation_status+': '+name);
- if(t.allowed_positions?.length===1&&t.allowed_positions[0]==='five'&&(i!==0||p.terminal.five))throw Error('INVALID_POSITION: '+name+' requires the 5′ terminus without an additional phosphate');
- if(t.allowed_positions?.length===1&&t.allowed_positions[0]==='three'&&i!==p.residues.length-1)throw Error('INVALID_POSITION: '+name+' requires the 3′ terminus');
- }
- for(const [i,code]of p.links.entries()){
- if(!REFERENCE.links[code])throw Error('STRUCTURE_VARIANT_PENDING: '+code+' exact linkage unavailable');
- for(const [ri,side]of [[i,'three'],[i+1,'five']]){const t=template(p.residues[ri]);terminalAttachment(t,side,code,p.residues[ri],'internal');}
- }
+ const ag=toAssemblyGraph(p);p.links=ag.edges.map(e=>e.linkage);
+ const topology=ag.nodes.map(n=>n.block.metadata.topology);
+ if(p.links.includes('PMO'))p.topology='morpholine-phosphorodiamidate';
+ else if(topology.every(t=>t===topology[0]))p.topology=topology[0];
+ return ag;
 }
+// Metadata is resolved at BuildingBlock level, never inferred from mass.
+function opticalProperty(code){
+ const t=template(code),e=t?.optical;
+ if(e)return e;
+ if(customLibrary[code])return validExtinction(t.extinction)?{mode:'explicit',epsilon:t.extinction.contribution+(t.extinction.correction||0),source:t.extinction.source}:{mode:'unknown'};
+ if(t?.base&&'ACGTUI'.includes(t.base)&&t.base.length===1)return {mode:'parent',parent:t.base,source:'library base identity'};
+ if(['PEG4','spacer3','spacer9','spacer18'].some(x=>code==='['+x+']'||code==='{'+x+'}'))return {mode:'zero',source:'defined saturated aliphatic ether spacer; no conjugated chromophore'};
+ return {mode:'unknown'};
+}
+function validOptical(e){return !!e&&(['unknown','zero'].includes(e.mode)||e.mode==='parent'&&'ACGTUI'.includes(e.parent)&&e.parent.length===1||e.mode==='explicit'&&Number.isFinite(e.epsilon)&&e.epsilon>=0)&& (e.mode==='unknown'||typeof e.source==='string'&&!!e.source.trim());}
 function od(p,mw){
- const provenance={parameters:'reference-data.js',source:'https://www.genelink.com/Literature/PS/Oligo_Analysis_Parameters_V3.3.pdf',equation:'sum dinucleotide epsilon - sum internal mononucleotide epsilon',mass_basis:'average_mw',convention:'1 OD260 = A260 1 in 1 mL at 1 cm',limitations:'single-strand reference model; pH, salt, folding and hypochromicity may differ experimentally'};
- const customs=p.residues.filter(r=>customLibrary[r]);
- if(p.topology==='morpholine-phosphorodiamidate')return {supported:false,status:'NEEDS_PARAMETER',reason:'PMO-specific extinction parameters are not available',provenance};
- if(customs.length){const missing=customs.filter(r=>!validExtinction(customLibrary[r].extinction));if(missing.length)return {supported:false,status:'NEEDS_PARAMETER',reason:'Needs parameter: custom unit A260 model/source missing; no zero-absorption assumption',provenance,missing_units:missing};
- // Custom additive contributions are only meaningful with an explicitly supplied full-unit model.
- if(p.residues.some(r=>!customLibrary[r]))return {supported:false,status:'NEEDS_PARAMETER',reason:'Mixed custom/nucleotide nearest-neighbor junction parameters are missing',provenance};
- const eps=customs.reduce((v,r)=>v+customLibrary[r].extinction.contribution+(customLibrary[r].extinction.correction||0),0);
- return opticalResult(eps,mw,true,'User additive full-unit model (junction effects unvalidated)',{...provenance,custom_parameters:customs.map(r=>customLibrary[r].extinction)});
- }
- const bases=p.residues.map(r=>template(r)?.base??null);if(bases.some(b=>!b||b.length!==1||!'ACGTU'.includes(b)))return {supported:false,status:'NEEDS_PARAMETER',reason:'Needs parameter: special unit / modified base / inosine epsilon260 unavailable',provenance};
- const dna=p.residues.every(r=>r[0]==='d'),rna=p.residues.every(r=>r[0]==='r'&&r[1]!=='T');
- if(dna&&bases.includes('U'))return {supported:false,status:'NEEDS_PARAMETER',reason:'DNA nearest-neighbor parameters for deoxyuridine are unavailable',provenance};
- const estimated=!(dna||rna)||p.links.some(l=>l!=='PO')||Object.values(p.terminal).some(Boolean);
- const bs=dna?bases:bases.map(b=>b==='T'?'U':b),mono=dna?REFERENCE.dnaMono:REFERENCE.rnaMono,nn=dna?REFERENCE.dnaNN:REFERENCE.rnaNN;
- const eps=bs.length===1?mono[bs[0]]:bs.slice(1).reduce((v,b,i)=>v+nn[bs[i]+b],0)-bs.slice(1,-1).reduce((v,b)=>v+mono[b],0);
- return opticalResult(eps,mw,estimated,(dna?'DNA':'RNA')+' nearest-neighbor'+(estimated?' (base-preserving estimate; modification/backbone/terminal effects lack validated corrections)':''),provenance);
+ const provenance={parameters:'reference-data.js; docs/PHOTOMETRY.md',mass_basis:'average_mw',convention:'1 OD260 = A260 1 in 1 mL at 1 cm',limitations:'single strand; folding, salt, pH and unparameterized junction effects are not modeled'};
+ const properties=p.residues.map(code=>({code,...opticalProperty(code)}));
+ const bases=properties.filter(e=>e.mode==='parent').map(e=>e.parent);
+ const dna=p.residues.every(r=>r[0]==='d')&&!bases.includes('U');
+ const exact=(dna||p.residues.every(r=>r[0]==='r'&&r[1]!=='T'))&&properties.every(e=>e.mode==='parent'&&e.parent!=='I')&&p.links.every(l=>l==='PO')&&!Object.values(p.terminal).some(Boolean);
+ const mono=dna?REFERENCE.dnaMono:REFERENCE.rnaMono,nn=dna?REFERENCE.dnaNN:REFERENCE.rnaNN;
+ let eps=0,segment=[],literature=false;
+ function flush(){if(!segment.length)return;eps+=segment.length===1?mono[segment[0]]:segment.slice(1).reduce((v,b,i)=>v+nn[segment[i]+b],0)-segment.slice(1,-1).reduce((v,b)=>v+mono[b],0);segment=[];}
+ const missing=[];
+ for(const e of properties){if(e.mode==='parent'&&e.parent!=='I')segment.push(dna?e.parent:e.parent==='T'?'U':e.parent);else{flush();if(e.mode==='parent'&&e.parent==='I'){eps+=7145.35;literature=true;}else if(e.mode==='explicit')eps+=e.epsilon;else if(e.mode==='unknown')missing.push(e.code);}}
+ flush();
+ const method=missing.length?'Estimated (partial, unknown modifier excluded: '+missing.join(', ')+')':exact?'Exact NN':literature?'Estimated (literature inosine monomer + segmented NN)':properties.some(e=>e.mode==='explicit')?'Estimated (custom contribution + segmented NN)':'Estimated (parent chromophore; segmented NN)';
+ const out=opticalResult(eps,mw,!exact,method,{...provenance,building_blocks:properties,inosine:literature?{epsilon260:7145.35,source:'https://academic.oup.com/view-large/119395286',note:'RNA nucleoside measurement; dI inherits chromophore; I junctions unparameterized'}:null});
+ if(missing.length){out.missing_units=missing;out.partial=true;if(out.supported)out.status='PARTIAL';}
+ if(!out.supported){out.status='NEEDS_PARAMETER';out.reason='Needs parameter: no positive modeled A260 contribution'+(missing.length?' ('+missing.join(', ')+')':'');}
+ return out;
 }
 function validExtinction(e){return !!e&&e.model==='additive-full-unit'&&Number.isFinite(e.contribution)&&e.contribution>=0&&(e.correction===undefined||Number.isFinite(e.correction))&&typeof e.source==='string'&&!!e.source.trim();}
 function opticalResult(eps,mw,estimated,method,provenance){if(!Number.isFinite(eps)||eps<=0)return {supported:false,status:'UNSUPPORTED',reason:'Nonpositive or invalid epsilon260',provenance};return {supported:true,status:estimated?'ESTIMATED':'SUPPORTED',estimated,epsilon260:eps,epsilon_unit:'L mol^-1 cm^-1',nmol_per_od:1e6/eps,ug_per_od:1000*mw/eps,od_per_umol:eps/1000,method,provenance};}
@@ -127,7 +118,8 @@ function routeAvoid(g,bi,pi){
 // Attachments occupy the vertical axis; nonbridging substituents the horizontal axis.
 // Existing complex substituent topology is preserved; only coordinates are assigned.
 function phosphorusGeometry(code,x,y){
- const t=clone(REFERENCE.links[code]);
+ const definition=linkageDefinitions[code];if(!definition)throw Error('CHEMISTRY_UNSUPPORTED: undefined linkage '+code);
+ const t={...clone(definition.graph),p:definition.center};
  const nb=j=>t.bonds.filter(b=>b.a===j||b.b===j).map(b=>({i:b.a===j?b.b:b.a,o:b.o}));
  let roles={p:t.p},pts={p:[x,y]};
  if(code==='PN(dmi)'||code==='PMO'){
@@ -144,42 +136,55 @@ function phosphorusGeometry(code,x,y){
  for(const [role,j]of Object.entries(roles)){t.atoms[j].x=pts[role][0];t.atoms[j].y=pts[role][1];}
  return t;
 }
-function assemble(p){
- let g={atoms:[],bonds:[],routes:[],depiction_overpasses:[]},sites=[],expanded=[];
- const ts=p.residues.map(template),hasLarge=ts.some(t=>t.layout_metadata?.expanded),minLocalX=extent(ts.flatMap(t=>t.atoms.map(a=>a.x)),'min'),maxLocalX=extent(ts.flatMap(t=>t.atoms.map(a=>a.x)),'max'),minLocalY=extent(ts.flatMap(t=>t.atoms.map(a=>a.y)),'min');
+function expandAssemblyGraph(input){
+ const ag=ChemistryCore.validateAssembly(clone(input),linkageDefinitions);
+ const ts=ag.nodes.map(n=>({...clone(n.block.graph),id:n.block.id,attachments:n.block.sites,layout_metadata:n.block.layout,depiction_overpasses:n.block.layout.depiction_overpasses,incoming_label:n.block.metadata.incoming_label,outgoing_label:n.block.metadata.outgoing_label}));
+ if(ts.some(t=>t.atoms.some(a=>!Number.isFinite(a.x)||!Number.isFinite(a.y))))throw Error('CHEMISTRY_UNSUPPORTED: expansion layout requires finite atom coordinates');
+ const p={residues:ag.nodes.map(n=>n.block.id),links:ag.edges.map(e=>e.linkage),terminal:{five:0,three:0},terminalChemistry:{five:'PO',three:'PO'}};
+ for(const t of ag.terminations)if(t.kind==='linkage'){
+  const side=t.at.node===ag.nodes[0].id&&t.at.site===(ag.nodes[0].orientation==='reverse'?'downstream':'upstream')?'five':t.at.node===ag.nodes[ag.nodes.length-1].id&&t.at.site===(ag.nodes[ag.nodes.length-1].orientation==='reverse'?'upstream':'downstream')?'three':null;
+  if(!side)throw Error('CHEMISTRY_UNSUPPORTED: layout for branch termination unavailable');
+  p.terminal[side]=t.linkages.length;p.terminalChemistry[side]=t.linkages[0];
+ }
+ const topologies=ag.nodes.map(n=>n.block.metadata.topology);
+ p.topology=p.links.includes('PMO')?'morpholine-phosphorodiamidate':topologies.every(t=>t===topologies[0])?topologies[0]:undefined;
+
+ let g={schema_version:'molecular-graph/1',atoms:[],bonds:[],routes:[],depiction_overpasses:[],provenance:{atoms:[],bonds:[]}},sites=[],expanded=[];
+ const mark=(a,b,origin)=>{for(let j=a;j<g.atoms.length;j++)g.provenance.atoms[j]={...origin,local_atom:j-a};for(let j=b;j<g.bonds.length;j++)g.provenance.bonds[j]={...origin,local_bond:j-b};};
+ const hasLarge=ts.some(t=>t.layout_metadata?.expanded),minLocalX=extent(ts.flatMap(t=>t.atoms.map(a=>a.x)),'min'),maxLocalX=extent(ts.flatMap(t=>t.atoms.map(a=>a.x)),'max'),minLocalY=extent(ts.flatMap(t=>t.atoms.map(a=>a.y)),'min');
  const origins=[];for(let i=0;i<ts.length;i++){if(i%10===0)origins[i]=0;else{const prev=ts[i-1],next=ts[i];origins[i]=origins[i-1]+Math.max(11,extent(prev.atoms.map(a=>a.y),'max')-extent(next.atoms.map(a=>a.y),'min')+4.5);}}
  // Frozen coordinates: no column-dependent rotation, reflection or terminal transform.
- let width=Math.max(30,...p.residues.map(r=>{let t=template(r);return extent(t.atoms.map(a=>a.x),'max')-extent(t.atoms.map(a=>a.x),'min')+20;}));
- let pitch=Math.max(p.links.includes('PN(dmi)')?15:11,...p.residues.map(r=>{let t=template(r);return extent(t.atoms.map(a=>a.y),'max')-extent(t.atoms.map(a=>a.y),'min')+4.5;}));
+ let width=Math.max(30,...ts.map(t=>{return extent(t.atoms.map(a=>a.x),'max')-extent(t.atoms.map(a=>a.x),'min')+20;}));
+ let pitch=Math.max(p.links.includes('PN(dmi)')?15:11,...ts.map(t=>{return extent(t.atoms.map(a=>a.y),'max')-extent(t.atoms.map(a=>a.y),'min')+4.5;}));
  if(hasLarge)width=maxLocalX-minLocalX+36;
- for(let i=0;i<p.residues.length;i++){let t=clone(template(p.residues[i])),o=g.atoms.length;
+ for(let i=0;i<p.residues.length;i++){let t=clone(ts[i]),o=g.atoms.length;
  for(const v of t.atoms){v.x+=Math.floor(i/10)*width;v.y+=hasLarge?origins[i]:(i%10)*pitch;}
  for(const v of t.depiction_overpasses||[])g.depiction_overpasses.push({...v,front:g.bonds.length+v.front,back:g.bonds.length+v.back});
- append(g.atoms,t.atoms);append(g.bonds,t.bonds.map(b=>({...b,a:b.a+o,b:b.b+o})));const up=t.attachments?.upstream?.atom,down=t.attachments?.downstream?.atom;sites.push({offset:o,o5:Number.isInteger(up)?o+up:null,o3:Number.isInteger(down)?o+down:null,terminalOnly:!Number.isInteger(up)||!Number.isInteger(down),incoming_label:t.incoming_label||'5′ side',outgoing_label:t.outgoing_label||'3′ side'});}
+ const bondStart=g.bonds.length;append(g.atoms,t.atoms);append(g.bonds,t.bonds.map(b=>({...b,a:b.a+o,b:b.b+o})));mark(o,bondStart,{kind:'building-block',node:ag.nodes[i].id,position:i+1,block:ag.nodes[i].block.id});const up=t.attachments?.upstream?.atom,down=t.attachments?.downstream?.atom;sites.push({offset:o,local_anchor_y:ts[i].atoms[up??down??0].y,o5:Number.isInteger(up)?o+up:null,o3:Number.isInteger(down)?o+down:null,terminalOnly:!Number.isInteger(up)||!Number.isInteger(down),incoming_label:t.incoming_label||'5′ side',outgoing_label:t.outgoing_label||'3′ side'});}
  for(let i=0;i<p.links.length;i++){
- let code=p.links[i],t,a=sites[i].o3,b=sites[i+1].o5,offset=g.atoms.length,A=g.atoms[a],B=g.atoms[b],boundary=(i+1)%10===0;
+ const edge=ag.edges[i];let code=edge.linkage,t,a=sites[i].offset+ts[i].attachments[edge.source.site].atom,b=sites[i+1].offset+ts[i+1].attachments[edge.target.site].atom,offset=g.atoms.length,A=g.atoms[a],B=g.atoms[b],boundary=(i+1)%10===0;
  let x=A.x,y=(A.y+(boundary?A.y+(hasLarge?11:pitch)-3.8:B.y))/2;const largeLink=hasLarge&&(ts[i].layout_metadata?.expanded||ts[i+1].layout_metadata?.expanded);if(largeLink){x=Math.floor(i/10)*width+minLocalX-10;y=boundary?A.y+4:(A.y+B.y)/2;}
  t=phosphorusGeometry(code,x,y);
- append(g.atoms,t.atoms);g.bonds.push(...t.bonds.map(v=>({...v,a:v.a+offset,b:v.b+offset,s:0})),{a,b:offset+t.p,o:1,s:0},{a:offset+t.p,b,o:1,s:0});
- if(largeLink)expanded.push({bonds:[g.bonds.length-2,g.bonds.length-1],p:offset+t.p});
+ const bondStart=g.bonds.length;append(g.atoms,t.atoms);g.bonds.push(...t.bonds.map(v=>({...v,a:v.a+offset,b:v.b+offset,s:0})),{a,b:offset+t.p,o:1,s:0},{a:offset+t.p,b,o:1,s:0});
+ mark(offset,bondStart,{kind:'linkage',edge:edge.id,linkage:edge.linkage,source:edge.source,target:edge.target,positions:[i+1,i+2]});if(largeLink)expanded.push({bonds:[g.bonds.length-2,g.bonds.length-1],p:offset+t.p});
  if(boundary&&!largeLink){let P=g.atoms[offset+t.p],gutter=B.x+(hasLarge?minLocalX-17:-8),top=Math.min(-5,minLocalY-5);
  // Escape downward below the final linkage before entering the empty gutter.
  g.routes.push({bond:g.bonds.length-1,boundary:i+1,atoms:[offset+t.p,b],points:[[P.x,P.y],[P.x,P.y+3],[gutter,P.y+3],[gutter,top],[B.x,top],[B.x,B.y]]});}
  A.h--;B.h--;}
  for(const [side,count]of Object.entries(p.terminal||{})){
- if(!count)continue;const ri=side==='five'?0:p.residues.length-1,tpl=template(p.residues[ri]),local=terminalAttachment(tpl,side,p.terminalChemistry[side],p.residues[ri]);let anchor=sites[ri].offset+local,sign=side==='five'?-1:1;
+ if(!count)continue;const ri=side==='five'?0:p.residues.length-1,tpl=ts[ri],term=ag.terminations.find(t=>t.kind==='linkage'&&t.at.node===ag.nodes[ri].id&&t.at.site===(ag.nodes[ri].orientation==='reverse'?(side==='five'?'downstream':'upstream'):(side==='five'?'upstream':'downstream'))),local=tpl.attachments[term.at.site].atom;let anchor=sites[ri].offset+local,sign=side==='five'?-1:1;
  g.atoms[anchor].h--;let previous=anchor,origin=g.atoms[anchor];
  for(let k=0;k<count;k++){
  let x=origin.x,y=origin.y+sign*(3+6*k),pi=g.atoms.length;
  const code=p.terminalChemistry[side],t=phosphorusGeometry(code,x,y);
- g.atoms.push(...t.atoms,{e:'O',h:k===count-1?1:0,x,y:y+sign*3});
- g.bonds.push(...t.bonds.map(b=>({...b,a:b.a+pi,b:b.b+pi,s:0})),{a:previous,b:pi+t.p,o:1,s:0},{a:pi+t.p,b:pi+t.atoms.length,o:1,s:0});previous=pi+t.atoms.length;
+ const bondStart=g.bonds.length;g.atoms.push(...t.atoms,{e:'O',h:k===count-1?1:0,x,y:y+sign*3});
+ g.bonds.push(...t.bonds.map(b=>({...b,a:b.a+pi,b:b.b+pi,s:0})),{a:previous,b:pi+t.p,o:1,s:0},{a:pi+t.p,b:pi+t.atoms.length,o:1,s:0});mark(pi,bondStart,{kind:'terminal-linkage',termination:term.id,node:term.at.node,position:ri+1,linkage:code,step:k+1});previous=pi+t.atoms.length;
  }
  }
  for(const item of expanded)for(const bi of item.bonds){const b=g.bonds[bi];try{g.routes.push({bond:bi,kind:'expanded-unit',atoms:[b.a,b.b],points:routeAvoid(g,bi,item.p)});}catch(e){if(!e.message.startsWith('LAYOUT_ROUTING_FAILED:'))throw e;(g.layout_warnings??=[]).push('Direct bond retained for '+bi+': display route unavailable; inspect layout');}}
- g.sites=sites;g.topology=p.topology||'mixed-or-ribose';g.direction=['alpha-L-threose-3-to-2','S-glycerol-3-to-2'].includes(p.topology)?'3′ → 2′':p.topology==='morpholine-phosphorodiamidate'?'5′ OH → 3′ NH':'5′ → 3′';g.layout={column_pitch:width,residue_pitch:pitch,adaptive:hasLarge,origins:hasLarge?origins:null,rows:10};return g;
+ g.sites=sites;g.topology=p.topology||'mixed-or-ribose';g.direction=['alpha-L-threose-3-to-2','S-glycerol-3-to-2','S-glycerol-phosphate'].includes(p.topology)?'3′ → 2′':p.topology==='morpholine-phosphorodiamidate'?'5′ OH → 3′ NH':'5′ → 3′';g.layout={column_pitch:width,residue_pitch:pitch,adaptive:hasLarge,origins:hasLarge?origins:null,rows:10};return g;
 }
-function calculate(seq){let p=parse(seq);validateChemistry(p);let g=assemble(p),f=graphFormula(g),m=masses(f);if(formula(f)!==formula(composition(p))||formula(f)!==formula(directComposition(p))||!connected(g))throw Error('内部 graph/composition 验证失败');return {schema_version:'oligo-lite/1.2',status:'ok',errors:[],input_sequence:seq,canonical_sequence:p.canonical,sequence:p.canonical,residues:p.residues,linkages:p.links,modifications:p.terminal,notation:p,formula_validation:{direct:formula(directComposition(p)),component:formula(composition(p)),graph:formula(f),equal:true},chemistry:{formula:formula(f),formula_dict:f,...m,charge_model:p.topology==='morpholine-phosphorodiamidate'?'neutral uncapped PMO: free 5-OH / 3-NH':'neutral free acid; terminal OH or specified phosphate',phosphorus_stereochemistry:'unspecified'},optical:od(p,m.average_mw),graph:g,provenance:{coverage:p.residues.map(code=>{const key=code[0]==='{'?'['+code.slice(1,-1)+']':code;return COVERAGE.entries.find(e=>e.notation===key)||{notation:key,status:'USER_CUSTOM',extinction:customLibrary[code]?.extinction||{status:'NEEDS_PARAMETER'}};}),reference:REFERENCE.source,monomers:'versioned atomic library',chemistry_status:'REGRESSION_VALIDATED',mspa:p.links.includes('MsPA')?'MsPA: neutral P(=O)-NH-S(=O)2-Me; phosphorus stereochemistry unspecified':null},limitations:['Neutral terminal PO/PS/PS2/Me-P/PN(dmi)/MsPA; modified polyphosphate and unvalidated modifier attachments rejected','MOL/SDF preserve graph and atom coordinates; routed paths are SVG/JSON display metadata only']};}
+function calculate(seq){let p=parse(seq);const ag=validateChemistry(p);let g=expandAssemblyGraph(ag),f=graphFormula(g),m=masses(f);if(formula(f)!==formula(composition(p))||formula(f)!==formula(directComposition(p))||!connected(g))throw Error('内部 graph/composition 验证失败');return {schema_version:'oligo-lite/2',assembly_graph:ag,status:'ok',errors:[],input_sequence:seq,canonical_sequence:p.canonical,sequence:p.canonical,residues:p.residues,linkages:p.links,modifications:p.terminal,notation:p,formula_validation:{direct:formula(directComposition(p)),component:formula(composition(p)),graph:formula(f),equal:true},chemistry:{formula:formula(f),formula_dict:f,...m,charge_model:p.topology==='morpholine-phosphorodiamidate'?'neutral uncapped PMO: free 5-OH / 3-NH':'neutral free acid; terminal OH or specified phosphate',phosphorus_stereochemistry:'unspecified'},optical:od(p,m.average_mw),graph:g,provenance:{coverage:p.residues.map(code=>{const key=code[0]==='{'?'['+code.slice(1,-1)+']':code;return COVERAGE.entries.find(e=>e.notation===key)||{notation:key,status:'USER_CUSTOM',extinction:customLibrary[code]?.extinction||{status:'NEEDS_PARAMETER'}};}),reference:REFERENCE.source,monomers:'versioned atomic library',chemistry_status:'REGRESSION_VALIDATED',mspa:p.links.includes('MsPA')?'MsPA: neutral P(=O)-NH-S(=O)2-Me; phosphorus stereochemistry unspecified':null},limitations:['Neutral terminal PO/PS/PS2/Me-P/PN(dmi)/MsPA; modified polyphosphate and unvalidated modifier attachments rejected','MOL/SDF preserve graph and atom coordinates; routed paths are SVG/JSON display metadata only']};}
 const pad=(v,n)=>String(v).padStart(n,' ');
 function molV3000(g,title){return [title.replace(/[\r\n]/g,' '),'  OligoLite  2D','','  0  0  0     0  0            999 V3000','M  V30 BEGIN CTAB',`M  V30 COUNTS ${g.atoms.length} ${g.bonds.length} 0 0 0`,'M  V30 BEGIN ATOM',...g.atoms.map((a,i)=>`M  V30 ${i+1} ${a.e} ${a.x.toFixed(4)} ${(-a.y).toFixed(4)} 0 0${a.q?' CHG='+a.q:''}`),'M  V30 END ATOM','M  V30 BEGIN BOND',...g.bonds.map((b,i)=>`M  V30 ${i+1} ${b.o} ${b.a+1} ${b.b+1}${b.s?' CFG='+(b.s===1?1:3):''}`),'M  V30 END BOND','M  V30 END CTAB','M  END',''].join('\n');}
 function mol(g,title='Oligo Lite'){if(g.atoms.length>999||g.bonds.length>999||g.atoms.some(a=>a.x.toFixed(4).length>10||(-a.y).toFixed(4).length>10))return molV3000(g,title);let s=[title.replace(/[\r\n]/g,' '),'  OligoLite  2D','',pad(g.atoms.length,3)+pad(g.bonds.length,3)+'  0  0  0  0            999 V2000'];g.atoms.forEach(a=>s.push(pad(a.x.toFixed(4),10)+pad((-a.y).toFixed(4),10)+pad('0.0000',10)+' '+a.e.padEnd(3)+' 0  0  0  0  0  0  0  0  0  0  0  0'));g.bonds.forEach(b=>s.push(pad(b.a+1,3)+pad(b.b+1,3)+pad(b.o,3)+pad(b.s||0,3)+'  0  0  0'));for(let i=0;i<g.atoms.length;i++){let a=g.atoms[i];if(a.q)s.push('M  CHG  1'+pad(i+1,4)+pad(a.q,4));if(a.iso)s.push('M  ISO  1'+pad(i+1,4)+pad(a.iso,4));}return s.join('\n')+'\nM  END\n';}
@@ -241,15 +246,19 @@ function normalizeCoordinates(g){
  return g;
 }
 function registerCustom(name,imported){
- if(!/^[A-Za-z][A-Za-z0-9_]{0,23}$/.test(name))throw Error('名称使用 1–24 位英文字母、数字、下划线，以字母开头');
- if(REFERENCE.templates['{'+name+'}'])throw Error('Reserved built-in chemistry ID: '+name);
+ if(typeof name!=='string'||!/^[A-Za-z0-9_]{1,24}$/.test(name))throw Error('名称不能为空；请使用 1–24 位英文字母、数字或下划线，可用数字或下划线开头');
+ const key=('{'+name+'}').toLowerCase();
+ if(Object.keys(customLibrary).some(k=>k.toLowerCase()===key))throw Error('Name / symbol already exists: '+name+'; choose a different name');
+ const reserved=['[p]','[pp]','[ppp]','[PHO]','[phosphorylation]',...Object.keys(REFERENCE.templates),...COVERAGE.entries.map(e=>e.notation),...Object.keys(COVERAGE.aliases||{}),...(typeof CONJUGATION_POOL==='undefined'?[]:CONJUGATION_POOL.map(e=>'['+e.id+']'))];
+ if(reserved.some(k=>k.replace(/^\[/,'{').replace(/\]$/,'}').toLowerCase()===key))throw Error('Reserved built-in name / symbol: '+name+'; choose a different name');
  const r=selectAttachments(imported,imported.attachments[5],imported.attachments[3]),g=normalizeCoordinates(r.graph),five=r.attachments[5]??null,three=r.attachments[3]??null;
  const A=g.atoms[five??three],B=g.atoms[three??five],dx=B.x-A.x,dy=B.y-A.y,L=Math.hypot(dx,dy),ax=A.x,ay=A.y;
  // Translation, positive uniform scale and rotation preserve stereochemical handedness.
  for(const a of g.atoms){const x=a.x-ax,y=a.y-ay;a.x=L?(x*dy-y*dx)/L:x;a.y=L?(x*dx+y*dy)/L:y;}
  g.layout_metadata={expanded:extent(g.atoms.map(a=>a.x),'max')-extent(g.atoms.map(a=>a.x),'min')>14};g.schema_version='building-block/2';g.id='{'+name+'}';g.family='Custom';g.assembly_class='o-phosphorus';g.o5=five;g.o3=three;g.attachments={};
- for(const [direction,atom]of [['upstream',five],['downstream',three]])if(atom!==null){const bs=g.bonds.filter(b=>b.a===atom||b.b===atom);g.attachments[direction]={atom,atom_role:'user-selected-OH',direction,element:g.atoms[atom].e,connection_class:'alcohol',local_bonds:bs.map(b=>({atom:b.a===atom?b.b:b.a,order:b.o})),allowed_linkage_classes:[...PHOSPHORUS_CLASSES],internal_phosphorus:[...PHOSPHORUS_CLASSES],terminal_phosphorus:[...PHOSPHORUS_CLASSES]};}
+ for(const [direction,atom]of [['upstream',five],['downstream',three]])if(atom!==null){const bs=g.bonds.filter(b=>b.a===atom||b.b===atom);g.attachments[direction]={atom,atom_role:'user-selected-OH',direction,element:g.atoms[atom].e,connection_class:'alcohol',compatibility_domain:'standard-O',unconnected:{state:'OH',hydrogens:1},local_bonds:bs.map(b=>({atom:b.a===atom?b.b:b.a,order:b.o})),allowed_linkage_classes:[...PHOSPHORUS_CLASSES],internal_phosphorus:[...PHOSPHORUS_CLASSES],terminal_phosphorus:[...PHOSPHORUS_CLASSES]};}
  g.phosphorus_topology='standard-5-to-3';
+ if(imported.optical){if(!validOptical(imported.optical))throw Error('Invalid optical metadata');g.optical=clone(imported.optical);}
  if(imported.extinction){if(!validExtinction(imported.extinction))throw Error('Invalid extinction metadata');g.extinction=clone(imported.extinction);}
  customLibrary[g.id]=clone(g);return clone(g);
 }
@@ -292,11 +301,11 @@ function quality(g){
  for(const seg of segments)for(const label of labels)if(!seg.ends.includes(label.i)&&intersects(seg,label))out.label_bond_overlaps.push([label.i,seg.bond]);
  g.bonds.forEach((b,i)=>{const d=dist(pt(b.a),pt(b.b));if(d>6&&!(g.routes||[]).some(r=>r.bond===i))out.long_bonds.push({bond:i,length:d});});
  out.pass=['atom_overlaps','atom_bond_overlaps','bond_crossings','connector_collisions','label_overlaps','label_bond_overlaps','long_bonds','column_top_errors'].every(k=>!out[k].length);
- if(g.sites)g.sites.forEach((s,i)=>{if(i%10===0&&Math.abs(atoms[s.o5].y)>1e-7)out.column_top_errors.push(i);});out.pass=out.pass&&!out.column_top_errors.length;return out;
+ if(g.sites)g.sites.forEach((s,i)=>{if(i%10===0&&Math.abs(atoms[s.o5??s.o3??s.offset].y-(s.local_anchor_y||0))>1e-7)out.column_top_errors.push(i);});out.pass=out.pass&&!out.column_top_errors.length;return out;
 }
-function calculateSafe(sequence){try{return calculate(sequence);}catch(e){return {schema_version:'oligo-lite/1.2',input_sequence:sequence,canonical_sequence:null,status:'error',errors:[{code:e.message.match(/^([A-Z_]+):/)?.[1]||(e.message.includes('not found')?'UNKNOWN_UNIT':'INVALID_CHEMISTRY_OR_NOTATION'),message:e.message}],chemistry:null,optical:null,graph:null};}}
+function calculateSafe(sequence){try{return calculate(sequence);}catch(e){return {schema_version:'oligo-lite/2',input_sequence:sequence,canonical_sequence:null,status:'error',errors:[{code:e.message.match(/^([A-Z_]+):/)?.[1]||(e.message.includes('not found')?'UNKNOWN_UNIT':'INVALID_CHEMISTRY_OR_NOTATION'),message:e.message}],chemistry:null,optical:null,graph:null};}}
 function buildStructure(sequence){return calculate(sequence).graph;}
-return {getBuildingBlock:code=>template(code)?clone(template(code)):null,attachment,normalizeCoordinates,parse,validateChemistry,calculate,calculateSafe,buildStructure,formula,graphFormula,connected,mol,svg,cdxml,parseMol,parseSmiles,selectAttachments,registerCustom,customLibrary,quality};})();
+return {core:ChemistryCore,linkageDefinitions,toAssemblyGraph:p=>toAssemblyGraph(typeof p==='string'?parse(p):p),expandAssemblyGraph,getBuildingBlock:code=>template(code)?clone(template(code)):null,attachment,normalizeCoordinates,parse,validateChemistry,calculate,calculateSafe,buildStructure,formula,graphFormula,connected,mol,svg,cdxml,parseMol,parseSmiles,selectAttachments,registerCustom,customLibrary,quality};})();
 if(typeof module!=='undefined')module.exports=Lite;
 
 

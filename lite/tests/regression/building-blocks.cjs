@@ -1,6 +1,6 @@
 const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert');
 const root=path.resolve(__dirname,'../..'),c=vm.createContext({console,setTimeout,performance,Blob,TextEncoder,TextDecoder});
-for(const f of ['app/reference-data.js','app/coverage-data.js','app/chemistry.js','vendor/jszip.min.js','vendor/xlsx.full.min.js','batch/batch.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c);
+for(const f of ['app/reference-data.js','app/coverage-data.js','app/core.js','app/chemistry.js','vendor/jszip.min.js','vendor/xlsx.full.min.js','batch/batch.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c);
 const L=vm.runInContext('Lite',c),R=vm.runInContext('REFERENCE',c),B=vm.runInContext('Batch',c),cases=[],ops=['','*','**','^','!','#'];let assertions=0;
 const eq=(a,b,m)=>{assert.equal(a,b,m);assertions++;};
 function verify(seq){try{return verifyGraph(seq);}catch(e){throw Error(seq+': '+e.message);}}

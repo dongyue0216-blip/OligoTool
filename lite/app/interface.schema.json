@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Oligo Lite result v1.2",
+  "title": "Oligo Lite result v2",
   "type": "object",
   "required": [
     "schema_version",
@@ -11,7 +11,7 @@
   ],
   "properties": {
     "schema_version": {
-      "const": "oligo-lite/1.2"
+      "const": "oligo-lite/2"
     },
     "status": {
       "enum": [
@@ -59,6 +59,25 @@
         "object",
         "null"
       ]
+    },
+    "assembly_graph": {
+      "$ref": "core.schema.json#/$defs/AssemblyGraph"
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "ok"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "assembly_graph"
+        ]
+      }
+    }
+  ]
 }

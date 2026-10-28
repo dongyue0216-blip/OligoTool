@@ -1,0 +1,22 @@
+{
+  "version": "0.8.0",
+  "preserved": {
+    "app/chemistry.js": "35af5756256f4827d7b99e20f352fb4591ca95d732cdf9a80bcf65d3d97b586b",
+    "app/reference-data.js": "d7f18ee851e3710ff9189a622e7b6cc58078bc29b1d6d1736d3e72cfaaea24aa",
+    "app/coverage-data.js": "2f1139e0516aebfea91e42e6733051cba6fc0b6819345fafa60a1f8042bc090f",
+    "app/conjugation-pool.js": "37491d659833b29cff162b9596be9c0c633b6618559344a14d4c70a4e545a79f",
+    "app/app.js": "9f3417d13f25eeb9ec847916e5674468c201586ea1311104df90e07bb00c101d",
+    "app/building-block-registry.json": "ee57b65d512e3342b45d91845602c8d44a2d9786d204f9953581d1fcabfdd4de",
+    "app/building-block.schema.json": "ad6082117e683b0c1e346c0b99d9bb1721f46d9bae710d0fcf2a2d4860e13b9c",
+    "app/master-library.v1.json": "58db4849331b6f5d659804be804509bf54b7bc132d13376da9fab542f2acfd4d",
+    "app/style.css": "3fb68476d92d1ccba3772435d032c5a454fd423519307bc34098b7103d9c8659",
+    "app/core.js": "37e1496c2fc9457d1b1e8271e8e573932a91441e272818d7b6d1f5b11b751056",
+    "app/core.schema.json": "ceae0dcdd269ba29d1b37d1f5011e5d4efc8da3020497f7c814fbb1a68ecc711",
+    "app/master-library.v2.json": "fba4ef2a3955e66df3f854b34231af0f7ece708ad392a09f82ff483301286403",
+    "app/master-library.schema.json": "a00edf89e55e2491c387ab66038a7f24452e7c3a67548449e3042c7ecb2ab7aa",
+    "app/interface.schema.json": "4ae0faf650bb5801e389e3a9c8158624537bfcaaa091b687100ca422110e2273",
+    "Start.html": "e50f58a9b3b96f07ea507121988d977649e519230cf25dae090d3aa61ce22323",
+    "batch/batch.js": "a296fb24ebc52b623f34d1e970caef79b197a1bc1f89218453900a0343f108a4"
+  },
+  "note": "Current release integrity snapshot; chemistry is validated independently by registry-driven tests."
+}

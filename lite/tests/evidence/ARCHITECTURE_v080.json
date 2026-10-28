@@ -1,0 +1,9 @@
+{
+  "version": "0.8.0",
+  "registryGraphs": 118,
+  "cases": 219,
+  "semanticRoundTrip": true,
+  "provenance": true,
+  "orientation": true,
+  "invalidContractsRejected": true
+}

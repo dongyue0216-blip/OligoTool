@@ -6,6 +6,22 @@ DIRS = ('app', 'batch', 'custom_chemistry', 'docs', 'tests', 'vendor')
 FILES = ('Start.html', 'README.md', 'VERSION', 'LICENSE', 'LICENSE.md', 'LICENSE.txt', 'NOTICE', 'NOTICE.md')
 BAD = re.compile(r'(^Oligo_Chemistry_Toolkit_Lite_v|^(__pycache__|node_modules|\.git|\.cache|cache|tmp|temp|debug|staging|output)$|\.(zip|pyc|tmp|bak|log)$|debug[-_]?dump)', re.I)
 
+CURRENT_DOCS = {'OD_SUPPORT_MATRIX.md','CHANGELOG_v0.9.0.md','TEST_REPORT_v0.9.0.md','ARCHITECTURE_v080.md','MIGRATION_REPORT_v080.md','MIGRATION_AUDIT.json','SUPPORT_MATRIX_v080.md','TEST_REPORT_v080.md','RELEASE_NOTES_v080.md','BUILDING_BLOCK_ARCHITECTURE.md','CHEMISTRY_COVERAGE.md','PHOTOMETRY.md','TERMINAL_CHEMISTRY_AUDIT.md'}
+CURRENT_EVIDENCE = {'v090-od-tests.json','v090-test-results.json','CHEMICAL_BASELINE.json','REGISTRY_AUDIT_v080.json','ARCHITECTURE_v080.json','RELEASE_BASELINE_v080.json','TEST_RESULTS_v080.json'}
+
+def allowed(rel):
+    if forbidden(rel): return False
+    parts=rel.parts
+    if len(parts)==1: return parts[0] in FILES or parts[0] in DIRS
+    if parts[0] in ('app','batch','custom_chemistry','vendor'): return True
+    if parts[0]=='docs': return len(parts)==2 and parts[1] in CURRENT_DOCS
+    if parts[0]=='tests':
+        if len(parts)==2: return parts[1] in ('README.md','regression','release','evidence','visual')
+        if parts[1] in ('regression','release'): return len(parts)==3 and Path(parts[2]).suffix in ('.js','.cjs','.py')
+        if parts[1]=='evidence': return len(parts)==3 and parts[2] in CURRENT_EVIDENCE
+        if parts[1]=='visual': return len(parts)==3 and Path(parts[2]).suffix in ('.html','.png')
+    return False
+
 def forbidden(rel):
     return any(BAD.search(part) for part in rel.parts)
 
@@ -69,7 +85,7 @@ def build(source, destination):
                 (stage/name).mkdir()
             for p in paths:
                 rel=p.relative_to(source)
-                if forbidden(rel):
+                if not allowed(rel):
                     excluded.append(rel.as_posix())
                     continue
                 assert not p.is_symlink(), f'Symlink in source: {rel}'

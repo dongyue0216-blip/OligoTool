@@ -355,7 +355,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 13,
@@ -393,7 +398,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -722,7 +732,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -760,7 +775,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -1134,7 +1154,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 12,
@@ -1172,7 +1197,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -1514,7 +1544,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 16,
@@ -1552,7 +1587,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -1926,7 +1966,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 16,
@@ -1964,7 +2009,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -2306,7 +2356,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -2344,7 +2399,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -2731,7 +2791,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 17,
@@ -2769,7 +2834,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -3111,7 +3181,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -3149,7 +3224,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -3523,7 +3603,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 17,
@@ -3561,7 +3646,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -3935,7 +4025,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 16,
@@ -3973,7 +4068,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -4315,7 +4415,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -4353,7 +4458,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -4740,7 +4850,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 17,
@@ -4778,7 +4893,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -5120,7 +5240,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -5158,7 +5283,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -5545,7 +5675,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 16,
@@ -5583,7 +5718,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -5938,7 +6078,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -5976,7 +6121,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -6376,7 +6526,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 17,
@@ -6414,7 +6569,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -6769,7 +6929,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -6807,7 +6972,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -7233,7 +7403,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 16,
@@ -7271,7 +7446,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -7665,7 +7845,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -7703,7 +7888,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -8142,7 +8332,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 17,
@@ -8180,7 +8375,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -8574,7 +8774,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -8612,7 +8817,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -8973,7 +9183,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 13,
@@ -9011,7 +9226,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -9353,7 +9573,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -9391,7 +9616,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -9746,7 +9976,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -9784,7 +10019,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -10139,7 +10379,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -10177,7 +10422,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -10545,7 +10795,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -10583,7 +10838,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -10970,7 +11230,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 16,
@@ -11008,7 +11273,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -11376,7 +11646,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -11414,7 +11689,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -11769,7 +12049,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -11807,7 +12092,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -12181,7 +12471,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 16,
@@ -12219,7 +12514,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -12574,7 +12874,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -12612,7 +12917,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -13019,7 +13329,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -13057,7 +13372,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -13483,7 +13803,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 16,
@@ -13521,7 +13846,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -13928,7 +14258,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -13966,7 +14301,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -14340,7 +14680,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 16,
@@ -14378,7 +14723,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -14746,7 +15096,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 16,
@@ -14784,7 +15139,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -15223,7 +15583,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 16,
@@ -15261,7 +15626,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -15843,7 +16213,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 16,
@@ -15881,7 +16256,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -16541,7 +16921,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 16,
@@ -16579,7 +16964,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -16981,7 +17371,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 16,
@@ -17019,7 +17414,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -17426,7 +17826,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 16,
@@ -17464,7 +17869,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -17806,7 +18216,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -17844,7 +18259,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -18180,7 +18600,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -18218,7 +18643,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -18625,7 +19055,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -18663,7 +19098,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -19213,7 +19653,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -19251,7 +19696,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -19879,7 +20329,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -19917,7 +20372,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -20287,7 +20747,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -20325,7 +20790,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -20700,7 +21170,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -20738,7 +21213,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -21125,7 +21605,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 17,
@@ -21163,7 +21648,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -21544,7 +22034,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 17,
@@ -21582,7 +22077,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -22034,7 +22534,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 17,
@@ -22072,7 +22577,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -22667,7 +23177,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 17,
@@ -22705,7 +23220,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -23378,7 +23898,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 17,
@@ -23416,7 +23941,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -23831,7 +24361,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 17,
@@ -23869,7 +24404,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -24289,7 +24829,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 17,
@@ -24327,7 +24872,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -24669,7 +25219,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -24707,7 +25262,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -25043,7 +25603,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -25081,7 +25646,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -25488,7 +26058,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -25526,7 +26101,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -26076,7 +26656,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -26114,7 +26699,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -26742,7 +27332,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -26780,7 +27375,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -27150,7 +27750,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -27188,7 +27793,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -27563,7 +28173,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -27601,7 +28216,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -27956,7 +28576,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -27994,7 +28619,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -28343,7 +28973,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -28381,7 +29016,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -28801,7 +29441,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -28839,7 +29484,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -29402,7 +30052,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -29440,7 +30095,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -30081,7 +30741,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -30119,7 +30784,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -30502,7 +31172,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -30540,7 +31215,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -30928,7 +31608,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -30966,7 +31651,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -31340,7 +32030,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 16,
@@ -31378,7 +32073,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -31746,7 +32446,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 17,
@@ -31784,7 +32489,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -32223,7 +32933,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 17,
@@ -32261,7 +32976,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -32843,7 +33563,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 17,
@@ -32881,7 +33606,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -33541,7 +34271,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 17,
@@ -33579,7 +34314,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -33981,7 +34721,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 17,
@@ -34019,7 +34764,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -34426,7 +35176,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 17,
@@ -34464,7 +35219,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -34819,7 +35579,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -34857,7 +35622,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -35206,7 +35976,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -35244,7 +36019,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -35664,7 +36444,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -35702,7 +36487,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -36265,7 +37055,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -36303,7 +37098,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -36944,7 +37744,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -36982,7 +37787,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -37365,7 +38175,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -37403,7 +38218,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -37791,7 +38611,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -37829,7 +38654,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -38111,7 +38941,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "glycerol-O3-O2",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 3,
@@ -38142,7 +38977,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "glycerol-O3-O2",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -38394,7 +39234,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "glycerol-O3-O2",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 3,
@@ -38425,7 +39270,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "glycerol-O3-O2",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -38722,7 +39572,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "glycerol-O3-O2",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 3,
@@ -38753,7 +39608,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "glycerol-O3-O2",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -39018,7 +39878,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "glycerol-O3-O2",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 3,
@@ -39049,7 +39914,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "glycerol-O3-O2",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -39426,49 +40296,6 @@
       "id": "VpmA",
       "assembly_class": "legacy-modifier",
       "attachments": {
-        "upstream": {
-          "atom": 20,
-          "atom_role": "O5'",
-          "direction": "upstream",
-          "element": "P",
-          "connection_class": "alcohol",
-          "local_bonds": [
-            {
-              "atom": 19,
-              "order": 1
-            },
-            {
-              "atom": 21,
-              "order": 2
-            },
-            {
-              "atom": 22,
-              "order": 1
-            },
-            {
-              "atom": 23,
-              "order": 1
-            }
-          ],
-          "allowed_linkage_classes": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "internal_phosphorus": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
-        },
         "downstream": {
           "atom": 15,
           "atom_role": "O3'",
@@ -39498,7 +40325,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -39841,49 +40673,6 @@
       "id": "VpmC",
       "assembly_class": "legacy-modifier",
       "attachments": {
-        "upstream": {
-          "atom": 18,
-          "atom_role": "O5'",
-          "direction": "upstream",
-          "element": "P",
-          "connection_class": "alcohol",
-          "local_bonds": [
-            {
-              "atom": 17,
-              "order": 1
-            },
-            {
-              "atom": 19,
-              "order": 2
-            },
-            {
-              "atom": 20,
-              "order": 1
-            },
-            {
-              "atom": 21,
-              "order": 1
-            }
-          ],
-          "allowed_linkage_classes": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "internal_phosphorus": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
-        },
         "downstream": {
           "atom": 14,
           "atom_role": "O3'",
@@ -39913,7 +40702,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -40301,49 +41095,6 @@
       "id": "VpmG",
       "assembly_class": "legacy-modifier",
       "attachments": {
-        "upstream": {
-          "atom": 21,
-          "atom_role": "O5'",
-          "direction": "upstream",
-          "element": "P",
-          "connection_class": "alcohol",
-          "local_bonds": [
-            {
-              "atom": 20,
-              "order": 1
-            },
-            {
-              "atom": 22,
-              "order": 2
-            },
-            {
-              "atom": 23,
-              "order": 1
-            },
-            {
-              "atom": 24,
-              "order": 1
-            }
-          ],
-          "allowed_linkage_classes": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "internal_phosphorus": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
-        },
         "downstream": {
           "atom": 16,
           "atom_role": "O3'",
@@ -40373,7 +41124,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -40716,49 +41472,6 @@
       "id": "VpmU",
       "assembly_class": "legacy-modifier",
       "attachments": {
-        "upstream": {
-          "atom": 18,
-          "atom_role": "O5'",
-          "direction": "upstream",
-          "element": "P",
-          "connection_class": "alcohol",
-          "local_bonds": [
-            {
-              "atom": 17,
-              "order": 1
-            },
-            {
-              "atom": 19,
-              "order": 2
-            },
-            {
-              "atom": 20,
-              "order": 1
-            },
-            {
-              "atom": 21,
-              "order": 1
-            }
-          ],
-          "allowed_linkage_classes": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "internal_phosphorus": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
-        },
         "downstream": {
           "atom": 14,
           "atom_role": "O3'",
@@ -40788,7 +41501,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -41202,49 +41920,6 @@
       "id": "VpeA",
       "assembly_class": "legacy-modifier",
       "attachments": {
-        "upstream": {
-          "atom": 23,
-          "atom_role": "O5'",
-          "direction": "upstream",
-          "element": "P",
-          "connection_class": "alcohol",
-          "local_bonds": [
-            {
-              "atom": 22,
-              "order": 1
-            },
-            {
-              "atom": 24,
-              "order": 2
-            },
-            {
-              "atom": 25,
-              "order": 1
-            },
-            {
-              "atom": 26,
-              "order": 1
-            }
-          ],
-          "allowed_linkage_classes": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "internal_phosphorus": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
-        },
         "downstream": {
           "atom": 15,
           "atom_role": "O3'",
@@ -41274,7 +41949,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -41656,49 +42336,6 @@
       "id": "VpeC",
       "assembly_class": "legacy-modifier",
       "attachments": {
-        "upstream": {
-          "atom": 21,
-          "atom_role": "O5'",
-          "direction": "upstream",
-          "element": "P",
-          "connection_class": "alcohol",
-          "local_bonds": [
-            {
-              "atom": 20,
-              "order": 1
-            },
-            {
-              "atom": 22,
-              "order": 2
-            },
-            {
-              "atom": 23,
-              "order": 1
-            },
-            {
-              "atom": 24,
-              "order": 1
-            }
-          ],
-          "allowed_linkage_classes": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "internal_phosphorus": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
-        },
         "downstream": {
           "atom": 14,
           "atom_role": "O3'",
@@ -41728,7 +42365,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -42155,49 +42797,6 @@
       "id": "VpeG",
       "assembly_class": "legacy-modifier",
       "attachments": {
-        "upstream": {
-          "atom": 24,
-          "atom_role": "O5'",
-          "direction": "upstream",
-          "element": "P",
-          "connection_class": "alcohol",
-          "local_bonds": [
-            {
-              "atom": 23,
-              "order": 1
-            },
-            {
-              "atom": 25,
-              "order": 2
-            },
-            {
-              "atom": 26,
-              "order": 1
-            },
-            {
-              "atom": 27,
-              "order": 1
-            }
-          ],
-          "allowed_linkage_classes": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "internal_phosphorus": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
-        },
         "downstream": {
           "atom": 16,
           "atom_role": "O3'",
@@ -42227,7 +42826,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -42609,49 +43213,6 @@
       "id": "VpeU",
       "assembly_class": "legacy-modifier",
       "attachments": {
-        "upstream": {
-          "atom": 21,
-          "atom_role": "O5'",
-          "direction": "upstream",
-          "element": "P",
-          "connection_class": "alcohol",
-          "local_bonds": [
-            {
-              "atom": 20,
-              "order": 1
-            },
-            {
-              "atom": 22,
-              "order": 2
-            },
-            {
-              "atom": 23,
-              "order": 1
-            },
-            {
-              "atom": 24,
-              "order": 1
-            }
-          ],
-          "allowed_linkage_classes": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "internal_phosphorus": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
-        },
         "downstream": {
           "atom": 14,
           "atom_role": "O3'",
@@ -42681,7 +43242,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -42998,7 +43564,12 @@
             "PMO"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "morpholine-O-N",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 17,
@@ -43023,7 +43594,12 @@
             "PMO"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "morpholine-O-N",
+          "unconnected": {
+            "state": "NH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -43310,7 +43886,12 @@
             "PMO"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "morpholine-O-N",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -43335,7 +43916,12 @@
             "PMO"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "morpholine-O-N",
+          "unconnected": {
+            "state": "NH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -43667,7 +44253,12 @@
             "PMO"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "morpholine-O-N",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 18,
@@ -43692,7 +44283,12 @@
             "PMO"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "morpholine-O-N",
+          "unconnected": {
+            "state": "NH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -43992,7 +44588,12 @@
             "PMO"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "morpholine-O-N",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 16,
@@ -44017,7 +44618,12 @@
             "PMO"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "morpholine-O-N",
+          "unconnected": {
+            "state": "NH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -44336,7 +44942,12 @@
             "PMO"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "morpholine-O-N",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 17,
@@ -44361,7 +44972,12 @@
             "PMO"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "morpholine-O-N",
+          "unconnected": {
+            "state": "NH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -44677,7 +45293,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "threose-O3-O2",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -44708,7 +45329,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "threose-O3-O2",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -44992,7 +45618,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "threose-O3-O2",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 14,
@@ -45023,7 +45654,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "threose-O3-O2",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -45352,7 +45988,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "threose-O3-O2",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 16,
@@ -45383,7 +46024,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "threose-O3-O2",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -45680,7 +46326,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "threose-O3-O2",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 14,
@@ -45711,7 +46362,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "threose-O3-O2",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -46008,7 +46664,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "threose-O3-O2",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 14,
@@ -46039,7 +46700,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "threose-O3-O2",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -46410,7 +47076,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 4,
@@ -46448,7 +47119,12 @@
             "PN(dmi)",
             "MsPA"
           ],
-          "reason": null
+          "reason": null,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -46647,7 +47323,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 9,
@@ -46678,7 +47359,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -46916,7 +47602,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 12,
@@ -46947,7 +47638,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -47224,7 +47920,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 15,
@@ -47255,7 +47956,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -47571,7 +48277,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 18,
@@ -47602,7 +48313,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -47957,7 +48673,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 21,
@@ -47988,7 +48709,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -48122,7 +48848,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 4,
@@ -48153,7 +48884,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -48286,38 +49022,13 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
-        },
-        "downstream": {
-          "atom": 0,
-          "atom_role": "O3'",
-          "direction": "downstream",
-          "element": "O",
-          "connection_class": "alcohol",
-          "local_bonds": [
-            {
-              "atom": 1,
-              "order": 1
-            }
-          ],
-          "allowed_linkage_classes": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "internal_phosphorus": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "reversible": true,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -48490,38 +49201,13 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
-        },
-        "downstream": {
-          "atom": 0,
-          "atom_role": "O3'",
-          "direction": "downstream",
-          "element": "O",
-          "connection_class": "alcohol",
-          "local_bonds": [
-            {
-              "atom": 1,
-              "order": 1
-            }
-          ],
-          "allowed_linkage_classes": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "internal_phosphorus": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "reversible": true,
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -49057,37 +49743,6 @@
       "id": "{FAM}",
       "assembly_class": "legacy-modifier",
       "attachments": {
-        "upstream": {
-          "atom": 0,
-          "atom_role": "O5'",
-          "direction": "upstream",
-          "element": "O",
-          "connection_class": "alcohol",
-          "local_bonds": [
-            {
-              "atom": 1,
-              "order": 1
-            }
-          ],
-          "allowed_linkage_classes": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "internal_phosphorus": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
-        },
         "downstream": {
           "atom": 0,
           "atom_role": "O3'",
@@ -49117,7 +49772,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -50782,7 +51442,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -52016,37 +52681,6 @@
       "id": "{NAG37}",
       "assembly_class": "legacy-modifier",
       "attachments": {
-        "upstream": {
-          "atom": 0,
-          "atom_role": "O5'",
-          "direction": "upstream",
-          "element": "O",
-          "connection_class": "alcohol",
-          "local_bonds": [
-            {
-              "atom": 1,
-              "order": 1
-            }
-          ],
-          "allowed_linkage_classes": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "internal_phosphorus": [
-            "PO",
-            "PS",
-            "PS2",
-            "Me-P",
-            "PN(dmi)",
-            "MsPA"
-          ],
-          "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
-        },
         "downstream": {
           "atom": 0,
           "atom_role": "O3'",
@@ -52076,7 +52710,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {
@@ -52259,7 +52898,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         },
         "downstream": {
           "atom": 6,
@@ -52290,7 +52934,12 @@
             "MsPA"
           ],
           "terminal_phosphorus": [],
-          "reason": "Terminal chemistry has no validated contract for this topology/modifier"
+          "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+          "compatibility_domain": "standard-O",
+          "unconnected": {
+            "state": "OH",
+            "hydrogens": 1
+          }
         }
       },
       "layout_metadata": {

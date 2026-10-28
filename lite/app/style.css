@@ -9,3 +9,5 @@
 #batch table{border-collapse:collapse;font-size:12px;min-width:100%}#batch th,#batch td{border:1px solid #dce5df;padding:8px;max-width:420px;overflow-wrap:anywhere;white-space:pre-wrap}#batch th{position:sticky;top:0;background:#eaf1ed;text-align:left}#batch .toolbar{flex-wrap:wrap;gap:12px}#batch select{max-width:260px;padding:6px}#batch input[type=checkbox]{width:auto}
 
 #custompreview svg{min-width:0;width:100%;height:auto;max-height:400px}
+
+.custom-manager{margin-top:28px;padding:20px;border:1px solid #c9d8d3;border-radius:12px;background:#f6faf8}.saved-custom-row{display:flex;align-items:center;gap:10px;padding:14px 0;border-top:1px solid #dce5e0}.saved-custom-row>div{flex:1;min-width:0;overflow-wrap:anywhere}.saved-custom-row p{margin:4px 0;color:#52645d}#managerstatus{font-weight:600;overflow-wrap:anywhere}@media(max-width:650px){.saved-custom-row{flex-wrap:wrap}.saved-custom-row>div{flex-basis:100%}}

@@ -1,6 +1,6 @@
 const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert');
 const root=path.resolve(__dirname,'../..'),c=vm.createContext({console,setTimeout,performance,Blob,TextEncoder,TextDecoder});
-for(const f of ['app/reference-data.js','app/coverage-data.js','app/conjugation-pool.js','app/requirement-matrix.js','app/chemistry.js','vendor/jszip.min.js','vendor/xlsx.full.min.js','batch/batch.js','tests/regression/regression-tests.js','tests/regression/phase1-tests.js'])if(fs.existsSync(path.join(root,f)))vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c);
+for(const f of ['app/reference-data.js','app/coverage-data.js','app/conjugation-pool.js','app/requirement-matrix.js','app/core.js','app/chemistry.js','vendor/jszip.min.js','vendor/xlsx.full.min.js','batch/batch.js','tests/regression/regression-tests.js','tests/regression/phase1-tests.js'])if(fs.existsSync(path.join(root,f)))vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c);
 const L=vm.runInContext('Lite',c),B=vm.runInContext('Batch',c),R=vm.runInContext('REFERENCE',c),evidence={cases:[],invalid:[],baseline:[],legacy:[]};
 const deltas={'':{H:1,P:1,O:3},'*':{H:1,P:1,O:2,S:1},'**':{H:1,P:1,O:1,S:2},'^':{C:1,H:3,P:1,O:2},'!':{C:5,H:10,N:3,P:1,O:2},'#':{C:1,H:4,N:1,P:1,O:4,S:1}};
 (async()=>{
@@ -15,7 +15,7 @@ for(const base of ['dA','rA','mA','fA','rArG','dAdT','mAmG','fAfU'])for(const op
 }
 for(const seq of ['*rA','rA*','(p)*','*(p)','(p)(p)','rA***(p)','rA*!rG','rA()','()rA','rA(p)rG','(p)*[C6N]','[C3N]*(p)','(p)[spacer3]','[6-FAM](p)','rA*(pp)']){assert.throws(()=>L.calculate(seq));evidence.invalid.push({seq,error:L.calculateSafe(seq).errors});}
 for(const seq of ['rA[p]','[p]rA','[PHO]rA','[phosphorylation]rA','[p]*rA','rA**[p]'])assert(L.calculate(seq).canonical_sequence.includes('(p)'));
-const old=vm.createContext({console});for(const f of ['reference-data','coverage-data','chemistry'])vm.runInContext(fs.readFileSync(path.join(root,f==='chemistry'?'tests/fixtures/baseline-v052':'app',f+'.js'),'utf8'),old);const O=vm.runInContext('Lite',old);
+const baseline=JSON.parse(fs.readFileSync(path.join(root,'tests/evidence/CHEMICAL_BASELINE.json'),'utf8'));const O={calculate:seq=>{if(!baseline[seq])throw Error('Missing independent baseline '+seq);return baseline[seq];}};
 for(const seq of ['rA*rG','rA**rG','rA^rG','rA!rG','rA#rG','[NAG37]mAmCmGmU','dCMe*fCMe**+CMe!eCMe#nCMe']){const a=L.calculate(seq),b=O.calculate(seq);assert.equal(JSON.stringify(a.graph.bonds),JSON.stringify(b.graph.bonds));assert.equal(JSON.stringify(a.chemistry),JSON.stringify(b.chemistry));evidence.baseline.push(seq);}
 for(const name of ['runLiteRegression','runPhase1Regression'])if(vm.runInContext('typeof '+name,c)==='function'){const r=vm.runInContext(name+'()',c);evidence.legacy.push(r);assert.equal(r.passed,r.total,JSON.stringify(r.checks.filter(x=>x.status==='FAIL')));}
 const rows=evidence.cases.map((x,i)=>({ID:''+i,Sequence:x.seq}));rows.splice(3,0,{ID:'bad',Sequence:'rA*'});const batch=await B.run(rows,{formats:['mol','sdf','svg','cdxml']});for(let i=0;i<rows.length;i++)if(rows[i].ID!=='bad')assert.equal(batch.rows[i].Formula,L.calculate(rows[i].Sequence).chemistry.formula);evidence.batch={rows:rows.length,files:Object.keys(batch.zip.files).length,errorRow:batch.rows[3]};

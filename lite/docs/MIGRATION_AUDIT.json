@@ -1,0 +1,2195 @@
+{
+  "version": "0.8.0",
+  "baseline": "Lite 0.7.0",
+  "migrated": 118,
+  "rows": [
+    {
+      "id": "dA",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "dC",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "dG",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "dT",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "rA",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "rC",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "rG",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "rU",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "rI",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "fA",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "fC",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "fG",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "fU",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "mA",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "mC",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "mG",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "mU",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "eA",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "eC",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "eG",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "eU",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "dI",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "dCMe",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "rT",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "rCMe",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "mT",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "mI",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "mCMe",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "fT",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "fI",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "fCMe",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "eT",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "eI",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "eCMe",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "FANA-A",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "UNA-A",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "nA",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "Ahd",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "Ada",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "+A",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "ENA-A",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "FANA-C",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "UNA-C",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "nC",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "Chd",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "Cda",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "+C",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "ENA-C",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "FANA-G",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "UNA-G",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "nG",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "Ghd",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "Gda",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "+G",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "ENA-G",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "FANA-U",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "UNA-U",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "nU",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "Uhd",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "Uda",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "+U",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "ENA-U",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "FANA-T",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "UNA-T",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "nT",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "Thd",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "Tda",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "+T",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "ENA-T",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "FANA-I",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "UNA-I",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "nI",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "Ihd",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "Ida",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "+I",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "ENA-I",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "FANA-CMe",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "UNA-CMe",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "nCMe",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "CMehd",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "CMeda",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "+CMe",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "ENA-CMe",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "Agn",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "glycerol-O3-O2",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "Cgn",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "glycerol-O3-O2",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "Ggn",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "glycerol-O3-O2",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "Tgn",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "glycerol-O3-O2",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "VpmA",
+      "status": "MIGRATED",
+      "corrections": [
+        "Removed nonreactive P pseudo-site upstream"
+      ],
+      "sites": [
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five"
+        ]
+      }
+    },
+    {
+      "id": "VpmC",
+      "status": "MIGRATED",
+      "corrections": [
+        "Removed nonreactive P pseudo-site upstream"
+      ],
+      "sites": [
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five"
+        ]
+      }
+    },
+    {
+      "id": "VpmG",
+      "status": "MIGRATED",
+      "corrections": [
+        "Removed nonreactive P pseudo-site upstream"
+      ],
+      "sites": [
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five"
+        ]
+      }
+    },
+    {
+      "id": "VpmU",
+      "status": "MIGRATED",
+      "corrections": [
+        "Removed nonreactive P pseudo-site upstream"
+      ],
+      "sites": [
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five"
+        ]
+      }
+    },
+    {
+      "id": "VpeA",
+      "status": "MIGRATED",
+      "corrections": [
+        "Removed nonreactive P pseudo-site upstream"
+      ],
+      "sites": [
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five"
+        ]
+      }
+    },
+    {
+      "id": "VpeC",
+      "status": "MIGRATED",
+      "corrections": [
+        "Removed nonreactive P pseudo-site upstream"
+      ],
+      "sites": [
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five"
+        ]
+      }
+    },
+    {
+      "id": "VpeG",
+      "status": "MIGRATED",
+      "corrections": [
+        "Removed nonreactive P pseudo-site upstream"
+      ],
+      "sites": [
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five"
+        ]
+      }
+    },
+    {
+      "id": "VpeU",
+      "status": "MIGRATED",
+      "corrections": [
+        "Removed nonreactive P pseudo-site upstream"
+      ],
+      "sites": [
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five"
+        ]
+      }
+    },
+    {
+      "id": "pA",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "morpholine-O-N",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "pC",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "morpholine-O-N",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "pG",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "morpholine-O-N",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "pT",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "morpholine-O-N",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "pI",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "morpholine-O-N",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "tA",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "threose-O3-O2",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "tC",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "threose-O3-O2",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "tG",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "threose-O3-O2",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "tT",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "threose-O3-O2",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "tCMe",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "threose-O3-O2",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "Z",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "{PEG3}",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "{PEG4}",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "{PEG5}",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "{PEG6}",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "{PEG7}",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "{spacer3}",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "allowed_positions": [
+          "five",
+          "internal",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "{C3N}",
+      "status": "MIGRATED",
+      "corrections": [
+        "Collapsed duplicate atom aliases into one physical attachment"
+      ],
+      "sites": [
+        "upstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "terminal_only": true,
+        "allowed_positions": [
+          "five",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "{C6N}",
+      "status": "MIGRATED",
+      "corrections": [
+        "Collapsed duplicate atom aliases into one physical attachment"
+      ],
+      "sites": [
+        "upstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "terminal_only": true,
+        "allowed_positions": [
+          "five",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "{FAM}",
+      "status": "MIGRATED",
+      "corrections": [
+        "Collapsed duplicate atom aliases into one physical attachment"
+      ],
+      "sites": [
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "terminal_only": true,
+        "allowed_positions": [
+          "five"
+        ]
+      }
+    },
+    {
+      "id": "{L96}",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "terminal_only": true,
+        "allowed_positions": [
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "{NAG37}",
+      "status": "MIGRATED",
+      "corrections": [
+        "Collapsed duplicate atom aliases into one physical attachment"
+      ],
+      "sites": [
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "terminal_only": true,
+        "allowed_positions": [
+          "five"
+        ]
+      }
+    },
+    {
+      "id": "{InvAb}",
+      "status": "MIGRATED",
+      "corrections": [],
+      "sites": [
+        "upstream",
+        "downstream"
+      ],
+      "domain": "standard-O",
+      "legacy_position_flags": {
+        "terminal_only": true,
+        "allowed_positions": [
+          "five",
+          "three"
+        ]
+      }
+    },
+    {
+      "id": "pB",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "Ugn",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "cEt-A",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "cEt-T",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "cEt-CMe",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "cEt-G",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "{PHO}",
+      "status": "TERMINATION_ADAPTER",
+      "reason": "Legacy phosphate notation maps to explicit terminal linkage paths"
+    },
+    {
+      "id": "{Biotin}",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "{DIG}",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "{abasic}",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "{SMCC}",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "{MC}",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "{BCN}",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "{DBCO}",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "{SPDP}",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "{MC-VC-PABC}",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "{cOct}",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; PENDING_CHEMISTRY"
+    },
+    {
+      "id": "{TCO}",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "{spacer9}",
+      "status": "ALIAS",
+      "target": "{PEG3}"
+    },
+    {
+      "id": "{spacer12}",
+      "status": "ALIAS",
+      "target": "{PEG4}"
+    },
+    {
+      "id": "{spacer15}",
+      "status": "ALIAS",
+      "target": "{PEG5}"
+    },
+    {
+      "id": "{spacer18}",
+      "status": "ALIAS",
+      "target": "{PEG6}"
+    },
+    {
+      "id": "{spacer21}",
+      "status": "ALIAS",
+      "target": "{PEG7}"
+    },
+    {
+      "id": "{CY5}",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "{CY3}",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "{CY5.5}",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "{555}",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "{647}",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "{594}",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "{488}",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "{568}",
+      "status": "UNSUPPORTED",
+      "reason": "No reliable atom-level scaffold/attachment/stereo definition in baseline; STRUCTURE_VARIANT_PENDING"
+    },
+    {
+      "id": "(none)",
+      "status": "LINKAGE_DEFINITION",
+      "reason": "Represented by a formal LinkageDefinition, not a BuildingBlock"
+    },
+    {
+      "id": "*",
+      "status": "LINKAGE_DEFINITION",
+      "reason": "Represented by a formal LinkageDefinition, not a BuildingBlock"
+    },
+    {
+      "id": "**",
+      "status": "LINKAGE_DEFINITION",
+      "reason": "Represented by a formal LinkageDefinition, not a BuildingBlock"
+    },
+    {
+      "id": "^",
+      "status": "LINKAGE_DEFINITION",
+      "reason": "Represented by a formal LinkageDefinition, not a BuildingBlock"
+    },
+    {
+      "id": "!",
+      "status": "LINKAGE_DEFINITION",
+      "reason": "Represented by a formal LinkageDefinition, not a BuildingBlock"
+    },
+    {
+      "id": "#",
+      "status": "LINKAGE_DEFINITION",
+      "reason": "Represented by a formal LinkageDefinition, not a BuildingBlock"
+    },
+    {
+      "id": "{C7N}",
+      "status": "UNSUPPORTED",
+      "reason": "Not present in baseline registry; exact structure and attachment must be provided"
+    }
+  ]
+}

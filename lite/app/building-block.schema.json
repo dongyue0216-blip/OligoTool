@@ -2,32 +2,133 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Sequence-compatible Building Block v2",
   "type": "object",
-  "required": ["id", "schema_version", "atoms", "bonds", "attachments", "assembly_class"],
+  "required": [
+    "id",
+    "schema_version",
+    "atoms",
+    "bonds",
+    "attachments",
+    "assembly_class"
+  ],
   "properties": {
-    "schema_version": {"const": "building-block/2"},
-    "id": {"type": "string"},
-    "atoms": {"type": "array", "minItems": 1},
-    "bonds": {"type": "array"},
-    "assembly_class": {"type": "string"},
+    "schema_version": {
+      "const": "building-block/2"
+    },
+    "id": {
+      "type": "string"
+    },
+    "atoms": {
+      "type": "array",
+      "minItems": 1
+    },
+    "bonds": {
+      "type": "array"
+    },
+    "assembly_class": {
+      "type": "string"
+    },
     "attachments": {
-      "type": "object", "minProperties": 1, "additionalProperties": false,
-      "properties": {"upstream": {"$ref": "#/$defs/site"}, "downstream": {"$ref": "#/$defs/site"}}
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "properties": {
+        "upstream": {
+          "$ref": "#/$defs/site"
+        },
+        "downstream": {
+          "$ref": "#/$defs/site"
+        }
+      }
+    },
+    "optical": {
+      "type": "object",
+      "required": [
+        "mode"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "unknown",
+            "parent",
+            "zero",
+            "explicit"
+          ]
+        },
+        "parent": {
+          "enum": [
+            "A",
+            "C",
+            "G",
+            "T",
+            "U",
+            "I"
+          ]
+        },
+        "epsilon": {
+          "type": "number",
+          "minimum": 0
+        },
+        "source": {
+          "type": "string"
+        }
+      }
     }
   },
   "$defs": {
     "site": {
       "type": "object",
-      "required": ["atom", "atom_role", "direction", "element", "connection_class", "local_bonds", "allowed_linkage_classes", "internal_phosphorus", "terminal_phosphorus"],
+      "required": [
+        "atom",
+        "atom_role",
+        "direction",
+        "element",
+        "connection_class",
+        "local_bonds",
+        "allowed_linkage_classes",
+        "internal_phosphorus",
+        "terminal_phosphorus"
+      ],
       "properties": {
-        "atom": {"type": "integer", "minimum": 0},
-        "atom_role": {"type": "string"},
-        "direction": {"enum": ["upstream", "downstream"]},
-        "element": {"type": "string"},
-        "connection_class": {"type": "string"},
-        "local_bonds": {"type": "array"},
-        "allowed_linkage_classes": {"type": "array", "items": {"type": "string"}},
-        "internal_phosphorus": {"type": "array", "items": {"type": "string"}},
-        "terminal_phosphorus": {"type": "array", "items": {"type": "string"}}
+        "atom": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "atom_role": {
+          "type": "string"
+        },
+        "direction": {
+          "enum": [
+            "upstream",
+            "downstream"
+          ]
+        },
+        "element": {
+          "type": "string"
+        },
+        "connection_class": {
+          "type": "string"
+        },
+        "local_bonds": {
+          "type": "array"
+        },
+        "allowed_linkage_classes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "internal_phosphorus": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "terminal_phosphorus": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
       }
     }
   }

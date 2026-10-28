@@ -1,0 +1,2939 @@
+{
+  "version": "0.8.0",
+  "date": "2026-10-28",
+  "baseline": "Browser Lite 0.7.0",
+  "architecture": {
+    "version": "0.8.0",
+    "registryGraphs": 118,
+    "cases": 219,
+    "semanticRoundTrip": true,
+    "provenance": true,
+    "orientation": true,
+    "invalidContractsRejected": true
+  },
+  "release": {
+    "tests": 277,
+    "failures": [],
+    "recognized": {
+      "FULL": 95,
+      "RECOGNIZED_PENDING": 7
+    },
+    "methylCases": 13
+  },
+  "batch": {
+    "tests": 382,
+    "failures": [],
+    "performance": [
+      {
+        "n": 100,
+        "structures": false,
+        "elapsedMs": 1544.7093999999997,
+        "zipMs": 0,
+        "sourceBytes": 0,
+        "zipBytes": 0,
+        "rssBefore": 183746560,
+        "rssAfter": 194932736,
+        "heapBefore": 37223400,
+        "heapAfter": 78693168
+      },
+      {
+        "n": 100,
+        "structures": true,
+        "elapsedMs": 1505.6214999999993,
+        "zipMs": 66.15840000000026,
+        "sourceBytes": 3689775,
+        "zipBytes": 792402,
+        "rssBefore": 194969600,
+        "rssAfter": 243392512,
+        "heapBefore": 78717960,
+        "heapAfter": 68323104
+      },
+      {
+        "n": 500,
+        "structures": false,
+        "elapsedMs": 7581.129000000001,
+        "zipMs": 0,
+        "sourceBytes": 0,
+        "zipBytes": 0,
+        "rssBefore": 243396608,
+        "rssAfter": 206749696,
+        "heapBefore": 68334568,
+        "heapAfter": 63129736
+      },
+      {
+        "n": 500,
+        "structures": true,
+        "elapsedMs": 7508.357199999999,
+        "zipMs": 399.2487999999976,
+        "sourceBytes": 18448875,
+        "zipBytes": 3962802,
+        "rssBefore": 206749696,
+        "rssAfter": 292528128,
+        "heapBefore": 63134152,
+        "heapAfter": 63282472
+      },
+      {
+        "n": 1000,
+        "structures": false,
+        "elapsedMs": 15103.8383,
+        "zipMs": 0,
+        "sourceBytes": 0,
+        "zipBytes": 0,
+        "rssBefore": 292528128,
+        "rssAfter": 287498240,
+        "heapBefore": 63293360,
+        "heapAfter": 50022968
+      },
+      {
+        "n": 1000,
+        "structures": true,
+        "elapsedMs": 14833.993600000002,
+        "zipMs": 656.7936999999947,
+        "sourceBytes": 36897750,
+        "zipBytes": 7925802,
+        "rssBefore": 287641600,
+        "rssAfter": 376934400,
+        "heapBefore": 50045480,
+        "heapAfter": 100935280
+      }
+    ]
+  },
+  "buildingBlocks": {
+    "version": "0.7.0",
+    "standardBlocks": 84,
+    "caseCount": 1625,
+    "assertions": 520432,
+    "batchRows": 1620,
+    "largeAtoms": [
+      1200,
+      12000
+    ]
+  },
+  "attachmentMatrix": {
+    "version": "0.7.0",
+    "standardResidues": 84,
+    "families": {
+      "DNA": [
+        "dA",
+        "dC",
+        "dG",
+        "dT",
+        "dI",
+        "dCMe"
+      ],
+      "RNA": [
+        "rA",
+        "rC",
+        "rG",
+        "rU",
+        "rI",
+        "rT",
+        "rCMe"
+      ],
+      "F": [
+        "fA",
+        "fC",
+        "fG",
+        "fU",
+        "fT",
+        "fI",
+        "fCMe"
+      ],
+      "OMe": [
+        "mA",
+        "mC",
+        "mG",
+        "mU",
+        "mT",
+        "mI",
+        "mCMe"
+      ],
+      "MOE": [
+        "eA",
+        "eC",
+        "eG",
+        "eU",
+        "eT",
+        "eI",
+        "eCMe"
+      ],
+      "FANA": [
+        "FANA-A",
+        "FANA-C",
+        "FANA-G",
+        "FANA-U",
+        "FANA-T",
+        "FANA-I",
+        "FANA-CMe"
+      ],
+      "UNA": [
+        "UNA-A",
+        "UNA-C",
+        "UNA-G",
+        "UNA-U",
+        "UNA-T",
+        "UNA-I",
+        "UNA-CMe"
+      ],
+      "NMA": [
+        "nA",
+        "nC",
+        "nG",
+        "nU",
+        "nT",
+        "nI",
+        "nCMe"
+      ],
+      "C16": [
+        "Ahd",
+        "Chd",
+        "Ghd",
+        "Uhd",
+        "Thd",
+        "Ihd",
+        "CMehd"
+      ],
+      "C22": [
+        "Ada",
+        "Cda",
+        "Gda",
+        "Uda",
+        "Tda",
+        "Ida",
+        "CMeda"
+      ],
+      "LNA": [
+        "+A",
+        "+C",
+        "+G",
+        "+U",
+        "+T",
+        "+I",
+        "+CMe"
+      ],
+      "ENA": [
+        "ENA-A",
+        "ENA-C",
+        "ENA-G",
+        "ENA-U",
+        "ENA-T",
+        "ENA-I",
+        "ENA-CMe"
+      ],
+      "Benner": [
+        "Z"
+      ]
+    },
+    "assertions": 581514,
+    "unsupported": [
+      {
+        "seq": "(p)Agn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Agn(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*Agn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Agn*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**Agn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Agn**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^Agn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Agn^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!Agn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Agn!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#Agn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Agn#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)Cgn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Cgn(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*Cgn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Cgn*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**Cgn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Cgn**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^Cgn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Cgn^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!Cgn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Cgn!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#Cgn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Cgn#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)Ggn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Ggn(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*Ggn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Ggn*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**Ggn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Ggn**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^Ggn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Ggn^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!Ggn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Ggn!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#Ggn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Ggn#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)Tgn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Tgn(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*Tgn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Tgn*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**Tgn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Tgn**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^Tgn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Tgn^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!Tgn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Tgn!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#Tgn",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "Tgn#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)VpmA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmA(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*VpmA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmA*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**VpmA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmA**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^VpmA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmA^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!VpmA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmA!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#VpmA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmA#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)VpmC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmC(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*VpmC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmC*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**VpmC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmC**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^VpmC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmC^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!VpmC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmC!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#VpmC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmC#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)VpmG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmG(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*VpmG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmG*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**VpmG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmG**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^VpmG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmG^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!VpmG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmG!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#VpmG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmG#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)VpmU",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmU(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*VpmU",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmU*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**VpmU",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmU**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^VpmU",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmU^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!VpmU",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmU!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#VpmU",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpmU#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)VpeA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeA(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*VpeA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeA*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**VpeA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeA**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^VpeA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeA^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!VpeA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeA!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#VpeA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeA#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)VpeC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeC(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*VpeC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeC*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**VpeC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeC**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^VpeC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeC^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!VpeC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeC!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#VpeC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeC#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)VpeG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeG(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*VpeG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeG*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**VpeG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeG**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^VpeG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeG^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!VpeG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeG!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#VpeG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeG#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)VpeU",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeU(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*VpeU",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeU*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**VpeU",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeU**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^VpeU",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeU^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!VpeU",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeU!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#VpeU",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "VpeU#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)pA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pA(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*pA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pA*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**pA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pA**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^pA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pA^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!pA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pA!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#pA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pA#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)pC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pC(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*pC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pC*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**pC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pC**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^pC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pC^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!pC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pC!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#pC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pC#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)pG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pG(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*pG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pG*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**pG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pG**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^pG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pG^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!pG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pG!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#pG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pG#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)pT",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pT(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*pT",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pT*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**pT",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pT**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^pT",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pT^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!pT",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pT!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#pT",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pT#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)pI",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pI(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*pI",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pI*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**pI",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pI**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^pI",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pI^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!pI",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pI!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#pI",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "pI#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)tA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tA(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*tA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tA*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**tA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tA**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^tA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tA^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!tA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tA!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#tA",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tA#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)tC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tC(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*tC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tC*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**tC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tC**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^tC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tC^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!tC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tC!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#tC",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tC#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)tG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tG(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*tG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tG*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**tG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tG**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^tG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tG^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!tG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tG!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#tG",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tG#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)tT",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tT(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*tT",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tT*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**tT",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tT**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^tT",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tT^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!tT",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tT!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#tT",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tT#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)tCMe",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tCMe(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*tCMe",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tCMe*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**tCMe",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tCMe**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^tCMe",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tCMe^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)!tCMe",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tCMe!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#tCMe",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "tCMe#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)[PEG3]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG3](p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*[PEG3]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG3]*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**[PEG3]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG3]**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^[PEG3]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG3]^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)![PEG3]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG3]!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#[PEG3]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG3]#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)[PEG4]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG4](p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*[PEG4]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG4]*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**[PEG4]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG4]**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^[PEG4]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG4]^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)![PEG4]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG4]!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#[PEG4]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG4]#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)[PEG5]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG5](p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*[PEG5]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG5]*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**[PEG5]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG5]**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^[PEG5]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG5]^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)![PEG5]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG5]!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#[PEG5]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG5]#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)[PEG6]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG6](p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*[PEG6]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG6]*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**[PEG6]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG6]**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^[PEG6]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG6]^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)![PEG6]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG6]!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#[PEG6]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG6]#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)[PEG7]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG7](p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*[PEG7]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG7]*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**[PEG7]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG7]**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^[PEG7]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG7]^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)![PEG7]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG7]!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#[PEG7]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[PEG7]#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)[spacer3]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[spacer3](p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*[spacer3]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[spacer3]*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**[spacer3]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[spacer3]**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^[spacer3]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[spacer3]^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)![spacer3]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[spacer3]!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#[spacer3]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[spacer3]#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)[C3N]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[C3N](p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*[C3N]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[C3N]*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**[C3N]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[C3N]**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^[C3N]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[C3N]^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)![C3N]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[C3N]!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#[C3N]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[C3N]#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)[C6N]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[C6N](p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*[C6N]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[C6N]*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**[C6N]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[C6N]**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^[C6N]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[C6N]^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)![C6N]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[C6N]!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#[C6N]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[C6N]#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)[FAM]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[FAM](p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*[FAM]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[FAM]*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**[FAM]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[FAM]**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^[FAM]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[FAM]^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)![FAM]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[FAM]!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#[FAM]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[FAM]#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)[L96]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[L96](p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*[L96]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[L96]*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**[L96]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[L96]**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^[L96]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[L96]^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)![L96]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[L96]!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#[L96]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[L96]#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)[NAG37]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[NAG37](p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*[NAG37]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[NAG37]*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**[NAG37]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[NAG37]**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^[NAG37]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[NAG37]^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)![NAG37]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[NAG37]!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#[NAG37]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[NAG37]#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)[InvAb]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[InvAb](p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)*[InvAb]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[InvAb]*(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)**[InvAb]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[InvAb]**(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)^[InvAb]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[InvAb]^(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)![InvAb]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[InvAb]!(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "(p)#[InvAb]",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      },
+      {
+        "seq": "[InvAb]#(p)",
+        "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+      }
+    ],
+    "batchRows": 1513
+  },
+  "terminal": {
+    "batch": {
+      "rows": 145,
+      "files": 576,
+      "errorRow": {
+        "ID": "bad",
+        "Sequence": "rA*",
+        "Formula": "",
+        "Average MW": "",
+        "Exact Mass": "",
+        "epsilon260": "",
+        "nmol/OD260": "",
+        "ug/OD260": "",
+        "Chemistry Status": "SYNTAX_ERROR",
+        "Structure Status": "STRUCTURE_UNSUPPORTED",
+        "OD Status": "UNSUPPORTED",
+        "Error/Warning": "SYNTAX_ERROR: SYNTAX_ERROR: 末尾不能是 linkage",
+        "Output Name": "",
+        "Source Row": 5
+      }
+    }
+  },
+  "visual": {
+    "canonicalGroups": {
+      "PO": [
+        [
+          "O",
+          2,
+          -1.7,
+          0
+        ],
+        [
+          "O",
+          1,
+          1.7,
+          0
+        ]
+      ],
+      "*": [
+        [
+          "S",
+          2,
+          -1.7,
+          0
+        ],
+        [
+          "O",
+          1,
+          1.7,
+          0
+        ]
+      ],
+      "**": [
+        [
+          "S",
+          2,
+          -1.7,
+          0
+        ],
+        [
+          "S",
+          1,
+          1.7,
+          0
+        ]
+      ],
+      "^": [
+        [
+          "O",
+          2,
+          -1.7,
+          0
+        ],
+        [
+          "C",
+          1,
+          1.7,
+          0
+        ]
+      ],
+      "!": [
+        [
+          "O",
+          2,
+          1.7,
+          0
+        ],
+        [
+          "N",
+          1,
+          -1.5,
+          0
+        ]
+      ],
+      "#": [
+        [
+          "N",
+          1,
+          -1.7,
+          0
+        ],
+        [
+          "O",
+          2,
+          1.7,
+          0
+        ]
+      ]
+    },
+    "localVectorTolerance": 1e-08,
+    "nonbridgingBondLength": 1.7,
+    "terminalAttachmentLength": 3,
+    "terminalAxialSymmetryError": 0,
+    "labelCenterTolerance": 0.04,
+    "collisionChecks": "atom, label, bond, connector, long bond",
+    "localAngleVariance": 0,
+    "localLengthVariance": 0,
+    "deterministic": true,
+    "chemistryAndTopologyUnchanged": true,
+    "batchFiles": 288
+  },
+  "browser": {
+    "CUSTOM_BROWSER_v070.json": {
+      "browser": "Microsoft Edge",
+      "saveAndNew": true,
+      "newCustom": true,
+      "persistence": true,
+      "oneSite": true,
+      "singleBatch": {
+        "formula": "C30H47N10O17P3S",
+        "batch": "C30H47N10O17P3S",
+        "files": 4
+      },
+      "largeFileBytes": 2183379,
+      "largeFit": {
+        "container": 1080,
+        "width": 1080,
+        "height": 3.140625,
+        "viewBox": [
+          -2,
+          -2,
+          1612.6273193359375,
+          4.670820236206055
+        ],
+        "atoms": 1200
+      },
+      "errors": []
+    },
+    "ATTACHMENT_BROWSER.json": {
+      "browser": "Edge",
+      "cards": 30,
+      "maxLabelOffset": 0.02371822595596318,
+      "cases": [
+        {
+          "seq": "(p)*eA",
+          "formula": "C13H20N5O7PS",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ]
+          ]
+        },
+        {
+          "seq": "(p)*eCMe",
+          "formula": "C13H22N3O8PS",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ]
+          ]
+        },
+        {
+          "seq": "(p)*eG",
+          "formula": "C13H20N5O8PS",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ]
+          ]
+        },
+        {
+          "seq": "(p)*rA",
+          "formula": "C10H14N5O6PS",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ]
+          ]
+        },
+        {
+          "seq": "(p)*mA",
+          "formula": "C11H16N5O6PS",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ]
+          ]
+        },
+        {
+          "seq": "(p)*+A",
+          "formula": "C11H14N5O6PS",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ]
+          ]
+        },
+        {
+          "seq": "eA*(p)",
+          "formula": "C13H20N5O7PS",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "seq": "eCMe*(p)",
+          "formula": "C13H22N3O8PS",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "seq": "eG*(p)",
+          "formula": "C13H20N5O8PS",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "seq": "rA*(p)",
+          "formula": "C10H14N5O6PS",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "seq": "mA*(p)",
+          "formula": "C11H16N5O6PS",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "seq": "+A*(p)",
+          "formula": "C11H14N5O6PS",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "seq": "(p)eA",
+          "formula": "C13H20N5O8P",
+          "local": [
+            [
+              "O",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ]
+          ]
+        },
+        {
+          "seq": "(p)eCMe",
+          "formula": "C13H22N3O9P",
+          "local": [
+            [
+              "O",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ]
+          ]
+        },
+        {
+          "seq": "(p)eG",
+          "formula": "C13H20N5O9P",
+          "local": [
+            [
+              "O",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ]
+          ]
+        },
+        {
+          "seq": "(p)rA",
+          "formula": "C10H14N5O7P",
+          "local": [
+            [
+              "O",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ]
+          ]
+        },
+        {
+          "seq": "(p)mA",
+          "formula": "C11H16N5O7P",
+          "local": [
+            [
+              "O",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ]
+          ]
+        },
+        {
+          "seq": "(p)+A",
+          "formula": "C11H14N5O7P",
+          "local": [
+            [
+              "O",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ]
+          ]
+        },
+        {
+          "seq": "(p)**eA",
+          "formula": "C13H20N5O6PS2",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "S",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ]
+          ]
+        },
+        {
+          "seq": "(p)**eCMe",
+          "formula": "C13H22N3O7PS2",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "S",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ]
+          ]
+        },
+        {
+          "seq": "(p)**eG",
+          "formula": "C13H20N5O7PS2",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "S",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ]
+          ]
+        },
+        {
+          "seq": "(p)**rA",
+          "formula": "C10H14N5O5PS2",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "S",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ]
+          ]
+        },
+        {
+          "seq": "(p)**mA",
+          "formula": "C11H16N5O5PS2",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "S",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ]
+          ]
+        },
+        {
+          "seq": "(p)**+A",
+          "formula": "C11H14N5O5PS2",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "S",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ]
+          ]
+        },
+        {
+          "seq": "eA**(p)",
+          "formula": "C13H20N5O6PS2",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "S",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "seq": "eCMe**(p)",
+          "formula": "C13H22N3O7PS2",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "S",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "seq": "eG**(p)",
+          "formula": "C13H20N5O7PS2",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "S",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "seq": "rA**(p)",
+          "formula": "C10H14N5O5PS2",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "S",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "seq": "mA**(p)",
+          "formula": "C11H16N5O5PS2",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "S",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "seq": "+A**(p)",
+          "formula": "C11H14N5O5PS2",
+          "local": [
+            [
+              "S",
+              2,
+              -1.7,
+              0
+            ],
+            [
+              "S",
+              1,
+              1.7,
+              0
+            ],
+            [
+              "O",
+              1,
+              0,
+              -3
+            ],
+            [
+              "O",
+              1,
+              0,
+              3
+            ]
+          ]
+        }
+      ],
+      "errors": []
+    },
+    "VISUAL_BROWSER_QA.json": {
+      "browser": "Microsoft Edge",
+      "galleryCards": 72,
+      "elementCenterMaxOffset": 0.025451415627353313,
+      "screenshot": [
+        "gallery-top.png",
+        "gallery-complex.png",
+        "app.png"
+      ]
+    }
+  },
+  "schema": "Master Library v2 + actual result: passed",
+  "releaseGuard": "pollution/path injection tests passed",
+  "sanity": {
+    "sequence": "rArA",
+    "formula": "C20H25N10O10P",
+    "exactMassTarget": 596.149274,
+    "toleranceDa": 1e-06
+  }
+}

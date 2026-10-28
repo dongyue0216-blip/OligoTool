@@ -1,7 +1,7 @@
 const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert');
 const root=path.resolve(__dirname,'../..'),c=vm.createContext({console,Blob,TextEncoder,TextDecoder,setTimeout,performance});
-for(const f of ['app/reference-data.js','app/coverage-data.js','app/conjugation-pool.js','app/chemistry.js','app/requirement-matrix.js','vendor/jszip.min.js','vendor/xlsx.full.min.js','batch/batch.js','tests/regression/regression-tests.js','tests/regression/phase1-tests.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c);
-const L=vm.runInContext('Lite',c),old=vm.createContext({console});for(const f of ['reference-data','coverage-data','chemistry'])vm.runInContext(fs.readFileSync(path.join(root,f==='chemistry'?'tests/fixtures/baseline-v052':'app',f+'.js'),'utf8'),old);const O=vm.runInContext('Lite',old);
+for(const f of ['app/reference-data.js','app/coverage-data.js','app/conjugation-pool.js','app/core.js','app/chemistry.js','app/requirement-matrix.js','vendor/jszip.min.js','vendor/xlsx.full.min.js','batch/batch.js','tests/regression/regression-tests.js','tests/regression/phase1-tests.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c);
+const L=vm.runInContext('Lite',c),baseline=JSON.parse(fs.readFileSync(path.join(root,'tests/evidence/CHEMICAL_BASELINE.json'),'utf8'));const O={calculate:seq=>{if(!baseline[seq])throw Error('Missing independent baseline '+seq);return baseline[seq];}};
 const cases=[],groups={},gallery=[];
 for(const base of ['rA','dA','mG','fU'])for(const op of ['','*','**','^','!','#'])for(const seq of ['(p)'+op+base,base+op+'(p)',base+op+'rG']){
  const r=L.calculate(seq),b=O.calculate(seq);assert.equal(JSON.stringify(r.chemistry),JSON.stringify(b.chemistry));assert.equal(L.parseMol(L.mol(r.graph)).formula,r.chemistry.formula);assert(L.cdxml(r.graph).includes('Element="15"'));

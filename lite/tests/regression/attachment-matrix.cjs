@@ -1,6 +1,6 @@
 const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert');
 const root=path.resolve(__dirname,'../..'),c=vm.createContext({console,setTimeout,performance,Blob,TextEncoder,TextDecoder});
-for(const p of ['app/reference-data.js','app/coverage-data.js','app/chemistry.js','vendor/jszip.min.js','vendor/xlsx.full.min.js','batch/batch.js'])vm.runInContext(fs.readFileSync(path.join(root,p),'utf8'),c);
+for(const p of ['app/reference-data.js','app/coverage-data.js','app/core.js','app/chemistry.js','vendor/jszip.min.js','vendor/xlsx.full.min.js','batch/batch.js'])vm.runInContext(fs.readFileSync(path.join(root,p),'utf8'),c);
 const L=vm.runInContext('Lite',c),R=vm.runInContext('REFERENCE',c),B=vm.runInContext('Batch',c);
 const rules={'':{H:1,P:1,O:3},'*':{H:1,P:1,O:2,S:1},'**':{H:1,P:1,O:1,S:2},'^':{C:1,H:3,P:1,O:2},'!':{C:5,H:10,N:3,P:1,O:2},'#':{C:1,H:4,N:1,P:1,O:4,S:1}};
 const rows=[],unsupported=[],families={};let assertions=0;

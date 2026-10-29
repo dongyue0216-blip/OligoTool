@@ -8,7 +8,7 @@ const ChemistryCore = (() => {
   if(!g.atoms?.length||!Array.isArray(g.bonds))fail('empty MolecularGraph');
   for(const [i,a] of g.atoms.entries())if(!a.e||!Number.isInteger(a.h??0)||(a.h??0)<0||!Number.isFinite(a.q??0)||['x','y','z'].some(k=>a[k]!==undefined&&!Number.isFinite(a[k])))fail('invalid atom '+i);
   for(const b of g.bonds)if(!Number.isInteger(b.a)||!Number.isInteger(b.b)||!g.atoms[b.a]||!g.atoms[b.b]||b.a===b.b||![1,2,3].includes(b.o))fail('invalid bond');
-  return {schema_version:'molecular-graph/1',atoms:g.atoms,bonds:g.bonds};
+  return {schema_version:'molecular-graph/1',atoms:g.atoms,bonds:g.bonds,...(g.ctfile?{ctfile:copy(g.ctfile)}:{})};
  }
  function buildingBlock(value) {
   const graph=molecularGraph(value), sites=copy(value.sites||value.attachments||{});

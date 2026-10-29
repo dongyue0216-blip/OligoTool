@@ -1,0 +1,19 @@
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'),fs=require('fs'),path=require('path'),assert=require('assert');
+const root=path.resolve(__dirname,'../..'),out={workflows:[]};
+(async()=>{const browser=await chromium.launch({channel:'msedge',headless:true});try{const p=await browser.newPage({viewport:{width:1400,height:1000}}),errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto('file:///'+path.join(root,'Start.html').replaceAll('\\','/'));await p.locator('summary').filter({hasText:'Advanced / Custom Chemistry'}).click();
+ const chain=fs.readFileSync(path.join(root,'tests/fixtures/sgroups/workflow.mol'),'utf8'),moe=fs.readFileSync(path.join(root,'custom_chemistry/custom-MOE-5-3-example.mol'),'utf8');
+ const real=await p.evaluate(s=>{const a=Lite.parseMol(s),g=a.graph,ids=g.atoms.map((_,i)=>i+1),records=['M  STY  2   1 SUP   2 DAT','M  SMT   1 MOE','M  SAL   2  1   1','M  SDT   2 note                           F','M  SED   2 existing MOE scaffold','M  SPL  1   2   1'];for(let i=0;i<ids.length;i+=15){const part=ids.slice(i,i+15);records.push('M  SAL   1'+String(part.length).padStart(3,' ')+part.map(x=>String(x).padStart(4,' ')).join(''));}return Lite.mol(g).replace('M  END',records.join('\n')+'\nM  END');},moe);
+ for(const [name,text]of [['SGroupFlow',chain],['RealMOE',real]]){
+  await p.locator('#newcustom').click();await p.locator('#customfile').setInputFiles({name:name+'.mol',mimeType:'chemical/x-mdl-molfile',buffer:Buffer.from(text)});await p.waitForFunction(()=>imported?.graph?.ctfile?.groups.length===2);assert((await p.locator('#sgroupstatus').textContent()).includes('SUP'));assert(await p.locator('#exportimportsource').isVisible());
+  const sites=await p.evaluate(()=>imported.graph.atoms.map((a,i)=>a.e==='O'&&a.h===1?i:null).filter(i=>i!==null));assert(sites.length>=2);
+  for(const [i,button]of [[sites[0],'setfive'],[sites.at(-1),'setthree']]){await p.locator('#custompreview circle[data-atom="'+i+'"]').click();await p.locator('#'+button).click();}
+  await p.locator('#customname').fill(name);await p.locator('#savecustom').click();assert.match(await p.locator('#customsavestatus').textContent(),/Saved successfully/);
+  const download= p.waitForEvent('download');await p.locator('#exportimportsource').click();const dl=await download;assert.equal(fs.readFileSync(await dl.path(),'utf8'),text);
+  out.workflows.push({name,atoms:await p.evaluate(()=>imported.graph.atoms.length),sourceExportExact:true});
+ }
+ const before=await p.evaluate(()=>JSON.stringify(copyLibrary()));await p.reload();assert.equal(await p.evaluate(()=>JSON.stringify(copyLibrary())),before);
+ await p.locator('summary').filter({hasText:'Advanced / Custom Chemistry'}).click();await p.locator('.saved-custom-row').filter({hasText:'RealMOE'}).getByRole('button',{name:'View',exact:true}).click();assert.equal(await p.evaluate(()=>imported.graph.ctfile.groups.length),2);
+ out.calculations=await p.evaluate(async()=>{const seq='rA[RealMOE]rC',one=Lite.calculate(seq),batch=await Batch.run([{ID:'test',Sequence:seq}]);return {single:one.chemistry.formula,batch:batch.rows[0].Formula,metadata:one.assembly_graph.nodes[1].block.graph.ctfile.groups.length,optical:one.optical.status};});assert.equal(out.calculations.single,out.calculations.batch);assert.equal(out.calculations.metadata,2);
+ const backup=await p.evaluate(()=>backupLibrary());await p.evaluate(b=>{commitLibrary({});restoreLibrary(b);},backup);assert.equal(await p.evaluate(()=>Object.keys(Lite.customLibrary).length),2);
+ await p.locator('#custompreview').screenshot({path:path.join(root,'tests/evidence/sgroups/browser.png')});assert.deepEqual(errors,[]);out.pageErrors=errors;out.refresh=true;out.backupRestore=true;fs.writeFileSync(path.join(root,'tests/evidence/sgroups/browser.json'),JSON.stringify(out,null,2));console.log(JSON.stringify(out));
+ }finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

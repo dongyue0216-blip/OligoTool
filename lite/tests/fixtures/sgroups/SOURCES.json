@@ -1,0 +1,266 @@
+[
+  {
+    "gitBlob": "a485e65213c168340e34663adfc41ca3e32616a4",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_Abbreviations.mol",
+    "file": "Sgroups_Abbreviations.mol",
+    "sha256": "9AA55B712E5A21D5F1CAC773D33B6B575BE8F8D8B7BDEC38DB78BF5ACFE21A01"
+  },
+  {
+    "gitBlob": "22602d7845842b5aba67f586995a74124b0f4178",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_AnyPol_01.mol",
+    "file": "Sgroups_AnyPol_01.mol",
+    "sha256": "EC82FB97834C81A57595827FF2BB8A65EABC35F5A6B009831A8FF1AF584E1831"
+  },
+  {
+    "gitBlob": "3eecea9cf8e1973dc00cecc7930926d668294c7e",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_Component_01.mol",
+    "file": "Sgroups_Component_01.mol",
+    "sha256": "6FC2E958800A69CB27AA3B207D975F55C39B819A4864DA4213939E4585105803"
+  },
+  {
+    "gitBlob": "2e7c6ce34cf812e488986c499a55bbf98e3820f8",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_Copolymer_01.mol",
+    "file": "Sgroups_Copolymer_01.mol",
+    "sha256": "D70407D80034017DB73C83942FC245E9D455919C8B179CB87EA86B28C858F0D6"
+  },
+  {
+    "gitBlob": "c1d851216caaeebeafbb889ddf46cdfa800d67e5",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_Copolymer_alt_01.mol",
+    "file": "Sgroups_Copolymer_alt_01.mol",
+    "sha256": "4925C80D5B633CE0AB05247DC5FE076738B41F1D1ED328BD09FFFB595344EEDD"
+  },
+  {
+    "gitBlob": "a86c3e8832289c67a53508959557c05daf99df7b",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_Copolymer_blk_01.mol",
+    "file": "Sgroups_Copolymer_blk_01.mol",
+    "sha256": "A874640243344C9B937D4CF21D3E8D1FE59D83AB704694A4CE7E0906F0958DBA"
+  },
+  {
+    "gitBlob": "9ceb4d55972a4e433d30efa12ec7aa01d7c375d4",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_Copolymer_ran_01.mol",
+    "file": "Sgroups_Copolymer_ran_01.mol",
+    "sha256": "35C84D31135AA807291E04F9D6F17A4E6777E84761A6EDFDEE99F953520BB02B"
+  },
+  {
+    "gitBlob": "2377863dd1420bdd4d71e8c018f4c930642d708a",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_Data_01.mol",
+    "file": "Sgroups_Data_01.mol",
+    "sha256": "AB8A2077879155421D478AF72D77144E27B5CD789BC983FEBECE093C75B4FAB3"
+  },
+  {
+    "gitBlob": "8ac42edc09b8b547afda47e087b89c621ae4d2a8",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_Formulation_01.mol",
+    "file": "Sgroups_Formulation_01.mol",
+    "sha256": "2732D7F3799E6B6C3918BD3B923B2BBC220C6FAADC5592719F41FE6CB0A4CF91"
+  },
+  {
+    "gitBlob": "9a65fd0ab9317ec96345ced0ae33539b9471b747",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_Generic_01.mol",
+    "file": "Sgroups_Generic_01.mol",
+    "sha256": "48FCF1484D1DFF0488EBB43C3B1F303BB154D233E3C4730F37E95A270C6199AC"
+  },
+  {
+    "gitBlob": "8fc226ad513d265890447b2967366aea55ae8e12",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_Link_01.mol",
+    "file": "Sgroups_Link_01.mol",
+    "sha256": "1FDB140F54EE035A0617F0B884D2915A575EA1D2E4E286A5FEFAED2A5F6BB48F"
+  },
+  {
+    "gitBlob": "4073e9b1b13d8e70f2e58681bfaf5edaf5b8f079",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_Mixture_02.mol",
+    "file": "Sgroups_Mixture_02.mol",
+    "sha256": "07B0F6F70F23F554856A16BC650B11ED7AA06E20DD2C327787282F609C49C179"
+  },
+  {
+    "gitBlob": "aeb5976a4df9eed4adcc5ffc30df85aa198aece7",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_Mixture_False.mol",
+    "file": "Sgroups_Mixture_False.mol",
+    "sha256": "8D8799C9CA6DCB054B1B732F22606302F37C31A54D3908727E9220B5BFC9FD63"
+  },
+  {
+    "gitBlob": "8327bb35d9f59ca2443cf9af3d01a43e7d14e161",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_Monomer_01.mol",
+    "file": "Sgroups_Monomer_01.mol",
+    "sha256": "88B7F8945FFC5DD487AA4A2B6FF07DD6EC05B7B6713B2883922F9E4304E6B91B"
+  },
+  {
+    "gitBlob": "1c3b92829171aec87fd56f4b5db0bd9d4522c67b",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_MultipleGroup_01.mol",
+    "file": "Sgroups_MultipleGroup_01.mol",
+    "sha256": "28C50761E17E09E4DFE60AF58DB765A84F3B8A3221A437150FC956407369FA38"
+  },
+  {
+    "gitBlob": "a9be571163b3b61324e7e964dba10caf4df60744",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_SRU_01.mol",
+    "file": "Sgroups_SRU_01.mol",
+    "sha256": "96545388272A6DBCEF20350866D18670597176F1DF3C9A710424AE49D576001B"
+  },
+  {
+    "gitBlob": "82030f200a2d07634bb620b89414b64a0ebc89d6",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_SRU_02.mol",
+    "file": "Sgroups_SRU_02.mol",
+    "sha256": "C237C9C51FF80298CB354E9D31A499E85D3050E1A2D0156F533264A088EB32AF"
+  },
+  {
+    "gitBlob": "de8b86f03be6d3cbd22336502109f9bab1a96293",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_crosslink_01.mol",
+    "file": "Sgroups_crosslink_01.mol",
+    "sha256": "22A1AE6DA68AFB55F84595DCF4B07E59B7FBA8DE1AC3A61492CBC37E54B61DDB"
+  },
+  {
+    "gitBlob": "79f187baa7614cc6211dccc79b6dd138ffa8b2eb",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_grf_01.mol",
+    "file": "Sgroups_grf_01.mol",
+    "sha256": "81B343EC3A255CEA662598D36892AD7CAE6F9CA741EDCCB317B7AD6DF2FF2A19"
+  },
+  {
+    "gitBlob": "c3dc47d5041b387895a1ebb7fd9ffbeed5f3e3db",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_mer_01.mol",
+    "file": "Sgroups_mer_01.mol",
+    "sha256": "8B33157384E5E13E93F087E7407FB40AE2CB673C868B3730DF0F1265781A6898"
+  },
+  {
+    "gitBlob": "5fdb7f482f637ddd182597c81a9de4d439eaf7cb",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/Sgroups_modification_01.mol",
+    "file": "Sgroups_modification_01.mol",
+    "sha256": "C9C1B1A0DA2423F56E8A87BAC94F696D8F8C944752534E2A09CB1B09B7410F69"
+  },
+  {
+    "gitBlob": "2cf8be6a27d555c45b19a9c97e4ecb5c631dd33a",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/sgroup_test_data/repeat_groups_query1.mol",
+    "file": "repeat_groups_query1.mol",
+    "sha256": "077A1DD6A2955989B4294EE6E528F92731E1CE3F05D3B8EC36319E5121FC22B8"
+  },
+  {
+    "gitBlob": "4b4e9bbafea113d79d534ec270cb149557c0b591",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/DataSgroup.sdf",
+    "file": "DataSgroup.sdf",
+    "sha256": "99430D6BBBEFBC6963505CD0566558CC9FA44149C50F02750658CFC22F3D39B1"
+  },
+  {
+    "gitBlob": "8eed65f4aef6e71dc2d5a36eca7dd61549ec4e50",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/DataSgroupMissingUnitsDisplayed.sdf",
+    "file": "DataSgroupMissingUnitsDisplayed.sdf",
+    "sha256": "2DDBAEEABD41484B84C5119896E10EAA127752CBFFAEB1BB279B998A01ED3AC8"
+  },
+  {
+    "gitBlob": "8745ba17defdf46a8847641826c1bf69b529951b",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/EmbeddedSGroupSUP_MUL.sdf",
+    "file": "EmbeddedSGroupSUP_MUL.sdf",
+    "sha256": "BC4A8903457799BEEA2BA9A90A98F036CA540ED6CBFEB26E8FFF5B7269DA0147"
+  },
+  {
+    "gitBlob": "597457df7c9c69cf8b17c8c2cb460c66840c8700",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/EmbeddedSgroupCOP_SUP.sdf",
+    "file": "EmbeddedSgroupCOP_SUP.sdf",
+    "sha256": "1D0F0E24DAAF69637E6B9C8B4974D3E09D75F0A7C69F48DB060409AC028068CA"
+  },
+  {
+    "gitBlob": "18247b9cccc87246f0391c8e989c2931e03e512c",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/EmbeddedSgroupDAT_SUP.sdf",
+    "file": "EmbeddedSgroupDAT_SUP.sdf",
+    "sha256": "C2D8EF56847220BB68CE833201987E68EB1FA804671B96BF47C0A7EE0513825B"
+  },
+  {
+    "gitBlob": "e691ac1c934248182f6d684832ad0c5e057750d5",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/EmbeddedSgroupMUL_MUL.sdf",
+    "file": "EmbeddedSgroupMUL_MUL.sdf",
+    "sha256": "6C70BFD09F3E1F70E3049F3BE8BF08AD2F250BA4762123FAA4211ED54AC9F4A4"
+  },
+  {
+    "gitBlob": "b80260d8305c8930cda0c923a12b8f26e97a544c",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/EmbeddedSgroupMUL_SUP.sdf",
+    "file": "EmbeddedSgroupMUL_SUP.sdf",
+    "sha256": "C82E18D51A1EC32D91C38232F56AE6E618840CE2C9BA1BDF0FEAE8830F587C39"
+  },
+  {
+    "gitBlob": "3ae50d59b690c0c7b2e5cb4b969df91e5a43d18d",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/EmbeddedSgroupSRU_SUP.sdf",
+    "file": "EmbeddedSgroupSRU_SUP.sdf",
+    "sha256": "C26B2C762139A6AEBC1873E5D8EA8FAECE4C7EA025ADA2984B887B787BE15AE7"
+  },
+  {
+    "gitBlob": "8108c9301953e4a393b491a2664d0ddacd162228",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/EmbeddedSgroupSUPEXP_SUP.sdf",
+    "file": "EmbeddedSgroupSUPEXP_SUP.sdf",
+    "sha256": "04EE8C16F31C806CD21056344AB2137A777FA47561B0C34FFEFC2FF434645D0D"
+  },
+  {
+    "gitBlob": "7cb059387ed040a372689cea8080390c1cfc32fb",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/EmbeddedSgroupSUPEXP_SUP2.sdf",
+    "file": "EmbeddedSgroupSUPEXP_SUP2.sdf",
+    "sha256": "AB0611E1A66EA125A2A89D18CB912C0D9D5004C1B7222B3D5E7C0E44214561AD"
+  },
+  {
+    "gitBlob": "b9f87ad18a03297441e91e46bb88283439c023b4",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/EmbeddedSgroupSUP_SUP.sdf",
+    "file": "EmbeddedSgroupSUP_SUP.sdf",
+    "sha256": "9325BEF266E378A401501ED095863352F05FE82462B257B7BEAB5277BE60BFC1"
+  },
+  {
+    "gitBlob": "fd5d08447124c85a01b9a6279e7eade6ecb27ce6",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/EmbeddedSgroupSUP_SUP2.sdf",
+    "file": "EmbeddedSgroupSUP_SUP2.sdf",
+    "sha256": "0FD33BD7E9CC704A956EC46FC27C7A947FBAD6054ED0A11F4ADCED947191A2B9"
+  },
+  {
+    "gitBlob": "5d66a91ad5652f559bc6fa3063d952c56d4866b7",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/GenericSgroup.sdf",
+    "file": "GenericSgroup.sdf",
+    "sha256": "B4766BAC8B055DD10F79A713F91138D57B2DD68B9D3E1A465B8CEDBA6D0E7495"
+  },
+  {
+    "gitBlob": "c3d67a49d6eeb87b2b5399f2f605ef2f97f0dedd",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/MarvinOldSuperGroupTest.sdf",
+    "file": "MarvinOldSuperGroupTest.sdf",
+    "sha256": "AF09413FD1E06E10000C2163C8092C1407D68A26455F9836CE12B8F3B690BA65"
+  },
+  {
+    "gitBlob": "9c7a6224c237b3c1b88683cdd327f812c69e192b",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/MonomerSgroup.sdf",
+    "file": "MonomerSgroup.sdf",
+    "sha256": "33694AB289C3E8987978F8DBE504E80E15A0201EAA45132751A85D672AAF9D8A"
+  },
+  {
+    "gitBlob": "87ad3fae5919ffbe869e0d5744655cb98963172e",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/MultipleSgroup.sdf",
+    "file": "MultipleSgroup.sdf",
+    "sha256": "C7C5E3CB42AF1CE28CE8C516192F938DAF2571A402286C31A0600F50D2550187"
+  },
+  {
+    "gitBlob": "fd0d08b12997660ee5fe8ee271c1b7963b8d6a58",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/MultipleSgroupParentInMiddleOfAtomBlock.sdf",
+    "file": "MultipleSgroupParentInMiddleOfAtomBlock.sdf",
+    "sha256": "3C9EB4EBE476EB1389A9D029140FADA665781EEFFAA5FEDCEFD709DDA7E3B0FB"
+  },
+  {
+    "gitBlob": "5b4617ab31598c47fca0b9ea5f5a92933e51f64e",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/SgroupExpanded.sdf",
+    "file": "SgroupExpanded.sdf",
+    "sha256": "BF4217B448A15F976719530329DB8B32782BEBC46652846FAD3EB5FD5D75E3BB"
+  },
+  {
+    "gitBlob": "f6b044ffb5c0a52e9205d6774d060af66304f93c",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/SgroupMultAttach.sdf",
+    "file": "SgroupMultAttach.sdf",
+    "sha256": "8FA2BE8A90ED085004266D64188B8057F3A47760A906C613A59F56810213F541"
+  },
+  {
+    "gitBlob": "ec24197efb305d4881cca047a90e37869b1821af",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/Sgroup_MUL_ParentInMiddle.sdf",
+    "file": "Sgroup_MUL_ParentInMiddle.sdf",
+    "sha256": "5EAAE008AD36576CFA0A9FA8AFFE714507153CA1F72E7D86F4C5E76F8F515129"
+  },
+  {
+    "gitBlob": "3684c211f6cd7bc656250b13479d7a657fccb1a3",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/copolymer_sgroup.sdf",
+    "file": "copolymer_sgroup.sdf",
+    "sha256": "172E7043EB95A5346A1E78F1213B897909B1B6DE57B699769E039DF145809AD6"
+  },
+  {
+    "gitBlob": "b8b94b0eecfb5926a207797a8b5b6cb388291512",
+    "url": "https://raw.githubusercontent.com/rdkit/rdkit/master/Code/GraphMol/FileParsers/test_data/sgroupFragments/modification_sgroup.sdf",
+    "file": "modification_sgroup.sdf",
+    "sha256": "6D8DDFEC9A795E0ACCC9E5718AA1D076DF1E96CECB399C675FB117A5E45666D7"
+  }
+]

@@ -6,7 +6,7 @@ DIRS = ('app', 'batch', 'custom_chemistry', 'docs', 'tests', 'vendor')
 FILES = ('Start.html', 'README.md', 'VERSION', 'LICENSE', 'LICENSE.md', 'LICENSE.txt', 'NOTICE', 'NOTICE.md')
 BAD = re.compile(r'(^Oligo_Chemistry_Toolkit_Lite_v|^(__pycache__|node_modules|\.git|\.cache|cache|tmp|temp|debug|staging|output)$|\.(zip|pyc|tmp|bak|log)$|debug[-_]?dump)', re.I)
 
-CURRENT_DOCS = {'OD_SUPPORT_MATRIX.md','CHANGELOG_v0.9.0.md','TEST_REPORT_v0.9.0.md','ARCHITECTURE_v080.md','MIGRATION_REPORT_v080.md','MIGRATION_AUDIT.json','SUPPORT_MATRIX_v080.md','TEST_REPORT_v080.md','RELEASE_NOTES_v080.md','BUILDING_BLOCK_ARCHITECTURE.md','CHEMISTRY_COVERAGE.md','PHOTOMETRY.md','TERMINAL_CHEMISTRY_AUDIT.md'}
+CURRENT_DOCS = {'SGROUP_COMPATIBILITY_v0.9.1.md','CHANGELOG_v0.9.1.md','FOCUSED_MOL_IMPORT_INVESTIGATION.md','OD_SUPPORT_MATRIX.md','CHANGELOG_v0.9.0.md','TEST_REPORT_v0.9.0.md','ARCHITECTURE_v080.md','MIGRATION_REPORT_v080.md','MIGRATION_AUDIT.json','SUPPORT_MATRIX_v080.md','TEST_REPORT_v080.md','RELEASE_NOTES_v080.md','BUILDING_BLOCK_ARCHITECTURE.md','CHEMISTRY_COVERAGE.md','PHOTOMETRY.md','TERMINAL_CHEMISTRY_AUDIT.md'}
 CURRENT_EVIDENCE = {'v090-od-tests.json','v090-test-results.json','CHEMICAL_BASELINE.json','REGISTRY_AUDIT_v080.json','ARCHITECTURE_v080.json','RELEASE_BASELINE_v080.json','TEST_RESULTS_v080.json'}
 
 def allowed(rel):
@@ -16,9 +16,10 @@ def allowed(rel):
     if parts[0] in ('app','batch','custom_chemistry','vendor'): return True
     if parts[0]=='docs': return len(parts)==2 and parts[1] in CURRENT_DOCS
     if parts[0]=='tests':
-        if len(parts)==2: return parts[1] in ('README.md','regression','release','evidence','visual')
+        if len(parts)==2: return parts[1] in ('README.md','regression','release','evidence','visual','fixtures')
         if parts[1] in ('regression','release'): return len(parts)==3 and Path(parts[2]).suffix in ('.js','.cjs','.py')
-        if parts[1]=='evidence': return len(parts)==3 and parts[2] in CURRENT_EVIDENCE
+        if parts[1]=='fixtures': return len(parts)==3 and parts[2]=='sgroups' or len(parts)==4 and parts[2]=='sgroups' and Path(parts[3]).suffix in ('.mol','.sdf','.json','.txt')
+        if parts[1]=='evidence': return len(parts)==3 and (parts[2] in CURRENT_EVIDENCE or parts[2] in ('sgroups','large-import')) or len(parts)==4 and parts[2] in ('sgroups','large-import') and Path(parts[3]).suffix in ('.json','.png')
         if parts[1]=='visual': return len(parts)==3 and Path(parts[2]).suffix in ('.html','.png')
     return False
 

@@ -1,16 +1,10 @@
 # Oligo Chemistry Toolkit
 
-## Latest browser edition: Lite v0.9.0
+## Latest browser edition: Lite v0.9.1
 
-Layered OD260: standard NN, literature inosine, parent chromophore and optional Custom optical properties. Unknown contributions are explicitly Partial / Needs parameter. Includes the completed Custom Library Manager. See [OD methods and sources](lite/docs/PHOTOMETRY.md).
+Structured V2000/V3000 SGroup import: explicit-graph SUP support, DAT/GEN metadata preservation, source archival export, and clear rejection of unsupported polymer/repeat/template semantics. Existing Custom Library Manager and layered OD260 behavior are retained. See the [compatibility matrix and test report](lite/docs/SGROUP_COMPATIBILITY_v0.9.1.md).
 
-Layered OD260: standard NN, literature inosine, parent chromophore and optional Custom optical properties. Unknown contributions are explicitly Partial / Needs parameter. Includes the completed Custom Library Manager. See [OD methods and sources](lite/docs/PHOTOMETRY.md).
-
-Layered OD260: standard NN, literature inosine, parent chromophore and optional Custom optical properties. Unknown contributions are explicitly Partial / Needs parameter. Includes the completed Custom Library Manager. See [OD methods and sources](lite/docs/PHOTOMETRY.md).
-
-Layered OD260: standard NN, literature inosine, parent chromophore and optional Custom optical properties. Unknown contributions are explicitly Partial / Needs parameter. Includes the completed Custom Library Manager. See [OD methods and sources](lite/docs/PHOTOMETRY.md).
-
-Download the clean ZIP from [Lite v0.9.0](https://github.com/dongyue0216-blip/OligoTool/releases/tag/lite-v0.9.0), extract the whole folder, and double-click **Start.html**. No installation or network required. From a source checkout, open **lite/Start.html**.
+Download the clean ZIP from [Lite v0.9.1](https://github.com/dongyue0216-blip/OligoTool/releases/tag/lite-v0.9.1), extract the whole folder, and double-click **Start.html**. No installation or network required. From a source checkout, open **lite/Start.html**. Back up Custom Library JSON before upgrading.
 
 Single Sequence, real atom/bond structure rendering, formula/MW/epsilon260/nmol per OD/ug per OD, terminal phosphate/PS notation, Batch Excel and Custom Chemistry are supported. See [Lite README](lite/README.md) for notation, supported chemistry and limitations. Conjugation Pool is metadata infrastructure; no conjugation reaction engine is implemented.
 

@@ -1,4 +1,8 @@
-Oligo Chemistry Toolkit Lite v0.9.0
+## v0.9.1 本地 SGroup 兼容修复
+
+请先阅读 [兼容矩阵、测试证据和限制](docs/SGROUP_COMPATIBILITY_v0.9.1.md)。支持显式图 SUP，保留 DAT/GEN；未实现的聚合/重复/模板语义明确拒绝。解压后双击 Start.html。正式发布版；兼容范围和已知限制见报告。
+
+Oligo Chemistry Toolkit Lite v0.9.1
 
 Layered OD260 engine; see [photometry](docs/PHOTOMETRY.md). Custom Manager v0.8.0 is the sole development baseline.
 

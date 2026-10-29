@@ -1,0 +1,23 @@
+{
+  "workflows": [
+    {
+      "name": "SGroupFlow",
+      "atoms": 12,
+      "sourceExportExact": true
+    },
+    {
+      "name": "RealMOE",
+      "atoms": 23,
+      "sourceExportExact": true
+    }
+  ],
+  "calculations": {
+    "single": "C32H43N13O18P2",
+    "batch": "C32H43N13O18P2",
+    "metadata": 2,
+    "optical": "PARTIAL"
+  },
+  "pageErrors": [],
+  "refresh": true,
+  "backupRestore": true
+}

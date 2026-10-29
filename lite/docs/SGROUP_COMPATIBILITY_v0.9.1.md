@@ -110,3 +110,10 @@ CLASS/SAP/NATREPLACE/SUBTYPE/MULT/CONNECT/COMPNO/XBHEAD/XBCORR/QUERYTYPE/QUERYOP
 本次建立的是受约束的 supported + preserved + safely rejected 框架，不是全部历史 MDL 扩展支持，也没有缩写字典、SCSR、polymer 或 MUL 自动展开器。未知化学扩展仍会拒绝。现有 Custom Chemistry 仍限单连通、中性 CHNOPS/F、无同位素、支持的价态和 Kekulé 单/双/三键；复杂 charged/aromatic-query/金属/盐混合体系可能仍无法录入。
 
 先备份现有库，在解压目录双击 Start.html，用实际 ChemDraw 完整展开的 Custom Chemistry 测试。若被拒绝，请保留原始文件和完整错误；不要删除 SGroup 行绕过。若格式层通过但出现 scaffold 限制，错误会保留，需另行实现相应图化学能力，不能用 viewer 尺寸或 SGroup 忽略策略处理。
+
+
+## 发布前补充验收
+
+对正式 ZIP 的独立解压副本再次验证：277 项版本验收无失败；78 个结构视觉案例和浏览器居中/截图检查通过；terminal 144 案例及 Single/Batch 浏览器一致性通过；SGroup 和 5000 原子浏览器链路重新通过；clean packaging 单元测试通过。运行代码逐字节匹配用户测试的本地版，发布准备仅更新文档和打包白名单。
+
+遗留 verify-batch.cjs 为 382 项中 379 项通过、3 项失败，已在未经修改的 v0.9.0 MOL 修复基线完整重跑并复现相同三类失败：旧测试期待 OD_PARAMETER_UNAVAILABLE，而当前光学模型分别返回 ESTIMATED/PARTIAL；另一个使用旧版源码哈希快照。这些不是新增运行时异常，不能记成全部通过；本次没有改变光学计算来迎合旧断言。之前发现的 architecture.cjs 快照失败同样保留记录。

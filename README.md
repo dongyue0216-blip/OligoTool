@@ -1,6 +1,13 @@
 # Oligo Chemistry Toolkit
 
-## Latest browser edition: Lite v0.9.1
+## Latest: Oligo Toolkit 1.1.0 — Offline integrated edition
+
+[Download the clean offline ZIP](https://github.com/dongyue0216-blip/OligoTool/releases/tag/v1.1.0), extract all files and double-click root **Start.html**. Windows Edge/Chrome; no installation, server or network required. Source checkout: root **Start.html** opens **offline/Start.html**.
+
+Sequence, Post Modification, Excel Batch and Custom Chemistry share the latest integrated chemistry/presentation engines. Fixed approved chemical logo; Chinese/English with remembered language; no Accent Color selector. See [capabilities and known gaps](offline/README.md), [acceptance matrix](offline/docs/ACCEPTANCE_MATRIX.md), and [package validation](docs/OFFLINE_RELEASE_1_1_0.json). Original C7N same-structure test was explicitly waived by the user. Back up local library JSON before upgrading.
+
+
+## Previous browser edition: Lite v0.9.1
 
 Structured V2000/V3000 SGroup import: explicit-graph SUP support, DAT/GEN metadata preservation, source archival export, and clear rejection of unsupported polymer/repeat/template semantics. Existing Custom Library Manager and layered OD260 behavior are retained. See the [compatibility matrix and test report](lite/docs/SGROUP_COMPATIBILITY_v0.9.1.md).
 

@@ -1,0 +1,27 @@
+{
+  "pass": true,
+  "name": "Oligo_Toolkit_v1.1.0_Offline.zip",
+  "sha256": "dc75239e0fa90f827771a6bfc0129d72c410c11146170148cdbcb034a8bf58a1",
+  "files": 61,
+  "size": 4815937,
+  "extractionHashes": "PASS",
+  "privacyScan": "PASS",
+  "C7N": "WAIVED BY USER",
+  "extractedBrowserTests": {
+    "msedge": {
+      "pass": true,
+      "E2E": 16,
+      "supplement": 5,
+      "networkRequests": 0,
+      "scriptErrors": 0
+    },
+    "chrome": {
+      "pass": true,
+      "E2E": 16,
+      "supplement": 5,
+      "networkRequests": 0,
+      "scriptErrors": 0
+    }
+  },
+  "status": "PASS"
+}

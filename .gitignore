@@ -13,3 +13,6 @@ dist/
 # Lite generated QA files
 lite/tests/output/
 lite/**/__pycache__/
+
+# Generated whitelist release packages
+releases/

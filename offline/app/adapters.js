@@ -14,7 +14,7 @@ const Sandbox=(()=>{
   smiles:s=>record(Lite.parseSmiles(s).graph,{input:s}),
   start:r=>Reactions.workflow(r.graph),
   preview(w,id,reagent,selected){const next=Reactions.append(w,id,reagent,selected);if(typeof FragmentComposition!=='undefined')FragmentComposition.remember(next);return next;},
-  checkpoint:(w,n)=>record(w.steps[n-1].output,{checkpoint:n,workflow:Reactions.revert(w,n)}),
+  checkpoint:(w,n)=>record(w.steps[n-1].output,{checkpoint:n,workflow:w.steps.some(s=>s.reaction_v2)?ReactionFamilyAPI.checkpointWorkflow(w,n):Reactions.revert(w,n)}),
   sites:(g,role)=>Reactions.sites(g,role)
  };
  function semantics(g){
@@ -43,6 +43,41 @@ const Sandbox=(()=>{
   // Never creates a ring or edits bond orders. General ring depiction is out of scope.
   const ring=typeof SandboxValidation!=='undefined'?SandboxValidation.ring(graph):null;
   if(!ring)return graph;
+  const cuaac=graph.bonds.flatMap((b,i)=>graph.provenance?.bonds?.[i]?.kind==='reaction'&&/^cuaac(?:$|-)/.test(graph.provenance.bonds[i].definition)?[b]:[]);
+  if(cuaac.length===2){
+   // Locate this step's real N3C2 center from A provenance, not a generic ring.
+   const cs=cuaac.map(b=>[b.a,b.b].find(i=>graph.atoms[i].e==='C'));
+   const ns=cuaac.map(b=>[b.a,b.b].find(i=>graph.atoms[i].e==='N'));
+   const neighbors=i=>graph.bonds.filter(b=>b.a===i||b.b===i).map(b=>b.a===i?b.b:b.a);
+   const middle=neighbors(ns[0]).find(i=>graph.atoms[i].e==='N'&&neighbors(i).includes(ns[1]));
+   if(middle===undefined||!neighbors(cs[0]).includes(cs[1]))return graph;
+   const proximal=ns.find(i=>neighbors(i).some(j=>!ns.includes(j)&&j!==middle&&!cs.includes(j))),pi=ns.indexOf(proximal);
+   if(pi<0)return graph;
+   const terminal=cs[pi],internal=cs[1-pi],distal=ns[1-pi],cycle=[internal,terminal,proximal,middle,distal],inside=new Set(cycle);
+   // Keep the substituted alkyne carbon fixed; retain its original bond direction.
+   const a=graph.atoms[internal],z=graph.atoms[terminal],angle=Math.atan2(z.y-a.y,z.x-a.x),c=Math.cos(angle),s=Math.sin(angle),L=1.5;
+   const component=[],seen=new Set(cycle),queue=neighbors(proximal).filter(i=>!inside.has(i));
+   while(queue.length){const i=queue.pop();if(seen.has(i))continue;seen.add(i);component.push(i);queue.push(...neighbors(i).filter(j=>!seen.has(j)));}
+   // An externally bridged center is outside this local template's remit.
+   if(component.some(i=>neighbors(i).some(j=>inside.has(j)&&j!==proximal)))return graph;
+   let best=null;
+   for(const side of [-1,1]){
+    const g=clone(graph),points=[{x:0,y:0},{x:L,y:0}];let heading=0;
+    for(let k=2;k<5;k++){heading+=side*2*Math.PI/5;points.push({x:points[k-1].x+L*Math.cos(heading),y:points[k-1].y+L*Math.sin(heading)});}
+    const center={x:points.reduce((v,p)=>v+p.x,0)/5,y:points.reduce((v,p)=>v+p.y,0)/5};
+    cycle.forEach((id,k)=>{g.atoms[id].x=a.x+c*points[k].x-s*points[k].y;g.atoms[id].y=a.y+s*points[k].x+c*points[k].y;});
+    const root=graph.atoms[proximal],target=g.atoms[proximal],first=neighbors(proximal).find(i=>!inside.has(i));
+    const radial=angle+Math.atan2(points[2].y-center.y,points[2].x-center.x),old=first===undefined?radial:Math.atan2(graph.atoms[first].y-root.y,graph.atoms[first].x-root.x),turn=radial-old,rc=Math.cos(turn),rs=Math.sin(turn);
+    for(const i of component){const p=graph.atoms[i],x=p.x-root.x,y=p.y-root.y;g.atoms[i].x=target.x+rc*x-rs*y;g.atoms[i].y=target.y+rs*x+rc*y;}
+    const moving=new Set([...cycle,...component]);let score=0;
+    for(const i of moving)for(let j=0;j<g.atoms.length;j++)if(!moving.has(j)&&!neighbors(i).includes(j)){const d=Math.hypot(g.atoms[i].x-g.atoms[j].x,g.atoms[i].y-g.atoms[j].y);score+=Math.max(0,1.2-d)**2*100;}
+    // Favor the substituent anchor direction when both sides have room.
+    score+=Math.abs(Math.atan2(Math.sin(turn),Math.cos(turn)))*.01;
+    for(const route of g.routes||[])if(route.atoms?.every(i=>component.includes(i)))route.points=route.points.map(([x,y])=>[target.x+rc*(x-root.x)-rs*(y-root.y),target.y+rs*(x-root.x)+rc*(y-root.y)]);
+    if(!best||score<best.score)best={g,score};
+   }
+   return best.g;
+  }
   const g=clone(graph),inside=new Set(ring),adj=g.atoms.map(()=>[]);g.bonds.forEach(b=>{adj[b.a].push(b.b);adj[b.b].push(b.a);});
   const radius=1.5/(2*Math.sin(Math.PI/5)),anchor=g.atoms[ring[0]],origin={x:anchor.x,y:anchor.y};
   ring.forEach((id,k)=>{const x=origin.x+radius*(Math.cos(Math.PI+k*2*Math.PI/5)+1),y=origin.y+radius*Math.sin(Math.PI+k*2*Math.PI/5),dx=x-g.atoms[id].x,dy=y-g.atoms[id].y;

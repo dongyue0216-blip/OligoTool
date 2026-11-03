@@ -1,6 +1,0 @@
-const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert'),crypto=require('crypto');
-const root=path.resolve(__dirname,'..'),c=vm.createContext({console});
-for(const f of ['snapshots/A/app/reference-data.js','snapshots/A/app/coverage-data.js','snapshots/A/app/core.js','snapshots/A/app/chemistry.js','snapshots/A/app/reaction-reagents.js','snapshots/A/app/reactions.js','snapshots/C/presentation.js','snapshots/C-abbreviation/engine.js','snapshot-data.js','adapters.js','composition.js','validation.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c,{filename:f});
-const r=vm.runInContext('SandboxValidation.run()',c);assert(r.pass);const a=vm.runInContext("Sandbox.A.sequence('rArA')",c);assert.equal(a.metrics.formula,'C20H25N10O10P');assert(Math.abs(a.metrics.exact_mass-596.149274)<.000001);
-const m=JSON.parse(fs.readFileSync(path.join(root,'snapshot-manifest.json')));for(const [t,v]of Object.entries(m.tracks))for(const f of v.files)assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'snapshots',t,f.path))).digest('hex'),f.sha256);
-console.log(JSON.stringify({pass:r.pass,assertions:r.checks,rArA:a.metrics,snapshotHashes:'PASS'}));

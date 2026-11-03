@@ -1,11 +1,12 @@
 # Oligo Chemistry Toolkit
 
-## Latest: Oligo Toolkit 1.1.0 — Offline integrated edition
+## Latest: Oligo Toolkit 2.0.0 — Company Test Build
 
-[Download the clean offline ZIP](https://github.com/dongyue0216-blip/OligoTool/releases/tag/v1.1.0), extract all files and double-click root **Start.html**. Windows Edge/Chrome; no installation, server or network required. Source checkout: root **Start.html** opens **offline/Start.html**.
+[Download the clean offline ZIP](https://github.com/dongyue0216-blip/OligoTool/releases/tag/v2.0.0), extract the complete folder and double-click **Oligo-Toolkit/Start.html**. Windows Edge/Chrome; no installation, server or network required. In this source checkout, root **Start.html** opens **offline/Start.html**.
 
-Sequence, Post Modification, Excel Batch and Custom Chemistry share the latest integrated chemistry/presentation engines. Fixed approved chemical logo; Chinese/English with remembered language; no Accent Color selector. See [capabilities and known gaps](offline/README.md), [acceptance matrix](offline/docs/ACCEPTANCE_MATRIX.md), and [package validation](docs/OFFLINE_RELEASE_1_1_0.json). Original C7N same-structure test was explicitly waived by the user. Back up local library JSON before upgrading.
+Current A/B/C chemistry and presentation are consolidated with reliable new Custom Chemistry saving and a clean versioned User Library. Compatibility begins at this release's schemaVersion 1; pre-release legacy data is not guaranteed compatible and is not automatically migrated. Before upgrading: **Export User Library JSON → new release → Import/Merge User Library**. Built-ins are read-only and never overwritten.
 
+See [acceptance matrix and exact known gaps](offline/tests/RELEASE_TEST_REPORT.md), [compatibility contract](offline/docs/USER_LIBRARY_SCHEMA.md), and [release notes](docs/RELEASE_2_0_0.md). The clean package is built using `python release_tools/package-consolidation.py` and an exact reviewed file whitelist; unexpected files fail packaging.
 
 ## Previous browser edition: Lite v0.9.1
 

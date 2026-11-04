@@ -1,9 +1,11 @@
-# Oligo Toolkit 2.0.0
+# Oligo Toolkit v2.1.0
 
-解压后双击 Start.html，用 Windows Edge 或 Chrome 打开。无需安装、服务器或网络。
+Extract the complete folder and double-click **Start.html** in Windows Edge or Chrome. No installation, server, Python, Node, administrator rights or network is required.
 
-升级规则：升级前 Export User Library JSON；保留备份；在新版 Import/Merge User Library。Built-in Library 只读，永不被用户导入覆盖。数据保存在当前浏览器中，跨文件夹/浏览器请使用 JSON 备份。
+Sequence and Excel Batch share the chemistry core and Built-in/User Library. Includes formula, average MW, exact mass, optical status, molecular presentation, structure exports, Custom Chemistry, Reaction Notebook, CAP, Amine Coupling, Click Reaction, Disulfide Reduction and Thiol–Maleimide.
 
-Compatibility begins with this release: `oligo-user-chemistry-library`, `schemaVersion: 1`. Pre-release legacy Custom Chemistry data is not guaranteed compatible and is not automatically migrated. Old browser keys are left untouched. Future releases must accept this baseline or use explicit forward version migrations; unknown newer schemas are rejected without changing the library.
+User Library compatibility starts at v2.00 (release v2.0.0, schemaVersion 1). Export your User Library JSON before upgrading, then Import/Merge in this release. Browser storage is local to the browser and file location. Built-in updates never overwrite User Library. See [schema contract](docs/USER_LIBRARY_SCHEMA.md).
 
-See tests/RELEASE_TEST_REPORT.md for tested scope and known gaps.
+CAP recognition uses terminal-phosphorus topology and activated diphosphate phosphoroimidazolide structure. Structural compatibility does not establish experimental reaction efficiency. Unsupported chemistry fails explicitly. Unknown optical parameters remain explicit; CDXML is experimental. Arbitrary chemistry and collision-free layout are not guaranteed.
+
+See [release validation](tests/RELEASE_TEST_REPORT.md) and [release naming policy](docs/RELEASING.md). No personal libraries or local user MOL files are included.

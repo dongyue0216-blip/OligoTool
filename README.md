@@ -1,12 +1,12 @@
-# Oligo Chemistry Toolkit
+# Oligo Toolkit
 
-## Latest: Oligo Toolkit 2.0.0 — Company Test Build
+## Latest: Oligo Toolkit v2.1.0
 
-[Download the clean offline ZIP](https://github.com/dongyue0216-blip/OligoTool/releases/tag/v2.0.0), extract the complete folder and double-click **Oligo-Toolkit/Start.html**. Windows Edge/Chrome; no installation, server or network required. In this source checkout, root **Start.html** opens **offline/Start.html**.
+[Download Oligo-Toolkit-v2.1.0.zip](https://github.com/dongyue0216-blip/OligoTool/releases/tag/v2.1.0), extract the complete folder and double-click **Oligo-Toolkit/Start.html**. Windows Edge/Chrome; no installation, server or network required. In this source checkout, root **Start.html** opens **offline/Start.html**.
 
-Current A/B/C chemistry and presentation are consolidated with reliable new Custom Chemistry saving and a clean versioned User Library. Compatibility begins at this release's schemaVersion 1; pre-release legacy data is not guaranteed compatible and is not automatically migrated. Before upgrading: **Export User Library JSON → new release → Import/Merge User Library**. Built-ins are read-only and never overwritten.
+Sequence, Batch Excel and Custom Chemistry share the chemistry core. Includes CAP, Amine Coupling, Click, Disulfide Reduction and Thiol–Maleimide. User Library compatibility retains the v2.00 / v2.0.0 baseline (schemaVersion 1); Built-in and user data remain separate. Export User Library JSON before upgrading, then Import/Merge.
 
-See [acceptance matrix and exact known gaps](offline/tests/RELEASE_TEST_REPORT.md), [compatibility contract](offline/docs/USER_LIBRARY_SCHEMA.md), and [release notes](docs/RELEASE_2_0_0.md). The clean package is built using `python release_tools/package-consolidation.py` and an exact reviewed file whitelist; unexpected files fail packaging.
+See [release test report](offline/tests/RELEASE_TEST_REPORT.md), [compatibility contract](offline/docs/USER_LIBRARY_SCHEMA.md), [release notes](docs/RELEASE_2_1_0.md), and [permanent naming policy](offline/docs/RELEASING.md).
 
 ## Previous browser edition: Lite v0.9.1
 

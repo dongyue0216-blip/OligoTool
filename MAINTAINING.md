@@ -19,3 +19,6 @@ breaking changes. Never overwrite an already published tag or asset.
 Company users visit the public Releases page and download the runtime ZIP without
 signing in. Local user_data stays outside version control. Publishing a manufacturing
 schema or manufacturing/AI/experiment datasets requires separate explicit authorization.
+
+
+GitHub release naming: title `Oligo Toolkit vX.Y.Z`, tag `vX.Y.Z`, ZIP `Oligo-Toolkit-vX.Y.Z.zip`. Use no company/test/integrated/final/feature suffixes. Describe functionality in release notes. Preserve existing tags/history when editing old display names. Full policy: [RELEASING](offline/docs/RELEASING.md).

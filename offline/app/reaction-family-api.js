@@ -1,12 +1,12 @@
 'use strict';
 // A -> B field mapping only; A owns every detection and transformation.
 const ReactionFamilyAPI=(()=>{
- const familyIds={cap:'CAP',condensation:'Condensation',click:'Click'};
+ const familyIds={cap:'CAP',condensation:'Condensation',click:'Click',reduction:'DisulfideReduction',maleimide:'ThiolMaleimide'};
  const engine=()=>Reactions.v2;
  function analyze({family,inputs}){
   const api=engine(),id=familyIds[family],raw=api.candidates(id,inputs);
   const roles=new Set(Object.values(api.registry).filter(t=>t.family===id).flatMap(t=>t.roles));
-  return {raw,reason:raw.status==='UNSUPPORTED'?raw.reason:null,candidates:raw.candidate_sites.map(groups=>[...roles].flatMap(role=>groups[role]||[]).map(s=>({...s,id:s.site_id,motif:s.motif_type,label:null}))),assignments:raw.candidates.map(c=>({id:c.candidate_id,siteIds:c.sites.map(s=>s.site_id),roles:c.roles,orientation:c.orientation,activation_required:c.semantics.includes('activation_required'),raw:c}))};
+  return {raw,reason:raw.status==='UNSUPPORTED'?raw.reason:null,candidates:raw.candidate_sites.concat(raw.candidate_sites.length===1?[{}]:[]).map(groups=>[...roles].flatMap(role=>groups[role]||[]).map(s=>({...s,id:s.site_id,motif:s.motif_type,label:null}))),assignments:raw.candidates.map(c=>({id:c.candidate_id,siteIds:c.sites.map(s=>s.site_id),roles:c.roles,orientation:c.orientation,activation_required:c.semantics.includes('activation_required'),raw:c}))};
  }
  function append(workflow,{family,secondary,assignmentId}){
   const native=engine().append(workflow.reaction_workflow_v2||engine().workflow(workflow.current),familyIds[family],secondary,assignmentId);

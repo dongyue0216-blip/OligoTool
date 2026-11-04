@@ -34,11 +34,11 @@ const FragmentComposition=(()=>{
   const stamp=key(g),cached=cache.get(stamp);if(cached)return cached;
   let result,step=recipes.get(stamp);
   if(step){
-   const parent=coordinates({graph:step.inputs[0]},depth+1),secondary=local(step.inputs[1]),out=clone(g),maps=g.provenance.input_atom_maps;
-   for(const [k,source]of [parent.graph,secondary.graph].entries())source.atoms.forEach((a,i)=>{const to=maps[k][i];if(to!==null&&to!==undefined){out.atoms[to].x=a.x;out.atoms[to].y=a.y;}});
+   const parent=coordinates({graph:step.inputs[0]},depth+1),secondary=step.inputs.length>1?local(step.inputs[1]):null,out=clone(g),maps=g.provenance.input_atom_maps;
+   for(const [k,source]of (secondary?[parent.graph,secondary.graph]:[parent.graph]).entries())source.atoms.forEach((a,i)=>{const to=maps[k][i];if(to!==null&&to!==undefined){out.atoms[to].x=a.x;out.atoms[to].y=a.y;}});
    // A intentionally stores chemical connectivity; restore C's display paths by endpoint mapping.
    out.routes=[];for(const route of parent.graph.routes||[]){const b=parent.graph.bonds[route.bond],a=maps[0][b.a],z=maps[0][b.b];if(a==null||z==null)continue;const bond=out.bonds.findIndex(b=>(b.a===a&&b.b===z)||(b.a===z&&b.b===a));if(bond>=0)out.routes.push({...clone(route),bond,atoms:[a,z]});}
-   const atoms=maps[1].filter(i=>i!==null),moving=new Set(atoms),joins=out.bonds.flatMap((b,i)=>moving.has(b.a)!==moving.has(b.b)?[i]:[]);
+   const atoms=(maps[1]||[]).filter(i=>i!==null),moving=new Set(atoms),joins=out.bonds.flatMap((b,i)=>moving.has(b.a)!==moving.has(b.b)?[i]:[]);
    if(joins.length){const layout=Presentation.layout({graph:out,semantics:{routes:out.routes,groups:[{id:'step-secondary',atoms}],placements:[{group:'step-secondary',bonds:joins}]}});result={graph:Presentation.materialize(out,layout),composed:true,status:'recursive parent bamboo / paths retained · '+secondary.status,transforms:layout.metadata.transforms,warnings:layout.metadata.warnings};}
    else result={graph:out,composed:true,status:'mapped parent / reagent geometry'};
   }else if(g.layout?.adaptive)result={...assemble(g),composed:true};

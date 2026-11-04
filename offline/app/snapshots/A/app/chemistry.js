@@ -116,7 +116,7 @@ function parse(input){
  if(!seq)throw Error('SYNTAX_ERROR: terminal phosphate requires a residue');
  let pos=0,residues=[],links=[];
  while(pos<seq.length){let code;
- if(seq[pos]==='['){let close=seq[pos]==='['?']':'}',end=seq.indexOf(close,pos);if(end<0)throw Error('SYNTAX_ERROR: Missing '+close);let id=seq.slice(pos+1,end);if(typeof CONJUGATION_POOL!=='undefined'&&CONJUGATION_POOL.some(e=>e.id===id))throw Error('CONJUGATION_REAGENT: ['+id+'] belongs to Conjugation Pool; sequence assembly is unavailable');if(!/^[A-Za-z0-9_][A-Za-z0-9_.-]{0,47}$/.test(id))throw Error('Invalid custom unit ID: '+id);const alias=COVERAGE.aliases?.['['+id+']'];if(alias)id=alias.slice(1,-1);code=customKey('{'+id+'}')||'{'+id+'}';if(!template(code)&&!COVERAGE.entries.some(e=>e.notation==='['+id+']'))throw Error('['+id+'] not found in Custom Chemistry Library');pos=end+1;}
+ if(seq[pos]==='['){let close=seq[pos]==='['?']':'}',end=seq.indexOf(close,pos);if(end<0)throw Error('SYNTAX_ERROR: Missing '+close);let id=seq.slice(pos+1,end);if(!customKey('{'+id+'}')&&typeof CONJUGATION_POOL!=='undefined'&&CONJUGATION_POOL.some(e=>e.id===id))throw Error('CONJUGATION_REAGENT: ['+id+'] belongs to Conjugation Pool; sequence assembly is unavailable');if(!/^[A-Za-z0-9_][A-Za-z0-9_.-]{0,47}$/.test(id))throw Error('Invalid custom unit ID: '+id);const alias=COVERAGE.aliases?.['['+id+']'];if(alias&&!customKey('{'+id+'}'))id=alias.slice(1,-1);code=customKey('{'+id+'}')||Object.keys(REFERENCE.templates).find(k=>k.toLowerCase()===('{'+id+'}').toLowerCase())||'{'+id+'}';if(!template(code)&&!COVERAGE.entries.some(e=>e.notation==='['+id+']'))throw Error('['+id+'] not found in Custom Chemistry Library');pos=end+1;}
  else if('ACGT'.includes(seq[pos])&&!COVERAGE.entries.some(e=>e.notation.length>1&&seq.startsWith(e.notation,pos)))code='d'+seq[pos++];
  else{code=[...new Set([...Object.keys(REFERENCE.templates).filter(c=>c[0]!=='{'),...COVERAGE.entries.filter(e=>!['special','spacer','fluorescent','backbone'].includes(e.family)).map(e=>e.notation)])].sort((a,b)=>b.length-a.length).find(c=>seq.startsWith(c,pos));if(!code)throw Error('SYNTAX_ERROR: Unsupported notation at '+(pos+1)+': '+seq.slice(pos)+'; terminal chemistry supports (p), (pp), (ppp) only at sequence ends');pos+=code.length;}
  residues.push(code);if(pos<seq.length){let link='PO';if(seq.startsWith('**',pos)){link='PS2';pos+=2;}else if(seq[pos]==='*'){link='PS';pos++;}else if(seq[pos]==='#'){link='MsPA';pos++;}else if(seq[pos]==='^'){link='Me-P';pos++;}else if(seq[pos]==='!'){link='PN(dmi)';pos++;}links.push(link);if(pos===seq.length)throw Error('SYNTAX_ERROR: 末尾不能是 linkage');}}
@@ -429,12 +429,52 @@ function normalizeCoordinates(g){
  for(const a of g.atoms){a.x=(a.x-x)*scale;a.y=(a.y-y)*scale;if(!Number.isFinite(a.x)||!Number.isFinite(a.y))throw Error('Coordinates exceed numeric precision');}
  return g;
 }
+// Catalog identity is not evidence of assembly-ready chemistry. Read-only audit.
+let builtinAuditCache=null;
+function builtinAudit(){
+ if(builtinAuditCache)return clone(builtinAuditCache);
+ const bare=s=>s.replace(/^[\[{]/,'').replace(/[\]}]$/,'');
+ const entries=new Map();
+ const add=(notation,extra={})=>{const key=bare(notation).toLowerCase();if(!entries.has(key))entries.set(key,{notation,names:[bare(notation)],...extra});return entries.get(key);};
+ Object.keys(REFERENCE.templates).forEach(n=>add(n));
+ COVERAGE.entries.forEach(e=>add(e.notation));
+ for(const [alias,target]of Object.entries(COVERAGE.aliases||{})){const row=add(typeof target==='string'?target:alias);row.names.push(bare(alias));}
+ if(typeof CONJUGATION_POOL!=='undefined')CONJUGATION_POOL.forEach(e=>add('['+e.id+']'));
+ for(const notation of ['[p]','[pp]','[ppp]','[PHO]','[phosphorylation]'])add(notation).terminal_syntax=true;
+ builtinAuditCache=[...entries.values()].map(row=>{
+  const alias=COVERAGE.aliases?.[row.notation];
+  const code=Object.keys(REFERENCE.templates).find(k=>bare(k).toLowerCase()===bare(typeof alias==='string'?alias:row.notation).toLowerCase());
+  const raw=code&&REFERENCE.templates[code];
+  try{
+   if(row.terminal_syntax){calculate(row.notation+'rA');return {...row,assembly_ready:true,status:'terminal syntax validated'};}
+   if(['(none)','*','**','^','!','#'].includes(row.notation))return {...row,assembly_ready:false,not_building_block:true,status:'notation control / linkage syntax, not a BuildingBlock name'};
+   if(!raw)throw Error('catalog only: no MolecularGraph');
+   if(raw.validation_status||raw.assembly_supported===false)throw Error(raw.validation_status||'assembly explicitly unsupported');
+   const block=ChemistryCore.buildingBlock(raw);
+   if(!Object.keys(block.sites).length)throw Error('missing AttachmentSites');
+   if(!connected(raw))throw Error('disconnected MolecularGraph');
+   for(let i=0;i<raw.atoms.length;i++){const a=raw.atoms[i],v=raw.bonds.filter(b=>b.a===i||b.b===i).reduce((n,b)=>n+b.o,0);if(valenceTarget(a,v)!==v+(a.h||0))throw Error('invalid valence at '+i);}
+   const ag=ChemistryCore.fromNotation({residues:[code],links:[],terminal:{five:0,three:0},terminalChemistry:{five:'PO',three:'PO'}},()=>raw,linkageDefinitions);
+   expandAssemblyGraph(ag);
+   // Probe each exposed direction using its actual linkage contract.
+   for(const site of Object.values(block.sites)){if(!site.allowed_linkage_classes?.length||!Array.isArray(site.internal_phosphorus)||!Array.isArray(site.terminal_phosphorus))throw Error('incomplete assembly linkage contract');const a=raw.atoms[site.atom],bs=raw.bonds.filter(b=>b.a===site.atom||b.b===site.atom);if(a.h!==1||a.q||!bs.length||bs.some(b=>b.o!==1))throw Error('not a free attachment');}
+   const pairs=new Set();for(const b of raw.bonds){const key=[b.a,b.b].sort((a,b)=>a-b).join(':');if(pairs.has(key))throw Error('duplicate graph bond');pairs.add(key);}
+   let assembled=false;
+   for(const partner of [raw,...Object.values(REFERENCE.templates)]){if(assembled)break;for(const pair of [[raw,partner],[partner,raw]]){if(assembled)break;for(const linkage of Object.keys(linkageDefinitions)){try{
+    const probe=ChemistryCore.fromNotation({residues:['audit0','audit1'],links:[linkage],terminal:{five:0,three:0},terminalChemistry:{five:'PO',three:'PO'}},id=>pair[id==='audit0'?0:1],linkageDefinitions);expandAssemblyGraph(probe);assembled=true;break;
+   }catch{}}}}
+   if(!assembled)throw Error('no supported assembly partner/linkage');
+   return {...row,names:[...new Set([...row.names,...(raw.name?[raw.name]:[])])],assembly_ready:true,status:'assembly-ready'};
+  }catch(e){return {...row,assembly_ready:false,status:e.message};}
+ });
+ return clone(builtinAuditCache);
+}
 function registerCustom(name,imported,target=customLibrary){
  if(typeof name!=='string'||!/^[A-Za-z0-9_]{1,24}$/.test(name))throw Error('名称不能为空；请使用 1–24 位英文字母、数字或下划线，可用数字或下划线开头');
  const key=('{'+name+'}').toLowerCase();
  if(Object.keys(target).some(k=>k.toLowerCase()===key))throw Error('Name / symbol already exists: '+name+'; choose a different name');
- const reserved=['[p]','[pp]','[ppp]','[PHO]','[phosphorylation]',...Object.keys(REFERENCE.templates),...COVERAGE.entries.map(e=>e.notation),...Object.keys(COVERAGE.aliases||{}),...(typeof CONJUGATION_POOL==='undefined'?[]:CONJUGATION_POOL.map(e=>'['+e.id+']'))];
- if(reserved.some(k=>k.replace(/^\[/,'{').replace(/\]$/,'}').toLowerCase()===key))throw Error('Reserved built-in name / symbol: '+name+'; choose a different name');
+ const requested=key.slice(1,-1);
+ if(builtinAudit().some(r=>r.assembly_ready&&r.names.some(n=>n.toLowerCase()===requested)))throw Error('Reserved built-in name / symbol: '+name+'; choose a different name');
  const r=selectAttachments(imported,imported.attachments[5],imported.attachments[3]),g=normalizeCoordinates(r.graph),five=r.attachments[5]??null,three=r.attachments[3]??null;
  const A=g.atoms[five??three],B=g.atoms[three??five],dx=B.x-A.x,dy=B.y-A.y,L=Math.hypot(dx,dy),ax=A.x,ay=A.y;
  // Translation, positive uniform scale and rotation preserve stereochemical handedness.
@@ -489,7 +529,7 @@ function quality(g){
 }
 function calculateSafe(sequence){try{return calculate(sequence);}catch(e){return {schema_version:'oligo-lite/2',input_sequence:sequence,canonical_sequence:null,status:'error',errors:[{code:e.message.match(/^([A-Z_]+):/)?.[1]||(e.message.includes('not found')?'UNKNOWN_UNIT':'INVALID_CHEMISTRY_OR_NOTATION'),message:e.message}],chemistry:null,optical:null,graph:null};}}
 function buildStructure(sequence){return calculate(sequence).graph;}
-return {presentationInput,abbreviationSupport:()=>Object.fromEntries(Object.entries(abbreviationDefinitions).map(([k,v])=>[k,v.definition])),graphProperties,valenceTarget,core:ChemistryCore,linkageDefinitions,toAssemblyGraph:p=>toAssemblyGraph(typeof p==='string'?parse(p):p),expandAssemblyGraph,getBuildingBlock:code=>template(code)?clone(template(code)):null,attachment,normalizeCoordinates,exportImportedSource:g=>g.ctfile?.source||null,parse,validateChemistry,calculate,calculateSafe,buildStructure,formula,graphFormula,connected,mol,svg,cdxml,parseMol,parseSmiles,selectAttachments,registerCustom,customLibrary,quality};})();
+return {builtinAudit,presentationInput,abbreviationSupport:()=>Object.fromEntries(Object.entries(abbreviationDefinitions).map(([k,v])=>[k,v.definition])),graphProperties,valenceTarget,core:ChemistryCore,linkageDefinitions,toAssemblyGraph:p=>toAssemblyGraph(typeof p==='string'?parse(p):p),expandAssemblyGraph,getBuildingBlock:code=>template(code)?clone(template(code)):null,attachment,normalizeCoordinates,exportImportedSource:g=>g.ctfile?.source||null,parse,validateChemistry,calculate,calculateSafe,buildStructure,formula,graphFormula,connected,mol,svg,cdxml,parseMol,parseSmiles,selectAttachments,registerCustom,customLibrary,quality};})();
 if(typeof module!=='undefined')module.exports=Lite;
 
 

@@ -21,16 +21,16 @@ const Reactions = (() => {
   if(!Lite.connected(g))fail('disconnected graph');return g;
  }
  // Explicit neutral Kekule N-phosphorylimidazole: P-N1-C=N-C=C1.
- // Reject substituted/charged leaving rings in v1; no name or atom-number inference.
+ // Distal imidazole N protonation is allowed; no name or atom-number inference.
  function imidazolide(g,p,n){
-  const a=g.atoms[n],ns=adj(g,n);if(a.e!=='N'||a.q||a.h||ns.length!==3||bond(g,p,n)?.o!==1)return false;
-  const arms=ns.filter(x=>x.i!==p);if(arms.length!==2||arms.some(x=>x.o!==1||g.atoms[x.i].e!=='C'))return false;
+  const a=g.atoms[n],ns=adj(g,n);if(a.e!=='N'||![0,1].includes(a.q||0)||a.h||ns.length!==3||bond(g,p,n)?.o!==1)return false;
+  const arms=ns.filter(x=>x.i!==p);if(arms.length!==2||arms.some(x=>g.atoms[x.i].e!=='C')||arms.map(x=>x.o).sort().join('')!==(a.q===1?'12':'11'))return false;
   for(const first of arms){const path=[n,first.i];
    function walk(){const at=path.at(-1);if(path.length===5){
     if(bond(g,at,n)?.o!==1)return false;
     const es=path.map(i=>g.atoms[i].e).join('');
     const orders=path.slice(1).map((i,k)=>bond(g,path[k],i).o).join('');
-    return es==='NCNCC'&&orders==='1212'&&path.slice(1).every(i=>!g.atoms[i].q&&adj(g,i).length===2);
+    return es==='NCNCC'&&orders===(a.q===1?'2112':'1212')&&path.slice(1).every(i=>(!g.atoms[i].q||(g.atoms[i].e==='N'&&g.atoms[i].q===1&&g.atoms[i].h===1))&&adj(g,i).length===2);
    }for(const x of adj(g,at))if(!path.includes(x.i)&&x.i!==p){path.push(x.i);if(walk())return true;path.pop();}return false;}
    if(walk())return true;
   }return false;
@@ -200,60 +200,73 @@ const Reactions = (() => {
    if(motif)out.push({type:'strainedAlkyne',motif_type:motif,atoms:{terminal:b.a,internal:b.b},label:motif+' C '+b.a+' / '+b.b});
   }return out;
  }
+ // CAP starting chemistry is local topology, never a modification-name lookup.
+ function capTerminalSites(g){const found=[],diagnostics=[];
+  g.atoms.forEach((a,p)=>{if(a.e!=='P')return;const ns=adj(g,p);
+   const reject=reason=>diagnostics.push({p,reason});
+   if(a.q||a.h||ns.length!==4||ns.reduce((n,x)=>n+x.o,0)!==5||ns.filter(x=>x.o===2).length!==1||ns.some(x=>x.o===2&&!['O','S','N'].includes(g.atoms[x.i].e))||ns.some(x=>!['O','S','N','C'].includes(g.atoms[x.i].e)))return reject('unsupported_terminal_P_valence_or_substituents');
+   const esters=ns.filter(x=>x.o===1&&g.atoms[x.i].e==='O'&&adj(g,x.i).some(y=>y.i!==p&&g.atoms[y.i].e==='C'));
+   if(esters.length!==1||ns.some(x=>g.atoms[x.i].e==='O'&&adj(g,x.i).some(y=>y.i!==p&&g.atoms[y.i].e==='P')))return reject('nonterminal_or_ambiguous_phosphorus');
+   const anchor=esters[0].i,c=adj(g,anchor).find(x=>x.i!==p)?.i;
+   // Native AssemblyGraph ancestry or an explicit nucleoside ring establishes the oligo anchor.
+   const origin=g.provenance?.atoms?.[c];
+   const nucleoside=c!==undefined&&adj(g,c).some(x=>rings(g,x.i,5).concat(rings(g,c,5)).some(r=>r.filter(i=>g.atoms[i].e==='O').length===1&&r.filter(i=>g.atoms[i].e==='C').length===4&&r.every((i,k)=>bond(g,i,r[(k+1)%5]).o===1)&&r.some(i=>adj(g,i).some(y=>!r.includes(y.i)&&g.atoms[y.i].e==='N'))));
+   if(!oligoOrigin(origin)&&!nucleoside)return reject('terminal_oligo_anchor_not_established');
+   const oxygens=ns.filter(x=>x.o===1&&g.atoms[x.i].e==='O'&&adj(g,x.i).length===1&&((g.atoms[x.i].h===1&&!g.atoms[x.i].q)||(g.atoms[x.i].h===0&&g.atoms[x.i].q===-1)));
+   if(!oxygens.length)return reject('no_available_terminal_nucleophilic_O');
+   for(const o of oxygens)found.push({type:'terminalPhosphateNucleophile',motif_type:'terminal_phosphorus_nucleophile',atoms:{p,o:o.i},label:'Terminal P '+(p+1)+' / nucleophilic O '+(o.i+1),structural_compatibility:'COMPATIBLE',process_validation:'NOT_ESTABLISHED'});
+  });return {sites:found,diagnostics};
+ }
  function v2Sites(g,type){
-  if(type==='terminalPhosphateNucleophile')return sites(g,type).filter(s=>adj(g,s.atoms.p).some(o=>g.atoms[o.i].e==='O'&&adj(g,o.i).some(c=>{
-   if(c.i===s.atoms.p||g.atoms[c.i].e!=='C'||g.atoms[c.i].h!==2)return false;
-   return adj(g,c.i).some(c4=>c4.i!==o.i&&rings(g,c4.i,5).some(r=>{
-    if(r.filter(i=>g.atoms[i].e==='O').length!==1||r.filter(i=>g.atoms[i].e==='C').length!==4||r.some((i,k)=>bond(g,i,r[(k+1)%5]).o!==1))return false;
-    const ro=r.find(i=>g.atoms[i].e==='O');if(!bond(g,c4.i,ro))return false;
-    const c1=adj(g,ro).find(x=>x.i!==c4.i)?.i;
-    return c1!==undefined&&adj(g,c1).some(x=>!r.includes(x.i)&&g.atoms[x.i].e==='N')&&r.filter(i=>i!==c4.i&&i!==c1&&i!==ro).every(i=>adj(g,i).some(x=>!r.includes(x.i)&&g.atoms[x.i].e==='O'&&x.o===1));
-   }));
-  }))).map(s=>({...s,motif_type:'5prime_ribose_phosphate'}));
+  if(type==='disulfide')return disulfideSites(g);
+  if(type==='thiol')return sites(g,type).filter(s=>{const c=adj(g,s.atoms.s)[0].i;return !adj(g,c).some(n=>n.o===2&&['O','S'].includes(g.atoms[n.i].e));});
+  if(type==='maleimide')return sites(g,type).filter(s=>[s.atoms.alpha,s.atoms.beta].every(i=>adj(g,i).length===2)&&rings(g,s.atoms.alpha,5).some(r=>r.includes(s.atoms.beta)&&r.filter(i=>g.atoms[i].e==='N').length===1&&r.filter(i=>g.atoms[i].e==='C').length===4&&r.filter(i=>adj(g,i).some(x=>x.o===2&&g.atoms[x.i].e==='O')).length===2));
+  if(type==='terminalPhosphateNucleophile')return capTerminalSites(g).sites;
   if(type==='acylDonor')return acylSites(g);
   if(type==='strainedAlkyne')return strainedSites(g);
   if(type==='m7GDPImidazolide'){
-   // Identity gate on the entire reagent, with equivalent phosphate protonation normalized.
-   const neutral=x=>({...x,atoms:x.atoms.map(a=>a.e==='O'&&a.q===-1&&a.h===0?{...a,h:1,q:0}:a)});
-   return subgraph(neutral(g),neutral(capReference),true)?activatedDiphosphate(g).map(s=>({...s,type,motif_type:'Im-m7GDP'})):[];
+   return activatedDiphosphate(g).map(s=>({...s,type,motif_type:'phosphoroimidazolide'}));
   }
   return sites(g,type).map(s=>({...s,motif_type:type==='amine'?(g.atoms[s.atoms.n].h===2?'primary_amine':'secondary_amine'):type}));
  }
- const families=freeze({CAP:{id:'CAP',name:'CAP'},Condensation:{id:'Condensation',name:'Condensation / Acylation'},Click:{id:'Click',name:'Click'}});
+ const families=freeze({CAP:{id:'CAP',name:'CAP'},Condensation:{id:'Condensation',name:'Amine Coupling'},Click:{id:'Click',name:'Click'},DisulfideReduction:{id:'DisulfideReduction',name:'Disulfide Reduction',input_count:1},ThiolMaleimide:{id:'ThiolMaleimide',name:'Thiol–Maleimide'}});
  const registry=freeze({
-  'cap-im-m7gdp/2':{family:'CAP',roles:['terminalPhosphateNucleophile','m7GDPImidazolide'],motifs:['5prime_ribose_phosphate','Im-m7GDP'],rule:'diphosphate-imidazolide/1',product_class:'m7GpppRNA'},
+  'disulfide-reduction/2':{family:'DisulfideReduction',roles:['disulfide'],rule:'disulfide-reduction/1',input_count:1},
+  'thiol-maleimide/2':{family:'ThiolMaleimide',roles:['thiol','maleimide'],rule:'thio-michael/1',product_class:'succinimide_thioether'},
+  'cap-im-m7gdp/2':{family:'CAP',roles:['terminalPhosphateNucleophile','m7GDPImidazolide'],motifs:['terminal_phosphorus_nucleophile','phosphoroimidazolide'],rule:'diphosphate-imidazolide/1',product_class:'triphosphate_cap'},
   'acyl-substitution/2':{family:'Condensation',roles:['amine','acylDonor'],motifs:['NHS','sulfo-NHS','PFP','TFP','pNP','carboxylic_acid'],product_classes:['amide','carbamate'],rule:'nhs-amide/1'},
   'cuaac-1,4/2':{family:'Click',roles:['azide','alkyne'],rule:'cuaac-1,4/1',product_class:'1,4_disubstituted_triazole'},
   'spaac/2':{family:'Click',roles:['azide','strainedAlkyne'],motifs:['DBCO','BCN'],rule:'cuaac-1,4/1',product_class:'fused_triazole'}
  });
- function identify(inputs){if(!Array.isArray(inputs)||inputs.length!==2)fail('two graphs required');
+ function identify(inputs){if(!Array.isArray(inputs)||![1,2].includes(inputs.length))fail('one or two graphs required');
   const seen=new Set();for(const input of inputs)for(const a of (input.graph||input).atoms||[])if(a.reaction_atom_id!==undefined){const id=a.reaction_atom_id;if(typeof id!=='string'||!id||seen.has(id))fail('atom IDs must be nonempty and unique across both inputs','INVALID_ATOM_IDS');seen.add(id);}
   return inputs.map((input,k)=>{const g=copy(input.graph||input);validate(g);g.atoms.forEach((a,i)=>{
    if(a.reaction_atom_id!==undefined)return;
    let id='input-'+k+':atom-'+i;while(seen.has(id))id+=':new';seen.add(id);a.reaction_atom_id=id;
   });return g;});
  }
- function detect(inputs){const gs=identify(inputs);return {schema_version:'reaction-sites/2',inputs:gs,candidate_sites:gs.map((g,k)=>Object.fromEntries(['amine','acylDonor','azide','alkyne','strainedAlkyne','terminalPhosphateNucleophile','m7GDPImidazolide'].map(type=>[type,v2Sites(g,type).map(s=>decorate(s,g,k))])))};}
+ function detect(inputs){const gs=identify(inputs);return {schema_version:'reaction-sites/2',inputs:gs,candidate_sites:gs.map((g,k)=>Object.fromEntries(['amine','acylDonor','azide','alkyne','strainedAlkyne','terminalPhosphateNucleophile','m7GDPImidazolide','thiol','maleimide','disulfide'].map(type=>[type,v2Sites(g,type).map(s=>decorate(s,g,k))])))};}
  function decorate(s,g,input){const selected_atom_ids=Object.fromEntries(Object.entries(s.atoms).map(([k,i])=>[k,g.atoms[i].reaction_atom_id]));
   return {...copy(s),input,selected_atom_ids,site_id:input+':'+s.type+':'+Object.values(selected_atom_ids).join('|')};
  }
- function candidates(family,inputs){if(!families[family])fail('unknown family','UNKNOWN_FAMILY');const detected=detect(inputs),gs=detected.inputs,out=[];
+ function candidates(family,inputs){if(family==='DisulfideReduction')return reductionCandidates(inputs);if(!families[family])fail('unknown family','UNKNOWN_FAMILY');if(family==='CAP')inputs=inputs.map(value=>normalizeCapGraph(copy(value.graph||value)));const detected=detect(inputs),gs=detected.inputs,out=[];if(gs.length!==2)fail('two graphs required');
   for(const [id,t]of Object.entries(registry)){if(t.family!==family)continue;
    for(const swap of [false,true]){const roles=swap?[...t.roles].reverse():t.roles,ss=roles.map((r,k)=>detected.candidate_sites[k][r]);
     for(const a of ss[0])for(const b of ss[1]){
      const donor=roles[0]==='acylDonor'?a:b,spa=id==='spaac/2',formal=id==='acyl-substitution/2'&&donor.motif_type==='carboxylic_acid';
      for(const orientation of spa?['a','b']:['a']){
       const candidate={candidate_id:id+':'+a.site_id+':'+b.site_id+':'+orientation,family,transformation_id:id,roles,sites:[a,b],role_assignment:{input_0:roles[0],input_1:roles[1]},compatibility:'COMPATIBLE',status:formal?'FORMAL':'VALIDATED',reason:formal?'activation_required/formal_condensation':spa?'explicit_regioisomer_selection_required':'validated_topology',semantics:formal?['activation_required','formal_condensation']:[],product_class:donor.product_class||t.product_class,orientation,regioselectivity:spa?'not_predicted':'1,4'};
+      if(family==='CAP'){candidate.status='STRUCTURALLY_COMPATIBLE';candidate.reason='structural_compatibility_only; experimental_process_validation_not_established';candidate.structural_compatibility='COMPATIBLE';candidate.process_validation='NOT_ESTABLISHED';candidate.semantics.push('structural_compatibility_only','experimental_process_validation_not_established');}
       out.push(candidate);
      }
     }
    }
   }
-  return {schema_version:'reaction-candidates/2',family,inputs:gs,candidate_sites:detected.candidate_sites,candidates:out,status:out.length?'COMPATIBLE':'UNSUPPORTED',reason:out.length?null:'NO_VALIDATED_MOTIF_PAIR'};
+  return {schema_version:'reaction-candidates/2',family,inputs:gs,candidate_sites:detected.candidate_sites,candidates:out,status:out.length?'COMPATIBLE':'UNSUPPORTED',reason:out.length?null:(family==='CAP'?'NO_COMPATIBLE_CAP_PAIR: '+gs.map(g=>capTerminalSites(g).diagnostics.map(d=>d.reason).join(', ')).filter(Boolean).join('; '):'NO_VALIDATED_MOTIF_PAIR'),...(family==='CAP'?{terminal_p_diagnostics:gs.map(g=>capTerminalSites(g).diagnostics)}:{})};
  }
  function transform(family,inputs,selection){
-  try{const result=candidates(family,inputs),cs=result.candidates;const c=selection?cs.find(x=>x.candidate_id===(typeof selection==='string'?selection:selection.candidate_id)):cs.length===1?cs[0]:null;
-   if(!c)return {...result,status:selection?'INVALID_SELECTION':cs.length?'SITE_SELECTION_REQUIRED':'UNSUPPORTED',reason:selection?'candidate must match current graphs':cs.length?'Select a candidate site pair and regioisomer':'NO_VALIDATED_MOTIF_PAIR',product_graph:null};
+  try{if(family==='DisulfideReduction')return reduceDisulfide(inputs,selection);const result=candidates(family,inputs),cs=result.candidates;const c=selection?cs.find(x=>x.candidate_id===(typeof selection==='string'?selection:selection.candidate_id)):cs.length===1?cs[0]:null;
+   if(!c)return {...result,status:selection?'INVALID_SELECTION':cs.length?'SITE_SELECTION_REQUIRED':'UNSUPPORTED',reason:selection?'candidate must match current graphs':cs.length?'Select a candidate site pair and regioisomer':result.reason,product_graph:null};
    const t=registry[c.transformation_id],swap=c.roles[0]!==t.roles[0],ordered=swap?[1,0]:[0,1];
    // Execute in original input order so provenance indices never change with roles.
    const chosen=c.sites.map(s=>copy(s));
@@ -267,13 +280,91 @@ const Reactions = (() => {
   }catch(e){return {schema_version:'reaction-result/2',family,status:'UNSUPPORTED',reason:e.code||e.message,detail:e.message,product_graph:null};}
  }
  function workflow2(graph){validate(graph);return {schema_version:'reaction-workflow/2',initial:copy(graph),current:copy(graph),steps:[]};}
- function append2(w,family,reagent,selection){if(w.schema_version!=='reaction-workflow/2')fail('v2 workflow required');const r=transform(family,[w.current,reagent],selection);if(!r.product_graph)return r;
-  const next=copy(w);next.steps.push({family,reagent:copy(reagent),candidate_id:r.candidate.candidate_id,result:r});next.current=copy(r.product_graph);return freeze(next);}
+ function append2(w,family,reagent,selection){if(w.schema_version!=='reaction-workflow/2')fail('v2 workflow required');const r=transform(family,family==='DisulfideReduction'?[w.current]:[w.current,reagent],selection);if(!r.product_graph)return r;
+  const next=copy(w);next.steps.push({family,reagent:reagent==null?null:copy(reagent),candidate_id:r.candidate.candidate_id,result:r});next.current=copy(r.product_graph);return freeze(next);}
  function reload2(raw){const w=typeof raw==='string'?JSON.parse(raw):copy(raw);if(w.schema_version!=='reaction-workflow/2')fail('v2 workflow required');let next=workflow2(w.initial);
   for(const s of w.steps){next=append2(next,s.family,s.reagent,s.candidate_id);if(!next.steps||JSON.stringify(next.steps.at(-1))!==JSON.stringify(s))fail('v2 workflow step mismatch');}
   if(JSON.stringify(next)!==JSON.stringify(w))fail('v2 workflow mismatch');return next;
  }
- const v2=freeze({schema_version:'reaction-engine/2',families,registry,detect,candidates,transform,workflow:workflow2,append:append2,reload:reload2});
+ // Generic neutral divalent R-S-S-R only: no oxidized sulfur or polysulfides.
+ function disulfideSites(g){return g.bonds.flatMap(b=>b.o===1&&[b.a,b.b].every((i,k)=>{
+  const a=g.atoms[i],ns=adj(g,i),other=k?b.a:b.b;
+  return a.e==='S'&&!a.q&&!a.h&&ns.length===2&&ns.every(x=>x.o===1)&&ns.some(x=>x.i!==other&&g.atoms[x.i].e==='C');
+ })?[{type:'disulfide',motif_type:'disulfide',atoms:{s1:b.a,s2:b.b},label:'S–S '+(b.a+1)+' / '+(b.b+1)}]:[]);}
+ function cleavage(g,s){
+  const cut=copy(g);cut.bonds=cut.bonds.filter(b=>!((b.a===s.atoms.s1&&b.b===s.atoms.s2)||(b.b===s.atoms.s1&&b.a===s.atoms.s2)));
+  cut.atoms[s.atoms.s1].h++;cut.atoms[s.atoms.s2].h++;
+  const seen=new Set(),components=[];
+  for(let i=0;i<cut.atoms.length;i++)if(!seen.has(i)){const found=[],pending=[i];while(pending.length){const n=pending.pop();if(seen.has(n))continue;seen.add(n);found.push(n);adj(cut,n).forEach(x=>pending.push(x.i));}components.push(found.sort((a,b)=>a-b));}
+  return {cut,components};
+ }
+ // Only verified native AssemblyGraph residue provenance can select automatically.
+ function oligoOrigin(p){if(!p)return false;if(p.previous)return oligoOrigin(p.previous);
+  if(p.kind!=='building-block')return false;
+  const b=REFERENCE.templates[p.block];return !!(b?.base&&b?.attachments&&p.node&&Number.isInteger(p.position));
+ }
+ function reductionCandidates(inputs){
+  if(inputs.length!==1)fail('Disulfide Reduction requires one input');
+  const gs=identify(inputs),g=gs[0],ss=v2Sites(g,'disulfide').map(s=>decorate(s,g,0)),out=[];
+  for(const site of ss){const {components}=cleavage(g,site),owners=components.map((c,i)=>c.some(n=>oligoOrigin(g.provenance?.atoms?.[n]))?i:-1).filter(i=>i>=0);
+   const retained=components.length===1?[0]:owners.length===1?owners:components.map((_,i)=>i);
+   for(const keep of retained){const fragment=components[keep];out.push({candidate_id:'disulfide-reduction/2:'+site.site_id+':keep:'+fragment.map(i=>g.atoms[i].reaction_atom_id).join('|'),family:'DisulfideReduction',transformation_id:'disulfide-reduction/2',roles:['disulfide'],sites:[site],semantics:[],status:'VALIDATED',orientation:'a',compatibility:'COMPATIBLE',retained_component:keep,retention:components.length===1?'single_component':owners.length===1?'oligo_provenance':'explicit_selection_required',fragments:components.map((c,i)=>({index:i,atom_indices:c,atom_ids:c.map(n=>g.atoms[n].reaction_atom_id),atom_count:c.length,contains_oligo:owners.includes(i)}))});}
+  }
+  return {schema_version:'reaction-candidates/2',family:'DisulfideReduction',inputs:gs,candidate_sites:[{disulfide:ss}],candidates:out,status:out.length?'COMPATIBLE':'UNSUPPORTED',reason:out.length?null:'NO_DISULFIDE_MOTIF'};
+ }
+ function reduceDisulfide(inputs,selection){
+  const result=reductionCandidates(inputs),cs=result.candidates,id=typeof selection==='string'?selection:selection?.candidate_id,c=id?cs.find(c=>c.candidate_id===id):cs.length===1?cs[0]:null;
+  if(!c)return {...result,status:id?'INVALID_SELECTION':cs.length?'SITE_SELECTION_REQUIRED':'UNSUPPORTED',reason:cs.length?'Select S–S site and retained fragment':'NO_DISULFIDE_MOTIF',product_graph:null};
+  const g=result.inputs[0],{cut,components}=cleavage(g,c.sites[0]),keep=new Set(components[c.retained_component]);
+  function fragment(indices){const index=new Map(indices.map((n,i)=>[n,i])),bs=cut.bonds.map((b,i)=>({b,i})).filter(({b})=>index.has(b.a)&&index.has(b.b));
+   const output=validate({atoms:indices.map(i=>copy(cut.atoms[i])),bonds:bs.map(({b})=>({...b,a:index.get(b.a),b:index.get(b.b)}))});
+   output.provenance={schema_version:'reaction-provenance/1',atoms:indices.map(i=>({input:0,atom:i,previous:copy(g.provenance?.atoms?.[i]||null)})),bonds:bs.map(({b})=>{const index=g.bonds.findIndex(x=>x.a===b.a&&x.b===b.b);return {input:0,bond:index,previous:copy(g.provenance?.bonds?.[index]||null)};}),input_atom_maps:[g.atoms.map((_,i)=>index.get(i)??null)]};return output;
+  }
+  const product=fragment([...keep]),removed=components.filter((_,i)=>i!==c.retained_component).map(fragment);
+  product.provenance.removed_fragments=removed;
+  product.provenance.removed_atoms=g.atoms.flatMap((_,i)=>keep.has(i)?[]:[{input:0,atom:i,previous:copy(g.provenance?.atoms?.[i]||null)}]);
+  product.provenance.removed_bonds=g.bonds.flatMap((b,i)=>!keep.has(b.a)||!keep.has(b.b)||!bond(cut,b.a,b.b)?[{input:0,bond:i,endpoints:[b.a,b.b],previous:copy(g.provenance?.bonds?.[i]||null)}]:[]);
+  product.provenance.edits=[{op:'remove-bond',...c.sites[0].atoms},...[c.sites[0].atoms.s1,c.sites[0].atoms.s2].map(atom=>({op:'hydrogen',atom,delta:1}))];
+  const mapping=[g.atoms.map((a,i)=>({input:0,input_index:i,atom_id:a.reaction_atom_id,product_index:product.provenance.input_atom_maps[0][i],status:keep.has(i)?'retained':'removed'}))];
+  const definition={schema_version:'reaction-definition/2',id:c.transformation_id,name:'Disulfide Reduction',roles:['disulfide'],rule:'disulfide-reduction/1',input_count:1};
+  const properties=Lite.graphProperties(product),step={schema_version:'reaction-step/1',definition,validation:{status:'VALIDATED',rule:definition.rule},reactants:[copy(g.source||{kind:'molecular-graph'})],inputs:copy(inputs),sites:copy(c.sites),output:product,properties};
+  return {schema_version:'reaction-result/2',family:'DisulfideReduction',status:'VALIDATED',semantics:[],candidate:c,selected_atom_ids:c.sites.map(s=>s.selected_atom_ids),mapping,product_graph:product,removed_fragments:removed,properties,step};
+ }
+ // Reaction-only CTfile normalization. Other imports retain their original contract.
+ function normalizeCapGraph(g){
+  g.atoms.forEach((a,p)=>{if(a.e!=='P'||a.q!==1)return;const ns=adj(g,p);if(ns.length!==4||ns.some(x=>x.o!==1||!['O','N','S'].includes(g.atoms[x.i].e)))return;
+   const o=ns.find(x=>g.atoms[x.i].e==='O'&&g.atoms[x.i].q===-1&&!g.atoms[x.i].h&&adj(g,x.i).length===1);if(!o)return;
+   a.q=0;g.atoms[o.i].q=0;bond(g,p,o.i).o=2;
+  });return g;
+ }
+ function parseReagent(text,family='CAP'){
+  if(!['cap','CAP'].includes(family))return Lite.parseMol(text,{manualMarkers:true}).graph;
+  const lines=text.replace(/\r/g,'').split('\n'),v3=lines.some(l=>l.includes('V3000'));
+  // Replace only a complete aromatic P-N imidazole ring with its unique Kekule form.
+  const atoms=[],edges=[];
+  if(v3){let mode='';for(let k=0;k<lines.length;k++){const l=lines[k];if(l==='M  V30 BEGIN ATOM')mode='atom';else if(l==='M  V30 BEGIN BOND')mode='bond';else if(l.startsWith('M  V30 END '))mode='';else if(l.startsWith('M  V30 ')&&mode){const t=l.slice(7).trim().split(/\s+/);if(mode==='atom')atoms[+t[0]-1]={e:t[1]};else edges.push({a:+t[2]-1,b:+t[3]-1,o:+t[1],line:k,t});}}}
+  else{const n=+lines[3]?.slice(0,3),m=+lines[3]?.slice(3,6);for(let i=0;i<n;i++)atoms.push({e:lines[4+i]?.slice(31,34).trim()});for(let i=0;i<m;i++){const k=4+n+i,l=lines[k];edges.push({a:+l.slice(0,3)-1,b:+l.slice(3,6)-1,o:+l.slice(6,9),line:k});}}
+  const atomLines=new Map();
+  if(v3){let inAtoms=false;lines.forEach((l,k)=>{if(l==='M  V30 BEGIN ATOM')inAtoms=true;else if(l==='M  V30 END ATOM')inAtoms=false;else if(inAtoms){const t=l.slice(7).trim().split(/\s+/),i=+t[0]-1;atoms[i].q=+(t.find(v=>v.startsWith('CHG='))?.slice(4)||0);atomLines.set(i,k);}});}
+  else{atoms.forEach((a,i)=>{a.q=({1:3,2:2,3:1,5:-1,6:-2,7:-3})[+lines[4+i].slice(36,39)]||0;atomLines.set(i,4+i);});for(const l of lines.filter(l=>l.startsWith('M  CHG'))){const t=l.trim().split(/\s+/);for(let j=0;j<+t[2];j++)if(atoms[+t[3+2*j]-1])atoms[+t[3+2*j]-1].q=+t[4+2*j];}}
+  const raw={atoms,bonds:edges},converted=new Set(),oldCharges=atoms.map(a=>a.q),oldOrders=edges.map(e=>e.o);
+  normalizeCapGraph(raw);
+  edges.forEach((e,i)=>{if(e.o!==oldOrders[i])converted.add(e);});
+  const changed=new Set(atoms.flatMap((a,i)=>a.q!==oldCharges[i]?[i]:[]));
+  for(const i of changed){const k=atomLines.get(i);lines[k]=v3?lines[k].replace(/ CHG=[+-]?\d+/, ' CHG=0'):lines[k].slice(0,36)+'  0'+lines[k].slice(39);}
+  if(!v3)lines.forEach((l,k)=>{if(l.startsWith('M  CHG')){const t=l.trim().split(/\s+/);for(let j=0;j<+t[2];j++)if(changed.has(+t[3+2*j]-1))t[4+2*j]='0';lines[k]='M  CHG'+String(+t[2]).padStart(3)+Array.from({length:+t[2]},(_,j)=>String(+t[3+2*j]).padStart(4)+String(+t[4+2*j]).padStart(4)).join('');}});
+  for(const e of edges.filter(e=>e.o===1))for(const [p,n]of [[e.a,e.b],[e.b,e.a]])if(atoms[p]?.e==='P'&&atoms[n]?.e==='N')for(const found of rings(raw,n,5)){
+   const ring=[found,[found[0],...found.slice(1).reverse()]].find(r=>r.map(i=>atoms[i].e).join('')==='NCNCC');
+   if(!ring||!ring.every((i,k)=>bond(raw,i,ring[(k+1)%5]).o===4))continue;
+   ring.forEach((i,k)=>{const b=bond(raw,i,ring[(k+1)%5]);b.o=(atoms[ring[0]].q===1&&!atoms[ring[2]].q?[2,1,1,2,1]:[1,2,1,2,1])[k];converted.add(b);});
+  }
+  for(const e of converted){if(v3){e.t[1]=String(e.o);lines[e.line]='M  V30 '+e.t.join(' ');}else lines[e.line]=lines[e.line].slice(0,6)+String(e.o).padStart(3)+lines[e.line].slice(9);}
+  const parsed=Lite.parseMol(lines.join('\n'),{manualMarkers:true}).graph;
+  if(converted.size||changed.size)parsed.normalization={...parsed.normalization,cap_representation:{source_ctfile:text,bond_lines:[...converted].map(e=>e.line+1),charge_atoms:[...changed].map(i=>i+1),reason:'equivalent localized phosphoroimidazolide / phosphoryl representation'}};
+  return parsed;
+ }
+
+ const v2=freeze({schema_version:'reaction-engine/2',families,registry,parseReagent,detect,candidates,transform,workflow:workflow2,append:append2,reload:reload2});
 
  return {definitions:copy(definitions),sites,diagnose,resolveSites,validate,apply,workflow,append,reload,revert,v2};
 })();

@@ -1,11 +1,12 @@
-# Oligo Toolkit v2.1.0
+# Oligo Toolkit v2.2.0
 
-Extract the complete folder and double-click **Start.html** in Windows Edge or Chrome. No installation, server, Python, Node, administrator rights or network is required.
+- Molecule Builder architecture hardening: general connectivity, circular closure, multi-component state, stable attachment identity, interaction persistence and reaction materialization; retains ordered Branch/Reaction checkpoints.
+- Hybridization Analysis v1: single-strand hairpin candidates and antiparallel two-strand pairing, mismatches, overhangs and JSON export.
+- C8 Adaptive & Customizable Workspace: compact layout; grid drag/resize, visibility, density, presets, one custom layout and local persistence; Schematic / Detailed / Chemical modes with zoom/fit/fullscreen.
+- Keeps v2.00+ User Library compatibility and offline file:// startup in Edge/Chrome.
 
-Sequence and Excel Batch share the chemistry core and Built-in/User Library. Includes formula, average MW, exact mass, optical status, molecular presentation, structure exports, Custom Chemistry, Reaction Notebook, CAP, Amine Coupling, Click Reaction, Disulfide Reduction and Thiol–Maleimide.
+Limits: schematic falls back to Chemical for reaction products, circular/crosslinked/multi-component/interaction structures. Layout editing covers the Sequence/Builder workspace. Hybridization does not calculate Tm/ΔG or internal bulges; full Annealing Operation is not implemented.
 
-User Library compatibility starts at v2.00 (release v2.0.0, schemaVersion 1). Export your User Library JSON before upgrading, then Import/Merge in this release. Browser storage is local to the browser and file location. Built-in updates never overwrite User Library. See [schema contract](docs/USER_LIBRARY_SCHEMA.md).
+Extract the entire ZIP and double-click Oligo-Toolkit/Start.html. No installation or server required. Export User Library JSON before changing folder/browser, then Import/Merge.
 
-CAP recognition uses terminal-phosphorus topology and activated diphosphate phosphoroimidazolide structure. Structural compatibility does not establish experimental reaction efficiency. Unsupported chemistry fails explicitly. Unknown optical parameters remain explicit; CDXML is experimental. Arbitrary chemistry and collision-free layout are not guaranteed.
-
-See [release validation](tests/RELEASE_TEST_REPORT.md) and [release naming policy](docs/RELEASING.md). No personal libraries or local user MOL files are included.
+See docs/C8_WORKSPACE_REPORT.md and docs/ARCHITECTURE_HARDENING_HYBRIDIZATION_REPORT.md for implementation scope.

@@ -1,25 +1,7 @@
-# Oligo Toolkit v2.1.0 — Release test report
+# v2.2.0 Release validation
 
-Validation date: 2026-11-04 (Asia/Shanghai). Source: latest accepted CAP terminal-phosphorus update, based on the completed three-scope update. No new chemistry implemented for release.
+2026-11-05 Asia/Shanghai. Baseline: the accepted C8 working files, including all preceding Branch, architecture hardening and Hybridization changes, not the old v2.1.0 HEAD or ZIP.
 
-| Gate | Result |
-| --- | --- |
-| Sequence rArA | PASS: C20H25N10O10P; exact mass 596.1492740441699 Da |
-| Recent chemistry / ghost audit / invAb / secondary CAP / reduction / maleimide | 76/76 PASS |
-| CAP topology and v2.00 User Library baseline | 17/17 PASS |
-| Existing reaction v2 engine | 4,888 assertions, 120 products PASS |
-| Five-family UI, confirmation, checkpoints, i18n state, mobile | 10/10 PASS |
-| Amine Coupling, CuAAC, DBCO/BCN role symmetry, CAP and negative controls | 12/12 PASS |
-| Edge + Chrome local XLSX / Custom Chemistry | PASS in both browsers |
-| Large-structure heteroatom labels | 360 records, zero failures; Edge/Chrome, DPR 1/2, Fit/zoom/pan/Expand/Fullscreen |
-| Logo | Approved asset and render/filter unchanged; screenshots visually inspected |
-| Startup | file:// in Edge/Chrome; native Windows Explorer double-click Start.html verified in Chrome |
-| Runtime | No server/network/Python/Node/admin dependency; browser tests report zero remote requests and script errors |
+Fresh source checks: hardening 14/14, Branch 29/29, regression 76/76, presentation 6/6. Edge/Chrome file:// acceptance covers C8 drag/resize, visibility/presets/custom save/reset/restore, localStorage reload, 390–1920px responsive layout, mode molecule invariance, zoom/fit/fullscreen; Hybridization duplex/hairpin/export/fail-closed; Builder branch/reaction/nested branch, checkpoint export/import, custom library, 100nt+30nt viewer. Browser checks require no remote requests or page errors. Extracted-package acceptance is recorded separately in the release audit.
 
-Custom Chemistry was saved through the actual store, restored on page reload, exported, cleared in a disposable browser context, reimported through the Import/Merge file control and used again. A real XLSX byte round-trip supplied a synthetic custom-containing sequence to Batch. Single and Batch matched formula C22H30N10O15P2, average MW, exact mass 736.13673430159, all 49 graph atoms and bonds, and optical status. Generated MOL round-tripped atom/bond counts and formula; SVG was generated. Built-in registry bytes were unchanged. v2.00 baseline schemaVersion 1 imported/saved/reloaded/reexported with full record equality. Unknown future schemas still fail closed; no pre-v2.00 migration added.
-
-Release-only changes: product/version text and documentation; restored language preference persistence with guarded localStorage read/write. Chemistry, Library schema, renderer and approved logo bytes match the accepted build. The old family harness expected NO_VALIDATED_MOTIF_PAIR for invalid CAP; the release harness now checks the actual, more specific NO_COMPATIBLE_CAP_PAIR diagnostic while retaining disabled-Apply and unsupported-input checks. Initial unprivileged browser launch failed; successful runs used normal installed browsers with host access.
-
-Limits: structural CAP compatibility is not experimental process validation. General arbitrary chemistry, universal collision-free layout, SPAAC stereoisomer prediction and experimental CDXML accuracy are not claimed. Unsupported entries remain explicit. Browser restart/power loss and a separate target computer were not tested. UI save-button clicking is covered by prior acceptance; this release's fresh save check invokes the same store API, with actual UI import/merge. Optical parameters absent from a custom block remain unavailable. No local user MOLs, personal libraries, screenshots, work notes or prior builds ship.
-
-Packaging uses the exact runtime allowlist plus this report, synthetic baseline fixture and concise docs. ZIP CRC, per-file hashes, re-extraction, single entry point, resource links and runtime source review are checked before publication.
+No Tm/ΔG, full Annealing Operation, arbitrary schematic topology or cross-computer testing is claimed. Runtime source hashes and ZIP extraction/CRC are checked. Release changes are version labels and documentation only.

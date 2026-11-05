@@ -3,7 +3,7 @@
 const LocalViewers=(()=>{
  const instances=new WeakMap();
  const en=()=>document.getElementById('language').value==='en';
- function mount(host,record,{title='',onAtom,candidates=[],selectedSite=null,abbreviated=false}={}){
+ function mount(host,record,{title='',onAtom,candidates=[],selectedSite=null,abbreviated=false,mode=null}={}){
   if(typeof host==='string')host=document.getElementById(host);
   instances.get(host)?.dispose();const cleanups=[];
   host.replaceChildren();host.classList.add('local-viewer');
@@ -33,11 +33,18 @@ const LocalViewers=(()=>{
   stage.onpointermove=e=>{if(drag){x=drag.x+e.clientX-drag.px;y=drag.y+e.clientY-drag.py;update();}};stage.onpointerup=()=>drag=null;stage.onpointercancel=()=>drag=null;
   stage.onkeydown=e=>{if(e.key==='Home'){x=y=0;scale=1;}else if(e.key==='+')scale=Math.min(16,scale*1.3);else if(e.key==='-')scale=Math.max(.1,scale/1.3);else if(e.key.startsWith('Arrow')){e.preventDefault();x+=e.key==='ArrowLeft'?25:e.key==='ArrowRight'?-25:0;y+=e.key==='ArrowUp'?25:e.key==='ArrowDown'?-25:0;}update();};
   const meta=document.createElement('div');meta.className='local-metrics';
-  if(record){const p=Sandbox.C.present(record,abbreviated);canvas.innerHTML=p.svg;
+  const requested=mode||StructurePresentation.defaultMode(),selection=!!(onAtom||selectedSite),schematic=record&&!selection&&requested==='schematic'?StructurePresentation.schematic(record):null;
+  const effective=selection?'chemical':requested==='schematic'&&!schematic?.supported?'chemical':requested;
+  const modes=document.createElement('select');modes.className='viewer-mode';modes.setAttribute('aria-label',en()?'Structure presentation':'结构展示');
+  for(const [value,zh,eng]of [['schematic','示意','Schematic'],['detailed','详细','Detailed'],['chemical','化学','Chemical']]){const o=document.createElement('option');o.value=value;o.textContent=en()?eng:zh;modes.append(o);}modes.value=effective;modes.disabled=selection||!record;
+  modes.onchange=()=>mount(host,record,{title,onAtom,candidates,selectedSite,abbreviated,mode:modes.value});head.append(modes);host.dataset.presentation=effective;
+  const note=document.createElement('div');note.className='presentation-note';note.textContent=selection?(en()?'Chemical view for atom/site selection':'位点选择使用化学视图'):requested==='schematic'?(schematic?.reason?.split(' / ')[en()?0:1]||schematic?.reason||''):effective==='detailed'?(en()?'Existing semantic / bamboo renderer; standard abbreviations where supported.':'复用现有 semantic / bamboo renderer；支持处采用标准缩写。'):(en()?'Full atomistic graph · zoom or fullscreen to inspect':'完整原子图 · 放大或全屏检查');
+
+  if(record){const p=effective==='schematic'?{svg:schematic.svg}:Sandbox.C.present(record,effective==='detailed'&&(host.id==='viewer'?abbreviated:true));canvas.innerHTML=p.svg;
    // Avoid fractional source-font quantization in Chromium's SVG text painter.
    // Enlarge text-local units, then invert with a vector transform. Positions,
    // advances and stroke halos remain exactly the same in molecular space.
-   for(const text of canvas.querySelectorAll('text')){
+   for(const text of effective==='schematic'?[]:canvas.querySelectorAll('text')){
     const k=32;
     text.setAttribute('text-rendering','geometricPrecision');
     text.setAttribute('font-size',Number.parseFloat(text.getAttribute('font-size')||text.parentElement.getAttribute('font-size')||'.52')*k);
@@ -56,7 +63,7 @@ const LocalViewers=(()=>{
    const m=record.metrics,o=record.optical||record.graph.photometry;meta.textContent=`${m.formula} · MW ${Number(m.average_mw).toFixed(3)} · Exact ${Number(m.exact_mass).toFixed(5)} · OD ${o?.status||'NEEDS_PARAMETER'}`;
   }else{canvas.textContent=en()?'Preview to generate product':'点击预览生成产物';}
   const svg=canvas.querySelector('svg');if(svg)baseBox=svg.getAttribute('viewBox').split(/\s+/).map(Number);
-  const hint=document.createElement('small');hint.className='viewer-hint';hint.textContent=en()?'Drag to pan · Ctrl/Cmd + wheel to zoom · Wheel scrolls page':'拖动平移 · Ctrl/Cmd + 滚轮缩放 · 普通滚轮滚动页面';host.append(head,stage,hint,meta);update();const observer=new ResizeObserver(update);observer.observe(stage);instances.set(host,{record,dispose:()=>{observer.disconnect();cleanups.forEach(fn=>fn());},setViewport(v){if(v.scale!==undefined)scale=Math.max(.1,Math.min(16,v.scale));if(v.x!==undefined)x=v.x;if(v.y!==undefined)y=v.y;update();},get transform(){return {scale,x,y};}});return host;
+  const hint=document.createElement('small');hint.className='viewer-hint';hint.textContent=en()?'Drag to pan · Ctrl/Cmd + wheel to zoom · Wheel scrolls page':'拖动平移 · Ctrl/Cmd + 滚轮缩放 · 普通滚轮滚动页面';host.append(head,stage,note,hint,meta);update();const observer=new ResizeObserver(update);observer.observe(stage);instances.set(host,{record,dispose:()=>{observer.disconnect();cleanups.forEach(fn=>fn());},setViewport(v){if(v.scale!==undefined)scale=Math.max(.1,Math.min(16,v.scale));if(v.x!==undefined)x=v.x;if(v.y!==undefined)y=v.y;update();},get transform(){return {scale,x,y};}});return host;
  }
  return {mount,instances};
 })();

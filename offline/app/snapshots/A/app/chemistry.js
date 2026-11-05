@@ -257,11 +257,11 @@ function expandAssemblyGraph(input){
  for(const v of t.depiction_overpasses||[])g.depiction_overpasses.push({...v,front:g.bonds.length+v.front,back:g.bonds.length+v.back});
  const bondStart=g.bonds.length;append(g.atoms,t.atoms);append(g.bonds,t.bonds.map(b=>({...b,a:b.a+o,b:b.b+o})));mark(o,bondStart,{kind:'building-block',node:ag.nodes[i].id,position:i+1,block:ag.nodes[i].block.id});const up=t.attachments?.upstream?.atom,down=t.attachments?.downstream?.atom;sites.push({offset:o,local_anchor_y:ts[i].atoms[up??down??0].y,o5:Number.isInteger(up)?o+up:null,o3:Number.isInteger(down)?o+down:null,terminalOnly:!Number.isInteger(up)||!Number.isInteger(down),incoming_label:t.incoming_label||'5′ side',outgoing_label:t.outgoing_label||'3′ side'});}
  for(let i=0;i<p.links.length;i++){
- const edge=ag.edges[i];let code=edge.linkage,t,a=sites[i].offset+ts[i].attachments[edge.source.site].atom,b=sites[i+1].offset+ts[i+1].attachments[edge.target.site].atom,offset=g.atoms.length,A=g.atoms[a],B=g.atoms[b],boundary=(i+1)%10===0;
- let x=A.x,y=(A.y+(boundary?A.y+(hasLarge?11:pitch)-3.8:B.y))/2;const largeLink=hasLarge&&(ts[i].layout_metadata?.expanded||ts[i+1].layout_metadata?.expanded);if(largeLink){x=Math.floor(i/10)*width+minLocalX-10;y=boundary?A.y+4:(A.y+B.y)/2;}
+ const edge=ag.edges[i],sourceIndex=ag.nodes.findIndex(n=>n.id===edge.source.node),targetIndex=ag.nodes.findIndex(n=>n.id===edge.target.node);let code=edge.linkage,t,a=sites[sourceIndex].offset+ts[sourceIndex].attachments[edge.source.site].atom,b=sites[targetIndex].offset+ts[targetIndex].attachments[edge.target.site].atom,offset=g.atoms.length,A=g.atoms[a],B=g.atoms[b],boundary=targetIndex===sourceIndex+1&&(sourceIndex+1)%10===0;
+ let x=A.x,y=(A.y+(boundary?A.y+(hasLarge?11:pitch)-3.8:B.y))/2;const largeLink=hasLarge&&(ts[sourceIndex].layout_metadata?.expanded||ts[targetIndex].layout_metadata?.expanded);if(largeLink){x=Math.floor(sourceIndex/10)*width+minLocalX-10;y=boundary?A.y+4:(A.y+B.y)/2;}
  t=phosphorusGeometry(code,x,y);
  const bondStart=g.bonds.length;append(g.atoms,t.atoms);g.bonds.push(...t.bonds.map(v=>({...v,a:v.a+offset,b:v.b+offset,s:0})),{a,b:offset+t.p,o:1,s:0},{a:offset+t.p,b,o:1,s:0});
- mark(offset,bondStart,{kind:'linkage',edge:edge.id,linkage:edge.linkage,source:edge.source,target:edge.target,positions:[i+1,i+2]});if(largeLink)expanded.push({bonds:[g.bonds.length-2,g.bonds.length-1],p:offset+t.p});
+ mark(offset,bondStart,{kind:'linkage',edge:edge.id,linkage:edge.linkage,source:edge.source,target:edge.target,positions:[sourceIndex+1,targetIndex+1]});if(largeLink)expanded.push({bonds:[g.bonds.length-2,g.bonds.length-1],p:offset+t.p});
  if(boundary&&!largeLink){let P=g.atoms[offset+t.p],gutter=B.x+(hasLarge?minLocalX-17:-8),top=Math.min(-5,minLocalY-5);
  // Escape downward below the final linkage before entering the empty gutter.
  g.routes.push({bond:g.bonds.length-1,boundary:i+1,atoms:[offset+t.p,b],points:[[P.x,P.y],[P.x,P.y+3],[gutter,P.y+3],[gutter,top],[B.x,top],[B.x,B.y]]});}
@@ -481,6 +481,16 @@ function registerCustom(name,imported,target=customLibrary){
  for(const a of g.atoms){const x=a.x-ax,y=a.y-ay;a.x=L?(x*dy-y*dx)/L:x;a.y=L?(x*dx+y*dy)/L:y;}
  g.layout_metadata={expanded:extent(g.atoms.map(a=>a.x),'max')-extent(g.atoms.map(a=>a.x),'min')>14};g.id='{'+name+'}';g.family='Custom';g.assembly_class='o-phosphorus';g.o5=five;g.o3=three;g.attachments={};
  for(const [direction,atom]of [['upstream',five],['downstream',three]])if(atom!==null){const bs=g.bonds.filter(b=>b.a===atom||b.b===atom);g.attachments[direction]={atom,atom_role:'user-selected-OH',direction,element:g.atoms[atom].e,connection_class:'alcohol',compatibility_domain:'standard-O',unconnected:{state:'OH',hydrogens:1},local_bonds:bs.map(b=>({atom:b.a===atom?b.b:b.a,order:b.o})),allowed_linkage_classes:[...PHOSPHORUS_CLASSES],internal_phosphorus:[...PHOSPHORUS_CLASSES],terminal_phosphorus:[...PHOSPHORUS_CLASSES]};}
+ // Explicit branch selections, never inferred RNA hydroxyls.
+ const branches=imported.branchSites||Object.values(imported.graph.attachments||{}).filter(s=>s.direction==='branch');
+ const used=new Set([five,three].filter(i=>i!==null));
+ for(const [i,entry]of branches.entries()){
+  const atom=typeof entry==='number'?entry:entry.atom;
+  selectAttachments(imported,atom,null);
+  if(used.has(atom))throw Error('Attachment atom selected more than once');used.add(atom);
+  const base=clone(g.attachments.upstream||g.attachments.downstream);
+  g.attachments['branch_'+(i+1)]={...base,atom,direction:'branch',role:'branch',index:i+1,local_bonds:g.bonds.filter(b=>b.a===atom||b.b===atom).map(b=>({atom:b.a===atom?b.b:b.a,order:b.o}))};
+ }
  g.phosphorus_topology='standard-5-to-3';
  if(imported.optical){if(!validOptical(imported.optical))throw Error('Invalid optical metadata');g.optical=clone(imported.optical);}
  if(imported.extinction){if(!validExtinction(imported.extinction))throw Error('Invalid extinction metadata');g.extinction=clone(imported.extinction);}

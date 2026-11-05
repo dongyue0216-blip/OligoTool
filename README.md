@@ -1,12 +1,17 @@
 # Oligo Toolkit
 
-## Latest: Oligo Toolkit v2.1.0
+## Latest: Oligo Toolkit v2.2.0
 
-[Download Oligo-Toolkit-v2.1.0.zip](https://github.com/dongyue0216-blip/OligoTool/releases/tag/v2.1.0), extract the complete folder and double-click **Oligo-Toolkit/Start.html**. Windows Edge/Chrome; no installation, server or network required. In this source checkout, root **Start.html** opens **offline/Start.html**.
+[Download](https://github.com/dongyue0216-blip/OligoTool/releases/tag/v2.2.0). Extract and double-click Oligo-Toolkit/Start.html. In this checkout, root Start.html opens offline/Start.html.
 
-Sequence, Batch Excel and Custom Chemistry share the chemistry core. Includes CAP, Amine Coupling, Click, Disulfide Reduction and Thiol–Maleimide. User Library compatibility retains the v2.00 / v2.0.0 baseline (schemaVersion 1); Built-in and user data remain separate. Export User Library JSON before upgrading, then Import/Merge.
+- Molecule Builder architecture hardening: general connectivity, circular closure, multi-component state, stable attachment identity, interaction persistence and reaction materialization; retains ordered Branch/Reaction checkpoints.
+- Hybridization Analysis v1: single-strand hairpin candidates and antiparallel two-strand pairing, mismatches, overhangs and JSON export.
+- C8 Adaptive & Customizable Workspace: compact layout; grid drag/resize, visibility, density, presets, one custom layout and local persistence; Schematic / Detailed / Chemical modes with zoom/fit/fullscreen.
+- Keeps v2.00+ User Library compatibility and offline file:// startup in Edge/Chrome.
 
-See [release test report](offline/tests/RELEASE_TEST_REPORT.md), [compatibility contract](offline/docs/USER_LIBRARY_SCHEMA.md), [release notes](docs/RELEASE_2_1_0.md), and [permanent naming policy](offline/docs/RELEASING.md).
+Limits: schematic falls back to Chemical for reaction products, circular/crosslinked/multi-component/interaction structures. Layout editing covers the Sequence/Builder workspace. Hybridization does not calculate Tm/ΔG or internal bulges; full Annealing Operation is not implemented.
+
+Extract the entire ZIP and double-click Oligo-Toolkit/Start.html. No installation or server required. Export User Library JSON before changing folder/browser, then Import/Merge.
 
 ## Previous browser edition: Lite v0.9.1
 

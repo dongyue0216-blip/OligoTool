@@ -29,6 +29,7 @@ const FragmentComposition=(()=>{
   return {graph:out,status:'semantic 10-unit bamboo + local RDKit fragments + anchor-relative linkages'};
  }
  function coordinates(r,depth=0){
+  if(r.moleculeState&&(r.moleculeState.assemblyGraph.branchEdges.length||r.moleculeState.presentationGroups?.length))return BranchLayout.coordinates(r.moleculeState);
   const g=r.graph;if(depth>30)throw Error('PRESENTATION_ANCESTRY_LIMIT');
   if(r.workflow)remember(r.workflow);
   const stamp=key(g),cached=cache.get(stamp);if(cached)return cached;

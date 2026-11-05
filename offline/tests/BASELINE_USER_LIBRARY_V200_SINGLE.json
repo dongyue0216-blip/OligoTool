@@ -1,0 +1,213 @@
+{
+  "schema": "oligo-user-chemistry-library",
+  "schemaVersion": 1,
+  "libraryId": "fixture:v200-single",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "8504cdbd-6fe1-4b3d-8fc1-80ace5c21672",
+      "source": "user",
+      "name": "V200Single",
+      "symbol": "V200Single",
+      "block": {
+        "schema_version": "building-block/3",
+        "id": "{V200Single}",
+        "graph": {
+          "schema_version": "molecular-graph/1",
+          "atoms": [
+            {
+              "e": "C",
+              "q": 0,
+              "h": 3,
+              "x": 0,
+              "y": 0
+            },
+            {
+              "e": "C",
+              "q": 0,
+              "h": 2,
+              "x": 1.5,
+              "y": 0
+            },
+            {
+              "e": "O",
+              "q": 0,
+              "h": 1,
+              "x": 3,
+              "y": 0
+            }
+          ],
+          "bonds": [
+            {
+              "a": 0,
+              "b": 1,
+              "o": 1,
+              "s": 0
+            },
+            {
+              "a": 1,
+              "b": 2,
+              "o": 1,
+              "s": 0
+            }
+          ]
+        },
+        "sites": {
+          "upstream": {
+            "atom": 2,
+            "atom_role": "user-selected-OH",
+            "direction": "upstream",
+            "element": "O",
+            "connection_class": "alcohol",
+            "compatibility_domain": "standard-O",
+            "unconnected": {
+              "state": "OH",
+              "hydrogens": 1
+            },
+            "local_bonds": [
+              {
+                "atom": 1,
+                "order": 1
+              }
+            ],
+            "allowed_linkage_classes": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "internal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "terminal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "id": "upstream",
+            "role": "user-selected-OH"
+          }
+        },
+        "metadata": {
+          "family": "Custom"
+        },
+        "layout": {
+          "expanded": false,
+          "depiction_overpasses": []
+        }
+      },
+      "runtime": {
+        "atoms": [
+          {
+            "e": "C",
+            "q": 0,
+            "h": 3,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "e": "C",
+            "q": 0,
+            "h": 2,
+            "x": 1.5,
+            "y": 0
+          },
+          {
+            "e": "O",
+            "q": 0,
+            "h": 1,
+            "x": 3,
+            "y": 0
+          }
+        ],
+        "bonds": [
+          {
+            "a": 0,
+            "b": 1,
+            "o": 1,
+            "s": 0
+          },
+          {
+            "a": 1,
+            "b": 2,
+            "o": 1,
+            "s": 0
+          }
+        ],
+        "layout_metadata": {
+          "expanded": false
+        },
+        "id": "{V200Single}",
+        "family": "Custom",
+        "assembly_class": "o-phosphorus",
+        "o5": 2,
+        "o3": null,
+        "attachments": {
+          "upstream": {
+            "atom": 2,
+            "atom_role": "user-selected-OH",
+            "direction": "upstream",
+            "element": "O",
+            "connection_class": "alcohol",
+            "compatibility_domain": "standard-O",
+            "unconnected": {
+              "state": "OH",
+              "hydrogens": 1
+            },
+            "local_bonds": [
+              {
+                "atom": 1,
+                "order": 1
+              }
+            ],
+            "allowed_linkage_classes": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "internal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "terminal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ]
+          }
+        },
+        "phosphorus_topology": "standard-5-to-3"
+      },
+      "provenance": {
+        "createdAt": "2026-11-04T15:41:11.123Z",
+        "originalSource": null,
+        "originalSchemaVersion": null
+      },
+      "formula": "C2H6O",
+      "average_mw": 46.069,
+      "exact_mass": 46.041864812949996,
+      "assembly_supported": true,
+      "graphIdentity": "{\"atoms\":[{\"e\":\"C\",\"h\":3,\"q\":0},{\"e\":\"C\",\"h\":2,\"q\":0},{\"e\":\"O\",\"h\":1,\"q\":0}],\"bonds\":[{\"a\":0,\"b\":1,\"o\":1,\"s\":0},{\"a\":1,\"b\":2,\"o\":1,\"s\":0}],\"sites\":{\"upstream\":{\"allowed_linkage_classes\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"atom\":2,\"atom_role\":\"user-selected-OH\",\"compatibility_domain\":\"standard-O\",\"connection_class\":\"alcohol\",\"direction\":\"upstream\",\"element\":\"O\",\"id\":\"upstream\",\"internal_phosphorus\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"local_bonds\":[{\"atom\":1,\"order\":1}],\"role\":\"user-selected-OH\",\"terminal_phosphorus\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"unconnected\":{\"hydrogens\":1,\"state\":\"OH\"}}}}"
+    }
+  ]
+}

@@ -20,6 +20,7 @@ const ChemistryCore = (() => {
    if(s.unconnected.state!==(s.element==='N'?'NH':'OH')||s.unconnected.hydrogens!==1)fail(value.id+' unimplemented unconnected state');
   }
   return {schema_version:'building-block/3',id:value.id,graph,sites,
+   ...(Object.values(sites).some(s=>s.direction==='branch')?{attachmentSites:copy(Object.values(sites))}:{}),
    // Emit optical only when the block actually declares one; an absent property and
    // an explicit null are not interchangeable for stored snapshots/JSON backups.
    ...(value.optical?{optical:copy(value.optical)}:{}),
@@ -46,7 +47,7 @@ const ChemistryCore = (() => {
   return s;
  }
  function validateAssembly(ag,definitions) {
-  if(ag.schema_version!=='assembly-graph/1'||!ag.nodes?.length||ag.edges?.length!==ag.nodes.length-1)fail('only connected linear AssemblyGraphs are implemented');
+  if(ag.schema_version!=='assembly-graph/1'||!ag.nodes?.length||!Array.isArray(ag.edges))fail('invalid AssemblyGraph');
   const nodes=new Map(),used=new Set(),ids=new Set();
   const unique=id=>{if(typeof id!=='string'||!id||ids.has(id))fail('missing/duplicate object id');ids.add(id);};
   for(const [i,n] of ag.nodes.entries()){
@@ -60,8 +61,6 @@ const ChemistryCore = (() => {
   };
   for(const [i,e] of ag.edges.entries()){
    unique(e.id);
-   if(e.source.node!==ag.nodes[i].id||e.target.node!==ag.nodes[i+1].id)fail('edge does not follow explicit sequence order');
-   if(e.source.site!==(ag.nodes[i].orientation==='reverse'?'upstream':'downstream')||e.target.site!==(ag.nodes[i+1].orientation==='reverse'?'downstream':'upstream'))fail('edge contradicts node orientation; branch connections are not implemented');
    const l=definitions[e.linkage];if(!l)fail('undefined linkage '+e.linkage);
    const a=endpoint(e.source,l,'internal','source'),b=endpoint(e.target,l,'internal','target');
    // Domains are explicit audited site contracts, never family identities.
@@ -108,7 +107,7 @@ const ChemistryCore = (() => {
  function nodesOrientation(block,i,length){
   // A one-site modifier can be oriented at either terminus; no special block category.
   const dirs=Object.keys(block.sites);
-  return dirs.length===1&&block.sites[dirs[0]].reversible===true&&((i===0&&length>1&&dirs[0]==='upstream')||(i===length-1&&length>1&&dirs[0]==='downstream'))?'reverse':'forward';
+  return dirs.length===1&&block.sites[dirs[0]].reversible!==false&&((i===0&&length>1&&dirs[0]==='upstream')||(i===length-1&&length>1&&dirs[0]==='downstream'))?'reverse':'forward';
  }
  return {molecularGraph,buildingBlock,linkageDefinitions,validateAssembly,fromNotation};
 })();

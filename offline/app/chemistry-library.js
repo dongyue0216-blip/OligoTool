@@ -8,6 +8,12 @@ const ChemistryLibrary=(()=>{
  // Exact indexed graph identity, not an isomorphism/canonical-SMILES claim.
  const identity=b=>canonical({atoms:b.graph.atoms.map(({x,y,z,...a})=>a),bonds:b.graph.bonds,sites:b.sites});
  const content=r=>canonical({block:r.block,runtime:r.runtime,name:r.name,symbol:r.symbol});
+ // Derived snapshots may carry additive metadata that the core does not emit.
+ function includesSnapshot(actual,expected){
+  if(Array.isArray(expected))return Array.isArray(actual)&&actual.length===expected.length&&expected.every((v,i)=>includesSnapshot(actual[i],v));
+  if(expected&&typeof expected==='object')return actual&&typeof actual==='object'&&Object.keys(expected).every(k=>Object.hasOwn(actual,k)&&includesSnapshot(actual[k],expected[k]));
+  return actual===expected;
+ }
  function normalize(name,input,previous={}){
   const target=Object.create(null),runtime=Lite.registerCustom(name,copy(input),target);
   if(input.graph?.metadata)runtime.metadata=copy(input.graph.metadata);
@@ -22,12 +28,34 @@ const ChemistryLibrary=(()=>{
  function validate(r){
   if(!r||r.schemaVersion!==1||r.source!=='user'||typeof r.id!=='string'||!r.id||r.id.length>160||typeof r.name!=='string'||!r.name||r.name.length>500||!r.provenance||typeof r.provenance!=='object')fail('invalid user record/version/source');
   if(!r.block||!r.runtime||r.block.schema_version!=='building-block/3')fail('missing BuildingBlock/runtime');
+  r=copy(r);
+  if(typeof r.symbol!=='string'||!/^[A-Za-z0-9_]{1,24}$/.test(r.symbol))fail('invalid stored symbol');
   const g=r.runtime,attachments={5:g.attachments?.upstream?.atom,3:g.attachments?.downstream?.atom};
+  for(const version of [g.schema_version,r.block.graph?.schema_version])if(version!==undefined&&version!=='molecular-graph/1')fail('unsupported MolecularGraph version');
   if(g.id!=='{'+r.symbol+'}'||r.block.id!==g.id)fail('symbol / block ID mismatch');
   // Validate with the existing chemistry contract in an isolated registry.
   Lite.core.molecularGraph(g);
-  const n=normalize(r.symbol,{graph:g,attachments,optical:g.optical,extinction:g.extinction},r);
-  const b=Lite.core.buildingBlock(g);if(canonical(b)!==canonical(r.block)||identity(b)!==r.graphIdentity||identity(n.block)!==identity(b))fail('graph / AttachmentSites mismatch');
+  // Restoring a previously valid symbol must not apply today's new-entry name
+  // policy (new built-ins can acquire the same name). Validate chemistry using
+  // an isolated, non-catalog symbol; never install or rename that temporary block.
+  const reserved=new Set(Lite.builtinAudit().filter(row=>row.assembly_ready).flatMap(row=>row.names.map(n=>n.toLowerCase())));
+  let validationName='LibraryCheck0',suffix=0;while(reserved.has(validationName.toLowerCase()))validationName='LibraryCheck'+(++suffix);
+  const n=normalize(validationName,{graph:g,attachments,optical:g.optical,extinction:g.extinction});
+  const b=Lite.core.buildingBlock(g);
+  if(identity(r.block)!==r.graphIdentity)fail('graph / AttachmentSites mismatch');
+  // Add only deterministic derived fields within the supported v2.00+ schema.
+  // Authenticate the old identity before filling defaults; never rewrite source
+  // graphs, coordinates, user labels, existing site IDs or extension metadata.
+  for(const [id,s] of Object.entries(r.block.sites||{}))for(const k of ['id','direction','role','unconnected'])if(s[k]===undefined&&b.sites[id]?.[k]!==undefined)s[k]=copy(b.sites[id][k]);
+  if(r.block.attachmentSites===undefined&&b.attachmentSites)r.block.attachmentSites=copy(Object.values(r.block.sites));
+  if(canonical(Object.keys(r.block.sites||{}).sort())!==canonical(Object.keys(b.sites).sort())||!includesSnapshot(r.block,b))fail('graph / AttachmentSites mismatch');
+  r.graphIdentity=identity(r.block);
+  // Compare chemistry contracts, not role labels, site IDs or unknown metadata.
+  // Those values belong to the saved record and must survive upgrades verbatim.
+  const fields=['atom','direction','element','connection_class','compatibility_domain','unconnected','local_bonds','allowed_linkage_classes','internal_phosphorus','terminal_phosphorus'];
+  const contract=s=>Object.fromEntries(fields.map(k=>[k,s[k]]));
+  const sites=Object.values(b.sites),expected=Object.values(n.block.sites);
+  if(sites.length!==expected.length||sites.some(s=>!expected.some(t=>includesSnapshot(contract(s),contract(t)))))fail('invalid stored attachment chemistry');
   const edges=new Set();for(const bond of g.bonds){const edge=[bond.a,bond.b].sort((a,b)=>a-b).join(':');if(edges.has(edge))fail('duplicate bond');edges.add(edge);}
   if(!Lite.connected(g))fail('disconnected assembly block');const properties=Lite.graphProperties(g);
   // Optional additive fields keep existing schema-v1 records readable.

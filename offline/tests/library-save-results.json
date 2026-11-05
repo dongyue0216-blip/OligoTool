@@ -1,0 +1,106 @@
+[
+  {
+    "name": "v2.0.0 real released serializer / newly introduced built-in name",
+    "status": "PASS"
+  },
+  {
+    "name": "v2.1.0 real released serializer / newly introduced built-in name",
+    "status": "PASS"
+  },
+  {
+    "name": "Terminal save reload view payload / metadata",
+    "status": "PASS"
+  },
+  {
+    "name": "Internal save reload view payload / metadata",
+    "status": "PASS"
+  },
+  {
+    "name": "Branched save reload view payload / metadata",
+    "status": "PASS"
+  },
+  {
+    "name": "BASELINE_USER_LIBRARY_V1.json unchanged roundtrip",
+    "status": "PASS"
+  },
+  {
+    "name": "BASELINE_USER_LIBRARY_V200_SINGLE.json unchanged roundtrip",
+    "status": "PASS"
+  },
+  {
+    "name": "broken JSON fail closed original bytes",
+    "status": "PASS"
+  },
+  {
+    "name": "future envelope fail closed original bytes",
+    "status": "PASS"
+  },
+  {
+    "name": "bad graph fail closed original bytes",
+    "status": "PASS"
+  },
+  {
+    "name": "supported additive site defaults migrate deterministically without source writes",
+    "status": "PASS"
+  },
+  {
+    "name": "missing derived branch list is additive, absent branch stays absent",
+    "status": "PASS"
+  },
+  {
+    "name": "coordinates atom IDs optical extinction provenance and unknown fields retained",
+    "status": "PASS"
+  },
+  {
+    "name": "stable branch site IDs and roles, unknown metadata / optical retained",
+    "status": "PASS"
+  },
+  {
+    "name": "future record rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "future block rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "future runtime rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "changed graph rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "changed identity rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "bad site rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "phantom snapshot site rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "wrong mass rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "duplicate record rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "pre-v200 rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "quota backup failure and concurrent writes preserve original",
+    "status": "PASS"
+  },
+  {
+    "name": "merge duplicates and conflicts remain atomic",
+    "status": "PASS"
+  }
+]

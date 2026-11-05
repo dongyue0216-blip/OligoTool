@@ -1,0 +1,48 @@
+[
+  {
+    "channel": "msedge",
+    "name": "BrowserOne",
+    "status": "PASS",
+    "flow": "Save → reload → View → reload; current UI has no update action"
+  },
+  {
+    "channel": "msedge",
+    "name": "BrowserTwo",
+    "status": "PASS",
+    "flow": "Save → reload → View → reload; current UI has no update action"
+  },
+  {
+    "channel": "msedge",
+    "name": "BrowserBranch",
+    "status": "PASS",
+    "flow": "Save → reload → View → reload; current UI has no update action"
+  },
+  {
+    "channel": "msedge",
+    "name": "historical restore + UI Save + core smoke + malformed/future fail closed",
+    "status": "PASS"
+  },
+  {
+    "channel": "chrome",
+    "name": "BrowserOne",
+    "status": "PASS",
+    "flow": "Save → reload → View → reload; current UI has no update action"
+  },
+  {
+    "channel": "chrome",
+    "name": "BrowserTwo",
+    "status": "PASS",
+    "flow": "Save → reload → View → reload; current UI has no update action"
+  },
+  {
+    "channel": "chrome",
+    "name": "BrowserBranch",
+    "status": "PASS",
+    "flow": "Save → reload → View → reload; current UI has no update action"
+  },
+  {
+    "channel": "chrome",
+    "name": "historical restore + UI Save + core smoke + malformed/future fail closed",
+    "status": "PASS"
+  }
+]

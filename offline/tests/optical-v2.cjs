@@ -1,0 +1,52 @@
+'use strict';
+const assert=require('node:assert/strict'), fs=require('node:fs'), path=require('node:path'), vm=require('node:vm');
+const context=vm.createContext({console,crypto:require('node:crypto').webcrypto});
+require('./load-registry.js')(context);
+for(const file of ['snapshots/A/app/core','optical','snapshots/A/app/chemistry'])
+ vm.runInContext(fs.readFileSync(path.join(__dirname,'../app',file+'.js'),'utf8'),context,{filename:file});
+const [Lite,Optical]=vm.runInContext('[Lite,Optical]',context);
+const bases=[...'GUCCCCCUUGCCGUCCCAAGCA'];
+const thermo=bases.map(b=>'r'+b).join('');
+const ome=bases.map((b,i)=>(i%2?'m':'r')+b).join('');
+const result=sequence=>Lite.calculate(sequence).optical;
+for(const [seq,referenceMW,expected,tier] of [[thermo,6888.2,'35.34','validated'],[ome,7042.5,'36.13','heuristic']]){
+ const o=result(seq);
+ assert.equal(o.epsilon260,194900);
+ assert.equal((1000*referenceMW/o.epsilon260).toFixed(2),expected);
+ assert.equal(o.ug_per_od.toFixed(2),expected);
+ assert.equal(o.evidence.tier,tier);
+ console.log({MW:o.averageMW_g_mol,epsilon:o.epsilon260,ugPerOD:o.ug_per_od,tier});
+}
+assert.equal(result('dAdCdGdT').epsilon260,40300);
+assert.equal(result('rA[absic]rG').epsilon260,26900);
+assert.equal(result('[C6N]rArG').epsilon260,result('rArG').epsilon260);
+assert(result('[C6N]rArG').ug_per_od>result('rArG').ug_per_od);
+assert.equal(result('rArA*rArA').epsilon260,result('rArArArA').epsilon260);
+assert.equal(result('rT').epsilon260,7743.31);
+assert.equal(result('rI').epsilon260,7145.35);
+assert.equal(result('tAtC').epsilon260,result('rArC').epsilon260);
+assert.equal(result('mAfUrG').evidence.tier,'heuristic');
+assert.equal(result(thermo.slice(0,2)+'*'+thermo.slice(2)).evidence.tier,'heuristic');
+const aromatic=Lite.parseSmiles('OCC=CC=CC=C').graph; aromatic.bonds.push({a:2,b:7,o:1}); aromatic.atoms[2].h--; aromatic.atoms[7].h--;
+Lite.registerCustom('AromaticTest',Lite.selectAttachments(Lite.parseMol(Lite.mol(aromatic)),0,null));
+const unknown=Lite.calculate('[AromaticTest]rArG');
+assert.equal(unknown.optical.epsilon260,result('rArG').epsilon260);
+assert.ok(unknown.optical.ug_per_od>result('rArG').ug_per_od);
+assert.ok(unknown.optical.evidence.reasonCodes.includes('UNKNOWN_MODIFIER_ZERO'));
+assert.equal(unknown.optical.partialEpsilon,null);
+const local={kind:'fullUnit',nodeId:'b1',value:5,unit:'mM^-1 cm^-1',source:'synthetic fixture',conditions:'aqueous',wavelength:260,identity:Optical.chemicalIdentity(unknown.graph)};
+assert.equal(Optical.analyze(unknown,Optical.pack,local).epsilon260,result('rArG').epsilon260+5000);
+const parent=Lite.calculate('rArG');
+const delta={...local,kind:'deltaToParent',identity:Optical.chemicalIdentity(parent.graph)};
+assert.equal(Optical.analyze(parent,Optical.pack,delta).epsilon260,parent.optical.epsilon260+5000);
+assert.equal(Optical.analyze(parent,Optical.pack,[delta,delta]).epsilon260,null);
+const measured={...delta,kind:'wholeMolecule',measured:true};
+assert.equal(Optical.analyze(parent,Optical.pack,measured).evidence.basis,'measured');
+assert.equal(Optical.analyze(unknown,Optical.pack,measured).epsilon260,null);
+const args={dilutionFactor:10,volumeMl:2,epsilon:100000,averageMW:6000};
+const a=Optical.convert({...args,absorbance:0.1,pathLengthCm:0.1});
+const b=Optical.convert({...args,absorbance:1,pathLengthCm:1});
+assert.deepEqual(a,b);
+assert.equal(a.concentrationUM,100);assert.equal(a.totalUg,1200);assert.equal(a.totalOD260,20);
+console.log('Optical 2.0 benchmark, identity, attachment, override and conversion checks passed');
+

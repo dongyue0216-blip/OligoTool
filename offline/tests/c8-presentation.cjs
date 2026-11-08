@@ -1,7 +1,8 @@
 const fs=require('fs'),vm=require('vm'),path=require('path'),assert=require('assert');
 const ctx=vm.createContext({console,crypto:require('crypto').webcrypto}),root=path.join(__dirname,'..');
-for(const f of ['reference-data','coverage-data','core','chemistry','reaction-reagents','reactions'])vm.runInContext(fs.readFileSync(path.join(root,'app/snapshots/A/app',f+'.js'),'utf8'),ctx);
-for(const f of ['branch-builtins','molecule-builder','structure-presentation'])vm.runInContext(fs.readFileSync(path.join(root,'app',f+'.js'),'utf8'),ctx);
+require('./load-registry.js')(ctx);
+for(const f of ['core','chemistry','reactions'])vm.runInContext(fs.readFileSync(path.join(root,'app/snapshots/A/app',f+'.js'),'utf8'),ctx);
+for(const f of ['molecule-builder','structure-presentation'])vm.runInContext(fs.readFileSync(path.join(root,'app',f+'.js'),'utf8'),ctx);
 const M=vm.runInContext('MoleculeBuilder',ctx),L=vm.runInContext('Lite',ctx),C=vm.runInContext('StructurePresentation',ctx),R=vm.runInContext('Reactions',ctx),rows=[];
 const record=s=>({graph:s.graph,moleculeState:s}),test=(name,fn)=>{fn();rows.push({name,status:'PASS'});};
 test('linear assembly view preserves graph and uses explicit identities',()=>{const s=M.start('rArCrG'),before=JSON.stringify(s),p=C.schematic(record(s));assert(p.supported);assert(p.svg.includes('5′ → 3′'));assert(p.svg.includes('rA'));assert.equal(JSON.stringify(s),before);});

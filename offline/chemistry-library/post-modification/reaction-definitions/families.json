@@ -1,0 +1,27 @@
+{
+  "CAP": {
+    "id": "CAP",
+    "name": "CAP"
+  },
+  "Condensation": {
+    "id": "Condensation",
+    "name": "Amine Coupling"
+  },
+  "Click": {
+    "id": "Click",
+    "name": "Click"
+  },
+  "IEDDA": {
+    "id": "IEDDA",
+    "name": "IEDDA / Tetrazine Ligation"
+  },
+  "DisulfideReduction": {
+    "id": "DisulfideReduction",
+    "name": "Disulfide Reduction",
+    "input_count": 1
+  },
+  "ThiolMaleimide": {
+    "id": "ThiolMaleimide",
+    "name": "Thiol–Maleimide"
+  }
+}

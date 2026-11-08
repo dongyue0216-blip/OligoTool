@@ -1,6 +1,7 @@
 'use strict';
 // Local library boundary. No network, chemistry transformations or built-in writes.
 const ChemistryLibrary=(()=>{
+ const REAGENT_KEY='oligo-disabled-builtin-reagents-v1';
  const KEY='oligo-user-chemistry-library-baseline-v1',LEGACY=[];
  const copy=x=>JSON.parse(JSON.stringify(x)),fail=s=>{throw Error('LIBRARY: '+s);};
  const uuid=()=>globalThis.crypto.randomUUID();
@@ -103,7 +104,7 @@ const ChemistryLibrary=(()=>{
      ...(sites.tetrazine.length||sites.strainedAlkene.length?['IEDDA']:[])])
    ]:null;
    return {...r,source:'builtin',symbol:r.name,compatibleFamilies,
-   metadata:{symbol:r.name,name:r.displayName??r.name,type:'Post-modification reagent',roles:['ReactionReagent'],structureStatus:'available',
+   metadata:{reagentId:r.id,selectable:!r.referenceOnly,symbol:r.name,name:r.displayName??r.name,type:'Post-modification reagent',roles:['ReactionReagent'],structureStatus:'available',
     reactionStatus:r.referenceOnly?'reference-only':r.reactionStatus??null,compatibleFamilies,
     aliases:r.aliases??[],provenance:r.provenance??r.source,
     assemblyStatus:'not-applicable',amidite:{identity:null,status:'not-applicable'}}};
@@ -114,7 +115,7 @@ const ChemistryLibrary=(()=>{
    const g=row.assembly_ready&&!row.terminal_syntax?REFERENCE.templates[row.template_key]:null;
    const entry=COVERAGE.entries.find(e=>e.notation===row.notation);
    const fields=metadata(row.notation,g,row);
-   return {...fields,family:fields.family??entry?.family??null,assemblyReady:row.assembly_ready,
+   return {...fields,family:fields.family??entry?.family??null,assemblyReady:row.assembly_ready,templateKey:g?row.template_key:null,
     ...(row.reference_only&&entry?.schematic_reference?{schematicReference:entry.schematic_reference}:{}),
     provenance:g?.chemistry_source||row.evidence||entry?.evidence||null};
   }).concat(builtinReagents().map(r=>r.metadata));
@@ -143,12 +144,24 @@ const ChemistryLibrary=(()=>{
    storage.setItem(KEY,raw);stamp=raw;install(next.records);state=copy(next);}
   function load(){try{stamp=storage.getItem(KEY);if(stamp!==null){state=decode(JSON.parse(stamp));install(state.records);status='Restored local User Chemistry Library';}else{install([]);status='';}}catch(e){blocked=true;status='User Library unavailable: '+e.message;}}
   function ingest(data,mode='merge'){const incoming=decode(data),plan=merge(state,incoming);if(mode==='import'&&state.records.length)fail('Import requires an empty user library; use Merge');if(plan.conflicts.length)return {applied:false,conflicts:plan.conflicts,duplicates:plan.duplicates};commit(mode==='import'?incoming:plan.next);return {applied:true,conflicts:[],duplicates:plan.duplicates};}
+  function disabledReagents(){
+   const ids=JSON.parse(storage.getItem(REAGENT_KEY)??'[]');
+   if(!Array.isArray(ids)||ids.some(id=>typeof id!=='string'))fail('invalid reagent preferences');
+   return new Set(ids);
+  }
+  function setReagentEnabled(id,enabled){
+   if(!Object.values(REACTION_REAGENTS).some(r=>r.id===id&&!r.referenceOnly))fail('unknown or reference-only built-in reagent');
+   const ids=disabledReagents();
+   if(enabled)ids.delete(id);else ids.add(id);
+   storage.setItem(REAGENT_KEY,JSON.stringify([...ids]));
+  }
   return {load,ingest,get blocked(){return blocked;},get status(){return status;},get state(){return copy(state);},exportJSON:()=>JSON.stringify({...copy(state),exportedAt:new Date().toISOString()},null,2),
    add(name,input){const r=normalize(name,input),result=merge(state,envelope([r]));if(result.conflicts.length)fail('symbol already exists with different content; choose a new symbol');commit(result.next);},
    remove(id){commit({...state,records:state.records.filter(r=>r.id!==id)});},
-   builtinCatalog,
+   builtinCatalog,disabledReagents,setReagentEnabled,
    reagents(source,family,starting){
-    const rows=source==='builtin'?builtinReagents().filter(r=>!r.referenceOnly):
+    const disabled=source==='builtin'?disabledReagents():null;
+    const rows=source==='builtin'?builtinReagents().filter(r=>!r.referenceOnly&&!disabled.has(r.id)):
      state.records.map(r=>({id:r.id,name:r.symbol,source:'user',graph:r.runtime}));
     if(family==null)return copy(rows);
     if(family==='DisulfideReduction')return [];
@@ -159,5 +172,5 @@ const ChemistryLibrary=(()=>{
    unified(){const builtins=Object.entries(REFERENCE.templates).map(([symbol,g])=>({schemaVersion:1,id:'builtin:'+symbol,source:'builtin',symbol,name:g.name||symbol,block:Lite.core.buildingBlock(g),runtime:copy(g),provenance:{reference:g.chemistry_source||REFERENCE.source},metadata:metadata(symbol,g)}));return copy([...builtins,...builtinReagents(),...state.records]);}
   };
  }
- return {KEY,LEGACY,create,decode,normalize,validate,merge,identity,builtinCatalog,referenceRows};
+ return {KEY,REAGENT_KEY,LEGACY,create,decode,normalize,validate,merge,identity,builtinCatalog,referenceRows};
 })();

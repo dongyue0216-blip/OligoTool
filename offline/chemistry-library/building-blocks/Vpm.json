@@ -1,0 +1,1587 @@
+{
+  "VpmA": {
+    "atoms": [
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 5.213505983610372,
+        "y": -0.8202072763552934
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 6.36450305753542,
+        "y": -0.48773979897911235
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 6.652076313158043,
+        "y": 0.6752866454096251
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 5.788652494855618,
+        "y": 1.5058456124221817
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 4.63765542093057,
+        "y": 1.1733781350460006
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 4.3500821653079464,
+        "y": 0.010351690657263352
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.965782403797064,
+        "y": 2.1653033018528642
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.701539117009665,
+        "y": 3.110814246612095
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 5.828134790359467,
+        "y": 2.7032469804014605
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.768381035817786,
+        "y": 2.204785597356714
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.0965080186842795,
+        "y": 3.1967107641635772
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.9455109447592316,
+        "y": 2.864243286787398
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.906028649255382,
+        "y": 1.6668419188081178
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.0326243226051837,
+        "y": 1.2592746525974836
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": -0.08589651755148195,
+        "y": 0.994968901674613
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 3.5999999999999996
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.5040752848949146,
+        "y": 4.323306437513378
+      },
+      {
+        "e": "N",
+        "h": 2,
+        "q": 0,
+        "x": 7.8030733870830895,
+        "y": 1.0077541227858076
+      },
+      {
+        "e": "C",
+        "h": 3,
+        "q": 0,
+        "x": 1.7321984450856682,
+        "y": 5.239567880477664
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": -1.5,
+        "y": 1.2
+      },
+      {
+        "e": "P",
+        "h": 0,
+        "q": 0,
+        "x": -2.3,
+        "y": 0
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": -3.8,
+        "y": 0
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": -2.3,
+        "y": -1.5
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": -2.3,
+        "y": 1.5
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 4,
+        "b": 5,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 4,
+        "b": 6,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 7,
+        "b": 8,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 6,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 9,
+        "b": 10,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 13,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 14,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 11,
+        "b": 15,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 10,
+        "b": 16,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 2,
+        "b": 17,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 0,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 13,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 16,
+        "b": 18,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 14,
+        "b": 19,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 19,
+        "b": 20,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 20,
+        "b": 21,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 20,
+        "b": 22,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 20,
+        "b": 23,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o3": 15,
+    "o5": 20,
+    "direct_formula_parts": {
+      "sugar": "C7H13O7P",
+      "base": "C5H5N5",
+      "condensation": "H2O"
+    },
+    "formula": "C12H16N5O6P",
+    "base": "A",
+    "family": "Vpm",
+    "topology": "ribose-phosphate",
+    "allowed_positions": [
+      "five"
+    ],
+    "terminal_motif": "5-(E)-vinylphosphonate",
+    "notes": "Terminal C5=C6-P(=O)(OH)2; original 5-O removed; trans substituent geometry",
+    "phosphorus_topology": "alternative-or-modifier",
+    "5_prime_attachment": {
+      "atom": 20,
+      "atom_role": "O5'",
+      "element": "P",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "3_prime_attachment": {
+      "atom": 15,
+      "atom_role": "O3'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "schema_version": "building-block/2",
+    "id": "VpmA",
+    "assembly_class": "legacy-modifier",
+    "attachments": {
+      "downstream": {
+        "atom": 15,
+        "atom_role": "O3'",
+        "direction": "downstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 11,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [],
+        "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    }
+  },
+  "VpmC": {
+    "atoms": [
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 5.796077126672041,
+        "y": 3.1430598617933847
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.598675758692762,
+        "y": 3.1825421572972354
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.9657824037970633,
+        "y": 2.165303301852865
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 4.530290416880646,
+        "y": 1.1085821509046454
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 3.8973970619849463,
+        "y": 0.09134329546027598
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 5.727691784859925,
+        "y": 1.069099855400795
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 6.3605851397556235,
+        "y": 2.086338710845164
+      },
+      {
+        "e": "N",
+        "h": 2,
+        "q": 0,
+        "x": 7.5579865077349035,
+        "y": 2.046856415341314
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.7683810358177845,
+        "y": 2.2047855973567154
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.0965080186842786,
+        "y": 3.1967107641635777
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.9455109447592311,
+        "y": 2.864243286787399
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.9060286492553815,
+        "y": 1.666841918808119
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.032624322605183,
+        "y": 1.2592746525974843
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": -0.0858965175514819,
+        "y": 0.9949689016746128
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": -2.438525926567563e-16,
+        "y": 3.5999999999999996
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.504075284894913,
+        "y": 4.32330643751338
+      },
+      {
+        "e": "C",
+        "h": 3,
+        "q": 0,
+        "x": 1.7321984450856664,
+        "y": 5.239567880477665
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": -1.5,
+        "y": 1.2
+      },
+      {
+        "e": "P",
+        "h": 0,
+        "q": 0,
+        "x": -2.3,
+        "y": 0
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": -3.8,
+        "y": 0
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": -2.3,
+        "y": -1.5
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": -2.3,
+        "y": 1.5
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 2,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 10,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 13,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 10,
+        "b": 14,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 9,
+        "b": 15,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 6,
+        "b": 0,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 8,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 15,
+        "b": 16,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 13,
+        "b": 17,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 17,
+        "b": 18,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 18,
+        "b": 19,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 18,
+        "b": 20,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 18,
+        "b": 21,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o3": 14,
+    "o5": 18,
+    "direct_formula_parts": {
+      "sugar": "C7H13O7P",
+      "base": "C4H5N3O",
+      "condensation": "H2O"
+    },
+    "formula": "C11H16N3O7P",
+    "base": "C",
+    "family": "Vpm",
+    "topology": "ribose-phosphate",
+    "allowed_positions": [
+      "five"
+    ],
+    "terminal_motif": "5-(E)-vinylphosphonate",
+    "notes": "Terminal C5=C6-P(=O)(OH)2; original 5-O removed; trans substituent geometry",
+    "phosphorus_topology": "alternative-or-modifier",
+    "5_prime_attachment": {
+      "atom": 18,
+      "atom_role": "O5'",
+      "element": "P",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "3_prime_attachment": {
+      "atom": 14,
+      "atom_role": "O3'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "schema_version": "building-block/2",
+    "id": "VpmC",
+    "assembly_class": "legacy-modifier",
+    "attachments": {
+      "downstream": {
+        "atom": 14,
+        "atom_role": "O3'",
+        "direction": "downstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 10,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [],
+        "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    }
+  },
+  "VpmG": {
+    "atoms": [
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.637655420930569,
+        "y": 1.1733781350460006
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 5.788652494855618,
+        "y": 1.505845612422181
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 5.828134790359468,
+        "y": 2.703246980401461
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 6.744396233323753,
+        "y": 3.4751238202107073
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 7.870991906673556,
+        "y": 3.0675565540000735
+      },
+      {
+        "e": "N",
+        "h": 1,
+        "q": 0,
+        "x": 6.534062002938238,
+        "y": 4.654567926230588
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 5.407466329588434,
+        "y": 5.0621351924412235
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 4.49120488662415,
+        "y": 4.290258352631977
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 4.701539117009666,
+        "y": 3.1108142466120956
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.965782403797064,
+        "y": 2.1653033018528647
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.768381035817785,
+        "y": 2.2047855973567145
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.0965080186842795,
+        "y": 3.196710764163578
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.9455109447592309,
+        "y": 2.864243286787399
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.9060286492553813,
+        "y": 1.6668419188081187
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.0326243226051828,
+        "y": 1.2592746525974838
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": -0.08589651755148163,
+        "y": 0.9949689016746139
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": -7.093893604560186e-16,
+        "y": 3.6000000000000005
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.5040752848949146,
+        "y": 4.32330643751338
+      },
+      {
+        "e": "N",
+        "h": 2,
+        "q": 0,
+        "x": 5.197132099202917,
+        "y": 6.241579298461104
+      },
+      {
+        "e": "C",
+        "h": 3,
+        "q": 0,
+        "x": 1.732198445085668,
+        "y": 5.239567880477667
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": -1.5,
+        "y": 1.2
+      },
+      {
+        "e": "P",
+        "h": 0,
+        "q": 0,
+        "x": -2.3,
+        "y": 0
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": -3.8,
+        "y": 0
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": -2.3,
+        "y": -1.5
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": -2.3,
+        "y": 1.5
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 7,
+        "b": 8,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 9,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 13,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 13,
+        "b": 14,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 13,
+        "b": 15,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 12,
+        "b": 16,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 11,
+        "b": 17,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 6,
+        "b": 18,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 0,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 2,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 14,
+        "b": 10,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 17,
+        "b": 19,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 15,
+        "b": 20,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 20,
+        "b": 21,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 21,
+        "b": 22,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 21,
+        "b": 23,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 21,
+        "b": 24,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o3": 16,
+    "o5": 21,
+    "direct_formula_parts": {
+      "sugar": "C7H13O7P",
+      "base": "C5H5N5O",
+      "condensation": "H2O"
+    },
+    "formula": "C12H16N5O7P",
+    "base": "G",
+    "family": "Vpm",
+    "topology": "ribose-phosphate",
+    "allowed_positions": [
+      "five"
+    ],
+    "terminal_motif": "5-(E)-vinylphosphonate",
+    "notes": "Terminal C5=C6-P(=O)(OH)2; original 5-O removed; trans substituent geometry",
+    "phosphorus_topology": "alternative-or-modifier",
+    "5_prime_attachment": {
+      "atom": 21,
+      "atom_role": "O5'",
+      "element": "P",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "3_prime_attachment": {
+      "atom": 16,
+      "atom_role": "O3'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "schema_version": "building-block/2",
+    "id": "VpmG",
+    "assembly_class": "legacy-modifier",
+    "attachments": {
+      "downstream": {
+        "atom": 16,
+        "atom_role": "O3'",
+        "direction": "downstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 12,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [],
+        "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    }
+  },
+  "VpmU": {
+    "atoms": [
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 5.796077126672041,
+        "y": 3.1430598617933847
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.598675758692762,
+        "y": 3.1825421572972354
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.9657824037970633,
+        "y": 2.165303301852865
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 4.530290416880646,
+        "y": 1.1085821509046454
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 3.8973970619849463,
+        "y": 0.09134329546027598
+      },
+      {
+        "e": "N",
+        "h": 1,
+        "q": 0,
+        "x": 5.727691784859925,
+        "y": 1.069099855400795
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 6.3605851397556235,
+        "y": 2.086338710845164
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 7.5579865077349035,
+        "y": 2.046856415341314
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.7683810358177845,
+        "y": 2.2047855973567154
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.0965080186842786,
+        "y": 3.1967107641635777
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.9455109447592311,
+        "y": 2.864243286787399
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.9060286492553815,
+        "y": 1.666841918808119
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.032624322605183,
+        "y": 1.2592746525974843
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": -0.0858965175514819,
+        "y": 0.9949689016746128
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": -2.438525926567563e-16,
+        "y": 3.5999999999999996
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.504075284894913,
+        "y": 4.32330643751338
+      },
+      {
+        "e": "C",
+        "h": 3,
+        "q": 0,
+        "x": 1.7321984450856664,
+        "y": 5.239567880477665
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": -1.5,
+        "y": 1.2
+      },
+      {
+        "e": "P",
+        "h": 0,
+        "q": 0,
+        "x": -2.3,
+        "y": 0
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": -3.8,
+        "y": 0
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": -2.3,
+        "y": -1.5
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": -2.3,
+        "y": 1.5
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 2,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 10,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 13,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 10,
+        "b": 14,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 9,
+        "b": 15,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 6,
+        "b": 0,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 8,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 15,
+        "b": 16,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 13,
+        "b": 17,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 17,
+        "b": 18,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 18,
+        "b": 19,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 18,
+        "b": 20,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 18,
+        "b": 21,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o3": 14,
+    "o5": 18,
+    "direct_formula_parts": {
+      "sugar": "C7H13O7P",
+      "base": "C4H4N2O2",
+      "condensation": "H2O"
+    },
+    "formula": "C11H15N2O8P",
+    "base": "U",
+    "family": "Vpm",
+    "topology": "ribose-phosphate",
+    "allowed_positions": [
+      "five"
+    ],
+    "terminal_motif": "5-(E)-vinylphosphonate",
+    "notes": "Terminal C5=C6-P(=O)(OH)2; original 5-O removed; trans substituent geometry",
+    "phosphorus_topology": "alternative-or-modifier",
+    "5_prime_attachment": {
+      "atom": 18,
+      "atom_role": "O5'",
+      "element": "P",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "3_prime_attachment": {
+      "atom": 14,
+      "atom_role": "O3'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "schema_version": "building-block/2",
+    "id": "VpmU",
+    "assembly_class": "legacy-modifier",
+    "attachments": {
+      "downstream": {
+        "atom": 14,
+        "atom_role": "O3'",
+        "direction": "downstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 10,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [],
+        "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    }
+  }
+}

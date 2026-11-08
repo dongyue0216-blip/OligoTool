@@ -63,14 +63,7 @@ const Reactions = (() => {
    if(type==='maleimide'&&a.e==='C'&&a.h===1&&!q){for(const c of ns.filter(n=>n.o===2&&n.i>i&&g.atoms[n.i].e==='C'&&g.atoms[n.i].h===1&&!g.atoms[n.i].q)){const ca=ns.find(n=>n.o===1&&g.atoms[n.i].e==='C'&&adj(g,n.i).some(v=>v.o===2&&g.atoms[v.i].e==='O'));const cb=adj(g,c.i).find(n=>n.o===1&&g.atoms[n.i].e==='C'&&adj(g,n.i).some(v=>v.o===2&&g.atoms[v.i].e==='O'));if(ca&&cb){const n=adj(g,ca.i).find(v=>v.o===1&&g.atoms[v.i].e==='N'&&bond(g,v.i,cb.i)?.o===1);if(n)put({alpha:i,beta:c.i});}}}
   });return out;
  }
- const definitions={
-  'maleimide-reverse':{schema_version:'reaction-definition/1',id:'maleimide-reverse',name:'Maleimide-bearing starting molecule + thiol reagent',roles:['maleimide','thiol'],rule:'thio-michael-reverse/1'},
-  'capping-imidazolide':{schema_version:'reaction-definition/1',id:'capping-imidazolide',name:'Chemical capping · real GDP imidazolide (recommended)',roles:['terminalPhosphateNucleophile','diphosphateImidazolide'],rule:'diphosphate-imidazolide/1'},
-  capping:{schema_version:'reaction-definition/1',id:'capping',name:'Chemical capping · phosphate + diphosphate',roles:['terminalPhosphate','diphosphateOH'],rule:'phosphate-condensation/1'},
-  cuaac:{schema_version:'reaction-definition/1',id:'cuaac',name:'CuAAC · azide + terminal alkyne',roles:['azide','alkyne'],rule:'cuaac-1,4/1'},
-  amide:{schema_version:'reaction-definition/1',id:'amide',name:'Amine + NHS activated ester',roles:['amine','activatedEster'],rule:'nhs-amide/1'},
-  maleimide:{schema_version:'reaction-definition/1',id:'maleimide',name:'Thiol + maleimide',roles:['thiol','maleimide'],rule:'thio-michael/1'}
- };
+ const definitions=BuiltinChemistry.reactionDefinitions;
  const rules={
   'thio-michael-reverse/1':(g,a,b,e)=>rules['thio-michael/1'](g,b,a,e),
   'diphosphate-imidazolide/1':(g,a,b,e)=>{if(g.atoms[a.o].q===-1)e.charge(a.o,0);else e.h(a.o,-1);e.removeComponent(b.leavingN,b.p);e.add(a.o,b.p);},
@@ -114,6 +107,7 @@ const Reactions = (() => {
   return {schema_version:'reaction-step/1',validation:{status:'VALIDATED',rule:d.rule},definition:copy(d),reactants:inputs.map(g=>copy(g.source||{kind:'molecular-graph'})),inputs:copy(inputs),sites:copy(selected),output,properties:{...Lite.graphProperties(output),...(output.photometry?{optical:copy(output.photometry)}:{})}};
  }
  function productOptical(inputs,g){
+  if(typeof Optical!=="undefined"&&inputs.some(input=>input.photometry?.schema==="OpticalResult/2"))return Optical.analyze({graph:g});
   const base=inputs[0].photometry, modifier=inputs[1].photometry, meta=inputs[1].optical;
   const incomplete=o=>o?.partial||['PARTIAL','NEEDS_PARAMETER'].includes(o?.status);
   let correction=null,source='Modifier optical contribution unknown';
@@ -285,16 +279,8 @@ const Reactions = (() => {
   }
   return sites(g,type).map(s=>({...s,motif_type:type==='amine'?(g.atoms[s.atoms.n].h===2?'primary_amine':'secondary_amine'):type}));
  }
- const families=freeze({CAP:{id:'CAP',name:'CAP'},Condensation:{id:'Condensation',name:'Amine Coupling'},Click:{id:'Click',name:'Click'},IEDDA:{id:'IEDDA',name:'IEDDA / Tetrazine Ligation'},DisulfideReduction:{id:'DisulfideReduction',name:'Disulfide Reduction',input_count:1},ThiolMaleimide:{id:'ThiolMaleimide',name:'Thiol–Maleimide'}});
- const registry=freeze({
-  'disulfide-reduction/2':{family:'DisulfideReduction',roles:['disulfide'],rule:'disulfide-reduction/1',input_count:1},
-  'thiol-maleimide/2':{family:'ThiolMaleimide',roles:['thiol','maleimide'],rule:'thio-michael/1',product_class:'succinimide_thioether'},
-  'cap-im-m7gdp/2':{family:'CAP',roles:['terminalPhosphateNucleophile','m7GDPImidazolide'],motifs:['terminal_phosphorus_nucleophile','phosphoroimidazolide'],rule:'diphosphate-imidazolide/1',product_class:'triphosphate_cap'},
-  'acyl-substitution/2':{family:'Condensation',roles:['amine','acylDonor'],motifs:['NHS','sulfo-NHS','PFP','TFP','pNP','carboxylic_acid'],product_classes:['amide','carbamate'],rule:'nhs-amide/1'},
-  'cuaac-1,4/2':{family:'Click',roles:['azide','alkyne'],rule:'cuaac-1,4/1',product_class:'1,4_disubstituted_triazole'},
-  'spaac/2':{family:'Click',roles:['azide','strainedAlkyne'],motifs:['DBCO','BCN','cOct'],rule:'cuaac-1,4/1',product_class:'fused_triazole'},
-  'iedda/2':{family:'IEDDA',roles:['tetrazine','strainedAlkene'],motifs:['tetrazine','TCO','norbornene'],rule:'iedda-n2/1',product_class:'4,5-dihydropyridazine',product_state:'4,5-dihydropyridazine after N2 extrusion; before tautomerization or oxidation; new stereochemistry unspecified'}
- });
+ const families=BuiltinChemistry.reactionFamilies;
+ const registry=BuiltinChemistry.reactionRegistry;
  function identify(inputs){if(!Array.isArray(inputs)||![1,2].includes(inputs.length))fail('one or two graphs required');
   const seen=new Set();for(const input of inputs)for(const a of (input.graph||input).atoms||[])if(a.reaction_atom_id!==undefined){const id=a.reaction_atom_id;if(typeof id!=='string'||!id||seen.has(id))fail('atom IDs must be nonempty and unique across both inputs','INVALID_ATOM_IDS');seen.add(id);}
   return inputs.map((input,k)=>{const g=copy(input.graph||input);validate(g);g.atoms.forEach((a,i)=>{
@@ -425,7 +411,7 @@ const Reactions = (() => {
   product.provenance.removed_bonds=g.bonds.flatMap((b,i)=>!keep.has(b.a)||!keep.has(b.b)||!bond(cut,b.a,b.b)?[{input:0,bond:i,endpoints:[b.a,b.b],previous:copy(g.provenance?.bonds?.[i]||null)}]:[]);
   product.provenance.edits=[{op:'remove-bond',...c.sites[0].atoms},...[c.sites[0].atoms.s1,c.sites[0].atoms.s2].map(atom=>({op:'hydrogen',atom,delta:1}))];
   const mapping=[g.atoms.map((a,i)=>({input:0,input_index:i,atom_id:a.reaction_atom_id,product_index:product.provenance.input_atom_maps[0][i],status:keep.has(i)?'retained':'removed'}))];
-  const definition={schema_version:'reaction-definition/2',id:c.transformation_id,name:'Disulfide Reduction',roles:['disulfide'],rule:'disulfide-reduction/1',input_count:1};
+  const definition={...copy(BuiltinChemistry.reductionDefinition),id:c.transformation_id};
   const properties=Lite.graphProperties(product),step={schema_version:'reaction-step/1',definition,validation:{status:'VALIDATED',rule:definition.rule},reactants:[copy(g.source||{kind:'molecular-graph'})],inputs:copy(inputs),sites:copy(c.sites),output:product,properties};
   return {schema_version:'reaction-result/2',family:'DisulfideReduction',status:'VALIDATED',semantics:[],candidate:c,selected_atom_ids:c.sites.map(s=>s.selected_atom_ids),mapping,product_graph:product,removed_fragments:removed,properties,step};
  }
@@ -467,3 +453,4 @@ const Reactions = (() => {
 
  return {definitions:copy(definitions),sites,diagnose,resolveSites,validate,apply,workflow,append,reload,revert,v2};
 })();
+

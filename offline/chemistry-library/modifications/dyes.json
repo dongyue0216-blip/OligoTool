@@ -1,0 +1,572 @@
+{
+  "{FAM}": {
+    "atoms": [
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 1.4672214011007085,
+        "y": -0.3118675362266403
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 2.470917310638997,
+        "y": 0.8028497019894507
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 3.9381387117397058,
+        "y": 0.4909821657628104
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 4.941834621277994,
+        "y": 1.6056994039789014
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 6.409056022378703,
+        "y": 1.2938318677522611
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 7.412751931916992,
+        "y": 2.408549105968352
+      },
+      {
+        "e": "N",
+        "h": 1,
+        "q": 0,
+        "x": 8.8799733330177,
+        "y": 2.096681569741712
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 9.883669242555989,
+        "y": 3.211398807957803
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 9.420143750993569,
+        "y": 4.637983582400534
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 11.595427543840147,
+        "y": 2.8475533490267235
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 12.766406104968148,
+        "y": 4.148056793612163
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 14.478164406252308,
+        "y": 3.784211334681084
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 15.018944146408465,
+        "y": 2.1198624311645657
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 13.847965585280463,
+        "y": 0.8193589865791262
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 12.136207283996304,
+        "y": 1.1832044455102055
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 16.768944146408465,
+        "y": 2.119862431164565
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 17.468944146408464,
+        "y": 0.5198624311645643
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 17.309723886564623,
+        "y": 3.7842113346810837
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 15.893944146408465,
+        "y": 4.812835526192912
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 14.378399689785697,
+        "y": 5.687835526192912
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 14.378399689785697,
+        "y": 7.437835526192912
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 12.86285523316293,
+        "y": 8.312835526192913
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 11.347310776540162,
+        "y": 7.437835526192912
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 11.347310776540162,
+        "y": 5.687835526192912
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 12.86285523316293,
+        "y": 4.812835526192912
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 9.831766319917396,
+        "y": 8.312835526192913
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 15.893944146408465,
+        "y": 8.312835526192913
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 17.40948860303123,
+        "y": 7.437835526192912
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 17.40948860303123,
+        "y": 5.687835526192912
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 18.925033059654,
+        "y": 4.812835526192912
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 20.440577516276768,
+        "y": 5.687835526192912
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 20.440577516276768,
+        "y": 7.437835526192912
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 18.925033059654,
+        "y": 8.312835526192913
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 21.956121972899535,
+        "y": 8.312835526192913
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 4,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 7,
+        "b": 8,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 10,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 13,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 13,
+        "b": 14,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 14,
+        "b": 15,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 13,
+        "b": 16,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 16,
+        "b": 17,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 16,
+        "b": 18,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 18,
+        "b": 19,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 19,
+        "b": 20,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 20,
+        "b": 21,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 21,
+        "b": 22,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 22,
+        "b": 23,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 23,
+        "b": 24,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 24,
+        "b": 25,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 23,
+        "b": 26,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 21,
+        "b": 27,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 27,
+        "b": 28,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 28,
+        "b": 29,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 29,
+        "b": 30,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 30,
+        "b": 31,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 31,
+        "b": 32,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 32,
+        "b": 33,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 32,
+        "b": 34,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 15,
+        "b": 10,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 19,
+        "b": 12,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 29,
+        "b": 19,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 25,
+        "b": 20,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 33,
+        "b": 28,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 0,
+    "o3": null,
+    "formula": "C27H25NO7",
+    "base": null,
+    "family": "fluorescent",
+    "allowed_positions": [
+      "five"
+    ],
+    "topology": "terminal-phosphate-conjugate",
+    "reagent_identity": {
+      "cid": 58114954,
+      "formula": "C46H58N3O10P",
+      "source_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/58114954/property/IsomericSMILES,MolecularFormula/JSON"
+    },
+    "deprotection": [
+      "remove phosphoramidite P, N(iPr)2, O-cyanoethyl; restore scaffold OH; assembled phosphate is generated separately",
+      "remove 2 O-pivaloyl protecting groups; retain 6-FAM carboxamidohexanol"
+    ],
+    "final_smiles": "O=C(NCCCCCCO)C1=CC2=C(C=C1)C(=O)OC21C2=C(C=C(O)C=C2)OC2=C1C=CC(O)=C2",
+    "notes": "Neutral deprotected scaffold; no reagent P/protecting groups; phosphate assembly separate. 6-FAM C6 carboxamido linker / lactone representation.",
+    "depiction_version": "reference-refinement-0.4.1",
+    "phosphorus_topology": "alternative-or-modifier",
+    "5_prime_attachment": {
+      "atom": 0,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "3_prime_attachment": {
+      "atom": null,
+      "atom_role": "O3'",
+      "element": null,
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "schema_version": "building-block/2",
+    "id": "{FAM}",
+    "assembly_class": "legacy-modifier",
+    "attachments": {
+      "downstream": {
+        "atom": 0,
+        "atom_role": "O3'",
+        "direction": "downstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 1,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [],
+        "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": true
+    },
+    "terminal_only": true
+  }
+}

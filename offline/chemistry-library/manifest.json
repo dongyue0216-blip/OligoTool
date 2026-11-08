@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "sections": {
+    "templates": {
+      "files": [
+        "building-blocks/cEt.json",
+        "building-blocks/DNA.json",
+        "building-blocks/RNA.json",
+        "building-blocks/2F.json",
+        "building-blocks/2OMe.json",
+        "building-blocks/MOE.json",
+        "building-blocks/FANA.json",
+        "building-blocks/UNA.json",
+        "building-blocks/NMA.json",
+        "building-blocks/C16.json",
+        "building-blocks/C22.json",
+        "building-blocks/LNA.json",
+        "building-blocks/ENA.json",
+        "building-blocks/GNA.json",
+        "building-blocks/Vpm.json",
+        "building-blocks/Vpe.json",
+        "building-blocks/PMO.json",
+        "building-blocks/TNA.json",
+        "building-blocks/Benner.json",
+        "modifications/spacers.json",
+        "modifications/terminal-amines.json",
+        "modifications/dyes.json",
+        "modifications/GalNAc.json",
+        "modifications/inverted-spacers.json",
+        "modifications/branchers.json"
+      ],
+      "order": [
+        "cEt-A",
+        "cEt-C",
+        "cEt-G",
+        "cEt-U",
+        "cEt-T",
+        "cEt-I",
+        "cEt-CMe",
+        "dA",
+        "dC",
+        "dG",
+        "dT",
+        "rA",
+        "rC",
+        "rG",
+        "rU",
+        "rI",
+        "fA",
+        "fC",
+        "fG",
+        "fU",
+        "mA",
+        "mC",
+        "mG",
+        "mU",
+        "eA",
+        "eC",
+        "eG",
+        "eU",
+        "dI",
+        "dCMe",
+        "rT",
+        "rCMe",
+        "mT",
+        "mI",
+        "mCMe",
+        "fT",
+        "fI",
+        "fCMe",
+        "eT",
+        "eI",
+        "eCMe",
+        "FANA-A",
+        "UNA-A",
+        "nA",
+        "Ahd",
+        "Ada",
+        "+A",
+        "ENA-A",
+        "FANA-C",
+        "UNA-C",
+        "nC",
+        "Chd",
+        "Cda",
+        "+C",
+        "ENA-C",
+        "FANA-G",
+        "UNA-G",
+        "nG",
+        "Ghd",
+        "Gda",
+        "+G",
+        "ENA-G",
+        "FANA-U",
+        "UNA-U",
+        "nU",
+        "Uhd",
+        "Uda",
+        "+U",
+        "ENA-U",
+        "FANA-T",
+        "UNA-T",
+        "nT",
+        "Thd",
+        "Tda",
+        "+T",
+        "ENA-T",
+        "FANA-I",
+        "UNA-I",
+        "nI",
+        "Ihd",
+        "Ida",
+        "+I",
+        "ENA-I",
+        "FANA-CMe",
+        "UNA-CMe",
+        "nCMe",
+        "CMehd",
+        "CMeda",
+        "+CMe",
+        "ENA-CMe",
+        "Agn",
+        "Cgn",
+        "Ggn",
+        "Tgn",
+        "VpmA",
+        "VpmC",
+        "VpmG",
+        "VpmU",
+        "VpeA",
+        "VpeC",
+        "VpeG",
+        "VpeU",
+        "pA",
+        "pC",
+        "pG",
+        "pT",
+        "pI",
+        "tA",
+        "tC",
+        "tG",
+        "tT",
+        "tCMe",
+        "Z",
+        "{PEG3}",
+        "{PEG4}",
+        "{PEG5}",
+        "{PEG6}",
+        "{PEG7}",
+        "{spacer3}",
+        "{C3N}",
+        "{C6N}",
+        "{FAM}",
+        "{L96}",
+        "{NAG37}",
+        "{InvAb}",
+        "Ugn",
+        "{absic}",
+        "{GlycerolBranch}"
+      ]
+    },
+    "linkages": {
+      "files": [
+        "linkages/PO.json",
+        "linkages/PS.json",
+        "linkages/PS2.json",
+        "linkages/MsPA.json",
+        "linkages/MeP.json",
+        "linkages/PNDMI.json",
+        "linkages/PMO.json"
+      ],
+      "order": [
+        "PO",
+        "PS",
+        "PS2",
+        "MsPA",
+        "Me-P",
+        "PN(dmi)",
+        "PMO"
+      ]
+    },
+    "reference": {
+      "file": "reference/atomic-and-composition.json"
+    },
+    "golden": {
+      "file": "reference/legacy-regression-values.json"
+    },
+    "coverage": {
+      "file": "reference/coverage-and-aliases.json"
+    },
+    "reagents": {
+      "files": [
+        "post-modification/reagents/capping.json",
+        "post-modification/reagents/amine-coupling.json",
+        "post-modification/reagents/thiol.json",
+        "post-modification/reagents/click.json",
+        "post-modification/reagents/IEDDA.json"
+      ],
+      "order": [
+        "cap",
+        "ester",
+        "maleimide",
+        "alkyne",
+        "azide",
+        "cap-imidazolide",
+        "dbco-amine",
+        "pnp-carbonate",
+        "bcn-oh",
+        "builtin:linker1:bcn",
+        "builtin:linker1:coct",
+        "builtin:linker1:dbco",
+        "builtin:linker1:mc",
+        "builtin:linker1:mcvcpabc",
+        "builtin:linker1:smcc",
+        "builtin:linker1:spdp",
+        "builtin:linker1:tco"
+      ]
+    },
+    "legacyReagents": {
+      "files": [
+        "post-modification/reagents/legacy-thiol.json",
+        "post-modification/reagents/legacy-click.json"
+      ],
+      "order": [
+        "smcc",
+        "azidothiol"
+      ]
+    },
+    "reactionDefinitions": {
+      "file": "post-modification/reaction-definitions/legacy.json"
+    },
+    "reactionFamilies": {
+      "file": "post-modification/reaction-definitions/families.json"
+    },
+    "reactionRegistry": {
+      "file": "post-modification/reaction-definitions/transformations.json"
+    },
+    "reductionDefinition": {
+      "file": "post-modification/reaction-definitions/disulfide-reduction.json"
+    },
+    "opticalBases": {
+      "file": "optical/bases.json"
+    },
+    "dnaNN": {
+      "file": "optical/nearest-neighbor-DNA.json"
+    },
+    "rnaNN": {
+      "file": "optical/nearest-neighbor-RNA.json"
+    },
+    "opticalAttachments": {
+      "file": "optical/modifier-epsilon260.json"
+    },
+    "opticalCorrections": {
+      "file": "optical/optical-corrections.json"
+    },
+    "abbreviations": {
+      "file": "reference/ctfile-abbreviations.json"
+    }
+  }
+}

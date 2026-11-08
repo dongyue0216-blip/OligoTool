@@ -4,9 +4,10 @@ const vm=require('node:vm');
 const path=require('node:path');
 const ctx=vm.createContext({crypto:require('node:crypto').webcrypto});
 const root=path.join(__dirname,'../app');
-for(const f of ['reference-data','coverage-data','core','chemistry','reaction-reagents','reactions'])
+require('./load-registry.js')(ctx);
+for(const f of ['core','chemistry','reactions'])
  vm.runInContext(fs.readFileSync(path.join(root,'snapshots/A/app',f+'.js'),'utf8'),ctx);
-for(const f of ['branch-builtins','chemistry-library'])
+for(const f of ['chemistry-library'])
  vm.runInContext(fs.readFileSync(path.join(root,f+'.js'),'utf8'),ctx);
 const legacy=fs.readFileSync(path.join(__dirname,'BASELINE_USER_LIBRARY_V200_SINGLE.json'),'utf8');
 const run=code=>vm.runInContext(code,ctx);

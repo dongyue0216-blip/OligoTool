@@ -41,6 +41,9 @@ const ReagentSource=(()=>{
   }
   source.onchange=()=>{entry.value='';invalidate();};
   entry.onchange=invalidate;
+  const refreshBuiltin=()=>{if(source.value==='builtin'&&!source.disabled&&!label.hidden)invalidate();};
+  document.addEventListener('builtin-reagents-changed',refreshBuiltin);
+  window.addEventListener('storage',event=>{if(event.key===ChemistryLibrary.REAGENT_KEY)refreshBuiltin();});
   language.addEventListener('change',localize);
   localize();
   return {graph,refresh,hasSelection:()=>source.value==='upload'?!!input.value.trim():choices.has(entry.value),

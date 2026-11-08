@@ -1,7 +1,8 @@
 const fs=require('fs'),vm=require('vm'),path=require('path'),crypto=require('crypto'),assert=require('assert');
 const root=path.join(__dirname,'..'),ctx=vm.createContext({console,crypto:crypto.webcrypto});
-for(const f of ['reference-data','coverage-data','core','chemistry','reaction-reagents','reactions'])vm.runInContext(fs.readFileSync(path.join(root,'app/snapshots/A/app',f+'.js'),'utf8'),ctx);
-for(const f of ['branch-builtins','molecule-builder','branch-layout','chemistry-library','hybridization'])vm.runInContext(fs.readFileSync(path.join(root,'app',f+'.js'),'utf8'),ctx);
+require('./load-registry.js')(ctx);
+for(const f of ['core','chemistry','reactions'])vm.runInContext(fs.readFileSync(path.join(root,'app/snapshots/A/app',f+'.js'),'utf8'),ctx);
+for(const f of ['molecule-builder','branch-layout','chemistry-library','hybridization'])vm.runInContext(fs.readFileSync(path.join(root,'app',f+'.js'),'utf8'),ctx);
 const get=s=>vm.runInContext(s,ctx),M=get('MoleculeBuilder'),L=get('Lite'),H=get('Hybridization'),CL=get('ChemistryLibrary'),C=get('BranchLayout'),R=get('Reactions'),copy=x=>JSON.parse(JSON.stringify(x));
 const checks=[];function test(name,fn){try{fn();checks.push({name,status:'PASS'});}catch(e){checks.push({name,status:'FAIL',error:e.stack});console.error(name,e.stack);}}
 const endpoints=s=>s.attachmentSites.filter(s=>s.status==='available');

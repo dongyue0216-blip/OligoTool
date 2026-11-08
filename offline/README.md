@@ -1,11 +1,7 @@
-# Oligo Toolkit v2.2.1
+# Oligo Toolkit v2.3.0
 
-解压整个 ZIP，双击 `Start.html`，用 Microsoft Edge 或 Google Chrome 打开。无需安装、额外运行环境或联网。
+完整解压 ZIP，然后用 Edge 或 Chrome 打开 `Start.html`。只需浏览器，可离线使用。
 
-- 输入 DNA、RNA、修饰或混合序列，查看分子量、分子式和结构示意图。
-- 使用内置化学速查、用户库、分支和合成后修饰功能。Batch Excel 支持批量处理。
-- 结构可导出为 ChemDraw（.cdxml）或示意图（.svg）。
-
-换目录或浏览器前，可在 User Library 导出 JSON 备份，并在新位置导入。
-
-Extract the entire ZIP and open `Start.html` in Edge or Chrome. No installation, additional runtime, or internet connection is required.
+- 在 `chemistry-library/` 中按类别查阅内置单体、连接、修饰、后修饰试剂和光学参数。
+- 在自定义化学中管理 User Library。换解压目录前，从原版本导出 User Library JSON，再在新版本导入。
+- 在分子属性中查看 Mass per OD₂₆₀。展开 Optical details 可查看采用的参数与近似条件。带 ≈ 的结果是估算。

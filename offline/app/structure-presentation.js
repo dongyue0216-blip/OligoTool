@@ -294,5 +294,51 @@ const StructurePresentation=(()=>{
   }
   return {supported:true,svg:`<svg data-density="${compact?'compact':'annotated'}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" role="img" font-family="system-ui, sans-serif" aria-label="Assembly-derived oligo schematic"><rect data-scene-background="" width="100%" height="${height}" fill="white"/>${lines.join('')}${shapes.join('')}</svg>`,reason:'Assembly units + explicit linkages; labels preserve block identity. Not an atomistic drawing. / 单元与真实连接；标签保留修饰身份。'};
  }
- return {schematic,referenceGlyph,defaultMode,reactionProducts,reactionDiagram};
+ function duplex(strands,alignment){
+  const columns=alignment.columns,pitch=68,left=125,width=left*2+pitch*(columns.length-1);
+  const geometry=[],units=[];
+  for(const [index,strand] of strands.entries()){
+   const side=index?'b':'a',y=index?153:42,xByNode=new Map();
+   const direction=index?-1:1;
+   for(const [columnIndex,column] of columns.entries()){
+    const position=strand.orderedPositions[(column[side]??0)-1];
+    if(!position)continue;
+    const x=left+pitch*columnIndex;
+    xByNode.set(position.nodeId,x);
+    let markup=drawUnit(position.node,resolveGlyph(position.node.block),false);
+    if(!index)markup=markup.replace(/<text x="([^"]+)" y="([^"]+)"/g,
+     (_,x,y)=>'<text transform="translate(0 '+(2*Number(y))+') scale(1 -1)" x="'+x+'" y="'+y+'"');
+    units.push('<g data-strand="'+side+'" data-index-5p="'+position.index5p+'" transform="translate('+x+' '+y+')'+
+     (index?'':' scale(1 -1)')+'">'+markup+'</g>');
+   }
+   for(const edge of strand.junctionRefs){
+    const from=xByNode.get(edge.source.node),to=xByNode.get(edge.target.node);
+    if(from===undefined||to===undefined)continue;
+    geometry.push('<path d="M '+from+' '+y+' H '+to+'" fill="none"/>');
+    units.push(linkageBadge((from+to)/2,y,edge.linkage,edge.linkage,side+'-'+edge.id));
+   }
+   const coordinates=[...xByNode.values()];
+   const first=Math.min(...coordinates),last=Math.max(...coordinates);
+   units.push(text(first-32,y+4,index?'3′':'5′',11),text(last+32,y+4,index?'5′':'3′',11));
+   for(const end of ['5′','3′']){
+    const names=strand.terminalRefs.filter(t=>t.end===end).map(t=>t.blockId);
+    if(!names.length)continue;
+    const x=(end==='5′'?direction:-direction)>0?first:last;
+    units.push(text(x,y+(index?41:-30),names.join(' · '),10));
+   }
+  }
+  const interactions=columns.map((column,i)=>{
+   if(!column.a||!column.b)return '';
+   const x=left+pitch*i+9,kind=column.kind;
+   const color=['canonical','canonical-like'].includes(kind)?'#597b70':kind==='wobble'?'#a38339':'#ad675c';
+   return '<path data-pair-kind="'+esc(kind)+'" d="M '+x+' 76 V 119" stroke="'+color+
+    '" stroke-dasharray="'+(kind==='canonical'?'none':'3 4')+'"><title>A '+column.a+' · B '+column.b+' · '+esc(kind)+'</title></path>';
+  }).join('');
+  return '<svg xmlns="http://www.w3.org/2000/svg" width="'+width+'" height="207" viewBox="0 0 '+width+
+   ' 207" role="img" aria-label="Antiparallel oligo pairing" font-family="system-ui, sans-serif">'+
+   '<g stroke="#64766e" stroke-width="1.1">'+geometry.join('')+units.join('')+'</g>'+
+   '<g data-analysis-layer="non-covalent" fill="none">'+interactions+'</g></svg>';
+ }
+ return {schematic,referenceGlyph,defaultMode,reactionProducts,reactionDiagram,duplex};
 })();
+

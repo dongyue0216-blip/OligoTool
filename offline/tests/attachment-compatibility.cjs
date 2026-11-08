@@ -7,10 +7,11 @@ const vm = require('node:vm');
 const ctx = vm.createContext({crypto:require('node:crypto').webcrypto});
 const app = path.join(__dirname, '../app');
 const load = file => vm.runInContext(fs.readFileSync(path.join(app, file + '.js'), 'utf8'), ctx);
-for (const file of ['reference-data', 'coverage-data', 'core', 'chemistry', 'reaction-reagents', 'reactions']) {
+require('./load-registry.js')(ctx);
+for (const file of ['core', 'chemistry', 'reactions']) {
  load('snapshots/A/app/' + file);
 }
-for (const file of ['branch-builtins', 'chemistry-library', 'molecule-builder', 'structure-presentation']) load(file);
+for (const file of ['chemistry-library', 'molecule-builder', 'structure-presentation']) load(file);
 const {L, M, C, reference, catalog} = vm.runInContext(
  '({L:Lite,M:MoleculeBuilder,C:StructurePresentation,reference:REFERENCE,catalog:ChemistryLibrary.builtinCatalog()})', ctx
 );

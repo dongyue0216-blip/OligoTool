@@ -1,0 +1,90 @@
+{
+  "disulfide-reduction/2": {
+    "family": "DisulfideReduction",
+    "roles": [
+      "disulfide"
+    ],
+    "rule": "disulfide-reduction/1",
+    "input_count": 1
+  },
+  "thiol-maleimide/2": {
+    "family": "ThiolMaleimide",
+    "roles": [
+      "thiol",
+      "maleimide"
+    ],
+    "rule": "thio-michael/1",
+    "product_class": "succinimide_thioether"
+  },
+  "cap-im-m7gdp/2": {
+    "family": "CAP",
+    "roles": [
+      "terminalPhosphateNucleophile",
+      "m7GDPImidazolide"
+    ],
+    "motifs": [
+      "terminal_phosphorus_nucleophile",
+      "phosphoroimidazolide"
+    ],
+    "rule": "diphosphate-imidazolide/1",
+    "product_class": "triphosphate_cap"
+  },
+  "acyl-substitution/2": {
+    "family": "Condensation",
+    "roles": [
+      "amine",
+      "acylDonor"
+    ],
+    "motifs": [
+      "NHS",
+      "sulfo-NHS",
+      "PFP",
+      "TFP",
+      "pNP",
+      "carboxylic_acid"
+    ],
+    "product_classes": [
+      "amide",
+      "carbamate"
+    ],
+    "rule": "nhs-amide/1"
+  },
+  "cuaac-1,4/2": {
+    "family": "Click",
+    "roles": [
+      "azide",
+      "alkyne"
+    ],
+    "rule": "cuaac-1,4/1",
+    "product_class": "1,4_disubstituted_triazole"
+  },
+  "spaac/2": {
+    "family": "Click",
+    "roles": [
+      "azide",
+      "strainedAlkyne"
+    ],
+    "motifs": [
+      "DBCO",
+      "BCN",
+      "cOct"
+    ],
+    "rule": "cuaac-1,4/1",
+    "product_class": "fused_triazole"
+  },
+  "iedda/2": {
+    "family": "IEDDA",
+    "roles": [
+      "tetrazine",
+      "strainedAlkene"
+    ],
+    "motifs": [
+      "tetrazine",
+      "TCO",
+      "norbornene"
+    ],
+    "rule": "iedda-n2/1",
+    "product_class": "4,5-dihydropyridazine",
+    "product_state": "4,5-dihydropyridazine after N2 extrusion; before tautomerization or oxidation; new stereochemistry unspecified"
+  }
+}

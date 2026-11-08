@@ -28,7 +28,10 @@ const Product=(()=>{
   reagentTitle.textContent=$('language').value==='en'?'Built-in Reaction Reagents':'内置后修饰反应试剂';};
  builtinLabel();$('language').addEventListener('change',builtinLabel);
  function renderBuiltin(details,rows,reagents){
-  if(!details.open||rows.childElementCount)return;
+  if(!details.open)return;
+  const en=$('language').value==='en';
+  const disabled=reagents?store.disabledReagents():null;
+  rows.replaceChildren();
   for(const item of store.builtinCatalog()){
    if(Boolean(item.roles?.includes('ReactionReagent'))!==reagents)continue;
    const row=document.createElement('div'),symbol=document.createElement('strong'),info=document.createElement('span');
@@ -39,12 +42,46 @@ const Product=(()=>{
    row.append(symbol,info);
    const preview=item.schematicReference&&StructurePresentation.referenceGlyph(item.schematicReference);
    if(preview){const glyph=document.createElement('span');glyph.innerHTML=preview;info.append(glyph);}
+   if(reagents&&item.selectable){
+    const isDisabled=disabled.has(item.reagentId);
+    if(isDisabled)info.append(en?' · Disabled locally':' · 已停用');
+    const button=document.createElement('button');
+    button.type='button';button.textContent=isDisabled?(en?'Restore':'恢复'):(en?'Disable':'停用');
+    button.onclick=()=>attempt(()=>{
+     store.setReagentEnabled(item.reagentId,isDisabled);
+     document.dispatchEvent(new Event('builtin-reagents-changed'));
+    });
+    row.append(button);
+   }
+   if(!reagents&&item.templateKey){
+    const button=document.createElement('button');
+    button.type='button';button.textContent=en?'Copy to editor':'复制到编辑器';
+    button.onclick=()=>attempt(()=>{
+     const block=Lite.getBuildingBlock(item.templateKey);
+     $('customInput').value=Lite.mol(block);
+     $('customName').value='';
+     importMol();
+     for(const [select,site] of [['fiveOH','upstream'],['threeOH','downstream']]){
+      const value=String(block.attachments?.[site]?.atom??'');
+      if([...$(select).options].some(option=>option.value===value))$(select).value=value;
+     }
+     displayCustom();
+     $('customStatus').textContent=en?'Built-in copy loaded. Edit or replace MOL/SDF, verify the sites, then save under a new name.':'已载入内置副本。可编辑或替换 MOL/SDF，核对位点后用新名称保存。';
+     $('customInput').focus();
+    });
+    row.append(button);
+   }
    rows.append(row);
   }
  }
- builtinDetails.addEventListener('toggle',()=>renderBuiltin(builtinDetails,builtinRows,false));
- reagentDetails.addEventListener('toggle',()=>renderBuiltin(reagentDetails,reagentRows,true));
- $('language').addEventListener('change',()=>{localize();library();displayCustom();});localize();
+ builtinDetails.addEventListener('toggle',()=>attempt(()=>renderBuiltin(builtinDetails,builtinRows,false)));
+ reagentDetails.addEventListener('toggle',()=>attempt(()=>renderBuiltin(reagentDetails,reagentRows,true)));
+ const refreshReagents=()=>attempt(()=>renderBuiltin(reagentDetails,reagentRows,true));
+ document.addEventListener('builtin-reagents-changed',refreshReagents);
+ window.addEventListener('storage',event=>{if(event.key===ChemistryLibrary.REAGENT_KEY)refreshReagents();});
+ $('language').addEventListener('change',()=>{localize();library();displayCustom();
+  attempt(()=>renderBuiltin(builtinDetails,builtinRows,false));refreshReagents();
+ });localize();
  // Invalidate a reagent preview as soon as the reagent is edited; A still validates every site.
  $('input').addEventListener('input',()=>{$('error').textContent=$('language').value==='en'?'Input changed · calculate to update result':'输入已更改 · 请重新计算';});
  $('gapText').textContent='Not yet integrated: full Biotin graph; generic reaction-fragment extraction / RDKit composition; general ring templates / full collision optimization; Batch Mode; Master Library. Abbreviations with stereochemistry remain expanded. See KNOWN_GAPS.md.';

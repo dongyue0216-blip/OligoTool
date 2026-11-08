@@ -1,0 +1,20 @@
+{
+  "dnaMono": {
+    "A": 15400,
+    "C": 7400,
+    "G": 11500,
+    "T": 8700
+  },
+  "rnaMono": {
+    "A": 15400,
+    "C": 7200,
+    "G": 11500,
+    "U": 9900
+  },
+  "nucleosideSource": "https://academic.oup.com/view-large/119395286",
+  "modifiedMonomers": {
+    "I": 7145.35,
+    "CMe": 3556.19,
+    "T": 7743.31
+  }
+}

@@ -9,7 +9,7 @@ const Sandbox=(()=>{
   return freeze({schema:'sandbox-record/1',graph:g,normalizedMolecularGraph:Lite.presentationInput(g),metrics:Lite.graphProperties(g),provenance:g.provenance||g.normalization||null,source:'A · actual local snapshot v0.11.1 + normalization artifact',mock:false,...extra});
  }
  const A={
-  sequence:s=>{const r=Lite.calculate(s);r.graph.photometry=r.optical;return record(r.graph,{assemblyGraph:Lite.toAssemblyGraph(s),optical:r.optical,input:s});},
+  sequence:s=>{const r=Lite.calculate(s);r.graph.photometry=r.optical;return record(r.graph,{assemblyGraph:r.assembly_graph,optical:r.optical,input:s});},
   mol:s=>record(Lite.parseMol(s).graph,{input:s}),
   smiles:s=>record(Lite.parseSmiles(s).graph,{input:s}),
   start:r=>Reactions.workflow(r.graph),
@@ -124,3 +124,4 @@ const Sandbox=(()=>{
  }
  return {A,C,record,identity,clone,fixtures,loadFixture,reagent,selection,aliasMol};
 })();
+

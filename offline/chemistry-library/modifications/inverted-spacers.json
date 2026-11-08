@@ -1,0 +1,226 @@
+{
+  "{InvAb}": {
+    "atoms": [
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": -2.7683810358177845,
+        "y": 1.3952144026432842
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": -2.0965080186842795,
+        "y": 0.4032892358364215
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": -0.9455109447592313,
+        "y": 0.7357567132126008
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": -0.9060286492553818,
+        "y": 1.9331580811918803
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": -2.032624322605183,
+        "y": 2.340725347402515
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 0.0858965175514818,
+        "y": 2.6050310983253864
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 4.4336835028501143e-17,
+        "y": 3.799999999999999
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 5,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 7,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 4,
+        "b": 0,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 7,
+    "o3": 6,
+    "formula": "C5H10O3",
+    "base": null,
+    "family": "inverted-dSpacer",
+    "topology": "ribose-phosphate",
+    "allowed_positions": [
+      "five",
+      "three"
+    ],
+    "incoming_label": "3′",
+    "outgoing_label": "5′",
+    "definition": "Inverted tetrahydrofuran dSpacer; not a reactive aldehyde abasic residue",
+    "source": "https://www.glenresearch.com/media/contentmanager/content/glenreport/GR35-1.pdf",
+    "phosphorus_topology": "alternative-or-modifier",
+    "5_prime_attachment": {
+      "atom": 7,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "3_prime_attachment": {
+      "atom": 6,
+      "atom_role": "O3'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "schema_version": "building-block/2",
+    "id": "{InvAb}",
+    "assembly_class": "legacy-modifier",
+    "attachments": {
+      "upstream": {
+        "atom": 7,
+        "atom_role": "O5'",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 2,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [],
+        "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      },
+      "downstream": {
+        "atom": 6,
+        "atom_role": "O3'",
+        "direction": "downstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 5,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [],
+        "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    },
+    "terminal_only": true
+  }
+}

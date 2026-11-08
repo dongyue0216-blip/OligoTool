@@ -6,7 +6,7 @@ const ctx=vm.createContext({crypto:require('node:crypto').webcrypto,
  ieddaFixture:fs.readFileSync(path.join(root,'tests/fixtures/iedda-tetrazine.mol'),'utf8')});
 const html=fs.readFileSync(path.join(root,'Start.html'),'utf8');
 const files=[...html.matchAll(/<script src="([^"]+)"/g)].map(m=>m[1]);
-const modules=/\/(?:reference-data|coverage-data|core|chemistry|reaction-reagents|reactions|presentation|engine|snapshot-data|adapters|validation|branch-builtins|molecule-builder|chemistry-library)\.js$/;
+const modules=/\/(?:registry\.generated|chemistry-registry|core|chemistry|reactions|presentation|engine|snapshot-data|adapters|validation|molecule-builder|chemistry-library)\.js$/;
 for(const file of files.filter(f=>modules.test(f)))vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),ctx,{filename:file});
 const result=vm.runInContext('('+function(){
  const L=Lite,M=MoleculeBuilder;

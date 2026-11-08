@@ -1,7 +1,7 @@
 const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert'),crypto=require('crypto');
 const root=path.join(__dirname,'..'),ctx=vm.createContext({console,crypto:crypto.webcrypto});
-for(const f of ['reference-data','coverage-data','core','chemistry','reaction-reagents','reactions'])vm.runInContext(fs.readFileSync(path.join(root,'app/snapshots/A/app',f+'.js'),'utf8'),ctx);
-vm.runInContext(fs.readFileSync(path.join(root,'app/branch-builtins.js'),'utf8'),ctx);
+require('./load-registry.js')(ctx);
+for(const f of ['core','chemistry','reactions'])vm.runInContext(fs.readFileSync(path.join(root,'app/snapshots/A/app',f+'.js'),'utf8'),ctx);
 vm.runInContext(fs.readFileSync(path.join(root,'app/chemistry-library.js'),'utf8'),ctx);
 const L=vm.runInContext('Lite',ctx),R=vm.runInContext('Reactions',ctx),V=R.v2,refs=vm.runInContext('REACTION_REAGENTS',ctx),CL=vm.runInContext('ChemistryLibrary',ctx),ref=vm.runInContext('REFERENCE',ctx),copy=x=>JSON.parse(JSON.stringify(x));
 const checks=[];function test(name,fn){try{fn();checks.push({name,status:'PASS'});}catch(e){checks.push({name,status:'FAIL',error:e.stack});console.error(name,e.message);}}

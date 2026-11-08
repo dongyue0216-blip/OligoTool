@@ -3,8 +3,9 @@ const root=path.join(__dirname,'..'),releases=process.env.OLIGO_BASELINE_ROOT||p
 function context(tag){
  const c=vm.createContext({console,crypto:crypto.webcrypto});
  const app=tag?path.join(releases,tag,'Oligo-Toolkit','app'):path.join(root,'app');
- const chemistry=['reference-data','coverage-data','core','chemistry',...(tag?[]:['reaction-reagents','reactions'])];
- const files=[...chemistry.map(f=>'snapshots/A/app/'+f),...(tag?[]:['branch-builtins']),'chemistry-library'];
+ if(!tag) require('./load-registry.js')(c);
+ const chemistry=[...(tag?['reference-data','coverage-data']:[]),'core','chemistry',...(tag?[]:['reactions'])];
+ const files=[...chemistry.map(f=>'snapshots/A/app/'+f),'chemistry-library'];
  for(const f of files)vm.runInContext(fs.readFileSync(path.join(app,f+'.js'),'utf8'),c);
  return {L:vm.runInContext('Lite',c),CL:vm.runInContext('ChemistryLibrary',c)};
 }
@@ -12,7 +13,18 @@ const {L,CL}=context(),rows=[];
 function test(name,fn){try{fn();rows.push({name,status:'PASS'});}catch(e){rows.push({name,status:'FAIL',error:e.stack});console.error(name,e.message);}}
 const mem=raw=>{const m=new Map(raw===undefined?[]:[[CL.KEY,raw]]);return {getItem:k=>m.get(k)??null,setItem:(k,v)=>m.set(k,v)};};
 function roundtrip(payload){const raw=JSON.stringify(payload),storage=mem(raw),s=CL.create(storage);s.load();assert.equal(s.blocked,false,s.status);assert.equal(storage.getItem(CL.KEY),raw);s.add('AddedAfterUpgrade',L.selectAttachments(L.parseSmiles('CCO'),2,null));assert.equal(storage.getItem(CL.KEY+'-backup'),raw);const reload=CL.create(storage);reload.load();assert.equal(reload.blocked,false,reload.status);assert.deepEqual(copy(reload.state.records.slice(0,payload.records.length)),copy(CL.decode(payload).records));return reload;}
-for(const tag of ['v2.0.0','v2.1.0'])test(tag+' real released serializer / newly introduced built-in name',()=>{const old=context(tag),record=old.CL.normalize('GlycerolBranch',old.L.selectAttachments(old.L.parseSmiles('OCCO'),0,3));const payload={schema:'oligo-user-chemistry-library',schemaVersion:1,libraryId:'historical:'+tag,records:[record]};const s=roundtrip(payload);assert.deepEqual(copy(s.state.records[0]),copy(record));assert(L.calculate('[GlycerolBranch]rA').graph);assert.throws(()=>CL.normalize('GlycerolBranch',L.selectAttachments(L.parseSmiles('OCCO'),0,3)),/Reserved/);});
+const historical=JSON.parse(fs.readFileSync(path.join(__dirname,'BASELINE_USER_LIBRARY_RELEASED_SERIALIZERS.json')));
+for(const [tag,fixture] of Object.entries(historical))test(tag+' real released serializer / newly introduced built-in name',()=>{
+ const payload=copy(fixture);
+ if(fs.existsSync(path.join(releases,tag,'Oligo-Toolkit','app'))){
+  const old=context(tag);
+  payload.records=[old.CL.normalize('GlycerolBranch',old.L.selectAttachments(old.L.parseSmiles('OCCO'),0,3))];
+ }
+ const s=roundtrip(payload);
+ assert.deepEqual(copy(s.state.records[0]),copy(payload.records[0]));
+ assert(L.calculate('[GlycerolBranch]rA').graph);
+ assert.throws(()=>CL.normalize('GlycerolBranch',L.selectAttachments(L.parseSmiles('OCCO'),0,3)),/Reserved/);
+});
 for(const [name,smiles,ends,branches] of [['Terminal','CCO',[2,null],[]],['Internal','OCCO',[0,3],[]],['Branched','OCC(O)CO',[0,5],[3]]])test(name+' save reload view payload / metadata',()=>{const input=L.selectAttachments(L.parseSmiles(smiles),...ends);input.branchSites=branches;const s=CL.create(mem());s.load();s.add(name,input);const p=copy(s.state),r=p.records[0];r.extra={customer:'synthetic'};p.extension={keep:true};r.runtime.attachments[Object.keys(r.runtime.attachments)[0]].extension={keep:true};r.block=L.core.buildingBlock(r.runtime);r.block.extension={keep:true};r.graphIdentity=CL.identity(r.block);const out=roundtrip(p);assert.deepEqual(copy(out.state.records[0]),r);assert.deepEqual(copy(out.state.extension),p.extension);});
 for(const fixture of ['BASELINE_USER_LIBRARY_V1.json','BASELINE_USER_LIBRARY_V200_SINGLE.json'])test(fixture+' unchanged roundtrip',()=>roundtrip(JSON.parse(fs.readFileSync(path.join(__dirname,fixture)))));
 for(const [name,raw] of [['broken JSON','{broken'],['future envelope',JSON.stringify({schema:'oligo-user-chemistry-library',schemaVersion:2,libraryId:'future',records:[]})],['bad graph',JSON.stringify({schema:'oligo-user-chemistry-library',schemaVersion:1,libraryId:'bad',records:[{}]})]])test(name+' fail closed original bytes',()=>{const storage=mem(raw),s=CL.create(storage);s.load();assert(s.blocked);assert.throws(()=>s.add('ValidNew',L.selectAttachments(L.parseSmiles('CCO'),2,null)),/original storage preserved/);assert.equal(storage.getItem(CL.KEY),raw);assert.equal(storage.getItem(CL.KEY+'-backup'),null);});

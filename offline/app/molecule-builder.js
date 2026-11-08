@@ -50,6 +50,7 @@ const MoleculeBuilder=(()=>{
   value.schemaVersion=1;value.schema='oligo-molecule-state';value.properties=Lite.graphProperties(value.graph);
   value.reactiveSites=value.components.length===1?Reactions.v2.detect([value.graph]).candidate_sites[0]:{status:'UNSUPPORTED',reason:'Select a covalent component for reaction analysis'};
   value.formula=value.properties.formula;value.average_mw=value.properties.average_mw;value.exact_mass=value.properties.exact_mass;
+  if(typeof Optical!=="undefined")value.optical=Optical.analyze(value);
   value.graph.photometry=copy(value.optical);return freeze(value);
  }
  function start(sequence){
@@ -140,3 +141,4 @@ const MoleculeBuilder=(()=>{
  function restore(raw){const s=copy(typeof raw==='string'?JSON.parse(raw):raw);if(s.schema!=='oligo-molecule-state'||s.schemaVersion!==1||!s.assemblyGraph?.lanes||!Array.isArray(s.attachmentSites))fail('unsupported state');const expected=Lite.graphProperties(s.graph);if(s.formula!==expected.formula||s.exact_mass!==expected.exact_mass||s.average_mw!==expected.average_mw)fail('checkpoint graph / properties mismatch');return finish(s);}
  return {start,fromGraph,branch,react,available,exportJSON,restore,combine,connect,annotate};
 })();
+

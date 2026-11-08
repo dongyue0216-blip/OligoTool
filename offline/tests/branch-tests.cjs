@@ -1,7 +1,8 @@
 const fs=require('fs'),vm=require('vm'),path=require('path'),crypto=require('crypto'),assert=require('assert');
 const root=path.join(__dirname,'..'),ctx=vm.createContext({console,crypto:crypto.webcrypto});
-for(const f of ['reference-data','coverage-data','core','chemistry','reaction-reagents','reactions'])vm.runInContext(fs.readFileSync(path.join(root,'app/snapshots/A/app',f+'.js'),'utf8'),ctx);
-for(const f of ['branch-builtins','molecule-builder','branch-layout','chemistry-library'])vm.runInContext(fs.readFileSync(path.join(root,'app',f+'.js'),'utf8'),ctx);
+require('./load-registry.js')(ctx);
+for(const f of ['core','chemistry','reactions'])vm.runInContext(fs.readFileSync(path.join(root,'app/snapshots/A/app',f+'.js'),'utf8'),ctx);
+for(const f of ['molecule-builder','branch-layout','chemistry-library'])vm.runInContext(fs.readFileSync(path.join(root,'app',f+'.js'),'utf8'),ctx);
 const L=vm.runInContext('Lite',ctx),M=vm.runInContext('MoleculeBuilder',ctx),CL=vm.runInContext('ChemistryLibrary',ctx),C=vm.runInContext('BranchLayout',ctx),R=vm.runInContext('Reactions',ctx),copy=x=>JSON.parse(JSON.stringify(x));
 const saved={};const checks=[];function test(name,fn){try{fn();checks.push({name,status:'PASS'});}catch(e){checks.push({name,status:'FAIL',error:e.stack});console.error(name,e.stack);}}
 function branch(s,seq='rArC',site=M.available(s)[0]){return M.branch(s,{siteId:site.id,sequence:seq});}

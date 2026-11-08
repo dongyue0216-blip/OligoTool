@@ -2,9 +2,10 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const ctx=vm.createContext({crypto:require('node:crypto').webcrypto});
 const root=path.join(__dirname,'../app');
-for(const f of ['reference-data','coverage-data','core','chemistry','reaction-reagents','reactions'])
+require('./load-registry.js')(ctx);
+for(const f of ['core','chemistry','reactions'])
  vm.runInContext(fs.readFileSync(path.join(root,'snapshots/A/app',f+'.js'),'utf8'),ctx);
-for(const f of ['branch-builtins','chemistry-library','molecule-builder','structure-presentation'])
+for(const f of ['chemistry-library','molecule-builder','structure-presentation'])
  vm.runInContext(fs.readFileSync(path.join(root,f+'.js'),'utf8'),ctx);
 const get=code=>vm.runInContext(code,ctx),L=get('Lite'),R=get('Reactions'),V=R.v2,M=get('MoleculeBuilder');
 const P=get('StructurePresentation');

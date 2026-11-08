@@ -1,7 +1,7 @@
 'use strict';
 // A -> B field mapping only; A owns every detection and transformation.
 const ReactionFamilyAPI=(()=>{
- const familyIds={cap:'CAP',condensation:'Condensation',click:'Click',reduction:'DisulfideReduction',maleimide:'ThiolMaleimide'};
+ const familyIds={cap:'CAP',condensation:'Condensation',click:'Click',iedda:'IEDDA',reduction:'DisulfideReduction',maleimide:'ThiolMaleimide'};
  const engine=()=>Reactions.v2;
  function analyze({family,inputs}){
   const api=engine(),id=familyIds[family],raw=api.candidates(id,inputs);
@@ -29,5 +29,5 @@ const ReactionFamilyAPI=(()=>{
   }
   return next;
  }
- return {analyze,append,checkpointWorkflow,available:()=>!!engine()};
+ return {analyze,append,checkpointWorkflow,familyId:family=>familyIds[family],available:()=>!!engine()};
 })();

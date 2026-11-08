@@ -29,7 +29,7 @@ const ChemistryLibrary=(()=>{
   if(!r||r.schemaVersion!==1||r.source!=='user'||typeof r.id!=='string'||!r.id||r.id.length>160||typeof r.name!=='string'||!r.name||r.name.length>500||!r.provenance||typeof r.provenance!=='object')fail('invalid user record/version/source');
   if(!r.block||!r.runtime||r.block.schema_version!=='building-block/3')fail('missing BuildingBlock/runtime');
   r=copy(r);
-  if(typeof r.symbol!=='string'||!/^[A-Za-z0-9_]{1,24}$/.test(r.symbol))fail('invalid stored symbol');
+  if(!Lite.validCustomSymbol(r.symbol))fail('invalid stored symbol');
   const g=r.runtime,attachments={5:g.attachments?.upstream?.atom,3:g.attachments?.downstream?.atom};
   for(const version of [g.schema_version,r.block.graph?.schema_version])if(version!==undefined&&version!=='molecular-graph/1')fail('unsupported MolecularGraph version');
   if(g.id!=='{'+r.symbol+'}'||r.block.id!==g.id)fail('symbol / block ID mismatch');
@@ -79,6 +79,60 @@ const ChemistryLibrary=(()=>{
   }
   return {next,conflicts,duplicates};
  }
+ const amidites={
+  'cEt-A':'S-cEt adenosine 3′-O-phosphoramidite',
+  'cEt-G':'S-cEt guanosine 3′-O-phosphoramidite',
+  'cEt-T':'S-cEt thymidine 3′-O-phosphoramidite',
+  'cEt-CMe':'S-cEt 5-methylcytidine 3′-O-phosphoramidite'
+ };
+ function metadata(symbol,g,row){
+  const type=g?.base?(g.family==='PMO'?'Morpholino monomer':'Nucleoside building block'):
+   row?.terminal_syntax?'Terminal syntax':row?.not_building_block?'Notation control':g?'Building block':row?.reference_only?'Reference only':'Catalog entry';
+  return {symbol,type,name:g?.name??null,family:g?.family??null,base:g?.base??null,sugar:g?.sugar??null,
+   aliases:row?.names.filter(name=>name!==symbol)||[],
+   structureStatus:g?'available':row?.terminal_syntax||row?.not_building_block?'not-applicable':'unresolved',
+   assemblyStatus:row?.status??'available',
+   amidite:g?.amidite?copy(g.amidite):amidites[symbol]?{identity:amidites[symbol],status:'literature-verified',source:'https://doi.org/10.1021/jo902560f'}:
+    {identity:null,status:row?.not_building_block||row?.terminal_syntax||g?.family==='PMO'?'not-applicable':'unresolved'}};
+ }
+ function builtinReagents(){
+  return Object.values(REACTION_REAGENTS).map(r=>{
+   const sites=Reactions.v2.detect([r.graph]).candidate_sites[0];
+   const compatibleFamilies=r.compatibleFamilies?[
+    ...new Set([...r.compatibleFamilies,...(sites.strainedAlkyne.length?['Click']:[]),
+     ...(sites.tetrazine.length||sites.strainedAlkene.length?['IEDDA']:[])])
+   ]:null;
+   return {...r,source:'builtin',symbol:r.name,compatibleFamilies,
+   metadata:{symbol:r.name,name:r.displayName??r.name,type:'Post-modification reagent',roles:['ReactionReagent'],structureStatus:'available',
+    reactionStatus:r.referenceOnly?'reference-only':r.reactionStatus??null,compatibleFamilies,
+    aliases:r.aliases??[],provenance:r.provenance??r.source,
+    assemblyStatus:'not-applicable',amidite:{identity:null,status:'not-applicable'}}};
+  });
+ }
+ function builtinCatalog(){
+  return Lite.builtinAudit().map(row=>{
+   const g=row.assembly_ready&&!row.terminal_syntax?REFERENCE.templates[row.template_key]:null;
+   const entry=COVERAGE.entries.find(e=>e.notation===row.notation);
+   const fields=metadata(row.notation,g,row);
+   return {...fields,family:fields.family??entry?.family??null,assemblyReady:row.assembly_ready,
+    ...(row.reference_only&&entry?.schematic_reference?{schematicReference:entry.schematic_reference}:{}),
+    provenance:g?.chemistry_source||row.evidence||entry?.evidence||null};
+  }).concat(builtinReagents().map(r=>r.metadata));
+ }
+ // The reference is a projection of the same built-in catalog used by the library.
+ function referenceRows(){
+  const links=Lite.linkageSymbols;
+  return builtinCatalog().filter(row=>row.assemblyReady||row.roles?.includes('ReactionReagent')||
+   Object.hasOwn(links,row.symbol==='(none)'?'':row.symbol)).map(row=>{
+    const {symbol,family,base}=row, marker=symbol==='(none)'?'':symbol;
+    if(Object.hasOwn(links,marker))return {symbol,name:links[marker],type:'Backbone linkage'};
+    const notation=symbol.replace(/^\{(.*)\}$/, '[$1]');
+    const name=row.name||(base&&family?family+'-'+base:notation.replace(/^\[(.*)\]$/, '$1'));
+    const label=family==='DNA'&&/^d[ACGT]$/.test(symbol)?symbol.slice(1)+' / '+symbol:notation;
+    const type=row.type==='Building block'&&family&&family!=='Custom'?row.type+' · '+family:row.type;
+    return {symbol:label,name,type};
+   });
+ }
  function create(storage){
   let state=envelope(),stamp=null,blocked=false,status='';
   const registry=rows=>{const t=Object.create(null);for(const r of rows){validate(r);t[r.runtime.id]=copy(r.runtime);}return t;};
@@ -92,8 +146,18 @@ const ChemistryLibrary=(()=>{
   return {load,ingest,get blocked(){return blocked;},get status(){return status;},get state(){return copy(state);},exportJSON:()=>JSON.stringify({...copy(state),exportedAt:new Date().toISOString()},null,2),
    add(name,input){const r=normalize(name,input),result=merge(state,envelope([r]));if(result.conflicts.length)fail('symbol already exists with different content; choose a new symbol');commit(result.next);},
    remove(id){commit({...state,records:state.records.filter(r=>r.id!==id)});},
-   unified(){const builtins=Object.entries(REFERENCE.templates).map(([symbol,g])=>({schemaVersion:1,id:'builtin:'+symbol,source:'builtin',symbol,name:g.name||symbol,block:Lite.core.buildingBlock(g),runtime:copy(g),provenance:{reference:REFERENCE.source}}));return copy([...builtins,...state.records]);}
+   builtinCatalog,
+   reagents(source,family,starting){
+    const rows=source==='builtin'?builtinReagents().filter(r=>!r.referenceOnly):
+     state.records.map(r=>({id:r.id,name:r.symbol,source:'user',graph:r.runtime}));
+    if(family==null)return copy(rows);
+    if(family==='DisulfideReduction')return [];
+    return copy(rows.filter(row=>
+     (family==='Click'||family==='IEDDA'||row.compatibleFamilies==null||row.compatibleFamilies.includes(family))&&
+     Reactions.v2.candidates(family,[starting,row.graph]).candidates.length));
+   },
+   unified(){const builtins=Object.entries(REFERENCE.templates).map(([symbol,g])=>({schemaVersion:1,id:'builtin:'+symbol,source:'builtin',symbol,name:g.name||symbol,block:Lite.core.buildingBlock(g),runtime:copy(g),provenance:{reference:g.chemistry_source||REFERENCE.source},metadata:metadata(symbol,g)}));return copy([...builtins,...builtinReagents(),...state.records]);}
   };
  }
- return {KEY,LEGACY,create,decode,normalize,validate,merge,identity};
+ return {KEY,LEGACY,create,decode,normalize,validate,merge,identity,builtinCatalog,referenceRows};
 })();

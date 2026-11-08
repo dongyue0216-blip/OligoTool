@@ -1,5 +1,5 @@
 'use strict';
-// Local, explicit boundaries. Snapshots remain byte-for-byte copies.
+// Local, explicit boundaries between the chemistry and presentation tracks.
 const Sandbox=(()=>{
  const clone=x=>JSON.parse(JSON.stringify(x));
  const identity=g=>JSON.stringify({atoms:g.atoms.map(({x,y,z,...a})=>a),bonds:g.bonds});

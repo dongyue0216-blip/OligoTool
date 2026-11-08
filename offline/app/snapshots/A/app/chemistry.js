@@ -98,8 +98,10 @@ const clone=x=>JSON.parse(JSON.stringify(x));
 const extent=(xs,mode)=>xs.reduce((v,x)=>mode==='min'?Math.min(v,x):Math.max(v,x),mode==='min'?Infinity:-Infinity);
 const append=(a,b)=>{for(const x of b)a.push(x);};
 const customLibrary=Object.create(null);
+const validCustomSymbol=name=>typeof name==='string'&&/^[A-Za-z0-9_][A-Za-z0-9_.]{0,23}$/.test(name);
 const customKey=code=>Object.keys(customLibrary).find(k=>k.toLowerCase()===code.toLowerCase());
 const template=code=>customLibrary[customKey(code)]||REFERENCE.templates[code];
+const linkageSymbols={'':'PO','**':'PS2','*':'PS','^':'Me-P','!':'PN(dmi)','#':'MsPA'};
 function parse(input){
  if(typeof input!=='string')throw Error('Sequence must be a string');
  if(input.includes('&'))throw Error('Obsolete linkage symbol: use # for MsPA');
@@ -107,21 +109,20 @@ function parse(input){
  // Terminal units are lexer tokens; aliases resolve to the same AST node.
  const unit='(?:\\(p{1,3}\\)|\\[p{1,3}\\]|\\[(?:PHO|phosphorylation)\\])';
  const op='(\\*\\*|[\\*^!#])?';
- const chemistry={'':'PO','*':'PS','**':'PS2','^':'Me-P','!':'PN(dmi)','#':'MsPA'};
  const readUnit=t=>/^\[PHO\]$|^\[phosphorylation\]$/i.test(t)?1:t.slice(1,-1).length;
  const leading=seq.match(new RegExp('^('+unit+')'+op,'i'));
- if(leading){terminal.five=readUnit(leading[1]);terminalChemistry.five=chemistry[leading[2]||''];seq=seq.slice(leading[0].length);}
+ if(leading){terminal.five=readUnit(leading[1]);terminalChemistry.five=linkageSymbols[leading[2]||''];seq=seq.slice(leading[0].length);}
  const trailing=seq.match(new RegExp(op+'('+unit+')$','i'));
- if(trailing){terminal.three=readUnit(trailing[2]);terminalChemistry.three=chemistry[trailing[1]||''];seq=seq.slice(0,-trailing[0].length);}
+ if(trailing){terminal.three=readUnit(trailing[2]);terminalChemistry.three=linkageSymbols[trailing[1]||''];seq=seq.slice(0,-trailing[0].length);}
  if(!seq)throw Error('SYNTAX_ERROR: terminal phosphate requires a residue');
  let pos=0,residues=[],links=[];
  while(pos<seq.length){let code;
  if(seq[pos]==='['){let close=seq[pos]==='['?']':'}',end=seq.indexOf(close,pos);if(end<0)throw Error('SYNTAX_ERROR: Missing '+close);let id=seq.slice(pos+1,end);if(!customKey('{'+id+'}')&&typeof CONJUGATION_POOL!=='undefined'&&CONJUGATION_POOL.some(e=>e.id===id))throw Error('CONJUGATION_REAGENT: ['+id+'] belongs to Conjugation Pool; sequence assembly is unavailable');if(!/^[A-Za-z0-9_][A-Za-z0-9_.-]{0,47}$/.test(id))throw Error('Invalid custom unit ID: '+id);const alias=COVERAGE.aliases?.['['+id+']'];if(alias&&!customKey('{'+id+'}'))id=alias.slice(1,-1);code=customKey('{'+id+'}')||Object.keys(REFERENCE.templates).find(k=>k.toLowerCase()===('{'+id+'}').toLowerCase())||'{'+id+'}';if(!template(code)&&!COVERAGE.entries.some(e=>e.notation==='['+id+']'))throw Error('['+id+'] not found in Custom Chemistry Library');pos=end+1;}
  else if('ACGT'.includes(seq[pos])&&!COVERAGE.entries.some(e=>e.notation.length>1&&seq.startsWith(e.notation,pos)))code='d'+seq[pos++];
  else{code=[...new Set([...Object.keys(REFERENCE.templates).filter(c=>c[0]!=='{'),...COVERAGE.entries.filter(e=>!['special','spacer','fluorescent','backbone'].includes(e.family)).map(e=>e.notation)])].sort((a,b)=>b.length-a.length).find(c=>seq.startsWith(c,pos));if(!code)throw Error('SYNTAX_ERROR: Unsupported notation at '+(pos+1)+': '+seq.slice(pos)+'; terminal chemistry supports (p), (pp), (ppp) only at sequence ends');pos+=code.length;}
- residues.push(code);if(pos<seq.length){let link='PO';if(seq.startsWith('**',pos)){link='PS2';pos+=2;}else if(seq[pos]==='*'){link='PS';pos++;}else if(seq[pos]==='#'){link='MsPA';pos++;}else if(seq[pos]==='^'){link='Me-P';pos++;}else if(seq[pos]==='!'){link='PN(dmi)';pos++;}links.push(link);if(pos===seq.length)throw Error('SYNTAX_ERROR: 末尾不能是 linkage');}}
+ residues.push(code);if(pos<seq.length){const marker=Object.keys(linkageSymbols).find(symbol=>symbol&&seq.startsWith(symbol,pos))||'';links.push(linkageSymbols[marker]);pos+=marker.length;if(pos===seq.length)throw Error('SYNTAX_ERROR: 末尾不能是 linkage');}}
 
- const symbols={PO:'',PS:'*',PS2:'**',MsPA:'#','Me-P':'^','PN(dmi)':'!'};
+ const symbols=Object.fromEntries(Object.entries(linkageSymbols).map(([symbol,code])=>[code,symbol]));
  const cap=side=>'('+'p'.repeat(terminal[side])+')',symbol=side=>symbols[terminalChemistry[side]];
  let canonical=(terminal.five?cap('five')+symbol('five'):'')+residues.map((r,i)=>(r[0]==='{'?'['+r.slice(1,-1)+']':r)+(symbols[links[i]]||'')).join('')+(terminal.three?symbol('three')+cap('three'):'');
  return {residues,links,terminal,terminalChemistry,canonical};
@@ -135,19 +136,21 @@ function addTerminalFormula(f,p){for(const [side,n]of Object.entries(p.terminal)
 
 // The assembler connects attachment sites, not residue identities.
 const PHOSPHORUS_CLASSES=['PO','PS','PS2','Me-P','PN(dmi)','MsPA'];
-function attachment(t,direction,code,position='internal',res=t?.id||'block'){
- const site=t?.attachments?.[direction];
- if(!site || !site.allowed_linkage_classes?.includes(code) || !site[position+'_phosphorus']?.includes(code))throw Error('CHEMISTRY_UNSUPPORTED: '+res+' '+direction+' / '+code+'; '+(site?.reason||'directional attachment not declared'));
- if(!['alcohol','amine'].includes(site.connection_class))throw Error('CHEMISTRY_UNSUPPORTED: no linkage implementation for '+site.connection_class);
- const a=t.atoms[site.atom],bs=t.bonds.filter(b=>b.a===site.atom||b.b===site.atom);
- if(!Number.isInteger(site.atom)||!a||a.e!==site.element||a.h!==1||a.q||!bs.length||bs.some(b=>b.o!==1))throw Error('CHEMISTRY_UNSUPPORTED: invalid attachment contract '+res+' '+direction);
- if(site.connection_class==='alcohol'&&(a.e!=='O'||bs.length!==1))throw Error('CHEMISTRY_UNSUPPORTED: invalid alcohol site '+res);
- if(site.connection_class==='amine'&&(a.e!=='N'||code!=='PMO'))throw Error('CHEMISTRY_UNSUPPORTED: amine linkage requires a dedicated implementation');
- return site.atom;
-}
-function terminalAttachment(t,side,code,res,position='terminal'){return attachment(t,side==='five'?'upstream':'downstream',code,position,res);}
 const linkageDefinitions=ChemistryCore.linkageDefinitions(REFERENCE);
-function toAssemblyGraph(p){return ChemistryCore.fromNotation(p,template,linkageDefinitions);}
+function attachment(t,direction,code,position='internal',res=t?.id||'block'){
+ const link=ChemistryCore.requireLinkage(linkageDefinitions,code),site=t?.attachments?.[direction];
+ if(!site)throw Object.assign(Error('CHEMISTRY_UNSUPPORTED: '+res+' missing site '+direction),{reasonCode:'MISSING_ATTACHMENT_SITE'});
+ return ChemistryCore.validateSite(t,site,link,position,site.element==='N'?'source':'target',res+' '+direction).atom;
+}
+function toAssemblyGraph(p){
+ return ChemistryCore.fromNotation(p,code=>{
+  const raw=template(code);
+  if(raw)return raw;
+  const notation=code.replace(/^\{(.*)\}$/,'[$1]');
+  const entry=COVERAGE.entries.find(e=>e.notation===notation);
+  if(entry?.evidence)throw Object.assign(Error('CHEMISTRY_UNSUPPORTED: '+notation+' has no reliable molecular graph. '+entry.evidence),{reasonCode:'UNAVAILABLE_BUILDING_BLOCK'});
+ },linkageDefinitions);
+}
 function validateChemistry(p){
  const ag=toAssemblyGraph(p);p.links=ag.edges.map(e=>e.linkage);
  const topology=ag.nodes.map(n=>n.block.metadata.topology);
@@ -448,7 +451,9 @@ function builtinAudit(){
   try{
    if(row.terminal_syntax){calculate(row.notation+'rA');return {...row,assembly_ready:true,status:'terminal syntax validated'};}
    if(['(none)','*','**','^','!','#'].includes(row.notation))return {...row,assembly_ready:false,not_building_block:true,status:'notation control / linkage syntax, not a BuildingBlock name'};
-   if(!raw)throw Error('catalog only: no MolecularGraph');
+   if(!raw)return {...row,assembly_ready:false,reference_only:true,
+    status:'Unavailable for assembly: no MolecularGraph',
+    evidence:COVERAGE.entries.find(e=>e.notation===row.notation)?.evidence??null};
    if(raw.validation_status||raw.assembly_supported===false)throw Error(raw.validation_status||'assembly explicitly unsupported');
    const block=ChemistryCore.buildingBlock(raw);
    if(!Object.keys(block.sites).length)throw Error('missing AttachmentSites');
@@ -464,13 +469,13 @@ function builtinAudit(){
     const probe=ChemistryCore.fromNotation({residues:['audit0','audit1'],links:[linkage],terminal:{five:0,three:0},terminalChemistry:{five:'PO',three:'PO'}},id=>pair[id==='audit0'?0:1],linkageDefinitions);expandAssemblyGraph(probe);assembled=true;break;
    }catch{}}}}
    if(!assembled)throw Error('no supported assembly partner/linkage');
-   return {...row,names:[...new Set([...row.names,...(raw.name?[raw.name]:[])])],assembly_ready:true,status:'assembly-ready'};
+   return {...row,template_key:code,names:[...new Set([...row.names,...(raw.name?[raw.name]:[])])],assembly_ready:true,status:'assembly-ready'};
   }catch(e){return {...row,assembly_ready:false,status:e.message};}
  });
  return clone(builtinAuditCache);
 }
 function registerCustom(name,imported,target=customLibrary){
- if(typeof name!=='string'||!/^[A-Za-z0-9_]{1,24}$/.test(name))throw Error('名称不能为空；请使用 1–24 位英文字母、数字或下划线，可用数字或下划线开头');
+ if(!validCustomSymbol(name))throw Error('名称须为 1–24 位英文字母、数字、下划线或点号，首位不能为点号');
  const key=('{'+name+'}').toLowerCase();
  if(Object.keys(target).some(k=>k.toLowerCase()===key))throw Error('Name / symbol already exists: '+name+'; choose a different name');
  const requested=key.slice(1,-1);
@@ -537,9 +542,9 @@ function quality(g){
  out.pass=['atom_overlaps','atom_bond_overlaps','bond_crossings','connector_collisions','label_overlaps','label_bond_overlaps','long_bonds','column_top_errors'].every(k=>!out[k].length);
  if(g.sites)g.sites.forEach((s,i)=>{if(i%10===0&&Math.abs(atoms[s.o5??s.o3??s.offset].y-(s.local_anchor_y||0))>1e-7)out.column_top_errors.push(i);});out.pass=out.pass&&!out.column_top_errors.length;return out;
 }
-function calculateSafe(sequence){try{return calculate(sequence);}catch(e){return {schema_version:'oligo-lite/2',input_sequence:sequence,canonical_sequence:null,status:'error',errors:[{code:e.message.match(/^([A-Z_]+):/)?.[1]||(e.message.includes('not found')?'UNKNOWN_UNIT':'INVALID_CHEMISTRY_OR_NOTATION'),message:e.message}],chemistry:null,optical:null,graph:null};}}
+function calculateSafe(sequence){try{return calculate(sequence);}catch(e){return {schema_version:'oligo-lite/2',input_sequence:sequence,canonical_sequence:null,status:'error',errors:[{code:e.message.match(/^([A-Z_]+):/)?.[1]||(e.message.includes('not found')?'UNKNOWN_UNIT':'INVALID_CHEMISTRY_OR_NOTATION'),message:e.message,...(e.reasonCode?{reasonCode:e.reasonCode}:{})}],chemistry:null,optical:null,graph:null};}}
 function buildStructure(sequence){return calculate(sequence).graph;}
-return {builtinAudit,presentationInput,abbreviationSupport:()=>Object.fromEntries(Object.entries(abbreviationDefinitions).map(([k,v])=>[k,v.definition])),graphProperties,valenceTarget,core:ChemistryCore,linkageDefinitions,toAssemblyGraph:p=>toAssemblyGraph(typeof p==='string'?parse(p):p),expandAssemblyGraph,getBuildingBlock:code=>template(code)?clone(template(code)):null,attachment,normalizeCoordinates,exportImportedSource:g=>g.ctfile?.source||null,parse,validateChemistry,calculate,calculateSafe,buildStructure,formula,graphFormula,connected,mol,svg,cdxml,parseMol,parseSmiles,selectAttachments,registerCustom,customLibrary,quality};})();
+return {builtinAudit,linkageSymbols:{...linkageSymbols},presentationInput,abbreviationSupport:()=>Object.fromEntries(Object.entries(abbreviationDefinitions).map(([k,v])=>[k,v.definition])),graphProperties,valenceTarget,core:ChemistryCore,linkageDefinitions,toAssemblyGraph:p=>toAssemblyGraph(typeof p==='string'?parse(p):p),expandAssemblyGraph,getBuildingBlock:code=>template(code)?clone(template(code)):null,attachment,normalizeCoordinates,exportImportedSource:g=>g.ctfile?.source||null,parse,validateChemistry,calculate,calculateSafe,buildStructure,formula,graphFormula,connected,mol,svg,cdxml,parseMol,parseSmiles,selectAttachments,registerCustom,validCustomSymbol,customLibrary,quality};})();
 if(typeof module!=='undefined')module.exports=Lite;
 
 

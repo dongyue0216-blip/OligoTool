@@ -2,7 +2,9 @@
 // Semantic chemistry objects. No residue-family dispatch is permitted here.
 const ChemistryCore = (() => {
  const copy = x => JSON.parse(JSON.stringify(x));
- const fail = reason => { throw Error('CHEMISTRY_UNSUPPORTED: '+reason); };
+ const fail = (reason, reasonCode='CHEMISTRY_UNSUPPORTED') => {
+  throw Object.assign(Error('CHEMISTRY_UNSUPPORTED: '+reason),{reasonCode});
+ };
  function molecularGraph(value) {
   const g=copy(value.graph||value);
   if(!g.atoms?.length||!Array.isArray(g.bonds))fail('empty MolecularGraph');
@@ -37,15 +39,29 @@ const ChemistryCore = (() => {
    layout_template:id,source:reference.source||'versioned reference-data.js'
   }]));
  }
- function site(block,id,link,position,end) {
-  const s=block.sites[id],req=link[end+'_requirements'];
-  if(!s)fail(block.id+' missing site '+id);
-  if(!s.allowed_linkage_classes?.includes(link.id)||!s[position+'_phosphorus']?.includes(link.id))fail(block.id+' '+id+' does not permit '+position+' '+link.id);
-  if(s.element!==req.element||s.connection_class!==req.connection_class)fail(block.id+' '+id+' fails '+link.id+' '+end+' requirements');
-  const a=block.graph.atoms[s.atom],bs=block.graph.bonds.filter(b=>b.a===s.atom||b.b===s.atom);
-  if(a.h!==1||a.q||!bs.length||bs.some(b=>b.o!==1)||(s.element==='O'&&bs.length!==1))fail(block.id+' '+id+' is not a free compatible attachment');
+ function requireLinkage(definitions,id) {
+  if(!Object.hasOwn(definitions,id))fail('undefined linkage '+id,'UNDEFINED_LINKAGE');
+  return definitions[id];
+ }
+ // Domain and atom-role labels describe provenance and local position.
+ // Linkage endpoint requirements and site permissions control the graph edit.
+ function validateSite(graph,s,link,position,end,label=s.id) {
+  const req=link[end+'_requirements'];
+  if(s.element!==req.element||s.connection_class!==req.connection_class)
+   fail(label+' fails '+link.id+' '+end+' requirements (requires '+req.element+' '+req.connection_class+')','INCOMPATIBLE_SITE_CHEMISTRY');
+  if(!s.allowed_linkage_classes?.includes(link.id)||!s[position+'_phosphorus']?.includes(link.id))
+   fail(label+' does not permit '+position+' '+link.id+(position==='terminal'&&s.reason?'; '+s.reason:''),'SITE_LINKAGE_NOT_ALLOWED');
+  const a=graph.atoms[s.atom],bs=graph.bonds.filter(b=>b.a===s.atom||b.b===s.atom);
+  if(!a||a.e!==s.element||a.h!==1||a.q||!bs.length||bs.some(b=>b.o!==1)||(s.element==='O'&&bs.length!==1))
+   fail(label+' is not a free compatible attachment','ATTACHMENT_NOT_FREE');
   return s;
  }
+ function site(block,id,link,position,end) {
+  const s=block.sites[id];
+  if(!s)fail(block.id+' missing site '+id,'MISSING_ATTACHMENT_SITE');
+  return validateSite(block.graph,s,link,position,end,block.id+' '+id);
+ }
+ const direction=(node,end)=>((end==='source')!==(node.orientation==='reverse'))?'downstream':'upstream';
  function validateAssembly(ag,definitions) {
   if(ag.schema_version!=='assembly-graph/1'||!ag.nodes?.length||!Array.isArray(ag.edges))fail('invalid AssemblyGraph');
   const nodes=new Map(),used=new Set(),ids=new Set();
@@ -57,26 +73,26 @@ const ChemistryCore = (() => {
   const endpoint=(ref,link,pos,end)=>{
    const n=nodes.get(ref.node);if(!n)fail('unknown endpoint node');
    const s=site(n.block,ref.site,link,pos,end),key=n.id+':'+s.atom;
-   if(used.has(key))fail('attachment atom consumed more than once: '+key);used.add(key);return s;
+   if(s.direction!==direction(n,end))fail(n.block.id+' '+ref.site+' has incompatible '+end+' direction','INCOMPATIBLE_SITE_DIRECTION');
+   if(used.has(key))fail('attachment atom consumed more than once: '+key,'ATTACHMENT_ALREADY_USED');used.add(key);return s;
   };
-  for(const [i,e] of ag.edges.entries()){
+  for(const e of ag.edges){
    unique(e.id);
-   const l=definitions[e.linkage];if(!l)fail('undefined linkage '+e.linkage);
-   const a=endpoint(e.source,l,'internal','source'),b=endpoint(e.target,l,'internal','target');
-   // Domains are explicit audited site contracts, never family identities.
-   if(a.compatibility_domain!==b.compatibility_domain)fail('no validated linkage between site domains '+a.compatibility_domain+' and '+b.compatibility_domain);
+   const l=requireLinkage(definitions,e.linkage);
+   endpoint(e.source,l,'internal','source');
+   endpoint(e.target,l,'internal','target');
   }
   const terminated=new Set();
   for(const t of ag.terminations||[]){
    unique(t.id);
    const n=nodes.get(t.at.node),s=n?.block.sites[t.at.site];if(!s)fail('termination has no attachment');
-   const key=n.id+':'+s.atom;if(used.has(key)||terminated.has(key))fail('occupied termination '+key);terminated.add(key);
+   const key=n.id+':'+s.atom;if(used.has(key)||terminated.has(key))fail('occupied termination '+key,'ATTACHMENT_ALREADY_USED');terminated.add(key);
    if(t.kind==='site'){if(t.state!==s.unconnected.state)fail('unimplemented capping state '+t.state);}
    else if(t.kind==='linkage'){
     if(t.cap!=='neutral-acid')fail('undefined terminal cap '+t.cap);
     if(!t.linkages?.length)fail('empty terminal linkage path');
-    for(const code of t.linkages){const l=definitions[code];if(!l?.terminal_forms.includes('neutral-acid'))fail('unsupported terminal form '+code);site(n.block,t.at.site,l,'terminal','target');}
-    if(t.linkages.length>1&&t.linkages.some(c=>c!=='PO'))fail('modified polyphosphate positions undefined');
+    for(const code of t.linkages){const l=requireLinkage(definitions,code);if(!l.terminal_forms.includes('neutral-acid'))fail('unsupported terminal form '+code+'; no neutral-acid cap defined','UNSUPPORTED_TERMINAL_FORM');site(n.block,t.at.site,l,'terminal','target');}
+    if(t.linkages.length>1&&t.linkages.some(c=>c!=='PO'))fail('modified polyphosphate positions undefined','UNDEFINED_MODIFIED_POLYPHOSPHATE');
    }else fail('unknown termination kind');
   }
   for(const n of ag.nodes)for(const s of Object.values(n.block.sites))if(!used.has(n.id+':'+s.atom)&&!terminated.has(n.id+':'+s.atom))fail('missing explicit termination '+n.id+':'+s.id);
@@ -84,24 +100,24 @@ const ChemistryCore = (() => {
  }
  function fromNotation(p,resolve,definitions){
   const nodes=p.residues.map((id,i)=>{
-   const raw=resolve(id);if(!raw)fail(id+' has no reliable molecular graph');if(raw.validation_status)fail(id+' '+raw.validation_status);
+   const raw=resolve(id);if(!raw)fail(id+' has no reliable molecular graph','UNAVAILABLE_BUILDING_BLOCK');if(raw.validation_status)fail(id+' '+raw.validation_status,'UNAVAILABLE_BUILDING_BLOCK');
    const block=buildingBlock({...raw,id});
    const orientation=nodesOrientation(block,i,p.residues.length);
    return {id:'b'+(i+1),position:i+1,orientation,block};
   });
   const edges=p.links.map((linkage,i)=>{
-   const source={node:nodes[i].id,site:nodes[i].orientation==='reverse'?'upstream':'downstream'},target={node:nodes[i+1].id,site:nodes[i+1].orientation==='reverse'?'downstream':'upstream'};
+   const source={node:nodes[i].id,site:direction(nodes[i],'source')},target={node:nodes[i+1].id,site:direction(nodes[i+1],'target')};
    // Legacy blank separator resolves a dedicated linkage only when both sites declare it.
    if(linkage==='PO'&&nodes[i].block.sites[source.site]?.allowed_linkage_classes.includes('PMO')&&nodes[i+1].block.sites[target.site]?.allowed_linkage_classes.includes('PMO'))linkage='PMO';
    return {id:'l'+(i+1),source,target,linkage};
   });
   const occupied=new Set(edges.flatMap(e=>[e.source.node+':'+e.source.site,e.target.node+':'+e.target.site])),terminations=[];
   for(const n of nodes)for(const [id,s] of Object.entries(n.block.sites))if(!occupied.has(n.id+':'+id)){
-   const side=n.position===1&&id==='upstream'?'five':n.position===nodes.length&&id==='downstream'?'three':null;
+   const side=n.position===1&&id===direction(n,'target')?'five':n.position===nodes.length&&id===direction(n,'source')?'three':null;
    const count=side?p.terminal[side]:0;
    terminations.push({id:'t'+(terminations.length+1),at:{node:n.id,site:id},kind:count?'linkage':'site',...(count?{linkages:Array(count).fill(p.terminalChemistry[side]),cap:'neutral-acid'}:{state:s.unconnected.state})});
   }
-  for(const [side,count]of Object.entries(p.terminal))if(count){const n=side==='five'?nodes[0]:nodes[nodes.length-1],id=side==='five'?'upstream':'downstream';if(!n.block.sites[id])fail(n.block.id+' missing terminal '+id);}
+  for(const [side,count]of Object.entries(p.terminal))if(count){const n=side==='five'?nodes[0]:nodes[nodes.length-1],id=direction(n,side==='five'?'target':'source');if(!n.block.sites[id])fail(n.block.id+' missing terminal '+id,'MISSING_ATTACHMENT_SITE');if(occupied.has(n.id+':'+id))fail(n.block.id+' terminal '+id+' is occupied','ATTACHMENT_ALREADY_USED');}
   return validateAssembly({schema_version:'assembly-graph/1',nodes,edges,terminations},definitions);
  }
  function nodesOrientation(block,i,length){
@@ -109,5 +125,5 @@ const ChemistryCore = (() => {
   const dirs=Object.keys(block.sites);
   return dirs.length===1&&block.sites[dirs[0]].reversible!==false&&((i===0&&length>1&&dirs[0]==='upstream')||(i===length-1&&length>1&&dirs[0]==='downstream'))?'reverse':'forward';
  }
- return {molecularGraph,buildingBlock,linkageDefinitions,validateAssembly,fromNotation};
+ return {molecularGraph,buildingBlock,linkageDefinitions,requireLinkage,validateSite,validateAssembly,fromNotation};
 })();

@@ -10,7 +10,9 @@ const ReactionFamilyUI=(()=>{
  const engine=()=>ReactionFamilyAPI.available()?ReactionFamilyAPI:null;
  const family=()=>$('reaction').value;
  const single=()=>family()==='reduction';
- function inputVisibility(){for(const e of [$('reagentInput'),$('reagentFile'),$('reagentViewer'),document.querySelector('[data-i18n=secondary]')]){e.hidden=single();if('disabled' in e)e.disabled=single()||!JSON.parse(UI.state()).draftOpen;}if($('site1'))$('site1').parentElement.hidden=single();if(pairLabel.firstChild?.nodeType===3)pairLabel.firstChild.nodeValue=t(single()?'retentionPair':'pair');while(confirmLabel.childNodes.length>1)confirmLabel.lastChild.remove();confirmLabel.append(document.createTextNode(t(single()?'confirmSingle':'confirm')));}
+ const reagentSource=ReagentSource.mount({input:$('reagentInput'),file:$('reagentFile'),language:$('language'),
+  family:()=>ReactionFamilyAPI.familyId(family()),substrate:()=>UI.workflow?.current,invalidate:()=>detect()});
+ function inputVisibility(){reagentSource.refresh(JSON.parse(UI.state()).draftOpen,!single());for(const e of [$('reagentViewer'),document.querySelector('[data-i18n=secondary]')]){e.hidden=single();if('disabled' in e)e.disabled=single()||!JSON.parse(UI.state()).draftOpen;}if($('site1'))$('site1').parentElement.hidden=single();if(pairLabel.firstChild?.nodeType===3)pairLabel.firstChild.nodeValue=t(single()?'retentionPair':'pair');while(confirmLabel.childNodes.length>1)confirmLabel.lastChild.remove();confirmLabel.append(document.createTextNode(t(single()?'confirmSingle':'confirm')));}
  const reason=r=>typeof r==='string'?r:r?.message||r?.reason||r?.code||t('unsupported');
  function invalidate(){revision++;UI.invalidate();confirm.checked=false;}
  function overlay(site,g){
@@ -33,7 +35,7 @@ const ReactionFamilyUI=(()=>{
   const state=JSON.parse(UI.state()),preview=state.preview;
   LocalViewers.mount('productViewer',preview?Sandbox.A.checkpoint(preview,preview.steps.length):null,{title:t('product')});
  }
- function status(){note.textContent=[single()?(pair?.raw?.retention==='explicit_selection_required'?t('retainRequired'):t('reductionHelp')):'',family()==='cap'?t('capHelp'):'',result?.reason?reason(result.reason):'',pair?.activation_required?t('activation'):'',pair?t(single()?'readySingle':'ready'):''].filter(Boolean).join(' · ');}
+ function status(){note.textContent=[single()?(pair?.raw?.retention==='explicit_selection_required'?t('retainRequired'):t('reductionHelp')):'',family()==='cap'?t('capHelp'):'',result?.reason?reason(result.reason):'',pair?.activation_required?t('activation'):'',pair?.raw.product_state,pair?t(single()?'readySingle':'ready'):''].filter(Boolean).join(' · ');}
  function selectPair(value){invalidate();pair=result?.assignments.find(p=>p.id===value)||null;for(let i=0;i<2;i++)$('site'+i).value=pair?.siteIds[i]||'';status();render();$('preview').disabled=!pair||!confirm.checked;}
  function populate(preserve=false){
   $('sites').replaceChildren();
@@ -55,8 +57,8 @@ const ReactionFamilyUI=(()=>{
   try{
    if(!UI.workflow)return;
    inputVisibility();
-   if(!single()&&!$('reagentInput').value.trim()){populate();render();note.textContent=t('required');return;}
-   secondary=single()?null:Reactions.v2.parseReagent($('reagentInput').value,family());
+   if(!single()&&!$('reagentInput').hidden&&!$('reagentInput').value.trim()){populate();render();note.textContent=t('required');return;}
+   secondary=single()?null:reagentSource.graph();
    if(!engine()){populate();render();note.textContent=t('unavailable');return;}
    result=engine().analyze({family:family(),inputs:single()?[UI.workflow.current]:[UI.workflow.current,secondary]});
    populate();status();render();

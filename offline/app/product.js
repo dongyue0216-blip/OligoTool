@@ -18,6 +18,32 @@ const Product=(()=>{
  const ex=document.createElement('button');ex.id='exportUserLibrary';ex.dataset.i18n='exportlibrary';words.exportlibrary=['导出用户化学库 JSON','Export User Chemistry Library'];ex.onclick=()=>attempt(()=>{const a=document.createElement('a'),url=URL.createObjectURL(new Blob([store.exportJSON()],{type:'application/json'}));a.href=url;a.download='oligo-user-chemistry-library.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});controls.append(ex);
  for(const mode of ['merge']){const button=document.createElement('button'),file=document.createElement('input');button.id=mode+'UserLibrary';button.dataset.i18n=mode+'library';words[mode+'library']=mode==='import'?['导入用户化学库（空库）','Import User Chemistry Library (empty library)']:['导入/合并用户化学库','Import/Merge User Library'];file.type='file';file.accept='.json,application/json';file.hidden=true;file.id=mode+'UserLibraryFile';button.onclick=()=>file.click();file.onchange=async()=>{try{const f=file.files[0];if(!f)return;if(f.size>25*1024*1024)throw Error('Library exceeds 25 MB');const result=store.ingest(JSON.parse(await f.text()),mode);refreshEntries();library();$('customStatus').textContent=result.applied?'Library saved · duplicate entries skipped: '+result.duplicates.join(', '):'Conflict — nothing changed. Keep existing entries, or rename incoming symbols in the source library and export again: '+result.conflicts.map(c=>c.symbol+' ('+c.reason+')').join('; ');}catch(e){$('customStatus').textContent=e.message;}finally{file.value='';}};controls.append(button,file);}
  $('library').before(controls);
+ const builtinDetails=document.createElement('details'),builtinTitle=document.createElement('summary'),builtinRows=document.createElement('div');
+ builtinDetails.id='builtinChemistryCatalog';
+ const reagentDetails=document.createElement('details'),reagentTitle=document.createElement('summary'),reagentRows=document.createElement('div');
+ reagentDetails.id='builtinReactionReagentCatalog';
+ reagentDetails.append(reagentTitle,reagentRows);
+ builtinDetails.append(builtinTitle,builtinRows);$('library').after(builtinDetails,reagentDetails);
+ const builtinLabel=()=>{builtinTitle.textContent=$('language').value==='en'?'Built-in Sequence Chemistry':'内置序列化学';
+  reagentTitle.textContent=$('language').value==='en'?'Built-in Reaction Reagents':'内置后修饰反应试剂';};
+ builtinLabel();$('language').addEventListener('change',builtinLabel);
+ function renderBuiltin(details,rows,reagents){
+  if(!details.open||rows.childElementCount)return;
+  for(const item of store.builtinCatalog()){
+   if(Boolean(item.roles?.includes('ReactionReagent'))!==reagents)continue;
+   const row=document.createElement('div'),symbol=document.createElement('strong'),info=document.createElement('span');
+   row.className='library-row';symbol.textContent=item.symbol;
+   info.textContent=(reagents
+    ?[item.type,item.reactionStatus,...(item.compatibleFamilies||[])]
+    :[item.type,item.family,item.assemblyStatus,item.structureStatus==='unresolved'?item.provenance:null,'Amidite · '+(item.amidite.identity||item.amidite.status)]).filter(Boolean).join(' · ');
+   row.append(symbol,info);
+   const preview=item.schematicReference&&StructurePresentation.referenceGlyph(item.schematicReference);
+   if(preview){const glyph=document.createElement('span');glyph.innerHTML=preview;info.append(glyph);}
+   rows.append(row);
+  }
+ }
+ builtinDetails.addEventListener('toggle',()=>renderBuiltin(builtinDetails,builtinRows,false));
+ reagentDetails.addEventListener('toggle',()=>renderBuiltin(reagentDetails,reagentRows,true));
  $('language').addEventListener('change',()=>{localize();library();displayCustom();});localize();
  // Invalidate a reagent preview as soon as the reagent is edited; A still validates every site.
  $('input').addEventListener('input',()=>{$('error').textContent=$('language').value==='en'?'Input changed · calculate to update result':'输入已更改 · 请重新计算';});

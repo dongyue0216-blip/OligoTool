@@ -29,6 +29,14 @@ const FragmentComposition=(()=>{
   return {graph:out,status:'semantic 10-unit bamboo + local RDKit fragments + anchor-relative linkages'};
  }
  function coordinates(r,depth=0){
+  const product=r.graph.provenance?.reaction_products?.at(-1);
+  const lanes=r.moleculeState?.assemblyGraph.lanes;
+  const imported=lanes?!lanes.some(l=>l.assembly):!r.graph.photometry;
+  if(product?.kind==='tetrazine_ligation'&&imported&&r.graph.atoms.length<=250){
+   const {photometry,...graph}=r.graph;
+   const depicted=local(graph);
+   if(depicted.graph!==graph)return {...depicted,graph:{...depicted.graph,photometry},composed:true};
+  }
   if(r.moleculeState&&(r.moleculeState.assemblyGraph.branchEdges.length||r.moleculeState.presentationGroups?.length))return BranchLayout.coordinates(r.moleculeState);
   const g=r.graph;if(depth>30)throw Error('PRESENTATION_ANCESTRY_LIMIT');
   if(r.workflow)remember(r.workflow);

@@ -1,6 +1,13 @@
-const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert'),crypto=require('crypto'),cp=require('child_process');
-const root=path.join(__dirname,'..'),repo=path.join(root,'..'),copy=x=>JSON.parse(JSON.stringify(x));
-function context(tag){const c=vm.createContext({console,crypto:crypto.webcrypto});for(const f of ['snapshots/A/app/reference-data','snapshots/A/app/coverage-data','snapshots/A/app/core','snapshots/A/app/chemistry',...(tag?[]:['branch-builtins']),'chemistry-library']){const p='offline/app/'+f+'.js';vm.runInContext(tag?cp.execFileSync('git',['show',tag+':'+p],{cwd:repo,encoding:'utf8'}):fs.readFileSync(path.join(repo,p),'utf8'),c);}return {L:vm.runInContext('Lite',c),CL:vm.runInContext('ChemistryLibrary',c)};}
+const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert'),crypto=require('crypto');
+const root=path.join(__dirname,'..'),releases=process.env.OLIGO_BASELINE_ROOT||path.resolve(root,'../../releases'),copy=x=>JSON.parse(JSON.stringify(x));
+function context(tag){
+ const c=vm.createContext({console,crypto:crypto.webcrypto});
+ const app=tag?path.join(releases,tag,'Oligo-Toolkit','app'):path.join(root,'app');
+ const chemistry=['reference-data','coverage-data','core','chemistry',...(tag?[]:['reaction-reagents','reactions'])];
+ const files=[...chemistry.map(f=>'snapshots/A/app/'+f),...(tag?[]:['branch-builtins']),'chemistry-library'];
+ for(const f of files)vm.runInContext(fs.readFileSync(path.join(app,f+'.js'),'utf8'),c);
+ return {L:vm.runInContext('Lite',c),CL:vm.runInContext('ChemistryLibrary',c)};
+}
 const {L,CL}=context(),rows=[];
 function test(name,fn){try{fn();rows.push({name,status:'PASS'});}catch(e){rows.push({name,status:'FAIL',error:e.stack});console.error(name,e.message);}}
 const mem=raw=>{const m=new Map(raw===undefined?[]:[[CL.KEY,raw]]);return {getItem:k=>m.get(k)??null,setItem:(k,v)=>m.set(k,v)};};

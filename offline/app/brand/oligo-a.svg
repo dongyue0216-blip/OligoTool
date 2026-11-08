@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" color="#f5f8fd" role="img" aria-labelledby="title desc">
+  <title id="title">Oligo Toolkit / A / Sketch structure</title>
+  <desc id="desc">A solid-phase synthesis column framed by four cycle segments, digital editing and mechanical drive cues, with a short oligo below.</desc>
+  <rect x="0" y="0" width="128" height="128" rx="26" fill="#10141c" stroke="none"/>
+  <g fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 46C12 24 29 11 49 11 M44 7L49 11 44 15 M79 11C101 11 116 27 116 46 M112 41L116 46 120 41 M116 56C116 75 101 87 79 87 M84 83L79 87 84 91 M49 87C27 87 12 75 12 56 M8 61L12 56 16 61" />
+    <path d="M64 14V23 M53 23H75 M55 23V66Q55 70 58 73L61 76H67L70 73Q73 70 73 66V23 M64 76V87" /><path d="M55 58H73 M58 65H70" /><path d="M60 31H68" />
+    <rect x="21" y="39" width="25" height="18" rx="2" /><path d="M33.5 57V63 M27 63H40" /><path d="M94 37H99L100 41 103 42 107 40 110 44 107 47V51L110 54 107 58 103 56 100 58 99 62H94L93 58 90 56 86 58 83 54 86 51V47L83 44 86 40 90 42 93 41Z" /><circle cx="96.5" cy="49.5" r="4.5" />
+    <path d="M24 112l8 -6 8 6 -3 9h-10Z" /><path d="M36 109V105" /><circle cx="36" cy="101" r="4" fill="#bfd9ed" stroke="none"/><path d="M56 112l8 -6 8 6 -3 9h-10Z" /><path d="M68 109V105" /><circle cx="68" cy="101" r="4" fill="currentColor" stroke="none"/><path d="M88 112l8 -6 8 6 -3 9h-10Z" /><path d="M100 109V105" /><circle cx="100" cy="101" r="4" fill="currentColor" stroke="none"/><path d="M40 114H56" /><rect x="44" y="111" width="8" height="6" rx="1.7" fill="currentColor" stroke="none"/><path d="M72 114H88" /><rect x="76" y="111" width="8" height="6" rx="1.7" fill="currentColor" stroke="none"/>
+  </g>
+</svg>

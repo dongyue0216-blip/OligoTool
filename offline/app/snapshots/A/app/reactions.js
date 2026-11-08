@@ -76,6 +76,15 @@ const Reactions = (() => {
   'diphosphate-imidazolide/1':(g,a,b,e)=>{if(g.atoms[a.o].q===-1)e.charge(a.o,0);else e.h(a.o,-1);e.removeComponent(b.leavingN,b.p);e.add(a.o,b.p);},
   'phosphate-condensation/1':(g,a,b,edit)=>{if(g.atoms.filter(x=>x.e==='P').length<3)fail('requires phosphate plus diphosphate');edit.h(a.o,-1);edit.removeComponent(b.o,b.p);edit.add(a.o,b.p);},
   'cuaac-1,4/1':(g,a,b,e)=>{e.order(a.proximal,a.middle,1);e.order(a.middle,a.distal,2);e.order(b.terminal,b.internal,2);e.charge(a.middle,0);e.charge(a.distal,0);e.add(a.proximal,b.terminal);e.add(a.distal,b.internal);},
+  'iedda-n2/1':(g,t,d,e)=>{
+   e.removeAtoms([t.lost1,t.lost2]);
+   e.order(t.c1,t.n1,2);
+   e.order(t.n1,t.n2,1);
+   e.order(t.n2,t.c2,2);
+   e.order(d.alpha,d.beta,1);
+   e.add(d.alpha,t.c1);
+   e.add(t.c2,d.beta);
+  },
   'nhs-amide/1':(g,a,b,e)=>{e.h(a.n,-1);e.removeComponent(b.leavingO,b.carbonyl);e.add(a.n,b.carbonyl);},
   'thio-michael/1':(g,a,b,e)=>{e.h(a.s,-1);e.order(b.alpha,b.beta,1);e.add(a.s,b.alpha);e.h(b.beta,1);}
  };
@@ -95,7 +104,7 @@ const Reactions = (() => {
   const g={atoms:[],bonds:[]},originA=[],originB=[],offsets=[];
   gs.forEach((v,k)=>{const off=g.atoms.length,shift=k?gs[0].atoms.reduce((m,a)=>Math.max(m,a.x||0),-Infinity)-v.atoms.reduce((m,a)=>Math.min(m,a.x||0),Infinity)+4:0,shiftY=k?gs[0].atoms.reduce((m,a)=>Math.max(m,a.y||0),-Infinity)-v.atoms.reduce((m,a)=>Math.min(m,a.y||0),Infinity)+4:0;offsets.push(off);v.atoms.forEach((a,i)=>{const atom=copy(a);atom.x=(atom.x||0)+shift;atom.y=(atom.y||0)+shiftY;g.atoms.push(atom);originA.push({input:k,atom:i,previous:copy(inputs[k].provenance?.atoms?.[i]||null)});});v.bonds.forEach((b,i)=>{g.bonds.push({...copy(b),a:b.a+off,b:b.b+off});originB.push({input:k,bond:i,previous:copy(inputs[k].provenance?.bonds?.[i]||null)});});});
   const ss=selected.map((s,k)=>Object.fromEntries(Object.entries(s.atoms).map(([key,i])=>[key,i+offsets[k]]))),edits=[],removed=new Set();
-  const edit={h:(i,n)=>{g.atoms[i].h+=n;edits.push({op:'hydrogen',atom:i,delta:n});},charge:(i,q)=>{g.atoms[i].q=q;edits.push({op:'charge',atom:i,value:q});},order:(a,b,o)=>{const x=bond(g,a,b);if(!x)fail('missing bond');if(x.s)fail('stereochemical reaction-center bond changes unsupported');x.o=o;edits.push({op:'order',a,b,order:o});},add:(a,b)=>{if(bond(g,a,b))fail('duplicate new bond');g.bonds.push({a,b,o:1});originB.push({kind:'reaction',definition:id});edits.push({op:'add-bond',a,b,order:1});},removeComponent:(start,keep)=>{
+  const edit={h:(i,n)=>{g.atoms[i].h+=n;edits.push({op:'hydrogen',atom:i,delta:n});},charge:(i,q)=>{g.atoms[i].q=q;edits.push({op:'charge',atom:i,value:q});},order:(a,b,o)=>{const x=bond(g,a,b);if(!x)fail('missing bond');if(x.s)fail('stereochemical reaction-center bond changes unsupported');x.o=o;edits.push({op:'order',a,b,order:o});},add:(a,b)=>{if(bond(g,a,b))fail('duplicate new bond');g.bonds.push({a,b,o:1});originB.push({kind:'reaction',definition:id});edits.push({op:'add-bond',a,b,order:1});},removeAtoms:indices=>{indices.forEach(i=>removed.add(i));edits.push({op:'remove-atoms',atoms:[...indices]});},removeComponent:(start,keep)=>{
    const pending=[start];while(pending.length){const i=pending.pop();if(i===keep)fail('leaving group reconnects to retained graph');if(removed.has(i))continue;removed.add(i);for(const n of adj(g,i))if(!(i===start&&n.i===keep))pending.push(n.i);}edits.push({op:'remove-atoms',atoms:[...removed]});
   }};
   (plan?.execute||rules[d.rule])(g,ss[0],ss[1],edit);
@@ -197,8 +206,53 @@ const Reactions = (() => {
    if(!motif){const benz=(a,b)=>rings(g,a,6).some(r=>r.includes(b)&&[0,1].some(phase=>r.every((i,k)=>g.atoms[i].e==='C'&&!g.atoms[i].q&&bond(g,i,r[(k+1)%6]).o===((k+phase)%2?1:2))));
     if(benz(r[1],r[2])&&benz(r[5],r[6])&&[r[3],r[4]].map(i=>g.atoms[i].e).sort().join('')==='CN'&&[2,3,4].every(k=>bond(g,r[k],r[k+1]).o===1)&&r.every(i=>!g.atoms[i].q))motif='DBCO';
    }
+   // cOct: a neutral all-carbon C8 ring with one triple bond and seven single bonds.
+   if(!motif&&saturatedCarbonPath(g,r)&&r.every((i,k)=>!adj(g,i).some(n=>r.includes(n.i)&&n.i!==r[(k+1)%8]&&n.i!==r[(k+7)%8])))motif='cOct';
    if(motif)out.push({type:'strainedAlkyne',motif_type:motif,atoms:{terminal:b.a,internal:b.b},label:motif+' C '+b.a+' / '+b.b});
   }return out;
+ }
+ function saturatedCarbonPath(g,path){
+  return path.every(i=>g.atoms[i].e==='C'&&!g.atoms[i].q)&&
+   path.slice(1).every((i,k)=>bond(g,path[k],i).o===1);
+ }
+ function tetrazineSites(g){
+  const out=[],seen=new Set();
+  g.atoms.forEach((a,i)=>{
+   if(a.e!=='C'||a.q||adj(g,i).filter(n=>g.atoms[n.i].e==='N').length<2)return;
+   for(const r of rings(g,i,6)){
+    if(r.map(j=>g.atoms[j].e).join('')!=='CNNCNN'||i>r[3])continue;
+    if(r.some((j,k)=>g.atoms[j].q||(k%3!==0&&(g.atoms[j].h||adj(g,j).length!==2))))continue;
+    const orders=r.map((j,k)=>bond(g,j,r[(k+1)%6]).o).join('');
+    if(!['121212','212121'].includes(orders))continue;
+    const key=[...r].sort((a,b)=>a-b).join(':');
+    if(seen.has(key))continue;
+    seen.add(key);
+    // Pick one orientation in input atom order. It is a representative, not a selectivity prediction.
+    const [c1,n1,n2,c2,lost1,lost2]=r[1]<r[5]?r:[r[0],...r.slice(1).reverse()];
+    out.push({type:'tetrazine',motif_type:'tetrazine',atoms:{c1,n1,n2,c2,lost1,lost2},label:'1,2,4,5-Tetrazine'});
+   }
+  });
+  return out;
+ }
+ function dienophileSites(g){
+  const out=[];
+  for(const b of g.bonds){
+   if(b.o!==2||b.s||[b.a,b.b].some(i=>g.atoms[i].e!=='C'||g.atoms[i].q))continue;
+   // CTfiles in A represent alkene geometry by the ring neighbors' coordinates.
+   const side=(i)=>{const [a,z,p]=[b.a,b.b,i].map(j=>g.atoms[j]);
+    return ((z.x-a.x)*(p.y-a.y)-(z.y-a.y)*(p.x-a.x))/Math.hypot(z.x-a.x,z.y-a.y);
+   };
+   const tco=paths(g,b.a,b.b,8).some(p=>{
+    if(!saturatedCarbonPath(g,p))return false;
+    const a=side(p[1]),z=side(p[6]);
+    return Math.abs(a)>1e-4&&Math.abs(z)>1e-4&&a*z<0;
+   });
+   const norbornene=paths(g,b.a,b.b,5).filter(p=>saturatedCarbonPath(g,p)).some(short=>
+    paths(g,b.a,b.b,6,[short[2]]).some(long=>saturatedCarbonPath(g,long)&&short[1]===long[1]&&short[3]===long[4]));
+   const motif=tco?'TCO':norbornene?'norbornene':null;
+   if(motif)out.push({type:'strainedAlkene',motif_type:motif,atoms:{alpha:b.a,beta:b.b},label:motif});
+  }
+  return out;
  }
  // CAP starting chemistry is local topology, never a modification-name lookup.
  function capTerminalSites(g){const found=[],diagnostics=[];
@@ -224,19 +278,22 @@ const Reactions = (() => {
   if(type==='terminalPhosphateNucleophile')return capTerminalSites(g).sites;
   if(type==='acylDonor')return acylSites(g);
   if(type==='strainedAlkyne')return strainedSites(g);
+  if(type==='tetrazine')return tetrazineSites(g);
+  if(type==='strainedAlkene')return dienophileSites(g);
   if(type==='m7GDPImidazolide'){
    return activatedDiphosphate(g).map(s=>({...s,type,motif_type:'phosphoroimidazolide'}));
   }
   return sites(g,type).map(s=>({...s,motif_type:type==='amine'?(g.atoms[s.atoms.n].h===2?'primary_amine':'secondary_amine'):type}));
  }
- const families=freeze({CAP:{id:'CAP',name:'CAP'},Condensation:{id:'Condensation',name:'Amine Coupling'},Click:{id:'Click',name:'Click'},DisulfideReduction:{id:'DisulfideReduction',name:'Disulfide Reduction',input_count:1},ThiolMaleimide:{id:'ThiolMaleimide',name:'Thiol–Maleimide'}});
+ const families=freeze({CAP:{id:'CAP',name:'CAP'},Condensation:{id:'Condensation',name:'Amine Coupling'},Click:{id:'Click',name:'Click'},IEDDA:{id:'IEDDA',name:'IEDDA / Tetrazine Ligation'},DisulfideReduction:{id:'DisulfideReduction',name:'Disulfide Reduction',input_count:1},ThiolMaleimide:{id:'ThiolMaleimide',name:'Thiol–Maleimide'}});
  const registry=freeze({
   'disulfide-reduction/2':{family:'DisulfideReduction',roles:['disulfide'],rule:'disulfide-reduction/1',input_count:1},
   'thiol-maleimide/2':{family:'ThiolMaleimide',roles:['thiol','maleimide'],rule:'thio-michael/1',product_class:'succinimide_thioether'},
   'cap-im-m7gdp/2':{family:'CAP',roles:['terminalPhosphateNucleophile','m7GDPImidazolide'],motifs:['terminal_phosphorus_nucleophile','phosphoroimidazolide'],rule:'diphosphate-imidazolide/1',product_class:'triphosphate_cap'},
   'acyl-substitution/2':{family:'Condensation',roles:['amine','acylDonor'],motifs:['NHS','sulfo-NHS','PFP','TFP','pNP','carboxylic_acid'],product_classes:['amide','carbamate'],rule:'nhs-amide/1'},
   'cuaac-1,4/2':{family:'Click',roles:['azide','alkyne'],rule:'cuaac-1,4/1',product_class:'1,4_disubstituted_triazole'},
-  'spaac/2':{family:'Click',roles:['azide','strainedAlkyne'],motifs:['DBCO','BCN'],rule:'cuaac-1,4/1',product_class:'fused_triazole'}
+  'spaac/2':{family:'Click',roles:['azide','strainedAlkyne'],motifs:['DBCO','BCN','cOct'],rule:'cuaac-1,4/1',product_class:'fused_triazole'},
+  'iedda/2':{family:'IEDDA',roles:['tetrazine','strainedAlkene'],motifs:['tetrazine','TCO','norbornene'],rule:'iedda-n2/1',product_class:'4,5-dihydropyridazine',product_state:'4,5-dihydropyridazine after N2 extrusion; before tautomerization or oxidation; new stereochemistry unspecified'}
  });
  function identify(inputs){if(!Array.isArray(inputs)||![1,2].includes(inputs.length))fail('one or two graphs required');
   const seen=new Set();for(const input of inputs)for(const a of (input.graph||input).atoms||[])if(a.reaction_atom_id!==undefined){const id=a.reaction_atom_id;if(typeof id!=='string'||!id||seen.has(id))fail('atom IDs must be nonempty and unique across both inputs','INVALID_ATOM_IDS');seen.add(id);}
@@ -245,17 +302,18 @@ const Reactions = (() => {
    let id='input-'+k+':atom-'+i;while(seen.has(id))id+=':new';seen.add(id);a.reaction_atom_id=id;
   });return g;});
  }
- function detect(inputs){const gs=identify(inputs);return {schema_version:'reaction-sites/2',inputs:gs,candidate_sites:gs.map((g,k)=>Object.fromEntries(['amine','acylDonor','azide','alkyne','strainedAlkyne','terminalPhosphateNucleophile','m7GDPImidazolide','thiol','maleimide','disulfide'].map(type=>[type,v2Sites(g,type).map(s=>decorate(s,g,k))])))};}
+ function detect(inputs){const gs=identify(inputs);return {schema_version:'reaction-sites/2',inputs:gs,candidate_sites:gs.map((g,k)=>Object.fromEntries(['amine','acylDonor','azide','alkyne','strainedAlkyne','tetrazine','strainedAlkene','terminalPhosphateNucleophile','m7GDPImidazolide','thiol','maleimide','disulfide'].map(type=>[type,v2Sites(g,type).map(s=>decorate(s,g,k))])))};}
  function decorate(s,g,input){const selected_atom_ids=Object.fromEntries(Object.entries(s.atoms).map(([k,i])=>[k,g.atoms[i].reaction_atom_id]));
   return {...copy(s),input,selected_atom_ids,site_id:input+':'+s.type+':'+Object.values(selected_atom_ids).join('|')};
  }
- function candidates(family,inputs){if(family==='DisulfideReduction')return reductionCandidates(inputs);if(!families[family])fail('unknown family','UNKNOWN_FAMILY');if(family==='CAP')inputs=inputs.map(value=>normalizeCapGraph(copy(value.graph||value)));const detected=detect(inputs),gs=detected.inputs,out=[];if(gs.length!==2)fail('two graphs required');
+ function candidates(family,inputs){if(family==='DisulfideReduction')return reductionCandidates(inputs);if(!families[family])fail('unknown family','UNKNOWN_FAMILY');if(family==='CAP')inputs=inputs.map(value=>normalizeCapGraph(copy(value.graph||value)));return binaryCandidates(family,detect(inputs));}
+ function binaryCandidates(family,detected){const gs=detected.inputs,out=[];if(gs.length!==2)fail('two graphs required');
   for(const [id,t]of Object.entries(registry)){if(t.family!==family)continue;
    for(const swap of [false,true]){const roles=swap?[...t.roles].reverse():t.roles,ss=roles.map((r,k)=>detected.candidate_sites[k][r]);
     for(const a of ss[0])for(const b of ss[1]){
      const donor=roles[0]==='acylDonor'?a:b,spa=id==='spaac/2',formal=id==='acyl-substitution/2'&&donor.motif_type==='carboxylic_acid';
      for(const orientation of spa?['a','b']:['a']){
-      const candidate={candidate_id:id+':'+a.site_id+':'+b.site_id+':'+orientation,family,transformation_id:id,roles,sites:[a,b],role_assignment:{input_0:roles[0],input_1:roles[1]},compatibility:'COMPATIBLE',status:formal?'FORMAL':'VALIDATED',reason:formal?'activation_required/formal_condensation':spa?'explicit_regioisomer_selection_required':'validated_topology',semantics:formal?['activation_required','formal_condensation']:[],product_class:donor.product_class||t.product_class,orientation,regioselectivity:spa?'not_predicted':'1,4'};
+      const candidate={candidate_id:id+':'+a.site_id+':'+b.site_id+':'+orientation,family,transformation_id:id,roles,sites:[a,b],role_assignment:{input_0:roles[0],input_1:roles[1]},compatibility:'COMPATIBLE',status:formal?'FORMAL':'VALIDATED',reason:formal?'activation_required/formal_condensation':spa?'explicit_regioisomer_selection_required':'validated_topology',semantics:formal?['activation_required','formal_condensation']:[],product_class:donor.product_class||t.product_class,orientation,regioselectivity:spa?'not_predicted':t.product_state?'canonical_connectivity_not_predicted':'1,4',...(t.product_state?{product_state:t.product_state}: {})};
       if(family==='CAP'){candidate.status='STRUCTURALLY_COMPATIBLE';candidate.reason='structural_compatibility_only; experimental_process_validation_not_established';candidate.structural_compatibility='COMPATIBLE';candidate.process_validation='NOT_ESTABLISHED';candidate.semantics.push('structural_compatibility_only','experimental_process_validation_not_established');}
       out.push(candidate);
      }
@@ -263,6 +321,34 @@ const Reactions = (() => {
    }
   }
   return {schema_version:'reaction-candidates/2',family,inputs:gs,candidate_sites:detected.candidate_sites,candidates:out,status:out.length?'COMPATIBLE':'UNSUPPORTED',reason:out.length?null:(family==='CAP'?'NO_COMPATIBLE_CAP_PAIR: '+gs.map(g=>capTerminalSites(g).diagnostics.map(d=>d.reason).join(', ')).filter(Boolean).join('; '):'NO_VALIDATED_MOTIF_PAIR'),...(family==='CAP'?{terminal_p_diagnostics:gs.map(g=>capTerminalSites(g).diagnostics)}:{})};
+ }
+ // Enumerate all registered binary transformations. Unary reduction has its own retention workflow.
+ function findCompatibleReactionPlans(currentGraph,reagentGraph){
+  const inputs=[currentGraph,reagentGraph],graphs=inputs.map(value=>value.graph||value);
+  const normalized=graphs.map(g=>normalizeCapGraph(copy(g)));
+  const capChanged=normalized.some((g,k)=>g.bonds.some((b,i)=>b.o!==graphs[k].bonds[i].o));
+  const capDetected=capChanged?detect(normalized):null;
+  let detected;
+  try{detected=detect(inputs);}catch(e){if(!capDetected)throw e;}
+  const analyses=Object.values(families).filter(f=>f.input_count!==1&&(detected||f.id==='CAP')).map(f=>
+   binaryCandidates(f.id,(f.id==='CAP'&&capDetected)||detected));
+  const plans=analyses.flatMap(a=>a.candidates.map(c=>({
+   ...c,
+   definition_id:c.transformation_id,
+   definition_version:2,
+   site_pair_id:JSON.stringify([c.transformation_id,...c.sites.map(s=>s.site_id)]),
+   materialization_eligible:true,
+   reaction_name:c.transformation_id==='spaac/2'?'SPAAC':c.transformation_id==='cuaac-1,4/2'?'CuAAC':families[c.family].name
+  })));
+  const motifs=(detected||capDetected).candidate_sites.map(groups=>[...new Set(Object.entries(groups).flatMap(([role,sites])=>sites.map(s=>s.motif_type||s.type||role)))]);
+  // CAP can detect motifs after normalizing the equivalent phosphoryl representation.
+  const cap=analyses.find(a=>a.family==='CAP');
+  cap.candidate_sites.forEach((groups,i)=>{
+   for(const role of registry['cap-im-m7gdp/2'].roles)for(const s of groups[role])
+    if(!motifs[i].includes(s.motif_type))motifs[i].push(s.motif_type);
+  });
+  return {schema_version:'reaction-plans/1',status:plans.length?'COMPATIBLE':'UNSUPPORTED',plans,motifs,
+   reason:plans.length?null:motifs.every(s=>s.length)?'NO_COMPLEMENTARY_MOTIFS':'NO_SUPPORTED_MOTIF_ON_INPUT'};
  }
  function transform(family,inputs,selection){
   try{if(family==='DisulfideReduction')return reduceDisulfide(inputs,selection);const result=candidates(family,inputs),cs=result.candidates;const c=selection?cs.find(x=>x.candidate_id===(typeof selection==='string'?selection:selection.candidate_id)):cs.length===1?cs[0]:null;
@@ -276,6 +362,19 @@ const Reactions = (() => {
    const step=apply(d.id,result.inputs,chosen,{definition:d,execute});step.validation={status:c.status,rule:c.transformation_id,semantics:c.semantics};
    if(!result.inputs[0].photometry&&result.inputs[1].photometry){step.output.photometry=productOptical([result.inputs[1],result.inputs[0]],step.output);step.properties.optical=copy(step.output.photometry);}
    const product=step.output,mapping=result.inputs.map((g,k)=>g.atoms.map((a,i)=>({input:k,input_index:i,atom_id:a.reaction_atom_id,product_index:product.provenance.input_atom_maps[k][i],status:product.provenance.input_atom_maps[k][i]===null?'removed':'retained'})));
+   const maps=product.provenance.input_atom_maps;
+   const annotations=result.inputs.flatMap((input,k)=>(input.provenance?.reaction_products||[]).flatMap(annotation=>{
+    const ring=annotation.ring.map(i=>maps[k][i]);
+    return ring.includes(null)?[]:[{...annotation,ring}];
+   }));
+   const [a,b]=ordered.map(k=>Object.fromEntries(Object.entries(chosen[k].atoms).map(([key,i])=>[key,maps[k][i]])));
+   if(t.product_state){
+    annotations.push({kind:'tetrazine_ligation',label:'Tetrazine ligation product',state:t.product_state,ring:[a.c1,a.n1,a.n2,a.c2,b.beta,b.alpha],byproduct:'N2'});
+   }else if(c.transformation_id==='spaac/2'&&chosen[ordered[1]].motif_type==='cOct'){
+    const [first,last]=c.orientation==='b'?[b.internal,b.terminal]:[b.terminal,b.internal];
+    annotations.push({kind:'triazole',label:'Fused 1,2,3-triazole',state:'Selected connectivity; regioselectivity not predicted',ring:[a.proximal,a.middle,a.distal,last,first]});
+   }
+   if(annotations.length)product.provenance.reaction_products=annotations;
    return {schema_version:'reaction-result/2',family,status:c.status,reason:c.reason,semantics:c.semantics,compatibility:c.compatibility,motif_types:c.sites.map(s=>s.motif_type),candidate_sites:result.candidate_sites,candidate:copy(c),role_assignment:c.role_assignment,selected_atom_ids:c.sites.map(s=>s.selected_atom_ids),mapping,product_graph:product,properties:step.properties,step};
   }catch(e){return {schema_version:'reaction-result/2',family,status:'UNSUPPORTED',reason:e.code||e.message,detail:e.message,product_graph:null};}
  }
@@ -364,7 +463,7 @@ const Reactions = (() => {
   return parsed;
  }
 
- const v2=freeze({schema_version:'reaction-engine/2',families,registry,parseReagent,detect,candidates,transform,workflow:workflow2,append:append2,reload:reload2});
+ const v2=freeze({schema_version:'reaction-engine/2',families,registry,parseReagent,detect,candidates,findCompatibleReactionPlans,transform,workflow:workflow2,append:append2,reload:reload2});
 
  return {definitions:copy(definitions),sites,diagnose,resolveSites,validate,apply,workflow,append,reload,revert,v2};
 })();

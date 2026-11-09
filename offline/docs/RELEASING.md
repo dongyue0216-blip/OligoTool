@@ -5,3 +5,8 @@ GitHub-facing names MUST contain only the product name and version: title `Oligo
 Use a runtime-file allowlist. Exclude personal data, local MOLs, prior builds, archives, caches, debug output and development dependencies. Verify the extracted package, chemistry families, Custom Library and Excel parity, offline startup, labels, language state and approved logo before publishing.
 
 v2.00 / v2.0.0 is the User Library forward-compatibility baseline (schemaVersion 1). Keep Built-in and User Library separate. Any schema evolution requires deterministic forward migration, complete metadata preservation and baseline import tests; unknown future versions fail closed. Do not add pre-v2.00 recovery.
+
+Starting with v2.4.1, the source commit, runtime UI version, validated ZIP,
+Git tag and GitHub Release must identify the same version. Record the ZIP
+SHA-256, compare every runtime file in the archive with the tagged source,
+and upload the original validated bytes.

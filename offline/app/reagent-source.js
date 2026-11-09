@@ -34,7 +34,18 @@ const ReagentSource=(()=>{
    entry.value=choices.has(selected)?selected:'';
   }
   function graph(){
-   if(source.value==='upload')return Reactions.v2.parseReagent(input.value,family()??'CAP');
+   if(source.value==='upload'){
+    const text=input.value,selectedFamily=family();
+    try{return Reactions.v2.parseReagent(text,selectedFamily);}
+    catch(error){
+     if(!error.message.includes('芳香键请导出 Kekulé'))throw error;
+     const localized=SmallFragmentDepictor.localizeAromaticBonds(text);
+     if(!localized)throw error;
+     const result=Reactions.v2.parseReagent(localized,selectedFamily);
+     result.normalization={...result.normalization,aromatic_representation:{source_ctfile:text}};
+     return result;
+    }
+   }
    const row=choices.get(entry.value);
    if(!row)throw Error(text('请选择兼容试剂','Select a compatible reagent'));
    return row.graph;

@@ -1,6 +1,6 @@
-# Oligo Toolkit v2.2.1
+# Oligo Toolkit v2.4.1
 
-从 [GitHub Release](https://github.com/dongyue0216-blip/OligoTool/releases/tag/v2.2.1) 下载并解压整个 ZIP，双击 `Start.html`，用 Microsoft Edge 或 Google Chrome 打开。从源码目录使用时，根目录的 `Start.html` 会打开 `offline/Start.html`。无需安装、额外运行环境或联网。
+从 [GitHub Release](https://github.com/dongyue0216-blip/OligoTool/releases/tag/v2.4.1) 下载并解压整个 ZIP，双击 `Start.html`，用 Microsoft Edge 或 Google Chrome 打开。从源码目录使用时，根目录的 `Start.html` 会打开 `offline/Start.html`。无需安装、额外运行环境或联网。
 
 - 输入 DNA、RNA、修饰或混合序列，查看分子量、分子式和结构示意图。
 - 使用内置化学速查、用户库、分支和合成后修饰功能。Batch Excel 支持批量处理。

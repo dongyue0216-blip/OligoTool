@@ -68,7 +68,7 @@ const Reactions = (() => {
   'thio-michael-reverse/1':(g,a,b,e)=>rules['thio-michael/1'](g,b,a,e),
   'diphosphate-imidazolide/1':(g,a,b,e)=>{if(g.atoms[a.o].q===-1)e.charge(a.o,0);else e.h(a.o,-1);e.removeComponent(b.leavingN,b.p);e.add(a.o,b.p);},
   'phosphate-condensation/1':(g,a,b,edit)=>{if(g.atoms.filter(x=>x.e==='P').length<3)fail('requires phosphate plus diphosphate');edit.h(a.o,-1);edit.removeComponent(b.o,b.p);edit.add(a.o,b.p);},
-  'cuaac-1,4/1':(g,a,b,e)=>{e.order(a.proximal,a.middle,1);e.order(a.middle,a.distal,2);e.order(b.terminal,b.internal,2);e.charge(a.middle,0);e.charge(a.distal,0);e.add(a.proximal,b.terminal);e.add(a.distal,b.internal);},
+  'cuaac-1,4/1':(g,a,b,e)=>{e.order(a.proximal,a.middle,1);e.order(a.middle,a.distal,2);e.order(b.terminal,b.internal,2);if(g.atoms[a.proximal].q===-1)e.charge(a.proximal,0);e.charge(a.middle,0);e.charge(a.distal,0);e.add(a.proximal,b.terminal);e.add(a.distal,b.internal);},
   'iedda-n2/1':(g,t,d,e)=>{
    e.removeAtoms([t.lost1,t.lost2]);
    e.order(t.c1,t.n1,2);
@@ -266,6 +266,22 @@ const Reactions = (() => {
   });return {sites:found,diagnostics};
  }
  function v2Sites(g,type){
+  if(type==='azide'){
+   // Keep the legacy cumulene matcher and accept the equivalent R–N⁻–N⁺≡N CTfile form.
+   const out=sites(g,type).map(s=>({...s,motif_type:type}));
+   g.atoms.forEach((a,proximal)=>{
+    if(a.e!=='N'||a.q!==-1||a.h)return;
+    const ns=adj(g,proximal);
+    if(ns.length!==2||ns.some(n=>n.o!==1)||!ns.some(n=>g.atoms[n.i].e==='C'))return;
+    const mid=ns.find(n=>g.atoms[n.i].e==='N'&&g.atoms[n.i].q===1&&!g.atoms[n.i].h);
+    if(!mid)return;
+    const arms=adj(g,mid.i);
+    if(arms.length!==2)return;
+    const end=arms.find(n=>n.o===3&&g.atoms[n.i].e==='N'&&!g.atoms[n.i].q&&!g.atoms[n.i].h&&adj(g,n.i).length===1);
+    if(end)out.push({type,motif_type:type,atoms:{proximal,middle:mid.i,distal:end.i},label:type+' @ '+(proximal+1)});
+   });
+   return out;
+  }
   if(type==='disulfide')return disulfideSites(g);
   if(type==='thiol')return sites(g,type).filter(s=>{const c=adj(g,s.atoms.s)[0].i;return !adj(g,c).some(n=>n.o===2&&['O','S'].includes(g.atoms[n.i].e));});
   if(type==='maleimide')return sites(g,type).filter(s=>[s.atoms.alpha,s.atoms.beta].every(i=>adj(g,i).length===2)&&rings(g,s.atoms.alpha,5).some(r=>r.includes(s.atoms.beta)&&r.filter(i=>g.atoms[i].e==='N').length===1&&r.filter(i=>g.atoms[i].e==='C').length===4&&r.filter(i=>adj(g,i).some(x=>x.o===2&&g.atoms[x.i].e==='O')).length===2));
@@ -308,8 +324,20 @@ const Reactions = (() => {
   }
   return {schema_version:'reaction-candidates/2',family,inputs:gs,candidate_sites:detected.candidate_sites,candidates:out,status:out.length?'COMPATIBLE':'UNSUPPORTED',reason:out.length?null:(family==='CAP'?'NO_COMPATIBLE_CAP_PAIR: '+gs.map(g=>capTerminalSites(g).diagnostics.map(d=>d.reason).join(', ')).filter(Boolean).join('; '):'NO_VALIDATED_MOTIF_PAIR'),...(family==='CAP'?{terminal_p_diagnostics:gs.map(g=>capTerminalSites(g).diagnostics)}:{})};
  }
- // Enumerate all registered binary transformations. Unary reduction has its own retention workflow.
- function findCompatibleReactionPlans(currentGraph,reagentGraph){
+ function quickPlan(c){
+  return {...c,definition_id:c.transformation_id,definition_version:2,
+   site_pair_id:JSON.stringify([c.transformation_id,...c.sites.map(s=>s.site_id)]),
+   materialization_eligible:true,
+   reaction_name:c.transformation_id==='spaac/2'?'SPAAC':c.transformation_id==='cuaac-1,4/2'?'CuAAC':families[c.family].name};
+ }
+ function findCompatibleReactionPlans(currentGraph,reagentGraph=null){
+  if(!reagentGraph){
+   const detected=detect([currentGraph]);
+   const plans=Object.values(families).filter(f=>f.input_count===1)
+    .flatMap(f=>candidates(f.id,[currentGraph]).candidates.map(quickPlan));
+   const motifs=detected.candidate_sites.map(groups=>[...new Set(Object.values(groups).flat().map(s=>s.motif_type||s.type))]);
+   return {schema_version:'reaction-plans/1',status:plans.length?'COMPATIBLE':'UNSUPPORTED',plans,motifs,reason:plans.length?null:'NO_UNARY_REACTION'};
+  }
   const inputs=[currentGraph,reagentGraph],graphs=inputs.map(value=>value.graph||value);
   const normalized=graphs.map(g=>normalizeCapGraph(copy(g)));
   const capChanged=normalized.some((g,k)=>g.bonds.some((b,i)=>b.o!==graphs[k].bonds[i].o));
@@ -318,14 +346,7 @@ const Reactions = (() => {
   try{detected=detect(inputs);}catch(e){if(!capDetected)throw e;}
   const analyses=Object.values(families).filter(f=>f.input_count!==1&&(detected||f.id==='CAP')).map(f=>
    binaryCandidates(f.id,(f.id==='CAP'&&capDetected)||detected));
-  const plans=analyses.flatMap(a=>a.candidates.map(c=>({
-   ...c,
-   definition_id:c.transformation_id,
-   definition_version:2,
-   site_pair_id:JSON.stringify([c.transformation_id,...c.sites.map(s=>s.site_id)]),
-   materialization_eligible:true,
-   reaction_name:c.transformation_id==='spaac/2'?'SPAAC':c.transformation_id==='cuaac-1,4/2'?'CuAAC':families[c.family].name
-  })));
+  const plans=analyses.flatMap(a=>a.candidates.map(quickPlan));
   const motifs=(detected||capDetected).candidate_sites.map(groups=>[...new Set(Object.entries(groups).flatMap(([role,sites])=>sites.map(s=>s.motif_type||s.type||role)))]);
   // CAP can detect motifs after normalizing the equivalent phosphoryl representation.
   const cap=analyses.find(a=>a.family==='CAP');
@@ -422,8 +443,10 @@ const Reactions = (() => {
    a.q=0;g.atoms[o.i].q=0;bond(g,p,o.i).o=2;
   });return g;
  }
- function parseReagent(text,family='CAP'){
-  if(!['cap','CAP'].includes(family))return Lite.parseMol(text,{manualMarkers:true}).graph;
+ function parseReagent(text,family=null){
+  // Auto-discovery also needs equivalent phosphate representations to parse.
+  // This import step never chooses a reaction family or a candidate.
+  if(family!=null&&!['cap','CAP'].includes(family))return Lite.parseMol(text,{manualMarkers:true}).graph;
   const lines=text.replace(/\r/g,'').split('\n'),v3=lines.some(l=>l.includes('V3000'));
   // Replace only a complete aromatic P-N imidazole ring with its unique Kekule form.
   const atoms=[],edges=[];

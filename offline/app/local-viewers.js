@@ -9,6 +9,7 @@ const LocalViewers=(()=>{
   link.href=url;link.download=name;link.click();
   setTimeout(()=>URL.revokeObjectURL(url),1000);
  }
+ function exportChemDraw(name,graph){download(name+'.cdxml',Lite.cdxml(graph),'application/xml');}
  function exportSvg(scene){
   // Use the renderer's original scene before the viewer applies pan and zoom.
   const measure=document.createElement('div');
@@ -37,7 +38,7 @@ const LocalViewers=(()=>{
   chem.type=diagram.type='button';
   chem.textContent='Export ChemDraw (.cdxml)';
   chem.title=en()?'Full atom-level structure':'完整原子级结构';
-  chem.onclick=()=>download(name+'.cdxml',Lite.cdxml(drawing?drawing():Sandbox.C.present(record,false).drawing),'application/xml');
+  chem.onclick=()=>exportChemDraw(name,drawing?drawing():Sandbox.C.present(record,false).drawing);
   diagram.textContent='Export Schematic (.svg)';
   diagram.disabled=!schematic?.supported;
   const reason=schematic?.reason?.split(' / ');
@@ -132,5 +133,5 @@ const LocalViewers=(()=>{
   const svg=canvas.querySelector('svg');if(svg)baseBox=svg.getAttribute('viewBox').split(/\s+/).map(Number);
   const hint=document.createElement('small');hint.className='viewer-hint';hint.textContent=en()?'Drag to pan · Ctrl/Cmd + wheel to zoom · Wheel scrolls page':'拖动平移 · Ctrl/Cmd + 滚轮缩放 · 普通滚轮滚动页面';host.append(head,stage,note);if(products.length)host.append(productNote);host.append(hint,meta);if(exports&&record)mountExports(host,record,schematic,exports);update();const observer=new ResizeObserver(update);observer.observe(stage);instances.set(host,{record,dispose:()=>{observer.disconnect();cleanups.forEach(fn=>fn());},setViewport(v){if(v.scale!==undefined)scale=Math.max(.1,Math.min(16,v.scale));if(v.x!==undefined)x=v.x;if(v.y!==undefined)y=v.y;update();},get transform(){return {scale,x,y};}});return host;
  }
- return {mount,instances};
+ return {mount,instances,exportChemDraw};
 })();

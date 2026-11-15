@@ -5,23 +5,23 @@ const MoleculeBuilderUI=(()=>{
  let active=null;const current=()=>active||states.at(-1);
  let states=[],preview=null,secondary=null,candidates=[],quickResult=null;
  const host=document.createElement('article');host.id='moleculeBuilder';document.querySelector('.workflow').style.display='none';$('sequenceWorkspace').append(host);
- host.innerHTML=`<h2 id="builderTitle"></h2><p id="builderHelp" class="muted"></p><div class="row"><button id="builderStart"></button><button id="builderRestore"></button><input type="file" id="builderStateFile" accept=".json" hidden></div><div id="builderHistory"></div><button id="builderAdd"></button><section id="builderDraft" hidden><label id="operationLabel"></label><select id="builderOperation"><option value="reaction"></option><option value="branch"></option></select><div id="builderBranch"><label id="branchSiteLabel"></label><select id="builderSite"></select><label id="branchSequenceLabel"></label><textarea id="builderSequence" spellcheck="false" placeholder="rArC / [GlycerolBranch]rA / [UserBlock]rA"></textarea><div class="row"><label>Linkage<select id="builderLinkage"></select></label><label id="childEndLabel"></label><select id="builderChildEnd"><option value="start">Start</option><option value="end">End</option></select></div></div><div id="builderReaction"><div id="builderManualFamily" hidden><label for="builderFamily" id="familyLabel"></label><select id="builderFamily"></select></div><label for="builderReagentFile" id="builderReagentLabel" hidden></label><input type="file" id="builderReagentFile" accept=".mol,.sdf"><textarea id="builderReagent" placeholder="MOL / SDF"></textarea><button id="builderDetect" hidden></button><label id="builderCandidateLabel" hidden><span id="builderChoice"></span><select id="builderCandidate"></select></label><p id="builderCandidateInfo" class="muted" role="status"></p><button type="button" id="builderManual" aria-controls="builderManualFamily" aria-expanded="false"></button></div><div class="triptych"><div id="builderStarting"></div><div id="builderSecondary"></div></div><div class="row"><button id="builderPreview"></button><button id="builderApply" disabled></button></div><div id="builderProduct"></div></section><p id="builderStatus" role="status"></p>`;
+ host.innerHTML=`<h2 id="builderTitle"></h2><p id="builderHelp" class="muted"></p><div class="row"><button id="builderStart"></button><button id="builderRestore"></button><input type="file" id="builderStateFile" accept=".json" hidden></div><div id="builderHistory"></div><button id="builderAdd"></button><section id="builderDraft" hidden><label id="operationLabel"></label><select id="builderOperation"><option value="reaction"></option><option value="branch"></option></select><div id="builderBranch"><label id="branchSiteLabel"></label><select id="builderSite"></select><label id="branchSequenceLabel"></label><textarea id="builderSequence" spellcheck="false" placeholder="rArC / [GlycerolBranch]rA / [UserBlock]rA"></textarea><div class="row"><label><span data-ui="backbone.linkage"></span><select id="builderLinkage"></select></label><span id="childEndLabel"></span></div></div><div id="builderReaction"><div id="builderManualFamily" hidden><label for="builderFamily" id="familyLabel"></label><select id="builderFamily"></select></div><label for="builderReagentFile" id="builderReagentLabel" hidden></label><input type="file" id="builderReagentFile" accept=".mol,.sdf"><textarea id="builderReagent" placeholder="MOL / SDF"></textarea><button id="builderDetect" hidden></button><label id="builderCandidateLabel" hidden><span id="builderChoice"></span><select id="builderCandidate"></select></label><p id="builderCandidateInfo" class="muted" role="status"></p><button type="button" id="builderManual" aria-controls="builderManualFamily" aria-expanded="false"></button></div><div class="triptych"><div id="builderStarting"></div><div id="builderSecondary"></div></div><div class="row"><button id="builderPreview"></button><button id="builderApply" disabled></button></div><div id="builderProduct"></div></section><p id="builderStatus" role="status"></p>`;
  const exportProduct=document.createElement('button');
  exportProduct.id='builderExportProduct';exportProduct.type='button';exportProduct.hidden=true;
  $('builderStatus').after(exportProduct);
- const families=['','CAP','Condensation','Click','IEDDA','DisulfideReduction','ThiolMaleimide'];
+ const families=['','CAP','Condensation','Click','IEDDA','DisulfideReduction','ThiolMaleimide','ThiolOxadiazole'];
  for(const id of families){const o=document.createElement('option');o.value=id;$('builderFamily').append(o);}
  for(const id of Object.keys(Lite.linkageDefinitions).filter(k=>k!=='PMO')){const o=document.createElement('option');o.value=id;o.textContent=id;$('builderLinkage').append(o);}
- const operationName=s=>({BranchElongation:txt('分支延长','Branch Elongation'),Condensation:txt('胺偶联','Amine Coupling'),DisulfideReduction:txt('二硫键还原','Disulfide Reduction'),ThiolMaleimide:txt('巯基–马来酰亚胺','Thiol–Maleimide'),Click:'Click Reaction',IEDDA:txt('IEDDA / 四嗪偶联','IEDDA / Tetrazine Ligation'),CAP:'CAP'}[s.operation?.kind]||txt('起始序列','Starting Sequence'));
- const record=s=>Sandbox.record(s.graph,{moleculeState:s,assemblyGraph:s.assemblyGraph,optical:s.optical});
+ const operationName=s=>({BranchElongation:UILanguage.text("branch.elongation"),Condensation:UILanguage.text("amine.coupling"),DisulfideReduction:UILanguage.text("disulfide.reduction"),ThiolOxadiazole:UILanguage.text("thiol.oxadiazole"),ThiolMaleimide:UILanguage.text("thiol.maleimide"),Click:ReactionLabels.name({family:'Click'}),IEDDA:UILanguage.text("iedda.tetrazine.ligation"),CAP:'CAP'}[s.operation?.kind]||UILanguage.text("starting.sequence"));
+ const record=MoleculeBuilder.record;
  function invalidate(){preview=null;exportProduct.hidden=true;$('builderApply').disabled=true;$('builderProduct').replaceChildren();}
- function attempt(fn){try{return fn();}catch(e){$('builderStatus').textContent=e.message;}}
+ function attempt(fn){try{return fn();}catch(e){UILanguage.errorInto($('builderStatus'),e);}}
  function history(){
   const box=$('builderHistory'),open=new Set(Array.from(box.querySelectorAll('details[open]')).map(e=>e.dataset.state));box.replaceChildren();
-  states.forEach((s,i)=>{const d=document.createElement('details');d.dataset.state=s.id;d.open=i===states.length-1||open.has(s.id);const summary=document.createElement('summary');summary.textContent=(s===current()?txt('当前分子 · ','Current Molecule · '):'')+i+' · '+operationName(s)+' · '+s.formula;d.append(summary);const v=document.createElement('div');d.append(v);let mounted=false;const mount=()=>{if(d.open&&!mounted){LocalViewers.mount(v,record(s),{title:summary.textContent,exports:{name:'molecule-'+s.id}});mounted=true;}};d.addEventListener('toggle',mount);mount();const row=document.createElement('div');row.className='row';const use=document.createElement('button');use.textContent=txt('从此状态继续','Continue from this state');use.onclick=()=>{active=s;history();openDraft();};row.append(use);d.append(row);box.append(d);});
+  states.forEach((s,i)=>{const d=document.createElement('details');d.dataset.state=s.id;d.open=i===states.length-1||open.has(s.id);const summary=document.createElement('summary');summary.textContent=(s===current()?UILanguage.text("current.molecule"):'')+i+' · '+operationName(s)+' · '+s.formula;d.append(summary);const v=document.createElement('div');d.append(v);let mounted=false;const mount=()=>{if(d.open&&!mounted){LocalViewers.mount(v,record(s),{title:summary.textContent,exports:{name:'molecule-'+s.id}});mounted=true;}};d.addEventListener('toggle',mount);mount();const row=document.createElement('div');row.className='row';const use=document.createElement('button');use.textContent=UILanguage.text("continue.from.this.state");use.onclick=()=>{active=s;history();openDraft();};row.append(use);d.append(row);box.append(d);});
   $('builderAdd').disabled=!states.length;
  }
- function start(){invalidate();const s=$('kind').value==='sequence'?MoleculeBuilder.start($('input').value):MoleculeBuilder.fromGraph(Sandbox.A[$('kind').value]($('input').value).graph);states=[s];active=null;history();$('builderDraft').hidden=true;$('builderStatus').textContent=txt('已建立状态 0。点击 + 添加步骤继续。','State 0 created. Use + Add Step to continue.');}
+ function start(){invalidate();const s=$('kind').value==='sequence'?MoleculeBuilder.start($('input').value):MoleculeBuilder.fromGraph(Sandbox.A[$('kind').value]($('input').value).graph);states=[s];active=null;history();$('builderDraft').hidden=true;UILanguage.write($('builderStatus'),()=>UILanguage.text("state.0.created.use.add.step.to.continue"));}
  const manual=()=>!$('builderManualFamily').hidden;
  const branchMode=()=>$('builderOperation').value==='branch';
  const selectedFamily=()=>manual()?($('builderFamily').value||null):null;
@@ -31,18 +31,24 @@ const MoleculeBuilderUI=(()=>{
  function updateOperation(){
   invalidate();const branch=branchMode();$('builderSecondary').hidden=branch;$('builderBranch').hidden=!branch;$('builderReaction').hidden=branch;
   const s=current();if(!s)return;
-  const old=$('builderSite').value;$('builderSite').replaceChildren();for(const site of MoleculeBuilder.available(s)){const o=document.createElement('option');o.value=site.id;const laneIndex=s.assemblyGraph.lanes.findIndex(l=>l.id===site.path);o.textContent=(laneIndex?txt('分支序列 ','Branch Sequence ')+laneIndex:txt('主序列','Main Sequence'))+' / '+txt('单元 ','Unit ')+site.node.slice(1)+' / '+site.label+' · '+site.element+(site.atom+1);$('builderSite').append(o);}
-  if(Array.from($('builderSite').options).some(o=>o.value===old))$('builderSite').value=old;
+  renderBranchSites();
   if(!branch){refreshReaction();return;}
   $('builderPreview').disabled=!$('builderSite').options.length;
-  $('builderStatus').textContent=$('builderPreview').disabled?txt('当前分子没有可用的分支位点。','No available branch AttachmentSites on this molecule.'):'';
-  const site=s.attachmentSites.find(s=>s.id===$('builderSite').value);
-  LocalViewers.mount('builderStarting',record(s),{title:txt('起始分子','Starting Molecule'),selectedSite:site?{atoms:{[site.label]:site.atom}}:null});
+  UILanguage.write($('builderStatus'),()=>$('builderPreview').disabled?UILanguage.text("no.available.branch.attachmentsites.on.this.molecule"):'');
+  renderBranchStarting();
+ }
+ function renderBranchSites(){
+  const s=current(),old=$('builderSite').value;$('builderSite').replaceChildren();for(const site of MoleculeBuilder.available(s)){const o=document.createElement('option');o.value=site.id;const laneIndex=s.assemblyGraph.lanes.findIndex(l=>l.id===site.path);o.textContent=(laneIndex?UILanguage.text("branch.sequence")+laneIndex:UILanguage.text("main.sequence"))+' / '+UILanguage.text("unit")+site.node.slice(1)+' / '+UILanguage.branchLabel(site.label)+' · '+site.element+(site.atom+1);$('builderSite').append(o);}
+  if(Array.from($('builderSite').options).some(o=>o.value===old))$('builderSite').value=old;
+ }
+ function renderBranchStarting(){
+  const s=current(),site=s.attachmentSites.find(s=>s.id===$('builderSite').value);
+  LocalViewers.mount('builderStarting',record(s),{title:UILanguage.text("starting.molecule"),selectedSite:site?{atoms:{[site.label]:site.atom},labels:{[site.label]:UILanguage.branchLabel(site.label)}}:null});
  }
  function setManual(value){
   $('builderManualFamily').hidden=!value;
   $('builderManual').setAttribute('aria-expanded',String(value));
-  $('builderManual').textContent=value?txt('返回快速模式','Back to Quick'):txt('高级 / 手动','Advanced / Manual');
+  $('builderManual').textContent=value?UILanguage.text("back.to.quick"):UILanguage.text("advanced.manual");
   $('builderDetect').hidden=!value;
  }
  function openDraft(){if(!states.length)return;$('builderDraft').hidden=false;uploadRevision++;reagentSource.reset();$('builderFamily').value='';setManual(false);updateOperation();}
@@ -50,77 +56,61 @@ const MoleculeBuilderUI=(()=>{
   const s=current();if(!s)return;
   const sharedPair=candidates.length&&candidates.every(c=>c.site_pair_id===candidates[0].site_pair_id);
   const c=selectedCandidate()||(sharedPair?candidates[0]:null);
-  LocalViewers.mount('builderStarting',record(s),{title:txt('起始分子','Starting Molecule'),selectedSite:c?.sites[0]});
-  LocalViewers.mount('builderSecondary',secondary?Sandbox.record(secondary):null,{title:txt('第二反应物','Secondary reagent'),selectedSite:c?.sites[1]});
+  LocalViewers.mount('builderStarting',record(s),{title:UILanguage.text("starting.molecule"),selectedSite:c?.sites[0]});
+  LocalViewers.mount('builderSecondary',secondary?Sandbox.record(secondary):null,{title:UILanguage.text("secondary.reagent"),selectedSite:c?.sites[1]});
  }
  function siteLabel(site,withAtoms){
-  const motif=(site.motif_type||site.type).replaceAll('_',' ');
+  const motif=ReactionLabels.motif(site.motif_type||site.type);
   if(!withAtoms)return motif;
   const graph=site.input===0?current().graph:secondary;
   return motif+' ('+Object.values(site.atoms).map(i=>graph.atoms[i].e+(i+1)).join(', ')+')';
  }
  function candidateLabel(c){
-  const name=c.reaction_name||Reactions.v2.families[c.family].name;
+  const name=ReactionLabels.name(c);
   const sites=c.sites.map(s=>siteLabel(s,true)).join(' + ');
   let choice='';
   if(c.regioselectivity==='not_predicted'){
    const azide=c.sites[c.roles.indexOf('azide')],alkyne=c.sites[c.roles.indexOf('strainedAlkyne')];
    const [c1,c2]=c.orientation==='b'?[alkyne.atoms.internal,alkyne.atoms.terminal]:[alkyne.atoms.terminal,alkyne.atoms.internal];
-   const input=s=>s.input===0?txt('起始','Start'):txt('试剂','Reagent');
-   choice=txt('新键 ','New bonds ')+input(azide)+' N'+(azide.atoms.proximal+1)+'–'+input(alkyne)+' C'+(c1+1)+
+   const input=s=>s.input===0?UILanguage.text("start"):UILanguage.text("reagent");
+   choice=UILanguage.text("new.bonds")+input(azide)+' N'+(azide.atoms.proximal+1)+'–'+input(alkyne)+' C'+(c1+1)+
     ', '+input(azide)+' N'+(azide.atoms.distal+1)+'–'+input(alkyne)+' C'+(c2+1);
   }else if(c.retained_component!=null){
    const fragment=c.fragments[c.retained_component],sulfur=Object.values(c.sites[0].atoms).filter(i=>fragment.atom_indices.includes(i));
-   choice=txt('保留含 ','Retain fragment with ')+sulfur.map(i=>'S'+(i+1)).join(' + ')+
-    ' ('+fragment.atom_count+txt(' 个显式原子)',' explicit atoms)');
+   choice=UILanguage.text("retain.fragment.with")+sulfur.map(i=>'S'+(i+1)).join(' + ')+
+    ' ('+fragment.atom_count+UILanguage.text("explicit.atoms");
   }
   return [name,sites,choice].filter(Boolean).join(' · ');
- }
- function distinctProducts(plans){
-  const counts=new Map();
-  for(const c of plans)counts.set(c.transformation_id,(counts.get(c.transformation_id)||0)+1);
-  const seen=new Set();
-  return plans.filter(c=>{
-   if(counts.get(c.transformation_id)===1)return true;
-   const inputs=secondary?[current().graph,secondary]:[current().graph];
-   const result=Reactions.v2.transform(c.family,inputs,c.candidate_id);
-   if(!result.product_graph)return false;
-   const identity=SmallFragmentDepictor.productIdentity(result.product_graph);
-   if(!identity)return true;
-   const key=JSON.stringify([c.transformation_id,result.properties.formula,identity]);
-   if(seen.has(key))return false;
-   seen.add(key);return true;
-  });
  }
  function updateCandidate(){
   const c=selectedCandidate(),info=$('builderCandidateInfo');
   $('builderPreview').disabled=!c;
   $('builderApply').disabled=!preview;
   if(c){
-   const name=c.reaction_name||Reactions.v2.families[c.family].name;
-   info.textContent=[txt('识别反应：','Detected reaction: ')+name,c.sites.map(s=>siteLabel(s,false)).join(' + '),
-    c.semantics.includes('activation_required')?txt('形式缩合，需活化','Formal condensation; activation required'):'',
-    c.structural_compatibility?txt('结构兼容，实验工艺未验证','Structurally compatible; experimental process not validated'):'',
-    c.product_state].filter(Boolean).join(' · ');
+   const name=ReactionLabels.name(c);
+   info.textContent=[UILanguage.text("detected.reaction")+name,c.sites.map(s=>siteLabel(s,false)).join(' + '),
+    c.semantics.includes('activation_required')?UILanguage.text("formal.condensation.activation.required"):'',
+    c.structural_compatibility?UILanguage.text("structurally.compatible.experimental.process.not.validat"):'',
+    c.product_state&&UILanguage.error(c.product_state)].filter(Boolean).join(' · ');
   }else if(candidates.length){
    const pairs=new Set(candidates.map(c=>c.site_pair_id)).size,defs=new Set(candidates.map(c=>c.definition_id)).size;
-   info.textContent=manual()&&selectedFamily()?txt('请选择候选位点或产物。','Choose a site pair or product.'):
-    defs>1?txt('检测到多个兼容反应，请选择。','Multiple compatible reactions detected. Choose a reaction and sites.'):
-    pairs>1?txt('有多对兼容位点，请选择。','Multiple compatible site pairs. Choose the sites.'):
-    txt('识别反应：','Detected reaction: ')+candidates[0].reaction_name+
-     (candidates[0].retained_component!=null?txt('。请选择保留片段。','. Choose the retained fragment.'):txt('。请选择产物连接方式。','. Choose the product connectivity.'));
+   info.textContent=manual()&&selectedFamily()?UILanguage.text("choose.a.site.pair.or.product"):
+    defs>1?UILanguage.text("multiple.compatible.reactions.detected.choose.a.reaction"):
+    pairs>1?UILanguage.text("multiple.compatible.site.pairs.choose.the.sites"):
+    UILanguage.text("detected.reaction")+ReactionLabels.name(candidates[0])+
+     (candidates[0].retained_component!=null?UILanguage.text("choose.the.retained.fragment"):UILanguage.text("choose.the.product.connectivity"));
   }else if(quickResult){
-   const motifs=quickResult.motifs.map(m=>m.length?m.map(x=>x.replaceAll('_',' ')).join(', '):txt('无受支持的基团','no supported motifs'));
-   info.textContent=quickResult.reason==='NO_UNARY_REACTION'?txt('选择或上传第二反应物。','Select or upload a second reactant.')+
-    ' · '+txt('当前分子','Current molecule')+' ['+motifs[0]+']':txt('未检测到兼容反应','No compatible reaction detected')+' · '+
-    (quickResult.reason==='NO_COMPLEMENTARY_MOTIFS'?txt('基团不互补','Motifs are not complementary')+' · ':'')+
-    txt('当前分子','Current molecule')+' ['+motifs[0]+'] / '+txt('第二反应物','Reagent')+' ['+motifs[1]+']';
+   const motifs=quickResult.motifs.map(m=>m.length?m.map(ReactionLabels.motif).join(', '):UILanguage.text("no.supported.motifs"));
+   info.textContent=quickResult.reason==='NO_UNARY_REACTION'?UILanguage.text("select.or.upload.a.second.reactant")+
+    ' · '+UILanguage.text("current.molecule.2")+' ['+motifs[0]+']':UILanguage.text("no.compatible.reaction.detected")+' · '+
+    (quickResult.reason==='NO_COMPLEMENTARY_MOTIFS'?UILanguage.text("motifs.are.not.complementary")+' · ':'')+
+    UILanguage.text("current.molecule.2")+' ['+motifs[0]+'] / '+UILanguage.text("reagent.2")+' ['+motifs[1]+']';
   }else info.textContent='';
   highlightReaction();
  }
  function populateCandidates(preserve=false){
   const select=$('builderCandidate'),old=select.value;
-  select.replaceChildren(new Option(txt('选择候选','Choose a candidate'),''));
+  select.replaceChildren(new Option(UILanguage.text("choose.a.candidate"),''));
   for(const c of candidates)select.add(new Option(candidateLabel(c),c.candidate_id));
   select.value=candidates.length===1?candidates[0].candidate_id:preserve&&candidates.some(c=>c.candidate_id===old)?old:'';
   $('builderCandidateLabel').hidden=candidates.length<2;
@@ -136,10 +126,10 @@ const MoleculeBuilderUI=(()=>{
    $('builderSecondary').hidden=family==='DisulfideReduction';
    if(!family){
     if(reagentSource.hasSelection())secondary=reagentSource.graph();
-    quickResult=Reactions.v2.findCompatibleReactionPlans(current().graph,secondary);
-    candidates=distinctProducts(quickResult.plans.filter(c=>c.materialization_eligible));
+    quickResult=MoleculeBuilder.quick(current(),secondary);
+    candidates=quickResult.candidates;
    }
-  }catch(e){$('builderStatus').textContent=e.message;}
+  }catch(e){UILanguage.errorInto($('builderStatus'),e);}
   populateCandidates();
  }
  function detect(){
@@ -148,11 +138,11 @@ const MoleculeBuilderUI=(()=>{
   if(!family)return;
   secondary=family==='DisulfideReduction'?null:reagentSource.graph();
   const result=Reactions.v2.candidates(family,secondary?[s.graph,secondary]:[s.graph]);
-  candidates=distinctProducts(result.candidates);
+  candidates=MoleculeBuilder.distinctProducts(result.candidates,s.graph,secondary);
   populateCandidates();
   if(!candidates.length){
    $('builderCandidateInfo').textContent=family==='CAP'
-    ?txt('未检测到兼容的 CAP 位点对。需要受支持的末端磷酸和活化的 m7GDP 试剂。','No compatible CAP site pair. A supported terminal phosphate and activated m7GDP reagent are required.')
+    ?UILanguage.text("no.compatible.cap.site.pair.a.supported.terminal.phospha")
     :result.reason;
   }
  }
@@ -160,7 +150,7 @@ const MoleculeBuilderUI=(()=>{
  $('builderManual').onclick=()=>{setManual(!manual());refreshReaction();};
  $('builderFamily').onchange=refreshReaction;
  $('builderDetect').onclick=()=>attempt(detect);
- for(const id of ['builderSequence','builderLinkage','builderChildEnd'])$(id).addEventListener('input',invalidate);
+ for(const id of ['builderSequence','builderLinkage'])$(id).addEventListener('input',invalidate);
  $('builderCandidate').oninput=()=>{invalidate();$('builderStatus').textContent='';updateCandidate();};
  let uploadRevision=0;
  $('builderReagent').oninput=()=>{uploadRevision++;refreshReaction();};
@@ -172,35 +162,41 @@ const MoleculeBuilderUI=(()=>{
    const value=await file.text();
    if(token!==uploadRevision||state!==current()||$('builderDraft').hidden)return;
    $('builderReagent').value=value;refreshReaction();
-  }catch(e){if(token===uploadRevision)$('builderStatus').textContent=e.message;}
+  }catch(e){if(token===uploadRevision)UILanguage.errorInto($('builderStatus'),e);}
  };
  function materialize(){
   const s=current();
-  if(branchMode())return MoleculeBuilder.branch(s,{siteId:$('builderSite').value,sequence:$('builderSequence').value,linkage:$('builderLinkage').value,childEnd:$('builderChildEnd').value});
+  if(branchMode())return MoleculeBuilder.branch(s,{siteId:$('builderSite').value,sequence:$('builderSequence').value,linkage:$('builderLinkage').value});
   const c=selectedCandidate();
-  if(!c)throw Error(txt('请选择反应位点。','Select reaction sites.'));
+  if(!c)throw Error(UILanguage.text("select.reaction.sites"));
   return MoleculeBuilder.react(s,{family:c.family,secondary,candidateId:c.candidate_id});
  }
  $('builderPreview').onclick=()=>attempt(()=>{
   invalidate();preview=materialize();
-  LocalViewers.mount('builderProduct',record(preview),{title:txt('预览产物','Product Preview')});
+  renderProduct();
   $('builderApply').disabled=false;
-  $('builderStatus').textContent=txt('预览已就绪；应用后保存新状态。','Preview ready; Apply commits a new state.');
+  UILanguage.write($('builderStatus'),()=>UILanguage.text("preview.ready.apply.commits.a.new.state"));
  });
  $('builderApply').onclick=()=>attempt(()=>{
   const next=preview;
   if(!next)return;
   states.push(next);active=null;invalidate();$('builderDraft').hidden=true;history();
-  $('builderStatus').textContent=txt('已保存新状态。可导出或添加步骤。','New state saved. Export or add another step.');
+  UILanguage.write($('builderStatus'),()=>UILanguage.text("new.state.saved.export.or.add.another.step"));
   if(next.operation.kind==='Click'){
    exportProduct.onclick=()=>attempt(()=>LocalViewers.exportChemDraw('click-product',next.graph));
    exportProduct.hidden=false;
   }
  });
- $('builderRestore').onclick=()=>$('builderStateFile').click();$('builderStateFile').onchange=async()=>{try{const f=$('builderStateFile').files[0];if(!f)return;const s=MoleculeBuilder.restore(await f.text());states=[s];active=null;invalidate();history();$('builderDraft').hidden=true;}catch(e){$('builderStatus').textContent=e.message;}finally{$('builderStateFile').value='';}};
+ $('builderRestore').onclick=()=>$('builderStateFile').click();$('builderStateFile').onchange=async()=>{try{const f=$('builderStateFile').files[0];if(!f)return;const s=MoleculeBuilder.restore(await f.text());states=[s];active=null;invalidate();history();$('builderDraft').hidden=true;}catch(e){UILanguage.errorInto($('builderStatus'),e);}finally{$('builderStateFile').value='';}};
  $('run').addEventListener('click',()=>{if(UI.current?.input===$('input').value)attempt(start);});
- function localize(){for(const [id,zh,eng]of [['builderTitle','分子构建 · 操作与状态','Molecule Builder · Operations & States'],['builderHelp','序列 → 反应 / 分支延长 → 任意后续步骤。Apply 保存状态；Export 导出状态。','Sequence → Reaction / Branch Elongation → further steps. Apply saves a state; Export exports it.'],['builderStart','从输入序列建立新分子','Start new molecule from input sequence'],['builderRestore','导入分子状态','Import molecule state'],['builderAdd','+ 添加步骤','+ Add Step'],['operationLabel','操作类型','Operation type'],['branchSiteLabel','可用分支位点','Available branch site'],['branchSequenceLabel','分支序列（与主序列语法相同）','Branch Sequence (same syntax as main sequence)'],['childEndLabel','子序列连接端','Child Sequence endpoint'],['familyLabel','反应类型','Reaction family'],['builderReagentLabel','选择第二反应物（MOL / SDF）','Choose Secondary Reagent (MOL / SDF)'],['builderDetect','检测兼容位点','Detect compatible sites'],['builderPreview','预览产物','Preview Product'],['builderChoice','兼容候选','Compatible options'],['builderApply','应用','Apply']])$(id).textContent=txt(zh,eng);
-  $('builderChildEnd').options[0].textContent=txt('起点（输入序列首端）','Start (first end in input notation)');$('builderChildEnd').options[1].textContent=txt('终点（输入序列末端）','End (last end in input notation)');$('builderOperation').options[0].textContent=txt('合成后修饰','Post-functionalization');$('builderOperation').options[1].textContent=txt('分支延长','Branch Elongation');const names=en()?['Auto-detect','CAP','Amine Coupling','Click Reaction','IEDDA / Tetrazine Ligation','Disulfide Reduction','Thiol–Maleimide']:['自动检测','CAP','胺偶联','Click Reaction','IEDDA / 四嗪偶联','二硫键还原','巯基–马来酰亚胺'];Array.from($('builderFamily').options).forEach((o,i)=>o.textContent=names[i]);setManual(manual());history();
+ function renderProduct(){
+  LocalViewers.mount('builderProduct',record(preview),{title:UILanguage.text("product.preview")});
+ }
+ function localize(){for(const [id,zh,eng]of [['builderTitle','分子构建 · 操作与状态','Molecule Builder · Operations & States'],['builderHelp','从序列开始，逐步进行反应或支链延长。应用后可导出该步骤的分子状态。','Sequence → Reaction / Branch Elongation → further steps. Apply saves a state; Export exports it.'],['builderStart','从输入序列建立新分子','Start new molecule from input sequence'],['builderRestore','导入分子状态','Import molecule state'],['builderAdd','+ 添加步骤','+ Add Step'],['operationLabel','操作类型','Operation type'],['branchSiteLabel','可用支链位点','Available branch site'],['branchSequenceLabel','支链序列（与主序列语法相同）','Branch Sequence (same syntax as main sequence)'],['childEndLabel','支链按 5′→3′ 输入，经 3′ 端连接','Enter child 5′→3′. Attaches at 3′.'],['familyLabel','反应类型','Reaction family'],['builderReagentLabel','选择第二反应物（MOL / SDF）','Choose Secondary Reagent (MOL / SDF)'],['builderDetect','检测兼容位点','Detect compatible sites'],['builderPreview','预览产物','Preview Product'],['builderChoice','兼容候选','Compatible options'],['builderApply', '应用修饰', 'Apply Modification']])$(id).textContent=txt(zh,eng);
+  $('builderOperation').options[0].textContent=UILanguage.text("post.functionalization");$('builderOperation').options[1].textContent=UILanguage.text("branch.elongation");const names=en()?['Auto-detect','CAP','Amine Coupling','Click Reaction','IEDDA / Tetrazine Ligation','Disulfide Reduction','Thiol–Maleimide','Thiol–Oxadiazole']:['自动检测','CAP','胺偶联','点击反应','IEDDA / 四嗪偶联','二硫键还原','巯基–马来酰亚胺','巯基–噁二唑'];Array.from($('builderFamily').options).forEach((o,i)=>o.textContent=names[i]);setManual(manual());history();
+  Array.from(editor.children).forEach((row,i)=>row.firstChild.textContent=UILanguage.text("branch")+(i+1)+' ');
+  if(!$('builderDraft').hidden&&branchMode()){renderBranchSites();renderBranchStarting();}
+  if(preview)renderProduct();
   if(!$('builderDraft').hidden&&!branchMode()){
    const canApply=!$('builderApply').disabled;
    reagentSource.refresh(true,selectedFamily()!=='DisulfideReduction');
@@ -209,9 +205,9 @@ const MoleculeBuilderUI=(()=>{
   }
  }
  // Extend the existing editor with optional, unbounded branch selections.
- const editor=document.createElement('div');editor.id='branchSelectors';$('customStatus').before(editor);const add=document.createElement('button');add.id='addBranchAttachment';add.textContent='＋ Branch AttachmentSite';editor.before(add);
- window.addBranchSelector=(atom='')=>{const row=document.createElement('label'),index=editor.children.length+1;row.textContent='Branch '+index+' ';const select=$('fiveOH').cloneNode(true);select.removeAttribute('id');select.dataset.branchAtom='';select.value=String(atom);select.addEventListener('change',()=>{const vals=Array.from(editor.querySelectorAll('select')).filter(e=>e.value!=='').map(e=>Number(e.value));$('customStatus').textContent=vals.map((a,i)=>'Branch '+(i+1)+' → O'+(a+1)).join(' · ');});row.append(select);const remove=document.createElement('button');remove.textContent='×';remove.onclick=()=>{row.remove();Array.from(editor.children).forEach((r,i)=>r.firstChild.textContent='Branch '+(i+1)+' ');};row.append(remove);editor.append(row);};add.onclick=()=>window.addBranchSelector();
- const localizeExport=()=>{exportProduct.textContent=txt('导出最终产物 (.cdxml)','Export final product (.cdxml)');};
+ const editor=document.createElement('div');editor.id='branchSelectors';$('customStatus').before(editor);const add=document.createElement('button');add.id='addBranchAttachment';add.dataset.ui="add.branch.attachment.site";editor.before(add);
+ window.addBranchSelector=(atom='')=>{const row=document.createElement('label'),index=editor.children.length+1;row.textContent=UILanguage.text("branch")+index+' ';const select=$('fiveOH').cloneNode(true);select.removeAttribute('id');select.dataset.branchAtom='';select.value=String(atom);select.addEventListener('change',()=>{const vals=Array.from(editor.querySelectorAll('select')).filter(e=>e.value!=='').map(e=>Number(e.value));$('customStatus').textContent=vals.map((a,i)=>UILanguage.text("branch")+(i+1)+' → O'+(a+1)).join(' · ');});row.append(select);const remove=document.createElement('button');remove.textContent='×';remove.onclick=()=>{row.remove();Array.from(editor.children).forEach((r,i)=>r.firstChild.textContent=UILanguage.text("branch")+(i+1)+' ');};row.append(remove);editor.append(row);};add.onclick=()=>window.addBranchSelector();
+ const localizeExport=()=>{exportProduct.textContent=UILanguage.text("export.final.product.cdxml");};
  $('language').addEventListener('change',localize);$('language').addEventListener('change',localizeExport);localize();localizeExport();
  SmallFragmentDepictor.ready.then(()=>{
   if(preview||$('builderDraft').hidden||branchMode())return;

@@ -86,5 +86,14 @@
     "rule": "iedda-n2/1",
     "product_class": "4,5-dihydropyridazine",
     "product_state": "4,5-dihydropyridazine after N2 extrusion; before tautomerization or oxidation; new stereochemistry unspecified"
+  },
+  "thiol-oxadiazole/2": {
+    "family": "ThiolOxadiazole",
+    "roles": [
+      "thiol",
+      "methylsulfonylOxadiazole"
+    ],
+    "rule": "oxadiazole-thiol-substitution/1",
+    "product_class": "oxadiazolyl_thioether"
   }
 }

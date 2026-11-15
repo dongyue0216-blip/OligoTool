@@ -65,6 +65,11 @@ const Reactions = (() => {
  }
  const definitions=BuiltinChemistry.reactionDefinitions;
  const rules={
+  'oxadiazole-thiol-substitution/1':(g,a,b,e)=>{
+   e.h(a.s,-1);
+   e.removeComponent(b.leavingS,b.carbon);
+   e.add(a.s,b.carbon);
+  },
   'thio-michael-reverse/1':(g,a,b,e)=>rules['thio-michael/1'](g,b,a,e),
   'diphosphate-imidazolide/1':(g,a,b,e)=>{if(g.atoms[a.o].q===-1)e.charge(a.o,0);else e.h(a.o,-1);e.removeComponent(b.leavingN,b.p);e.add(a.o,b.p);},
   'phosphate-condensation/1':(g,a,b,edit)=>{if(g.atoms.filter(x=>x.e==='P').length<3)fail('requires phosphate plus diphosphate');edit.h(a.o,-1);edit.removeComponent(b.o,b.p);edit.add(a.o,b.p);},
@@ -265,7 +270,36 @@ const Reactions = (() => {
    for(const o of oxygens)found.push({type:'terminalPhosphateNucleophile',motif_type:'terminal_phosphorus_nucleophile',atoms:{p,o:o.i},label:'Terminal P '+(p+1)+' / nucleophilic O '+(o.i+1),structural_compatibility:'COMPATIBLE',process_validation:'NOT_ESTABLISHED'});
   });return {sites:found,diagnostics};
  }
+ // CDX reference: O1–C2=N3–N4=C5–O1, with C5–S(=O)2–CH3.
+ function methylsulfonylOxadiazoleSites(g){
+  const out=[];
+  const neutral=(i,element,hydrogens=0)=>{
+   const a=g.atoms[i];
+   return a.e===element&&!a.q&&a.h===hydrogens;
+  };
+  g.atoms.forEach((_,leavingS)=>{
+   if(!neutral(leavingS,'S'))return;
+   const neighbors=adj(g,leavingS);
+   if(neighbors.length!==4)return;
+   const oxo=neighbors.filter(n=>n.o===2&&neutral(n.i,'O')&&adj(g,n.i).length===1);
+   const methyl=neighbors.filter(n=>n.o===1&&neutral(n.i,'C',3)&&adj(g,n.i).length===1);
+   if(oxo.length!==2||methyl.length!==1)return;
+   const center=neighbors.find(n=>n.o===1&&n.i!==methyl[0].i&&neutral(n.i,'C'));
+   if(!center||adj(g,center.i).length!==3)return;
+   const carbon=center.i;
+   const ring=rings(g,carbon,5).some(path=>[path,[path[0],...path.slice(1).reverse()]].some(r=>{
+    const [,n4,n3,c2,o1]=r;
+    return [n4,n3,o1].every((i,k)=>neutral(i,k===2?'O':'N')&&adj(g,i).length===2)&&
+     g.atoms[c2].e==='C'&&!g.atoms[c2].q&&
+     [2,1,2,1,1].every((order,k)=>bond(g,r[k],r[(k+1)%5]).o===order);
+   }));
+   if(ring)out.push({type:'methylsulfonylOxadiazole',motif_type:'methylsulfonyl_1_3_4_oxadiazole',
+    atoms:{carbon,leavingS},label:'Methylsulfonyl-1,3,4-oxadiazole · C '+(carbon+1)});
+  });
+  return out;
+ }
  function v2Sites(g,type){
+  if(type==='methylsulfonylOxadiazole')return methylsulfonylOxadiazoleSites(g);
   if(type==='azide'){
    // Keep the legacy cumulene matcher and accept the equivalent R–N⁻–N⁺≡N CTfile form.
    const out=sites(g,type).map(s=>({...s,motif_type:type}));
@@ -304,18 +338,35 @@ const Reactions = (() => {
    let id='input-'+k+':atom-'+i;while(seen.has(id))id+=':new';seen.add(id);a.reaction_atom_id=id;
   });return g;});
  }
- function detect(inputs){const gs=identify(inputs);return {schema_version:'reaction-sites/2',inputs:gs,candidate_sites:gs.map((g,k)=>Object.fromEntries(['amine','acylDonor','azide','alkyne','strainedAlkyne','tetrazine','strainedAlkene','terminalPhosphateNucleophile','m7GDPImidazolide','thiol','maleimide','disulfide'].map(type=>[type,v2Sites(g,type).map(s=>decorate(s,g,k))])))};}
+ function detect(inputs){
+  const gs=identify(inputs);
+  return {schema_version:'reaction-sites/2',inputs:gs,candidate_sites:gs.map((g,k)=>{
+   const types=['amine','acylDonor','azide','alkyne','strainedAlkyne','tetrazine','strainedAlkene','terminalPhosphateNucleophile','m7GDPImidazolide','thiol','maleimide','disulfide'];
+   const groups=Object.fromEntries(types.map(type=>[type,v2Sites(g,type).map(s=>decorate(s,g,k))]));
+   const electrophiles=methylsulfonylOxadiazoleSites(g);
+   if(electrophiles.length)groups.methylsulfonylOxadiazole=electrophiles.map(s=>decorate(s,g,k));
+   return groups;
+  })};
+ }
  function decorate(s,g,input){const selected_atom_ids=Object.fromEntries(Object.entries(s.atoms).map(([k,i])=>[k,g.atoms[i].reaction_atom_id]));
   return {...copy(s),input,selected_atom_ids,site_id:input+':'+s.type+':'+Object.values(selected_atom_ids).join('|')};
  }
- function candidates(family,inputs){if(family==='DisulfideReduction')return reductionCandidates(inputs);if(!families[family])fail('unknown family','UNKNOWN_FAMILY');if(family==='CAP')inputs=inputs.map(value=>normalizeCapGraph(copy(value.graph||value)));return binaryCandidates(family,detect(inputs));}
+ function candidates(family,inputs){
+  if(family==='DisulfideReduction')return reductionCandidates(inputs);
+  if(!families[family])fail('unknown family','UNKNOWN_FAMILY');
+  if(family==='CAP')inputs=inputs.map(value=>normalizeCapGraph(copy(value.graph||value)));
+  const detected=detect(inputs);
+  // Older binary steps serialize these groups and compare them on replay.
+  if(family!=='ThiolOxadiazole')for(const groups of detected.candidate_sites)delete groups.methylsulfonylOxadiazole;
+  return binaryCandidates(family,detected);
+ }
  function binaryCandidates(family,detected){const gs=detected.inputs,out=[];if(gs.length!==2)fail('two graphs required');
   for(const [id,t]of Object.entries(registry)){if(t.family!==family)continue;
-   for(const swap of [false,true]){const roles=swap?[...t.roles].reverse():t.roles,ss=roles.map((r,k)=>detected.candidate_sites[k][r]);
+   for(const swap of [false,true]){const roles=swap?[...t.roles].reverse():t.roles,ss=roles.map((r,k)=>detected.candidate_sites[k][r]||[]);
     for(const a of ss[0])for(const b of ss[1]){
      const donor=roles[0]==='acylDonor'?a:b,spa=id==='spaac/2',formal=id==='acyl-substitution/2'&&donor.motif_type==='carboxylic_acid';
      for(const orientation of spa?['a','b']:['a']){
-      const candidate={candidate_id:id+':'+a.site_id+':'+b.site_id+':'+orientation,family,transformation_id:id,roles,sites:[a,b],role_assignment:{input_0:roles[0],input_1:roles[1]},compatibility:'COMPATIBLE',status:formal?'FORMAL':'VALIDATED',reason:formal?'activation_required/formal_condensation':spa?'explicit_regioisomer_selection_required':'validated_topology',semantics:formal?['activation_required','formal_condensation']:[],product_class:donor.product_class||t.product_class,orientation,regioselectivity:spa?'not_predicted':t.product_state?'canonical_connectivity_not_predicted':'1,4',...(t.product_state?{product_state:t.product_state}: {})};
+      const candidate={candidate_id:id+':'+a.site_id+':'+b.site_id+':'+orientation,family,transformation_id:id,roles,sites:[a,b],role_assignment:{input_0:roles[0],input_1:roles[1]},compatibility:'COMPATIBLE',status:formal?'FORMAL':'VALIDATED',reason:formal?'activation_required/formal_condensation':spa?'explicit_regioisomer_selection_required':'validated_topology',semantics:formal?['activation_required','formal_condensation']:[],product_class:donor.product_class||t.product_class,orientation,regioselectivity:spa?'not_predicted':t.product_state?'canonical_connectivity_not_predicted':id==='thiol-oxadiazole/2'?'site_defined':'1,4',...(t.product_state?{product_state:t.product_state}: {})};
       if(family==='CAP'){candidate.status='STRUCTURALLY_COMPATIBLE';candidate.reason='structural_compatibility_only; experimental_process_validation_not_established';candidate.structural_compatibility='COMPATIBLE';candidate.process_validation='NOT_ESTABLISHED';candidate.semantics.push('structural_compatibility_only','experimental_process_validation_not_established');}
       out.push(candidate);
      }
@@ -382,6 +433,19 @@ const Reactions = (() => {
     annotations.push({kind:'triazole',label:'Fused 1,2,3-triazole',state:'Selected connectivity; regioselectivity not predicted',ring:[a.proximal,a.middle,a.distal,last,first]});
    }
    if(annotations.length)product.provenance.reaction_products=annotations;
+   if(t.rule==='oxadiazole-thiol-substitution/1'){
+    const after=Object.values(detect([product]).candidate_sites[0]).flat();
+    const before=result.candidate_sites.flatMap(groups=>Object.values(groups).flat());
+    const signature=s=>JSON.stringify([s.type,...Object.entries(s.selected_atom_ids).sort()]);
+    const afterBySignature=new Map(after.map(s=>[signature(s),s]));
+    const beforeSignatures=new Set(before.map(signature));
+    const changes={
+     consumed:before.filter(s=>!afterBySignature.has(signature(s))),
+     preserved:before.flatMap(s=>afterBySignature.has(signature(s))?[{before:s,after:afterBySignature.get(signature(s))}]:[]),
+     created:after.filter(s=>!beforeSignatures.has(signature(s)))
+    };
+    product.provenance.reactive_site_changes=changes;
+   }
    return {schema_version:'reaction-result/2',family,status:c.status,reason:c.reason,semantics:c.semantics,compatibility:c.compatibility,motif_types:c.sites.map(s=>s.motif_type),candidate_sites:result.candidate_sites,candidate:copy(c),role_assignment:c.role_assignment,selected_atom_ids:c.sites.map(s=>s.selected_atom_ids),mapping,product_graph:product,properties:step.properties,step};
   }catch(e){return {schema_version:'reaction-result/2',family,status:'UNSUPPORTED',reason:e.code||e.message,detail:e.message,product_graph:null};}
  }

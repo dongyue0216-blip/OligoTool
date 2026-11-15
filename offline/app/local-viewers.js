@@ -9,7 +9,20 @@ const LocalViewers=(()=>{
   link.href=url;link.download=name;link.click();
   setTimeout(()=>URL.revokeObjectURL(url),1000);
  }
- function exportChemDraw(name,graph){download(name+'.cdxml',Lite.cdxml(graph),'application/xml');}
+ function serializeChemDraw(graph){return Lite.cdxml(graph);}
+ function exportChemDraw(name,graph){download(name+'.cdxml',serializeChemDraw(graph),'application/xml');}
+ function chemicalDrawing(record){return Sandbox.C.present(record,false).drawing;}
+ function serializeStructure(record,format,{name='',language=document.documentElement.lang,schematic,drawing}={}){
+  if(format==='svg')return Sandbox.C.present(record,false).svg;
+  if(format==='schematic.svg'){
+   const scene=schematic||StructurePresentation.schematic(record,{language});
+   if(!scene.supported)throw Error(scene.reason);
+   return exportSvg(scene);
+  }
+  if(format==='cdxml')return serializeChemDraw(drawing||chemicalDrawing(record));
+  if(format==='mol'||format==='sdf')return Lite.mol(drawing||chemicalDrawing(record),name)+(format==='sdf'?'\n$$$$\n':'');
+  throw Error('Unsupported structure format: '+format);
+ }
  function exportSvg(scene){
   // Use the renderer's original scene before the viewer applies pan and zoom.
   const measure=document.createElement('div');
@@ -36,14 +49,14 @@ const LocalViewers=(()=>{
   toolbar.classList.add('row','exports');
   const chem=document.createElement('button'),diagram=document.createElement('button');
   chem.type=diagram.type='button';
-  chem.textContent='Export ChemDraw (.cdxml)';
-  chem.title=en()?'Full atom-level structure':'完整原子级结构';
-  chem.onclick=()=>exportChemDraw(name,drawing?drawing():Sandbox.C.present(record,false).drawing);
-  diagram.textContent='Export Schematic (.svg)';
+  chem.textContent=UILanguage.text("export.chemdraw.cdxml");
+  chem.title=UILanguage.text("full.atom.level.structure");
+  chem.onclick=()=>download(name+'.cdxml',serializeStructure(record,'cdxml',{drawing:drawing?.()}),'application/xml');
+  diagram.textContent=UILanguage.text("export.schematic.svg");
   diagram.disabled=!schematic?.supported;
   const reason=schematic?.reason?.split(' / ');
-  diagram.title=diagram.disabled?(reason?.[en()?0:1]||reason?.[0]||''):(en()?'Presentation C vector diagram':'Presentation C 矢量示意图');
-  diagram.onclick=()=>download(name+'-schematic.svg',exportSvg(schematic),'image/svg+xml');
+  diagram.title=diagram.disabled?(reason?.[en()?0:1]||reason?.[0]||''):(UILanguage.text("presentation.c.vector.diagram"));
+  diagram.onclick=()=>download(name+'-schematic.svg',serializeStructure(record,'schematic.svg',{schematic}),'image/svg+xml');
   toolbar.replaceChildren(chem,diagram);
   if(!row)host.append(toolbar);
  }
@@ -83,18 +96,18 @@ const LocalViewers=(()=>{
   const products=record?StructurePresentation.reactionProducts(record):[];
   const detailed=record&&!onAtom&&!selectedSite&&requested==='detailed'?
    StructurePresentation.reactionDiagram(record,products,true):null;
-  const schematic=record&&!onAtom&&(requested==='schematic'||exports)?StructurePresentation.schematic(record,{density,selectedSite}):null;
+  const schematic=record&&!onAtom&&(requested==='schematic'||exports)?StructurePresentation.schematic(record,{density,selectedSite,language:document.documentElement.lang}):null;
   const effective=onAtom||(requested==='schematic'&&!schematic?.supported)||(selectedSite&&requested==='detailed')?'chemical':requested;
-  const modes=document.createElement('select');modes.className='viewer-mode';modes.setAttribute('aria-label',en()?'Structure presentation':'结构展示');
+  const modes=document.createElement('select');modes.className='viewer-mode';modes.setAttribute('aria-label',UILanguage.text("structure.presentation"));
   for(const [value,zh,eng]of [['schematic','示意','Schematic'],['detailed','详细','Detailed'],['chemical','化学','Chemical']]){const o=document.createElement('option');o.value=value;o.textContent=en()?eng:zh;modes.append(o);}modes.value=effective;modes.disabled=!!onAtom||!record;
   modes.onchange=()=>mount(host,record,{title,onAtom,candidates,selectedSite,abbreviated,mode:modes.value,exports});head.append(modes);host.dataset.presentation=effective;
   if(effective==='schematic'){
-   const detail=document.createElement('select');detail.className='schematic-density';detail.setAttribute('aria-label',en()?'Schematic density':'示意图密度');
-   detail.append(new Option(en()?'Annotated':'标注','annotated'),new Option(en()?'Compact':'紧凑','compact'));detail.value=density;
+   const detail=document.createElement('select');detail.className='schematic-density';detail.setAttribute('aria-label',UILanguage.text("schematic.density"));
+   detail.append(new Option(UILanguage.text("annotated"),'annotated'),new Option(UILanguage.text("compact"),'compact'));detail.value=density;
    detail.onchange=()=>mount(host,record,{title,onAtom,candidates,selectedSite,abbreviated,mode:effective,schematicDensity:detail.value,exports});
    head.append(detail);
   }
-  const note=document.createElement('div');note.className='presentation-note';note.textContent=onAtom||(selectedSite&&effective==='chemical')?(en()?'Chemical view for atom/site selection':'位点选择使用化学视图'):requested==='schematic'?(schematic?.reason?.split(' / ')[en()?0:1]||schematic?.reason||''):effective==='detailed'?(en()?'Existing semantic / bamboo renderer; standard abbreviations where supported.':'复用现有 semantic / bamboo renderer；支持处采用标准缩写。'):(en()?'Full atomistic graph · zoom or fullscreen to inspect':'完整原子图 · 放大或全屏检查');
+  const note=document.createElement('div');note.className='presentation-note';note.textContent=onAtom||(selectedSite&&effective==='chemical')?(UILanguage.text("chemical.view.for.atom.site.selection")):requested==='schematic'?(schematic?.reason?.split(' / ')[en()?0:1]||schematic?.reason||''):effective==='detailed'?(UILanguage.text("existing.semantic.bamboo.renderer.standard.abbreviations")):(UILanguage.text("full.atomistic.graph.zoom.or.fullscreen.to.inspect"));
 
   if(detailed)note.textContent=detailed.reason.split(' / ')[en()?0:1];
   const productNote=document.createElement('div');
@@ -127,11 +140,11 @@ const LocalViewers=(()=>{
     const vb=svg.viewBox.baseVal,pad=Math.max(vb.width,vb.height)*.055;svg.setAttribute('viewBox',[vb.x-pad,vb.y-pad,vb.width+2*pad,vb.height+2*pad].join(' '));const full=svg.getAttribute('viewBox');button('定位位点','Locate site',()=>{const points=Object.values(selectedSite.atoms).map(i=>p.drawing.atoms[i]),xs=points.map(a=>a.x),ys=points.map(a=>a.y);baseBox=[Math.min(...xs)-4,Math.min(...ys)-4,Math.max(...xs)-Math.min(...xs)+8,Math.max(...ys)-Math.min(...ys)+8];scale=1;x=y=0;update();});const fit=head.querySelectorAll('button')[2];fit.addEventListener('click',()=>{baseBox=full.split(/\s+/).map(Number);update();});
     const sizeLabels=()=>{const v=svg.viewBox.baseVal,ratio=Math.max(v.width/(stage.clientWidth||400),v.height/(stage.clientHeight||400));let k=0;group.querySelectorAll('[data-site-label]').forEach(label=>{const a=p.drawing.atoms[Number(label.dataset.siteLabel)];label.setAttribute('font-size',Math.max(.5,ratio*12));label.setAttribute('stroke-width',Math.max(.12,ratio*3));const row=k++%2,font=Math.max(.5,ratio*12);label.setAttribute('x',Math.max(v.x+ratio*4,Math.min(a.x+ratio*9,v.x+v.width-label.textContent.length*font*.62-ratio*4)));label.setAttribute('y',Math.max(v.y+font*(1.2+row*1.5),a.y-ratio*(12+row*16)));});group.querySelectorAll('circle').forEach(c=>c.setAttribute('r',Math.max(.5,ratio*7)));};const resizeLabels=new ResizeObserver(sizeLabels),observeBox=new MutationObserver(sizeLabels);resizeLabels.observe(stage);observeBox.observe(svg,{attributes:true,attributeFilter:['viewBox']});cleanups.push(()=>{resizeLabels.disconnect();observeBox.disconnect();});sizeLabels();
    }
-   if(onAtom){const svg=canvas.querySelector('svg');for(const i of candidates){const a=p.drawing.atoms[i],ns='http://www.w3.org/2000/svg',g=document.createElementNS(ns,'g');g.dataset.atom=i;g.setAttribute('class','atom-target');g.setAttribute('tabindex','0');g.setAttribute('role','button');g.setAttribute('aria-label','OH atom '+(i+1));const c=document.createElementNS(ns,'circle');c.setAttribute('cx',a.x);c.setAttribute('cy',a.y);c.setAttribute('r','.48');const t=document.createElementNS(ns,'text');t.setAttribute('x',a.x);t.setAttribute('y',a.y-.6);t.setAttribute('font-size','.42');t.textContent=selectedSite&&Object.values(selectedSite.atoms).includes(i)?'':String(i+1);g.append(c,t);g.onclick=()=>onAtom(i);g.onkeydown=e=>{if(e.key==='Enter')onAtom(i);};svg.append(g);}}
-   const m=record.metrics,o=record.optical||record.graph.photometry;meta.textContent=`${m.formula} · MW ${Number(m.average_mw).toFixed(3)} · Exact ${Number(m.exact_mass).toFixed(5)} · OD ${o?.status||'NEEDS_PARAMETER'}`;
-  }else{canvas.textContent=en()?'Preview to generate product':'点击预览生成产物';}
+   if(onAtom){const svg=canvas.querySelector('svg');for(const i of candidates){const a=p.drawing.atoms[i],ns='http://www.w3.org/2000/svg',g=document.createElementNS(ns,'g');g.dataset.atom=i;g.setAttribute('class','atom-target');g.setAttribute('tabindex','0');g.setAttribute('role','button');g.setAttribute('aria-label',UILanguage.text("oh.oxygen.atom")+(i+1));const c=document.createElementNS(ns,'circle');c.setAttribute('cx',a.x);c.setAttribute('cy',a.y);c.setAttribute('r','.48');const t=document.createElementNS(ns,'text');t.setAttribute('x',a.x);t.setAttribute('y',a.y-.6);t.setAttribute('font-size','.42');t.textContent=selectedSite&&Object.values(selectedSite.atoms).includes(i)?'':String(i+1);g.append(c,t);g.onclick=()=>onAtom(i);g.onkeydown=e=>{if(e.key==='Enter')onAtom(i);};svg.append(g);}}
+   const m=record.metrics,o=record.optical||record.graph.photometry;meta.textContent=`${m.formula} · MW ${Number(m.average_mw).toFixed(3)} · ${UILanguage.text("exact.mass")} ${Number(m.exact_mass).toFixed(5)} · OD ${UILanguage.status(o?.status||'NEEDS_PARAMETER')}`;
+  }else{canvas.textContent=UILanguage.text("preview.to.generate.product");}
   const svg=canvas.querySelector('svg');if(svg)baseBox=svg.getAttribute('viewBox').split(/\s+/).map(Number);
-  const hint=document.createElement('small');hint.className='viewer-hint';hint.textContent=en()?'Drag to pan · Ctrl/Cmd + wheel to zoom · Wheel scrolls page':'拖动平移 · Ctrl/Cmd + 滚轮缩放 · 普通滚轮滚动页面';host.append(head,stage,note);if(products.length)host.append(productNote);host.append(hint,meta);if(exports&&record)mountExports(host,record,schematic,exports);update();const observer=new ResizeObserver(update);observer.observe(stage);instances.set(host,{record,dispose:()=>{observer.disconnect();cleanups.forEach(fn=>fn());},setViewport(v){if(v.scale!==undefined)scale=Math.max(.1,Math.min(16,v.scale));if(v.x!==undefined)x=v.x;if(v.y!==undefined)y=v.y;update();},get transform(){return {scale,x,y};}});return host;
+  const hint=document.createElement('small');hint.className='viewer-hint';hint.textContent=UILanguage.text("drag.to.pan.ctrl.cmd.wheel.to.zoom.wheel.scrolls.page");host.append(head,stage,note);if(products.length)host.append(productNote);host.append(hint,meta);if(exports&&record)mountExports(host,record,schematic,exports);update();const observer=new ResizeObserver(update);observer.observe(stage);instances.set(host,{record,dispose:()=>{observer.disconnect();cleanups.forEach(fn=>fn());},setViewport(v){if(v.scale!==undefined)scale=Math.max(.1,Math.min(16,v.scale));if(v.x!==undefined)x=v.x;if(v.y!==undefined)y=v.y;update();},get transform(){return {scale,x,y};}});return host;
  }
- return {mount,instances,exportChemDraw};
+ return {mount,instances,exportChemDraw,serializeStructure,chemicalDrawing};
 })();

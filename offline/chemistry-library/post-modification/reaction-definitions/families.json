@@ -23,5 +23,9 @@
   "ThiolMaleimide": {
     "id": "ThiolMaleimide",
     "name": "Thiol–Maleimide"
+  },
+  "ThiolOxadiazole": {
+    "id": "ThiolOxadiazole",
+    "name": "Thiol–Oxadiazole"
   }
 }

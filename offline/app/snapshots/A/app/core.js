@@ -125,5 +125,5 @@ const ChemistryCore = (() => {
   const dirs=Object.keys(block.sites);
   return dirs.length===1&&block.sites[dirs[0]].reversible!==false&&((i===0&&length>1&&dirs[0]==='upstream')||(i===length-1&&length>1&&dirs[0]==='downstream'))?'reverse':'forward';
  }
- return {molecularGraph,buildingBlock,linkageDefinitions,requireLinkage,validateSite,validateAssembly,fromNotation};
+ return {molecularGraph,buildingBlock,linkageDefinitions,requireLinkage,validateSite,validateAssembly,fromNotation,direction};
 })();

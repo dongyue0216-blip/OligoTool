@@ -60,18 +60,24 @@ const MoleculeBuilder=(()=>{
  function fromGraph(graph){const g=copy(graph);return finish({id:crypto.randomUUID(),parentStateId:null,operation:null,history:[],graph:g,assemblyGraph:{schema_version:'hierarchical-assembly-graph/1',lanes:[{id:'main',parent:null,assembly:null,sequence:null,atomIndices:g.atoms.map((_,i)=>i),points:g.atoms.map(a=>({x:a.x,y:a.y})),routes:[]}],branchEdges:[]},attachmentSites:[],optical:g.photometry||{supported:false,status:'UNSUPPORTED',reason:'Imported structure optical parameters unavailable'}});}
  function available(state){return state.attachmentSites.filter(s=>s.direction==='branch'&&s.status==='available'&&free(state.graph,s));}
  function free(g,s){const a=g.atoms[s.atom];return !!a&&a.e===s.element&&a.h===1&&!a.q;}
- function branch(state,{siteId,sequence,linkage='PO',childEnd='start'}){
+ function branch(state,{siteId,sequence,linkage='PO',childEnd='end'}){
   const parent=available(state).find(s=>s.id===siteId);if(!parent)fail('branch site unavailable or occupied');
-  if(!['start','end'].includes(childEnd))fail('invalid child endpoint');
+  if(childEnd!=='end')fail('child must attach through its 3′ endpoint');
   const link=Lite.core.requireLinkage(Lite.linkageDefinitions,linkage);
-  const child=Lite.calculate(sequence),laneId='lane-'+crypto.randomUUID(),childSites=sitesFor(child,laneId),nodes=child.assembly_graph.nodes;
-  const n=childEnd==='start'?nodes[0]:nodes.at(-1),direction=childEnd==='start'?'upstream':'downstream';
-  let candidates=childSites.filter(s=>s.node===n.id&&s.status==='available'&&s.direction===direction);
-  // Single-attachment endpoint may orient freely unless explicitly fixed.
-  if(!candidates.length&&Object.keys(n.block.sites).length===1)candidates=childSites.filter(s=>s.node===n.id&&s.status==='available'&&s.reversible!==false);
-  if(candidates.length!==1)fail('child endpoint unavailable / ambiguous');const target=copy(candidates[0]);
-  Lite.core.validateSite(state.graph,parent,link,'internal','source');
-  Lite.core.validateSite(child.graph,target,link,'internal','target');
+  const child=Lite.calculate(sequence),laneId='lane-'+crypto.randomUUID(),childSites=sitesFor(child,laneId);
+  const {nodes,terminations}=child.assembly_graph;
+  const nodeById=new Map(nodes.map(n=>[n.id,n]));
+  const freeEnds=terminations.filter(t=>t.kind==='site');
+  const candidates=freeEnds.filter(({at})=>{
+   const node=nodeById.get(at.node),site=node.block.sites[at.site];
+   return site.direction===Lite.core.direction(node,'source')||
+    (nodes.length===1&&Object.keys(node.block.sites).length===1&&site.direction==='upstream'&&site.reversible!==false);
+  });
+  if(candidates.length!==1)fail('child 3′ endpoint unavailable / ambiguous');
+  const endpoint=candidates[0].at;
+  const target=copy(childSites.find(s=>s.node===endpoint.node&&s.id===laneId+'/'+endpoint.node+'/'+endpoint.site));
+  Lite.core.validateSite(child.graph,target,link,'internal','source');
+  Lite.core.validateSite(state.graph,parent,link,'internal','target');
   const g=copy(state.graph),offset=g.atoms.length,lo=offset+child.graph.atoms.length;
   g.atoms.push(...copy(child.graph.atoms),...copy(link.graph.atoms));
   g.bonds.push(...child.graph.bonds.map(b=>({...b,a:b.a+offset,b:b.b+offset})),...link.graph.bonds.map(b=>({...b,a:b.a+lo,b:b.b+lo})),{a:parent.atom,b:lo+link.center,o:1,s:0},{a:lo+link.center,b:offset+target.atom,o:1,s:0});
@@ -82,10 +88,33 @@ const MoleculeBuilder=(()=>{
   const attachments=copy(state.attachmentSites);attachments.find(s=>s.id===siteId).status='occupied';
   for(const s of childSites){if(s.id===target.id)s.status='occupied';s.atom+=offset;attachments.push(s);}
   const ag=copy(state.assemblyGraph);ag.lanes.push({id:laneId,parent:parent.path,assembly:child.assembly_graph,sequence:child.canonical_sequence,atomIndices:child.graph.atoms.map((_,i)=>i+offset),points:child.graph.atoms.map(a=>({x:a.x,y:a.y})),routes:(child.graph.routes||[]).map(v=>({...copy(v),atoms:[child.graph.bonds[v.bond].a+offset,child.graph.bonds[v.bond].b+offset]}))});
-  ag.branchEdges.push({id:operation.id,parentLane:parent.path,childLane:laneId,parentSite:siteId,childSite:target.id,parentAnchor:parent.atom,childAnchor:offset+target.atom,linkage,linkageAtoms:link.graph.atoms.map((_,i)=>lo+i),linkageBonds:[g.bonds.length-2,g.bonds.length-1]});
+  ag.branchEdges.push({id:operation.id,parentLane:parent.path,childLane:laneId,parentSite:siteId,childSite:target.id,childEnd,parentAnchor:parent.atom,childAnchor:offset+target.atom,linkage,linkageAtoms:link.graph.atoms.map((_,i)=>lo+i),linkageBonds:[g.bonds.length-2,g.bonds.length-1]});
   // Branched nearest-neighbor extinction is not validated by the existing optical engine.
   const optical={supported:false,status:'UNSUPPORTED',reason:'Branched sequence extinction model not validated; molecular masses remain graph-derived',components:[copy(state.optical),copy(child.optical)]};
   return finish({id:crypto.randomUUID(),parentStateId:state.id,operation,history:[...state.history,operation],graph:g,assemblyGraph:ag,attachmentSites:attachments,presentationGroups:copy(state.presentationGroups||[]),interactionAnnotations:copy(state.interactionAnnotations),materialization:{...copy(state.materialization),graphRevision:state.graphRevision+1},graphRevision:state.graphRevision+1,optical});
+ }
+ function distinctProducts(plans,graph,secondary){
+  const counts=new Map();
+  for(const c of plans)counts.set(c.transformation_id,(counts.get(c.transformation_id)||0)+1);
+  const seen=new Set();
+  return plans.filter(c=>{
+   if(counts.get(c.transformation_id)===1)return true;
+   const inputs=secondary?[graph,secondary]:[graph];
+   const result=Reactions.v2.transform(c.family,inputs,c.candidate_id);
+   if(!result.product_graph)return false;
+   const identity=SmallFragmentDepictor.productIdentity(result.product_graph);
+   if(!identity)return true;
+   const key=JSON.stringify([c.transformation_id,result.properties.formula,identity]);
+   if(seen.has(key))return false;
+   seen.add(key);return true;
+  });
+ }
+ function quick(state,secondary=null){
+  const result=Reactions.v2.findCompatibleReactionPlans(state.graph,secondary);
+  return {...result,candidates:distinctProducts(result.plans.filter(c=>c.materialization_eligible),state.graph,secondary)};
+ }
+ function record(state){
+  return Sandbox.record(state.graph,{moleculeState:state,assemblyGraph:state.assemblyGraph,optical:state.optical});
  }
  function react(state,{family,secondary=null,candidateId}){
   if(state.components.length!==1)fail('multi-component reaction selection not implemented');
@@ -97,7 +126,7 @@ const MoleculeBuilder=(()=>{
   for(const edge of [...ag.branchEdges,...(ag.covalentEdges||[])]){edge.parentAnchor=map[edge.parentAnchor];edge.childAnchor=map[edge.childAnchor];edge.linkageAtoms=edge.linkageAtoms.map(i=>map[i]).filter(i=>i!==null&&i!==undefined);delete edge.linkageBonds;}
   const groups=copy(state.presentationGroups||[]);for(const group of groups)group.mapping=group.mapping.map(i=>i===null?null:map[i]??null);if(secondary)groups.push({graph:copy(secondary),mapping:copy(result.product_graph.provenance.input_atom_maps[1])});
   const operation={id:crypto.randomUUID(),type:'ReactionOperation',kind:family,candidate:copy(result.candidate),mapping:copy(result.mapping),inputStateIds:[state.id],inputStates:[copy(state)],secondaryInput:secondary?copy(secondary):null,inputAtomMaps:copy(result.product_graph.provenance.input_atom_maps),reactionDefinition:copy(result.step.definition),reactionDefinitionVersion:result.step.definition.schema_version,graphRevision:state.graphRevision+1,graphEdits:{encoding:'exact-product-snapshot/1',before:copy(inputs),after:copy(result.product_graph)},siteRemapping:attachments.map((s,i)=>({identity:{nodeInstanceId:s.nodeInstanceId,siteId:s.siteId},beforeAtom:state.attachmentSites[i].atom,afterAtom:s.atom??null,status:s.status}))};
-  if(result.candidate.product_state||result.candidate.transformation_id==='spaac/2'){
+  if(result.candidate.product_state||['spaac/2','thiol-oxadiazole/2'].includes(result.candidate.transformation_id)){
    const provenance=result.product_graph.provenance;
    operation.graphEdits.removedAtoms=copy(provenance.removed_atoms);
    operation.graphEdits.removedBonds=copy(provenance.removed_bonds);
@@ -139,6 +168,6 @@ const MoleculeBuilder=(()=>{
  }
  function exportJSON(state){return JSON.stringify(state,null,2);}
  function restore(raw){const s=copy(typeof raw==='string'?JSON.parse(raw):raw);if(s.schema!=='oligo-molecule-state'||s.schemaVersion!==1||!s.assemblyGraph?.lanes||!Array.isArray(s.attachmentSites))fail('unsupported state');const expected=Lite.graphProperties(s.graph);if(s.formula!==expected.formula||s.exact_mass!==expected.exact_mass||s.average_mw!==expected.average_mw)fail('checkpoint graph / properties mismatch');return finish(s);}
- return {start,fromGraph,branch,react,available,exportJSON,restore,combine,connect,annotate};
+ return {start,record,quick,distinctProducts,fromGraph,branch,react,available,exportJSON,restore,combine,connect,annotate};
 })();
 

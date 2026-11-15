@@ -1,6 +1,17 @@
 'use strict';
 // UI adapter. Compatibility is evaluated by the reaction engine against the current substrate.
 const ReagentSource=(()=>{
+ function parseUpload(text,selectedFamily=null){
+    try{return Reactions.v2.parseReagent(text,selectedFamily);}
+    catch(error){
+     if(!error.message.includes('芳香键请导出 Kekulé'))throw error;
+     const localized=SmallFragmentDepictor.localizeAromaticBonds(text);
+     if(!localized)throw error;
+     const result=Reactions.v2.parseReagent(localized,selectedFamily);
+     result.normalization={...result.normalization,aromatic_representation:{source_ctfile:text}};
+     return result;
+    }
+ }
  function mount({input,file,language,family,substrate,invalidate,defaultSource='upload'}){
   const label=document.createElement('label'),source=document.createElement('select');
   const entryLabel=document.createElement('label'),entry=document.createElement('select');
@@ -12,15 +23,15 @@ const ReagentSource=(()=>{
   const english=()=>language.value==='en';
   const text=(zh,en)=>english()?en:zh;
   function localize(){
-   label.firstChild.nodeValue=text('试剂来源','Reagent source');
-   entryLabel.firstChild.nodeValue=family()==null?text('选择第二反应物','Choose Secondary Reagent'):text('兼容试剂','Compatible reagent');
+   label.firstChild.nodeValue=UILanguage.text("reagent.source");
+   entryLabel.firstChild.nodeValue=family()==null?UILanguage.text("choose.secondary.reagent"):UILanguage.text("compatible.reagent");
    const selected=source.value||defaultSource;
-   source.replaceChildren(new Option('Upload MOL / SDF','upload'),new Option(text('内置反应试剂','Built-in Reaction Reagents'),'builtin'),new Option(text('用户库','User Library'),'user'));
+   source.replaceChildren(new Option(UILanguage.text("upload.mol.sdf"),'upload'),new Option(UILanguage.text("built.in.reaction.reagents"),'builtin'),new Option(UILanguage.text("user.library"),'user'));
    source.value=selected;
   }
   function refresh(enabled=true,visible=true){
    const upload=source.value==='upload';
-   entryLabel.firstChild.nodeValue=family()==null?text('选择第二反应物','Choose Secondary Reagent'):text('兼容试剂','Compatible reagent');
+   entryLabel.firstChild.nodeValue=family()==null?UILanguage.text("choose.secondary.reagent"):UILanguage.text("compatible.reagent");
    label.hidden=!visible;source.disabled=!enabled||!visible;
    entryLabel.hidden=!visible||upload;entry.disabled=!enabled||entryLabel.hidden;
    input.hidden=file.hidden=!visible||!upload;
@@ -29,25 +40,17 @@ const ReagentSource=(()=>{
    const selected=entry.value;
    const starting=substrate();
    choices=new Map(starting?Product.store.reagents(source.value,family(),starting).map(r=>[r.id,r]):[]);
-   entry.replaceChildren(new Option(choices.size?text('选择试剂','Select reagent'):text('无兼容试剂','No compatible reagents'),''));
+   entry.replaceChildren(new Option(choices.size?UILanguage.text("select.reagent"):UILanguage.text("no.compatible.reagents"),''));
    for(const row of choices.values())entry.add(new Option(row.name,row.id));
    entry.value=choices.has(selected)?selected:'';
   }
   function graph(){
    if(source.value==='upload'){
     const text=input.value,selectedFamily=family();
-    try{return Reactions.v2.parseReagent(text,selectedFamily);}
-    catch(error){
-     if(!error.message.includes('芳香键请导出 Kekulé'))throw error;
-     const localized=SmallFragmentDepictor.localizeAromaticBonds(text);
-     if(!localized)throw error;
-     const result=Reactions.v2.parseReagent(localized,selectedFamily);
-     result.normalization={...result.normalization,aromatic_representation:{source_ctfile:text}};
-     return result;
-    }
+    return parseUpload(text,selectedFamily);
    }
    const row=choices.get(entry.value);
-   if(!row)throw Error(text('请选择兼容试剂','Select a compatible reagent'));
+   if(!row)throw Error(UILanguage.text("select.a.compatible.reagent"));
    return row.graph;
   }
   source.onchange=()=>{entry.value='';invalidate();};
@@ -60,5 +63,5 @@ const ReagentSource=(()=>{
   return {graph,refresh,hasSelection:()=>source.value==='upload'?!!input.value.trim():choices.has(entry.value),
    reset(){source.value=defaultSource;entry.value='';input.value='';file.value='';}};
  }
- return {mount};
+ return {mount,parseUpload};
 })();

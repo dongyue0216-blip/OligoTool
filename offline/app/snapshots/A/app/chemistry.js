@@ -317,7 +317,27 @@ function svg(g){let points=(g.routes||[]).flatMap(r=>r.points),xs=[...g.atoms.ma
  });
  return s.join('')+'</svg>';
  }
-function cdxml(g){const nums=REFERENCE.atomicNumber;return `<?xml version="1.0"?><CDXML BondLength="30"><page id="1"><fragment id="2">`+g.atoms.map((a,i)=>`<n id="${i+10}" p="${(a.x+8)*20} ${(a.y+8)*20}" Element="${nums[a.e]}" NumHydrogens="${a.h||0}"${a.q?` Charge="${a.q}"`:''}/>`).join('')+g.bonds.map((b,i)=>`<b id="${g.atoms.length+10+i}" B="${b.a+10}" E="${b.b+10}" Order="${b.o}"${b.s?` Display="${b.s===1?'WedgeBegin':'WedgedHashBegin'}"`:''}/>`).join('')+'</fragment></page></CDXML>';}
+function cdxml(g){
+ const nums=REFERENCE.atomicNumber, bondLength=14.4, margin=bondLength;
+ const lengths=g.bonds.map(b=>{
+  const a=g.atoms[b.a],z=g.atoms[b.b];
+  return Math.hypot(a.x-z.x,a.y-z.y);
+ }).filter(x=>x>0&&Number.isFinite(x)).sort((a,b)=>a-b);
+ const middle=Math.floor(lengths.length/2);
+ const median=lengths.length?(lengths[middle]+lengths[Math.floor((lengths.length-1)/2)])/2:1;
+ const scale=bondLength/median;
+ const bounds=g.atoms.reduce((r,a)=>({
+  minX:Math.min(r.minX,a.x),minY:Math.min(r.minY,a.y),
+  maxX:Math.max(r.maxX,a.x),maxY:Math.max(r.maxY,a.y)
+ }),{minX:Infinity,minY:Infinity,maxX:-Infinity,maxY:-Infinity});
+ const {minX,minY,maxX,maxY}=bounds;
+ const width=(maxX-minX)*scale+2*margin,height=(maxY-minY)*scale+2*margin;
+ const pt=n=>n.toFixed(4);
+ return `<?xml version="1.0"?><CDXML BondLength="${bondLength}"><page id="1" BoundingBox="0 0 ${pt(width)} ${pt(height)}"><fragment id="2">`+
+  g.atoms.map((a,i)=>`<n id="${i+10}" p="${pt((a.x-minX)*scale+margin)} ${pt((a.y-minY)*scale+margin)}" Element="${nums[a.e]}" NumHydrogens="${a.h||0}"${a.q?` Charge="${a.q}"`:''}/>`).join('')+
+  g.bonds.map((b,i)=>`<b id="${g.atoms.length+10+i}" B="${b.a+10}" E="${b.b+10}" Order="${b.o}"${b.s?` Display="${b.s===1?'WedgeBegin':'WedgedHashBegin'}"`:''}/>`).join('')+
+  '</fragment></page></CDXML>';
+}
 function readV2000(text){let lines=text.replace(/\r/g,'').split('\n');if(!lines[3]?.includes('V2000'))throw Error('Expected MOL V2000 or V3000');let n=Number(lines[3].slice(0,3)),nb=Number(lines[3].slice(3,6));if(!Number.isInteger(n)||n<1||n>999||!Number.isInteger(nb)||nb<0)throw Error('无效 atom count');let g={atoms:[],bonds:[]},aliases={};for(let i=0;i<n;i++){let l=lines[4+i];if(!l||l.length<34)throw Error('MOL V2000 atom line '+(i+1)+' is missing or truncated');let e=l.slice(31,34).trim();let qcode=Number(l.slice(36,39));if(![0,1,2,3,5,6,7].includes(qcode))throw Error('Unsupported atom charge/radical code');if(!e||![Number(l.slice(0,10)),Number(l.slice(10,20))].every(Number.isFinite))throw Error('无效 atom line');g.atoms.push({e,x:Number(l.slice(0,10)),y:-Number(l.slice(10,20)),q:({1:3,2:2,3:1,5:-1,6:-2,7:-3})[qcode]||0,map:Number(l.slice(60,63)),h:0});if(Number(l.slice(34,36)))throw Error('暂不支持 atom-line isotope mass difference，请用 M ISO');if(Number(l.slice(39,42)))throw Error('暂不支持 atom parity，请导出 wedge bond stereo');if(!['*','R#','R','Du'].includes(e)&&(Number(l.slice(42,45))||Number(l.slice(48,51))))throw Error('暂不支持显式 H/valence override');}
 for(let i=0;i<nb;i++){let l=lines[4+n+i];if(!l||l.length<12)throw Error('MOL V2000 bond line '+(i+1)+' is missing or truncated');let a=Number(l.slice(0,3))-1,b=Number(l.slice(3,6))-1,o=Number(l.slice(6,9)),s=Number(l.slice(9,12));if(!Number.isInteger(a)||!Number.isInteger(b)||a<0||b<0||a>=n||b>=n||a===b||![1,2,3].includes(o)||![0,1,6].includes(s))throw Error('仅支持 single/double/triple 与 wedge/hash；芳香键请导出 Kekulé');if(g.bonds.some(v=>(v.a===a&&v.b===b)||(v.a===b&&v.b===a)))throw Error('重复 bond');g.bonds.push({a,b,o,s});}
 if(!lines.slice(4+n+nb).some(l=>l.startsWith('M  END')))throw Error('Truncated V2000 record');

@@ -33,11 +33,15 @@ const StructurePresentation=(()=>{
  });
  const topologyGrammar=Object.freeze({
   'ribose-phosphate':{shape:'sugar'},
+  'morpholine-phosphorodiamidate':{shape:'morpholine',label:'PMO',
+   ports:{'morpholino-OH':[-24,-17],'morpholino-NH':[0,30]},
+   portStubs:'M -24 -17 L -19 -15 L -13 -7 M 0 15 V 30',baseAnchor:[13,-7],baseCenter:[16,-27]},
   'baseless-sugar':{shape:'sugar',baseFree:true},
   'alpha-L-threose-3-to-2':{shape:'sugar',label:'TNA',ports:{O3:[-10,10],O2:[10,10]}},
   'S-glycerol-phosphate':{shape:'acyclic',label:'GNA',ports:{O3:[-10,9],O2:[10,9]}}
  });
  const sugarPaths={
+  morpholine:'M 0 -15 L 13 -7 V 7 L 0 15 L -13 7 V -7 Z',
   sugar:'M -14 -4 L 0 -14 L 14 -4 L 10 10 H -10 Z',
   invertedSugar:'M -14 4 L 0 14 L 14 4 L 10 -10 H -10 Z',
   open:'M -10 10 L -14 -4 L 0 -14 L 14 -4 L 10 10',
@@ -72,7 +76,7 @@ const StructurePresentation=(()=>{
   return glyph.ports?.[site.atom_role]||[side*(glyph.shape==='special'?23:14),0];
  }
  function drawSugar(shape){
-  return `<path data-component="sugar" data-sugar-shape="${shape}" d="${sugarPaths[shape]}" fill="${shape==='sugar'||shape==='invertedSugar'?'#e9f2ee':'none'}"/>`;
+  return `<path data-component="sugar" data-sugar-shape="${shape}" d="${sugarPaths[shape]}" fill="${shape==='sugar'||shape==='invertedSugar'||shape==='morpholine'?'#e9f2ee':'none'}"/>`;
  }
  function drawBaseFree(shape,label){
   return drawSugar(shape)+text(0,shape==='invertedSugar'?0:3,short(label,5),7.5);
@@ -101,10 +105,13 @@ const StructurePresentation=(()=>{
   const bridgePath=bridge?`<path data-component="bridge" data-bridge="${bridge}" d="${bridgePaths[bridge]}" fill="none"/>`:'';
   const annotation=substituent?`<path d="M 8 10 V 15" fill="none"/>${text(0,24,substituent,9)}`:'';
   const vp=terminal&&Object.keys(sites).length===1?`<path d="M -14 -4 L -19 -11 V -20" fill="none"/>${linkageBadge(-19,-20,terminal)}`:'';
-  return title+body+`<path d="M 9 -8 V -15" fill="none"/><circle data-component="base" data-base="${esc(base)}" cx="9" cy="-23" r="9" fill="${baseFill}"/>`+
-   text(9,-19.6,base==='CMe'?'C':base,10)+(base==='CMe'?text(21,-24,'Me',7):'')+
+  const [baseX,baseY]=g.baseCenter||[9,-23];
+  const [anchorX,anchorY]=g.baseAnchor||[9,-8];
+  const stubs=g.portStubs?`<path data-component="ring-ports" d="${g.portStubs}" fill="none"/>`:'';
+  return title+body+stubs+`<path d="M ${anchorX} ${anchorY} L ${baseX} ${baseY}" fill="none"/><circle data-component="base" data-base="${esc(base)}" cx="${baseX}" cy="${baseY}" r="9" fill="${baseFill}"/>`+
+   text(baseX,baseY+3.4,base==='CMe'?'C':base,10)+(base==='CMe'?text(21,-24,'Me',7):'')+
    (caption?text(0,shape==='acyclic'?6:3,short(caption,5),7.5):'')+bridgePath+annotation+vp+
-   (!compact&&ports&&(g.ports||shape==='generic')?text(0,substituent?35:29,ports,8):'');
+   (!compact&&ports&&(g.ports||shape==='generic')?text(0,g.portStubs?41:substituent?35:29,ports,8):'');
  }
  function defaultMode(){if(document.body.dataset.defaultPresentation)return document.body.dataset.defaultPresentation;try{const p=JSON.parse(localStorage.getItem('oligo.workspace.c8.v1'));if(p?.version===1&&['schematic','detailed','chemical'].includes(p.mode))return p.mode;}catch{}return 'schematic';}
  // A's reaction-bond provenance also covers checkpoints saved before ring annotations.
@@ -201,7 +208,7 @@ const StructurePresentation=(()=>{
   return {supported:true,svg:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${row*panels.length}" role="img" font-family="system-ui, sans-serif" aria-label="Reaction product rings"><rect data-scene-background="" width="100%" height="100%" fill="white"/>${panels.join('')}</svg>`,
    reason:'Product rings and mapped attachments. Matching numbers denote the same outside fragment. / 产物环与实际连接位点。相同编号表示同一外接片段。'};
  }
- function schematic(record,{density='annotated',selectedSite=null}={}){
+ function schematic(record,{density='annotated',selectedSite=null,language='en'}={}){
   const compact=density==='compact';
   const state=record.moleculeState,ag=state?.assemblyGraph||record.assemblyGraph;
   const fail=reason=>({supported:false,reason});
@@ -210,8 +217,9 @@ const StructurePresentation=(()=>{
   if(!ag)return fail('No reliable assembly provenance / 缺少可靠单元来源');
   if(state&&(state.materialization?.status==='provenance-only'||state.assemblyGraph.covalentEdges?.length||state.interactionAnnotations?.length))return fail('Current graph includes reaction, crosslink or interaction detail outside this schematic grammar / 当前结构超出示意语法');
   const lanes=ag.lanes||[{id:'main',assembly:ag}],positions=new Map();
-  const columns=10,rowHeight=compact?72:88,left=45;
+  const columns=10,left=45;
   let height=14,shapes=[],lines=[];
+  const zh=language==='zh-CN';
   if(lanes.some(l=>!l.assembly?.nodes?.length))return fail('An imported component has no residue mapping / 导入组件缺少单元映射');
   if(lanes.reduce((n,l)=>n+l.assembly.nodes.length,0)>500)return fail('Over 500 units; use Detailed / 超过 500 单元');
   // Only widen the existing grid when an actual label would exceed its port-to-port gap.
@@ -226,7 +234,9 @@ const StructurePresentation=(()=>{
     pitch=Math.max(pitch,Math.ceil(badgeWidth(e.linkage)+dx-tx+4));
    }
   }
-  const width=(Math.min(columns,Math.max(...lanes.map(l=>l.assembly.nodes.length)))-1)*pitch+90;
+  const maxUnits=Math.max(...lanes.map(l=>l.assembly.nodes.length));
+  const singlePMO=maxUnits===1&&lanes.some(l=>resolveGlyph(l.assembly.nodes[0].block).shape==='morpholine');
+  const width=singlePMO?170:(Math.min(columns,maxUnits)-1)*pitch+90;
   const selectedNodes=new Set();
   if(selectedSite){
    const selectedAtoms=Object.values(selectedSite.atoms||{});
@@ -249,10 +259,13 @@ const StructurePresentation=(()=>{
     a.edges.some((e,i)=>e.source.node!==nodes[i].id||e.target.node!==nodes[i+1].id||
      e.source.site!==outgoing(nodes[i])||e.target.site!==incoming(nodes[i+1])))
     return fail('Nonlinear or reversed lane requires Chemical inspection / 非线性或反向单元需化学视图');
-   const top=height+52;
-   const canonicalEnds=nodes.every(n=>n.block.sites.upstream?.atom_role==="O5'"&&n.block.sites.downstream?.atom_role==="O3'"&&
-    n.block.metadata?.incoming_label!=='3′'&&n.block.metadata?.outgoing_label!=='5′');
-   shapes.push(`<text x="22" y="${top-41}" fill="#536d64" font-size="10">${li===0?'Main / 主链':'Branch / 分支 '+li} · ${canonicalEnds?'5′ → 3′':'upstream → downstream'}</text>`);
+   const top=height+52, hasPMO=nodes.some(n=>resolveGlyph(n.block).shape==='morpholine');
+   const rowHeight=compact?72:hasPMO?96:88;
+   const canonicalEnds=nodes.every(n=>
+    (n.block.sites.upstream?.atom_role==="O5'"&&n.block.sites.downstream?.atom_role==="O3'"&&
+     n.block.metadata?.incoming_label!=='3′'&&n.block.metadata?.outgoing_label!=='5′')||
+    (resolveGlyph(n.block).shape==='morpholine'&&n.block.metadata.incoming_label==='5′ OH'&&n.block.metadata.outgoing_label==='3′ NH'));
+   shapes.push(`<text x="22" y="${top-41}" fill="#536d64" font-size="10">${li===0?(zh?'主链':'Main strand'):(zh?'支链 ':'Branch ')+li} · ${canonicalEnds?'5′ → 3′':(zh?'上游 → 下游':'Upstream → downstream')}</text>`);
    for(const [i,n] of nodes.entries()){
     const x=left+(i%columns)*pitch,y=top+Math.floor(i/columns)*rowHeight;
     positions.set(lane.id+'/'+n.id,{x,y,top,node:n});
@@ -263,26 +276,30 @@ const StructurePresentation=(()=>{
     const p=positions.get(lane.id+'/'+e.source.node),q=positions.get(lane.id+'/'+e.target.node);
     const [dx,dy]=port(p.node,e.source.site,1),[tx,ty]=port(q.node,e.target.site,-1);
     const x=p.x+dx,y=p.y+dy,endX=q.x+tx,endY=q.y+ty,wrap=q.y!==p.y;
-    const routeY=p.y+(compact?30:42);
-    lines.push(`<path data-assembly-edge="${esc(e.id)}" d="${wrap?`M ${x} ${y} H ${width-8} V ${routeY} H 17 V ${endY} H ${endX}`:`M ${x} ${y} L ${endX} ${endY}`}" fill="none" stroke="#536d64" stroke-width="1.35"/>`);
-    shapes.push(linkageBadge(wrap?width/2:(x+endX)/2,wrap?routeY:(y+endY)/2,e.linkage,e.linkage,lane.id+'/'+e.id));
+    const outgoingPMO=resolveGlyph(p.node.block).shape==='morpholine';
+    const routeY=p.y+(compact?(hasPMO?34:30):(hasPMO?51:42));
+    const midX=(x+endX)/2;
+    const elbowX=outgoingPMO?(p.x+18+endX)/2:midX;
+    const direct=outgoingPMO?`M ${x} ${y} L ${p.x+18} ${y} H ${elbowX} V ${endY} H ${endX}`:`M ${x} ${y} L ${endX} ${endY}`;
+    lines.push(`<path data-assembly-edge="${esc(e.id)}" d="${wrap?`M ${x} ${y} H ${width-8} V ${routeY} H 17 V ${endY} H ${endX}` :direct}" fill="none" stroke="#536d64" stroke-width="1.35"/>`);
+    shapes.push(linkageBadge(wrap?width/2:outgoingPMO?elbowX:midX,wrap?routeY:(y+endY)/2,e.linkage,e.linkage,lane.id+'/'+e.id));
    }
    for(const term of a.terminations||[]){
     if(term.kind!=='linkage')continue;
-    const p=positions.get(lane.id+'/'+term.at.node);if(!p)return fail('Unknown terminal mapping');
+    const p=positions.get(lane.id+'/'+term.at.node);if(!p)return fail('Unknown terminal mapping / 无法定位末端连接');
     const side=term.at.site===incoming(p.node)?-1:1,[dx,dy]=port(p.node,term.at.site,side);
     const x=p.x+side*27,y=p.y+15,labels=term.linkages||[];
     lines.push(`<path d="M ${p.x+dx} ${p.y+dy} L ${x} ${y}" fill="none" stroke="#536d64"/>`);
     shapes.push(linkageBadge(x,y,labels.length>1?'P'+labels.length:labels[0]||'P',labels.length===1?labels[0]:'P'));
    }
-   height=top+(Math.ceil(nodes.length/columns)-1)*rowHeight+(compact?38:47);
+   height=top+(Math.ceil(nodes.length/columns)-1)*rowHeight+(compact?38:hasPMO?57:47);
   }
   for(const e of ag.branchEdges||[]){
    const parent=state.attachmentSites.find(s=>s.id===e.parentSite),child=state.attachmentSites.find(s=>s.id===e.childSite);
    const p=parent&&positions.get(parent.path+'/'+parent.node),q=child&&positions.get(child.path+'/'+child.node);
    if(!p||!q)return fail('Branch mapping unavailable / 分支映射不可用');
    const [dx,dy]=port(p.node,parent.siteId,1);
-   const side=child.direction==='downstream'?1:-1,[tx,ty]=port(q.node,child.siteId,side);
+   const side=(e.childEnd==='end'||(!e.childEnd&&child.direction==='downstream'))?1:-1,[tx,ty]=port(q.node,child.siteId,side);
    const fromX=p.x+dx,toX=q.x+tx,toY=q.y+ty;
    const gutter=side===1?width-8:8,routeY=p.y+(compact?34:41);
    // Reserve a badge position in the gap above the child lane. Multiple
@@ -292,7 +309,7 @@ const StructurePresentation=(()=>{
    lines.push(`<path data-branch-edge="${esc(e.id)}" d="M ${fromX} ${p.y+dy} V ${routeY} H ${gutter} V ${toY} H ${toX}" fill="none" stroke="#236750" stroke-width="1.4" stroke-dasharray="5 3"/>`);
    shapes.push(linkageBadge(center,q.top-56,e.linkage,e.linkage,e.id));
   }
-  return {supported:true,svg:`<svg data-density="${compact?'compact':'annotated'}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" role="img" font-family="system-ui, sans-serif" aria-label="Assembly-derived oligo schematic"><rect data-scene-background="" width="100%" height="${height}" fill="white"/>${lines.join('')}${shapes.join('')}</svg>`,reason:'Assembly units + explicit linkages; labels preserve block identity. Not an atomistic drawing. / 单元与真实连接；标签保留修饰身份。'};
+  return {supported:true,svg:`<svg data-density="${compact?'compact':'annotated'}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" role="img" font-family="system-ui, sans-serif" aria-label="${zh?'寡核苷酸示意图':'Oligonucleotide schematic'}"><rect data-scene-background="" width="100%" height="${height}" fill="white"/>${lines.join('')}${shapes.join('')}</svg>`,reason:'Assembly units + explicit linkages; labels preserve block identity. Not an atomistic drawing. / 单元与真实连接；标签保留修饰身份。'};
  }
  function duplex(strands,alignment){
   const columns=alignment.columns,pitch=68,left=125,width=left*2+pitch*(columns.length-1);

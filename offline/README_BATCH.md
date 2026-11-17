@@ -1,4 +1,4 @@
-# Batch Post-functionalization
+# 2.2 Batch Post-functionalization
 
 1. 完整解压 `Oligo-Toolkit-v2.4.2.zip` 到短路径，例如 `C:\Oligo`。用 Edge 或 Chrome 打开根目录的 `Start.html`。
 2. 进入 **批量后修饰**。内置和当前用户库的试剂会自动载入。可一次选择本次用到的全部 MOL/SDF，并查看每条记录的解析结果。
@@ -15,3 +15,11 @@
 旧版两表式步骤工作簿需要迁移至新模板。仅含 ID 和 Sequence 的旧工作簿可通过列映射运行。
 
 结果分别显示后修饰、结构导出和 OD 状态。结构和质量来自 Builder 的最终分子。部分产物的示意图和 OD 参数超出 Builder 当前的支持范围，可在结构详情和 OD 详情中查看原因。
+
+
+
+## 2.1 批量序列计算
+
+下载模板并填写序列编号、Compound ID 和 Sequence。旧版 ID / Name / Sequence 工作簿仍可导入，ID 映射到序列编号，Name 优先用作 Compound ID。每列碱基数与 01 联动，默认 5。计算后可下载 Results Excel 及 structures.zip。结果包含分子式、平均分子量、精确质量和三项 OD260 指标。结果说明列显示失败信息或影响交付的情况。
+
+结构 ZIP 的每个成功序列使用同一文件名主干，输出原子级 CDXML 与 Presentation C SVG。主干优先取 Compound ID，非法字符替换为下划线，大小写冲突使用数字后缀，空编号使用源行号。file-map.xlsx 保留序列编号、原始 Compound ID 和各导出文件名。

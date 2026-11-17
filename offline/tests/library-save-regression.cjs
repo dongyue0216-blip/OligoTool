@@ -12,7 +12,7 @@ function context(tag){
 const {L,CL}=context(),rows=[];
 function test(name,fn){try{fn();rows.push({name,status:'PASS'});}catch(e){rows.push({name,status:'FAIL',error:e.stack});console.error(name,e.message);}}
 const mem=raw=>{const m=new Map(raw===undefined?[]:[[CL.KEY,raw]]);return {getItem:k=>m.get(k)??null,setItem:(k,v)=>m.set(k,v)};};
-function roundtrip(payload){const raw=JSON.stringify(payload),storage=mem(raw),s=CL.create(storage);s.load();assert.equal(s.blocked,false,s.status);assert.equal(storage.getItem(CL.KEY),raw);s.add('AddedAfterUpgrade',L.selectAttachments(L.parseSmiles('CCO'),2,null));assert.equal(storage.getItem(CL.KEY+'-backup'),raw);const reload=CL.create(storage);reload.load();assert.equal(reload.blocked,false,reload.status);assert.deepEqual(copy(reload.state.records.slice(0,payload.records.length)),copy(CL.decode(payload).records));return reload;}
+function roundtrip(payload){const raw=JSON.stringify(payload),storage=mem(raw),s=CL.create(storage);s.load();assert.equal(s.blocked,false,s.status);assert.equal(storage.getItem(CL.KEY),raw);s.add('AddedAfterUpgrade',L.selectAttachments(L.parseSmiles('OCCCCCCF'),0,null));assert.equal(storage.getItem(CL.KEY+'-backup'),raw);const reload=CL.create(storage);reload.load();assert.equal(reload.blocked,false,reload.status);assert.deepEqual(copy(reload.state.records.slice(0,payload.records.length)),copy(CL.decode(payload).records));return reload;}
 const historical=JSON.parse(fs.readFileSync(path.join(__dirname,'BASELINE_USER_LIBRARY_RELEASED_SERIALIZERS.json')));
 for(const [tag,fixture] of Object.entries(historical))test(tag+' real released serializer / newly introduced built-in name',()=>{
  const payload=copy(fixture);

@@ -22,6 +22,16 @@ const UI=(()=>{
  function localize(){document.documentElement.lang=lang;document.querySelectorAll('[data-i18n]').forEach(e=>{if(Object.hasOwn(text[lang],e.dataset.i18n))e.textContent=t(e.dataset.i18n);});$('gapText').textContent=t('gap');$('begin').title=window.TRANSLATIONS?.[lang]?.['nav.reaction']||t('workflow');history();if(typeof ReactionFamilyUI!=='undefined')ReactionFamilyUI.localize();}
  $('fixture').innerHTML=S.fixtures.map(f=>`<option value="${f.id}">${f.name}</option>`).join('');$('fixture').onchange=load;$('reload').onclick=load;
  $('run').onclick=()=>{try{const r=S.A[$('kind').value]($('input').value);workflow=null;preview=null;draftOpen=false;$('draft').hidden=true;show(r);history();}catch(e){error(e,true);}};
+ const layoutInput=$('basesPerColumn');
+ layoutInput.value=PresentationOptions.defaultRows;
+ const localizeLayout=()=>$('basesPerColumnLabel').textContent=$('language').value==='en'?'Bases per column':'每列碱基数';
+ $('language').addEventListener('change',localizeLayout);
+ localizeLayout();
+ layoutInput.onchange=()=>{
+  if(!layoutInput.reportValidity()){layoutInput.value=PresentationOptions.rows;return;}
+  PresentationOptions.setRows(layoutInput.valueAsNumber);
+  if(current)try{show(current,{languageChange:true});}catch(e){error(e);}
+ };
  $('abbreviations').onchange=()=>{if(current)try{show(current);}catch(e){error(e);}};
  $('language').onchange=()=>{const before=state();lang=$('language').value;try{localStorage.setItem('oligo-toolkit-language',lang);}catch{}localize();if(current)show(current,{languageChange:true});if(before!==state())throw Error('B_LANGUAGE_CHANGED_CHEMISTRY');};
  $('workspaceTab').onclick=()=>{$('workspace').hidden=false;$('gallery').hidden=true;$('workspace').scrollIntoView({block:'start'});};$('galleryTab').onclick=()=>{gallery();$('workspace').hidden=true;$('gallery').hidden=false;};

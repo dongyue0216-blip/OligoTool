@@ -1,0 +1,1435 @@
+[
+  {
+    "notation": "cEt-A",
+    "names": [
+      "cEt-A"
+    ],
+    "template_key": "cEt-A",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "cEt-C",
+    "names": [
+      "cEt-C"
+    ],
+    "template_key": "cEt-C",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "cEt-G",
+    "names": [
+      "cEt-G"
+    ],
+    "template_key": "cEt-G",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "cEt-U",
+    "names": [
+      "cEt-U"
+    ],
+    "template_key": "cEt-U",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "cEt-T",
+    "names": [
+      "cEt-T"
+    ],
+    "template_key": "cEt-T",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "cEt-I",
+    "names": [
+      "cEt-I"
+    ],
+    "template_key": "cEt-I",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "cEt-CMe",
+    "names": [
+      "cEt-CMe"
+    ],
+    "template_key": "cEt-CMe",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "dA",
+    "names": [
+      "dA"
+    ],
+    "template_key": "dA",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "dC",
+    "names": [
+      "dC"
+    ],
+    "template_key": "dC",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "dG",
+    "names": [
+      "dG"
+    ],
+    "template_key": "dG",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "dT",
+    "names": [
+      "dT"
+    ],
+    "template_key": "dT",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "rA",
+    "names": [
+      "rA"
+    ],
+    "template_key": "rA",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "rC",
+    "names": [
+      "rC"
+    ],
+    "template_key": "rC",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "rG",
+    "names": [
+      "rG"
+    ],
+    "template_key": "rG",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "rU",
+    "names": [
+      "rU"
+    ],
+    "template_key": "rU",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "rI",
+    "names": [
+      "rI"
+    ],
+    "template_key": "rI",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "fA",
+    "names": [
+      "fA"
+    ],
+    "template_key": "fA",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "fC",
+    "names": [
+      "fC"
+    ],
+    "template_key": "fC",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "fG",
+    "names": [
+      "fG"
+    ],
+    "template_key": "fG",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "fU",
+    "names": [
+      "fU"
+    ],
+    "template_key": "fU",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "mA",
+    "names": [
+      "mA"
+    ],
+    "template_key": "mA",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "mC",
+    "names": [
+      "mC"
+    ],
+    "template_key": "mC",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "mG",
+    "names": [
+      "mG"
+    ],
+    "template_key": "mG",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "mU",
+    "names": [
+      "mU"
+    ],
+    "template_key": "mU",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "eA",
+    "names": [
+      "eA"
+    ],
+    "template_key": "eA",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "eC",
+    "names": [
+      "eC"
+    ],
+    "template_key": "eC",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "eG",
+    "names": [
+      "eG"
+    ],
+    "template_key": "eG",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "eU",
+    "names": [
+      "eU"
+    ],
+    "template_key": "eU",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "dI",
+    "names": [
+      "dI"
+    ],
+    "template_key": "dI",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "dCMe",
+    "names": [
+      "dCMe"
+    ],
+    "template_key": "dCMe",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "rT",
+    "names": [
+      "rT"
+    ],
+    "template_key": "rT",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "rCMe",
+    "names": [
+      "rCMe"
+    ],
+    "template_key": "rCMe",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "mT",
+    "names": [
+      "mT"
+    ],
+    "template_key": "mT",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "mI",
+    "names": [
+      "mI"
+    ],
+    "template_key": "mI",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "mCMe",
+    "names": [
+      "mCMe"
+    ],
+    "template_key": "mCMe",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "fT",
+    "names": [
+      "fT"
+    ],
+    "template_key": "fT",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "fI",
+    "names": [
+      "fI"
+    ],
+    "template_key": "fI",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "fCMe",
+    "names": [
+      "fCMe"
+    ],
+    "template_key": "fCMe",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "eT",
+    "names": [
+      "eT"
+    ],
+    "template_key": "eT",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "eI",
+    "names": [
+      "eI"
+    ],
+    "template_key": "eI",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "eCMe",
+    "names": [
+      "eCMe"
+    ],
+    "template_key": "eCMe",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "FANA-A",
+    "names": [
+      "FANA-A"
+    ],
+    "template_key": "FANA-A",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "UNA-A",
+    "names": [
+      "UNA-A"
+    ],
+    "template_key": "UNA-A",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "nA",
+    "names": [
+      "nA"
+    ],
+    "template_key": "nA",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "Ahd",
+    "names": [
+      "Ahd"
+    ],
+    "template_key": "Ahd",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "Ada",
+    "names": [
+      "Ada"
+    ],
+    "template_key": "Ada",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "+A",
+    "names": [
+      "+A"
+    ],
+    "template_key": "+A",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "ENA-A",
+    "names": [
+      "ENA-A"
+    ],
+    "template_key": "ENA-A",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "FANA-C",
+    "names": [
+      "FANA-C"
+    ],
+    "template_key": "FANA-C",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "UNA-C",
+    "names": [
+      "UNA-C"
+    ],
+    "template_key": "UNA-C",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "nC",
+    "names": [
+      "nC"
+    ],
+    "template_key": "nC",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "Chd",
+    "names": [
+      "Chd"
+    ],
+    "template_key": "Chd",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "Cda",
+    "names": [
+      "Cda"
+    ],
+    "template_key": "Cda",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "+C",
+    "names": [
+      "+C"
+    ],
+    "template_key": "+C",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "ENA-C",
+    "names": [
+      "ENA-C"
+    ],
+    "template_key": "ENA-C",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "FANA-G",
+    "names": [
+      "FANA-G"
+    ],
+    "template_key": "FANA-G",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "UNA-G",
+    "names": [
+      "UNA-G"
+    ],
+    "template_key": "UNA-G",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "nG",
+    "names": [
+      "nG"
+    ],
+    "template_key": "nG",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "Ghd",
+    "names": [
+      "Ghd"
+    ],
+    "template_key": "Ghd",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "Gda",
+    "names": [
+      "Gda"
+    ],
+    "template_key": "Gda",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "+G",
+    "names": [
+      "+G"
+    ],
+    "template_key": "+G",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "ENA-G",
+    "names": [
+      "ENA-G"
+    ],
+    "template_key": "ENA-G",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "FANA-U",
+    "names": [
+      "FANA-U"
+    ],
+    "template_key": "FANA-U",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "UNA-U",
+    "names": [
+      "UNA-U"
+    ],
+    "template_key": "UNA-U",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "nU",
+    "names": [
+      "nU"
+    ],
+    "template_key": "nU",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "Uhd",
+    "names": [
+      "Uhd"
+    ],
+    "template_key": "Uhd",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "Uda",
+    "names": [
+      "Uda"
+    ],
+    "template_key": "Uda",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "+U",
+    "names": [
+      "+U"
+    ],
+    "template_key": "+U",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "ENA-U",
+    "names": [
+      "ENA-U"
+    ],
+    "template_key": "ENA-U",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "FANA-T",
+    "names": [
+      "FANA-T"
+    ],
+    "template_key": "FANA-T",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "UNA-T",
+    "names": [
+      "UNA-T"
+    ],
+    "template_key": "UNA-T",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "nT",
+    "names": [
+      "nT"
+    ],
+    "template_key": "nT",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "Thd",
+    "names": [
+      "Thd"
+    ],
+    "template_key": "Thd",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "Tda",
+    "names": [
+      "Tda"
+    ],
+    "template_key": "Tda",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "+T",
+    "names": [
+      "+T"
+    ],
+    "template_key": "+T",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "ENA-T",
+    "names": [
+      "ENA-T"
+    ],
+    "template_key": "ENA-T",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "FANA-I",
+    "names": [
+      "FANA-I"
+    ],
+    "template_key": "FANA-I",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "UNA-I",
+    "names": [
+      "UNA-I"
+    ],
+    "template_key": "UNA-I",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "nI",
+    "names": [
+      "nI"
+    ],
+    "template_key": "nI",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "Ihd",
+    "names": [
+      "Ihd"
+    ],
+    "template_key": "Ihd",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "Ida",
+    "names": [
+      "Ida"
+    ],
+    "template_key": "Ida",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "+I",
+    "names": [
+      "+I"
+    ],
+    "template_key": "+I",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "ENA-I",
+    "names": [
+      "ENA-I"
+    ],
+    "template_key": "ENA-I",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "FANA-CMe",
+    "names": [
+      "FANA-CMe"
+    ],
+    "template_key": "FANA-CMe",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "UNA-CMe",
+    "names": [
+      "UNA-CMe"
+    ],
+    "template_key": "UNA-CMe",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "nCMe",
+    "names": [
+      "nCMe"
+    ],
+    "template_key": "nCMe",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "CMehd",
+    "names": [
+      "CMehd"
+    ],
+    "template_key": "CMehd",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "CMeda",
+    "names": [
+      "CMeda"
+    ],
+    "template_key": "CMeda",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "+CMe",
+    "names": [
+      "+CMe"
+    ],
+    "template_key": "+CMe",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "ENA-CMe",
+    "names": [
+      "ENA-CMe"
+    ],
+    "template_key": "ENA-CMe",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "Agn",
+    "names": [
+      "Agn"
+    ],
+    "template_key": "Agn",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "Cgn",
+    "names": [
+      "Cgn"
+    ],
+    "template_key": "Cgn",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "Ggn",
+    "names": [
+      "Ggn"
+    ],
+    "template_key": "Ggn",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "Tgn",
+    "names": [
+      "Tgn"
+    ],
+    "template_key": "Tgn",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "VpmA",
+    "names": [
+      "VpmA"
+    ],
+    "template_key": "VpmA",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "VpmC",
+    "names": [
+      "VpmC"
+    ],
+    "template_key": "VpmC",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "VpmG",
+    "names": [
+      "VpmG"
+    ],
+    "template_key": "VpmG",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "VpmU",
+    "names": [
+      "VpmU"
+    ],
+    "template_key": "VpmU",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "VpeA",
+    "names": [
+      "VpeA"
+    ],
+    "template_key": "VpeA",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "VpeC",
+    "names": [
+      "VpeC"
+    ],
+    "template_key": "VpeC",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "VpeG",
+    "names": [
+      "VpeG"
+    ],
+    "template_key": "VpeG",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "VpeU",
+    "names": [
+      "VpeU"
+    ],
+    "template_key": "VpeU",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "pA",
+    "names": [
+      "pA"
+    ],
+    "template_key": "pA",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "pC",
+    "names": [
+      "pC"
+    ],
+    "template_key": "pC",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "pG",
+    "names": [
+      "pG"
+    ],
+    "template_key": "pG",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "pT",
+    "names": [
+      "pT"
+    ],
+    "template_key": "pT",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "pI",
+    "names": [
+      "pI"
+    ],
+    "template_key": "pI",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "tA",
+    "names": [
+      "tA"
+    ],
+    "template_key": "tA",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "tC",
+    "names": [
+      "tC"
+    ],
+    "template_key": "tC",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "tG",
+    "names": [
+      "tG"
+    ],
+    "template_key": "tG",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "tT",
+    "names": [
+      "tT"
+    ],
+    "template_key": "tT",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "tCMe",
+    "names": [
+      "tCMe"
+    ],
+    "template_key": "tCMe",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "Z",
+    "names": [
+      "Z"
+    ],
+    "template_key": "Z",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "{PEG3}",
+    "names": [
+      "PEG3",
+      "spacer9"
+    ],
+    "template_key": "{PEG3}",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "{PEG4}",
+    "names": [
+      "PEG4",
+      "spacer12"
+    ],
+    "template_key": "{PEG4}",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "{PEG5}",
+    "names": [
+      "PEG5",
+      "spacer15"
+    ],
+    "template_key": "{PEG5}",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "{PEG6}",
+    "names": [
+      "PEG6",
+      "spacer18"
+    ],
+    "template_key": "{PEG6}",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "{PEG7}",
+    "names": [
+      "PEG7",
+      "spacer21"
+    ],
+    "template_key": "{PEG7}",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "{spacer3}",
+    "names": [
+      "spacer3"
+    ],
+    "template_key": "{spacer3}",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "{C3N}",
+    "names": [
+      "C3N"
+    ],
+    "template_key": "{C3N}",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "{C6N}",
+    "names": [
+      "C6N"
+    ],
+    "template_key": "{C6N}",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "{FAM}",
+    "names": [
+      "FAM",
+      "6-FAM"
+    ],
+    "template_key": "{FAM}",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "{L96}",
+    "names": [
+      "L96"
+    ],
+    "template_key": "{L96}",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "{NAG37}",
+    "names": [
+      "NAG37"
+    ],
+    "template_key": "{NAG37}",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "{InvAb}",
+    "names": [
+      "InvAb"
+    ],
+    "template_key": "{InvAb}",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "Ugn",
+    "names": [
+      "Ugn"
+    ],
+    "template_key": "Ugn",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "{absic}",
+    "names": [
+      "absic",
+      "absic · dSpacer (1′,2′-dideoxyribose)"
+    ],
+    "template_key": "{absic}",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "{GlycerolBranch}",
+    "names": [
+      "GlycerolBranch",
+      "Glycerol brancher"
+    ],
+    "template_key": "{GlycerolBranch}",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "pB",
+    "names": [
+      "pB"
+    ],
+    "assembly_ready": false,
+    "reference_only": true,
+    "status": "Unavailable for assembly: no MolecularGraph",
+    "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified"
+  },
+  {
+    "notation": "[PHO]",
+    "names": [
+      "PHO",
+      "phosphorylation"
+    ],
+    "terminal_syntax": true,
+    "assembly_ready": true,
+    "status": "terminal syntax validated"
+  },
+  {
+    "notation": "[Biotin]",
+    "names": [
+      "Biotin"
+    ],
+    "assembly_ready": false,
+    "reference_only": true,
+    "status": "Unavailable for assembly: no MolecularGraph",
+    "evidence": "RECOGNIZED_PENDING: biotin attachment linker is unspecified in available baseline; Biotin-TEG is not substituted."
+  },
+  {
+    "notation": "[DIG]",
+    "names": [
+      "DIG"
+    ],
+    "assembly_ready": false,
+    "reference_only": true,
+    "status": "Unavailable for assembly: no MolecularGraph",
+    "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified"
+  },
+  {
+    "notation": "[abasic]",
+    "names": [
+      "abasic"
+    ],
+    "assembly_ready": false,
+    "reference_only": true,
+    "status": "Unavailable for assembly: no MolecularGraph",
+    "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified"
+  },
+  {
+    "notation": "[spacer9]",
+    "names": [
+      "spacer9"
+    ],
+    "template_key": "{PEG3}",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "[spacer12]",
+    "names": [
+      "spacer12"
+    ],
+    "template_key": "{PEG4}",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "[spacer15]",
+    "names": [
+      "spacer15"
+    ],
+    "template_key": "{PEG5}",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "[spacer18]",
+    "names": [
+      "spacer18"
+    ],
+    "template_key": "{PEG6}",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "[spacer21]",
+    "names": [
+      "spacer21"
+    ],
+    "template_key": "{PEG7}",
+    "assembly_ready": true,
+    "status": "assembly-ready"
+  },
+  {
+    "notation": "[CY5]",
+    "names": [
+      "CY5",
+      "Cy5"
+    ],
+    "assembly_ready": false,
+    "reference_only": true,
+    "status": "Unavailable for assembly: no MolecularGraph",
+    "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified"
+  },
+  {
+    "notation": "[CY3]",
+    "names": [
+      "CY3",
+      "Cy3"
+    ],
+    "assembly_ready": false,
+    "reference_only": true,
+    "status": "Unavailable for assembly: no MolecularGraph",
+    "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified"
+  },
+  {
+    "notation": "[CY5.5]",
+    "names": [
+      "CY5.5",
+      "Cy5.5"
+    ],
+    "assembly_ready": false,
+    "reference_only": true,
+    "status": "Unavailable for assembly: no MolecularGraph",
+    "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified"
+  },
+  {
+    "notation": "[555]",
+    "names": [
+      "555",
+      "Alexa555"
+    ],
+    "assembly_ready": false,
+    "reference_only": true,
+    "status": "Unavailable for assembly: no MolecularGraph",
+    "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified"
+  },
+  {
+    "notation": "[647]",
+    "names": [
+      "647",
+      "Alexa647"
+    ],
+    "assembly_ready": false,
+    "reference_only": true,
+    "status": "Unavailable for assembly: no MolecularGraph",
+    "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified"
+  },
+  {
+    "notation": "[594]",
+    "names": [
+      "594",
+      "Alexa594"
+    ],
+    "assembly_ready": false,
+    "reference_only": true,
+    "status": "Unavailable for assembly: no MolecularGraph",
+    "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified"
+  },
+  {
+    "notation": "[488]",
+    "names": [
+      "488",
+      "Alexa488"
+    ],
+    "assembly_ready": false,
+    "reference_only": true,
+    "status": "Unavailable for assembly: no MolecularGraph",
+    "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified"
+  },
+  {
+    "notation": "[568]",
+    "names": [
+      "568",
+      "Alexa568"
+    ],
+    "assembly_ready": false,
+    "reference_only": true,
+    "status": "Unavailable for assembly: no MolecularGraph",
+    "evidence": "Photograph requirement only; precise assembled structure and attachment chemistry unverified"
+  },
+  {
+    "notation": "(none)",
+    "names": [
+      "(none)"
+    ],
+    "assembly_ready": false,
+    "not_building_block": true,
+    "status": "notation control / linkage syntax, not a BuildingBlock name"
+  },
+  {
+    "notation": "*",
+    "names": [
+      "*"
+    ],
+    "assembly_ready": false,
+    "not_building_block": true,
+    "status": "notation control / linkage syntax, not a BuildingBlock name"
+  },
+  {
+    "notation": "**",
+    "names": [
+      "**"
+    ],
+    "assembly_ready": false,
+    "not_building_block": true,
+    "status": "notation control / linkage syntax, not a BuildingBlock name"
+  },
+  {
+    "notation": "^",
+    "names": [
+      "^"
+    ],
+    "assembly_ready": false,
+    "not_building_block": true,
+    "status": "notation control / linkage syntax, not a BuildingBlock name"
+  },
+  {
+    "notation": "!",
+    "names": [
+      "!"
+    ],
+    "assembly_ready": false,
+    "not_building_block": true,
+    "status": "notation control / linkage syntax, not a BuildingBlock name"
+  },
+  {
+    "notation": "#",
+    "names": [
+      "#"
+    ],
+    "assembly_ready": false,
+    "not_building_block": true,
+    "status": "notation control / linkage syntax, not a BuildingBlock name"
+  },
+  {
+    "notation": "[p]",
+    "names": [
+      "p"
+    ],
+    "terminal_syntax": true,
+    "assembly_ready": true,
+    "status": "terminal syntax validated"
+  },
+  {
+    "notation": "[pp]",
+    "names": [
+      "pp"
+    ],
+    "terminal_syntax": true,
+    "assembly_ready": true,
+    "status": "terminal syntax validated"
+  },
+  {
+    "notation": "[ppp]",
+    "names": [
+      "ppp"
+    ],
+    "terminal_syntax": true,
+    "assembly_ready": true,
+    "status": "terminal syntax validated"
+  },
+  {
+    "notation": "[phosphorylation]",
+    "names": [
+      "phosphorylation"
+    ],
+    "terminal_syntax": true,
+    "assembly_ready": true,
+    "status": "terminal syntax validated"
+  }
+]

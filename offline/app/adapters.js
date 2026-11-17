@@ -88,8 +88,8 @@ const Sandbox=(()=>{
   return g;
  }
  const C={
-  present(r,on=true){
-   const before=identity(r.graph),provider=typeof FragmentComposition!=='undefined'?FragmentComposition.coordinates(r):typeof SmallFragmentDepictor!=='undefined'?SmallFragmentDepictor.coordinates(r):{graph:r.graph,status:'not loaded'},layout=Presentation.layout({graph:provider.graph,semantics:provider.composed?{routes:provider.graph.routes||[]}:semantics(r.graph)}),drawing=ringCoordinates(Presentation.materialize(r.graph,layout));
+  present(r,on=true,options){
+   const before=identity(r.graph),provider=typeof FragmentComposition!=='undefined'?FragmentComposition.coordinates(r,0,options):typeof SmallFragmentDepictor!=='undefined'?SmallFragmentDepictor.coordinates(r):{graph:r.graph,status:'not loaded'},layout=Presentation.layout({graph:provider.graph,semantics:provider.composed?{routes:provider.graph.routes||[]}:semantics(r.graph)}),drawing=ringCoordinates(Presentation.materialize(r.graph,layout));
    layout.metadata.smallFragmentProvider=provider.status;if(provider.transforms)layout.metadata.compositionTransforms=provider.transforms;if(provider.warnings)layout.metadata.warnings.push(...provider.warnings);layout.coordinates=drawing.atoms.map(a=>({x:a.x,y:a.y}));
    if(typeof SandboxValidation!=='undefined'&&SandboxValidation.ring(drawing)){const xs=drawing.atoms.map(a=>a.x),ys=drawing.atoms.map(a=>a.y);layout.bounds={minX:Math.min(...xs),minY:Math.min(...ys),maxX:Math.max(...xs),maxY:Math.max(...ys)};layout.metadata.sandboxAdapter='existing A triazole → regular pentagon coordinates only';}
    const ag=abbreviationGraph(drawing),protectedAtomIds=r.assemblyGraph||drawing.atoms.some(a=>a.s)||drawing.bonds.some(b=>b.s)?ag.atoms.map(a=>a.id):[];

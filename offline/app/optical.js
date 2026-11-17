@@ -4,6 +4,7 @@ const Optical = (() => {
  const {negligible:negligibleIds,pack}=BuiltinChemistry.opticalCorrections;
  const negligible=new Set(negligibleIds);
  const attachmentParameters=BuiltinChemistry.opticalAttachments;
+ const sessionOverrides=new Map();
  const tiers=['validated','literature_approx','heuristic','unsupported'];
  const chemicalIdentity = graph => JSON.stringify([
   graph.atoms.map(({x,y,z,...atom})=>atom), graph.bonds
@@ -37,7 +38,7 @@ const Optical = (() => {
   try{if(chemicalIdentity(Lite.expandAssemblyGraph(lane.assembly))!==chemicalIdentity(graph))return null;}catch{return null;}
   return {graph,assembly:lane.assembly,laneId:lane.id};
  }
- function analyze(snapshot, parameters=pack, overrides=[]){
+ function analyze(snapshot, parameters=pack, overrides, reaction=null){
   const lane=assembly(snapshot), graph=snapshot.graph;
   const graphKey=graph?chemicalIdentity(graph):null;
   const reference={stateId:snapshot.id??null,graphRevision:snapshot.graphRevision??null,
@@ -72,7 +73,8 @@ const Optical = (() => {
     epsilon260:epsilon,nmol_per_od:epsilon?1e6/epsilon:null,ug_per_od:mass,
     partialEpsilon:missing.length&&modeled>0?modeled:null,method,reason:missing.length?missing.map(m=>m.detail).join('; '):null};
   }
-  const supplied=Array.isArray(overrides)?overrides:[overrides];
+  const chosen=overrides??sessionOverrides.get(graphKey)??[];
+  const supplied=Array.isArray(chosen)?chosen:[chosen];
   const normalized=supplied.map(item=>{
    const {kind,value,unit,source,conditions,wavelength,identity,nodeId,measured}=item||{};
    const factor={'M^-1 cm^-1':1,'mM^-1 cm^-1':1000}[unit];
@@ -92,6 +94,41 @@ const Optical = (() => {
   }
   if(parameters?.id!==pack.id||parameters?.hash!==pack.hash){
    exclude(reference,'UNKNOWN_PARAMETER_SET','The selected 260 nm parameter set is unavailable');return result();
+  }
+  if(reaction){
+   const {parent,modifier,retainsOligo=true}=reaction;
+   if(!retainsOligo||!parent?.supported||!Number.isFinite(parent.epsilon260)||parent.epsilon260<=0){
+    exclude(reference,'NO_RETAINED_OLIGO_EPSILON','No supported optical denominator for the retained starting oligo');
+    return result();
+   }
+   ledger.push(...(parent.contributionLedger||[]));
+   if(!ledger.length)add('inheritedOligo',reference,parent.epsilon260,parent.method);
+   assumptions.push(...(parent.assumptionLedger||[]));
+   for(const code of parent.evidence?.reasonCodes||[])diagnostics.add(code);
+   sourceRefs.push(...(parent.evidence?.sourceRefs||[]));
+   tier=Math.max(0,tiers.indexOf(parent.evidence?.tier),parent.estimated?2:0);
+   method='Inherited oligo ε260 with additive modifier contributions';
+   if(modifier){
+    const ref={...reference,region:'post-synthesis modifier'};
+    const meta=modifier.optical;
+    const modeled=modifier.photometry;
+    if(meta?.mode==='explicit'&&Number.isFinite(meta.epsilon)&&meta.epsilon>=0&&meta.source){
+     sourceRefs.push(meta.source);add('modifierDelta',ref,meta.epsilon,meta.source,meta.conditions||pack.conditions);
+     assume(ref,'ADDITIVE_MODIFIER','Modifier ε260 is additive; coupling to the oligo is omitted.');
+    }else if(modeled?.supported&&Number.isFinite(modeled.epsilon260)&&modeled.epsilon260>0){
+     sourceRefs.push(...(modeled.evidence?.sourceRefs||[]));
+     add('modifierDelta',ref,modeled.epsilon260,modeled.method);
+     assumptions.push(...(modeled.assumptionLedger||[]));
+     assume(ref,'ADDITIVE_MODIFIER','Modifier ε260 is additive; coupling to the oligo is omitted.');
+    }else if(meta?.mode==='zero'&&meta.source){
+     sourceRefs.push(meta.source);add('modifierDelta',ref,0,meta.source);
+    }else{
+     assume(ref,'POST_MODIFIER_ZERO','Assuming post-synthesis modification contributes negligibly to A260 / 假设后合成修饰部分在 260 nm 的吸收贡献可忽略。');
+     add('modifierDelta',ref,0,'unparameterized post-synthesis modifier');
+    }
+   }
+   if(tier>0)basis='estimated';
+   return result();
   }
   if(!lane){
    exclude(reference,'UNMAPPED_PRODUCT_REGION','No verified optical unit mapping for the current molecular graph');return result();
@@ -185,7 +222,13 @@ const Optical = (() => {
   return {concentrationUM,concentrationUgMl,totalNmol:concentrationUM*volumeMl,
    totalUg:concentrationUgMl===null?null:concentrationUgMl*volumeMl,totalOD260:absorbance*dilutionFactor*volumeMl/pathLengthCm};
  }
- return {analyze,convert,pack,chemicalIdentity,graphDigest,builtin,assembly,endPS,reviewedNegligible:block=>builtin(block)&&negligible.has(block.id)};
+ function setOverride(snapshot,override){
+  const result=analyze(snapshot,pack,override);
+  if(result.supported)sessionOverrides.set(chemicalIdentity(snapshot.graph),override);
+  return result;
+ }
+ const clearOverride=graph=>sessionOverrides.delete(chemicalIdentity(graph));
+ return {analyze,convert,setOverride,clearOverride,pack,chemicalIdentity,graphDigest,builtin,assembly,endPS,reviewedNegligible:block=>builtin(block)&&negligible.has(block.id)};
 })();
 
 

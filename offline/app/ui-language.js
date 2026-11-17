@@ -19,7 +19,7 @@ const UILanguage=(()=>{
   "optical.volume": ["原液体积（mL）", "Original volume (mL)"],
   "optical.convert": ["换算", "Convert"],
   "optical.override": ["使用整分子 ε₂₆₀", "Use a whole-molecule ε₂₆₀"],
-  "optical.override.help": ["输入该分子在指定测定条件下的 260 nm 数值。本设置适用于当前视图。", "Enter a 260 nm value for this exact molecule and measurement conditions. Applies to this view."],
+  "optical.override.help": ["输入该分子在指定测定条件下的 260 nm 数值。本次会话中，同一分子的单条与批量计算均使用该数值。", "Enter a 260 nm value for this exact molecule and measurement conditions. Used for this exact molecule in single and batch calculations during this session."],
   "optical.unit": ["单位", "Unit"],
   "optical.source": ["来源", "Source"],
   "optical.conditions": ["测定条件", "Conditions"],
@@ -140,10 +140,10 @@ const UILanguage=(()=>{
   "zoom": ["缩放", "Zoom"],
   "entry.name": ["条目名称", "Entry name"],
   "attachment.end": ["选择连接端", "Attachment end"],
-  "v2.4.2": ["v2.4.2", "v2.4.2"],
+  "v2.4.3": ["v2.4.3", "v2.4.3"],
   "local.private.offline": ["本地运行 · 数据留在本机 · 支持离线", "Local · Private · Offline"],
   "chemistry.design.presentation": ["化学 · 设计 · 展示", "Chemistry · Design · Presentation"],
-  "oligo.toolkit.v2.4.2": ["Oligo Toolkit / v2.4.2", "Oligo Toolkit / v2.4.2"],
+  "oligo.toolkit.v2.4.3": ["Oligo Toolkit / v2.4.3", "Oligo Toolkit / v2.4.3"],
   "invalid.reagent": ["试剂无效", "Invalid reagent"],
   "export.chemdraw.cdxml": ["导出 ChemDraw（.cdxml）", "Export ChemDraw (.cdxml)"],
   "export.schematic.svg": ["导出示意图（.svg）", "Export schematic (.svg)"],
@@ -340,7 +340,7 @@ const UILanguage=(()=>{
  }
  function errorInto(node,source){write(node,()=>error(source));}
  function localize(){
-  document.title=text('oligo.toolkit.v2.4.2');
+  document.title=text('oligo.toolkit.v2.4.3');
   for(const [data,attribute] of [['ui',null],['uiAria','aria-label'],['uiPlaceholder','placeholder']]){
    const suffix=data.replace(/[A-Z]/g,c=>'-'+c.toLowerCase());
    document.querySelectorAll('[data-'+suffix+']').forEach(node=>{

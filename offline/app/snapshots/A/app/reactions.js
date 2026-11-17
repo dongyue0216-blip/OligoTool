@@ -112,7 +112,15 @@ const Reactions = (() => {
   return {schema_version:'reaction-step/1',validation:{status:'VALIDATED',rule:d.rule},definition:copy(d),reactants:inputs.map(g=>copy(g.source||{kind:'molecular-graph'})),inputs:copy(inputs),sites:copy(selected),output,properties:{...Lite.graphProperties(output),...(output.photometry?{optical:copy(output.photometry)}:{})}};
  }
  function productOptical(inputs,g){
-  if(typeof Optical!=="undefined"&&inputs.some(input=>input.photometry?.schema==="OpticalResult/2"))return Optical.analyze({graph:g});
+  if(typeof Optical!=="undefined"&&inputs.some(input=>input.photometry?.schema==="OpticalResult/2")){
+   const parentIndex=inputs.findIndex(input=>input.photometry?.supported);
+   const parent=inputs[parentIndex];
+   const map=g.provenance?.input_atom_maps?.[parentIndex];
+   return Optical.analyze({graph:g},Optical.pack,undefined,{
+    parent:parent?.photometry,modifier:inputs[1-parentIndex],
+    retainsOligo:!!parent&&parent.atoms.every((_,i)=>Number.isInteger(map?.[i]))
+   });
+  }
   const base=inputs[0].photometry, modifier=inputs[1].photometry, meta=inputs[1].optical;
   const incomplete=o=>o?.partial||['PARTIAL','NEEDS_PARAMETER'].includes(o?.status);
   let correction=null,source='Modifier optical contribution unknown';

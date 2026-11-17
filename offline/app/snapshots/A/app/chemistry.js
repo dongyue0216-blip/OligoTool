@@ -234,7 +234,7 @@ function phosphorusGeometry(code,x,y){
  for(const [role,j]of Object.entries(roles)){t.atoms[j].x=pts[role][0];t.atoms[j].y=pts[role][1];}
  return t;
 }
-function expandAssemblyGraph(input){
+function expandAssemblyGraph(input,{rows=10,straight=false}={}){
  const ag=ChemistryCore.validateAssembly(clone(input),linkageDefinitions);
  const ts=ag.nodes.map(n=>({...clone(n.block.graph),id:n.block.id,attachments:n.block.sites,layout_metadata:n.block.layout,depiction_overpasses:n.block.layout.depiction_overpasses,incoming_label:n.block.metadata.incoming_label,outgoing_label:n.block.metadata.outgoing_label}));
  if(ts.some(t=>t.atoms.some(a=>!Number.isFinite(a.x)||!Number.isFinite(a.y))))throw Error('CHEMISTRY_UNSUPPORTED: expansion layout requires finite atom coordinates');
@@ -250,18 +250,19 @@ function expandAssemblyGraph(input){
  let g={schema_version:'molecular-graph/1',atoms:[],bonds:[],routes:[],depiction_overpasses:[],provenance:{atoms:[],bonds:[]}},sites=[],expanded=[];
  const mark=(a,b,origin)=>{for(let j=a;j<g.atoms.length;j++)g.provenance.atoms[j]={...origin,local_atom:j-a};for(let j=b;j<g.bonds.length;j++)g.provenance.bonds[j]={...origin,local_bond:j-b};};
  const hasLarge=ts.some(t=>t.layout_metadata?.expanded),minLocalX=extent(ts.flatMap(t=>t.atoms.map(a=>a.x)),'min'),maxLocalX=extent(ts.flatMap(t=>t.atoms.map(a=>a.x)),'max'),minLocalY=extent(ts.flatMap(t=>t.atoms.map(a=>a.y)),'min');
- const origins=[];for(let i=0;i<ts.length;i++){if(i%10===0)origins[i]=0;else{const prev=ts[i-1],next=ts[i];origins[i]=origins[i-1]+Math.max(11,extent(prev.atoms.map(a=>a.y),'max')-extent(next.atoms.map(a=>a.y),'min')+4.5);}}
+ const origins=[];for(let i=0;i<ts.length;i++){if(!i||(!straight&&i%rows===0))origins[i]=0;else{const prev=ts[i-1],next=ts[i];origins[i]=origins[i-1]+Math.max(11,extent(prev.atoms.map(a=>a.y),'max')-extent(next.atoms.map(a=>a.y),'min')+4.5)+(straight&&i%rows===0?3:0);}}
  // Frozen coordinates: no column-dependent rotation, reflection or terminal transform.
  let width=Math.max(30,...ts.map(t=>{return extent(t.atoms.map(a=>a.x),'max')-extent(t.atoms.map(a=>a.x),'min')+20;}));
  let pitch=Math.max(p.links.includes('PN(dmi)')?15:11,...ts.map(t=>{return extent(t.atoms.map(a=>a.y),'max')-extent(t.atoms.map(a=>a.y),'min')+4.5;}));
  if(hasLarge)width=maxLocalX-minLocalX+36;
  for(let i=0;i<p.residues.length;i++){let t=clone(ts[i]),o=g.atoms.length;
- for(const v of t.atoms){v.x+=Math.floor(i/10)*width;v.y+=hasLarge?origins[i]:(i%10)*pitch;}
+ for(const v of t.atoms){v.x+=Math.floor(i/rows)*(straight?2:width);
+ v.y+=hasLarge?origins[i]:straight?i*pitch+Math.floor(i/rows)*3:(i%rows)*pitch;}
  for(const v of t.depiction_overpasses||[])g.depiction_overpasses.push({...v,front:g.bonds.length+v.front,back:g.bonds.length+v.back});
  const bondStart=g.bonds.length;append(g.atoms,t.atoms);append(g.bonds,t.bonds.map(b=>({...b,a:b.a+o,b:b.b+o})));mark(o,bondStart,{kind:'building-block',node:ag.nodes[i].id,position:i+1,block:ag.nodes[i].block.id});const up=t.attachments?.upstream?.atom,down=t.attachments?.downstream?.atom;sites.push({offset:o,local_anchor_y:ts[i].atoms[up??down??0].y,o5:Number.isInteger(up)?o+up:null,o3:Number.isInteger(down)?o+down:null,terminalOnly:!Number.isInteger(up)||!Number.isInteger(down),incoming_label:t.incoming_label||'5′ side',outgoing_label:t.outgoing_label||'3′ side'});}
  for(let i=0;i<p.links.length;i++){
- const edge=ag.edges[i],sourceIndex=ag.nodes.findIndex(n=>n.id===edge.source.node),targetIndex=ag.nodes.findIndex(n=>n.id===edge.target.node);let code=edge.linkage,t,a=sites[sourceIndex].offset+ts[sourceIndex].attachments[edge.source.site].atom,b=sites[targetIndex].offset+ts[targetIndex].attachments[edge.target.site].atom,offset=g.atoms.length,A=g.atoms[a],B=g.atoms[b],boundary=targetIndex===sourceIndex+1&&(sourceIndex+1)%10===0;
- let x=A.x,y=(A.y+(boundary?A.y+(hasLarge?11:pitch)-3.8:B.y))/2;const largeLink=hasLarge&&(ts[sourceIndex].layout_metadata?.expanded||ts[targetIndex].layout_metadata?.expanded);if(largeLink){x=Math.floor(sourceIndex/10)*width+minLocalX-10;y=boundary?A.y+4:(A.y+B.y)/2;}
+ const edge=ag.edges[i],sourceIndex=ag.nodes.findIndex(n=>n.id===edge.source.node),targetIndex=ag.nodes.findIndex(n=>n.id===edge.target.node);let code=edge.linkage,t,a=sites[sourceIndex].offset+ts[sourceIndex].attachments[edge.source.site].atom,b=sites[targetIndex].offset+ts[targetIndex].attachments[edge.target.site].atom,offset=g.atoms.length,A=g.atoms[a],B=g.atoms[b],boundary=!straight&&targetIndex===sourceIndex+1&&(sourceIndex+1)%rows===0;
+ let x=A.x,y=(A.y+(boundary?A.y+(hasLarge?11:pitch)-3.8:B.y))/2;const largeLink=hasLarge&&(ts[sourceIndex].layout_metadata?.expanded||ts[targetIndex].layout_metadata?.expanded);if(largeLink){x=Math.floor(sourceIndex/rows)*(straight?2:width)+minLocalX-10;y=boundary?A.y+4:(A.y+B.y)/2;}
  t=phosphorusGeometry(code,x,y);
  const bondStart=g.bonds.length;append(g.atoms,t.atoms);g.bonds.push(...t.bonds.map(v=>({...v,a:v.a+offset,b:v.b+offset,s:0})),{a,b:offset+t.p,o:1,s:0},{a:offset+t.p,b,o:1,s:0});
  mark(offset,bondStart,{kind:'linkage',edge:edge.id,linkage:edge.linkage,source:edge.source,target:edge.target,positions:[sourceIndex+1,targetIndex+1]});if(largeLink)expanded.push({bonds:[g.bonds.length-2,g.bonds.length-1],p:offset+t.p});
@@ -280,7 +281,7 @@ function expandAssemblyGraph(input){
  }
  }
  for(const item of expanded)for(const bi of item.bonds){const b=g.bonds[bi];try{g.routes.push({bond:bi,kind:'expanded-unit',atoms:[b.a,b.b],points:routeAvoid(g,bi,item.p)});}catch(e){if(!e.message.startsWith('LAYOUT_ROUTING_FAILED:'))throw e;(g.layout_warnings??=[]).push('Direct bond retained for '+bi+': display route unavailable; inspect layout');}}
- g.sites=sites;g.topology=p.topology||'mixed-or-ribose';g.direction=['alpha-L-threose-3-to-2','S-glycerol-3-to-2','S-glycerol-phosphate'].includes(p.topology)?'3′ → 2′':p.topology==='morpholine-phosphorodiamidate'?'5′ OH → 3′ NH':'5′ → 3′';g.layout={column_pitch:width,residue_pitch:pitch,adaptive:hasLarge,origins:hasLarge?origins:null,rows:10};return g;
+ g.sites=sites;g.topology=p.topology||'mixed-or-ribose';g.direction=['alpha-L-threose-3-to-2','S-glycerol-3-to-2','S-glycerol-phosphate'].includes(p.topology)?'3′ → 2′':p.topology==='morpholine-phosphorodiamidate'?'5′ OH → 3′ NH':'5′ → 3′';g.layout={column_pitch:width,residue_pitch:pitch,adaptive:hasLarge,origins:hasLarge?origins:null,rows};return g;
 }
 function calculate(seq){let p=parse(seq);const ag=validateChemistry(p);let g=expandAssemblyGraph(ag),f=graphFormula(g),m=masses(f);if(formula(f)!==formula(composition(p))||formula(f)!==formula(directComposition(p))||!connected(g))throw Error('内部 graph/composition 验证失败');return {schema_version:'oligo-lite/2',assembly_graph:ag,status:'ok',errors:[],input_sequence:seq,canonical_sequence:p.canonical,sequence:p.canonical,residues:p.residues,linkages:p.links,modifications:p.terminal,notation:p,formula_validation:{direct:formula(directComposition(p)),component:formula(composition(p)),graph:formula(f),equal:true},chemistry:{formula:formula(f),formula_dict:f,...m,charge_model:p.topology==='morpholine-phosphorodiamidate'?'neutral uncapped PMO: free 5-OH / 3-NH':'neutral free acid; terminal OH or specified phosphate',phosphorus_stereochemistry:'unspecified',...(g.atoms.some(a=>a.q)?{formal_charge:graphProperties(g).formal_charge,exact_ion_mass:graphProperties(g).exact_ion_mass,charge_model:'explicit graph formal charge; no counterions'}:{})},optical:typeof Optical==="undefined"?od(p,m.average_mw):Optical.analyze({graph:g,assembly_graph:ag}),graph:g,provenance:{coverage:p.residues.map(code=>{const key=code[0]==='{'?'['+code.slice(1,-1)+']':code;return COVERAGE.entries.find(e=>e.notation===key)||{notation:key,status:'USER_CUSTOM',extinction:customLibrary[code]?.extinction||{status:'NEEDS_PARAMETER'}};}),reference:REFERENCE.source,monomers:'versioned atomic library',chemistry_status:'REGRESSION_VALIDATED',mspa:p.links.includes('MsPA')?'MsPA: neutral P(=O)-NH-S(=O)2-Me; phosphorus stereochemistry unspecified':null},limitations:['Neutral terminal PO/PS/PS2/Me-P/PN(dmi)/MsPA; modified polyphosphate and unvalidated modifier attachments rejected','MOL/SDF preserve graph and atom coordinates; routed paths are SVG/JSON display metadata only']};}
 const pad=(v,n)=>String(v).padStart(n,' ');
@@ -333,7 +334,7 @@ function cdxml(g){
  const {minX,minY,maxX,maxY}=bounds;
  const width=(maxX-minX)*scale+2*margin,height=(maxY-minY)*scale+2*margin;
  const pt=n=>n.toFixed(4);
- return `<?xml version="1.0"?><CDXML BondLength="${bondLength}"><page id="1" BoundingBox="0 0 ${pt(width)} ${pt(height)}"><fragment id="2">`+
+ return `<?xml version="1.0"?><CDXML BondLength="${bondLength}"><page id="1" WidthPages="${Math.max(1,Math.ceil(width/500))}" HeightPages="${Math.max(1,Math.ceil(height/650))}" BoundingBox="0 0 ${pt(width)} ${pt(height)}"><fragment id="2">`+
   g.atoms.map((a,i)=>`<n id="${i+10}" p="${pt((a.x-minX)*scale+margin)} ${pt((a.y-minY)*scale+margin)}" Element="${nums[a.e]}" NumHydrogens="${a.h||0}"${a.q?` Charge="${a.q}"`:''}/>`).join('')+
   g.bonds.map((b,i)=>`<b id="${g.atoms.length+10+i}" B="${b.a+10}" E="${b.b+10}" Order="${b.o}"${b.s?` Display="${b.s===1?'WedgeBegin':'WedgedHashBegin'}"`:''}/>`).join('')+
   '</fragment></page></CDXML>';
@@ -565,7 +566,7 @@ function quality(g){
  for(const seg of segments)for(const label of labels)if(!seg.ends.includes(label.i)&&intersects(seg,label))out.label_bond_overlaps.push([label.i,seg.bond]);
  g.bonds.forEach((b,i)=>{const d=dist(pt(b.a),pt(b.b));if(d>6&&!(g.routes||[]).some(r=>r.bond===i))out.long_bonds.push({bond:i,length:d});});
  out.pass=['atom_overlaps','atom_bond_overlaps','bond_crossings','connector_collisions','label_overlaps','label_bond_overlaps','long_bonds','column_top_errors'].every(k=>!out[k].length);
- if(g.sites)g.sites.forEach((s,i)=>{if(i%10===0&&Math.abs(atoms[s.o5??s.o3??s.offset].y-(s.local_anchor_y||0))>1e-7)out.column_top_errors.push(i);});out.pass=out.pass&&!out.column_top_errors.length;return out;
+ if(g.sites)g.sites.forEach((s,i)=>{if(i%(g.layout?.rows||10)===0&&Math.abs(atoms[s.o5??s.o3??s.offset].y-(s.local_anchor_y||0))>1e-7)out.column_top_errors.push(i);});out.pass=out.pass&&!out.column_top_errors.length;return out;
 }
 function calculateSafe(sequence){try{return calculate(sequence);}catch(e){return {schema_version:'oligo-lite/2',input_sequence:sequence,canonical_sequence:null,status:'error',errors:[{code:e.message.match(/^([A-Z_]+):/)?.[1]||(e.message.includes('not found')?'UNKNOWN_UNIT':'INVALID_CHEMISTRY_OR_NOTATION'),message:e.message,...(e.reasonCode?{reasonCode:e.reasonCode}:{})}],chemistry:null,optical:null,graph:null};}}
 function buildStructure(sequence){return calculate(sequence).graph;}

@@ -208,7 +208,7 @@ const StructurePresentation=(()=>{
   return {supported:true,svg:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${row*panels.length}" role="img" font-family="system-ui, sans-serif" aria-label="Reaction product rings"><rect data-scene-background="" width="100%" height="100%" fill="white"/>${panels.join('')}</svg>`,
    reason:'Product rings and mapped attachments. Matching numbers denote the same outside fragment. / 产物环与实际连接位点。相同编号表示同一外接片段。'};
  }
- function schematic(record,{density='annotated',selectedSite=null,language='en'}={}){
+ function schematic(record,{density='annotated',selectedSite=null,language='en',basesPerColumn=PresentationOptions.rows}={}){
   const compact=density==='compact';
   const state=record.moleculeState,ag=state?.assemblyGraph||record.assemblyGraph;
   const fail=reason=>({supported:false,reason});
@@ -217,7 +217,7 @@ const StructurePresentation=(()=>{
   if(!ag)return fail('No reliable assembly provenance / 缺少可靠单元来源');
   if(state&&(state.materialization?.status==='provenance-only'||state.assemblyGraph.covalentEdges?.length||state.interactionAnnotations?.length))return fail('Current graph includes reaction, crosslink or interaction detail outside this schematic grammar / 当前结构超出示意语法');
   const lanes=ag.lanes||[{id:'main',assembly:ag}],positions=new Map();
-  const columns=10,left=45;
+  const columns=PresentationOptions.normalize(basesPerColumn),left=45;
   let height=14,shapes=[],lines=[];
   const zh=language==='zh-CN';
   if(lanes.some(l=>!l.assembly?.nodes?.length))return fail('An imported component has no residue mapping / 导入组件缺少单元映射');

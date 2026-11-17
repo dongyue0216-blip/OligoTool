@@ -10,17 +10,17 @@ const LocalViewers=(()=>{
   setTimeout(()=>URL.revokeObjectURL(url),1000);
  }
  function serializeChemDraw(graph){return Lite.cdxml(graph);}
- function exportChemDraw(name,graph){download(name+'.cdxml',serializeChemDraw(graph),'application/xml');}
- function chemicalDrawing(record){return Sandbox.C.present(record,false).drawing;}
- function serializeStructure(record,format,{name='',language=document.documentElement.lang,schematic,drawing}={}){
-  if(format==='svg')return Sandbox.C.present(record,false).svg;
+ function exportChemDraw(name,record){download(name+'.cdxml',serializeStructure(record,'cdxml'),'application/xml');}
+ function chemicalDrawing(record,rows=PresentationOptions.rows){return Sandbox.C.present(record,false,{rows}).drawing;}
+ function serializeStructure(record,format,{name='',language=document.documentElement.lang,schematic,drawing,rows=PresentationOptions.rows}={}){
+  if(format==='svg')return Sandbox.C.present(record,false,{rows}).svg;
   if(format==='schematic.svg'){
-   const scene=schematic||StructurePresentation.schematic(record,{language});
+   const scene=schematic||StructurePresentation.schematic(record,{language,basesPerColumn:rows});
    if(!scene.supported)throw Error(scene.reason);
    return exportSvg(scene);
   }
-  if(format==='cdxml')return serializeChemDraw(drawing||chemicalDrawing(record));
-  if(format==='mol'||format==='sdf')return Lite.mol(drawing||chemicalDrawing(record),name)+(format==='sdf'?'\n$$$$\n':'');
+  if(format==='cdxml')return serializeChemDraw(drawing||chemicalDrawing(record,rows));
+  if(format==='mol'||format==='sdf')return Lite.mol(drawing||chemicalDrawing(record,rows),name)+(format==='sdf'?'\n$$$$\n':'');
   throw Error('Unsupported structure format: '+format);
  }
  function exportSvg(scene){
@@ -51,7 +51,10 @@ const LocalViewers=(()=>{
   chem.type=diagram.type='button';
   chem.textContent=UILanguage.text("export.chemdraw.cdxml");
   chem.title=UILanguage.text("full.atom.level.structure");
-  chem.onclick=()=>download(name+'.cdxml',serializeStructure(record,'cdxml',{drawing:drawing?.()}),'application/xml');
+  chem.onclick=()=>{
+   const customDrawing=record.assemblyGraph||record.moleculeState||record.workflow?undefined:drawing?.();
+   download(name+'.cdxml',serializeStructure(record,'cdxml',{drawing:customDrawing}),'application/xml');
+  };
   diagram.textContent=UILanguage.text("export.schematic.svg");
   diagram.disabled=!schematic?.supported;
   const reason=schematic?.reason?.split(' / ');
@@ -142,6 +145,18 @@ const LocalViewers=(()=>{
    }
    if(onAtom){const svg=canvas.querySelector('svg');for(const i of candidates){const a=p.drawing.atoms[i],ns='http://www.w3.org/2000/svg',g=document.createElementNS(ns,'g');g.dataset.atom=i;g.setAttribute('class','atom-target');g.setAttribute('tabindex','0');g.setAttribute('role','button');g.setAttribute('aria-label',UILanguage.text("oh.oxygen.atom")+(i+1));const c=document.createElementNS(ns,'circle');c.setAttribute('cx',a.x);c.setAttribute('cy',a.y);c.setAttribute('r','.48');const t=document.createElementNS(ns,'text');t.setAttribute('x',a.x);t.setAttribute('y',a.y-.6);t.setAttribute('font-size','.42');t.textContent=selectedSite&&Object.values(selectedSite.atoms).includes(i)?'':String(i+1);g.append(c,t);g.onclick=()=>onAtom(i);g.onkeydown=e=>{if(e.key==='Enter')onAtom(i);};svg.append(g);}}
    const m=record.metrics,o=record.optical||record.graph.photometry;meta.textContent=`${m.formula} · MW ${Number(m.average_mw).toFixed(3)} · ${UILanguage.text("exact.mass")} ${Number(m.exact_mass).toFixed(5)} · OD ${UILanguage.status(o?.status||'NEEDS_PARAMETER')}`;
+   if(o?.supported&&record.moleculeState){
+    const mark=o.estimated?'≈ ':'';
+    const values=document.createElement('div');
+    values.textContent=mark+o.epsilon260.toPrecision(5)+' ε₂₆₀ (L·mol⁻¹·cm⁻¹) · '+mark+
+     o.nmol_per_od.toFixed(3)+' nmol/OD₂₆₀ · '+mark+o.ug_per_od.toFixed(3)+' µg/OD₂₆₀';
+    meta.append(values);
+    if(o.estimated){
+     const note=document.createElement('div');
+     note.textContent='≈ '+UILanguage.text('optical.estimated')+' · '+[...new Set(o.assumptionLedger?.map(a=>a.detail)||[])].join(' · ');
+     meta.append(note);
+    }
+   }
   }else{canvas.textContent=UILanguage.text("preview.to.generate.product");}
   const svg=canvas.querySelector('svg');if(svg)baseBox=svg.getAttribute('viewBox').split(/\s+/).map(Number);
   const hint=document.createElement('small');hint.className='viewer-hint';hint.textContent=UILanguage.text("drag.to.pan.ctrl.cmd.wheel.to.zoom.wheel.scrolls.page");host.append(head,stage,note);if(products.length)host.append(productNote);host.append(hint,meta);if(exports&&record)mountExports(host,record,schematic,exports);update();const observer=new ResizeObserver(update);observer.observe(stage);instances.set(host,{record,dispose:()=>{observer.disconnect();cleanups.forEach(fn=>fn());},setViewport(v){if(v.scale!==undefined)scale=Math.max(.1,Math.min(16,v.scale));if(v.x!==undefined)x=v.x;if(v.y!==undefined)y=v.y;update();},get transform(){return {scale,x,y};}});return host;

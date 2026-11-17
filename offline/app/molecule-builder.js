@@ -50,7 +50,15 @@ const MoleculeBuilder=(()=>{
   value.schemaVersion=1;value.schema='oligo-molecule-state';value.properties=Lite.graphProperties(value.graph);
   value.reactiveSites=value.components.length===1?Reactions.v2.detect([value.graph]).candidate_sites[0]:{status:'UNSUPPORTED',reason:'Select a covalent component for reaction analysis'};
   value.formula=value.properties.formula;value.average_mw=value.properties.average_mw;value.exact_mass=value.properties.exact_mass;
-  if(typeof Optical!=="undefined")value.optical=Optical.analyze(value);
+  if(typeof Optical!=="undefined"){
+   const op=value.operation;
+   const parent=op?.type==='ReactionOperation'?op.inputStates?.[0]:null;
+   const map=op?.inputAtomMaps?.[0];
+   const retainsOligo=parent?.assemblyGraph.lanes.filter(l=>l.assembly)
+    .every(l=>l.atomIndices.every(i=>Number.isInteger(map?.[i])));
+   value.optical=Optical.analyze(value,Optical.pack,undefined,parent?
+    {parent:parent.optical,modifier:op.secondaryInput,retainsOligo}:null);
+  }
   value.graph.photometry=copy(value.optical);return freeze(value);
  }
  function start(sequence){
@@ -122,7 +130,7 @@ const MoleculeBuilder=(()=>{
   if(!result.product_graph)fail(result.detail||result.reason||result.status);
   const map=result.product_graph.provenance.input_atom_maps[0],ag=copy(state.assemblyGraph),attachments=copy(state.attachmentSites);
   for(const s of attachments){const atom=map[s.atom];s.atom=atom;if(atom===null||atom===undefined)s.status='removed';else if(s.status==='available'&&!free(result.product_graph,s))s.status='occupied';}
-  for(const lane of ag.lanes){const kept=lane.atomIndices.map((i,k)=>({i:map[i],p:lane.points[k]})).filter(v=>v.i!==null&&v.i!==undefined);lane.atomIndices=kept.map(v=>v.i);lane.points=kept.map(v=>v.p);lane.routes=(lane.routes||[]).map(r=>({...r,atoms:r.atoms.map(i=>map[i])})).filter(r=>r.atoms.every(i=>i!==null&&i!==undefined));}
+  for(const lane of ag.lanes){const kept=lane.atomIndices.map((i,k)=>({i:map[i],p:lane.points[k],source:lane.sourceAtomIndices?.[k]??k})).filter(v=>v.i!==null&&v.i!==undefined);lane.atomIndices=kept.map(v=>v.i);lane.points=kept.map(v=>v.p);lane.sourceAtomIndices=kept.map(v=>v.source);lane.routes=(lane.routes||[]).map(r=>({...r,atoms:r.atoms.map(i=>map[i])})).filter(r=>r.atoms.every(i=>i!==null&&i!==undefined));}
   for(const edge of [...ag.branchEdges,...(ag.covalentEdges||[])]){edge.parentAnchor=map[edge.parentAnchor];edge.childAnchor=map[edge.childAnchor];edge.linkageAtoms=edge.linkageAtoms.map(i=>map[i]).filter(i=>i!==null&&i!==undefined);delete edge.linkageBonds;}
   const groups=copy(state.presentationGroups||[]);for(const group of groups)group.mapping=group.mapping.map(i=>i===null?null:map[i]??null);if(secondary)groups.push({graph:copy(secondary),mapping:copy(result.product_graph.provenance.input_atom_maps[1])});
   const operation={id:crypto.randomUUID(),type:'ReactionOperation',kind:family,candidate:copy(result.candidate),mapping:copy(result.mapping),inputStateIds:[state.id],inputStates:[copy(state)],secondaryInput:secondary?copy(secondary):null,inputAtomMaps:copy(result.product_graph.provenance.input_atom_maps),reactionDefinition:copy(result.step.definition),reactionDefinitionVersion:result.step.definition.schema_version,graphRevision:state.graphRevision+1,graphEdits:{encoding:'exact-product-snapshot/1',before:copy(inputs),after:copy(result.product_graph)},siteRemapping:attachments.map((s,i)=>({identity:{nodeInstanceId:s.nodeInstanceId,siteId:s.siteId},beforeAtom:state.attachmentSites[i].atom,afterAtom:s.atom??null,status:s.status}))};

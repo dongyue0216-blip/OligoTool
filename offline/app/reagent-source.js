@@ -57,6 +57,7 @@ const ReagentSource=(()=>{
   entry.onchange=invalidate;
   const refreshBuiltin=()=>{if(source.value==='builtin'&&!source.disabled&&!label.hidden)invalidate();};
   document.addEventListener('builtin-reagents-changed',refreshBuiltin);
+  document.addEventListener('editable-chemistry-changed',()=>{if(source.value==='user'&&!source.disabled&&!label.hidden)invalidate();});
   window.addEventListener('storage',event=>{if(event.key===ChemistryLibrary.REAGENT_KEY)refreshBuiltin();});
   language.addEventListener('change',localize);
   localize();

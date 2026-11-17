@@ -183,18 +183,18 @@ const MoleculeBuilderUI=(()=>{
   states.push(next);active=null;invalidate();$('builderDraft').hidden=true;history();
   UILanguage.write($('builderStatus'),()=>UILanguage.text("new.state.saved.export.or.add.another.step"));
   if(next.operation.kind==='Click'){
-   exportProduct.onclick=()=>attempt(()=>LocalViewers.exportChemDraw('click-product',next.graph));
+   exportProduct.onclick=()=>attempt(()=>LocalViewers.exportChemDraw('click-product',record(next)));
    exportProduct.hidden=false;
   }
  });
  $('builderRestore').onclick=()=>$('builderStateFile').click();$('builderStateFile').onchange=async()=>{try{const f=$('builderStateFile').files[0];if(!f)return;const s=MoleculeBuilder.restore(await f.text());states=[s];active=null;invalidate();history();$('builderDraft').hidden=true;}catch(e){UILanguage.errorInto($('builderStatus'),e);}finally{$('builderStateFile').value='';}};
+ $('basesPerColumn').addEventListener('change',()=>{history();if(preview)renderProduct();});
  $('run').addEventListener('click',()=>{if(UI.current?.input===$('input').value)attempt(start);});
  function renderProduct(){
   LocalViewers.mount('builderProduct',record(preview),{title:UILanguage.text("product.preview")});
  }
  function localize(){for(const [id,zh,eng]of [['builderTitle','分子构建 · 操作与状态','Molecule Builder · Operations & States'],['builderHelp','从序列开始，逐步进行反应或支链延长。应用后可导出该步骤的分子状态。','Sequence → Reaction / Branch Elongation → further steps. Apply saves a state; Export exports it.'],['builderStart','从输入序列建立新分子','Start new molecule from input sequence'],['builderRestore','导入分子状态','Import molecule state'],['builderAdd','+ 添加步骤','+ Add Step'],['operationLabel','操作类型','Operation type'],['branchSiteLabel','可用支链位点','Available branch site'],['branchSequenceLabel','支链序列（与主序列语法相同）','Branch Sequence (same syntax as main sequence)'],['childEndLabel','支链按 5′→3′ 输入，经 3′ 端连接','Enter child 5′→3′. Attaches at 3′.'],['familyLabel','反应类型','Reaction family'],['builderReagentLabel','选择第二反应物（MOL / SDF）','Choose Secondary Reagent (MOL / SDF)'],['builderDetect','检测兼容位点','Detect compatible sites'],['builderPreview','预览产物','Preview Product'],['builderChoice','兼容候选','Compatible options'],['builderApply', '应用修饰', 'Apply Modification']])$(id).textContent=txt(zh,eng);
   $('builderOperation').options[0].textContent=UILanguage.text("post.functionalization");$('builderOperation').options[1].textContent=UILanguage.text("branch.elongation");const names=en()?['Auto-detect','CAP','Amine Coupling','Click Reaction','IEDDA / Tetrazine Ligation','Disulfide Reduction','Thiol–Maleimide','Thiol–Oxadiazole']:['自动检测','CAP','胺偶联','点击反应','IEDDA / 四嗪偶联','二硫键还原','巯基–马来酰亚胺','巯基–噁二唑'];Array.from($('builderFamily').options).forEach((o,i)=>o.textContent=names[i]);setManual(manual());history();
-  Array.from(editor.children).forEach((row,i)=>row.firstChild.textContent=UILanguage.text("branch")+(i+1)+' ');
   if(!$('builderDraft').hidden&&branchMode()){renderBranchSites();renderBranchStarting();}
   if(preview)renderProduct();
   if(!$('builderDraft').hidden&&!branchMode()){
@@ -204,9 +204,6 @@ const MoleculeBuilderUI=(()=>{
    $('builderApply').disabled=!canApply;
   }
  }
- // Extend the existing editor with optional, unbounded branch selections.
- const editor=document.createElement('div');editor.id='branchSelectors';$('customStatus').before(editor);const add=document.createElement('button');add.id='addBranchAttachment';add.dataset.ui="add.branch.attachment.site";editor.before(add);
- window.addBranchSelector=(atom='')=>{const row=document.createElement('label'),index=editor.children.length+1;row.textContent=UILanguage.text("branch")+index+' ';const select=$('fiveOH').cloneNode(true);select.removeAttribute('id');select.dataset.branchAtom='';select.value=String(atom);select.addEventListener('change',()=>{const vals=Array.from(editor.querySelectorAll('select')).filter(e=>e.value!=='').map(e=>Number(e.value));$('customStatus').textContent=vals.map((a,i)=>UILanguage.text("branch")+(i+1)+' → O'+(a+1)).join(' · ');});row.append(select);const remove=document.createElement('button');remove.textContent='×';remove.onclick=()=>{row.remove();Array.from(editor.children).forEach((r,i)=>r.firstChild.textContent=UILanguage.text("branch")+(i+1)+' ');};row.append(remove);editor.append(row);};add.onclick=()=>window.addBranchSelector();
  const localizeExport=()=>{exportProduct.textContent=UILanguage.text("export.final.product.cdxml");};
  $('language').addEventListener('change',localize);$('language').addEventListener('change',localizeExport);localize();localizeExport();
  SmallFragmentDepictor.ready.then(()=>{

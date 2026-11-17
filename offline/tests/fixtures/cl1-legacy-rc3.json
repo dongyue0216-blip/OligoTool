@@ -1,0 +1,1219 @@
+{
+  "schema": "oligo-user-chemistry-library",
+  "schemaVersion": 1,
+  "libraryId": "cl-rc3-fixture",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "fixture-CLterminal",
+      "source": "user",
+      "name": "CLterminal",
+      "symbol": "CLterminal",
+      "block": {
+        "schema_version": "building-block/3",
+        "id": "{CLterminal}",
+        "graph": {
+          "schema_version": "molecular-graph/1",
+          "atoms": [
+            {
+              "e": "C",
+              "q": 0,
+              "h": 3,
+              "id": "legacy-atom-0",
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            {
+              "e": "C",
+              "q": 0,
+              "h": 2,
+              "id": "legacy-atom-1",
+              "x": 1.5,
+              "y": 0,
+              "z": 0.1
+            },
+            {
+              "e": "O",
+              "q": 0,
+              "h": 1,
+              "id": "legacy-atom-2",
+              "x": 3,
+              "y": 0,
+              "z": 0.2
+            }
+          ],
+          "bonds": [
+            {
+              "a": 0,
+              "b": 1,
+              "o": 1,
+              "s": 0
+            },
+            {
+              "a": 1,
+              "b": 2,
+              "o": 1,
+              "s": 0
+            }
+          ]
+        },
+        "sites": {
+          "upstream": {
+            "atom": 2,
+            "atom_role": "user-selected-OH",
+            "direction": "upstream",
+            "element": "O",
+            "connection_class": "alcohol",
+            "compatibility_domain": "standard-O",
+            "unconnected": {
+              "state": "OH",
+              "hydrogens": 1
+            },
+            "local_bonds": [
+              {
+                "atom": 1,
+                "order": 1
+              }
+            ],
+            "allowed_linkage_classes": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "internal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "terminal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "id": "upstream",
+            "role": "user-selected-OH"
+          }
+        },
+        "metadata": {
+          "family": "Custom"
+        },
+        "layout": {
+          "expanded": false,
+          "depiction_overpasses": []
+        }
+      },
+      "runtime": {
+        "atoms": [
+          {
+            "e": "C",
+            "q": 0,
+            "h": 3,
+            "id": "legacy-atom-0",
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          {
+            "e": "C",
+            "q": 0,
+            "h": 2,
+            "id": "legacy-atom-1",
+            "x": 1.5,
+            "y": 0,
+            "z": 0.1
+          },
+          {
+            "e": "O",
+            "q": 0,
+            "h": 1,
+            "id": "legacy-atom-2",
+            "x": 3,
+            "y": 0,
+            "z": 0.2
+          }
+        ],
+        "bonds": [
+          {
+            "a": 0,
+            "b": 1,
+            "o": 1,
+            "s": 0
+          },
+          {
+            "a": 1,
+            "b": 2,
+            "o": 1,
+            "s": 0
+          }
+        ],
+        "layout_metadata": {
+          "expanded": false
+        },
+        "id": "{CLterminal}",
+        "family": "Custom",
+        "assembly_class": "o-phosphorus",
+        "o5": 2,
+        "o3": null,
+        "attachments": {
+          "upstream": {
+            "atom": 2,
+            "atom_role": "user-selected-OH",
+            "direction": "upstream",
+            "element": "O",
+            "connection_class": "alcohol",
+            "compatibility_domain": "standard-O",
+            "unconnected": {
+              "state": "OH",
+              "hydrogens": 1
+            },
+            "local_bonds": [
+              {
+                "atom": 1,
+                "order": 1
+              }
+            ],
+            "allowed_linkage_classes": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "internal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "terminal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ]
+          }
+        },
+        "phosphorus_topology": "standard-5-to-3"
+      },
+      "provenance": {
+        "createdAt": "2026-11-17T00:00:00Z",
+        "origin": "rc3 field layout"
+      },
+      "formula": "C2H6O",
+      "average_mw": 46.069,
+      "exact_mass": 46.041864812949996,
+      "assembly_supported": true,
+      "graphIdentity": "{\"atoms\":[{\"e\":\"C\",\"h\":3,\"id\":\"legacy-atom-0\",\"q\":0},{\"e\":\"C\",\"h\":2,\"id\":\"legacy-atom-1\",\"q\":0},{\"e\":\"O\",\"h\":1,\"id\":\"legacy-atom-2\",\"q\":0}],\"bonds\":[{\"a\":0,\"b\":1,\"o\":1,\"s\":0},{\"a\":1,\"b\":2,\"o\":1,\"s\":0}],\"sites\":{\"upstream\":{\"allowed_linkage_classes\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"atom\":2,\"atom_role\":\"user-selected-OH\",\"compatibility_domain\":\"standard-O\",\"connection_class\":\"alcohol\",\"direction\":\"upstream\",\"element\":\"O\",\"id\":\"upstream\",\"internal_phosphorus\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"local_bonds\":[{\"atom\":1,\"order\":1}],\"role\":\"user-selected-OH\",\"terminal_phosphorus\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"unconnected\":{\"hydrogens\":1,\"state\":\"OH\"}}}}"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "fixture-CLlinear",
+      "source": "user",
+      "name": "CLlinear",
+      "symbol": "CLlinear",
+      "block": {
+        "schema_version": "building-block/3",
+        "id": "{CLlinear}",
+        "graph": {
+          "schema_version": "molecular-graph/1",
+          "atoms": [
+            {
+              "e": "O",
+              "q": 0,
+              "h": 1,
+              "id": "legacy-atom-0",
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            {
+              "e": "C",
+              "q": 0,
+              "h": 2,
+              "id": "legacy-atom-1",
+              "x": 1.5,
+              "y": 0,
+              "z": 0.1
+            },
+            {
+              "e": "C",
+              "q": 0,
+              "h": 2,
+              "id": "legacy-atom-2",
+              "x": 3,
+              "y": 0,
+              "z": 0.2
+            },
+            {
+              "e": "C",
+              "q": 0,
+              "h": 2,
+              "id": "legacy-atom-3",
+              "x": 4.5,
+              "y": 0,
+              "z": 0.3
+            },
+            {
+              "e": "O",
+              "q": 0,
+              "h": 1,
+              "id": "legacy-atom-4",
+              "x": 6,
+              "y": 0,
+              "z": 0.4
+            }
+          ],
+          "bonds": [
+            {
+              "a": 0,
+              "b": 1,
+              "o": 1,
+              "s": 0
+            },
+            {
+              "a": 1,
+              "b": 2,
+              "o": 1,
+              "s": 0
+            },
+            {
+              "a": 2,
+              "b": 3,
+              "o": 1,
+              "s": 0
+            },
+            {
+              "a": 3,
+              "b": 4,
+              "o": 1,
+              "s": 0
+            }
+          ]
+        },
+        "sites": {
+          "upstream": {
+            "atom": 0,
+            "atom_role": "user-selected-OH",
+            "direction": "upstream",
+            "element": "O",
+            "connection_class": "alcohol",
+            "compatibility_domain": "standard-O",
+            "unconnected": {
+              "state": "OH",
+              "hydrogens": 1
+            },
+            "local_bonds": [
+              {
+                "atom": 1,
+                "order": 1
+              }
+            ],
+            "allowed_linkage_classes": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "internal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "terminal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "id": "upstream",
+            "role": "user-selected-OH"
+          },
+          "downstream": {
+            "atom": 4,
+            "atom_role": "user-selected-OH",
+            "direction": "downstream",
+            "element": "O",
+            "connection_class": "alcohol",
+            "compatibility_domain": "standard-O",
+            "unconnected": {
+              "state": "OH",
+              "hydrogens": 1
+            },
+            "local_bonds": [
+              {
+                "atom": 3,
+                "order": 1
+              }
+            ],
+            "allowed_linkage_classes": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "internal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "terminal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "id": "downstream",
+            "role": "user-selected-OH"
+          }
+        },
+        "metadata": {
+          "family": "Custom"
+        },
+        "layout": {
+          "expanded": false,
+          "depiction_overpasses": []
+        }
+      },
+      "runtime": {
+        "atoms": [
+          {
+            "e": "O",
+            "q": 0,
+            "h": 1,
+            "id": "legacy-atom-0",
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          {
+            "e": "C",
+            "q": 0,
+            "h": 2,
+            "id": "legacy-atom-1",
+            "x": 1.5,
+            "y": 0,
+            "z": 0.1
+          },
+          {
+            "e": "C",
+            "q": 0,
+            "h": 2,
+            "id": "legacy-atom-2",
+            "x": 3,
+            "y": 0,
+            "z": 0.2
+          },
+          {
+            "e": "C",
+            "q": 0,
+            "h": 2,
+            "id": "legacy-atom-3",
+            "x": 4.5,
+            "y": 0,
+            "z": 0.3
+          },
+          {
+            "e": "O",
+            "q": 0,
+            "h": 1,
+            "id": "legacy-atom-4",
+            "x": 6,
+            "y": 0,
+            "z": 0.4
+          }
+        ],
+        "bonds": [
+          {
+            "a": 0,
+            "b": 1,
+            "o": 1,
+            "s": 0
+          },
+          {
+            "a": 1,
+            "b": 2,
+            "o": 1,
+            "s": 0
+          },
+          {
+            "a": 2,
+            "b": 3,
+            "o": 1,
+            "s": 0
+          },
+          {
+            "a": 3,
+            "b": 4,
+            "o": 1,
+            "s": 0
+          }
+        ],
+        "layout_metadata": {
+          "expanded": false
+        },
+        "id": "{CLlinear}",
+        "family": "Custom",
+        "assembly_class": "o-phosphorus",
+        "o5": 0,
+        "o3": 4,
+        "attachments": {
+          "upstream": {
+            "atom": 0,
+            "atom_role": "user-selected-OH",
+            "direction": "upstream",
+            "element": "O",
+            "connection_class": "alcohol",
+            "compatibility_domain": "standard-O",
+            "unconnected": {
+              "state": "OH",
+              "hydrogens": 1
+            },
+            "local_bonds": [
+              {
+                "atom": 1,
+                "order": 1
+              }
+            ],
+            "allowed_linkage_classes": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "internal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "terminal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ]
+          },
+          "downstream": {
+            "atom": 4,
+            "atom_role": "user-selected-OH",
+            "direction": "downstream",
+            "element": "O",
+            "connection_class": "alcohol",
+            "compatibility_domain": "standard-O",
+            "unconnected": {
+              "state": "OH",
+              "hydrogens": 1
+            },
+            "local_bonds": [
+              {
+                "atom": 3,
+                "order": 1
+              }
+            ],
+            "allowed_linkage_classes": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "internal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "terminal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ]
+          }
+        },
+        "phosphorus_topology": "standard-5-to-3"
+      },
+      "provenance": {
+        "createdAt": "2026-11-17T00:00:00Z",
+        "origin": "rc3 field layout"
+      },
+      "formula": "C3H8O2",
+      "average_mw": 76.095,
+      "exact_mass": 76.05242949698,
+      "assembly_supported": true,
+      "graphIdentity": "{\"atoms\":[{\"e\":\"O\",\"h\":1,\"id\":\"legacy-atom-0\",\"q\":0},{\"e\":\"C\",\"h\":2,\"id\":\"legacy-atom-1\",\"q\":0},{\"e\":\"C\",\"h\":2,\"id\":\"legacy-atom-2\",\"q\":0},{\"e\":\"C\",\"h\":2,\"id\":\"legacy-atom-3\",\"q\":0},{\"e\":\"O\",\"h\":1,\"id\":\"legacy-atom-4\",\"q\":0}],\"bonds\":[{\"a\":0,\"b\":1,\"o\":1,\"s\":0},{\"a\":1,\"b\":2,\"o\":1,\"s\":0},{\"a\":2,\"b\":3,\"o\":1,\"s\":0},{\"a\":3,\"b\":4,\"o\":1,\"s\":0}],\"sites\":{\"downstream\":{\"allowed_linkage_classes\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"atom\":4,\"atom_role\":\"user-selected-OH\",\"compatibility_domain\":\"standard-O\",\"connection_class\":\"alcohol\",\"direction\":\"downstream\",\"element\":\"O\",\"id\":\"downstream\",\"internal_phosphorus\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"local_bonds\":[{\"atom\":3,\"order\":1}],\"role\":\"user-selected-OH\",\"terminal_phosphorus\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"unconnected\":{\"hydrogens\":1,\"state\":\"OH\"}},\"upstream\":{\"allowed_linkage_classes\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"atom\":0,\"atom_role\":\"user-selected-OH\",\"compatibility_domain\":\"standard-O\",\"connection_class\":\"alcohol\",\"direction\":\"upstream\",\"element\":\"O\",\"id\":\"upstream\",\"internal_phosphorus\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"local_bonds\":[{\"atom\":1,\"order\":1}],\"role\":\"user-selected-OH\",\"terminal_phosphorus\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"unconnected\":{\"hydrogens\":1,\"state\":\"OH\"}}}}"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "fixture-CLbranch",
+      "source": "user",
+      "name": "CLbranch",
+      "symbol": "CLbranch",
+      "block": {
+        "schema_version": "building-block/3",
+        "id": "{CLbranch}",
+        "graph": {
+          "schema_version": "molecular-graph/1",
+          "atoms": [
+            {
+              "e": "O",
+              "q": 0,
+              "h": 1,
+              "id": "legacy-atom-0",
+              "x": 0,
+              "y": 1,
+              "z": 0
+            },
+            {
+              "e": "C",
+              "q": 0,
+              "h": 2,
+              "id": "legacy-atom-1",
+              "x": 1.5,
+              "y": 1,
+              "z": 0.1
+            },
+            {
+              "e": "C",
+              "q": 0,
+              "h": 1,
+              "id": "legacy-atom-2",
+              "x": 3,
+              "y": 1,
+              "z": 0.2
+            },
+            {
+              "e": "O",
+              "q": 0,
+              "h": 1,
+              "id": "legacy-atom-3",
+              "x": 4.5,
+              "y": 0,
+              "z": 0.3
+            },
+            {
+              "e": "C",
+              "q": 0,
+              "h": 2,
+              "id": "legacy-atom-4",
+              "x": 4.5,
+              "y": 2,
+              "z": 0.4
+            },
+            {
+              "e": "O",
+              "q": 0,
+              "h": 1,
+              "id": "legacy-atom-5",
+              "x": 6,
+              "y": 2,
+              "z": 0.5
+            }
+          ],
+          "bonds": [
+            {
+              "a": 0,
+              "b": 1,
+              "o": 1,
+              "s": 0
+            },
+            {
+              "a": 1,
+              "b": 2,
+              "o": 1,
+              "s": 0
+            },
+            {
+              "a": 2,
+              "b": 3,
+              "o": 1,
+              "s": 0
+            },
+            {
+              "a": 2,
+              "b": 4,
+              "o": 1,
+              "s": 0
+            },
+            {
+              "a": 4,
+              "b": 5,
+              "o": 1,
+              "s": 0
+            }
+          ]
+        },
+        "sites": {
+          "upstream": {
+            "atom": 0,
+            "atom_role": "user-selected-OH",
+            "direction": "upstream",
+            "element": "O",
+            "connection_class": "alcohol",
+            "compatibility_domain": "standard-O",
+            "unconnected": {
+              "state": "OH",
+              "hydrogens": 1
+            },
+            "local_bonds": [
+              {
+                "atom": 1,
+                "order": 1
+              }
+            ],
+            "allowed_linkage_classes": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "internal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "terminal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "id": "upstream",
+            "role": "user-selected-OH"
+          },
+          "downstream": {
+            "atom": 5,
+            "atom_role": "user-selected-OH",
+            "direction": "downstream",
+            "element": "O",
+            "connection_class": "alcohol",
+            "compatibility_domain": "standard-O",
+            "unconnected": {
+              "state": "OH",
+              "hydrogens": 1
+            },
+            "local_bonds": [
+              {
+                "atom": 4,
+                "order": 1
+              }
+            ],
+            "allowed_linkage_classes": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "internal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "terminal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "id": "downstream",
+            "role": "user-selected-OH"
+          },
+          "user_branch": {
+            "atom": 3,
+            "atom_role": "user-selected-OH",
+            "direction": "branch",
+            "element": "O",
+            "connection_class": "alcohol",
+            "compatibility_domain": "standard-O",
+            "unconnected": {
+              "state": "OH",
+              "hydrogens": 1
+            },
+            "local_bonds": [
+              {
+                "atom": 2,
+                "order": 1
+              }
+            ],
+            "allowed_linkage_classes": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "internal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "terminal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "role": "user-defined-branch",
+            "index": 1,
+            "id": "user_branch"
+          }
+        },
+        "attachmentSites": [
+          {
+            "atom": 0,
+            "atom_role": "user-selected-OH",
+            "direction": "upstream",
+            "element": "O",
+            "connection_class": "alcohol",
+            "compatibility_domain": "standard-O",
+            "unconnected": {
+              "state": "OH",
+              "hydrogens": 1
+            },
+            "local_bonds": [
+              {
+                "atom": 1,
+                "order": 1
+              }
+            ],
+            "allowed_linkage_classes": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "internal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "terminal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "id": "upstream",
+            "role": "user-selected-OH"
+          },
+          {
+            "atom": 5,
+            "atom_role": "user-selected-OH",
+            "direction": "downstream",
+            "element": "O",
+            "connection_class": "alcohol",
+            "compatibility_domain": "standard-O",
+            "unconnected": {
+              "state": "OH",
+              "hydrogens": 1
+            },
+            "local_bonds": [
+              {
+                "atom": 4,
+                "order": 1
+              }
+            ],
+            "allowed_linkage_classes": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "internal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "terminal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "id": "downstream",
+            "role": "user-selected-OH"
+          },
+          {
+            "atom": 3,
+            "atom_role": "user-selected-OH",
+            "direction": "branch",
+            "element": "O",
+            "connection_class": "alcohol",
+            "compatibility_domain": "standard-O",
+            "unconnected": {
+              "state": "OH",
+              "hydrogens": 1
+            },
+            "local_bonds": [
+              {
+                "atom": 2,
+                "order": 1
+              }
+            ],
+            "allowed_linkage_classes": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "internal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "terminal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "role": "user-defined-branch",
+            "index": 1,
+            "id": "user_branch"
+          }
+        ],
+        "optical": {
+          "mode": "explicit",
+          "epsilon": 1234,
+          "source": "synthetic"
+        },
+        "metadata": {
+          "family": "Custom"
+        },
+        "layout": {
+          "expanded": false,
+          "depiction_overpasses": []
+        }
+      },
+      "runtime": {
+        "atoms": [
+          {
+            "e": "O",
+            "q": 0,
+            "h": 1,
+            "id": "legacy-atom-0",
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          {
+            "e": "C",
+            "q": 0,
+            "h": 2,
+            "id": "legacy-atom-1",
+            "x": 1.5,
+            "y": 1,
+            "z": 0.1
+          },
+          {
+            "e": "C",
+            "q": 0,
+            "h": 1,
+            "id": "legacy-atom-2",
+            "x": 3,
+            "y": 1,
+            "z": 0.2
+          },
+          {
+            "e": "O",
+            "q": 0,
+            "h": 1,
+            "id": "legacy-atom-3",
+            "x": 4.5,
+            "y": 0,
+            "z": 0.3
+          },
+          {
+            "e": "C",
+            "q": 0,
+            "h": 2,
+            "id": "legacy-atom-4",
+            "x": 4.5,
+            "y": 2,
+            "z": 0.4
+          },
+          {
+            "e": "O",
+            "q": 0,
+            "h": 1,
+            "id": "legacy-atom-5",
+            "x": 6,
+            "y": 2,
+            "z": 0.5
+          }
+        ],
+        "bonds": [
+          {
+            "a": 0,
+            "b": 1,
+            "o": 1,
+            "s": 0
+          },
+          {
+            "a": 1,
+            "b": 2,
+            "o": 1,
+            "s": 0
+          },
+          {
+            "a": 2,
+            "b": 3,
+            "o": 1,
+            "s": 0
+          },
+          {
+            "a": 2,
+            "b": 4,
+            "o": 1,
+            "s": 0
+          },
+          {
+            "a": 4,
+            "b": 5,
+            "o": 1,
+            "s": 0
+          }
+        ],
+        "layout_metadata": {
+          "expanded": false
+        },
+        "id": "{CLbranch}",
+        "family": "Custom",
+        "assembly_class": "o-phosphorus",
+        "o5": 0,
+        "o3": 5,
+        "attachments": {
+          "upstream": {
+            "atom": 0,
+            "atom_role": "user-selected-OH",
+            "direction": "upstream",
+            "element": "O",
+            "connection_class": "alcohol",
+            "compatibility_domain": "standard-O",
+            "unconnected": {
+              "state": "OH",
+              "hydrogens": 1
+            },
+            "local_bonds": [
+              {
+                "atom": 1,
+                "order": 1
+              }
+            ],
+            "allowed_linkage_classes": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "internal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "terminal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ]
+          },
+          "downstream": {
+            "atom": 5,
+            "atom_role": "user-selected-OH",
+            "direction": "downstream",
+            "element": "O",
+            "connection_class": "alcohol",
+            "compatibility_domain": "standard-O",
+            "unconnected": {
+              "state": "OH",
+              "hydrogens": 1
+            },
+            "local_bonds": [
+              {
+                "atom": 4,
+                "order": 1
+              }
+            ],
+            "allowed_linkage_classes": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "internal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "terminal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ]
+          },
+          "user_branch": {
+            "atom": 3,
+            "atom_role": "user-selected-OH",
+            "direction": "branch",
+            "element": "O",
+            "connection_class": "alcohol",
+            "compatibility_domain": "standard-O",
+            "unconnected": {
+              "state": "OH",
+              "hydrogens": 1
+            },
+            "local_bonds": [
+              {
+                "atom": 2,
+                "order": 1
+              }
+            ],
+            "allowed_linkage_classes": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "internal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "terminal_phosphorus": [
+              "PO",
+              "PS",
+              "PS2",
+              "Me-P",
+              "PN(dmi)",
+              "MsPA"
+            ],
+            "role": "user-defined-branch",
+            "index": 1
+          }
+        },
+        "phosphorus_topology": "standard-5-to-3",
+        "optical": {
+          "mode": "explicit",
+          "epsilon": 1234,
+          "source": "synthetic"
+        }
+      },
+      "provenance": {
+        "createdAt": "2026-11-17T00:00:00Z",
+        "origin": "rc3 field layout"
+      },
+      "formula": "C3H8O3",
+      "average_mw": 92.094,
+      "exact_mass": 92.04734411655001,
+      "assembly_supported": true,
+      "graphIdentity": "{\"atoms\":[{\"e\":\"O\",\"h\":1,\"id\":\"legacy-atom-0\",\"q\":0},{\"e\":\"C\",\"h\":2,\"id\":\"legacy-atom-1\",\"q\":0},{\"e\":\"C\",\"h\":1,\"id\":\"legacy-atom-2\",\"q\":0},{\"e\":\"O\",\"h\":1,\"id\":\"legacy-atom-3\",\"q\":0},{\"e\":\"C\",\"h\":2,\"id\":\"legacy-atom-4\",\"q\":0},{\"e\":\"O\",\"h\":1,\"id\":\"legacy-atom-5\",\"q\":0}],\"bonds\":[{\"a\":0,\"b\":1,\"o\":1,\"s\":0},{\"a\":1,\"b\":2,\"o\":1,\"s\":0},{\"a\":2,\"b\":3,\"o\":1,\"s\":0},{\"a\":2,\"b\":4,\"o\":1,\"s\":0},{\"a\":4,\"b\":5,\"o\":1,\"s\":0}],\"sites\":{\"downstream\":{\"allowed_linkage_classes\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"atom\":5,\"atom_role\":\"user-selected-OH\",\"compatibility_domain\":\"standard-O\",\"connection_class\":\"alcohol\",\"direction\":\"downstream\",\"element\":\"O\",\"id\":\"downstream\",\"internal_phosphorus\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"local_bonds\":[{\"atom\":4,\"order\":1}],\"role\":\"user-selected-OH\",\"terminal_phosphorus\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"unconnected\":{\"hydrogens\":1,\"state\":\"OH\"}},\"upstream\":{\"allowed_linkage_classes\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"atom\":0,\"atom_role\":\"user-selected-OH\",\"compatibility_domain\":\"standard-O\",\"connection_class\":\"alcohol\",\"direction\":\"upstream\",\"element\":\"O\",\"id\":\"upstream\",\"internal_phosphorus\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"local_bonds\":[{\"atom\":1,\"order\":1}],\"role\":\"user-selected-OH\",\"terminal_phosphorus\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"unconnected\":{\"hydrogens\":1,\"state\":\"OH\"}},\"user_branch\":{\"allowed_linkage_classes\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"atom\":3,\"atom_role\":\"user-selected-OH\",\"compatibility_domain\":\"standard-O\",\"connection_class\":\"alcohol\",\"direction\":\"branch\",\"element\":\"O\",\"id\":\"user_branch\",\"index\":1,\"internal_phosphorus\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"local_bonds\":[{\"atom\":2,\"order\":1}],\"role\":\"user-defined-branch\",\"terminal_phosphorus\":[\"PO\",\"PS\",\"PS2\",\"Me-P\",\"PN(dmi)\",\"MsPA\"],\"unconnected\":{\"hydrogens\":1,\"state\":\"OH\"}}}}",
+      "extension": {
+        "future": {
+          "value": "preserve"
+        }
+      }
+    }
+  ]
+}

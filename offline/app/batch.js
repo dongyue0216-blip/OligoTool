@@ -5,20 +5,21 @@ const Batch = (() => {
  const filesWarning=status=>status==='PARTIAL_EXPORT_ERROR'?'Some structure formats failed to export.':'Structure export failed.';
  const pause=()=>new Promise(resolve=>setTimeout(resolve,0));
  function classify(e){const m=e.message||String(e);let code=m.match(/^([A-Z_]+):/)?.[1];if(/PENDING|IMPLEMENTATION_PENDING/.test(code||''))code='CHEMISTRY_PENDING';if(!code)code=/Unsupported notation|not found|Missing|请输入|linkage|unit ID/i.test(m)?'INVALID_TOKEN':'INVALID_CHEMISTRY_OR_NOTATION';return {code,message:m};}
- function validate(sequence){try{MoleculeBuilder.start(sequence);return {status:'VALID',message:''};}catch(e){const x=classify(e);return {status:x.code==='CHEMISTRY_PENDING'?'RECOGNIZED_PENDING':'INVALID',message:x.code+': '+x.message};}}
- function names(rows){const used=new Set();return rows.map((r,i)=>{let base=String(r.ID||'').normalize('NFKC').trim().replace(/[<>:"/\\|?*\x00-\x1f\x7f]/g,'_').replace(/[. ]+$/g,'').slice(0,100)||'row_'+(r.sourceRow||i+2);if(/^(con|prn|aux|nul|com[0-9]|lpt[0-9])(?:\.|$)/i.test(base))base='_'+base;let s=base,n=2;while(used.has(s.toLowerCase()))s=base+'_'+n++;used.add(s.toLowerCase());return s;});}
- async function run(rows,{formats=[],structures=new Map(),progress=()=>{},cancelled=()=>false,onResult=()=>{}}={}){
-  const output=[],diagnostics=new Map(),entries=BatchWorkflow.catalog(structures),stems=names(rows),zip=formats.length?new JSZip():null;let bytes=0;const started=performance.now();
+ function validate(sequence,inputError){try{if(inputError)throw Error(inputError);MoleculeBuilder.start(sequence);return {status:'VALID',message:''};}catch(e){const x=classify(e);return {status:x.code==='CHEMISTRY_PENDING'?'RECOGNIZED_PENDING':'INVALID',message:x.code+': '+x.message};}}
+ function names(rows,{sequenceOnly=false}={}){const used=new Set();return rows.map((r,i)=>{let base=String((sequenceOnly?r['Compound ID']??r.ID:r.ID)||'').normalize('NFKC').trim().replace(/[<>:"/\\|?*\x00-\x1f\x7f]/g,'_').replace(/[. ]+$/g,'').slice(0,100).replace(/[. ]+$/g,'')||'row_'+(r.sourceRow||i+2);if(/^(con|prn|aux|nul|com[0-9]|lpt[0-9])(?:\.|$)/i.test(base))base='_'+base;let s=base,n=2;while(used.has(s.toLowerCase()))s=base+'_'+n++;used.add(s.toLowerCase());return s;});}
+ async function run(rows,{sequenceOnly=false,formats=[],structures=new Map(),progress=()=>{},cancelled=()=>false,onResult=()=>{},rowsPerColumn=PresentationOptions.rows}={}){
+  const output=[],diagnostics=new Map(),entries=sequenceOnly?null:BatchWorkflow.catalog(structures),stems=names(rows,{sequenceOnly}),zip=formats.length?new JSZip():null;let bytes=0;const started=performance.now();
   for(let i=0;i<rows.length;i++){
    if(cancelled())break;
    const input=rows[i],r={ID:input.ID,Name:input.Name||'',Sequence:input.Sequence,'Workflow Status':'FAILED','Last Successful Step':'','Operations Applied':'',Candidates:'',Formula:'','Average MW':'','Exact Mass':'',epsilon260:'','nmol/OD260':'','ug/OD260':'','Chemistry Status':'','Structure Status':formats.length?'STRUCTURE_UNSUPPORTED':'NOT_REQUESTED','OD Status':'UNSUPPORTED','Error/Warning':'','Output Name':'','Source Row':input.sourceRow||i+2};
+   if(sequenceOnly)Object.assign(r,{'Sequence No.':input['Sequence No.']??String(i+1),'Compound ID':input['Compound ID']??input.ID});
    const notes=[],operations=[],exportErrors=[],unavailable=[];
    let state=null,step=0;
    try{
     if(input.inputError)throw Error(input.inputError);
     state=MoleculeBuilder.start(input.Sequence);
     r['Last Successful Step']=0;
-    for(const op of input.operations||[]){
+    for(const op of sequenceOnly?[]:input.operations||[]){
      step=op.step;
      const next=BatchWorkflow.apply(state,op,entries);
      if(next.review){
@@ -35,7 +36,7 @@ const Batch = (() => {
     r.Formula=state.formula;r['Average MW']=state.average_mw;r['Exact Mass']=state.exact_mass;
     r['Workflow Status']='PASS';r['Chemistry Status']='REGRESSION_VALIDATED';
     r['OD Status']=o?.supported?(o.estimated?'ESTIMATED':o.status):'OD_PARAMETER_UNAVAILABLE';
-    r['OD Details']=o?.supported?(o.estimated?o.method:''):(o?.reason||'Optical parameters unavailable');
+    r['OD Details']=o?.supported?[o.method,...new Set(o.assumptionLedger?.map(a=>a.detail)||[])].join(' · '):(o?.reason||'Optical parameters unavailable');
     if(!o?.supported&&o?.evidence?.reasonCodes?.length)r['OD Details']=o.evidence.reasonCodes.join(', ')+' · '+r['OD Details'];
     if(o?.supported){
      r.epsilon260=o.epsilon260;r['nmol/OD260']=o.nmol_per_od;r['ug/OD260']=o.ug_per_od;
@@ -46,6 +47,7 @@ const Batch = (() => {
     r['Chemistry Status']=r['Workflow Status']==='NEEDS REVIEW'?'NEEDS REVIEW':x.code;
     if(formats.length)r['Structure Status']='NO_FINAL_PRODUCT';
     r['OD Status']='NO_FINAL_PRODUCT';
+    r.failureMessage=x.message;
     notes.push(input.ID+' · Step '+step+' · '+x.message);
     if(state)diagnostics.set(i,state);
    }
@@ -59,14 +61,14 @@ const Batch = (() => {
       let drawing;
       for(const format of formats){
        try{
-        const schematic=format==='schematic.svg'?StructurePresentation.schematic(record,{language:document.documentElement.lang}):undefined;
+        const schematic=format==='schematic.svg'?StructurePresentation.schematic(record,{language:document.documentElement.lang,basesPerColumn:rowsPerColumn}):undefined;
         if(schematic&&!schematic.supported){
          unavailable.push(format+': '+schematic.reason);
          continue;
         }
-        if(['cdxml','mol','sdf'].includes(format))drawing||=LocalViewers.chemicalDrawing(record);
-        const data=LocalViewers.serializeStructure(record,format,{name:stems[i],drawing,schematic});
-        const filename=stems[i]+'.'+format;
+        if(['cdxml','mol','sdf'].includes(format))drawing||=LocalViewers.chemicalDrawing(record,rowsPerColumn);
+        const data=LocalViewers.serializeStructure(record,format,{name:stems[i],drawing,schematic,rows:rowsPerColumn});
+        const filename=stems[i]+'.'+(sequenceOnly&&format==='schematic.svg'?'svg':format);
         zip.file(filename,data);bytes+=new TextEncoder().encode(data).length;files.push(filename);
        }catch(e){exportErrors.push(format+': '+e.message);}
       }
@@ -90,7 +92,7 @@ const Batch = (() => {
   }
   return {rows:output,diagnostics,zip,bytes,elapsedMs:performance.now()-started,total:rows.length,cancelled:output.length<rows.length};
  }
- function summary(r){const a=r.rows;return [['Metric','Value'],['Total input',r.total],['Processed',a.length],['Cancelled / unprocessed',r.total-a.length],['Chemistry valid',a.filter(x=>!!x.Formula).length],['Chemistry pending',a.filter(x=>x['Chemistry Status']==='CHEMISTRY_PENDING').length],['Chemistry failed',a.filter(x=>x['Workflow Status']==='FAILED').length],['Structure OK',a.filter(x=>x['Structure Status']==='OK').length],['Structure export errors',a.filter(x=>/EXPORT_ERROR/.test(x['Structure Status'])).length],['Structure formats unavailable',a.filter(x=>['PARTIAL_UNSUPPORTED','STRUCTURE_UNSUPPORTED'].includes(x['Structure Status'])).length],['OD unavailable',a.filter(x=>x['OD Status']==='OD_PARAMETER_UNAVAILABLE').length],['OD estimated',a.filter(x=>x['OD Status']==='ESTIMATED').length],['Duration (s)',r.elapsedMs/1000],['Structure source bytes',r.bytes],...['PASS','NEEDS REVIEW','FAILED','UNRESOLVED'].map(status=>[status,a.filter(x=>x['Workflow Status']===status).length]),['Engine','Shared Molecule Builder and Presentation C'],['OD convention','1 OD260 = A260 1 in 1 mL at 1 cm'],['Version','v2.4.2']];}
+ function summary(r){const a=r.rows;return [['Metric','Value'],['Total input',r.total],['Processed',a.length],['Cancelled / unprocessed',r.total-a.length],['Chemistry valid',a.filter(x=>!!x.Formula).length],['Chemistry pending',a.filter(x=>x['Chemistry Status']==='CHEMISTRY_PENDING').length],['Chemistry failed',a.filter(x=>x['Workflow Status']==='FAILED').length],['Structure OK',a.filter(x=>x['Structure Status']==='OK').length],['Structure export errors',a.filter(x=>/EXPORT_ERROR/.test(x['Structure Status'])).length],['Structure formats unavailable',a.filter(x=>['PARTIAL_UNSUPPORTED','STRUCTURE_UNSUPPORTED'].includes(x['Structure Status'])).length],['OD unavailable',a.filter(x=>x['OD Status']==='OD_PARAMETER_UNAVAILABLE').length],['OD estimated',a.filter(x=>x['OD Status']==='ESTIMATED').length],['Duration (s)',r.elapsedMs/1000],['Structure source bytes',r.bytes],...['PASS','NEEDS REVIEW','FAILED','UNRESOLVED'].map(status=>[status,a.filter(x=>x['Workflow Status']===status).length]),['Engine','Shared Molecule Builder and Presentation C'],['OD convention','1 OD260 = A260 1 in 1 mL at 1 cm'],['Version','v2.4.3']];}
  function candidateRows(r){
   return r.Candidates?JSON.parse(r.Candidates).map(c=>({selection:c.id,description:[c.definition||c.family,c.orientation,
     ...c.sites.map(s=>['Input '+(s.input+1),s.motif,Object.entries(s.atoms).map(([role,n])=>role+' '+n).join(', ')].join(' / ')),
@@ -122,9 +124,22 @@ const Batch = (() => {
   return w;
  }
  const norm=x=>String(x??'').replace(/^\uFEFF/,'').trim().toLowerCase().replace(/[\s_\-]+/g,'');
+ function sequenceRows(book){
+  const sheet=book.SheetNames.find(name=>norm(name)==='sequences')||book.SheetNames[0];
+  const [header=[]]=XLSX.utils.sheet_to_json(book.Sheets[sheet],{header:1,range:0,blankrows:true});
+  const aliases=['Sequence No.','序列编号','序列编号 / Sequence No.'];
+  const numberHeader=header.find(cell=>aliases.some(alias=>norm(alias)===norm(cell)));
+  const modern=numberHeader!==undefined||header.some(cell=>norm(cell)==='compoundid');
+  const columns=modern?[numberHeader??'Sequence No.','Compound ID','Sequence']:['ID','Sequence','Name'];
+  return BatchWorkflow.sheetRows(book,sheet,columns,modern?3:2).map(({row,values,inputError},i)=>{
+   const [number,compound,sequence]=modern?values:[values[0],values[2]||values[0],values[1]];
+   return {ID:compound,Name:modern?'':values[2],'Sequence No.':number||String(i+1),
+    'Compound ID':compound,Sequence:sequence,inputError,sourceRow:row};
+  });
+ }
  function mapping(header){return ['id','sequence'].map(k=>{const ix=header.map((v,i)=>norm(v)===k?i:-1).filter(i=>i>=0);return ix.length===1?ix[0]:null;});}
  function readRows(w,sheet,id,seq,headerRow=0){if(id===seq||id===null||seq===null)throw Error('请选择不同的 ID 与 Sequence 列');const ws=w.Sheets[sheet],data=XLSX.utils.sheet_to_json(ws,{header:1,raw:true,defval:'',blankrows:true,range:0}),rows=[];for(let i=headerRow+1;i<data.length;i++){const a=data[i];if(!a.some(v=>String(v).trim()))continue;const cells=[id,seq].map(c=>ws[XLSX.utils.encode_cell({r:i,c})]);const inputError=cells.some(c=>c?.f)?'INVALID_INPUT: ID / Sequence 必须为文本，请先粘贴为值':cells.some(c=>c?.t==='e')?'INVALID_INPUT: Excel cell error':'';rows.push({ID:String(a[id]??''),Sequence:String(a[seq]??'').trim(),sourceRow:i+1,inputError});}return rows;}
- return {run,validate,names,headers,workbook,mapping,readRows,summary,candidateRows};
+ return {run,validate,sequenceRows,names,headers,workbook,mapping,readRows,summary,candidateRows};
 })();
 
 if(typeof document!=='undefined')window.initializeBatch=()=>{
@@ -155,7 +170,7 @@ if(typeof document!=='undefined')window.initializeBatch=()=>{
      item.append(c.description,document.createElement('br'),button);details.append(item);
     }
     td.append(details);tr.append(td);continue;
-   }td.textContent=typeof v==='number'?(f==='ug/OD260'?v.toFixed(2):Number.isInteger(v)?v:v.toFixed(4)):(['Status','Workflow Status','Chemistry Status','Structure Status','OD Status'].includes(f)?batchLabel(v):['Warning','Error/Warning'].includes(f)&&v?displayWarning(v):v??'');tr.append(td);}t.append(tr);}}
+   }td.textContent=typeof v==='number'?((r['OD Status']==='ESTIMATED'&&['epsilon260','nmol/OD260','ug/OD260'].includes(f)?'≈ ':'')+(f==='ug/OD260'?v.toFixed(2):Number.isInteger(v)?v:v.toFixed(4))):(['Status','Workflow Status','Chemistry Status','Structure Status','OD Status'].includes(f)?batchLabel(v):['Warning','Error/Warning'].includes(f)&&v?displayWarning(v):v??'');tr.append(td);}t.append(tr);}}
  function batchLabel(value){
   const labels={
    'Structure Details':'结构详情','OD Details':'OD 详情',
@@ -163,7 +178,8 @@ if(typeof document!=='undefined')window.initializeBatch=()=>{
    'PARTIAL_EXPORT_ERROR':'部分格式导出失败','EXPORT_ERROR':'结构导出失败',
    'OD_PARAMETER_UNAVAILABLE':'缺少 OD 参数','ESTIMATED':'估算'
   };
-  return (!en()&&labels[value])||UILanguage.status(value);
+  const opticalLabels={epsilon260:"ε₂₆₀ (L·mol⁻¹·cm⁻¹)","nmol/OD260":"nmol/OD₂₆₀","ug/OD260":"µg/OD₂₆₀"};
+  return opticalLabels[value]||(!en()&&labels[value])||UILanguage.status(value);
  }
  function displayWarning(value){
   if(en())return value;
@@ -236,7 +252,7 @@ if(typeof document!=='undefined')window.initializeBatch=()=>{
     return;
    }if(el('batchid').value===''||el('batchseq').value==='')throw Error('请选择 ID 与 Sequence 列');const n=Number(el('batchheader').value);if(!Number.isInteger(n)||n<1)throw Error('标题行必须是正整数');rows=Batch.readRows(book,el('batchsheet').value,Number(el('batchid').value),Number(el('batchseq').value),n-1);lock(true);let counts={VALID:0,INVALID:0,RECOGNIZED_PENDING:0},preview=[];for(let i=0;i<rows.length;i++){const r=rows[i],v=r.inputError?{status:'INVALID',message:r.inputError}:Batch.validate(r.Sequence);counts[v.status]++;preview.push({...r,Status:v.status,Warning:v.message});if(i%20===0){status(()=>UILanguage.text("validating")+(i+1)+' / '+rows.length);await new Promise(r=>setTimeout(r,0));}}table(preview,['ID','Sequence','Status','Warning']);status(()=>[rows.length+' '+UILanguage.text("rows"),UILanguage.status('VALID')+' '+counts.VALID,UILanguage.status('INVALID')+' '+counts.INVALID,UILanguage.status('RECOGNIZED_PENDING')+' '+counts.RECOGNIZED_PENDING,UILanguage.text("preview.shows.up.to.100.rows.calculation.includes.all.ro")].join(' · '));lock(false);el('batchcalc').disabled=el('batchstructures').disabled=!rows.length;}catch(e){lock(false);el('batchcalc').disabled=el('batchstructures').disabled=true;status(e.message);}};
  let lastRequestedStructures=false;
- async function execute(structures){if(busy||!rows.length)return;lastRequestedStructures=structures;stop=false;last=null;el('batchxlsx').disabled=el('batchzip').disabled=true;lock(true);try{const formats=structures?Array.from(document.querySelectorAll('[data-batch-format]:checked'),x=>x.dataset.batchFormat):[];if(structures&&!formats.length)throw Error('请选择至少一个结构格式');last=await Batch.run(rows,{formats,structures:uploads.registry,cancelled:()=>stop,progress:p=>status(()=>`${p.done} / ${p.total} · ${UILanguage.text("structure.data")} ${(p.bytes/1048576).toFixed(1)} MB`)});table(last.rows,['ID','Workflow Status','Last Successful Step','Formula','Average MW','Exact Mass','ug/OD260','Operations Applied','Error/Warning','Candidates','Structure Status','Structure Details','OD Status','OD Details','Output Name']);{const result=last;status(()=>`${result.cancelled?UILanguage.text("stopped.processed.results.retained"):UILanguage.text("calculation.complete")} · ${result.rows.length} / ${result.total} · ${(result.elapsedMs/1000).toFixed(2)} s`);};el('batchxlsx').disabled=false;el('batchzip').disabled=!last.zip||!last.bytes;}catch(e){status(()=>UILanguage.text("batch.processing.failed")+' '+UILanguage.error(e));}finally{lock(false);el('batchcalc').disabled=el('batchstructures').disabled=!rows.length;}}
+ async function execute(structures){if(busy||!rows.length)return;lastRequestedStructures=structures;stop=false;last=null;el('batchxlsx').disabled=el('batchzip').disabled=true;lock(true);try{const formats=structures?Array.from(document.querySelectorAll('[data-batch-format]:checked'),x=>x.dataset.batchFormat):[];if(structures&&!formats.length)throw Error('请选择至少一个结构格式');last=await Batch.run(rows,{formats,structures:uploads.registry,cancelled:()=>stop,progress:p=>status(()=>`${p.done} / ${p.total} · ${UILanguage.text("structure.data")} ${(p.bytes/1048576).toFixed(1)} MB`)});table(last.rows,['ID','Workflow Status','Last Successful Step','Formula','Average MW','Exact Mass','epsilon260','nmol/OD260','ug/OD260','Operations Applied','Error/Warning','Candidates','Structure Status','Structure Details','OD Status','OD Details','Output Name']);{const result=last;status(()=>`${result.cancelled?UILanguage.text("stopped.processed.results.retained"):UILanguage.text("calculation.complete")} · ${result.rows.length} / ${result.total} · ${(result.elapsedMs/1000).toFixed(2)} s`);};el('batchxlsx').disabled=false;el('batchzip').disabled=!last.zip||!last.bytes;}catch(e){status(()=>UILanguage.text("batch.processing.failed")+' '+UILanguage.error(e));}finally{lock(false);el('batchcalc').disabled=el('batchstructures').disabled=!rows.length;}}
  el('batchcalc').onclick=()=>execute(false);el('batchstructures').onclick=()=>execute(true);el('batchcancel').onclick=()=>{stop=true;status(()=>UILanguage.text("stopping.after.the.current.row"));};
  el('language').addEventListener('change',()=>{
   if(displayed)table(displayed.data,displayed.fields);

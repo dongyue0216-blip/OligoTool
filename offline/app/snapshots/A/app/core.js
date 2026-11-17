@@ -108,7 +108,7 @@ const ChemistryCore = (() => {
   const edges=p.links.map((linkage,i)=>{
    const source={node:nodes[i].id,site:direction(nodes[i],'source')},target={node:nodes[i+1].id,site:direction(nodes[i+1],'target')};
    // Legacy blank separator resolves a dedicated linkage only when both sites declare it.
-   if(linkage==='PO'&&nodes[i].block.sites[source.site]?.allowed_linkage_classes.includes('PMO')&&nodes[i+1].block.sites[target.site]?.allowed_linkage_classes.includes('PMO'))linkage='PMO';
+   if(linkage==='PO'&&nodes[i].block.sites[source.site]?.allowed_linkage_classes?.includes('PMO')&&nodes[i+1].block.sites[target.site]?.allowed_linkage_classes?.includes('PMO'))linkage='PMO';
    return {id:'l'+(i+1),source,target,linkage};
   });
   const occupied=new Set(edges.flatMap(e=>[e.source.node+':'+e.source.site,e.target.node+':'+e.target.site])),terminations=[];

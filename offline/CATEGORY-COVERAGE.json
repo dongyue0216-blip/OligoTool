@@ -1,0 +1,349 @@
+[
+  {
+    "category": "RNA",
+    "count": 7,
+    "members": [
+      "rA",
+      "rC",
+      "rG",
+      "rU",
+      "rI",
+      "rT",
+      "rCMe"
+    ]
+  },
+  {
+    "category": "F",
+    "count": 7,
+    "members": [
+      "fA",
+      "fC",
+      "fG",
+      "fU",
+      "fT",
+      "fI",
+      "fCMe"
+    ]
+  },
+  {
+    "category": "OMe",
+    "count": 7,
+    "members": [
+      "mA",
+      "mC",
+      "mG",
+      "mU",
+      "mT",
+      "mI",
+      "mCMe"
+    ]
+  },
+  {
+    "category": "MOE",
+    "count": 7,
+    "members": [
+      "eA",
+      "eC",
+      "eG",
+      "eU",
+      "eT",
+      "eI",
+      "eCMe"
+    ]
+  },
+  {
+    "category": "DNA",
+    "count": 6,
+    "members": [
+      "dA",
+      "dC",
+      "dG",
+      "dT",
+      "dI",
+      "dCMe"
+    ]
+  },
+  {
+    "category": "LNA",
+    "count": 7,
+    "members": [
+      "+A",
+      "+C",
+      "+G",
+      "+U",
+      "+T",
+      "+I",
+      "+CMe"
+    ]
+  },
+  {
+    "category": "cEt",
+    "count": 7,
+    "members": [
+      "cEt-A",
+      "cEt-C",
+      "cEt-G",
+      "cEt-U",
+      "cEt-T",
+      "cEt-I",
+      "cEt-CMe"
+    ]
+  },
+  {
+    "category": "TNA",
+    "count": 5,
+    "members": [
+      "tA",
+      "tC",
+      "tG",
+      "tT",
+      "tCMe"
+    ]
+  },
+  {
+    "category": "GNA",
+    "count": 5,
+    "members": [
+      "Agn",
+      "Cgn",
+      "Ggn",
+      "Tgn",
+      "Ugn"
+    ]
+  },
+  {
+    "category": "amino",
+    "count": 2,
+    "members": [
+      "{C3N}",
+      "{C6N}"
+    ]
+  },
+  {
+    "category": "backbone",
+    "count": 6,
+    "members": [
+      "(none)",
+      "*",
+      "**",
+      "^",
+      "!",
+      "#"
+    ]
+  },
+  {
+    "category": "Benner",
+    "count": 1,
+    "members": [
+      "Z"
+    ]
+  },
+  {
+    "category": "C16",
+    "count": 7,
+    "members": [
+      "Ahd",
+      "Chd",
+      "Ghd",
+      "Uhd",
+      "Thd",
+      "Ihd",
+      "CMehd"
+    ]
+  },
+  {
+    "category": "C22",
+    "count": 7,
+    "members": [
+      "Ada",
+      "Cda",
+      "Gda",
+      "Uda",
+      "Tda",
+      "Ida",
+      "CMeda"
+    ]
+  },
+  {
+    "category": "Custom",
+    "count": 1,
+    "members": [
+      "{GlycerolBranch}"
+    ]
+  },
+  {
+    "category": "ENA",
+    "count": 7,
+    "members": [
+      "ENA-A",
+      "ENA-C",
+      "ENA-G",
+      "ENA-U",
+      "ENA-T",
+      "ENA-I",
+      "ENA-CMe"
+    ]
+  },
+  {
+    "category": "FANA",
+    "count": 7,
+    "members": [
+      "FANA-A",
+      "FANA-C",
+      "FANA-G",
+      "FANA-U",
+      "FANA-T",
+      "FANA-I",
+      "FANA-CMe"
+    ]
+  },
+  {
+    "category": "fluorescent",
+    "count": 9,
+    "members": [
+      "{FAM}",
+      "[CY5]",
+      "[CY3]",
+      "[CY5.5]",
+      "[555]",
+      "[647]",
+      "[594]",
+      "[488]",
+      "[568]"
+    ]
+  },
+  {
+    "category": "GalNAc",
+    "count": 2,
+    "members": [
+      "{L96}",
+      "{NAG37}"
+    ]
+  },
+  {
+    "category": "inverted-dSpacer",
+    "count": 1,
+    "members": [
+      "{InvAb}"
+    ]
+  },
+  {
+    "category": "NMA",
+    "count": 7,
+    "members": [
+      "nA",
+      "nC",
+      "nG",
+      "nU",
+      "nT",
+      "nI",
+      "nCMe"
+    ]
+  },
+  {
+    "category": "PMO",
+    "count": 6,
+    "members": [
+      "pA",
+      "pC",
+      "pG",
+      "pT",
+      "pI",
+      "pB"
+    ]
+  },
+  {
+    "category": "Post-modification reagent",
+    "count": 17,
+    "members": [
+      "m7GDP 路 reference graph",
+      "NHS acetate 路 reference graph",
+      "N-methylmaleimide 路 reference graph",
+      "Propyne 路 reference graph",
+      "Methyl azide 路 reference graph",
+      "m7GDP-imidazolide 路 real activated reagent reference",
+      "DBCO amine",
+      "Ethyl 4-nitrophenyl carbonate",
+      "BCN alcohol (stereoisomer unspecified)",
+      "BCN",
+      "cOct",
+      "DBCO",
+      "MC",
+      "MCVCPABC",
+      "SMCC",
+      "SPDP",
+      "TCO"
+    ]
+  },
+  {
+    "category": "spacer",
+    "count": 12,
+    "members": [
+      "{PEG3}",
+      "{PEG4}",
+      "{PEG5}",
+      "{PEG6}",
+      "{PEG7}",
+      "{spacer3}",
+      "{absic}",
+      "[spacer9]",
+      "[spacer12]",
+      "[spacer15]",
+      "[spacer18]",
+      "[spacer21]"
+    ]
+  },
+  {
+    "category": "special",
+    "count": 4,
+    "members": [
+      "[PHO]",
+      "[Biotin]",
+      "[DIG]",
+      "[abasic]"
+    ]
+  },
+  {
+    "category": "Terminal syntax",
+    "count": 4,
+    "members": [
+      "[p]",
+      "[pp]",
+      "[ppp]",
+      "[phosphorylation]"
+    ]
+  },
+  {
+    "category": "UNA",
+    "count": 7,
+    "members": [
+      "UNA-A",
+      "UNA-C",
+      "UNA-G",
+      "UNA-U",
+      "UNA-T",
+      "UNA-I",
+      "UNA-CMe"
+    ]
+  },
+  {
+    "category": "Vpe",
+    "count": 4,
+    "members": [
+      "VpeA",
+      "VpeC",
+      "VpeG",
+      "VpeU"
+    ]
+  },
+  {
+    "category": "Vpm",
+    "count": 4,
+    "members": [
+      "VpmA",
+      "VpmC",
+      "VpmG",
+      "VpmU"
+    ]
+  }
+]

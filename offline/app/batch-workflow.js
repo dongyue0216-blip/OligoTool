@@ -223,5 +223,5 @@ const BatchWorkflow=(()=>{
   }));
   return {review,message:automatic?'':'The selected candidate is no longer available. Choose again in Toolkit.'};
  }
- return {structured,read,template,templateBytes,upload,catalog,reagentError,apply};
+ return {sheetRows,structured,read,template,templateBytes,upload,catalog,reagentError,apply};
 })();

@@ -1,0 +1,58 @@
+[
+  {
+    "name": "circular closure existing endpoints no child or lane",
+    "status": "PASS"
+  },
+  {
+    "name": "multi-component state no false bonds, persistence, crosslink existing nodes",
+    "status": "PASS"
+  },
+  {
+    "name": "interaction annotation persistence / N-ary / immutable / never covalent",
+    "status": "PASS"
+  },
+  {
+    "name": "reaction materialization input states atom maps version product authoritative",
+    "status": "PASS"
+  },
+  {
+    "name": "general AssemblyGraph accepts ring and disconnected components without hierarchy edits",
+    "status": "PASS"
+  },
+  {
+    "name": "A/B/C invariant stable identities independent UI labels",
+    "status": "PASS"
+  },
+  {
+    "name": "v2.00 1/2-site fixtures plus unknown metadata lossless storage/export/reload",
+    "status": "PASS"
+  },
+  {
+    "name": "unknown residues linkage future schemas fail closed",
+    "status": "PASS"
+  },
+  {
+    "name": "duplex antiparallel known 12/12 and residue map orientation",
+    "status": "PASS"
+  },
+  {
+    "name": "mismatch and overhang separate, no unsupported bulge count",
+    "status": "PASS"
+  },
+  {
+    "name": "self hairpin min loop no self or repeated residue pairing",
+    "status": "PASS"
+  },
+  {
+    "name": "modified input not coerced / strands[] N-way pairwise foundation",
+    "status": "PASS"
+  },
+  {
+    "name": "candidate → explicit atom map → annotation path never auto-confirms",
+    "status": "PASS"
+  },
+  {
+    "name": "legacy checkpoints gain additive defaults, unknown fields retained",
+    "status": "PASS"
+  }
+]

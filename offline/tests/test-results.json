@@ -1,0 +1,290 @@
+[
+  {
+    "name": "rArA exact formula and mass",
+    "status": "PASS"
+  },
+  {
+    "name": "catalog custom save/use pB",
+    "status": "PASS"
+  },
+  {
+    "name": "catalog custom save/use Biotin",
+    "status": "PASS"
+  },
+  {
+    "name": "catalog custom save/use DIG",
+    "status": "PASS"
+  },
+  {
+    "name": "catalog custom save/use abasic",
+    "status": "PASS"
+  },
+  {
+    "name": "catalog custom save/use CY5",
+    "status": "PASS"
+  },
+  {
+    "name": "catalog custom save/use Cy5",
+    "status": "PASS"
+  },
+  {
+    "name": "catalog custom save/use CY3",
+    "status": "PASS"
+  },
+  {
+    "name": "catalog custom save/use Cy3",
+    "status": "PASS"
+  },
+  {
+    "name": "catalog custom save/use 555",
+    "status": "PASS"
+  },
+  {
+    "name": "catalog custom save/use Alexa555",
+    "status": "PASS"
+  },
+  {
+    "name": "catalog custom save/use 647",
+    "status": "PASS"
+  },
+  {
+    "name": "catalog custom save/use Alexa647",
+    "status": "PASS"
+  },
+  {
+    "name": "catalog custom save/use 594",
+    "status": "PASS"
+  },
+  {
+    "name": "catalog custom save/use Alexa594",
+    "status": "PASS"
+  },
+  {
+    "name": "catalog custom save/use 488",
+    "status": "PASS"
+  },
+  {
+    "name": "catalog custom save/use Alexa488",
+    "status": "PASS"
+  },
+  {
+    "name": "catalog custom save/use 568",
+    "status": "PASS"
+  },
+  {
+    "name": "catalog custom save/use Alexa568",
+    "status": "PASS"
+  },
+  {
+    "name": "valid built-in name blocked",
+    "status": "PASS"
+  },
+  {
+    "name": "built-in unchanged",
+    "status": "PASS"
+  },
+  {
+    "name": "validated InvAb available with user spelling",
+    "status": "PASS"
+  },
+  {
+    "name": "every valid built-in symbol conflict",
+    "status": "PASS"
+  },
+  {
+    "name": "historical user absic override survives the built-in addition",
+    "status": "PASS"
+  },
+  {
+    "name": "baseline user library schema read",
+    "status": "PASS"
+  },
+  {
+    "name": "provenance auto retention plus chained thiol/maleimide",
+    "status": "PASS"
+  },
+  {
+    "name": "two large fragments require explicit selection",
+    "status": "PASS"
+  },
+  {
+    "name": "two oligo fragments require explicit selection",
+    "status": "PASS"
+  },
+  {
+    "name": "pyridyl disulfide",
+    "status": "PASS"
+  },
+  {
+    "name": "reduction C6",
+    "status": "PASS"
+  },
+  {
+    "name": "reduction C7",
+    "status": "PASS"
+  },
+  {
+    "name": "reduction asymmetric",
+    "status": "PASS"
+  },
+  {
+    "name": "multiple disulfides",
+    "status": "PASS"
+  },
+  {
+    "name": "oxidized sulfur and polysulfide rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "maleimide roles false",
+    "status": "PASS"
+  },
+  {
+    "name": "maleimide roles true",
+    "status": "PASS"
+  },
+  {
+    "name": "maleimide multi thiol",
+    "status": "PASS"
+  },
+  {
+    "name": "maleimide multi maleimide",
+    "status": "PASS"
+  },
+  {
+    "name": "oligo thiol/maleimide both role directions and workflow",
+    "status": "PASS"
+  },
+  {
+    "name": "maleimide false positive controls",
+    "status": "PASS"
+  },
+  {
+    "name": "CAP reference",
+    "status": "PASS"
+  },
+  {
+    "name": "CAP GDP demethylated",
+    "status": "PASS"
+  },
+  {
+    "name": "CAP distal imidazolium",
+    "status": "PASS"
+  },
+  {
+    "name": "CAP phosphate anions",
+    "status": "PASS"
+  },
+  {
+    "name": "CAP terminal PS",
+    "status": "PASS"
+  },
+  {
+    "name": "CAP charge separated phosphoryl",
+    "status": "PASS"
+  },
+  {
+    "name": "Quick CAP agrees with manual CAP for a charge-separated reagent",
+    "status": "PASS"
+  },
+  {
+    "name": "CAP aromatic MOL and SDF local normalization",
+    "status": "PASS"
+  },
+  {
+    "name": "CAP permuted atom mapping",
+    "status": "PASS"
+  },
+  {
+    "name": "CAP unactivated GDP rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "CAP disconnected/unrelated imidazole rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "amine accepted CCN",
+    "status": "PASS"
+  },
+  {
+    "name": "amine accepted CCNC",
+    "status": "PASS"
+  },
+  {
+    "name": "amine excluded CC(=O)N",
+    "status": "PASS"
+  },
+  {
+    "name": "amine excluded CN(C)C",
+    "status": "PASS"
+  },
+  {
+    "name": "amine excluded NC(=O)N",
+    "status": "PASS"
+  },
+  {
+    "name": "nucleobase amine excluded",
+    "status": "PASS"
+  },
+  {
+    "name": "CAP aromatic V3000 sparse IDs",
+    "status": "PASS"
+  },
+  {
+    "name": "CAP P+/O- MOL representation",
+    "status": "PASS"
+  },
+  {
+    "name": "every ghost display name pB",
+    "status": "PASS"
+  },
+  {
+    "name": "every ghost display name [Biotin]",
+    "status": "PASS"
+  },
+  {
+    "name": "every ghost display name [DIG]",
+    "status": "PASS"
+  },
+  {
+    "name": "every ghost display name [abasic]",
+    "status": "PASS"
+  },
+  {
+    "name": "every ghost display name [CY5]",
+    "status": "PASS"
+  },
+  {
+    "name": "every ghost display name [CY3]",
+    "status": "PASS"
+  },
+  {
+    "name": "every ghost display name [CY5.5]",
+    "status": "PASS"
+  },
+  {
+    "name": "every ghost display name [555]",
+    "status": "PASS"
+  },
+  {
+    "name": "every ghost display name [647]",
+    "status": "PASS"
+  },
+  {
+    "name": "every ghost display name [594]",
+    "status": "PASS"
+  },
+  {
+    "name": "every ghost display name [488]",
+    "status": "PASS"
+  },
+  {
+    "name": "every ghost display name [568]",
+    "status": "PASS"
+  },
+  {
+    "name": "CAP imidazolium charge resonance on attached N",
+    "status": "PASS"
+  }
+]

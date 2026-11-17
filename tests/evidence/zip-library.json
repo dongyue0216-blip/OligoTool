@@ -1,0 +1,83 @@
+{
+  "tests": [
+    {
+      "name": "01 file:// Start.html and automatic legacy restoration",
+      "status": "PASS"
+    },
+    {
+      "name": "02 Built-in inspector, real structure and read-only actions",
+      "status": "PASS"
+    },
+    {
+      "name": "03 My Custom inspector, attachment atom alignment and optical value",
+      "status": "PASS"
+    },
+    {
+      "name": "04 Search and scope switch reset stale selection and editor",
+      "status": "PASS"
+    },
+    {
+      "name": "05 Edit save returns to inspector and preserves legacy graph, sites and optics",
+      "status": "PASS"
+    },
+    {
+      "name": "06 Dirty switch preserves drafts on Cancel and supports Discard and Save",
+      "status": "PASS"
+    },
+    {
+      "name": "07 Export single, selected and all via UI with intact records",
+      "status": "PASS"
+    },
+    {
+      "name": "08 New uses same editor, Cancel returns, Save creates usable entry",
+      "status": "PASS"
+    },
+    {
+      "name": "09 My Custom deletion asks permission and unregisters immediately",
+      "status": "PASS"
+    },
+    {
+      "name": "10 Strict multi-file Merge from Built-in into My Custom",
+      "status": "PASS"
+    },
+    {
+      "name": "11 Bilingual browser, inspector and editor",
+      "status": "PASS"
+    },
+    {
+      "name": "12 CL1 team records unify without changing entries and future schema is rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "13 Editing a directional site preserves the graph and untouched stable branch ID",
+      "status": "PASS"
+    },
+    {
+      "name": "Narrow viewport stacks inspector with no horizontal overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual browser downloads: one entry, selection and full library",
+      "status": "PASS"
+    }
+  ],
+  "protocol": "file:",
+  "downloads": [
+    {
+      "name": "Chemistry-Library-selected.olib",
+      "kind": "library",
+      "entries": 2
+    },
+    {
+      "name": "Chemistry-Library.olib",
+      "kind": "library",
+      "entries": 3
+    },
+    {
+      "name": "CLterminal.oligoentry",
+      "kind": "entry",
+      "entries": 1
+    }
+  ],
+  "runtimeErrors": []
+}

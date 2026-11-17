@@ -1,0 +1,96 @@
+{
+  "baselineZip": "CL2.zip",
+  "sha256": "016637eb116a1f152902f06ecd10798dafde0b6d6fd26620430f70905c3ff17a",
+  "baselineMismatches": [],
+  "modified": [
+    {
+      "file": "README.md",
+      "before": "e063e311418ad476b1932e3da0642c7717eb63462bec89c348c73a09ec694871",
+      "after": "7991cd6ed46a02ac0b6fa6c87dc19748d9ab3b304f1729ef3d2e0c3a746b5b27"
+    },
+    {
+      "file": "Start.html",
+      "before": "d37ced8788d4bd98b319e70560289632486b7bd46b1b947faa3091b5372e8481",
+      "after": "93c2bc28b20a0de63aee75ddefa2496e5780c2f6c2ef94b853a4741277267fa5"
+    },
+    {
+      "file": "app/adapters.js",
+      "before": "db9ff8a7d814bcdd21492011141719f360fda7ffe336f496799c2718d8a44348",
+      "after": "f39984957873ac11b3edb5187fca71077ef3848f926745a528c8f1220ab768b4"
+    },
+    {
+      "file": "app/adaptive-workspace.js",
+      "before": "681e60beecfdb4f8bbb5c47cc89c6c46e41e63a31d6c072b09d379f151d359b8",
+      "after": "d6d9a02e0fb2bd6b0c9ec91c923ce5b9557e9bc2b277ee9d30133ee7c948f94d"
+    },
+    {
+      "file": "app/app.js",
+      "before": "c636706c415e02cc838f187077db0bfed50474b058aad11934a6ab89db1798be",
+      "after": "9bacc4a7a20038ab5a4484e5378f04c6db42e597ae0e36c40f82fe8f4ce194ec"
+    },
+    {
+      "file": "app/batch-sequence-ui.js",
+      "before": "50db446d960c7373d3f493a78fbd263bd919dc76549cd4177d74face36eee67a",
+      "after": "bb1ef43b02cff81470579ae5c2c01ed0c8f78e21348317c62c30430000cb9bfa"
+    },
+    {
+      "file": "app/batch.js",
+      "before": "3a044f749ac565c71b310e5921f7a8770ea925d66e108bcabf3725835c1f0fbf",
+      "after": "126cb463fde19daaaa99ade6c444eeca5f1bb62042d096dcc6ce3cdf3a82c21d"
+    },
+    {
+      "file": "app/chemistry-library.js",
+      "before": "43b97ee35f02a89e9c2d4b794b7f4ac4d3296560aa6596d02fdcf49b34d252dc",
+      "after": "b2b1117dcc0d746c6130d79bec3825c21d5069745bfec83d52e8ce43ce2a283a"
+    },
+    {
+      "file": "app/local-viewers.js",
+      "before": "6dee8c90c4ebe13715050da968cd5f339b9ee8332e34ebff9a089377d2ad81bb",
+      "after": "3b930878d50029ac320c5a35641a12259058daabae002d689bb550b474b7cfde"
+    },
+    {
+      "file": "app/molecule-builder.js",
+      "before": "33ae6dc8ed74b1130d83d9918b164b93db2fbbeba70b8bfb1951dce4c227fd53",
+      "after": "77a28ca1206c036082f36dfe22c3c69aa556f1a00821fe6d770e74bd2b07e675"
+    },
+    {
+      "file": "app/optical.js",
+      "before": "e4fbecadbd15b142a5cf013792b5832a24a712f36810d8dd181170e8cd8d8a84",
+      "after": "9d9bfff9f9b666ed23fa602e9ce1d1961042382d688347680f22645a3626e0e5"
+    },
+    {
+      "file": "app/product.js",
+      "before": "315912cae4c49de247e924e1923b8bad25a2bfed25eaf0926161ed55bb187d5e",
+      "after": "68afc9b338c8cdf974c6e85f9f2542b48cf419f799d33474af246097123c3b6e"
+    },
+    {
+      "file": "app/structure-presentation.js",
+      "before": "fc6eb382618ffc336b3e67e84be907611aa7d3372ee5df2cc631b40f36de1125",
+      "after": "ba05c37c2b22ea5dff87d702f9c6e52c96aa53761e372c7c9ae1ba11bc6e1935"
+    },
+    {
+      "file": "app/ui-language.js",
+      "before": "92af2e5b1f30ee022088f25c77cb9dafef1659f9a63537dde99801db8747bc4d",
+      "after": "a2dc580502e1d6f8d88ea1339f0e338c86d770d7f447e7b0df17a5671f822069"
+    },
+    {
+      "file": "app/validation.js",
+      "before": "53c4aed4366824199cee36ccbb3ec0b4c78397a6eceaf02b4bb6a99e08fb5452",
+      "after": "feb8e6a8c4bc1603963589267786d9b06b8825768b9ea365ceacd9c11a317724"
+    },
+    {
+      "file": "app/snapshots/C/presentation.js",
+      "before": "fc6713af7e031ecb4684003ee884451a30e9856d372eedec0890db9847a222a9",
+      "after": "6d189f9f433a9dd1b4af9313eaea99ab02adf4f2757640cb93e80cf3ee205f3f"
+    },
+    {
+      "file": "app/snapshots/A/app/reactions.js",
+      "before": "632956a0dc22431c5714bb8394e48daff71a9e1996e27d41689650e94eb30a54",
+      "after": "fee9976b655d14fb5c88a8b0db017ed7090a4ba01d03a81e1c7b6fa0fb2c70f5"
+    }
+  ],
+  "newProductionFiles": [
+    "INFINITY-REPORT.md",
+    "app/infinity-storage.js"
+  ]
+}

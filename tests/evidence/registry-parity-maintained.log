@@ -1,0 +1,9 @@
+templates: 128 identical records
+linkages: 7 identical records
+reagents: 17 identical records
+legacyReagents: 2 identical records
+reactionDefinitions: 6 identical records
+reactionFamilies: 7 identical records
+reactionTransformations: 8 identical records
+ctfileAbbreviations: 23 identical records
+Registry parity passed, including optical parameters, coverage, order and presentation templates.

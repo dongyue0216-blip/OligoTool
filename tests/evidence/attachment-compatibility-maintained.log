@@ -1,0 +1,43 @@
+{
+  "backboneCount": 294,
+  "mixedCount": 60,
+  "phosphateCount": 84,
+  "validatedXna": [
+    "Agn",
+    "Cgn",
+    "Ggn",
+    "Tgn",
+    "tA",
+    "tC",
+    "tG",
+    "tT",
+    "tCMe",
+    "Ugn"
+  ],
+  "modifierCount": 1848,
+  "modifiers": [
+    "VpmA",
+    "VpmC",
+    "VpmG",
+    "VpmU",
+    "VpeA",
+    "VpeC",
+    "VpeG",
+    "VpeU",
+    "[PEG3]",
+    "[PEG4]",
+    "[PEG5]",
+    "[PEG6]",
+    "[PEG7]",
+    "[spacer3]",
+    "[C3N]",
+    "[C6N]",
+    "[FAM]",
+    "[L96]",
+    "[NAG37]",
+    "[InvAb]",
+    "[absic]",
+    "[GlycerolBranch]"
+  ],
+  "exportCount": 12
+}

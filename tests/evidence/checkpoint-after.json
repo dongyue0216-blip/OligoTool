@@ -1,0 +1,21 @@
+{
+  "results": [
+    {
+      "name": "out-of-range atom map",
+      "accepted": false,
+      "reason": "MOLECULE_BUILDER: reaction mapping / product provenance mismatch"
+    },
+    {
+      "name": "duplicate product ownership",
+      "accepted": false,
+      "reason": "MOLECULE_BUILDER: invalid reaction atom mapping"
+    },
+    {
+      "name": "snapshot inconsistent with graph",
+      "accepted": false,
+      "reason": "MOLECULE_BUILDER: reaction snapshot / product graph mismatch"
+    }
+  ],
+  "downloads": [],
+  "runtimeErrors": []
+}

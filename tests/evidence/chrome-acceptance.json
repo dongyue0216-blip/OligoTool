@@ -1,0 +1,55 @@
+{
+  "tests": [
+    {
+      "name": "Infinity storage reads baseline and writes isolated copy",
+      "status": "PASS"
+    },
+    {
+      "name": "Optical exception preserves explicit unsupported diagnostic",
+      "status": "PASS"
+    },
+    {
+      "name": "Optical error leaves real sequence and reaction chemistry usable",
+      "status": "PASS"
+    },
+    {
+      "name": "Reaction checkpoint round-trip and corrupted mapping rejection",
+      "status": "PASS"
+    },
+    {
+      "name": "Cancellation retains completed chemistry and stage timings",
+      "status": "PASS"
+    },
+    {
+      "name": "Bilingual Batch 2.1 file upload preview calculation and export controls",
+      "status": "PASS"
+    },
+    {
+      "name": "A/C invariant detail",
+      "status": "PASS",
+      "checks": 114,
+      "rows": 10
+    },
+    {
+      "name": "Current A/C fixture invariants and replay",
+      "status": "PASS"
+    },
+    {
+      "name": "finite pair denominator",
+      "status": "PASS",
+      "reagents": 16,
+      "pairs": 32,
+      "plans": 12
+    },
+    {
+      "name": "Every built-in binary reaction plan survives swapped inputs",
+      "status": "PASS"
+    }
+  ],
+  "protocol": "file:",
+  "downloads": [
+    "sequence-results.xlsx",
+    "structures.zip"
+  ],
+  "runtimeErrors": []
+}

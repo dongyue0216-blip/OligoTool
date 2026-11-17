@@ -1,0 +1,23 @@
+{
+  "negligible": [
+    "{C3N}",
+    "{C6N}",
+    "{PEG3}",
+    "{PEG4}",
+    "{PEG5}",
+    "{PEG6}",
+    "{PEG7}",
+    "{spacer3}",
+    "{absic}",
+    "{InvAb}",
+    "{L96}",
+    "{NAG37}"
+  ],
+  "pack": {
+    "id": "legacy-ss-nn/1",
+    "hash": "106c0bab05fb30db3a8ecb6ebe7ab63b2df5f6266643a475958ae411dded0c9c",
+    "source": "https://www.genelink.com/Literature/PS/Oligo_Analysis_Parameters_V3.3.pdf",
+    "rightsStatus": "unverified; inherited local test data",
+    "conditions": "260 nm; single strand; historic aqueous NN, pH/temperature not fully specified"
+  }
+}

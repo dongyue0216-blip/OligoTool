@@ -1,0 +1,62 @@
+{
+  "maleimide-reverse": {
+    "schema_version": "reaction-definition/1",
+    "id": "maleimide-reverse",
+    "name": "Maleimide-bearing starting molecule + thiol reagent",
+    "roles": [
+      "maleimide",
+      "thiol"
+    ],
+    "rule": "thio-michael-reverse/1"
+  },
+  "capping-imidazolide": {
+    "schema_version": "reaction-definition/1",
+    "id": "capping-imidazolide",
+    "name": "Chemical capping · real GDP imidazolide (recommended)",
+    "roles": [
+      "terminalPhosphateNucleophile",
+      "diphosphateImidazolide"
+    ],
+    "rule": "diphosphate-imidazolide/1"
+  },
+  "capping": {
+    "schema_version": "reaction-definition/1",
+    "id": "capping",
+    "name": "Chemical capping · phosphate + diphosphate",
+    "roles": [
+      "terminalPhosphate",
+      "diphosphateOH"
+    ],
+    "rule": "phosphate-condensation/1"
+  },
+  "cuaac": {
+    "schema_version": "reaction-definition/1",
+    "id": "cuaac",
+    "name": "CuAAC · azide + terminal alkyne",
+    "roles": [
+      "azide",
+      "alkyne"
+    ],
+    "rule": "cuaac-1,4/1"
+  },
+  "amide": {
+    "schema_version": "reaction-definition/1",
+    "id": "amide",
+    "name": "Amine + NHS activated ester",
+    "roles": [
+      "amine",
+      "activatedEster"
+    ],
+    "rule": "nhs-amide/1"
+  },
+  "maleimide": {
+    "schema_version": "reaction-definition/1",
+    "id": "maleimide",
+    "name": "Thiol + maleimide",
+    "roles": [
+      "thiol",
+      "maleimide"
+    ],
+    "rule": "thio-michael/1"
+  }
+}

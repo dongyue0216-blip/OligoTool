@@ -1,0 +1,225 @@
+{
+  "{GlycerolBranch}": {
+    "atoms": [
+      {
+        "e": "O",
+        "q": 0,
+        "h": 1,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "C",
+        "q": 0,
+        "h": 2,
+        "x": 0.246598480958036,
+        "y": 1.4795908857482158
+      },
+      {
+        "e": "C",
+        "q": 0,
+        "h": 1,
+        "x": 0.493196961916072,
+        "y": 2.9591817714964317
+      },
+      {
+        "e": "O",
+        "q": 0,
+        "h": 1,
+        "x": 1.7261893667062518,
+        "y": 4.2743736699392905
+      },
+      {
+        "e": "C",
+        "q": 0,
+        "h": 2,
+        "x": -0.246598480958036,
+        "y": 4.603171644550005
+      },
+      {
+        "e": "O",
+        "q": 0,
+        "h": 1,
+        "x": 0,
+        "y": 6.082762530298221
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 4,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 4,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "layout_metadata": {
+      "expanded": false
+    },
+    "id": "{GlycerolBranch}",
+    "family": "Custom",
+    "assembly_class": "o-phosphorus",
+    "o5": 0,
+    "o3": 5,
+    "attachments": {
+      "upstream": {
+        "atom": 0,
+        "atom_role": "user-selected-OH",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        },
+        "local_bonds": [
+          {
+            "atom": 1,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ]
+      },
+      "downstream": {
+        "atom": 5,
+        "atom_role": "user-selected-OH",
+        "direction": "downstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        },
+        "local_bonds": [
+          {
+            "atom": 4,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ]
+      },
+      "branch_1": {
+        "atom": 3,
+        "atom_role": "user-selected-OH",
+        "direction": "branch",
+        "element": "O",
+        "connection_class": "alcohol",
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        },
+        "local_bonds": [
+          {
+            "atom": 2,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "role": "branch",
+        "index": 1
+      }
+    },
+    "phosphorus_topology": "standard-5-to-3",
+    "optical": {
+      "mode": "zero",
+      "source": "saturated glycerol; no conjugated chromophore"
+    },
+    "name": "Glycerol brancher",
+    "formula": "C3H8O3"
+  }
+}

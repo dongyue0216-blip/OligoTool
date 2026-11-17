@@ -1,0 +1,1734 @@
+{
+  "pA": {
+    "atoms": [
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.845124947792586,
+        "y": -1.1249928737120074
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 5.996122021717634,
+        "y": -0.7925253963358263
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 6.283695277340257,
+        "y": 0.37050104805291073
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 5.420271459037831,
+        "y": 1.2010600150654673
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 4.269274385112784,
+        "y": 0.8685925376892862
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.9817011294901614,
+        "y": -0.2944339066994506
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.597401367979279,
+        "y": 1.86051770449615
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.333158081191879,
+        "y": 2.8060286492553805
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 5.459753754541682,
+        "y": 2.398461383044747
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.4,
+        "y": 1.9
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 2.4,
+        "y": 3.3
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 0,
+        "y": 3.3
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 1.9
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 1.2,
+        "y": 1.2
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": -1,
+        "y": 1.2
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "N",
+        "h": 2,
+        "q": 0,
+        "x": 7.434692351265305,
+        "y": 0.7029685254290927
+      },
+      {
+        "e": "N",
+        "h": 1,
+        "q": 0,
+        "x": 1.2,
+        "y": 4
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 4,
+        "b": 5,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 4,
+        "b": 6,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 7,
+        "b": 8,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 6,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 9,
+        "b": 10,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 13,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 14,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 14,
+        "b": 15,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 16,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 0,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 13,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 17,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 17,
+        "b": 11,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 15,
+    "o3": 17,
+    "direct_formula_parts": {
+      "sugar": "C5H11NO3",
+      "base": "C5H5N5",
+      "condensation": "H2O"
+    },
+    "formula": "C10H14N6O2",
+    "base": "A",
+    "family": "PMO",
+    "topology": "morpholine-phosphorodiamidate",
+    "allowed_positions": [
+      "five",
+      "internal",
+      "three"
+    ],
+    "notes": "Uncapped free 5-OH / 3-NH chain; six-member ring; mixed topology and commercial end caps unsupported",
+    "phosphorus_topology": "alternative-or-modifier",
+    "5_prime_attachment": {
+      "atom": 15,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "3_prime_attachment": {
+      "atom": 17,
+      "atom_role": "O3'",
+      "element": "N",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "schema_version": "building-block/2",
+    "id": "pA",
+    "assembly_class": "pmo",
+    "attachments": {
+      "upstream": {
+        "atom": 15,
+        "atom_role": "morpholino-OH",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 14,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PMO"
+        ],
+        "internal_phosphorus": [
+          "PMO"
+        ],
+        "terminal_phosphorus": [],
+        "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+        "compatibility_domain": "morpholine-O-N",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      },
+      "downstream": {
+        "atom": 17,
+        "atom_role": "morpholino-NH",
+        "direction": "downstream",
+        "element": "N",
+        "connection_class": "amine",
+        "local_bonds": [
+          {
+            "atom": 10,
+            "order": 1
+          },
+          {
+            "atom": 11,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PMO"
+        ],
+        "internal_phosphorus": [
+          "PMO"
+        ],
+        "terminal_phosphorus": [],
+        "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+        "compatibility_domain": "morpholine-O-N",
+        "unconnected": {
+          "state": "NH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    },
+    "incoming_label": "5′ OH",
+    "outgoing_label": "3′ NH"
+  },
+  "pC": {
+    "atoms": [
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 5.427696090854258,
+        "y": 2.83827426443667
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.230294722874978,
+        "y": 2.8777565599405204
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.5974013679792796,
+        "y": 1.86051770449615
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 4.161909381062861,
+        "y": 0.8037965535479294
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 3.5290160261671617,
+        "y": -0.2134423018964397
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 5.359310749042141,
+        "y": 0.7643142580440789
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 5.992204103937839,
+        "y": 1.7815531134884477
+      },
+      {
+        "e": "N",
+        "h": 2,
+        "q": 0,
+        "x": 7.189605471917122,
+        "y": 1.7420708179845978
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.4,
+        "y": 1.9
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 2.4,
+        "y": 3.3
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 0,
+        "y": 3.3
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 1.9
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 1.2,
+        "y": 1.2
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": -1,
+        "y": 1.2
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "N",
+        "h": 1,
+        "q": 0,
+        "x": 1.2,
+        "y": 4
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 2,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 13,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 13,
+        "b": 14,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 0,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 8,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 15,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 15,
+        "b": 10,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 14,
+    "o3": 15,
+    "direct_formula_parts": {
+      "sugar": "C5H11NO3",
+      "base": "C4H5N3O",
+      "condensation": "H2O"
+    },
+    "formula": "C9H14N4O3",
+    "base": "C",
+    "family": "PMO",
+    "topology": "morpholine-phosphorodiamidate",
+    "allowed_positions": [
+      "five",
+      "internal",
+      "three"
+    ],
+    "notes": "Uncapped free 5-OH / 3-NH chain; six-member ring; mixed topology and commercial end caps unsupported",
+    "phosphorus_topology": "alternative-or-modifier",
+    "5_prime_attachment": {
+      "atom": 14,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "3_prime_attachment": {
+      "atom": 15,
+      "atom_role": "O3'",
+      "element": "N",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "schema_version": "building-block/2",
+    "id": "pC",
+    "assembly_class": "pmo",
+    "attachments": {
+      "upstream": {
+        "atom": 14,
+        "atom_role": "morpholino-OH",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 13,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PMO"
+        ],
+        "internal_phosphorus": [
+          "PMO"
+        ],
+        "terminal_phosphorus": [],
+        "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+        "compatibility_domain": "morpholine-O-N",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      },
+      "downstream": {
+        "atom": 15,
+        "atom_role": "morpholino-NH",
+        "direction": "downstream",
+        "element": "N",
+        "connection_class": "amine",
+        "local_bonds": [
+          {
+            "atom": 9,
+            "order": 1
+          },
+          {
+            "atom": 10,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PMO"
+        ],
+        "internal_phosphorus": [
+          "PMO"
+        ],
+        "terminal_phosphorus": [],
+        "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+        "compatibility_domain": "morpholine-O-N",
+        "unconnected": {
+          "state": "NH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    },
+    "incoming_label": "5′ OH",
+    "outgoing_label": "3′ NH"
+  },
+  "pG": {
+    "atoms": [
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.2692743851127855,
+        "y": 0.8685925376892862
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 5.420271459037835,
+        "y": 1.2010600150654671
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 5.459753754541683,
+        "y": 2.3984613830447468
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 6.37601519750597,
+        "y": 3.170338222853993
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 7.502610870855774,
+        "y": 2.7627709566433603
+      },
+      {
+        "e": "N",
+        "h": 1,
+        "q": 0,
+        "x": 6.165680967120451,
+        "y": 4.349782328873875
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 5.039085293770649,
+        "y": 4.757349595084509
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 4.122823850806364,
+        "y": 3.985472755275262
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 4.333158081191883,
+        "y": 2.8060286492553814
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.59740136797928,
+        "y": 1.86051770449615
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.4,
+        "y": 1.9
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 2.4,
+        "y": 3.3
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 0,
+        "y": 3.3
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 1.9
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 1.2,
+        "y": 1.2
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": -1,
+        "y": 1.2
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "N",
+        "h": 2,
+        "q": 0,
+        "x": 4.828751063385134,
+        "y": 5.93679370110439
+      },
+      {
+        "e": "N",
+        "h": 1,
+        "q": 0,
+        "x": 1.2,
+        "y": 4
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 7,
+        "b": 8,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 9,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 13,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 13,
+        "b": 14,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 13,
+        "b": 15,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 15,
+        "b": 16,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 17,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 0,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 2,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 14,
+        "b": 10,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 18,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 18,
+        "b": 12,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 16,
+    "o3": 18,
+    "direct_formula_parts": {
+      "sugar": "C5H11NO3",
+      "base": "C5H5N5O",
+      "condensation": "H2O"
+    },
+    "formula": "C10H14N6O3",
+    "base": "G",
+    "family": "PMO",
+    "topology": "morpholine-phosphorodiamidate",
+    "allowed_positions": [
+      "five",
+      "internal",
+      "three"
+    ],
+    "notes": "Uncapped free 5-OH / 3-NH chain; six-member ring; mixed topology and commercial end caps unsupported",
+    "phosphorus_topology": "alternative-or-modifier",
+    "5_prime_attachment": {
+      "atom": 16,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "3_prime_attachment": {
+      "atom": 18,
+      "atom_role": "O3'",
+      "element": "N",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "schema_version": "building-block/2",
+    "id": "pG",
+    "assembly_class": "pmo",
+    "attachments": {
+      "upstream": {
+        "atom": 16,
+        "atom_role": "morpholino-OH",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 15,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PMO"
+        ],
+        "internal_phosphorus": [
+          "PMO"
+        ],
+        "terminal_phosphorus": [],
+        "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+        "compatibility_domain": "morpholine-O-N",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      },
+      "downstream": {
+        "atom": 18,
+        "atom_role": "morpholino-NH",
+        "direction": "downstream",
+        "element": "N",
+        "connection_class": "amine",
+        "local_bonds": [
+          {
+            "atom": 11,
+            "order": 1
+          },
+          {
+            "atom": 12,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PMO"
+        ],
+        "internal_phosphorus": [
+          "PMO"
+        ],
+        "terminal_phosphorus": [],
+        "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+        "compatibility_domain": "morpholine-O-N",
+        "unconnected": {
+          "state": "NH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    },
+    "incoming_label": "5′ OH",
+    "outgoing_label": "3′ NH"
+  },
+  "pT": {
+    "atoms": [
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 5.427696090854258,
+        "y": 2.83827426443667
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.230294722874978,
+        "y": 2.8777565599405204
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.5974013679792796,
+        "y": 1.86051770449615
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 4.161909381062861,
+        "y": 0.8037965535479294
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 3.5290160261671617,
+        "y": -0.2134423018964397
+      },
+      {
+        "e": "N",
+        "h": 1,
+        "q": 0,
+        "x": 5.359310749042141,
+        "y": 0.7643142580440789
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 5.992204103937839,
+        "y": 1.7815531134884477
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 7.189605471917122,
+        "y": 1.7420708179845978
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.4,
+        "y": 1.9
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 2.4,
+        "y": 3.3
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 0,
+        "y": 3.3
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 1.9
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 1.2,
+        "y": 1.2
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": -1,
+        "y": 1.2
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "C",
+        "h": 3,
+        "q": 0,
+        "x": 6.527696090854258,
+        "y": 2.23827426443667
+      },
+      {
+        "e": "N",
+        "h": 1,
+        "q": 0,
+        "x": 1.2,
+        "y": 4
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 2,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 13,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 13,
+        "b": 14,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 0,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 8,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 0,
+        "b": 15,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 16,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 16,
+        "b": 10,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 14,
+    "o3": 16,
+    "direct_formula_parts": {
+      "sugar": "C5H11NO3",
+      "base": "C5H6N2O2",
+      "condensation": "H2O"
+    },
+    "formula": "C10H15N3O4",
+    "base": "T",
+    "family": "PMO",
+    "topology": "morpholine-phosphorodiamidate",
+    "allowed_positions": [
+      "five",
+      "internal",
+      "three"
+    ],
+    "notes": "Uncapped free 5-OH / 3-NH chain; six-member ring; mixed topology and commercial end caps unsupported",
+    "phosphorus_topology": "alternative-or-modifier",
+    "5_prime_attachment": {
+      "atom": 14,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "3_prime_attachment": {
+      "atom": 16,
+      "atom_role": "O3'",
+      "element": "N",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "schema_version": "building-block/2",
+    "id": "pT",
+    "assembly_class": "pmo",
+    "attachments": {
+      "upstream": {
+        "atom": 14,
+        "atom_role": "morpholino-OH",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 13,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PMO"
+        ],
+        "internal_phosphorus": [
+          "PMO"
+        ],
+        "terminal_phosphorus": [],
+        "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+        "compatibility_domain": "morpholine-O-N",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      },
+      "downstream": {
+        "atom": 16,
+        "atom_role": "morpholino-NH",
+        "direction": "downstream",
+        "element": "N",
+        "connection_class": "amine",
+        "local_bonds": [
+          {
+            "atom": 9,
+            "order": 1
+          },
+          {
+            "atom": 10,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PMO"
+        ],
+        "internal_phosphorus": [
+          "PMO"
+        ],
+        "terminal_phosphorus": [],
+        "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+        "compatibility_domain": "morpholine-O-N",
+        "unconnected": {
+          "state": "NH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    },
+    "incoming_label": "5′ OH",
+    "outgoing_label": "3′ NH"
+  },
+  "pI": {
+    "atoms": [
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 5.039085293770649,
+        "y": 4.757349595084511
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 4.122823850806363,
+        "y": 3.985472755275263
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 4.333158081191881,
+        "y": 2.8060286492553823
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 5.459753754541683,
+        "y": 2.398461383044748
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 6.376015197505968,
+        "y": 3.1703382228539954
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 7.502610870855772,
+        "y": 2.762770956643362
+      },
+      {
+        "e": "N",
+        "h": 1,
+        "q": 0,
+        "x": 6.165680967120451,
+        "y": 4.349782328873877
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 5.420271459037835,
+        "y": 1.2010600150654689
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.2692743851127855,
+        "y": 0.8685925376892873
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.5974013679792796,
+        "y": 1.860517704496151
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.4,
+        "y": 1.9
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 2.4,
+        "y": 3.3
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 0,
+        "y": 3.3
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 1.9
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 1.2,
+        "y": 1.2
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": -1,
+        "y": 1.2
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "N",
+        "h": 1,
+        "q": 0,
+        "x": 1.2,
+        "y": 4
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 4,
+        "b": 5,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 4,
+        "b": 6,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 7,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 7,
+        "b": 8,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 9,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 13,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 13,
+        "b": 14,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 13,
+        "b": 15,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 15,
+        "b": 16,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 0,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 14,
+        "b": 10,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 17,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 17,
+        "b": 12,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 16,
+    "o3": 17,
+    "direct_formula_parts": {
+      "sugar": "C5H11NO3",
+      "base": "C5H4N4O",
+      "condensation": "H2O"
+    },
+    "formula": "C10H13N5O3",
+    "base": "I",
+    "family": "PMO",
+    "topology": "morpholine-phosphorodiamidate",
+    "allowed_positions": [
+      "five",
+      "internal",
+      "three"
+    ],
+    "notes": "Uncapped free 5-OH / 3-NH chain; six-member ring; mixed topology and commercial end caps unsupported",
+    "phosphorus_topology": "alternative-or-modifier",
+    "5_prime_attachment": {
+      "atom": 16,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "3_prime_attachment": {
+      "atom": 17,
+      "atom_role": "O3'",
+      "element": "N",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "schema_version": "building-block/2",
+    "id": "pI",
+    "assembly_class": "pmo",
+    "attachments": {
+      "upstream": {
+        "atom": 16,
+        "atom_role": "morpholino-OH",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 15,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PMO"
+        ],
+        "internal_phosphorus": [
+          "PMO"
+        ],
+        "terminal_phosphorus": [],
+        "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+        "compatibility_domain": "morpholine-O-N",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      },
+      "downstream": {
+        "atom": 17,
+        "atom_role": "morpholino-NH",
+        "direction": "downstream",
+        "element": "N",
+        "connection_class": "amine",
+        "local_bonds": [
+          {
+            "atom": 11,
+            "order": 1
+          },
+          {
+            "atom": 12,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PMO"
+        ],
+        "internal_phosphorus": [
+          "PMO"
+        ],
+        "terminal_phosphorus": [],
+        "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+        "compatibility_domain": "morpholine-O-N",
+        "unconnected": {
+          "state": "NH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    },
+    "incoming_label": "5′ OH",
+    "outgoing_label": "3′ NH"
+  }
+}

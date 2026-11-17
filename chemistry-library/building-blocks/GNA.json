@@ -1,0 +1,1628 @@
+{
+  "Agn": {
+    "atoms": [
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 0,
+        "y": 1.3
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 1.2,
+        "y": 2
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 3.2
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 2.5,
+        "y": 1.3
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.8,
+        "y": 0.8
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.491679287988172,
+        "y": 1.778217077271234
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 5.635759668323689,
+        "y": 1.4226766843082932
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 5.651160941244772,
+        "y": 0.22472355981246606
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 4.516599071044498,
+        "y": -0.1601117950921478
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 4.282595329566157,
+        "y": -1.3350888743030738
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 5.18315345828809,
+        "y": -2.125230598609388
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 6.3177153284883625,
+        "y": -1.7403952437047745
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 6.551719069966705,
+        "y": -0.5654181644938475
+      },
+      {
+        "e": "N",
+        "h": 2,
+        "q": 0,
+        "x": 7.686280940166978,
+        "y": -0.180582809589233
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 2,
+        "b": 4,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 13,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 13,
+        "b": 8,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 10,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 13,
+        "b": 14,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 7,
+        "b": 8,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 4,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 0,
+    "o3": 3,
+    "direct_formula_parts": {
+      "sugar": "C3H8O3",
+      "base": "C5H5N5",
+      "condensation": "H2O"
+    },
+    "formula": "C8H11N5O2",
+    "base": "A",
+    "family": "GNA",
+    "topology": "S-glycerol-phosphate",
+    "allowed_positions": [
+      "five",
+      "internal",
+      "three"
+    ],
+    "notes": "S stereocentre; primary OH is 5-equivalent, secondary OH is 3-equivalent",
+    "phosphorus_topology": "alternative-or-modifier",
+    "5_prime_attachment": {
+      "atom": 0,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "3_prime_attachment": {
+      "atom": 3,
+      "atom_role": "O3'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "schema_version": "building-block/2",
+    "id": "Agn",
+    "assembly_class": "gna",
+    "attachments": {
+      "upstream": {
+        "atom": 0,
+        "atom_role": "O3",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 1,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "glycerol-O3-O2",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      },
+      "downstream": {
+        "atom": 3,
+        "atom_role": "O2",
+        "direction": "downstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 2,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "glycerol-O3-O2",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    },
+    "incoming_label": "3′ side",
+    "outgoing_label": "2′ side"
+  },
+  "Cgn": {
+    "atoms": [
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 0,
+        "y": 1.3
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 1.2,
+        "y": 2
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 3.2
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 2.5,
+        "y": 1.3
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.8,
+        "y": 0.8
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 3.9952751898166046,
+        "y": -0.3820306628590453
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 5.116581366813,
+        "y": -0.8039327191785598
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 6.042612353992788,
+        "y": -0.04380411263903029
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 5.847337164176184,
+        "y": 1.1382265502200162
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.72603098717979,
+        "y": 1.5601286065395308
+      },
+      {
+        "e": "N",
+        "h": 2,
+        "q": 0,
+        "x": 7.163918530989185,
+        "y": -0.4657061689585451
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 3.0692442026368143,
+        "y": -1.1421592693985745
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 2,
+        "b": 4,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 10,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 12,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 7,
+        "b": 8,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 11,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 4,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 0,
+    "o3": 3,
+    "direct_formula_parts": {
+      "sugar": "C3H8O3",
+      "base": "C4H5N3O",
+      "condensation": "H2O"
+    },
+    "formula": "C7H11N3O3",
+    "base": "C",
+    "family": "GNA",
+    "topology": "S-glycerol-phosphate",
+    "allowed_positions": [
+      "five",
+      "internal",
+      "three"
+    ],
+    "notes": "S stereocentre; primary OH is 5-equivalent, secondary OH is 3-equivalent",
+    "phosphorus_topology": "alternative-or-modifier",
+    "5_prime_attachment": {
+      "atom": 0,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "3_prime_attachment": {
+      "atom": 3,
+      "atom_role": "O3'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "schema_version": "building-block/2",
+    "id": "Cgn",
+    "assembly_class": "gna",
+    "attachments": {
+      "upstream": {
+        "atom": 0,
+        "atom_role": "O3",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 1,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "glycerol-O3-O2",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      },
+      "downstream": {
+        "atom": 3,
+        "atom_role": "O2",
+        "direction": "downstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 2,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "glycerol-O3-O2",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    },
+    "incoming_label": "3′ side",
+    "outgoing_label": "2′ side"
+  },
+  "Ggn": {
+    "atoms": [
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 0,
+        "y": 1.3
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 1.2,
+        "y": 2
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 3.2
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 2.5,
+        "y": 1.3
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.8,
+        "y": 0.8
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 3.108568300023699,
+        "y": -0.17839209520763616
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.825410331920353,
+        "y": -1.1383225036244036
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 4.959874772173322,
+        "y": -0.7532000276528976
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 4.944170323381128,
+        "y": 0.4447491607457743
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 5.97377252858123,
+        "y": 1.0573242065515835
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 7.0190791825735275,
+        "y": 0.47195006395872197
+      },
+      {
+        "e": "N",
+        "h": 2,
+        "q": 0,
+        "x": 8.04868138777363,
+        "y": 1.0845251097645288
+      },
+      {
+        "e": "N",
+        "h": 1,
+        "q": 0,
+        "x": 7.034783631365723,
+        "y": -0.7259991244399516
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 6.00518142616562,
+        "y": -1.338574170245761
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 6.020885874957817,
+        "y": -2.5365233586444353
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 2,
+        "b": 4,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 7,
+        "b": 8,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 14,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 14,
+        "b": 15,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 14,
+        "b": 13,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 13,
+        "b": 11,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 10,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 8,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 4,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 0,
+    "o3": 3,
+    "direct_formula_parts": {
+      "sugar": "C3H8O3",
+      "base": "C5H5N5O",
+      "condensation": "H2O"
+    },
+    "formula": "C8H11N5O3",
+    "base": "G",
+    "family": "GNA",
+    "topology": "S-glycerol-phosphate",
+    "allowed_positions": [
+      "five",
+      "internal",
+      "three"
+    ],
+    "notes": "S stereocentre; primary OH is 5-equivalent, secondary OH is 3-equivalent",
+    "phosphorus_topology": "alternative-or-modifier",
+    "5_prime_attachment": {
+      "atom": 0,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "3_prime_attachment": {
+      "atom": 3,
+      "atom_role": "O3'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "schema_version": "building-block/2",
+    "id": "Ggn",
+    "assembly_class": "gna",
+    "attachments": {
+      "upstream": {
+        "atom": 0,
+        "atom_role": "O3",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 1,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "glycerol-O3-O2",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      },
+      "downstream": {
+        "atom": 3,
+        "atom_role": "O2",
+        "direction": "downstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 2,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "glycerol-O3-O2",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    },
+    "incoming_label": "3′ side",
+    "outgoing_label": "2′ side"
+  },
+  "Tgn": {
+    "atoms": [
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 0,
+        "y": 1.3
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 1.2,
+        "y": 2
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 3.2
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 2.5,
+        "y": 1.3
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.8,
+        "y": 0.8
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 3.9076085268480756,
+        "y": -0.3932096599703222
+      },
+      {
+        "e": "N",
+        "h": 1,
+        "q": 0,
+        "x": 4.994762667847405,
+        "y": -0.8966227720412296
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 5.974308281998656,
+        "y": -0.20682622414181578
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 5.866699755150583,
+        "y": 0.9863834358285076
+      },
+      {
+        "e": "C",
+        "h": 3,
+        "q": 0,
+        "x": 6.64553227343929,
+        "y": 0.004843875517223539
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.779545614151253,
+        "y": 1.4897965478994148
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 7.061462422997987,
+        "y": -0.7102393362127238
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.9280629126968227,
+        "y": -1.0830062078697356
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 2,
+        "b": 4,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 11,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 13,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 7,
+        "b": 8,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 12,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 10,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 4,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 0,
+    "o3": 3,
+    "direct_formula_parts": {
+      "sugar": "C3H8O3",
+      "base": "C5H6N2O2",
+      "condensation": "H2O"
+    },
+    "formula": "C8H12N2O4",
+    "base": "T",
+    "family": "GNA",
+    "topology": "S-glycerol-phosphate",
+    "allowed_positions": [
+      "five",
+      "internal",
+      "three"
+    ],
+    "notes": "S stereocentre; primary OH is 5-equivalent, secondary OH is 3-equivalent",
+    "phosphorus_topology": "alternative-or-modifier",
+    "5_prime_attachment": {
+      "atom": 0,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "3_prime_attachment": {
+      "atom": 3,
+      "atom_role": "O3'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "schema_version": "building-block/2",
+    "id": "Tgn",
+    "assembly_class": "gna",
+    "attachments": {
+      "upstream": {
+        "atom": 0,
+        "atom_role": "O3",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 1,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "glycerol-O3-O2",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      },
+      "downstream": {
+        "atom": 3,
+        "atom_role": "O2",
+        "direction": "downstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 2,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "glycerol-O3-O2",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    },
+    "incoming_label": "3′ side",
+    "outgoing_label": "2′ side"
+  },
+  "Ugn": {
+    "atoms": [
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 0,
+        "y": 1.3
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 1.2,
+        "y": 2
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 3.2
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 2.5,
+        "y": 1.3
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.8,
+        "y": 0.8
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 3.9076085268480756,
+        "y": -0.3932096599703222
+      },
+      {
+        "e": "N",
+        "h": 1,
+        "q": 0,
+        "x": 4.994762667847405,
+        "y": -0.8966227720412296
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 5.974308281998656,
+        "y": -0.20682622414181578
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 5.866699755150583,
+        "y": 0.9863834358285076
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.779545614151253,
+        "y": 1.4897965478994148
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 7.061462422997987,
+        "y": -0.7102393362127238
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.9280629126968227,
+        "y": -1.0830062078697356
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 2,
+        "b": 4,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 10,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 12,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 7,
+        "b": 8,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 11,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 4,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 0,
+    "o3": 3,
+    "direct_formula_parts": {
+      "sugar": "C3H8O3",
+      "base": "C4H4N2O2",
+      "condensation": "H2O"
+    },
+    "formula": "C7H10N2O4",
+    "base": "U",
+    "family": "GNA",
+    "topology": "S-glycerol-phosphate",
+    "allowed_positions": [
+      "five",
+      "internal",
+      "three"
+    ],
+    "notes": "S stereocentre; primary OH is 5-equivalent, secondary OH is 3-equivalent",
+    "phosphorus_topology": "alternative-or-modifier",
+    "5_prime_attachment": {
+      "atom": 0,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "3_prime_attachment": {
+      "atom": 3,
+      "atom_role": "O3'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "schema_version": "building-block/2",
+    "id": "Ugn",
+    "assembly_class": "gna",
+    "attachments": {
+      "upstream": {
+        "atom": 0,
+        "atom_role": "O3",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 1,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "glycerol-O3-O2",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      },
+      "downstream": {
+        "atom": 3,
+        "atom_role": "O2",
+        "direction": "downstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 2,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "glycerol-O3-O2",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    },
+    "incoming_label": "3′ side",
+    "outgoing_label": "2′ side",
+    "chemistry_source": "S-GNA uracil assembly scaffold from audited Tgn topology and uracil C5-H; https://patents.google.com/patent/WO2025067544A1/en ; https://pmc.ncbi.nlm.nih.gov/articles/PMC10019370/"
+  }
+}

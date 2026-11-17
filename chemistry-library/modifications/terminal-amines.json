@@ -1,0 +1,321 @@
+{
+  "{C3N}": {
+    "atoms": [
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 1.1,
+        "y": 0.7
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 2.2,
+        "y": 0
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 3.3000000000000003,
+        "y": 0.7
+      },
+      {
+        "e": "N",
+        "h": 2,
+        "q": 0,
+        "x": 4.4,
+        "y": 0
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 0,
+    "o3": null,
+    "formula": "C3H9NO",
+    "base": null,
+    "family": "amino",
+    "topology": "ribose-phosphate",
+    "allowed_positions": [
+      "five",
+      "three"
+    ],
+    "phosphorus_topology": "alternative-or-modifier",
+    "5_prime_attachment": {
+      "atom": 0,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "3_prime_attachment": {
+      "atom": null,
+      "atom_role": "O3'",
+      "element": null,
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "schema_version": "building-block/2",
+    "id": "{C3N}",
+    "assembly_class": "legacy-modifier",
+    "attachments": {
+      "upstream": {
+        "atom": 0,
+        "atom_role": "O5'",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 1,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [],
+        "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+        "reversible": true,
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    },
+    "terminal_only": true
+  },
+  "{C6N}": {
+    "atoms": [
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 1.1,
+        "y": 0.7
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 2.2,
+        "y": 0
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 3.3000000000000003,
+        "y": 0.7
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 4.4,
+        "y": 0
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 5.5,
+        "y": 0.7
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": 6.6000000000000005,
+        "y": 0
+      },
+      {
+        "e": "N",
+        "h": 2,
+        "q": 0,
+        "x": 7.700000000000001,
+        "y": 0.7
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 4,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 0,
+    "o3": null,
+    "formula": "C6H15NO",
+    "base": null,
+    "family": "amino",
+    "topology": "ribose-phosphate",
+    "allowed_positions": [
+      "five",
+      "three"
+    ],
+    "phosphorus_topology": "alternative-or-modifier",
+    "5_prime_attachment": {
+      "atom": 0,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "3_prime_attachment": {
+      "atom": null,
+      "atom_role": "O3'",
+      "element": null,
+      "standard": false,
+      "terminal_phosphorus": [],
+      "internal_phosphorus": [],
+      "reason": "No validated standard terminal attachment contract; alternative topology or modifier requires a dedicated definition"
+    },
+    "schema_version": "building-block/2",
+    "id": "{C6N}",
+    "assembly_class": "legacy-modifier",
+    "attachments": {
+      "upstream": {
+        "atom": 0,
+        "atom_role": "O5'",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 1,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [],
+        "reason": "Terminal chemistry has no validated contract for this topology/modifier",
+        "reversible": true,
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    },
+    "terminal_only": true
+  }
+}

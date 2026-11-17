@@ -1,0 +1,10 @@
+{
+  "schema_version": "reaction-definition/2",
+  "id": "disulfide-reduction/2",
+  "name": "Disulfide Reduction",
+  "roles": [
+    "disulfide"
+  ],
+  "rule": "disulfide-reduction/1",
+  "input_count": 1
+}

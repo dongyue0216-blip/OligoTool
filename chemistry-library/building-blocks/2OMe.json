@@ -1,0 +1,2958 @@
+{
+  "mA": {
+    "atoms": [
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 5.213505983610372,
+        "y": -0.6202072763552935
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 6.36450305753542,
+        "y": -0.28773979897911234
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 6.652076313158043,
+        "y": 0.8752866454096252
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 5.788652494855618,
+        "y": 1.7058456124221817
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 4.63765542093057,
+        "y": 1.3733781350460006
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 4.3500821653079464,
+        "y": 0.21035169065726336
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.965782403797064,
+        "y": 2.3653033018528644
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.701539117009665,
+        "y": 3.3108142466120953
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 5.828134790359467,
+        "y": 2.9032469804014607
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.768381035817786,
+        "y": 2.4047855973567143
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.0965080186842795,
+        "y": 3.3967107641635774
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.9455109447592316,
+        "y": 3.064243286787398
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.906028649255382,
+        "y": 1.8668419188081178
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.0326243226051837,
+        "y": 1.4592746525974836
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": -0.08589651755148195,
+        "y": 1.194968901674613
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 3.8
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.5040752848949146,
+        "y": 4.523306437513378
+      },
+      {
+        "e": "N",
+        "h": 2,
+        "q": 0,
+        "x": 7.8030733870830895,
+        "y": 1.2077541227858075
+      },
+      {
+        "e": "C",
+        "h": 3,
+        "q": 0,
+        "x": 1.7321984450856682,
+        "y": 5.439567880477664
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 4,
+        "b": 5,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 4,
+        "b": 6,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 7,
+        "b": 8,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 6,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 9,
+        "b": 10,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 13,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 14,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 14,
+        "b": 15,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 16,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 10,
+        "b": 17,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 2,
+        "b": 18,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 0,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 13,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 17,
+        "b": 19,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 15,
+    "o3": 16,
+    "formula": "C11H15N5O4",
+    "base": "A",
+    "family": "OMe",
+    "topology": "ribose-phosphate",
+    "allowed_positions": [
+      "five",
+      "internal",
+      "three"
+    ],
+    "direct_formula_parts": {
+      "sugar": "C6H12O5",
+      "base": "C5H5N5",
+      "condensation": "H2O"
+    },
+    "phosphorus_topology": "standard-5-to-3",
+    "5_prime_attachment": {
+      "atom": 15,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": true,
+      "terminal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "internal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "reason": null
+    },
+    "3_prime_attachment": {
+      "atom": 16,
+      "atom_role": "O3'",
+      "element": "O",
+      "standard": true,
+      "terminal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "internal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "reason": null
+    },
+    "schema_version": "building-block/2",
+    "id": "mA",
+    "assembly_class": "o-phosphorus",
+    "attachments": {
+      "upstream": {
+        "atom": 15,
+        "atom_role": "O5'",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 14,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      },
+      "downstream": {
+        "atom": 16,
+        "atom_role": "O3'",
+        "direction": "downstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 11,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    }
+  },
+  "mC": {
+    "atoms": [
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 5.796077126672041,
+        "y": 3.343059861793385
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.598675758692762,
+        "y": 3.3825421572972356
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.9657824037970633,
+        "y": 2.3653033018528653
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 4.530290416880646,
+        "y": 1.3085821509046454
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 3.8973970619849463,
+        "y": 0.291343295460276
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 5.727691784859925,
+        "y": 1.269099855400795
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 6.3605851397556235,
+        "y": 2.2863387108451643
+      },
+      {
+        "e": "N",
+        "h": 2,
+        "q": 0,
+        "x": 7.5579865077349035,
+        "y": 2.246856415341314
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.7683810358177845,
+        "y": 2.4047855973567156
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.0965080186842786,
+        "y": 3.396710764163578
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.9455109447592311,
+        "y": 3.064243286787399
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.9060286492553815,
+        "y": 1.866841918808119
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.032624322605183,
+        "y": 1.4592746525974842
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": -0.0858965175514819,
+        "y": 1.1949689016746128
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": -2.438525926567563e-16,
+        "y": 3.8
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.504075284894913,
+        "y": 4.52330643751338
+      },
+      {
+        "e": "C",
+        "h": 3,
+        "q": 0,
+        "x": 1.7321984450856664,
+        "y": 5.439567880477665
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 2,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 10,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 13,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 13,
+        "b": 14,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 15,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 9,
+        "b": 16,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 6,
+        "b": 0,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 8,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 16,
+        "b": 17,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 14,
+    "o3": 15,
+    "formula": "C10H15N3O5",
+    "base": "C",
+    "family": "OMe",
+    "topology": "ribose-phosphate",
+    "allowed_positions": [
+      "five",
+      "internal",
+      "three"
+    ],
+    "direct_formula_parts": {
+      "sugar": "C6H12O5",
+      "base": "C4H5N3O",
+      "condensation": "H2O"
+    },
+    "phosphorus_topology": "standard-5-to-3",
+    "5_prime_attachment": {
+      "atom": 14,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": true,
+      "terminal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "internal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "reason": null
+    },
+    "3_prime_attachment": {
+      "atom": 15,
+      "atom_role": "O3'",
+      "element": "O",
+      "standard": true,
+      "terminal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "internal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "reason": null
+    },
+    "schema_version": "building-block/2",
+    "id": "mC",
+    "assembly_class": "o-phosphorus",
+    "attachments": {
+      "upstream": {
+        "atom": 14,
+        "atom_role": "O5'",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 13,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      },
+      "downstream": {
+        "atom": 15,
+        "atom_role": "O3'",
+        "direction": "downstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 10,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    }
+  },
+  "mG": {
+    "atoms": [
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.637655420930569,
+        "y": 1.3733781350460006
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 5.788652494855618,
+        "y": 1.705845612422181
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 5.828134790359468,
+        "y": 2.903246980401461
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 6.744396233323753,
+        "y": 3.6751238202107075
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 7.870991906673556,
+        "y": 3.2675565540000737
+      },
+      {
+        "e": "N",
+        "h": 1,
+        "q": 0,
+        "x": 6.534062002938238,
+        "y": 4.8545679262305885
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 5.407466329588434,
+        "y": 5.262135192441224
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 4.49120488662415,
+        "y": 4.490258352631977
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 4.701539117009666,
+        "y": 3.310814246612096
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.965782403797064,
+        "y": 2.365303301852865
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.768381035817785,
+        "y": 2.4047855973567147
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.0965080186842795,
+        "y": 3.3967107641635783
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.9455109447592309,
+        "y": 3.064243286787399
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.9060286492553813,
+        "y": 1.8668419188081187
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.0326243226051828,
+        "y": 1.4592746525974838
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": -0.08589651755148163,
+        "y": 1.194968901674614
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": -7.093893604560186e-16,
+        "y": 3.8000000000000007
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.5040752848949146,
+        "y": 4.52330643751338
+      },
+      {
+        "e": "N",
+        "h": 2,
+        "q": 0,
+        "x": 5.197132099202917,
+        "y": 6.441579298461104
+      },
+      {
+        "e": "C",
+        "h": 3,
+        "q": 0,
+        "x": 1.732198445085668,
+        "y": 5.439567880477667
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 7,
+        "b": 8,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 9,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 13,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 13,
+        "b": 14,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 13,
+        "b": 15,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 15,
+        "b": 16,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 17,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 11,
+        "b": 18,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 6,
+        "b": 19,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 0,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 2,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 14,
+        "b": 10,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 18,
+        "b": 20,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 16,
+    "o3": 17,
+    "formula": "C11H15N5O5",
+    "base": "G",
+    "family": "OMe",
+    "topology": "ribose-phosphate",
+    "allowed_positions": [
+      "five",
+      "internal",
+      "three"
+    ],
+    "direct_formula_parts": {
+      "sugar": "C6H12O5",
+      "base": "C5H5N5O",
+      "condensation": "H2O"
+    },
+    "phosphorus_topology": "standard-5-to-3",
+    "5_prime_attachment": {
+      "atom": 16,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": true,
+      "terminal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "internal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "reason": null
+    },
+    "3_prime_attachment": {
+      "atom": 17,
+      "atom_role": "O3'",
+      "element": "O",
+      "standard": true,
+      "terminal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "internal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "reason": null
+    },
+    "schema_version": "building-block/2",
+    "id": "mG",
+    "assembly_class": "o-phosphorus",
+    "attachments": {
+      "upstream": {
+        "atom": 16,
+        "atom_role": "O5'",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 15,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      },
+      "downstream": {
+        "atom": 17,
+        "atom_role": "O3'",
+        "direction": "downstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 12,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    }
+  },
+  "mU": {
+    "atoms": [
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 5.796077126672041,
+        "y": 3.343059861793385
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.598675758692762,
+        "y": 3.3825421572972356
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.9657824037970633,
+        "y": 2.3653033018528653
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 4.530290416880646,
+        "y": 1.3085821509046454
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 3.8973970619849463,
+        "y": 0.291343295460276
+      },
+      {
+        "e": "N",
+        "h": 1,
+        "q": 0,
+        "x": 5.727691784859925,
+        "y": 1.269099855400795
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 6.3605851397556235,
+        "y": 2.2863387108451643
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 7.5579865077349035,
+        "y": 2.246856415341314
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.7683810358177845,
+        "y": 2.4047855973567156
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.0965080186842786,
+        "y": 3.396710764163578
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.9455109447592311,
+        "y": 3.064243286787399
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.9060286492553815,
+        "y": 1.866841918808119
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.032624322605183,
+        "y": 1.4592746525974842
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": -0.0858965175514819,
+        "y": 1.1949689016746128
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": -2.438525926567563e-16,
+        "y": 3.8
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.504075284894913,
+        "y": 4.52330643751338
+      },
+      {
+        "e": "C",
+        "h": 3,
+        "q": 0,
+        "x": 1.7321984450856664,
+        "y": 5.439567880477665
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 2,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 10,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 13,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 13,
+        "b": 14,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 15,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 9,
+        "b": 16,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 6,
+        "b": 0,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 8,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 16,
+        "b": 17,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 14,
+    "o3": 15,
+    "formula": "C10H14N2O6",
+    "base": "U",
+    "family": "OMe",
+    "topology": "ribose-phosphate",
+    "allowed_positions": [
+      "five",
+      "internal",
+      "three"
+    ],
+    "direct_formula_parts": {
+      "sugar": "C6H12O5",
+      "base": "C4H4N2O2",
+      "condensation": "H2O"
+    },
+    "phosphorus_topology": "standard-5-to-3",
+    "5_prime_attachment": {
+      "atom": 14,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": true,
+      "terminal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "internal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "reason": null
+    },
+    "3_prime_attachment": {
+      "atom": 15,
+      "atom_role": "O3'",
+      "element": "O",
+      "standard": true,
+      "terminal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "internal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "reason": null
+    },
+    "schema_version": "building-block/2",
+    "id": "mU",
+    "assembly_class": "o-phosphorus",
+    "attachments": {
+      "upstream": {
+        "atom": 14,
+        "atom_role": "O5'",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 13,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      },
+      "downstream": {
+        "atom": 15,
+        "atom_role": "O3'",
+        "direction": "downstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 10,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    }
+  },
+  "mT": {
+    "atoms": [
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 5.796077126672041,
+        "y": 3.343059861793385
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.598675758692762,
+        "y": 3.3825421572972356
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.9657824037970633,
+        "y": 2.3653033018528653
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 4.530290416880646,
+        "y": 1.3085821509046454
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 3.8973970619849463,
+        "y": 0.291343295460276
+      },
+      {
+        "e": "N",
+        "h": 1,
+        "q": 0,
+        "x": 5.727691784859925,
+        "y": 1.269099855400795
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 6.3605851397556235,
+        "y": 2.2863387108451643
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 7.5579865077349035,
+        "y": 2.246856415341314
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.7683810358177845,
+        "y": 2.4047855973567156
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.0965080186842786,
+        "y": 3.396710764163578
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.9455109447592311,
+        "y": 3.064243286787399
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.9060286492553815,
+        "y": 1.866841918808119
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.032624322605183,
+        "y": 1.4592746525974842
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": -0.0858965175514819,
+        "y": 1.1949689016746128
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": -2.438525926567563e-16,
+        "y": 3.8
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.504075284894913,
+        "y": 4.52330643751338
+      },
+      {
+        "e": "C",
+        "h": 3,
+        "q": 0,
+        "x": 1.7321984450856664,
+        "y": 5.439567880477665
+      },
+      {
+        "e": "C",
+        "h": 3,
+        "q": 0,
+        "x": 6.896077126672042,
+        "y": 2.743059861793385
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 2,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 10,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 13,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 13,
+        "b": 14,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 15,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 9,
+        "b": 16,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 6,
+        "b": 0,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 8,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 16,
+        "b": 17,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 0,
+        "b": 18,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 14,
+    "o3": 15,
+    "formula": "C11H16N2O6",
+    "base": "T",
+    "family": "OMe",
+    "topology": "ribose-phosphate",
+    "allowed_positions": [
+      "five",
+      "internal",
+      "three"
+    ],
+    "direct_formula_parts": {
+      "sugar": "C6H12O5",
+      "base": "C5H6N2O2",
+      "condensation": "H2O"
+    },
+    "phosphorus_topology": "standard-5-to-3",
+    "5_prime_attachment": {
+      "atom": 14,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": true,
+      "terminal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "internal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "reason": null
+    },
+    "3_prime_attachment": {
+      "atom": 15,
+      "atom_role": "O3'",
+      "element": "O",
+      "standard": true,
+      "terminal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "internal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "reason": null
+    },
+    "schema_version": "building-block/2",
+    "id": "mT",
+    "assembly_class": "o-phosphorus",
+    "attachments": {
+      "upstream": {
+        "atom": 14,
+        "atom_role": "O5'",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 13,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      },
+      "downstream": {
+        "atom": 15,
+        "atom_role": "O3'",
+        "direction": "downstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 10,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    }
+  },
+  "mI": {
+    "atoms": [
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 5.213505983610372,
+        "y": -0.6202072763552935
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 6.36450305753542,
+        "y": -0.28773979897911234
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 6.652076313158043,
+        "y": 0.8752866454096252
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 5.788652494855618,
+        "y": 1.7058456124221817
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 4.63765542093057,
+        "y": 1.3733781350460006
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 4.3500821653079464,
+        "y": 0.21035169065726336
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.965782403797064,
+        "y": 2.3653033018528644
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.701539117009665,
+        "y": 3.3108142466120953
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 5.828134790359467,
+        "y": 2.9032469804014607
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.768381035817786,
+        "y": 2.4047855973567143
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.0965080186842795,
+        "y": 3.3967107641635774
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.9455109447592316,
+        "y": 3.064243286787398
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.906028649255382,
+        "y": 1.8668419188081178
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.0326243226051837,
+        "y": 1.4592746525974836
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": -0.08589651755148195,
+        "y": 1.194968901674613
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 3.8
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.5040752848949146,
+        "y": 4.523306437513378
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 7.8030733870830895,
+        "y": 1.2077541227858075
+      },
+      {
+        "e": "C",
+        "h": 3,
+        "q": 0,
+        "x": 1.7321984450856682,
+        "y": 5.439567880477664
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 4,
+        "b": 5,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 4,
+        "b": 6,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 7,
+        "b": 8,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 6,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 9,
+        "b": 10,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 13,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 14,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 14,
+        "b": 15,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 16,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 10,
+        "b": 17,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 2,
+        "b": 18,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 0,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 13,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 17,
+        "b": 19,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 15,
+    "o3": 16,
+    "formula": "C11H14N4O5",
+    "base": "I",
+    "family": "OMe",
+    "topology": "ribose-phosphate",
+    "allowed_positions": [
+      "five",
+      "internal",
+      "three"
+    ],
+    "direct_formula_parts": {
+      "sugar": "C6H12O5",
+      "base": "C5H4N4O",
+      "condensation": "H2O"
+    },
+    "phosphorus_topology": "standard-5-to-3",
+    "5_prime_attachment": {
+      "atom": 15,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": true,
+      "terminal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "internal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "reason": null
+    },
+    "3_prime_attachment": {
+      "atom": 16,
+      "atom_role": "O3'",
+      "element": "O",
+      "standard": true,
+      "terminal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "internal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "reason": null
+    },
+    "schema_version": "building-block/2",
+    "id": "mI",
+    "assembly_class": "o-phosphorus",
+    "attachments": {
+      "upstream": {
+        "atom": 15,
+        "atom_role": "O5'",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 14,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      },
+      "downstream": {
+        "atom": 16,
+        "atom_role": "O3'",
+        "direction": "downstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 11,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    }
+  },
+  "mCMe": {
+    "atoms": [
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 5.796077126672041,
+        "y": 3.343059861793385
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 4.598675758692762,
+        "y": 3.3825421572972356
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 3.9657824037970633,
+        "y": 2.3653033018528653
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 4.530290416880646,
+        "y": 1.3085821509046454
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 3.8973970619849463,
+        "y": 0.291343295460276
+      },
+      {
+        "e": "N",
+        "h": 0,
+        "q": 0,
+        "x": 5.727691784859925,
+        "y": 1.269099855400795
+      },
+      {
+        "e": "C",
+        "h": 0,
+        "q": 0,
+        "x": 6.3605851397556235,
+        "y": 2.2863387108451643
+      },
+      {
+        "e": "N",
+        "h": 2,
+        "q": 0,
+        "x": 7.5579865077349035,
+        "y": 2.246856415341314
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.7683810358177845,
+        "y": 2.4047855973567156
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 2.0965080186842786,
+        "y": 3.396710764163578
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.9455109447592311,
+        "y": 3.064243286787399
+      },
+      {
+        "e": "C",
+        "h": 1,
+        "q": 0,
+        "x": 0.9060286492553815,
+        "y": 1.866841918808119
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.032624322605183,
+        "y": 1.4592746525974842
+      },
+      {
+        "e": "C",
+        "h": 2,
+        "q": 0,
+        "x": -0.0858965175514819,
+        "y": 1.1949689016746128
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "e": "O",
+        "h": 1,
+        "q": 0,
+        "x": -2.438525926567563e-16,
+        "y": 3.8
+      },
+      {
+        "e": "O",
+        "h": 0,
+        "q": 0,
+        "x": 2.504075284894913,
+        "y": 4.52330643751338
+      },
+      {
+        "e": "C",
+        "h": 3,
+        "q": 0,
+        "x": 1.7321984450856664,
+        "y": 5.439567880477665
+      },
+      {
+        "e": "C",
+        "h": 3,
+        "q": 0,
+        "x": 6.896077126672042,
+        "y": 2.743059861793385
+      }
+    ],
+    "bonds": [
+      {
+        "a": 0,
+        "b": 1,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 3,
+        "b": 5,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "o": 2,
+        "s": 0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 8,
+        "b": 2,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 9,
+        "b": 10,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 11,
+        "b": 13,
+        "o": 1,
+        "s": 1
+      },
+      {
+        "a": 13,
+        "b": 14,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 10,
+        "b": 15,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 9,
+        "b": 16,
+        "o": 1,
+        "s": 6
+      },
+      {
+        "a": 6,
+        "b": 0,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 12,
+        "b": 8,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 16,
+        "b": 17,
+        "o": 1,
+        "s": 0
+      },
+      {
+        "a": 0,
+        "b": 18,
+        "o": 1,
+        "s": 0
+      }
+    ],
+    "o5": 14,
+    "o3": 15,
+    "formula": "C11H17N3O5",
+    "base": "CMe",
+    "family": "OMe",
+    "topology": "ribose-phosphate",
+    "allowed_positions": [
+      "five",
+      "internal",
+      "three"
+    ],
+    "direct_formula_parts": {
+      "sugar": "C6H12O5",
+      "base": "C5H7N3O",
+      "condensation": "H2O"
+    },
+    "phosphorus_topology": "standard-5-to-3",
+    "5_prime_attachment": {
+      "atom": 14,
+      "atom_role": "O5'",
+      "element": "O",
+      "standard": true,
+      "terminal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "internal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "reason": null
+    },
+    "3_prime_attachment": {
+      "atom": 15,
+      "atom_role": "O3'",
+      "element": "O",
+      "standard": true,
+      "terminal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "internal_phosphorus": [
+        "PO",
+        "PS",
+        "PS2",
+        "Me-P",
+        "PN(dmi)",
+        "MsPA"
+      ],
+      "reason": null
+    },
+    "schema_version": "building-block/2",
+    "id": "mCMe",
+    "assembly_class": "o-phosphorus",
+    "attachments": {
+      "upstream": {
+        "atom": 14,
+        "atom_role": "O5'",
+        "direction": "upstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 13,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      },
+      "downstream": {
+        "atom": 15,
+        "atom_role": "O3'",
+        "direction": "downstream",
+        "element": "O",
+        "connection_class": "alcohol",
+        "local_bonds": [
+          {
+            "atom": 10,
+            "order": 1
+          }
+        ],
+        "allowed_linkage_classes": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "internal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "terminal_phosphorus": [
+          "PO",
+          "PS",
+          "PS2",
+          "Me-P",
+          "PN(dmi)",
+          "MsPA"
+        ],
+        "reason": null,
+        "compatibility_domain": "standard-O",
+        "unconnected": {
+          "state": "OH",
+          "hydrogens": 1
+        }
+      }
+    },
+    "layout_metadata": {
+      "expanded": false
+    }
+  }
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "exit": 1,
+    "suite": "attachment-compatibility"
+  },
+  {
+    "exit": 1,
+    "suite": "branch-tests"
+  },
+  {
+    "exit": 0,
+    "suite": "hardening-tests"
+  },
+  {
+    "exit": 0,
+    "suite": "optical-v2"
+  },
+  {
+    "exit": 0,
+    "suite": "optical-mass"
+  },
+  {
+    "exit": 0,
+    "suite": "annealing-v2"
+  },
+  {
+    "exit": 0,
+    "suite": "click-iedda"
+  },
+  {
+    "exit": 0,
+    "suite": "postmod-regression"
+  },
+  {
+    "exit": 1,
+    "suite": "registry-parity"
+  },
+  {
+    "exit": 1,
+    "suite": "reference-tna"
+  },
+  {
+    "exit": 0,
+    "suite": "c8-presentation"
+  },
+  {
+    "exit": 1,
+    "suite": "batch-registry"
+  },
+  {
+    "exit": 0,
+    "suite": "builtin-chain-audit"
+  },
+  {
+    "exit": 1,
+    "suite": "cl1"
+  }
+]

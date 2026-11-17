@@ -1,0 +1,22 @@
+[
+  {
+    "exit": 0,
+    "suite": "attachment-compatibility"
+  },
+  {
+    "exit": 0,
+    "suite": "branch-tests"
+  },
+  {
+    "exit": 0,
+    "suite": "registry-parity"
+  },
+  {
+    "exit": 0,
+    "suite": "reference-tna"
+  },
+  {
+    "exit": 0,
+    "suite": "batch-registry"
+  }
+]

@@ -1,0 +1,353 @@
+{
+  "protocol": "file:",
+  "agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0",
+  "samples": [
+    {
+      "formats": [],
+      "elapsed": 868.3000000007451,
+      "timings": {
+        "reagent parse": {
+          "ms": 2.099999999627471,
+          "calls": 1
+        },
+        "catalog": {
+          "ms": 4.5,
+          "calls": 2
+        },
+        "graph properties explicit": {
+          "ms": 13.199999999254942,
+          "calls": 28
+        },
+        "optical": {
+          "ms": 114.80000000074506,
+          "calls": 16
+        },
+        "sequence calculation incl parse/assembly": {
+          "ms": 103,
+          "calls": 4
+        },
+        "start checkpoint inclusive": {
+          "ms": 291.2999999988824,
+          "calls": 4
+        },
+        "reaction checkpoint inclusive": {
+          "ms": 471.89999999664724,
+          "calls": 4
+        },
+        "XLSX generation": {
+          "ms": 9.099999999627471,
+          "calls": 1
+        }
+      },
+      "states": [
+        "d1652ccf4b309b2bf46588c9cafad9b263669020d5473bef43065cd495cf32b9",
+        "d855ed12020bf09f4ee36bea48a5ef706493904918680da89e79cfd60435c4a4",
+        "98e6136bc41b50206eb0c628e0e6c60c493d04c05df92fe549f79fda00f1478e",
+        "cf8753e5e3e5c6497babf007f75f7b9cd1b470d58260e4d8fe45866873baeab8"
+      ],
+      "files": [],
+      "rows": [
+        [
+          "lipid-21",
+          "C222H292N81O148P21",
+          7113.646001958,
+          218400,
+          "NOT_REQUESTED"
+        ],
+        [
+          "lipid-60",
+          "C592H750N226O422P60",
+          19642.09771988,
+          609700,
+          "NOT_REQUESTED"
+        ],
+        [
+          "lipid-100",
+          "C972H1220N376O702P100",
+          32499.7581998,
+          1015700,
+          "NOT_REQUESTED"
+        ],
+        [
+          "lipid-150",
+          "C1447H1808N564O1051P150",
+          48563.3422997,
+          1523200,
+          "NOT_REQUESTED"
+        ]
+      ]
+    },
+    {
+      "formats": [
+        "cdxml",
+        "schematic.svg",
+        "mol"
+      ],
+      "elapsed": 1500.300000000745,
+      "timings": {
+        "catalog": {
+          "ms": 3.200000001117587,
+          "calls": 1
+        },
+        "graph properties explicit": {
+          "ms": 18.499999994412065,
+          "calls": 36
+        },
+        "optical": {
+          "ms": 105.59999999590218,
+          "calls": 16
+        },
+        "sequence calculation incl parse/assembly": {
+          "ms": 100.59999999962747,
+          "calls": 4
+        },
+        "start checkpoint inclusive": {
+          "ms": 235.80000000074506,
+          "calls": 4
+        },
+        "reaction checkpoint inclusive": {
+          "ms": 497.3000000026077,
+          "calls": 4
+        },
+        "presentation record": {
+          "ms": 209.7999999988824,
+          "calls": 4
+        },
+        "layout inclusive": {
+          "ms": 443.8999999985099,
+          "calls": 4
+        },
+        "CDXML": {
+          "ms": 4.899999998509884,
+          "calls": 4
+        },
+        "schematic SVG": {
+          "ms": 2.000000001862645,
+          "calls": 4
+        },
+        "XLSX generation": {
+          "ms": 3.099999999627471,
+          "calls": 1
+        },
+        "ZIP generation": {
+          "ms": 18.09999999962747,
+          "bytes": 1277612
+        }
+      },
+      "states": [
+        "d1652ccf4b309b2bf46588c9cafad9b263669020d5473bef43065cd495cf32b9",
+        "d855ed12020bf09f4ee36bea48a5ef706493904918680da89e79cfd60435c4a4",
+        "98e6136bc41b50206eb0c628e0e6c60c493d04c05df92fe549f79fda00f1478e",
+        "cf8753e5e3e5c6497babf007f75f7b9cd1b470d58260e4d8fe45866873baeab8"
+      ],
+      "files": [
+        [
+          "lipid-21.cdxml",
+          "0e8b500d19b1ee167d3c38c0e3daba2a97124928dcbab2f2178e8a6f812be079"
+        ],
+        [
+          "lipid-21.mol",
+          "e46760c8698d685b412d1c2d70c23e5f991e1b5630150e8ef7498041d1172bdb"
+        ],
+        [
+          "lipid-60.cdxml",
+          "066bd7806e1fb6e5385898434b3e6b915d2b08a860f5753e5ea04c35566dedcd"
+        ],
+        [
+          "lipid-60.mol",
+          "502497207bf185d8419907802c156a9e48c892fe2952cfddf70796b297f6b3f6"
+        ],
+        [
+          "lipid-100.cdxml",
+          "de4393ad72ec619650965f4a113df0cfe9405dd41c73bbc3cd740093822ce1b2"
+        ],
+        [
+          "lipid-100.mol",
+          "d514bc7822aff3f4556c8342da8b5bb1140be2896f0759485353cef0d845b7ac"
+        ],
+        [
+          "lipid-150.cdxml",
+          "71afe28ec8c889ae0502a8e8bae329379d963dc4a01c2c46a547db69898a4d71"
+        ],
+        [
+          "lipid-150.mol",
+          "05c3c520ad3e68db68b9600c10c6ead801bd160323c453b533e7447ece54562a"
+        ]
+      ],
+      "rows": [
+        [
+          "lipid-21",
+          "C222H292N81O148P21",
+          7113.646001958,
+          218400,
+          "PARTIAL_UNSUPPORTED"
+        ],
+        [
+          "lipid-60",
+          "C592H750N226O422P60",
+          19642.09771988,
+          609700,
+          "PARTIAL_UNSUPPORTED"
+        ],
+        [
+          "lipid-100",
+          "C972H1220N376O702P100",
+          32499.7581998,
+          1015700,
+          "PARTIAL_UNSUPPORTED"
+        ],
+        [
+          "lipid-150",
+          "C1447H1808N564O1051P150",
+          48563.3422997,
+          1523200,
+          "PARTIAL_UNSUPPORTED"
+        ]
+      ]
+    }
+  ],
+  "cpuSelfMs": [
+    [
+      "RegExp: [0-9a-f]{8}-(?:[0-9a-f]{4}-){3}[0-9a-f]{12} @ ",
+      467.97800000000007
+    ],
+    [
+      " @ app/reactions.js",
+      245.5220000000001
+    ],
+    [
+      "copy @ app/core.js",
+      231.54999999999987
+    ],
+    [
+      "normalize @ ",
+      214.95399999999998
+    ],
+    [
+      "hash @ ",
+      211.381
+    ],
+    [
+      "scanNeighbors @ app/reactions.js",
+      206.504
+    ],
+    [
+      "bond @ app/reactions.js",
+      169.61099999999993
+    ],
+    [
+      "copy @ app/reactions.js",
+      156.24599999999995
+    ],
+    [
+      "copy @ app/molecule-builder.js",
+      154.78099999999998
+    ],
+    [
+      "coordinates @ app/branch-layout.js",
+      130.75100000000003
+    ],
+    [
+      "layout @ C/presentation.js",
+      128.51699999999994
+    ],
+    [
+      "freeze @ app/molecule-builder.js",
+      104.02300000000008
+    ],
+    [
+      "(program) @ ",
+      101.38399999999999
+    ],
+    [
+      "clone @ app/chemistry.js",
+      92.26700000000001
+    ],
+    [
+      "(garbage collector) @ ",
+      72.729
+    ],
+    [
+      "presentationInput @ app/chemistry.js",
+      72.116
+    ],
+    [
+      "freeze @ app/adapters.js",
+      58.72199999999999
+    ],
+    [
+      " @ app/chemistry.js",
+      49.822
+    ],
+    [
+      "validate @ app/reactions.js",
+      42.232
+    ],
+    [
+      "analyzeModel @ app/optical.js",
+      33.688
+    ],
+    [
+      "clone @ C/presentation.js",
+      25.966
+    ],
+    [
+      "add @ app/chemistry.js",
+      21.876
+    ],
+    [
+      "present @ app/adapters.js",
+      20.592999999999996
+    ],
+    [
+      "chemicalIdentity @ app/optical.js",
+      19.840999999999998
+    ],
+    [
+      " @ app/optical.js",
+      18.176
+    ],
+    [
+      "clone @ app/adapters.js",
+      17.087999999999997
+    ],
+    [
+      "parse @ app/chemistry.js",
+      16.674000000000003
+    ],
+    [
+      " @ vendor/jszip.min.js",
+      15.053
+    ],
+    [
+      " @ app/core.js",
+      14.851999999999999
+    ],
+    [
+      "molecularGraph @ app/core.js",
+      14.274999999999999
+    ],
+    [
+      "(idle) @ ",
+      13.542
+    ],
+    [
+      "walk @ app/reactions.js",
+      12.969999999999999
+    ],
+    [
+      "orient @ C/presentation.js",
+      9.91
+    ],
+    [
+      "buildingBlock @ app/core.js",
+      9.438
+    ],
+    [
+      "run @ app/batch.js",
+      9.415
+    ]
+  ],
+  "downloads": [],
+  "runtimeErrors": []
+}
